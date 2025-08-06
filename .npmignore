@@ -1,0 +1,24 @@
+# Development files
+.git/
+.idea/
+.DS_Store
+*.log
+node_modules/
+
+# Test artifacts
+.claude/
+.guild/
+CLAUDE.md.backup
+
+# Development scripts
+publish.sh
+quickstart.sh
+
+# IDE files
+.vscode/
+*.swp
+*.swo
+
+# OS generated files
+Thumbs.db
+.gitignore

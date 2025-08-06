@@ -1,0 +1,139 @@
+# /guild:instructions
+
+**Usage**: 
+- `/guild:instructions` - Show current project configuration and instructions
+- `/guild:instructions "instruction text"` - Add new project instruction
+- `/guild:instructions --option value` - Configure specific Guild options
+
+Manage structured project configuration and instructions that influence Guild agent behavior, model selection, and workflow settings.
+
+First, check if Guild is configured for this project by looking for `.guild/instructions.md`.
+
+## If Guild NOT Configured
+
+Display this message:
+
+```
+🏛️ **Guild Not Configured**
+
+Guild is not yet set up for this project. To add project instructions:
+
+1. **Run Setup**: Use `/guild:setup` to analyze your project and create the Guild system
+2. **Add Instructions**: After setup, use `/guild:instructions "instruction"` to add project instructions
+3. **View Instructions**: Use `/guild:instructions` to see all current project instructions
+
+**To get started**: `/guild:setup [optional-guidance]`
+```
+
+## If Guild IS Configured
+
+Manage structured project instructions and configuration options in `.guild/instructions.md`.
+
+## Guild System Compliance
+
+**CRITICAL COMPLIANCE REQUIREMENTS**: Guild instructions management MUST operate within Guild system architecture:
+
+#### System Integration
+1. **Follow Guild system rules defined in .guild/overview.md** for instruction management and agent configuration protocols
+2. **Guild System Authority**: Reference .guild/overview.md as master authority for all Guild system compliance requirements and workflow definitions
+3. **Configuration Consistency**: Ensure instructions align with Guild system architecture and agent requirements defined in system overview
+
+#### Agent Integration
+- **Agent Compliance**: All agents MUST follow instructions defined in .guild/instructions.md as mandated by .guild/overview.md
+- **Model Specifications**: Planning agents and other model assignments must follow Guild system requirements
+- **Workflow Integration**: Instructions must integrate with Guild workflow stages and coordination patterns
+- **Master Reference System**: All instruction management operations must respect .guild/overview.md as central authority
+
+## Usage Modes
+
+### Display Current Configuration
+`/guild:instructions` - Show complete project configuration including:
+- Custom requirements and project instructions
+- Agent model specifications and behavior settings
+- Command-specific options and workflow configurations
+- Quality standards and validation requirements
+
+### Add Project Instructions
+`/guild:instructions "instruction text"` - Add new project-specific instruction
+- Instructions influence agent behavior and decision-making
+- Automatically timestamped and properly formatted
+- Integrated into agent workflows and quality gates
+
+### Configure Guild Options
+`/guild:instructions --planning-agent-model opus` - Set planning agent to use Opus model
+`/guild:instructions --all-agents-analysis true` - Enable comprehensive analysis mode for all agents
+`/guild:instructions --agent-model [agent-name] [model]` - Set specific agent model
+`/guild:instructions --quality-standard [standard]` - Set project quality requirements
+
+## Custom Prompt & Reasoning
+
+**CRITICAL**: This command operates with enhanced reasoning for configuration management:
+
+### Reasoning Protocol
+- **Configuration Analysis**: Deep evaluation of current project configuration and requirements
+- **Option Validation**: Systematic verification of configuration options against project needs and Guild standards
+- **Impact Assessment**: Analysis of how configuration changes will affect agent behavior and workflow performance
+- **Compatibility Reasoning**: Evaluation of configuration compatibility with existing project setup and requirements
+- **Change Management Logic**: Structured approach to implementing configuration changes with validation and rollback capabilities
+
+### Custom Prompt Integration
+**Configuration Reasoning**: Before making any configuration changes, analyze the current state and understand the implications of proposed changes. Validate that new configurations enhance rather than disrupt the development workflow.
+
+**Instruction Processing Logic**: Apply systematic reasoning to categorize and prioritize project instructions. Ensure instructions are clear, actionable, and properly integrated into agent workflows.
+
+**Validation Framework**: Continuously validate that configuration changes align with project goals and maintain system integrity and performance.
+
+## Your Task
+
+### If no argument provided:
+Display complete structured configuration from `.guild/instructions.md` including:
+1. **Project Instructions** - Custom requirements and behavioral guidelines
+2. **Agent Configuration** - Model specifications and behavior settings  
+3. **Workflow Options** - Command-specific settings and preferences
+4. **Quality Standards** - Validation requirements and acceptance criteria
+
+### If instruction text provided:
+1. **Validate Guild configuration** - Check if `.guild/instructions.md` exists and is properly formatted
+2. **Add instruction** to `.guild/instructions.md` under appropriate section
+3. **Ensure proper formatting** with timestamp and categorization
+4. **Update agent references** - Ensure new instructions are reflected in agent behavior
+5. **Validate ignore patterns** - Check that new instructions don't conflict with `.guild/ignore.md`:
+   ```markdown
+   ### Custom Requirements
+   - [Existing instructions]
+   - [New instruction] (Added: YYYY-MM-DD HH:MM)
+   ```
+3. **Update agent workflows** to reflect new instruction
+4. **Confirm addition** and show updated configuration
+
+### If configuration option provided:
+1. **Parse configuration command** and validate option/value
+2. **Update structured configuration** in appropriate section
+3. **Validate configuration** against Guild requirements
+4. **Apply immediate effects** where applicable
+5. **Confirm configuration change** and show updated settings
+
+## Instruction Examples
+
+### General Project Instructions
+- "Must maintain 90%+ test coverage"
+- "All API endpoints require authentication" 
+- "Use TypeScript strict mode"
+- "Follow company coding standards"
+- "Performance budget: <2s page load"
+
+### Architect Assignments for Codebase Maintenance
+- "guild:data-architect maintains all database schemas and queries"
+- "guild:system-architect maintains API gateway and service integration"
+- "guild:global-architect reviews all cross-system architectural changes"
+- "guild:security-architect maintains authentication and authorization modules"
+- "guild:performance-architect maintains caching and optimization code"
+
+### Specialized Architect Instructions
+- "Create guild:security-architect for handling all security-related code"
+- "Assign guild:api-architect to maintain REST API design consistency"
+- "guild:integration-architect manages all third-party service integrations"
+
+**IMPORTANT**: Architect assignments create ongoing responsibilities for specific codebase areas. Architects assigned via instructions will be automatically engaged for relevant tasks.
+
+Project instructions influence how agents approach tasks and quality gates during the comprehensive workflow.

@@ -1,0 +1,61 @@
+{
+  "name": "claude-guild",
+  "version": "1.0.0",
+  "description": "Comprehensive workflow integration for Claude Code via custom commands with parallel agent execution",
+  "main": "install.js",
+  "bin": {
+    "claude-guild": "./install.js"
+  },
+  "scripts": {
+    "publish": "./publish.sh",
+    "publish-direct": "npm publish --access public",
+    "prepublishOnly": "echo 'Ready to publish Claude Guild to npm registry'",
+    "test-install": "node install.js",
+    "version-patch": "npm version patch",
+    "version-minor": "npm version minor",
+    "version-major": "npm version major"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.0",
+    "@clack/prompts": "^0.11.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "ai",
+    "agents",
+
+    "parallel-execution",
+    "workflow",
+    "development",
+    "automation",
+    "architect",
+    "engineer"
+  ],
+  "author": "Claude Guild Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/claude-guild/claude-guild.git"
+  },
+  "bugs": {
+    "url": "https://github.com/claude-guild/claude-guild/issues"
+  },
+  "homepage": "https://github.com/claude-guild/claude-guild#readme",
+  "files": [
+    "install.js",
+    "commands/",
+    "README.md",
+    "GUIDELINE.md",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "preferGlobal": false,
+  "private": false
+}
