@@ -103,6 +103,9 @@ Variable Stages:
 Base Command:
   /guild [flags] "task description"
   
+Interactive Mode:
+  /guild [flags]  # Prompts for task description if not provided
+  
 Flags:
   --no-reason: Skip reasoning stage
   --no-plan: Skip planning stage
@@ -111,7 +114,7 @@ Flags:
   --fix: Enable bug fixing
   --test: Enable testing
   --verify: Enable verification
-  --global: Project-wide scope
+  --project: Project-wide scope (applies refactoring/testing to entire project)
 
 Specialized Commands:
   /guild:setup     # Initialize project agents
@@ -147,6 +150,110 @@ Agents are lightweight metadata (< 10 lines) that reference centralized processe
 - **guild-global-researcher**: External best practices research
 - **guild-verification-agent**: Implementation validation
 - **guild-[technology]-engineer**: Technology-specific implementation
+
+### Context-Aware Agent Creation
+
+#### UI Framework Detection & Component Engineering
+
+When UI frameworks are detected, engineers are created with deep component awareness:
+
+```yaml
+UI Framework Detection:
+  React Ecosystem:
+    - Component Libraries: Material-UI, Ant Design, Chakra UI, etc.
+    - State Management: Redux, Zustand, MobX, Recoil
+    - Component Patterns: Hooks, HOCs, Render Props, Compound Components
+    - Testing: React Testing Library, Jest, Enzyme
+    
+  Vue Ecosystem:
+    - Component Libraries: Vuetify, Element UI, Quasar
+    - State Management: Vuex, Pinia
+    - Component Patterns: Composition API, Options API, SFC
+    - Testing: Vue Test Utils, Vitest
+    
+  Angular Ecosystem:
+    - Component Libraries: Angular Material, PrimeNG
+    - State Management: NgRx, Akita
+    - Component Patterns: Services, Directives, Pipes
+    - Testing: Karma, Jasmine, Jest
+
+Component Engineer Creation:
+  guild-[framework]-component-engineer:
+    context_injection:
+      - Detected component library documentation
+      - Existing component inventory from project scan
+      - Design system patterns and tokens
+      - Component composition patterns
+      - Accessibility requirements (ARIA, WCAG)
+    capabilities:
+      - Component creation with library patterns
+      - Design system compliance
+      - Component reusability analysis
+      - Props/slots/events optimization
+      - Performance optimization (memoization, lazy loading)
+```
+
+#### Backend Framework Detection & API Engineering
+
+```yaml
+Backend Framework Detection:
+  Express/Fastify/Koa:
+    - Middleware patterns
+    - Route organization
+    - Authentication strategies
+    - Database ORMs/ODMs
+    
+  NestJS:
+    - Module architecture
+    - Dependency injection
+    - Decorators and metadata
+    - Guard and interceptor patterns
+    
+  FastAPI/Django:
+    - Serialization patterns
+    - ORM integration
+    - Authentication backends
+    - API documentation
+
+API Engineer Creation:
+  guild-[framework]-api-engineer:
+    context_injection:
+      - Existing API routes and patterns
+      - Database schemas and models
+      - Authentication/authorization setup
+      - API documentation standards
+    capabilities:
+      - Endpoint creation following patterns
+      - Data validation and serialization
+      - Error handling consistency
+      - API versioning strategies
+```
+
+#### Database & ORM Context Awareness
+
+```yaml
+Database Detection:
+  SQL Databases:
+    - PostgreSQL, MySQL, SQLite
+    - ORMs: Prisma, TypeORM, Sequelize, SQLAlchemy
+    
+  NoSQL Databases:
+    - MongoDB, Redis, DynamoDB
+    - ODMs: Mongoose, Dynamoose
+
+Database Engineer Creation:
+  guild-database-engineer:
+    context_injection:
+      - Existing schemas and migrations
+      - Query patterns and optimizations
+      - Index strategies
+      - Data validation rules
+    capabilities:
+      - Schema design and evolution
+      - Query optimization
+      - Migration creation
+      - Data integrity enforcement
+```
 
 ## Process Definitions
 
@@ -218,6 +325,147 @@ project:
   standards: [eslint, prettier]
 ```
 
+## Setup Process
+
+### Technology-Driven Agent Creation
+
+The setup process performs deep project analysis to create context-aware agents:
+
+```yaml
+Setup Workflow:
+  1. Project Analysis:
+     - Package dependencies scan
+     - Directory structure analysis
+     - Configuration file detection
+     - Component inventory creation
+     
+  2. Technology Stack Detection:
+     - Frontend frameworks and libraries
+     - Backend frameworks and middleware
+     - Database systems and ORMs
+     - Build tools and testing frameworks
+     
+  3. Context Collection:
+     - Component library inventory
+     - API route patterns
+     - Database schemas
+     - Testing patterns
+     - Build configurations
+     
+  4. Agent Generation:
+     - Create agents with injected context
+     - Configure specialization boundaries
+     - Set up process references
+     - Enable parallel capabilities
+```
+
+### Component Discovery for UI Engineers
+
+When creating UI framework engineers, the system performs component discovery:
+
+```yaml
+Component Discovery Process:
+  1. Scan for component files:
+     - src/components/**/*.{jsx,tsx,vue}
+     - app/components/**/*
+     - components/**/*
+     
+  2. Identify component patterns:
+     - Functional components
+     - Class components
+     - Composable/hooks
+     - HOCs and render props
+     
+  3. Detect component libraries:
+     - Check package.json for UI libraries
+     - Scan import statements
+     - Identify design tokens
+     
+  4. Create component inventory:
+     components:
+       - name: Button
+         path: src/components/Button.tsx
+         type: functional
+         props: [onClick, disabled, variant]
+         uses: [Material-UI]
+       - name: UserCard
+         path: src/components/UserCard.tsx
+         type: functional
+         props: [user, onEdit, onDelete]
+         uses: [custom styling]
+         
+  5. Inject into engineer context:
+     guild-react-component-engineer:
+       component_awareness:
+         - Existing components list
+         - Component library APIs
+         - Project styling patterns
+         - Accessibility standards
+```
+
+### API Route Discovery for Backend Engineers
+
+```yaml
+API Discovery Process:
+  1. Scan for route definitions:
+     - routes/**/*.js
+     - api/**/*.js
+     - controllers/**/*
+     
+  2. Identify patterns:
+     - REST endpoints
+     - GraphQL schemas
+     - WebSocket handlers
+     - Middleware chains
+     
+  3. Create route inventory:
+     routes:
+       - path: /api/users
+         methods: [GET, POST]
+         middleware: [auth, validate]
+         controller: UserController
+       - path: /api/products/:id
+         methods: [GET, PUT, DELETE]
+         middleware: [auth, admin]
+         controller: ProductController
+         
+  4. Inject into engineer context:
+     guild-express-api-engineer:
+       api_awareness:
+         - Existing routes map
+         - Middleware patterns
+         - Authentication setup
+         - Validation schemas
+```
+
+### Database Schema Discovery
+
+```yaml
+Schema Discovery Process:
+  1. Detect ORM/ODM:
+     - Prisma schema files
+     - TypeORM entities
+     - Mongoose models
+     - Sequelize models
+     
+  2. Extract schema information:
+     models:
+       - name: User
+         fields: [id, email, password, profile]
+         relations: [posts, comments]
+       - name: Product
+         fields: [id, name, price, category]
+         relations: [orders, reviews]
+         
+  3. Inject into database engineer:
+     guild-database-engineer:
+       schema_awareness:
+         - Current models
+         - Relationships
+         - Migration history
+         - Query patterns
+```
+
 ## Template Flow
 
 ### Installation Process
@@ -273,6 +521,44 @@ Execution Flow:
   4. Execute stages in order
   5. Handle parallel coordination
   6. Aggregate results
+```
+
+### Command Execution Behavior
+
+#### Interactive Task Prompting
+
+When commands are executed without a task description, the system enters interactive mode:
+
+```yaml
+Interactive Mode Triggers:
+  /guild [flags]             # No task provided
+  /guild:plan                # No task provided
+  /guild:refactor            # No task provided
+  
+Interactive Flow:
+  1. Detect missing task description
+  2. Display context-aware prompt:
+     - Show detected project type
+     - Suggest relevant task examples
+     - Display available flags
+  3. Wait for user input
+  4. Validate and process task
+  5. Execute workflow with provided task
+
+Example Prompt:
+  "🏛️ Guild Ready - [React + Node.js Project Detected]
+   
+   What task would you like to execute?
+   
+   Examples for your project:
+   • Create a new user authentication component
+   • Add error handling to API endpoints
+   • Refactor state management to use Zustand
+   • Write tests for the checkout flow
+   
+   Available flags: --refactor, --test, --verify, --project
+   
+   Enter your task: _"
 ```
 
 ### Dynamic Command Creation

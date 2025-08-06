@@ -2,6 +2,8 @@
 
 **Usage**: `/guild:fix "bug description"`
 
+**Interactive Mode**: `/guild:fix` - If no bug description is provided, Guild will prompt you interactively
+
 Execute focused bug fixing tasks using the specialized 5-stage bug fixing workflow with systematic error detection and comprehensive validation.
 
 First, check if Guild is configured for this project by looking for `.guild/instructions.md` and validate Guild file integrity:
@@ -29,6 +31,27 @@ Guild is not yet set up for this project. To use bug fixing workflow:
 ```
 
 ## If Guild IS Configured
+
+**CHECK FOR BUG DESCRIPTION**: If no bug description provided, enter interactive mode:
+
+```
+🏛️ **Guild Fix Mode Ready - [Detected Technologies]**
+
+What bug would you like to fix?
+
+**Common Issues in your project type:**
+• Component rendering errors or state issues
+• API endpoint failures or validation errors
+• Database query or connection problems
+• Build or compilation errors
+• Test failures or flaky tests
+
+**Recent Error Patterns:** [Show if detected from logs/tests]
+
+Enter bug description:
+```
+
+After receiving bug description, proceed with fix workflow.
 
 **CRITICAL**: This command MUST activate the specialized 5-stage bug fixing workflow for the provided bug description.
 

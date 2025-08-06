@@ -181,7 +181,7 @@ Guild provides standalone, reusable workflow steps that can be combined into dif
 - **Test Strategy**: Develop appropriate testing strategy based on changes made
 - **Test Implementation**: Create and execute tests for new features, bug fixes, or refactored code
 - **Quality Validation**: Ensure tests cover edge cases and integration points
-- **Test Scope**: Focus testing on affected areas (default) or entire project (with --global flag)
+- **Test Scope**: Focus testing on affected areas (default) or entire project (with --project flag)
 - **Regression Prevention**: Validate that changes don't break existing functionality
 
 ### verification: ✅ Final Verification

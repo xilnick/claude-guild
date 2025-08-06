@@ -2,6 +2,8 @@
 
 **Usage**: `/guild [flags] "your task prompt"`
 
+**Interactive Mode**: `/guild [flags]` - If no task is provided, Guild will prompt you for the task interactively
+
 **IMPORTANT**: Execute tasks through Guild's flag-based workflow stage system with configurable stages and specialized agent coordination.
 
 ## Workflow Stage System
@@ -33,7 +35,7 @@ Guild uses a modular workflow stage system where you can enable/disable specific
 - `--verify` - Enable verification stage (requirement validation)
 
 ### Scope Modifiers
-- `--global` - Apply testing and refactoring to entire project (default: focused on changes only)
+- `--project` - Apply testing and refactoring to entire project (default: focused on changes only)
 
 ## Stage Triggering Logic
 
@@ -57,6 +59,54 @@ Guild uses a modular workflow stage system where you can enable/disable specific
 3. **Apply enable flags**: Add optional stages
 4. **Handle special modes**: Adjust stage flow for specific combinations
 
+## Interactive Task Prompting
+
+If no task description is provided with the command, enter interactive mode:
+
+### Interactive Mode Flow
+
+1. **Detect Missing Task**: Check if task description was provided
+2. **Analyze Project Context**: Identify project type and technologies
+3. **Display Interactive Prompt**: Show context-aware prompt with examples
+4. **Process User Input**: Validate and execute with provided task
+
+### Interactive Prompt Template
+
+```
+🏛️ **Guild Ready - [Detected Technologies]**
+
+What task would you like to execute?
+
+**Examples for your project:**
+• [Context-specific example based on detected stack]
+• [Another relevant example]
+• [Testing/refactoring example if applicable]
+
+**Selected flags:** [Show any flags provided]
+**Available flags:** --refactor, --test, --verify, --project, --fix
+
+Enter your task description:
+```
+
+### Context-Aware Examples
+
+Based on detected technologies, provide relevant examples:
+
+**React Project:**
+- Create a new dashboard component with Material-UI
+- Add error boundary to the application
+- Implement lazy loading for routes
+
+**Express API:**
+- Add rate limiting middleware
+- Create CRUD endpoints for products
+- Implement JWT authentication
+
+**Full-Stack:**
+- Build user profile feature with API and UI
+- Add real-time notifications with WebSocket
+- Implement file upload with progress tracking
+
 ## Guild Configuration Check
 
 First, check if Guild is configured for this project by looking for `.guild/instructions.md` and validate Guild file integrity:
@@ -78,7 +128,7 @@ Guild is not yet set up for this project. To use the workflow:
 
 1. **Run Setup**: Use `/guild:setup` to analyze your project and create appropriate agents
 2. **Flag-Based Workflow**: After setup, use `/guild [flags] "task"` with configurable workflow stages
-3. **Available Flags**: --refactor, --fix, --test, --verify, --global, --no-reason, --no-plan, --no-implement
+3. **Available Flags**: --refactor, --fix, --test, --verify, --project, --no-reason, --no-plan, --no-implement
 
 **To get started**: `/guild:setup [optional-guidance]`
 ```
@@ -140,7 +190,7 @@ Execute activated workflow stages in this mandatory order:
 #### 5. ♻️ Refactoring Stage (if --refactor)
 **Stages**: `refactor-planning` + refactoring execution
 **Agents**: guild-planning-agent + framework-coupled engineers
-**Purpose**: Plan and execute code optimization with scope based on --global flag
+**Purpose**: Plan and execute code optimization with scope based on --project flag
 **Execution Modes**:
 - **Refactor-Only Mode**: When `--refactor` is the only flag, replaces implementation stage entirely
 - **Combined Mode**: When `--refactor` used with other flags, executes after implementation stage
@@ -154,7 +204,7 @@ Execute activated workflow stages in this mandatory order:
 #### 7. 🧪 Testing Stage (if --test)
 **Stage**: `testing`
 **Agents**: framework-coupled engineers
-**Purpose**: Create and execute tests with scope based on --global flag
+**Purpose**: Create and execute tests with scope based on --project flag
 
 #### 8. ✅ Verification Stage (if --verify)
 **Stage**: `verification`
@@ -190,7 +240,7 @@ Execute activated workflow stages in this mandatory order:
 /guild --test --verify "Implement user authentication system"
 
 # Refactoring with global scope and testing
-/guild --refactor --test --global "Optimize the template processing system"
+/guild --refactor --test --project "Optimize the template processing system"
 
 # Bug fixing with verification
 /guild --fix --verify "Fix the NPM package configuration issue"
@@ -204,7 +254,7 @@ Execute activated workflow stages in this mandatory order:
 **🎯 Configurable Workflow**: Choose exactly which stages you need for each task
 **⚡ Efficient Execution**: Skip unnecessary stages for simple tasks  
 **🔍 Comprehensive Options**: Add testing, verification, and refactoring as needed
-**🌐 Flexible Scope**: Focus changes or apply globally with --global flag
+**🌐 Flexible Scope**: Focus changes or apply globally with --project flag
 **🧠 Smart Defaults**: Reasoning + planning + implementation enabled by default
 **🔄 Stage Composition**: Combine multiple optional stages for complex workflows
 **🎭 Special Modes**: Planning-only and refactor-only modes for specialized workflows

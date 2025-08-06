@@ -60,6 +60,54 @@ Current Guild setup found. Options:
 - **WebSearch Enhancement**: Research current technology trends and integration patterns
 - **Dynamic Specialization Analysis**: Determine agent specialization requirements for discovered technologies
 
+**Phase 1C: Component Discovery & Context Collection**:
+- **UI Component Scanning**: Discover existing components in src/components, app/components
+- **Component Library Detection**: Identify Material-UI, Ant Design, Chakra UI, etc.
+- **API Route Mapping**: Scan routes/, api/, controllers/ for endpoint patterns
+- **Database Schema Extraction**: Analyze Prisma schema, TypeORM entities, Mongoose models
+- **Testing Pattern Recognition**: Identify test files and testing frameworks
+- **Build Configuration Analysis**: Webpack, Vite, Next.js config understanding
+
+**Component Context Building**:
+```yaml
+For Each UI Framework Detected:
+  1. Scan component directories
+  2. Build component inventory:
+     - Component names and locations
+     - Props and interfaces
+     - Used UI libraries
+     - Styling patterns
+  3. Inject into engineer context:
+     - Existing components list
+     - Component library APIs
+     - Design patterns in use
+     - Accessibility standards
+
+For Each Backend Framework:
+  1. Scan route definitions
+  2. Build API inventory:
+     - Endpoint paths and methods
+     - Middleware chains
+     - Authentication setup
+     - Validation schemas
+  3. Inject into engineer context:
+     - Route patterns
+     - Middleware usage
+     - Error handling patterns
+     - Security configurations
+
+For Database Systems:
+  1. Analyze schema files
+  2. Build model inventory:
+     - Entity definitions
+     - Relationships
+     - Validation rules
+  3. Inject into engineer context:
+     - Current schemas
+     - Migration patterns
+     - Query optimizations
+```
+
 **Component Identification**:
 - **CLI Tools**: Detect CLI applications, scripts, and command-line interfaces
 - **Backend Systems**: Identify server applications, APIs, microservices, databases
@@ -422,7 +470,7 @@ After successful setup, display completion report:
 
 **🚀 Available Commands:**
 - `/guild [flags] "task"` - Flag-based workflow stage system
-- **Available Flags**: --refactor, --fix, --test, --verify, --global, --no-reason, --no-plan, --no-implement
+- **Available Flags**: --refactor, --fix, --test, --verify, --project, --no-reason, --no-plan, --no-implement
 - **Default Blocks**: reasoning + planning + implementation
 - `/guild:plan "task description"` - Task planning workflow
 - `/guild:spec [level] "specification"` - Specification workflow
@@ -477,7 +525,7 @@ After successful setup, display completion report:
 
 **🚀 Available Commands:**
 - `/guild [flags] "task"` - Flag-based workflow stages with research-backed agents
-- **Workflow Flags**: --refactor, --fix, --test, --verify, --global, --no-reason, --no-plan, --no-implement
+- **Workflow Flags**: --refactor, --fix, --test, --verify, --project, --no-reason, --no-plan, --no-implement
 - **Default Execution**: reasoning + planning + implementation stages
 - `/guild:plan "task description"` - Task planning workflow with research integration
 - `/guild:spec [level] "specification"` - Specification management with discovery capabilities
@@ -491,7 +539,7 @@ After successful setup, display completion report:
 
 **🎯 Next Steps:**
 1. Use `/guild "your task"` for immediate execution with research-backed agents
-2. Use `/guild --refactor --test --global "task"` for comprehensive project-wide optimization
+2. Use `/guild --refactor --test --project "task"` for comprehensive project-wide optimization
 3. Review `.guild/instructions.md` for project-specific customization including discovered technologies  
 4. Check `.guild/overview.md` for complete system documentation with research integration
 5. Leverage flag-based workflow stages for precise control over execution stages

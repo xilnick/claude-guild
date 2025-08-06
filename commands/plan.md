@@ -2,6 +2,8 @@
 
 **Usage**: `/guild:plan "task description"`
 
+**Interactive Mode**: `/guild:plan` - If no task is provided, Guild will prompt you interactively
+
 Create comprehensive task plans and save them to structured MD files for future execution, adjustment, and modification.
 
 ## Configuration Check
@@ -25,6 +27,25 @@ Guild is not yet set up for this project. To use planning workflow:
 ```
 
 ### If Guild IS Configured
+
+**CHECK FOR TASK DESCRIPTION**: If no task description provided, enter interactive mode:
+
+```
+🏛️ **Guild Planning Ready - [Detected Technologies]**
+
+What would you like to plan?
+
+**Planning Examples for your project:**
+• Plan implementation of new feature or component
+• Plan refactoring of existing codebase sections  
+• Plan testing strategy and implementation
+• Plan performance optimization approach
+• Plan migration or upgrade strategy
+
+Enter your planning task:
+```
+
+After receiving task description, proceed with planning workflow.
 
 **CRITICAL**: This command MUST activate the specialized 4-stage planning workflow for the provided task description.
 

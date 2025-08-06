@@ -2,6 +2,8 @@
 
 **Usage**: `/guild:spec [level] "specification description"`
 
+**Interactive Mode**: `/guild:spec [level]` - If no description is provided, Guild will prompt you interactively
+
 Create or update specifications at different levels (project, component, model) and save them to structured MD files for documentation and future reference.
 
 **Specification Levels**:
@@ -30,6 +32,27 @@ Guild is not yet set up for this project. To use specification management:
 ```
 
 ### If Guild IS Configured
+
+**CHECK FOR SPECIFICATION DESCRIPTION**: If no description provided, enter interactive mode:
+
+```
+🏛️ **Guild Specification Mode - [Level: {provided level or 'not specified'}]**
+
+What specification would you like to create or update?
+
+**Specification Examples:**
+• Project: Overall architecture and system design
+• Component: UI component interfaces and contracts
+• Model: Data models and business logic rules
+• API: Endpoint specifications and contracts
+• Database: Schema and relationship definitions
+
+**Available Levels:** project, component, model
+
+Enter specification description:
+```
+
+After receiving description (and level if not provided), proceed with specification workflow.
 
 **CRITICAL**: This command MUST activate the specialized 5-stage specification workflow for the provided specification requirements.
 
