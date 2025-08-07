@@ -1,12 +1,37 @@
 # /guild:setup
 
-**Usage**: `/guild:setup [additional-guidance]`
+**Usage**: `/guild:setup [--standalone] [additional-guidance]`
 
 **CRITICAL**: This command executes the systematic Guild setup process with technology detection, agent creation, and system configuration following GUIDELINE.md specifications.
 
+## Command Flags
+
+- **`--standalone`**: Create self-contained agents that operate independently of the .guild system
+- **`[additional-guidance]`**: Optional guidance for custom agent creation or specific requirements
+
+## Setup Mode Detection
+
+**FIRST**: Detect setup mode based on command flags:
+
+### Standalone Mode Detection
+
+If `--standalone` flag is present, execute **Standalone Agent Creation** workflow:
+- Skip .guild system setup
+- Create self-contained agents directly in `.claude/agents/` 
+- Generate CLAUDE.md documentation
+- Focus on integration with default Claude Code workflow
+
+### Standard Mode Detection
+
+If no `--standalone` flag, execute **Standard Guild Setup** workflow:
+- Full .guild system configuration
+- Template-based agent creation
+- System file generation
+- Guild workflow integration
+
 ## Configuration Analysis
 
-First, analyze if Guild is already configured for this project by checking for `.guild/instructions.md`.
+For **Standard Mode**, analyze if Guild is already configured for this project by checking for `.guild/instructions.md`.
 
 ### If Guild NOT Configured
 
@@ -39,6 +64,108 @@ Current Guild setup found. Options:
 
 **Proceeding with configuration update...**
 ```
+
+## Agent Creation Process
+
+Execute the appropriate agent creation workflow based on detected mode:
+
+### Standalone Agent Creation Process
+
+**STANDALONE MODE WORKFLOW** (when `--standalone` flag is present):
+
+#### Stage 1: 🔍 Technology & Domain Analysis
+
+**Phase 1A: Project Technology Stack**:
+- **Package Analysis**: Examine dependencies, frameworks, and tools
+- **Complexity Assessment**: Determine project complexity and specialization needs
+- **Domain Identification**: Identify key domains requiring specialized expertise
+- **Integration Points**: Analyze how specialists integrate with existing workflow
+
+**Phase 1B: Specialization Requirements**:
+- **Security Requirements**: Identify security analysis needs
+- **Performance Requirements**: Assess performance optimization opportunities  
+- **Accessibility Requirements**: Determine accessibility compliance needs
+- **Documentation Requirements**: Evaluate documentation and API doc needs
+- **Code Quality Requirements**: Assess code review and standards needs
+
+#### Stage 2: 🤖 Self-Contained Agent Creation
+
+**Agent Creation Strategy**:
+- **Domain Specialists**: Create focused agents for identified specializations
+- **Technology Specialists**: Create agents for complex technology stacks
+- **Process Specialists**: Create agents for workflow optimization
+- **Integration Agents**: Create agents for system integration tasks
+
+**Standalone Agent Template**:
+```yaml
+---
+name: [specialist-name]-agent
+role: [specific-domain-role]
+approach: [execution-methodology]
+scope: [operational-boundaries]  
+specialization: [expertise-area]
+self_contained: true
+---
+
+# [Agent Name]
+
+## Role Definition
+[Clear description of agent role and primary responsibilities]
+
+## Execution Approach  
+[Detailed methodology for how this agent approaches tasks]
+
+## Specialization Boundaries
+[Precise definition of what this agent handles and doesn't handle]
+
+## Integration Guidelines
+[How this agent integrates with standard Claude Code workflow]
+
+## Usage Scenarios
+[Specific scenarios where this agent is most effective]
+```
+
+**Agent Categories to Create**:
+
+**Security & Compliance**:
+- **security-analyst-agent**: Vulnerability assessment, security review, threat analysis
+- **accessibility-auditor-agent**: WCAG compliance, accessibility testing, audit recommendations
+
+**Performance & Quality**:
+- **performance-engineer-agent**: Performance optimization, profiling, monitoring setup
+- **code-reviewer-agent**: Code quality analysis, best practices, refactoring suggestions
+
+**Documentation & Architecture**:  
+- **documentation-writer-agent**: Technical docs, API documentation, user guides
+- **api-architect-agent**: API design patterns, architecture recommendations, integration planning
+
+**Deployment & Operations**:
+- **deployment-engineer-agent**: CI/CD optimization, deployment strategies, infrastructure
+- **monitoring-engineer-agent**: Observability setup, monitoring configuration, alerting
+
+**Specialized Engineering**:
+- **database-optimizer-agent**: Database performance, query optimization, schema design
+- **testing-strategist-agent**: Test strategy, quality assurance, testing architecture
+
+#### Stage 3: 📁 Direct Agent Creation
+
+**File Creation Process**:
+1. **Create .claude/agents/ Directory**: Ensure agent directory exists
+2. **Generate Standalone Agents**: Create self-contained agent files
+3. **Skip .guild System**: No .guild directory or system files created
+4. **Documentation Generation**: Add usage documentation to CLAUDE.md
+
+#### Stage 4: 📖 Documentation Integration
+
+**CLAUDE.md Integration**:
+- **Agent Descriptions**: Add clear descriptions of each created agent
+- **Usage Examples**: Provide specific usage scenarios and examples
+- **Integration Patterns**: Document how agents integrate with standard workflow
+- **Activation Guidelines**: Clear instructions for when to use each agent
+
+### Standard Guild Setup Process
+
+**STANDARD MODE WORKFLOW** (when no `--standalone` flag):
 
 ## Template-Based Agent Creation Process
 
@@ -443,9 +570,98 @@ Result: Agent understands Express ecosystem holistically and can handle any Expr
 
 **Embedded Templates**: Setup command contains all template content directly embedded and inlined during installation. Templates are processed and used inline during .guild folder creation without external dependencies.
 
-## Simple Setup Completion Report
+## Setup Completion Reports
 
-After successful setup, display completion report:
+Display appropriate completion report based on setup mode:
+
+### Standalone Setup Completion Report
+
+**For `--standalone` mode**, display:
+
+```
+✅ **Standalone Agent Setup Complete**
+
+**🔍 Analysis Results:**
+- 📊 **Technology Stack**: [List of detected technologies and frameworks]
+- 🎯 **Specialization Needs**: [List of identified specialization requirements]
+- 💡 **Domain Complexity**: [Assessment of project complexity and specialist needs]
+
+**🤖 Standalone Agents Created:**
+- 🏗️ **Agent Location**: `.claude/agents/` directory
+- 🎯 **Specialists Created**: [List of specialist agents with brief descriptions]
+  - **[agent-name]**: [Brief role description]
+  - **[agent-name]**: [Brief role description]
+  - **[agent-name]**: [Brief role description]
+
+**📖 Documentation Updated:**
+- ✅ **CLAUDE.md**: Added agent descriptions and usage examples
+- 📋 **Integration Patterns**: Documented workflow integration guidelines  
+- 🎯 **Usage Scenarios**: Clear activation triggers and use cases
+- 📚 **Examples**: Specific usage examples for each agent
+
+**🚀 Usage Instructions:**
+
+**Direct Agent Usage:**
+- Standard Claude Code commands automatically use appropriate specialists
+- No special commands required - agents integrate seamlessly into workflow
+- Claude Code selects optimal agents based on task requirements
+
+**Agent Activation Examples:**
+- Security tasks → `security-analyst-agent` activates automatically
+- Performance issues → `performance-engineer-agent` handles optimization  
+- Documentation needs → `documentation-writer-agent` creates/updates docs
+- Code quality → `code-reviewer-agent` provides analysis and improvements
+
+**🎯 Next Steps:**
+1. **Use Standard Commands**: Regular Claude Code commands will leverage specialists
+2. **Review Documentation**: Check updated CLAUDE.md for detailed usage patterns
+3. **Test Integration**: Try tasks matching specialist domains to see automatic activation
+4. **Custom Specialists**: Add more specialists by running `/guild:setup --standalone` with specific guidance
+
+**Standalone Agents Ready** - Self-contained specialists integrated into standard Claude Code workflow.
+```
+
+### Standard Guild Setup Completion Report
+
+**For standard mode**, display:
+
+```
+✅ **Guild Setup Complete**
+
+**🔍 Technology Detection Results:**
+- 📊 **Detected Technologies**: [List of detected technologies and components]
+- 🎯 **Components**: [Backend/Frontend/CLI/API/Database/Mobile components identified]
+
+**🧠 Agent Creation Summary:**
+- 📁 Created `.guild/` system folder with 4 configuration files
+- 🤖 Generated specialized agents:
+  - 🧠 **Core Agents**: guild-reasoning-agent (prompt analysis), guild-planning-agent (task coordination)
+  - 🔨 **Framework Engineers**: [List of engineers created with framework context specialization]
+  - 🎯 **Research Agents**: guild-project-research-agent, guild-global-research-agent
+  - ✅ **Verification Agent**: guild-verification-agent (created for --verify flag)
+
+**⚙️ System Configuration:**
+- 📋 Master Reference: `.guild/overview.md` configured
+- ⚙️ Project Settings: `.guild/instructions.md` with project-specific requirements
+- 🚫 Ignore Patterns: `.guild/ignore.md` with soft ignore behavior
+- 📖 Agent Templates: `.guild/agents.md` for reference
+
+**🚀 Available Commands:**
+- `/guild [flags] "task"` - Flag-based workflow stage system
+- **Available Flags**: --refactor, --fix, --test, --verify, --project, --no-reason, --no-plan, --no-implement
+- **Default Blocks**: reasoning + planning + implementation
+- `/guild:plan "task description"` - Task planning workflow
+- `/guild:spec [level] "specification"` - Specification workflow
+
+**🎯 Next Steps:**
+1. Use `/guild "your task"` for immediate execution with default stages
+2. Use `/guild --test --verify "task"` for comprehensive workflow with testing and verification
+3. Review `.guild/instructions.md` for project-specific customization
+4. Check `.guild/overview.md` for complete system documentation
+5. Leverage flag-based workflow stages for precise control
+
+**Guild Setup Complete** - Clean, simple, elegant design with instruction-based configuration.
+```
 
 ```
 ✅ **Guild Setup Complete**

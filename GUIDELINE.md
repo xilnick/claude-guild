@@ -117,7 +117,7 @@ Flags:
   --project: Project-wide scope (applies refactoring/testing to entire project)
 
 Specialized Commands:
-  /guild:setup     # Initialize project agents
+  /guild:setup [--standalone]  # Initialize project agents
   /guild:fix       # Bug fixing workflow
   /guild:refactor  # Refactoring workflow
   /guild:plan      # Planning only
@@ -141,6 +141,53 @@ boundaries: [specific-limitations]
 ```
 
 Agents are lightweight metadata (< 10 lines) that reference centralized processes containing all logic.
+
+### Standalone Agent Architecture
+
+For projects requiring Guild-independent agents, the `--standalone` flag creates self-contained agents that operate without the .guild system:
+
+```yaml
+---
+name: standalone-agent-identifier
+role: primary-function
+approach: execution-methodology
+scope: operational-boundaries
+specialization: domain-expertise-area
+self_contained: true
+---
+
+# Agent Description
+
+Clear definition of agent role, capabilities, and approach.
+
+# Execution Method
+
+Detailed methodology for how this agent approaches tasks within its specialization.
+
+# Integration Guidelines
+
+How this agent integrates seamlessly into standard Claude Code workflow.
+```
+
+#### Standalone Agent Characteristics
+
+**Self-Contained Design**:
+- Complete role definition within agent file
+- No dependencies on .guild system files
+- Clear execution methodology
+- Integrated into default workflow
+
+**Specialization Focus**:
+- Precise domain expertise boundaries
+- Clear approach definition
+- Specific use cases and scenarios
+- Seamless integration capabilities
+
+**Workflow Integration**:
+- Compatible with standard Claude Code commands
+- No special command requirements
+- Natural workflow participation
+- Clear activation triggers
 
 ### Core Agent Set
 
@@ -331,6 +378,10 @@ project:
 
 The setup process performs deep project analysis to create context-aware agents:
 
+#### Standard Guild Setup
+
+For projects using the full Guild system:
+
 ```yaml
 Setup Workflow:
   1. Project Analysis:
@@ -357,6 +408,66 @@ Setup Workflow:
      - Configure specialization boundaries
      - Set up process references
      - Enable parallel capabilities
+```
+
+#### Standalone Agent Setup
+
+For projects requiring Guild-independent agents, the `--standalone` flag creates self-contained specialists:
+
+```yaml
+Standalone Setup Workflow:
+  1. Project Analysis:
+     - Technology stack identification
+     - Domain complexity assessment
+     - Specialization requirements
+     - Integration points analysis
+     
+  2. Agent Specialization:
+     - Define precise domain boundaries
+     - Create execution methodologies
+     - Establish integration patterns
+     - Document usage scenarios
+     
+  3. Self-Contained Creation:
+     - Complete role definitions
+     - Integrated approach documentation
+     - Clear activation conditions
+     - Workflow integration guidelines
+     
+  4. Documentation Generation:
+     - Usage examples in CLAUDE.md
+     - Integration patterns
+     - Activation scenarios
+     - Specialization boundaries
+```
+
+#### Standalone Agent Categories
+
+**Domain-Specific Specialists**:
+```yaml
+- security-analyst-agent: Security analysis and vulnerability assessment
+- performance-engineer-agent: Performance optimization and monitoring
+- accessibility-auditor-agent: Accessibility compliance and WCAG validation
+- documentation-writer-agent: Technical documentation and API docs
+- code-reviewer-agent: Code quality analysis and best practices
+- deployment-engineer-agent: CI/CD and deployment optimization
+```
+
+**Technology Specialists**:
+```yaml
+- database-optimizer-agent: Database performance and query optimization
+- api-architect-agent: API design and architecture patterns
+- testing-strategist-agent: Test strategy and quality assurance
+- monitoring-engineer-agent: Observability and monitoring setup
+- migration-specialist-agent: Data and system migration planning
+```
+
+**Process Specialists**:
+```yaml
+- refactor-architect-agent: Large-scale refactoring strategy
+- integration-engineer-agent: Third-party service integration
+- automation-specialist-agent: Workflow and process automation
+- troubleshoot-expert-agent: Complex debugging and problem solving
 ```
 
 ### Component Discovery for UI Engineers
@@ -596,6 +707,7 @@ Research executes in parallel with intelligent result aggregation.
 Users can extend Guild through:
 - **Custom processes**: New workflow definitions
 - **Custom agents**: Specialized agents for unique needs
+- **Standalone agents**: Guild-independent specialized agents
 - **Custom commands**: Domain-specific workflows
 - **Custom routing**: Advanced routing rules
 - **Enhancement patterns**: Additional capability templates

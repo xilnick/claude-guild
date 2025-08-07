@@ -44,6 +44,168 @@ npx claude-guild@latest
 
 **Workflow Activation**: All commands follow the Multi-stage process with mandatory prompt analysis, context research, and unified planning+implementation phases.
 
+## Standalone Agent System
+
+### Overview
+
+The Guild system supports **standalone agents** that operate independently of the .guild system infrastructure. These self-contained specialists integrate seamlessly with standard Claude Code workflow while providing focused expertise in specific domains.
+
+### Creating Standalone Agents
+
+```bash
+# Create standalone specialist agents
+/guild:setup --standalone
+
+# Create standalone agents with specific focus
+/guild:setup --standalone "focus on security and performance optimization"
+```
+
+### Available Standalone Specialists
+
+#### Security & Compliance
+- **`security-analyst-agent`**: Vulnerability assessment, security review, OWASP compliance, authentication/authorization analysis
+- **`accessibility-auditor-agent`**: WCAG 2.1 AA compliance, ARIA implementation, screen reader compatibility, accessibility testing
+
+#### Performance & Quality  
+- **`performance-engineer-agent`**: Performance profiling, database optimization, caching strategies, monitoring setup
+- **`code-reviewer-agent`**: Code quality analysis, refactoring recommendations, best practices enforcement, technical debt identification
+
+#### Documentation & Architecture
+- **`documentation-writer-agent`**: Technical documentation, API docs, user guides, README generation
+- **`api-architect-agent`**: API design patterns, REST/GraphQL architecture, integration strategies, API security
+
+#### Deployment & Operations
+- **`deployment-engineer-agent`**: CI/CD optimization, deployment strategies, infrastructure as code, release management  
+- **`monitoring-engineer-agent`**: Observability setup, logging strategies, alerting systems, performance metrics
+
+#### Specialized Engineering
+- **`database-optimizer-agent`**: Query optimization, indexing strategies, schema design, database performance monitoring
+- **`testing-strategist-agent`**: Test strategy development, test automation, quality assurance, coverage analysis
+
+### Usage Patterns
+
+#### Automatic Activation
+Standalone agents automatically activate based on task content:
+
+```bash
+# Security tasks automatically activate security-analyst-agent
+"Review authentication implementation for security vulnerabilities"
+
+# Performance tasks automatically activate performance-engineer-agent  
+"Optimize database queries causing slow response times"
+
+# Documentation tasks automatically activate documentation-writer-agent
+"Create comprehensive API documentation for the user service"
+```
+
+#### Integration with Standard Workflow
+Standalone agents work with all standard Claude Code commands:
+
+```bash
+# Standard commands leverage appropriate specialists
+"Implement user authentication with security best practices"
+# → Automatically uses security-analyst-agent + standard engineers
+
+"Refactor components for better performance" 
+# → Automatically uses performance-engineer-agent + standard engineers
+
+"Add comprehensive tests to the payment module"
+# → Automatically uses testing-strategist-agent + standard engineers
+```
+
+### Agent Characteristics
+
+#### Self-Contained Design
+- **Complete Role Definition**: Full role description and execution methodology within agent file
+- **No Guild Dependencies**: Operates independently without .guild system files
+- **Clear Boundaries**: Precise specialization scope and operational limits
+- **Seamless Integration**: Natural participation in standard Claude Code workflow
+
+#### Specialization Focus
+- **Domain Expertise**: Deep knowledge in specific technical domains
+- **Clear Activation**: Automatic activation based on task keywords and content
+- **Integration Guidelines**: Clear patterns for working with other agents
+- **Usage Scenarios**: Specific use cases where each agent excels
+
+### Benefits
+
+#### For Development Teams
+- **Instant Expertise**: Access to specialized knowledge without setup complexity
+- **Seamless Workflow**: No learning curve - works with existing Claude Code usage
+- **Focused Quality**: Domain-specific analysis and recommendations
+- **Automatic Selection**: Right specialist automatically chosen for each task
+
+#### For Complex Projects  
+- **Comprehensive Coverage**: Specialists for all major technical domains
+- **Quality Assurance**: Expert-level analysis across security, performance, accessibility
+- **Best Practices**: Automatic enforcement of domain-specific best practices
+- **Technical Debt**: Proactive identification and remediation recommendations
+
+### Implementation Examples
+
+#### Security Review Workflow
+```bash
+# Task automatically routes to security-analyst-agent
+"Perform security audit of authentication system"
+
+# Agent provides:
+# - OWASP Top 10 vulnerability analysis
+# - Authentication/authorization review  
+# - Input validation assessment
+# - Security hardening recommendations
+```
+
+#### Performance Optimization Workflow
+```bash
+# Task automatically routes to performance-engineer-agent
+"Investigate slow API response times"
+
+# Agent provides:
+# - Database query analysis and optimization
+# - Caching strategy recommendations
+# - Performance monitoring setup
+# - Bottleneck identification and solutions
+```
+
+#### Accessibility Compliance Workflow
+```bash
+# Task automatically routes to accessibility-auditor-agent  
+"Ensure checkout flow meets WCAG AA standards"
+
+# Agent provides:
+# - WCAG 2.1 AA compliance audit
+# - ARIA implementation recommendations
+# - Keyboard navigation testing
+# - Screen reader compatibility validation
+```
+
+### Standalone vs Guild System
+
+| Aspect | Standalone Agents | Guild System |
+|--------|-------------------|--------------|
+| **Setup** | Single command | Full system configuration |
+| **Dependencies** | None | .guild system files |
+| **Activation** | Automatic | Command-driven workflow |
+| **Scope** | Specialist domains | Complete project lifecycle |
+| **Integration** | Standard workflow | Enhanced workflow system |
+| **Complexity** | Simple | Comprehensive |
+
+### When to Use Standalone Agents
+
+#### Ideal Scenarios
+- **Simple Projects**: Projects not requiring full Guild workflow complexity
+- **Specialist Needs**: Projects needing specific domain expertise without full system
+- **Team Integration**: Teams wanting specialist support with minimal workflow changes
+- **Quick Setup**: Projects requiring immediate specialist access without configuration
+
+#### Specialist Integration
+- **Security Focus**: Projects requiring security expertise without full workflow orchestration
+- **Performance Critical**: Applications needing performance optimization specialists
+- **Compliance Requirements**: Projects with accessibility or regulatory compliance needs
+- **Quality Assurance**: Codebases requiring code quality and review specialists
+
+The standalone agent system provides targeted expertise with zero configuration overhead, making specialized knowledge accessible to any Claude Code user through natural task descriptions.
+
 ## Technology Stack
 
 ### Runtime Requirements
