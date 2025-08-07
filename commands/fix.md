@@ -11,7 +11,7 @@ First, check if Guild is configured for this project by looking for `.guild/inst
 **Configuration Validation**:
 1. **Instructions File**: Check for `.guild/instructions.md` (required for Guild operation)
 2. **Ignore Patterns**: Check for `.guild/ignore.md` (create default if missing)
-3. **Agent Directory**: Verify `.claude/agents/` contains Guild agents
+3. **Agent Directory**: Verify `.claude/agents/guild/` contains Guild agents
 4. **Partial Setup Recovery**: If some files missing, provide guidance for completion
 
 ## If Guild NOT Configured

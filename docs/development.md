@@ -1,744 +1,485 @@
-# Development & Maintenance Guide
+# Development Guide
 
-## Overview
+## Contributing to Claude Guild
 
-This guide provides **development guidelines** and **maintenance protocols** for contributing to and maintaining the Claude Guild system.
-
-## Development Environment
-
-### Prerequisites
-
-```yaml
-Requirements:
-  Node.js: >= 18.0.0
-  NPM: >= 9.0.0
-  
-  Development Tools:
-    - Git
-    - VS Code (recommended)
-    - ESLint
-    - Prettier
-    
-  Testing Tools:
-    - Jest
-    - Node test runner
-    - Integration test suite
-```
-
-### Project Setup
+### Development Setup
 
 ```bash
 # Clone repository
-git clone https://github.com/organization/claude-guild
+git clone https://github.com/your-org/claude-guild
 cd claude-guild
 
 # Install dependencies
 npm install
 
-# Run tests
-npm test
-
-# Run linting
-npm run lint
-
-# Build for production
-npm run build
-
-# Local development
-npm run dev
+# Test installation
+npm run test-install
 ```
 
-### Development Structure
+### Project Structure
 
 ```
 claude-guild/
-├── src/                  # Source code
-│   ├── core/            # Core functionality
-│   ├── agents/          # Agent system
-│   ├── processes/       # Process engine
-│   ├── routing/         # Routing system
-│   └── commands/        # Command handlers
-├── templates/           # System templates
-├── commands/            # Command definitions
-├── tests/               # Test suite
-├── docs/                # Documentation
-└── scripts/             # Build scripts
+├── templates/       # Core templates (logic)
+├── commands/        # Command definitions
+├── docs/           # Documentation
+├── install.js      # NPM installer
+└── package.json    # NPM configuration
 ```
+
+### Development Workflow
+
+1. **Make Changes**: Edit templates or commands
+2. **Test Locally**: Run `node install.js` to test
+3. **Update Docs**: Keep GUIDELINE.md current
+4. **Submit PR**: Include tests and documentation
+
+## Adding Features
+
+### New Process
+
+Create in `templates/processes.md`:
+```yaml
+process: my-process
+  description: what it does
+  inputs: [required]
+  steps: [actions]
+  outputs: [results]
+```
+
+### New Agent
+
+Add to `templates/agents.md`:
+```yaml
+---
+name: my-agent
+role: purpose
+processes: [my-process]
+---
+```
+
+### New Command
+
+Create `commands/mycommand.md`:
+```markdown
+# /guild:mycommand
+
+**Usage**: `/guild:mycommand [args]`
+
+## Workflow
+[Define workflow stages and execution]
+```
+
+## Testing
+
+### Local Testing
+
+```bash
+# Test installation
+npm run test-install
+
+# Test in project
+cd test-project
+node ../claude-guild/install.js
+```
+
+### Test Checklist
+
+- [ ] Installation completes
+- [ ] Commands are registered
+- [ ] Agents are created
+- [ ] Workflows execute
+- [ ] Performance acceptable
 
 ## Code Standards
 
-### TypeScript/JavaScript Standards
+### Principles
 
-```javascript
-// Use descriptive names
-const analyzeTaskComplexity = (task) => { /* ... */ };
+1. **Simplicity**: Prefer simple over clever
+2. **Generic**: Patterns over specifics
+3. **Reusable**: DRY principle
+4. **Documented**: Clear explanations
+5. **Tested**: Verify changes
 
-// Document complex logic
-/**
- * Routes task to appropriate agents based on classification
- * @param {Task} task - The task to route
- * @param {Agent[]} agents - Available agents
- * @returns {Assignment[]} Agent assignments
- */
-function routeTask(task, agents) {
-  // Implementation
-}
+### Guidelines
 
-// Use async/await for asynchronous code
-async function executeProcess(process, inputs) {
-  try {
-    const result = await process.execute(inputs);
-    return result;
-  } catch (error) {
-    handleError(error);
-  }
-}
+- Keep agents thin (metadata only)
+- Put logic in processes
+- Use technology patterns, not names
+- Optimize for parallelization
+- Document changes in GUIDELINE.md
 
-// Prefer functional patterns
-const processedData = data
-  .filter(item => item.valid)
-  .map(item => transform(item))
-  .reduce((acc, item) => aggregate(acc, item), {});
-```
-
-### Template Standards
-
-```yaml
-# Clear structure
-process: process-name
-  description: Clear description
-  inputs: [well-defined-inputs]
-  steps:
-    - step_name:
-        action: specific_action
-        output: expected_output
-  outputs: [clear-outputs]
-
-# Consistent naming
-agents:
-  naming: guild-[role]-[type]
-  examples:
-    - guild-react-engineer
-    - guild-planning-agent
-    - guild-test-engineer
-
-# Comprehensive documentation
-documentation:
-  - Purpose statement
-  - Usage examples
-  - Configuration options
-  - Best practices
-```
-
-## Testing
-
-### Test Structure
-
-```javascript
-// Unit test example
-describe('ProcessExecutor', () => {
-  describe('execute', () => {
-    it('should execute process successfully', async () => {
-      const executor = new ProcessExecutor();
-      const result = await executor.execute('test-process', {});
-      expect(result).toBeDefined();
-      expect(result.success).toBe(true);
-    });
-    
-    it('should handle errors gracefully', async () => {
-      const executor = new ProcessExecutor();
-      await expect(
-        executor.execute('invalid-process', {})
-      ).rejects.toThrow('Process not found');
-    });
-  });
-});
-
-// Integration test example
-describe('Guild Workflow', () => {
-  it('should complete bug fix workflow', async () => {
-    const workflow = new Workflow('/guild:fix "test bug"');
-    const result = await workflow.execute();
-    
-    expect(result.stages).toContain('reasoning');
-    expect(result.stages).toContain('implementation');
-    expect(result.success).toBe(true);
-  });
-});
-```
-
-### Test Coverage
-
-```yaml
-Coverage Requirements:
-  Unit Tests:
-    - Core functions: 100%
-    - Utilities: 90%
-    - Error handlers: 100%
-    
-  Integration Tests:
-    - Workflows: 80%
-    - Commands: 90%
-    - Agent creation: 85%
-    
-  E2E Tests:
-    - Critical paths: 100%
-    - Common workflows: 75%
-    - Edge cases: 60%
-```
-
-## Version Control
-
-### Git Workflow
-
-```bash
-# Feature development
-git checkout -b feature/agent-improvements
-# Make changes
-git add .
-git commit -m "feat: improve agent routing algorithm"
-git push origin feature/agent-improvements
-# Create pull request
-
-# Bug fixes
-git checkout -b fix/routing-error
-# Fix bug
-git commit -m "fix: resolve routing error for parallel execution"
-git push origin fix/routing-error
-
-# Documentation
-git checkout -b docs/update-setup-guide
-# Update docs
-git commit -m "docs: clarify setup process"
-```
-
-### Commit Standards
-
-```yaml
-Commit Types:
-  feat: New feature
-  fix: Bug fix
-  docs: Documentation
-  style: Code style
-  refactor: Code refactoring
-  test: Test updates
-  chore: Maintenance
-  
-Examples:
-  - "feat: add parallel research execution"
-  - "fix: resolve agent boundary conflicts"
-  - "docs: update extensibility guide"
-  - "refactor: simplify routing logic"
-  - "test: add workflow integration tests"
-```
-
-### Branch Strategy
-
-```yaml
-Branches:
-  main:
-    - Production ready
-    - Protected branch
-    - Requires PR approval
-    
-  develop:
-    - Development branch
-    - Integration testing
-    - Pre-release features
-    
-  feature/*:
-    - New features
-    - Experimental work
-    - Merge to develop
-    
-  fix/*:
-    - Bug fixes
-    - Hotfixes
-    - Can merge to main
-```
-
-## Release Process
+## Publishing
 
 ### Version Management
 
-```yaml
-Versioning: Semantic Versioning (SemVer)
-  
-Format: MAJOR.MINOR.PATCH
+```bash
+# Patch version (bug fixes)
+npm version patch
 
-Rules:
-  MAJOR: Breaking changes
-  MINOR: New features (backward compatible)
-  PATCH: Bug fixes
+# Minor version (new features)
+npm version minor
 
-Examples:
-  1.0.0: Initial release
-  1.1.0: Add parallel execution
-  1.1.1: Fix routing bug
-  2.0.0: New architecture
+# Major version (breaking changes)
+npm version major
 ```
 
-### Release Workflow
+### Publishing Process
 
 ```bash
-# 1. Update version
-npm version minor  # or major, patch
+# Run publish script
+./publish.sh
 
-# 2. Update changelog
-npm run changelog
-
-# 3. Run tests
-npm test
-npm run integration-test
-
-# 4. Build
-npm run build
-
-# 5. Tag release
-git tag -a v1.1.0 -m "Release version 1.1.0"
-
-# 6. Push to repository
-git push origin main --tags
-
-# 7. Publish to NPM
+# Or manually
 npm publish
-
-# 8. Create GitHub release
-gh release create v1.1.0 --notes "Release notes"
 ```
 
-### Changelog Management
+### Pre-publish Checklist
 
-```markdown
-# Changelog
-
-## [1.1.0] - 2024-01-15
-
-### Added
-- Parallel execution for research agents
-- Custom routing rules
-- Performance monitoring
-
-### Fixed
-- Agent boundary conflicts
-- Memory leak in cache system
-
-### Changed
-- Improved routing algorithm
-- Updated process definitions
-
-### Deprecated
-- Old configuration format
-
-### Removed
-- Legacy command system
-```
+- [ ] Tests pass
+- [ ] Documentation updated
+- [ ] GUIDELINE.md current
+- [ ] Version bumped
+- [ ] Changelog updated
 
 ## Debugging
 
-### Debug Configuration
-
-```javascript
-// Enable debug mode
-process.env.DEBUG = 'guild:*';
-
-// Debug specific modules
-process.env.DEBUG = 'guild:routing,guild:agents';
-
-// Debug output
-const debug = require('debug')('guild:routing');
-debug('Routing task to agents:', agents);
-```
-
 ### Common Issues
 
-```yaml
-Issue: Agent Not Found
-  Debug:
-    - Check agent file exists
-    - Verify agent name
-    - Check routing rules
-  Solution:
-    - Recreate agent
-    - Fix routing configuration
-    
-Issue: Process Timeout
-  Debug:
-    - Check process definition
-    - Monitor execution time
-    - Review timeout settings
-  Solution:
-    - Optimize process
-    - Increase timeout
-    - Add caching
-    
-Issue: Parallel Conflicts
-  Debug:
-    - Review agent boundaries
-    - Check file access
-    - Monitor coordination
-  Solution:
-    - Adjust boundaries
-    - Implement locking
-    - Use sequential mode
-```
+**Installation Fails**
+- Check Node.js version (18+)
+- Verify npm permissions
+- Clear npm cache
 
-### Logging
+**Commands Not Found**
+- Check `.claude/commands/` directory
+- Verify command registration
+- Restart Claude Code
 
+**Agents Missing**
+- Run `/guild:setup`
+- Check `.claude/agents/guild/`
+- Verify technology detection
+
+### Debug Mode
+
+Enable verbose logging:
 ```javascript
-// Structured logging
-const logger = {
-  info: (message, data) => {
-    console.log(JSON.stringify({
-      level: 'info',
-      message,
-      data,
-      timestamp: new Date().toISOString()
-    }));
-  },
-  
-  error: (message, error) => {
-    console.error(JSON.stringify({
-      level: 'error',
-      message,
-      error: error.message,
-      stack: error.stack,
-      timestamp: new Date().toISOString()
-    }));
-  }
-};
-
-// Usage
-logger.info('Task routed successfully', {
-  task: task.id,
-  agents: agents.map(a => a.name)
-});
+// In install.js
+const DEBUG = true;
 ```
 
-## Performance Profiling
+## Architecture Decisions
 
-### Profiling Tools
+### Why Thin Agents?
+- Easier maintenance
+- Clearer separation
+- Better reusability
+- Simpler testing
 
-```javascript
-// Performance timing
-const startTime = performance.now();
-await executeWorkflow();
-const duration = performance.now() - startTime;
-console.log(`Workflow completed in ${duration}ms`);
+### Why Process Centralization?
+- Single source of truth
+- Consistent behavior
+- Easy updates
+- Better debugging
 
-// Memory profiling
-const memUsage = process.memoryUsage();
-console.log('Memory usage:', {
-  rss: `${Math.round(memUsage.rss / 1024 / 1024)}MB`,
-  heap: `${Math.round(memUsage.heapUsed / 1024 / 1024)}MB`
-});
-
-// CPU profiling
-const cpuUsage = process.cpuUsage();
-console.log('CPU usage:', cpuUsage);
-```
-
-### Performance Optimization
-
-```yaml
-Optimization Checklist:
-  - Profile before optimizing
-  - Identify bottlenecks
-  - Measure improvements
-  - Document changes
-  
-Common Optimizations:
-  - Cache frequently used data
-  - Parallelize independent tasks
-  - Stream large datasets
-  - Lazy load resources
-  - Optimize database queries
-```
+### Why Pattern Detection?
+- Technology agnostic
+- Future-proof
+- Broader compatibility
+- Easier maintenance
 
 ## Maintenance
 
-### Regular Maintenance
+### Regular Tasks
 
-```yaml
-Daily:
-  - Monitor error logs
-  - Check performance metrics
-  - Review user feedback
-  
-Weekly:
-  - Update dependencies
-  - Run full test suite
-  - Review pull requests
-  
-Monthly:
-  - Performance audit
-  - Security scan
-  - Documentation review
-  
-Quarterly:
-  - Major version planning
-  - Architecture review
-  - User survey
-```
+- Update dependencies monthly
+- Review performance metrics
+- Prune unused code
+- Update documentation
+- Address user feedback
 
-### Dependency Management
+### Deprecation Policy
+
+1. Mark as deprecated in documentation
+2. Add console warnings
+3. Maintain for 2 versions
+4. Remove in major version
+
+## Community
+
+### Getting Help
+
+- GitHub Issues for bugs
+- Discussions for features
+- Discord for chat
+- Stack Overflow for Q&A
+
+### Contributing
+
+1. Check existing issues
+2. Discuss major changes
+3. Follow code standards
+4. Include tests
+5. Update documentation
+
+## Release Process
+
+### Release Types
+
+- **Patch**: Bug fixes only
+- **Minor**: New features, backward compatible
+- **Major**: Breaking changes
+
+### Release Checklist
+
+- [ ] All tests passing
+- [ ] Documentation complete
+- [ ] Migration guide (if breaking)
+- [ ] Changelog updated
+- [ ] Version bumped
+- [ ] Tag created
+- [ ] NPM published
+- [ ] GitHub release created# Development Guide
+
+## Contributing to Claude Guild
+
+### Development Setup
 
 ```bash
-# Check for updates
-npm outdated
+# Clone repository
+git clone https://github.com/your-org/claude-guild
+cd claude-guild
 
-# Update dependencies
-npm update
+# Install dependencies
+npm install
 
-# Audit for vulnerabilities
-npm audit
-
-# Fix vulnerabilities
-npm audit fix
-
-# Major version updates (careful!)
-npm install package@latest
+# Test installation
+npm run test-install
 ```
 
-### Documentation Maintenance
+### Project Structure
 
+```
+claude-guild/
+├── templates/       # Core templates (logic)
+├── commands/        # Command definitions
+├── docs/           # Documentation
+├── install.js      # NPM installer
+└── package.json    # NPM configuration
+```
+
+### Development Workflow
+
+1. **Make Changes**: Edit templates or commands
+2. **Test Locally**: Run `node install.js` to test
+3. **Update Docs**: Keep GUIDELINE.md current
+4. **Submit PR**: Include tests and documentation
+
+## Adding Features
+
+### New Process
+
+Create in `templates/processes.md`:
 ```yaml
-Documentation Tasks:
-  - Keep README current
-  - Update API documentation
-  - Maintain examples
-  - Update changelog
-  - Review user guides
-  
-Documentation Standards:
-  - Clear and concise
-  - Include examples
-  - Explain why, not just how
-  - Keep synchronized with code
-  - Version specific information
+process: my-process
+  description: what it does
+  inputs: [required]
+  steps: [actions]
+  outputs: [results]
 ```
 
-## Contributing
+### New Agent
 
-### Contribution Process
+Add to `templates/agents.md`:
+```yaml
+---
+name: my-agent
+role: purpose
+processes: [my-process]
+---
+```
 
-1. **Fork Repository**: Create your own fork
-2. **Create Branch**: Feature or fix branch
-3. **Make Changes**: Follow code standards
-4. **Add Tests**: Cover new functionality
-5. **Update Docs**: Document changes
-6. **Submit PR**: Detailed description
-7. **Code Review**: Address feedback
-8. **Merge**: After approval
+### New Command
 
-### Pull Request Template
-
+Create `commands/mycommand.md`:
 ```markdown
-## Description
-Brief description of changes
+# /guild:mycommand
 
-## Type of Change
-- [ ] Bug fix
-- [ ] New feature
-- [ ] Documentation
-- [ ] Refactoring
+**Usage**: `/guild:mycommand [args]`
+
+## Workflow
+[Define workflow stages and execution]
+```
 
 ## Testing
-- [ ] Unit tests pass
-- [ ] Integration tests pass
-- [ ] Manual testing completed
 
-## Checklist
-- [ ] Code follows style guidelines
-- [ ] Self-review completed
+### Local Testing
+
+```bash
+# Test installation
+npm run test-install
+
+# Test in project
+cd test-project
+node ../claude-guild/install.js
+```
+
+### Test Checklist
+
+- [ ] Installation completes
+- [ ] Commands are registered
+- [ ] Agents are created
+- [ ] Workflows execute
+- [ ] Performance acceptable
+
+## Code Standards
+
+### Principles
+
+1. **Simplicity**: Prefer simple over clever
+2. **Generic**: Patterns over specifics
+3. **Reusable**: DRY principle
+4. **Documented**: Clear explanations
+5. **Tested**: Verify changes
+
+### Guidelines
+
+- Keep agents thin (metadata only)
+- Put logic in processes
+- Use technology patterns, not names
+- Optimize for parallelization
+- Document changes in GUIDELINE.md
+
+## Publishing
+
+### Version Management
+
+```bash
+# Patch version (bug fixes)
+npm version patch
+
+# Minor version (new features)
+npm version minor
+
+# Major version (breaking changes)
+npm version major
+```
+
+### Publishing Process
+
+```bash
+# Run publish script
+./publish.sh
+
+# Or manually
+npm publish
+```
+
+### Pre-publish Checklist
+
+- [ ] Tests pass
 - [ ] Documentation updated
-- [ ] No breaking changes
+- [ ] GUIDELINE.md current
+- [ ] Version bumped
+- [ ] Changelog updated
+
+## Debugging
+
+### Common Issues
+
+**Installation Fails**
+- Check Node.js version (18+)
+- Verify npm permissions
+- Clear npm cache
+
+**Commands Not Found**
+- Check `.claude/commands/` directory
+- Verify command registration
+- Restart Claude Code
+
+**Agents Missing**
+- Run `/guild:setup`
+- Check `.claude/agents/guild/`
+- Verify technology detection
+
+### Debug Mode
+
+Enable verbose logging:
+```javascript
+// In install.js
+const DEBUG = true;
 ```
 
-### Code Review Guidelines
+## Architecture Decisions
 
-```yaml
-Review Checklist:
-  Functionality:
-    - Does it work as intended?
-    - Are edge cases handled?
-    - Is error handling appropriate?
-    
-  Code Quality:
-    - Is it readable?
-    - Is it maintainable?
-    - Is it efficient?
-    
-  Testing:
-    - Are tests comprehensive?
-    - Do tests pass?
-    - Is coverage adequate?
-    
-  Documentation:
-    - Is it documented?
-    - Are changes reflected in docs?
-    - Are examples provided?
-```
+### Why Thin Agents?
+- Easier maintenance
+- Clearer separation
+- Better reusability
+- Simpler testing
 
-## Security
+### Why Process Centralization?
+- Single source of truth
+- Consistent behavior
+- Easy updates
+- Better debugging
 
-### Security Practices
+### Why Pattern Detection?
+- Technology agnostic
+- Future-proof
+- Broader compatibility
+- Easier maintenance
 
-```yaml
-Security Guidelines:
-  - Never commit secrets
-  - Validate all inputs
-  - Sanitize outputs
-  - Use secure dependencies
-  - Regular security audits
-  
-Security Checklist:
-  - [ ] No hardcoded credentials
-  - [ ] Input validation implemented
-  - [ ] SQL injection prevention
-  - [ ] XSS prevention
-  - [ ] Dependencies audited
-```
+## Maintenance
 
-### Security Response
+### Regular Tasks
 
-```yaml
-Security Issue Response:
-  1. Assess severity
-  2. Create private fix
-  3. Test thoroughly
-  4. Release patch
-  5. Notify users
-  6. Document incident
-```
+- Update dependencies monthly
+- Review performance metrics
+- Prune unused code
+- Update documentation
+- Address user feedback
 
-## New Features (v2.0)
+### Deprecation Policy
 
-### Enhanced Capabilities
+1. Mark as deprecated in documentation
+2. Add console warnings
+3. Maintain for 2 versions
+4. Remove in major version
 
-#### 1. Technology Detection System
-Advanced project analysis that goes beyond package.json to understand the actual codebase:
-- Deep code analysis for framework detection
-- Confidence scoring for technology identification
-- Automatic specialization recommendations
-- See: `templates/technology-detection.md`
+## Community
 
-#### 2. Context Handoff Protocol
-Structured context transfer between agents for improved collaboration:
-- Priority-based context organization
-- Validation and error handling
-- Compression strategies for efficiency
-- See: `templates/context-handoff.md`
+### Getting Help
 
-#### 3. Pattern Learning & Memory
-Intelligent workflow optimization through pattern recognition:
-- Success/failure pattern tracking
-- Workflow prediction and optimization
-- Cross-project learning
-- See: `templates/pattern-memory.md`
+- GitHub Issues for bugs
+- Discussions for features
+- Discord for chat
+- Stack Overflow for Q&A
 
-#### 4. Workflow Template Library
-Pre-defined workflow templates for common tasks:
-- Bug fix, feature, refactor templates
-- Automatic template selection
-- Customizable parameters
-- See: `templates/workflow-templates.md`
+### Contributing
 
-#### 5. Natural Language Instructions
-Configure Guild using plain English instead of YAML:
-- Natural language parsing
-- Entity extraction and validation
-- Automatic configuration generation
-- See: `templates/natural-language-instructions.md`
+1. Check existing issues
+2. Discuss major changes
+3. Follow code standards
+4. Include tests
+5. Update documentation
 
-#### 6. Agent Capability Discovery
-Runtime capability assessment for optimal task routing:
-- Performance profiling per agent
-- Capability matrix building
-- Dynamic routing optimization
-- See: `templates/agent-capability-discovery.md`
+## Release Process
 
-#### 7. Workflow Optimization Engine
-Real-time workflow analysis and optimization:
-- Bottleneck detection and resolution
-- Parallel execution optimization
-- Intelligent caching strategies
-- See: `templates/workflow-optimization-engine.md`
+### Release Types
 
-### Integration Examples
+- **Patch**: Bug fixes only
+- **Minor**: New features, backward compatible
+- **Major**: Breaking changes
 
-```yaml
-# Natural language configuration
-/guild:setup "Create a React app with TypeScript, using Redux for state management, Jest for testing"
+### Release Checklist
 
-# Capability-based routing
-/guild:route --capability-match "Complex debugging task requiring React expertise"
-
-# Workflow optimization
-/guild:optimize --analyze  # Show optimization opportunities
-/guild:optimize --apply    # Apply optimizations
-
-# Pattern learning
-/guild:patterns --show     # Display learned patterns
-/guild:patterns --apply    # Use learned patterns
-```
-
-### Performance Improvements
-
-```yaml
-Metrics with New Features:
-  Task Completion:
-    - Before: 25-30 minutes average
-    - After: 12-15 minutes average
-    - Improvement: 50-60% faster
-    
-  Token Usage:
-    - Before: 15,000-20,000 average
-    - After: 10,000-12,000 average
-    - Improvement: 30-40% reduction
-    
-  Success Rate:
-    - Before: 85% first attempt
-    - After: 92% first attempt
-    - Improvement: 8% increase
-    
-  Parallel Efficiency:
-    - Before: 2-3 concurrent tasks
-    - After: 5-8 concurrent tasks
-    - Improvement: 150% increase
-```
-
-## Support
-
-### Issue Tracking
-
-```yaml
-Issue Management:
-  Bug Reports:
-    - Reproducible steps
-    - Expected behavior
-    - Actual behavior
-    - Environment details
-    
-  Feature Requests:
-    - Use case description
-    - Proposed solution
-    - Alternative considered
-    
-  Questions:
-    - Check documentation first
-    - Search existing issues
-    - Provide context
-```
-
-### Community
-
-```yaml
-Community Channels:
-  GitHub Discussions: General discussion
-  Discord: Real-time chat
-  Stack Overflow: Technical questions
-  Twitter: Updates and announcements
-```
-
-This comprehensive development and maintenance guide ensures consistent, high-quality contributions and sustainable system maintenance.
+- [ ] All tests passing
+- [ ] Documentation complete
+- [ ] Migration guide (if breaking)
+- [ ] Changelog updated
+- [ ] Version bumped
+- [ ] Tag created
+- [ ] NPM published
+- [ ] GitHub release created

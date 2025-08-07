@@ -251,7 +251,7 @@ All Guild commands follow this three-phase processing structure:
 
 1. **Workflow Stage Compliance**: Follow workflow stages defined in `.guild/overview.md` [with command-specific completeness requirements]
 2. **Ignore Pattern Respect**: Respect `.guild/ignore.md` patterns unless explicitly requested by user
-3. **Agent Engagement**: Engage specialized agents from `.claude/agents/` directory based on [task-specific scope]
+3. **Agent Engagement**: Engage specialized agents from `.claude/agents/guild/` directory based on [task-specific scope]
 4. **Systematic Approach**: Maintain [command-specific approach] with validation at each step
 5. **Comprehensive Analysis**: Apply comprehensive analysis to ALL agents throughout [task-type] process
 6. **Stage Completion**: Complete all [command-specific number] stages before considering [task-type] complete
@@ -307,7 +307,7 @@ All Guild commands follow this three-phase processing structure:
 
 ## Current Project Agents
 
-**Guild agents for this project** (see `.claude/agents/` for individual agent files):
+**Guild agents for this project** (see `.claude/agents/guild/` for individual agent files):
 
 ### Core System Agents
 - **guild-planning-agent** - Unified task analysis, planning, and routing coordinator with integrated prompt analysis, agent selection, and context coordination
@@ -340,7 +340,7 @@ All Guild commands follow this three-phase processing structure:
 
 ### Integration Architecture
 - **External Configuration**: Guild operates via configuration files, not code embedding
-- **Agent System Leverage**: Uses Claude Code's existing `.claude/agents/` system
+- **Agent System Leverage**: Uses Claude Code's existing `.claude/agents/` system (guild agents in `.claude/agents/guild/` subdirectory)
 - **Command System Extension**: Adds commands to `.claude/commands/` without core modifications
 - **Isolation Maintenance**: Complete separation between Guild and Claude Code functionality
 

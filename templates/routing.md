@@ -83,6 +83,9 @@ routing_matrix:
       mode: direct
       agents: [single_specialist]
       execution: sequential
+      research_phases:
+        strategic: minimal (5%)
+        tactical: focused (95%)
   
   # Medium complexity with multiple components
   - condition:
@@ -93,6 +96,9 @@ routing_matrix:
       mode: coordinated
       agents: [planning, specialists]
       execution: mixed
+      research_phases:
+        strategic: standard (30%)
+        tactical: targeted (70%)
   
   # Complex, multi-system tasks
   - condition:
@@ -103,6 +109,59 @@ routing_matrix:
       mode: orchestrated
       agents: [reasoning, planning, multiple_specialists]
       execution: parallel_groups
+      research_phases:
+        strategic: comprehensive (40%)
+        tactical: deep (60%)
+```
+
+### Enhanced Routing Algorithm
+
+```yaml
+smart_routing_algorithm:
+  step_1_decompose:
+    actions:
+      - break_into_atomic_tasks
+      - identify_dependencies
+      - calculate_complexity_scores
+    outputs:
+      - task_graph
+      - dependency_matrix
+      - complexity_map
+      
+  step_2_optimize:
+    routing_score_calculation:
+      for_each_routing_option:
+        factors:
+          parallelization_potential: 0.35
+          context_locality: 0.25
+          agent_expertise_match: 0.20
+          coordination_overhead: -0.10
+          context_transfer_cost: -0.10
+        score: weighted_sum(factors)
+    selection:
+      - rank_by_score
+      - verify_feasibility
+      - select_optimal
+      
+  step_3_package:
+    work_package_creation:
+      for_each_agent:
+        include:
+          - specific_tasks
+          - filtered_context (only_relevant)
+          - success_criteria
+          - integration_points
+        exclude:
+          - irrelevant_context
+          - other_agent_tasks
+          - unnecessary_details
+          
+  step_4_schedule:
+    execution_scheduling:
+      - identify_critical_path
+      - schedule_parallel_groups
+      - define_synchronization_points
+      - allocate_resources
 ```
 
 ### Agent Selection Rules
@@ -259,7 +318,7 @@ synchronization:
 
 ## Routing Examples
 
-### Example 1: React Component with API
+### Example 1: React Component with API (Dual-Phase Research)
 ```yaml
 task: "Create user dashboard with real-time data"
 classification:
@@ -269,21 +328,51 @@ classification:
 
 routing_result:
   execution_plan:
-    phase_1:
+    phase_1_strategic_research:
       parallel:
-        - guild-project-researcher: analyze_existing_dashboard_patterns
-        - guild-global-researcher: research_realtime_best_practices
-    phase_2:
-      sequential: guild-planning-agent: create_implementation_plan
-    phase_3:
+        - guild-project-researcher: 
+            quick_scan: existing_dashboards (2min)
+            identify: component_patterns (1min)
+        - guild-global-researcher:
+            overview: realtime_approaches (3min)
+            complexity: implementation_effort (2min)
+      effort: 30%
+      
+    phase_2_planning:
+      sequential: guild-planning-agent:
+        - decompose_into_subtasks
+        - identify_specific_needs
+        - create_routing_plan
+        
+    phase_3_tactical_research:
+      parallel:
+        - guild-project-researcher:
+            deep_dive: specific_dashboard_components
+            extract: exact_websocket_patterns
+            context: filtered_by_plan
+        - guild-global-researcher:
+            detailed: websocket_implementation_examples
+            specific: react_realtime_best_practices
+      effort: 70%
+      
+    phase_4_implementation:
       parallel:
         group_1:
-          - guild-react-engineer: implement_dashboard_component
-          - guild-style-engineer: create_responsive_styles
+          - guild-react-engineer:
+              context: [specific_components, patterns]
+              task: implement_dashboard
+          - guild-style-engineer:
+              context: [design_system, responsive_patterns]
+              task: create_styles
         group_2:
-          - guild-node-engineer: implement_websocket_endpoint
-          - guild-database-engineer: optimize_data_queries
-    phase_4:
+          - guild-node-engineer:
+              context: [websocket_examples, api_patterns]
+              task: implement_endpoint
+          - guild-database-engineer:
+              context: [query_patterns, optimization_tips]
+              task: optimize_queries
+              
+    phase_5_validation:
       sequential:
         - guild-test-engineer: integration_testing
         - guild-verification-agent: validate_requirements
@@ -338,23 +427,113 @@ routing_result:
 
 ## Performance Optimization
 
+### Context-Aware Performance Optimization
+
 ```yaml
-optimization_rules:
-  parallel_threshold:
-    min_subtasks: 2
-    min_complexity: medium
-    max_parallel_agents: 5
-  
-  sequential_preference:
-    when:
-      - critical_path: true
-      - high_risk: true
-      - dependencies: complex
-  
-  resource_management:
-    max_concurrent_agents: 3
-    queue_overflow: sequential_fallback
-    priority_scheduling: true
+context_optimization:
+  context_budget:
+    per_agent_limit: 10KB
+    total_system_limit: 100KB
+    compression_threshold: 5KB
+    
+  transfer_optimization:
+    strategies:
+      lazy_loading:
+        - Send references, not content
+        - Load on demand only
+        - Cache frequently accessed
+      differential_updates:
+        - Send only changes
+        - Maintain base context
+        - Merge incrementally
+      smart_compression:
+        - Summarize verbose content
+        - Extract key points
+        - Remove redundancy
+        
+  memory_management:
+    cache_hierarchy:
+      L1_hot: immediate_access (1KB)
+      L2_warm: quick_access (10KB)
+      L3_cold: slow_access (100KB)
+    eviction_policy: LRU_with_relevance_boost
+```
+
+### Predictive Resource Allocation
+
+```yaml
+predictive_allocation:
+  load_prediction:
+    model: time_series_analysis
+    features:
+      - Historical task patterns
+      - Current system load
+      - Task complexity indicators
+    actions:
+      - Pre-allocate agents
+      - Warm up caches
+      - Prepare context
+      
+  bottleneck_prevention:
+    monitoring:
+      - Queue depths
+      - Agent utilization
+      - Context growth rate
+    preemptive_actions:
+      scale_agents:
+        trigger: utilization > 70%
+        action: spawn_additional
+      compress_context:
+        trigger: size > threshold
+        action: aggressive_compression
+      switch_mode:
+        trigger: coordination_overhead > 30%
+        action: sequential_fallback
+        
+  adaptive_parallelization:
+    dynamic_adjustment:
+      increase_parallel:
+        when: low_coordination_cost
+        max: 5_agents
+      decrease_parallel:
+        when: high_overhead
+        min: 1_agent
+      rebalance:
+        frequency: every_30_seconds
+        based_on: actual_performance
+```
+
+### Streaming Performance
+
+```yaml
+streaming_optimization:
+  pipeline_configuration:
+    buffer_sizes:
+      research_to_planning: 1KB
+      planning_to_implementation: 2KB
+      implementation_to_validation: 1KB
+      
+    flow_control:
+      backpressure: enabled
+      rate_limiting: adaptive
+      overflow_handling: queue_or_drop
+      
+    latency_targets:
+      first_result: < 5_seconds
+      continuous_flow: < 1_second
+      end_to_end: < 2_minutes
+      
+  parallel_streams:
+    independent_flows:
+      - Frontend stream
+      - Backend stream
+      - Database stream
+    synchronization:
+      only_at: integration_points
+      method: eventual_consistency
+    merge_strategy:
+      conflict_resolution: last_write_wins
+      validation: at_merge_points
 ```
 
 ## Monitoring and Metrics

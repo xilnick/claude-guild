@@ -1,204 +1,238 @@
 # Guild Agent Specifications
 
-Guild agents are specialized AI assistants that work within the Guild workflow system to provide comprehensive development support through clean, elegant design and instruction-based configuration.
+## Overview
 
-## Simple Agent Template Format
+Guild agents are **thin metadata definitions** that reference centralized processes. They provide specialized capabilities through clean separation of concerns and instruction-based configuration.
 
-All Guild agents use a clean, simple YAML frontmatter format:
+## Agent Architecture
 
-```yaml
----
-name: guild-[technology]-engineer
-description: "[Technology] engineer with integrated planning and implementation capabilities"
----
-```
+### Thin Agent Design
 
-**Optional Model Field**: When users specify model requirements in `.guild/instructions.md`, the model field is conditionally added:
+All Guild agents follow a minimal metadata format:
 
 ```yaml
 ---
-name: guild-[technology]-engineer  
-description: "[Technology] engineer with integrated planning and implementation capabilities"
-model: "[model-name]"  # Only when specified in instructions.md
+name: guild-[identifier]-engineer
+role: primary-function
+processes: [process-references]
+scope: operational-boundary
+parallel: true/false
 ---
 ```
-
-## Agent Architecture Philosophy
-
-**Clean & Simple Design**: Guild agents operate with elegant simplicity, avoiding unnecessary complexity while maintaining powerful capabilities through instruction-based configuration.
 
 **Key Principles**:
-- **Instruction-Based Configuration**: Agent behavior controlled through `.guild/instructions.md`
-- **Unified Capabilities**: Engineers combine planning and implementation within their specialization
-- **Simple Context Flow**: Clean context handoffs without complex orchestration
-- **User Configurability**: Easy customization through readable instructions
+- **Metadata Only**: Agents contain no logic, only references (<10 lines)
+- **Process References**: All logic lives in centralized processes
+- **Clear Boundaries**: Well-defined operational scopes
+- **Parallel Support**: Explicit parallelization capability
 
-## Agent Communication & Context Sharing
+### Model Configuration
 
-### Context Sharing Protocol
+Models are assigned through `.guild/instructions.md`, not in agent definitions:
 
-**CRITICAL**: Each specialized agent MUST provide reasonable feedback and useful context for clean handoffs to subsequent agents. Context flows between agents through well-defined interfaces that maximize information reuse and enable parallel execution coordination.
-
-### Simple Agent Communication
-
-**Clean Context Flow**: Guild agents communicate through simple, well-defined interfaces that prioritize clarity and maintainability over complex orchestration.
-
-**Key Communication Principles**:
-- **Direct Context Handoffs**: Agents provide clear, actionable context to subsequent agents
-- **Minimal Overhead**: Communication focuses on essential information without complex validation layers
-- **Instruction-Based Behavior**: Agent coordination controlled through `.guild/instructions.md` settings
-- **Clean Interfaces**: Well-defined boundaries between agent responsibilities
-
-### Agent Coordination Patterns
-
-**Standard Flow**:
-```
-Guild Planning Agent → Research Agents → Unified Engineers → Validation
-         ↓                    ↓               ↓              ↓
-   Task Analysis        Context Gathering   Implementation   Quality Check
+```yaml
+# In .guild/instructions.md
+models:
+  reasoning: opus
+  planning: sonnet
+  implementation: haiku
 ```
 
-**Context Integration**:
-- **Research to Planning**: Research findings flow cleanly to planning coordination
-- **Planning to Implementation**: Planning specifications guide unified engineer execution  
-- **Implementation to Validation**: Implementation results validated against requirements
-- **Quality Feedback**: Simple validation results integrated for continuous improvement
+## Agent Types
 
-### Specialized Agent Architecture
+### Core System Agents
 
-**Unified Engineer Architecture**: Planning coordination with integrated implementation capabilities:
-- **Planning Agent**: Single guild-planning-agent handles task analysis, coordination, and routing within unified scope
-- **Unified Engineers**: Parallel execution with integrated planning and implementation within specialized technology scope  
-- **Routing Coordination**: Planning agent coordinates engineer selection and context handoffs
-- **Clean Interfaces**: Well-defined context boundaries between planning and implementation phases
+| Agent | Role | Process References |
+|-------|------|-------------------|
+| **guild-reasoning-agent** | Task analysis and clarification | analyze-task, assess-complexity |
+| **guild-planning-agent** | Workflow coordination and routing | create-plan, route-agents |
+| **guild-research-agent** | Context gathering and synthesis | research-context, aggregate-findings |
+| **guild-verification-agent** | Quality assurance and validation | run-tests, verify-requirements |
+
+### Technology Engineers
+
+Engineers are created based on detected technology patterns:
+
+| Pattern | Engineer | Scope |
+|---------|----------|-------|
+| **Frontend Framework** | guild-[framework]-engineer | UI + State + Routing + Testing |
+| **Backend Framework** | guild-[framework]-engineer | API + Middleware + Database + Testing |
+| **Build Tools** | guild-build-engineer | Bundling + Optimization + Dev Server |
+| **Infrastructure** | guild-infra-engineer | Deployment + Monitoring + Scaling |
+
+### Standalone Specialists
+
+Self-contained agents for specific domains:
+
+```yaml
+---
+name: security-analyst-agent
+role: Security vulnerability assessment
+approach: OWASP methodology
+scope: Authentication, authorization, input validation
+self_contained: true
+---
+```
+
+## Technology Coupling
+
+### Coupling Principle
+
+Technologies that are **naturally coupled in workflows** share the same engineer:
+
+**Correct Coupling**:
+```yaml
+guild-react-engineer:
+  - React components
+  - Redux/Zustand state
+  - React Router
+  - React Testing Library
+  - React documentation
+```
+
+**Incorrect Separation**:
+```yaml
+# WRONG - Artificial boundaries
+guild-react-ui-engineer
+guild-redux-engineer
+guild-react-router-engineer
+```
+
+### Coupling Detection
+
+Engineers are created based on natural technology relationships:
+
+1. **Framework Ecosystems**: Core framework + official extensions
+2. **Build Ecosystems**: Build tool + plugins + configuration
+3. **Testing Ecosystems**: Test runner + utilities + coverage
+4. **Deployment Ecosystems**: Platform + services + monitoring
+
+## Context Management
+
+### Context Flow
+
+```yaml
+Flow Pattern:
+  Research → Planning → Implementation → Verification
+       ↓         ↓            ↓              ↓
+   Findings  Assignment   Execution      Quality
+
+Transfer Protocol:
+  - Executive summary (always)
+  - Key points (important)
+  - Full details (critical only)
+  - References (as needed)
+```
+
+### Context Optimization
+
+Agents use intelligent context management:
+- **Relevance Scoring**: Keep only needed information
+- **Progressive Disclosure**: Start minimal, add as needed
+- **Shared Cache**: Reuse common context across agents
+- **Context Decay**: Remove outdated information
+
+## Coordination Patterns
+
+### Sequential Coordination
+```yaml
+Pattern: Step-by-step execution
+When: Dependencies exist
+Example: Reasoning → Planning → Implementation
+```
+
+### Parallel Coordination
+```yaml
+Pattern: Simultaneous execution
+When: Independent scopes
+Example: Frontend || Backend || Database
+```
+
+### Pipeline Coordination
+```yaml
+Pattern: Overlapping stages
+When: Early starts possible
+Example: Research → Planning (early) → Implementation
+```
 
 ## Custom Agent Creation
 
-Users can define additional agents beyond the automatically detected technology agents through simple instruction-based configuration in `.guild/instructions.md`.
+### Through Instructions
 
-### Agent Configuration Approach
-All agent customization is handled through readable instructions rather than complex YAML specifications:
+Define custom agents in `.guild/instructions.md`:
 
-**Custom Agent Types**:
-- **Domain-Specific Agents**: Specialized for particular business domains or requirements  
-- **Cross-Technology Agents**: Handle integration between multiple technologies
-- **Quality-Focused Agents**: Specialized in security, performance, or accessibility
-- **Workflow-Specific Agents**: Optimized for particular development methodologies
+```markdown
+Create a specialized security engineer that focuses on:
+- OWASP Top 10 vulnerabilities
+- Authentication best practices
+- Input validation
+- Security headers
+```
 
-### Simple Configuration
-Custom agents follow the same simple template format:
+### Through Templates
+
+Add custom agent templates in `.guild/agents/`:
+
 ```yaml
 ---
-name: guild-[custom-name]-engineer
-description: "[Custom] engineer with integrated planning and implementation capabilities"
+name: guild-custom-engineer
+role: Specialized function
+processes: [custom-processes]
+scope: Domain boundaries
+parallel: true
 ---
 ```
 
-**Model Assignment**: When specified in instructions, models are conditionally added to agent frontmatter.
+## Agent Communication
 
-### Integration with Guild System
-Custom agents automatically integrate with Guild's routing and coordination system through instruction-based behavior configuration.
+### Simple Interfaces
 
-## Framework-Coupled Engineer Architecture
+Agents communicate through clean, well-defined interfaces:
 
-Guild agents are created as **general engineers specialized through framework context** during setup. Framework coupling naturally integrates related concerns (UI + state + docs) within unified engineer scope.
+1. **Input Contract**: What the agent expects
+2. **Process Execution**: Referenced processes run
+3. **Output Contract**: What the agent provides
+4. **Context Transfer**: Relevant information passed forward
 
-**CRITICAL REQUIREMENT**: **Coupled libraries and frameworks MUST share the same engineer agent**. Engineers are defined by their coupling relationships, not artificial technical boundaries.
+### Error Handling
 
-## Coupling Principles
-
-**Fundamental Rule**: Technologies that are **naturally coupled in development workflows** must be handled by the same engineer agent. Coupling is determined by developer mental models and practical usage patterns, not technical architecture.
-
-### Coupling Categories
-
-**Framework Ecosystems** (Single Engineer):
-- **Frontend Frameworks**: React + Redux/Zustand + React Router + React Testing Library
-- **Backend Frameworks**: Express + middleware + routing + validation + Express testing
-- **Full-Stack Frameworks**: Next.js + routing + SSR + API routes + deployment
-
-**Build Tool Ecosystems** (Single Engineer):  
-- **Webpack**: Webpack + loaders + plugins + optimization + dev server
-- **Vite**: Vite + plugins + build optimization + dev server + HMR
-
-**Testing Ecosystems** (Single Engineer):
-- **Jest**: Jest + testing utilities + mocking + coverage + configuration
-- **Cypress**: Cypress + E2E patterns + fixtures + commands + CI integration
-
-**Deployment Ecosystems** (Single Engineer):
-- **Docker**: Docker + compose + networking + volumes + orchestration
-- **AWS**: AWS services + deployment + monitoring + scaling + infrastructure
-
-### Anti-Coupling Examples
-
-**WRONG - Artificial Separation**:
-```
-guild-react-engineer (UI only)
-guild-redux-engineer (State only)  
-guild-react-router-engineer (Routing only)
-guild-react-testing-engineer (Testing only)
+```yaml
+Error Strategies:
+  process_failure: Retry with backoff
+  context_overflow: Compress and filter
+  timeout: Graceful degradation
+  conflict: Sequential fallback
 ```
 
-**CORRECT - Natural Coupling**:
-```
-guild-react-engineer (React ecosystem: UI + state + routing + testing + docs)
-```
+## Performance Optimization
 
-### Coupling Detection Rules
+### Agent-Level Optimizations
 
-1. **Mental Model Test**: Do developers think of these technologies as separate concerns or unified workflow?
-2. **Knowledge Transfer Test**: Does expertise in one naturally include the other?
-3. **Workflow Integration Test**: Are these technologies used together in typical development tasks?
-4. **Documentation Coupling Test**: Are these technologies documented together in official guides?
+- **Lazy Loading**: Load agents only when needed
+- **Process Caching**: Reuse process definitions
+- **Context Filtering**: Pass only relevant data
+- **Parallel Execution**: Run independent agents concurrently
 
-**If yes to 2+ questions → Same engineer agent**
+### System-Level Optimizations
 
-### General Engineer Categories
+- **Agent Pooling**: Reuse agent instances
+- **Batch Processing**: Group similar operations
+- **Predictive Loading**: Pre-warm likely agents
+- **Resource Management**: Balance load across agents
 
-**Core Engineers (Framework-Agnostic)**:
-- **guild-cli-engineer**: CLI applications, command-line interfaces, terminal tools
-- **guild-package-engineer**: Package management, distribution, dependency handling
-- **guild-config-engineer**: Configuration management, environment setup, build configuration
+## Best Practices
 
-**Framework Engineers (Context-Specialized During Setup)**:
-- **guild-[framework]-engineer**: Framagents ework-specific development including:
-  - **UI Components**: Component architecture, styling, user interface
-  - **State Management**: Application state, data flow, state persistence  
-  - **Documentation**: Framework-specific docs, API documentation, guides
-  - **Testing**: Framework testing patterns, component testing, integration tests
+1. **Keep Agents Thin**: Metadata only, no logic
+2. **Centralize Processes**: All logic in process definitions
+3. **Respect Coupling**: Don't artificially separate coupled technologies
+4. **Optimize Context**: Filter and compress aggressively
+5. **Enable Parallelism**: Design for concurrent execution
 
-### Framework Specialization Examples
+## Summary
 
-**Frontend Frameworks**:
-- **guild-react-engineer**: React components + Redux/Zustand + React docs + React testing
-- **guild-vue-engineer**: Vue components + Vuex/Pinia + Vue docs + Vue testing
-- **guild-angular-engineer**: Angular components + NgRx + Angular docs + Angular testing
-
-**Backend Frameworks**:
-- **guild-express-engineer**: Express routing + middleware + API docs + Express testing
-- **guild-fastapi-engineer**: FastAPI endpoints + Pydantic + API docs + FastAPI testing
-- **guild-rails-engineer**: Rails controllers + ActiveRecord + Rails docs + Rails testing
-
-**Full-Stack Frameworks**:
-- **guild-nextjs-engineer**: Next.js pages + routing + SSR + Next.js docs + Next.js testing
-- **guild-nuxt-engineer**: Nuxt pages + modules + SSR + Nuxt docs + Nuxt testing
-
-### Context-Driven Specialization Process
-
-**Setup Detection**:
-1. **Framework Analysis**: Detect primary framework from package.json, dependencies, file structure
-2. **Coupling Analysis**: Identify libraries/tools that are tightly coupled to detected frameworks
-3. **General Engineer Creation**: Create guild-[framework]-engineer with framework context including all coupled concerns
-4. **Context Injection**: Inject framework-specific knowledge plus all coupled library knowledge during agent creation
-5. **Unified Scope**: UI, state, docs, testing, and coupled libraries naturally integrated within framework scope
-
-**Coupling Examples**:
-- **React Engineer**: React + Redux/Zustand + React Router + React Testing Library + React docs
-- **Vue Engineer**: Vue + Vuex/Pinia + Vue Router + Vue Test Utils + Vue docs  
-- **Express Engineer**: Express + middleware + routing + API docs + Express testing
-- **Next.js Engineer**: Next.js + routing + SSR + deployment + Next.js docs + Next.js testing
-
-**Specialization Benefits**:
-- **Natural Coupling**: Framework knowledge includes all related and coupled concerns
-- **Reduced Complexity**: Single engineer handles all framework-related and coupled library tasks
-- **Context Coherence**: Unified understanding of framework + coupled library patterns and best practices
-- **Optimal Coordination**: No artificial boundaries between coupled technologies
+Guild agents achieve power through simplicity:
+- **Thin metadata** definitions reference centralized processes
+- **Natural coupling** respects technology relationships
+- **Smart context** management prevents explosion
+- **Flexible coordination** enables optimal execution
+- **Clean interfaces** ensure reliable communication
