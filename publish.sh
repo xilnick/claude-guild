@@ -35,7 +35,7 @@ rm -rf .claude .guild CLAUDE.md.backup 2>/dev/null || true
 
 # Run test installation
 echo "🧪 Testing installation..."
-node install.js > /dev/null 2>&1
+node install.js --no-interaction > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     echo "❌ Installation test failed"
     exit 1
@@ -61,15 +61,15 @@ read -p "Enter choice (1-4): " choice
 case $choice in
     1)
         echo "📈 Bumping patch version..."
-        npm version patch
+        npm version patch --no-git-tag-version
         ;;
     2)
         echo "📈 Bumping minor version..."
-        npm version minor
+        npm version minor --no-git-tag-version
         ;;
     3)
         echo "📈 Bumping major version..."
-        npm version major
+        npm version major --no-git-tag-version
         ;;
     4)
         echo "⏭️ Skipping version bump..."
@@ -82,6 +82,15 @@ esac
 # Show final version
 FINAL_VERSION=$(node -p "require('./package.json').version")
 echo "📦 Publishing version: $FINAL_VERSION"
+
+# Check if version was changed and remind about git
+if [ "$CURRENT_VERSION" != "$FINAL_VERSION" ]; then
+    echo ""
+    echo "ℹ️  Version updated from $CURRENT_VERSION to $FINAL_VERSION"
+    echo "   Note: Git commit and tag were not created automatically."
+    echo "   After publishing, you may want to commit and tag:"
+    echo "   git add package.json && git commit -m 'v$FINAL_VERSION' && git tag v$FINAL_VERSION"
+fi
 
 # Confirm publication
 echo ""

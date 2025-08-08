@@ -13,7 +13,8 @@ function parseArgs() {
     scope: 'user',
     path: require('os').homedir(),
     guildDir: 'guild',
-    clean: true
+    clean: true,
+    testMode: false
   };
 
   for (let i = 0; i < args.length; i++) {
@@ -34,6 +35,10 @@ function parseArgs() {
         break;
       case '--no-clean':
         options.clean = false;
+        break;
+      case '--test-mode':
+        options.testMode = true;
+        options.interactive = false;
         break;
       case '--help':
       case '-h':
@@ -291,6 +296,30 @@ async function cleanupOldInstallation(claudeDir, existing) {
 
 async function install(cliOptions = null) {
   const options = cliOptions || parseArgs();
+  
+  // Test mode - quick validation and exit
+  if (options.testMode) {
+    console.log('🧪 Claude Guild - Test Mode');
+    
+    // Basic validation checks
+    if (!fs.existsSync('package.json')) {
+      console.error('❌ Test failed: package.json not found');
+      process.exit(1);
+    }
+    
+    if (!fs.existsSync('install.js')) {
+      console.error('❌ Test failed: install.js not found');
+      process.exit(1);
+    }
+    
+    if (!fs.existsSync('commands')) {
+      console.error('❌ Test failed: commands directory not found');
+      process.exit(1);
+    }
+    
+    console.log('✅ Test mode: All validation checks passed');
+    return;
+  }
   
   let scope, targetDir, installationConfig;
   

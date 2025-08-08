@@ -7,8 +7,10 @@
     "claude-guild": "./install.js"
   },
   "scripts": {
-    "publish": "./publish.sh",
+    "publish": "node publish.js",
+    "publish-non-interactive": "node publish.js --no-interaction",
     "publish-direct": "npm publish --access public",
+    "publish-legacy": "./publish.sh",
     "prepublishOnly": "echo 'Ready to publish Claude Guild to npm registry'",
     "test-install": "node install.js",
     "version-patch": "npm version patch",
