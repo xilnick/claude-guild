@@ -10,8 +10,8 @@ function parseArgs() {
   const args = process.argv.slice(2);
   const options = {
     interactive: true,
-    scope: 'project',
-    path: process.cwd(),
+    scope: 'user',
+    path: require('os').homedir(),
     guildDir: 'guild',
     clean: true
   };
@@ -24,7 +24,7 @@ function parseArgs() {
         options.interactive = false;
         break;
       case '--scope':
-        options.scope = args[++i] || 'project';
+        options.scope = args[++i] || 'user';
         break;
       case '--path':
         options.path = path.resolve(args[++i] || process.cwd());
@@ -46,8 +46,8 @@ function parseArgs() {
 ⚙️  Installation Options:
   --no-interaction                   Skip prompts, use smart defaults
   --scope <where>                    Where to install:
-                                       • project  - This project only (default)
-                                       • user     - Your home directory (global)
+                                       • user     - Your home directory (global, default)
+                                       • project  - This project only
                                        • custom   - Specific path you choose
   --path <location>                  Custom installation path
   --guild-dir <name>                 Custom command directory name
@@ -56,8 +56,8 @@ function parseArgs() {
 
 📖 Examples:
   npx claude-guild                                   # Smart interactive setup
-  npx claude-guild --no-interaction                 # Quick install with defaults
-  npx claude-guild --scope user                     # Install globally for all projects
+  npx claude-guild --no-interaction                 # Quick install globally (default)
+  npx claude-guild --scope project                  # Install to current project only
   npx claude-guild --scope custom --path ~/my-proj  # Install to specific location
 
 💡 After installation, use /guild:setup to configure your project agents!
@@ -79,14 +79,14 @@ async function askScope() {
     message: 'Where would you like to install Claude Guild?',
     options: [
       {
-        value: 'project',
-        label: '📂 This Project Only',
-        hint: 'Perfect for project-specific workflows (Recommended)'
-      },
-      {
         value: 'user', 
         label: '🏠 Your Home Directory',
-        hint: 'Access Guild commands from anywhere'
+        hint: 'Access Guild commands from anywhere (Recommended)'
+      },
+      {
+        value: 'project',
+        label: '📂 This Project Only',
+        hint: 'Perfect for project-specific workflows'
       },
       {
         value: 'custom',
@@ -319,8 +319,11 @@ async function install(cliOptions = null) {
         targetDir = options.path;
         break;
       case 'project':
-      default:
         targetDir = process.cwd();
+        break;
+      case 'user':
+      default:
+        targetDir = require('os').homedir();
         break;
     }
     
