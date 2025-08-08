@@ -5,7 +5,7 @@
 - `/guild:instructions "instruction text"` - Add new project instruction
 - `/guild:instructions --option value` - Configure specific Guild options
 
-Manage structured project configuration and instructions that influence Guild agent behavior, model selection, and workflow settings.
+**Purpose**: Configure Guild agent behavior including model assignments, thinking modes, and project-specific instructions.
 
 First, check if Guild is configured for this project by looking for `.guild/instructions.md`.
 

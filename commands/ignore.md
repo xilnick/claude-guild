@@ -1,7 +1,7 @@
 # Guild Ignore Management
 
 ```yaml
-frontend_description: "Manage Guild workflow ignore patterns for files and folders"
+frontend_description: "Configure file exclusion patterns that Guild agents must respect during workflow execution"
 category: "Configuration"
 ```
 

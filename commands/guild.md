@@ -4,7 +4,7 @@
 
 **Interactive Mode**: `/guild [flags]` - If no task is provided, Guild will prompt you for the task interactively
 
-**IMPORTANT**: Execute tasks through Guild's flag-based workflow stage system with configurable stages and specialized agent coordination.
+**Purpose**: Execute any task with Guild's comprehensive multi-stage workflow system featuring deep reasoning, strategic planning, and systematic implementation.
 
 ## Workflow Stage System
 
@@ -33,6 +33,8 @@ Guild uses a modular workflow stage system where you can enable/disable specific
 - `--fix` - Enable fix stage (error detection and debugging)
 - `--test` - Enable testing stage (test creation and validation)
 - `--verify` - Enable verification stage (requirement validation)
+- `--full` - Enable comprehensive workflow (combines --verify + --test + --refactor)
+- `--spec` - Enable specification-driven mode (update specs first, then implement)
 
 ### Scope Modifiers
 - `--project` - Apply testing and refactoring to entire project (default: focused on changes only)
@@ -53,11 +55,28 @@ Guild uses a modular workflow stage system where you can enable/disable specific
 - **Behavior**: Focus entirely on code optimization, refactor-planning stage is mandatory
 - **Use Case**: Code optimization and cleanup without new feature implementation
 
+**Comprehensive Mode** (when `--full` flag is specified):
+- **Trigger**: `/guild --full "task"`
+- **Stages**: reasoning → research → planning → implementation → testing → verification → refactoring
+- **Behavior**: Complete development lifecycle from analysis through quality assurance
+- **Use Case**: Complete feature development with full quality assurance
+- **Note**: `--full` flag automatically enables `--test`, `--verify`, and `--refactor`
+
+**Specification-Driven Mode** (when `--spec` flag is specified):
+- **Trigger**: `/guild --spec "task"`
+- **Stages**: reasoning → spec-analysis → spec-update → research → planning → implementation
+- **Behavior**: Specifications updated BEFORE implementation, ensuring documentation-driven development
+- **Use Case**: Feature development requiring specification updates and documentation-first approach
+- **Agent**: Automatically includes guild-spec-agent with "think-harder" mode
+- **Quality Gate**: Implementation cannot proceed until specifications are properly updated
+
 **Standard Flag Processing**:
 1. **Start with defaults**: reasoning + planning + implementation
-2. **Apply disable flags**: Remove specified stages  
-3. **Apply enable flags**: Add optional stages
-4. **Handle special modes**: Adjust stage flow for specific combinations
+2. **Process --full flag**: If present, enable test + verify + refactor stages
+3. **Process --spec flag**: If present, enable specification-driven workflow
+4. **Apply disable flags**: Remove specified stages  
+5. **Apply enable flags**: Add optional stages
+6. **Handle special modes**: Adjust stage flow for specific combinations
 
 ## Interactive Task Prompting
 
@@ -154,34 +173,65 @@ Guild is not yet set up for this project. To use the workflow:
 
 Execute activated workflow stages in this mandatory order:
 
+### Context-Only Stages (No Changes Allowed)
+
 #### 1. 🧠 Reasoning Stage (unless --no-reason)
 **Stage**: `prompt-analysis`
-**Agent**: guild-reasoning-agent
+**Agent**: guild-reasoning-agent (context-only)
 **Purpose**: Analyze user request, correct typos, clarify requirements, align with project context
+**Changes**: **NONE** - Only creates analysis context for other agents
+**Thinking Mode**: Often benefits from "think-harder" or "ultrathink" modes
 
 #### 2. 🔍 Context Research Stage (automatic when needed)
 **Stage**: `context-research`  
-**Agents**: guild-project-research-agent, guild-global-research-agent (parallel execution)
-**Purpose**: Gather background information and technical context for activated stages with intelligent context selection
+**Agents**: guild-project-research-agent, guild-global-research-agent (context-only, parallel execution)
+**Purpose**: Gather background information and technical context for activated stages
+**Changes**: **NONE** - Only creates research context for other agents
 
 **Parallel Research Execution**:
 - **Context Selection**: Automatically determines research focus areas based on task complexity
-- **Project Research**: Multiple instances analyze codebase patterns, technology stack, constraints, and quality
-- **Global Research**: Multiple instances research framework practices, community standards, trends, and integration patterns
+- **Project Research**: Analyze codebase patterns, technology stack, constraints, and quality
+- **Global Research**: Research framework practices, community standards, trends, and integration patterns
 - **Coordination**: Smart context distribution to avoid overlap and maximize research coverage
 
 #### 3. 🎯 Planning Stage (unless --no-plan)
 **Stage**: `planning`
-**Agent**: guild-planning-agent  
+**Agent**: guild-planning-agent (context-only)
 **Purpose**: Create implementation approach and coordinate subsequent stages
+**Changes**: **NONE** - Only creates strategic context for implementation agents
+**Thinking Mode**: Often benefits from "ultrathink" mode for comprehensive strategy
 **Special Modes**: 
 - **Planning-Only Mode**: If `--no-implement` is the only flag, after planning completion, prompt user to save planning output to file
 - **Refactor-Only Mode**: If `--refactor` is the only flag, planning focuses on refactoring strategy
 
+### Specification-Driven Stages (--spec flag)
+
+#### 2a. 📋 Specification Analysis Stage (if --spec)
+**Stage**: `specification-analysis`
+**Agent**: guild-spec-agent (context-only)
+**Purpose**: Analyze current project specifications and identify update requirements
+**Changes**: **NONE** - Only analyzes existing specifications
+**Thinking Mode**: **MANDATORY "think-harder"** for thorough specification analysis
+**Input**: Task analysis from reasoning stage
+**Output**: Specification gap analysis and update requirements
+
+#### 2b. 📝 Specification Update Stage (if --spec)
+**Stage**: `specification-update`
+**Agent**: guild-spec-agent (specification-updates-only)
+**Purpose**: Update project specifications and documentation before implementation
+**Changes**: **SPECIFICATION UPDATES ONLY** - Updates docs/specs, never implementation
+**Scope**: API docs, technical specs, requirements, testing specifications, integration contracts
+**Quality Gate**: Implementation cannot proceed until specifications are properly updated
+**Output**: Updated specifications and implementation guidelines
+
+### Implementation Stages (Changes Allowed)
+
 #### 4. 🔨 Implementation Stage (conditional execution)
 **Stage**: `implementation`
-**Agents**: framework-coupled engineers
+**Agents**: framework-coupled engineers (implementation agents)
 **Purpose**: Execute planned specifications with quality integration
+**Changes**: **ALLOWED** - Creates code, modifies files, implements features
+**Input**: Structured context from context-only agents (reasoning, research, planning)
 **Execution Logic**: 
 - **Skip if**: `--no-implement` flag is present
 - **Skip if**: Refactor-only mode (when `--refactor` is the only flag specified)
@@ -206,10 +256,34 @@ Execute activated workflow stages in this mandatory order:
 **Agents**: framework-coupled engineers
 **Purpose**: Create and execute tests with scope based on --project flag
 
-#### 8. ✅ Verification Stage (if --verify)
+### Quality Assurance Stages (Changes Allowed)
+
+#### 5. 🧪 Testing Stage (if --test or --full)
+**Stage**: `testing`
+**Agents**: framework-coupled engineers (implementation agents)
+**Purpose**: Create comprehensive tests and validate functionality
+**Changes**: **ALLOWED** - Creates test files, modifies test suites
+**Input**: Implementation results and context from previous stages
+**Scope**: Controlled by --project flag (focused vs project-wide)
+
+#### 6. ✅ Verification Stage (if --verify or --full)
 **Stage**: `verification`
-**Agent**: guild-verification-agent
-**Purpose**: Validate changes against original prompt and plan requirements
+**Agent**: guild-verification-agent (implementation agent)
+**Purpose**: Validate changes against original prompt and plan requirements  
+**Changes**: **ALLOWED** - Can fix issues discovered during validation
+**Input**: All implementation and testing results
+**Validation**: Requirements compliance, functionality verification, quality assessment
+
+#### 7. ♻️ Refactoring Stage (if --refactor or --full)
+**Stages**: `refactor-planning` + refactoring execution
+**Agents**: guild-planning-agent + framework-coupled engineers
+**Purpose**: Plan and execute code optimization with scope based on --project flag
+**Changes**: **ALLOWED** - Optimizes code structure and quality
+**Execution Modes**:
+- **Refactor-Only Mode**: When `--refactor` is the only flag, replaces implementation stage entirely
+- **Combined Mode**: When `--refactor` used with other flags, executes after implementation stage
+- **--full Mode**: Executes as final quality assurance step
+**Planning**: Refactor-planning stage is always mandatory when refactoring is enabled
 
 ## Agent Coordination Protocol
 
@@ -227,6 +301,10 @@ Execute activated workflow stages in this mandatory order:
 # Default workflow (reasoning + planning + implementation)
 /guild "Add error handling to the CLI installation process"
 
+# Comprehensive workflow (--full flag: complete development lifecycle)
+/guild --full "Implement user authentication system"
+# Executes: reasoning → research → planning → implementation → testing → verification → refactoring
+
 # Planning-only mode (special combination - saves to file)
 /guild --no-implement "Analyze the NPM package structure for optimization opportunities"
 
@@ -236,17 +314,31 @@ Execute activated workflow stages in this mandatory order:
 # Implementation with testing
 /guild --test "Add comprehensive error handling to the CLI installation process"
 
-# Full workflow with verification
-/guild --test --verify "Implement user authentication system"
+# Full workflow with project-wide scope
+/guild --full --project "Implement comprehensive logging system"
 
-# Refactoring with global scope and testing
-/guild --refactor --test --project "Optimize the template processing system"
+# Comprehensive workflow for complex features
+/guild --full "Build real-time chat system with WebSocket support"
 
-# Bug fixing with verification
-/guild --fix --verify "Fix the NPM package configuration issue"
+# Specification-driven development (update specs first, then implement)
+/guild --spec "Add user authentication system with OAuth2 support"
+# Executes: reasoning → spec-analysis → spec-update → research → planning → implementation
 
-# Reasoning disabled, direct to planning and implementation
-/guild --no-reason "Update package.json version to 1.1.0"
+# Specification-driven with comprehensive quality assurance
+/guild --spec --full "Implement REST API for user management"
+# Executes: reasoning → spec-analysis → spec-update → research → planning → implementation → testing → verification → refactoring
+
+# Bug fixing with comprehensive validation
+/guild --fix --full "Fix database connection issues and ensure reliability"
+
+# Specification-driven refactoring (update specs during optimization)
+/guild --spec --refactor "Refactor authentication system to support multiple providers"
+
+# Refactoring with global scope and testing (equivalent to --full for refactoring)
+/guild --refactor --test --verify --project "Optimize the template processing system"
+
+# Reasoning disabled, direct to specification-driven implementation
+/guild --no-reason --spec "Update package.json version to 1.1.0 with spec updates"
 ```
 
 ## Workflow Stage Benefits
@@ -254,9 +346,30 @@ Execute activated workflow stages in this mandatory order:
 **🎯 Configurable Workflow**: Choose exactly which stages you need for each task
 **⚡ Efficient Execution**: Skip unnecessary stages for simple tasks  
 **🔍 Comprehensive Options**: Add testing, verification, and refactoring as needed
+**🏆 Complete Lifecycle**: Use `--full` flag for comprehensive development workflow
 **🌐 Flexible Scope**: Focus changes or apply globally with --project flag
 **🧠 Smart Defaults**: Reasoning + planning + implementation enabled by default
 **🔄 Stage Composition**: Combine multiple optional stages for complex workflows
 **🎭 Special Modes**: Planning-only and refactor-only modes for specialized workflows
+**🔒 Quality Assurance**: `--full` flag ensures testing, verification, and refactoring
+**📋 Specification-First**: `--spec` flag enforces documentation-driven development
+**🎨 Agent Specialization**: Clear separation between context-only and implementation agents
+
+### --full Flag Advantages
+
+**🚀 One-Command Excellence**: Complete development lifecycle in single command
+**📋 Systematic Quality**: Mandatory testing, verification, and refactoring stages  
+**🧠 Context-Driven**: Context-only agents provide comprehensive analysis before implementation
+**⚙️ Production-Ready**: Ensures code meets quality standards before completion
+**🔄 Integrated Workflow**: Seamless flow from analysis through implementation to quality assurance
+
+### --spec Flag Advantages
+
+**📚 Documentation-Driven**: Specifications always updated before implementation
+**🎯 Requirements Clarity**: Clear specifications guide implementation decisions
+**📝 Living Documentation**: Specs remain synchronized with actual implementation
+**🔍 Think-Harder Analysis**: Guild-spec-agent uses enhanced thinking for thorough spec analysis
+**🏗️ Architecture Consistency**: Implementation follows well-defined specifications
+**✅ Quality Gates**: Implementation blocked until specifications are properly updated
 
 The flag-based workflow stage system provides precise control over Guild execution while maintaining systematic quality through configurable workflow stages and specialized agent coordination.

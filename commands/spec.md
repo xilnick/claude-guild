@@ -4,7 +4,7 @@
 
 **Interactive Mode**: `/guild:spec [level]` - If no description is provided, Guild will prompt you interactively
 
-Create or update specifications at different levels (project, component, model) and save them to structured MD files for documentation and future reference.
+**Purpose**: Create detailed technical specifications at various abstraction levels for documentation and implementation guidance.
 
 **Specification Levels**:
 - `project` - Project-level specifications and architecture

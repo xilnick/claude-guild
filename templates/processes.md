@@ -42,6 +42,57 @@ process: correct-typos
   outputs: [corrected_prompt, corrections_applied]
 ```
 
+### Specification-Driven Processes
+
+```yaml
+process: analyze-specifications
+  description: Analyze current project specifications and documentation
+  inputs: [task_requirements, project_context]
+  steps:
+    - inventory_existing_specs:
+        action: identify current specification documents
+        output: spec_inventory
+    - assess_spec_completeness:
+        action: evaluate specification coverage
+        output: completeness_assessment
+    - identify_spec_gaps:
+        action: find gaps between task needs and current specs
+        output: specification_gaps
+    - determine_update_requirements:
+        action: define what specifications need updating
+        output: update_requirements
+  outputs: [spec_inventory, gaps_analysis, update_plan]
+  changes_allowed: false  # Analysis only
+```
+
+```yaml
+process: update-specifications
+  description: Update project specifications and documentation
+  inputs: [update_requirements, task_details, gap_analysis]
+  steps:
+    - update_api_documentation:
+        action: revise API specs and interface definitions
+        output: updated_api_docs
+        scope: [endpoints, contracts, schemas]
+    - update_technical_specifications:
+        action: revise technical and architecture documents
+        output: updated_tech_specs
+        scope: [design_docs, architecture_decisions, technical_requirements]
+    - update_requirements_documentation:
+        action: revise user stories and business requirements
+        output: updated_requirements
+        scope: [user_stories, acceptance_criteria, business_rules]
+    - update_testing_specifications:
+        action: revise test plans and validation criteria
+        output: updated_test_specs
+        scope: [test_plans, acceptance_tests, validation_contracts]
+    - create_implementation_guidelines:
+        action: derive clear implementation guidance from updated specs
+        output: implementation_guidelines
+  outputs: [updated_specifications, implementation_guidelines]
+  changes_allowed: specification_updates_only
+```
+
 ### Research Processes
 
 #### Strategic Research (Phase 1 - Pre-Planning)
@@ -266,13 +317,31 @@ process: implement-solution
 ```
 
 ```yaml
-process: refactor-code
-  description: Systematic code improvement
-  inputs: [code_scope, refactor_goals]
+process: refactor-planning
+  description: Strategic refactoring analysis and planning
+  inputs: [codebase_analysis, quality_metrics, refactor_goals]
   steps:
     - analyze_code_quality:
-        action: identify improvement opportunities
+        action: identify improvement opportunities  
         output: quality_issues
+    - prioritize_improvements:
+        action: rank improvements by impact
+        output: improvement_priorities
+    - assess_risks:
+        action: evaluate refactoring risks
+        output: risk_assessment
+    - create_refactor_strategy:
+        action: plan systematic improvements
+        output: refactor_plan
+  outputs: [refactor_strategy, priority_list, risk_mitigation]
+  changes_allowed: false  # Planning only
+```
+
+```yaml
+process: execute-refactoring
+  description: Systematic code improvement execution
+  inputs: [refactor_plan, code_scope, quality_targets]
+  steps:
     - eliminate_duplication:
         action: remove redundant code
         output: deduplicated_code
@@ -282,14 +351,45 @@ process: refactor-code
     - improve_structure:
         action: enhance organization
         output: restructured_code
-  outputs: [refactored_code, improvement_metrics]
+    - update_tests:
+        action: ensure tests still pass
+        output: updated_tests
+    - measure_improvements:
+        action: quantify quality improvements
+        output: improvement_metrics
+  outputs: [refactored_code, updated_tests, metrics]
+  changes_allowed: true
 ```
 
 ### Validation Processes
 
 ```yaml
+process: create-tests
+  description: Systematic test creation and execution
+  inputs: [implementation, requirements, context]
+  steps:
+    - analyze_test_needs:
+        action: identify testing requirements
+        output: test_requirements
+    - create_unit_tests:
+        action: generate unit tests
+        output: unit_test_code
+    - create_integration_tests:
+        action: generate integration tests
+        output: integration_test_code
+    - run_test_suite:
+        action: execute all tests
+        output: test_results
+    - create_test_documentation:
+        action: document test approach
+        output: test_documentation
+  outputs: [test_code, test_results, test_docs]
+  changes_allowed: true
+```
+
+```yaml
 process: validate-implementation
-  description: Comprehensive validation of changes
+  description: Comprehensive validation with corrective changes
   inputs: [implementation, requirements, tests]
   steps:
     - verify_requirements:
@@ -304,7 +404,96 @@ process: validate-implementation
     - assess_quality:
         action: evaluate code quality
         output: quality_metrics
-  outputs: [validation_report, issues_found, recommendations]
+    - fix_issues:
+        action: correct problems found during validation
+        output: corrective_changes
+  outputs: [validation_report, issues_found, fixes_applied]
+  changes_allowed: true
+```
+
+## Comprehensive Workflow Processes
+
+### --full Flag Execution Process
+
+```yaml
+process: comprehensive-workflow
+  description: Complete development lifecycle execution (--full flag)
+  inputs: [user_task, project_context]
+  stages:
+    - context_creation:
+        agents: [reasoning, research, planning]
+        changes_allowed: false
+        output: comprehensive_context
+    - implementation:
+        agents: [framework_engineers]
+        changes_allowed: true
+        input: comprehensive_context
+        output: working_implementation
+    - quality_assurance:
+        agents: [verification, testing, refactoring]
+        changes_allowed: true
+        input: [implementation, context]
+        output: production_ready_code
+  coordination: sequential_stages_with_parallel_within
+```
+
+### --spec Flag Execution Process
+
+```yaml
+process: specification-driven-workflow
+  description: Specification-first development lifecycle execution (--spec flag)
+  inputs: [user_task, project_context]
+  stages:
+    - context_creation:
+        agents: [reasoning]
+        changes_allowed: false
+        output: task_analysis
+    - specification_phase:
+        agents: [spec_agent]
+        changes_allowed: specification_updates_only
+        input: task_analysis
+        output: updated_specifications
+    - enhanced_context_creation:
+        agents: [research, planning]
+        changes_allowed: false
+        input: [task_analysis, updated_specifications]
+        output: implementation_context
+    - implementation:
+        agents: [framework_engineers]
+        changes_allowed: true
+        input: [implementation_context, updated_specifications]
+        output: spec_compliant_implementation
+  coordination: sequential_stages_specification_first
+  quality_gate: specifications_updated_before_implementation
+```
+
+```yaml
+process: context-only-execution
+  description: Execution pattern for context-only agents
+  participants: [reasoning_agent, research_agents, planning_agent]
+  constraints:
+    - no_file_modifications: true
+    - no_code_changes: true  
+    - context_output_only: true
+  coordination:
+    - parallel_research: research agents work simultaneously
+    - sequential_flow: reasoning → research → planning
+    - context_handoffs: structured context packages between stages
+```
+
+```yaml  
+process: implementation-execution
+  description: Execution pattern for implementation agents
+  participants: [engineers, verification_agent]
+  capabilities:
+    - file_modifications: true
+    - code_changes: true
+    - test_creation: true
+    - documentation_updates: true
+  coordination:
+    - context_consumption: receive structured context from context-only agents
+    - parallel_implementation: multiple engineers on different components
+    - quality_validation: verification agent validates and fixes issues
 ```
 
 ## Parallel Execution Coordination
@@ -343,14 +532,15 @@ coordination: parallel-implementation
 
 ## Context Handoff Protocols
 
-### Phase 1: Strategic Handoffs
+### Context-Only Agent Handoffs (No Changes Allowed)
 
 ```yaml
 handoff: reasoning-to-strategic-research
-  from: guild-reasoning-agent
-  to: [guild-project-researcher, guild-global-researcher]
+  from: guild-reasoning-agent (context-only)
+  to: [guild-project-researcher, guild-global-researcher] (context-only)
   context_transfer:
     priority: strategic
+    agent_constraint: no_changes_allowed
     content:
       critical:
         - clarified_requirements
@@ -366,10 +556,11 @@ handoff: reasoning-to-strategic-research
 
 ```yaml
 handoff: strategic-research-to-planning
-  from: [research_agents]
-  to: guild-planning-agent
+  from: [research_agents] (context-only)
+  to: guild-planning-agent (context-only)
   context_aggregation:
     format: executive_summary
+    agent_constraint: no_changes_allowed
     content:
       - architecture_overview
       - technology_constraints
@@ -401,11 +592,12 @@ handoff: planning-to-tactical-research
 ```
 
 ```yaml
-handoff: tactical-research-to-implementation
-  from: [research_agents]
-  to: [assigned_engineers]
+handoff: context-to-implementation-transition
+  from: [research_agents, planning_agent] (context-only)
+  to: [assigned_engineers] (implementation)
   context_distribution:
     format: structured_package
+    transition: context_only_to_implementation
     content:
       task_definition:
         what: specific_task_description
@@ -423,7 +615,84 @@ handoff: tactical-research-to-implementation
         critical: must_have_for_execution
         important: significantly_helps
         supplementary: nice_to_have
+      agent_permissions:
+        receiving_agents: changes_allowed
+        context_creators: context_only_completed
   execution_mode: optimized_parallel
+```
+
+### Specification-Driven Handoffs
+
+```yaml
+handoff: reasoning-to-specification
+  from: guild-reasoning-agent (context-only)
+  to: guild-spec-agent (specification-updates-only)
+  context_transfer:
+    priority: specification_requirements
+    agent_constraint: spec_updates_only
+    content:
+      critical:
+        - task_requirements
+        - functional_objectives
+        - specification_scope
+      important:
+        - complexity_assessment
+        - integration_requirements
+      supplementary:
+        - user_preferences
+        - implementation_hints
+  parallel_flag: false
+  sequence: mandatory_before_research
+```
+
+```yaml
+handoff: specification-to-enhanced-context
+  from: guild-spec-agent (specification-updates-only)
+  to: [guild-project-research-agent, guild-global-research-agent] (context-only)
+  context_transfer:
+    priority: specification_guided_research
+    agent_constraint: no_changes_allowed
+    content:
+      critical:
+        - updated_specifications
+        - specification_changes_made
+        - implementation_guidelines
+      important:
+        - specification_dependencies
+        - integration_requirements
+      research_focus:
+        - patterns_matching_updated_specs
+        - implementation_approaches_for_specs
+        - validation_strategies_for_requirements
+  parallel_flag: true
+  coordination: spec_guided_research
+```
+
+```yaml
+handoff: specification-guided-to-implementation
+  from: [spec_agent, research_agents, planning_agent] (context-only)
+  to: [assigned_engineers] (implementation)
+  context_distribution:
+    format: specification_guided_package
+    transition: spec_first_to_implementation
+    content:
+      specification_context:
+        updated_specifications: [current_spec_versions]
+        specification_changes: [what_was_updated_and_why]
+        implementation_guidelines: [clear_guidance_from_specs]
+        acceptance_criteria: [measurable_success_criteria]
+      implementation_context:
+        patterns_to_follow: [spec_compliant_patterns]
+        constraints: [specification_constraints]
+        dependencies: [spec_defined_interfaces]
+      validation_requirements:
+        specification_compliance: must_match_updated_specs
+        acceptance_tests: derived_from_spec_criteria
+        integration_tests: validate_spec_interfaces
+      agent_permissions:
+        receiving_agents: implementation_changes_allowed
+        specification_compliance: mandatory
+  execution_mode: specification_compliant_implementation
 ```
 
 ### Enhanced Context Structure

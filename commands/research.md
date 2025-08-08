@@ -1,6 +1,6 @@
 # /guild:research
 
-Research Context Engine - Intelligent context retrieval with available MCP server integration, web search fallback, and persistent memory management.
+**Purpose**: Gather comprehensive context through intelligent research using available MCP servers, web search, and persistent memory management.
 
 ## Custom Prompt & Reasoning
 

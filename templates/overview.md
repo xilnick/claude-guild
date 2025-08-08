@@ -54,8 +54,8 @@ Guild provides specialized commands with optimized workflows:
 - **Quality Gates**: All agents must apply quality validation throughout their execution
 
 #### Model and Analysis Requirements
-- **Planning Agents**: MUST use Opus model for strategic planning and complex analysis
-- **All Agents**: Must run with comprehensive analysis mode (Ultra-Sync when configured)
+- **Agent Models**: Must use models as configured in `.guild/instructions.md`
+- **Thinking Modes**: Must use thinking modes as specified in `.guild/instructions.md`
 - **Self-Verification**: All agents must validate solution optimality and consistency
 - **Parallel Execution**: Agents coordinate for simultaneous work where possible
 
@@ -75,7 +75,7 @@ Guild provides specialized commands with optimized workflows:
 
 2. **`.guild/instructions.md`** - **MANDATORY CONFIGURATION**
    - Agent-specific configuration requirements and behavior standards
-   - Model specifications (Planning agents MUST use Opus model)
+   - Model and thinking mode specifications per agent
    - Quality standards and validation requirements
    - **All agents MUST follow instructions in this file**
 
@@ -124,13 +124,16 @@ Guild provides specialized commands with optimized workflows:
 Guild provides standalone, reusable workflow steps that can be combined into different workflow compositions. Each step is designed to be position-independent and referenced across different Guild commands:
 
 ### prompt-analysis: 🧠 Prompt Analysis & Reasoning (guild-reasoning-agent)
-**Purpose**: Analyze and clarify user requests for accuracy and completeness
-- **Prompt Analysis**: Deep analysis of user prompts for clarity, completeness, and feasibility
+**Purpose**: Deep task analysis and clarification (configured in `.guild/instructions.md`)
+- **Configured Analysis**: Uses model and thinking mode specified in `.guild/instructions.md`
+- **Deep Analysis**: Look beyond surface requests to understand true user intent and hidden complexities
+- **Alternative Evaluation**: Consider multiple solution approaches when configured for deep thinking
+- **Risk Assessment**: Identify potential failure modes and create mitigation strategies
 - **Typo Correction**: Automatic correction of spelling errors, grammar issues, and formatting problems
 - **Error Detection**: Identify contradictions, impossible requirements, or conflicting instructions
 - **Clarification Protocol**: Ask targeted questions if task requirements are unclear or incomplete  
 - **Project Alignment**: Aligns user requests with project context, constraints, and existing patterns
-- **Reasoned Output**: Create corrected and clarified prompt for subsequent workflow steps
+- **Reasoned Output**: Provide clarified intent, key insights, recommended approach, and success criteria
 
 ### context-research: 🔍 High-Order Context Research
 **Purpose**: Gather comprehensive background information and technical context
@@ -142,7 +145,7 @@ Guild provides standalone, reusable workflow steps that can be combined into dif
 ### planning: 🎯 Strategic Planning  
 **Purpose**: Create detailed implementation specifications and architectural designs
 - **Planning Agent Activation**: Single planning agent creates detailed implementation plans using available context
-- **Opus Model Requirement**: Planning agents MUST use Opus model as specified in `.guild/instructions.md`
+- **Model Configuration**: Planning agents use model and thinking mode as specified in `.guild/instructions.md`
 - **Architecture Design**: Create comprehensive system design and implementation specifications
 - **Instruction Compliance**: All planning decisions must follow requirements in `.guild/instructions.md`
 - **Context Handoff**: Provide detailed specifications for implementation steps

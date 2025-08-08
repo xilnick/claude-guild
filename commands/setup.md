@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Initialize or update Guild agents for your project through pattern-based technology detection.
+Initialize Guild system by analyzing project technology stack and creating appropriate specialized agents with configured models and thinking modes.
 
 ## Flags
 
@@ -201,7 +201,7 @@ Setup is successful when:
 
 ## Purpose
 
-Initialize or update Guild agents for your project through pattern-based technology detection.
+Initialize Guild system by analyzing project technology stack and creating appropriate specialized agents with configured models and thinking modes.
 
 ## Flags
 

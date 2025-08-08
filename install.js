@@ -389,7 +389,7 @@ async function install(cliOptions = null) {
 🚀 Next Steps:
    1. Run: /guild:setup  (to configure project agents)
    2. Use: /guild "your task"  (to execute with Guild workflow)
-   3. Try: /guild:full "complex task"  (for comprehensive workflow)
+   3. Try: /guild --refactor --test --verify "complex task"  (for comprehensive workflow)
 
 💡 Quick tip: Use /guild:setup to analyze your project and create specialized agents!`);
     
@@ -430,7 +430,7 @@ async function installCommands(claudeDir, guildDirName = 'guild') {
   console.log(`📋 Installed ${commandFiles.filter(f => f.endsWith('.md')).length} Guild commands successfully`);
   console.log(`🎯 Primary Command: /guild "your task"`);
   console.log(`⚙️  Setup Command: /guild:setup (configure project agents)`);
-  console.log(`🔧 Available Commands: /guild:full, /guild:fix, /guild:refactor, /guild:plan`);
+  console.log(`🔧 Available Commands: /guild:fix, /guild:refactor, /guild:plan, /guild:spec`);
 }
 
 async function inlineTemplatesIntoSetup(claudeDir, guildDirName = 'guild') {

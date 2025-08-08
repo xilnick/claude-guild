@@ -4,7 +4,7 @@
 
 **Interactive Mode**: `/guild:plan` - If no task is provided, Guild will prompt you interactively
 
-Create comprehensive task plans and save them to structured MD files for future execution, adjustment, and modification.
+**Purpose**: Create comprehensive planning-only documentation without implementation, focusing on strategic analysis and architectural design.
 
 ## Configuration Check
 

@@ -4,7 +4,7 @@
 
 **Interactive Mode**: `/guild:fix` - If no bug description is provided, Guild will prompt you interactively
 
-Execute focused bug fixing tasks using the specialized 5-stage bug fixing workflow with systematic error detection and comprehensive validation.
+**Purpose**: Execute systematic bug fixing with specialized workflow for error detection, diagnosis, and resolution.
 
 First, check if Guild is configured for this project by looking for `.guild/instructions.md` and validate Guild file integrity:
 

@@ -36,11 +36,33 @@ Each layer has a single responsibility:
 
 ```yaml
 Core Workflow:
-  1. Analysis: Understand task requirements
-  2. Research: Gather context (dual-phase)
-  3. Planning: Route to appropriate agents
-  4. Implementation: Execute task
-  5. Validation: Verify results
+  1. Analysis: Understand task requirements (context-only)
+  2. Research: Gather context (dual-phase, context-only)
+  3. Planning: Route to appropriate agents (context-only)
+  4. Implementation: Execute task (changes allowed)
+  5. Validation: Verify results (changes allowed)
+
+Specification-Driven Workflow (--spec flag):
+  1. Analysis: Understand task requirements (context-only)
+  2. Spec Analysis: Analyze current specifications (context-only)
+  3. Spec Update: Update relevant specifications (spec changes only)
+  4. Research: Gather implementation context (context-only)
+  5. Planning: Create implementation strategy (context-only)
+  6. Implementation: Execute based on updated specs (changes allowed)
+  7. Validation: Verify against updated specifications (changes allowed)
+
+Context-Only Stages:
+  - Create comprehensive context for implementation agents
+  - Update specifications and documentation (spec agent only)
+  - No direct code implementation changes
+  - Focus on analysis, research, planning, and specification maintenance
+  - Output structured context packages for implementers
+
+Implementation Stages:
+  - Receive context from context-only agents
+  - Execute actual code changes and file modifications  
+  - Create tests, documentation, and refactoring
+  - Validate results against context and specification requirements
 ```
 
 ### Dual-Phase Research
@@ -62,12 +84,13 @@ Flags:
   --refactor     # Code improvement
   --test         # Add testing
   --verify       # Validate results
+  --full         # Comprehensive workflow (--verify + --test + --refactor)
+  --spec         # Specification-driven mode (update specs first, then implement)
   --project      # Project-wide scope
 
 Specialized Commands:
   /guild:setup [--standalone]  # Initialize agents
   /guild:fix                   # Bug fixing
-  /guild:refactor              # Code improvement
   /guild:plan                  # Planning only
   /guild:spec                  # Specifications
 ```
@@ -90,11 +113,15 @@ parallel: true/false
 
 ### Core Agent Types
 
-- **Reasoning**: Task analysis and clarification
-- **Planning**: Workflow coordination and routing
-- **Research**: Context gathering (project/global)
-- **Implementation**: Task execution specialists
-- **Verification**: Quality validation
+#### Context-Only Agents (Non-Changing)
+- **Reasoning**: Task analysis, clarification, and requirement understanding - **NEVER makes changes, only creates context**
+- **Planning**: Workflow coordination, routing, and strategic planning - **NEVER makes changes, only creates context**
+- **Research**: Context gathering (project/global scope) - **NEVER makes changes, only creates context**
+- **Specification**: Documentation analysis and specification updates - **NEVER makes implementation changes, only updates specifications**
+
+#### Implementation Agents (Changing)
+- **Implementation**: Task execution specialists that make actual code changes
+- **Verification**: Quality validation and testing execution
 
 ### Standalone Agents
 
@@ -109,6 +136,36 @@ scope: boundaries
 self_contained: true
 ---
 ```
+
+### Thinking Mode Integration
+
+Agents can be configured with enhanced thinking modes through keyword integration:
+
+**Keywords**:
+- **think**: Standard enhanced analytical thinking
+- **ultrathink**: Maximum strategic analysis with comprehensive evaluation
+- **think-harder**: Multi-stage analysis with assumption challenging
+
+**Integration Pattern**:
+When agents require enhanced thinking, the appropriate keyword is added at the end of their definition:
+```yaml
+---
+name: guild-reasoning-agent
+role: task-analysis-specialist
+processes: [analysis-processes]
+scope: requirement-understanding
+---
+
+## Enhanced Thinking Mode
+**ultrathink** - Maximum strategic depth for complex requirement analysis
+```
+
+**Usage Guidelines**:
+- Reasoning agents often benefit from "think-harder" or "ultrathink" modes
+- Planning agents typically use "ultrathink" for comprehensive strategy
+- Specification agents use "think-harder" for thorough specification analysis
+- Research agents use standard thinking unless complex analysis needed
+- Implementation agents use standard thinking for efficient execution
 
 #### Agent Placement
 
@@ -165,9 +222,53 @@ Routing Factors:
 ### Execution Strategies
 
 1. **Sequential**: One agent at a time
-2. **Parallel**: Multiple independent agents
+2. **Parallel**: Multiple independent agents  
 3. **Pipeline**: Overlapping stages
 4. **Hybrid**: Mixed strategies
+5. **Comprehensive**: Full workflow execution (--full flag)
+
+#### --full Flag Execution Pattern
+
+The --full flag triggers comprehensive workflow execution:
+```yaml
+--full Flag Stages:
+  1. Analysis: Reasoning agent (context-only)
+  2. Research: Research agents (context-only) 
+  3. Planning: Planning agent (context-only)
+  4. Implementation: Implementation agents (changes)
+  5. Testing: Test creation and validation (changes)
+  6. Verification: Quality validation (changes)
+  7. Refactoring: Code optimization (changes)
+
+Execution Order:
+  Context-Only → Implementation → Quality Assurance
+```
+
+#### --spec Flag Specification-Driven Pattern
+
+The --spec flag triggers specification-first development workflow:
+```yaml
+--spec Flag Execution Pattern:
+  1. Analysis: Reasoning agent (context-only)
+  2. Specification Analysis: Spec agent analyzes current specs (context-only)
+  3. Specification Update: Spec agent updates relevant specifications (spec changes only)
+  4. Research: Research agents gather implementation context (context-only)
+  5. Planning: Planning agent creates implementation strategy (context-only)
+  6. Implementation: Implementation agents execute based on updated specs (changes)
+
+Key Principles:
+  - Specifications updated BEFORE implementation
+  - Documentation-driven development enforced
+  - Spec agent uses "think-harder" mode for thorough analysis
+  - Ensures specs remain current with implementation
+
+Specification Scope:
+  - API documentation and interfaces
+  - Technical specifications and requirements
+  - Architecture decisions and design docs
+  - User stories and acceptance criteria
+  - Testing specifications and contracts
+```
 
 ## Context Management
 
