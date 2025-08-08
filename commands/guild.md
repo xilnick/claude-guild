@@ -12,6 +12,7 @@ Guild uses a modular workflow stage system where you can enable/disable specific
 
 ### Default Workflow Stages (Always Enabled)
 - **🧠 Reasoning Stage**: Prompt analysis, typo correction, and requirement clarification (`prompt-analysis` stage)
+- **🔍 Research Stage**: Context gathering and background research (`context-research` stage)
 - **🎯 Planning Stage**: Strategic planning and implementation architecture (`planning` stage)  
 - **🔨 Implementation Stage**: Code execution and development (`implementation` stage)
 
@@ -45,13 +46,13 @@ Guild uses a modular workflow stage system where you can enable/disable specific
 
 **Planning-Only Mode** (when `--no-implement` is the ONLY flag specified):
 - **Trigger**: `/guild --no-implement "task"` with no other flags
-- **Stages**: reasoning → planning → **prompt to save output**
-- **Behavior**: Execute reasoning and planning stages, then ask user if they want to save planning output to a file
+- **Stages**: reasoning → research → planning → **prompt to save output**
+- **Behavior**: Execute reasoning, research and planning stages, then ask user if they want to save planning output to a file
 - **Use Case**: Strategic analysis and planning without any implementation
 
 **Refactor-Only Mode** (when `--refactor` is the ONLY flag specified):
 - **Trigger**: `/guild --refactor "task"` with no other flags  
-- **Stages**: reasoning → refactor-planning → refactoring execution (skips regular implementation)
+- **Stages**: reasoning → research → refactor-planning → refactoring execution (skips regular implementation)
 - **Behavior**: Focus entirely on code optimization, refactor-planning stage is mandatory
 - **Use Case**: Code optimization and cleanup without new feature implementation
 
@@ -71,7 +72,7 @@ Guild uses a modular workflow stage system where you can enable/disable specific
 - **Quality Gate**: Implementation cannot proceed until specifications are properly updated
 
 **Standard Flag Processing**:
-1. **Start with defaults**: reasoning + planning + implementation
+1. **Start with defaults**: reasoning + research + planning + implementation
 2. **Process --full flag**: If present, enable test + verify + refactor stages
 3. **Process --spec flag**: If present, enable specification-driven workflow
 4. **Apply disable flags**: Remove specified stages  
@@ -182,10 +183,10 @@ Execute activated workflow stages in this mandatory order:
 **Changes**: **NONE** - Only creates analysis context for other agents
 **Thinking Mode**: Often benefits from "think-harder" or "ultrathink" modes
 
-#### 2. 🔍 Context Research Stage (automatic when needed)
+#### 2. 🔍 Context Research Stage (always enabled by default)
 **Stage**: `context-research`  
 **Agents**: guild-project-research-agent, guild-global-research-agent (context-only, parallel execution)
-**Purpose**: Gather background information and technical context for activated stages
+**Purpose**: Gather background information and technical context for all subsequent stages
 **Changes**: **NONE** - Only creates research context for other agents
 
 **Parallel Research Execution**:
@@ -298,7 +299,7 @@ Execute activated workflow stages in this mandatory order:
 ## Example Usage
 
 ```bash
-# Default workflow (reasoning + planning + implementation)
+# Default workflow (reasoning + research + planning + implementation)
 /guild "Add error handling to the CLI installation process"
 
 # Comprehensive workflow (--full flag: complete development lifecycle)
@@ -307,9 +308,11 @@ Execute activated workflow stages in this mandatory order:
 
 # Planning-only mode (special combination - saves to file)
 /guild --no-implement "Analyze the NPM package structure for optimization opportunities"
+# Executes: reasoning → research → planning → option to save plan
 
 # Refactor-only mode (special combination - replaces implementation)
 /guild --refactor "Optimize the template processing system"
+# Executes: reasoning → research → refactor-planning → refactoring
 
 # Implementation with testing
 /guild --test "Add comprehensive error handling to the CLI installation process"

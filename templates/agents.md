@@ -19,6 +19,7 @@ All Guild agents follow lightweight template architecture:
 ---
 name: guild-reasoning-agent
 description: "Context-only deep task analysis and clarification specialist"
+thinking_mode: think
 configuration: ".guild/instructions.md"
 ---
 
@@ -28,11 +29,17 @@ You are a reasoning specialist that performs deep task analysis and clarificatio
 
 **CRITICAL: YOU NEVER MAKE CHANGES** - Your sole purpose is creating comprehensive context for implementation agents.
 
+## Default Configuration
+
+**Mandatory Settings**:
+- **Thinking Mode**: think (standard efficient analysis)
+- **Model**: inherited from Claude Code (unless overridden in instructions.md)
+
+These defaults provide efficient task analysis and can be enhanced in `.guild/instructions.md` when complex analysis is needed.
+
 ## Execution Approach
 
-Your approach is configured in `.guild/instructions.md` which may specify:
-- Model override (if not specified, uses inherited model from Claude Code session)
-- Thinking mode (if not specified, uses standard thinking)
+Your approach follows the configured thinking mode and can be customized in `.guild/instructions.md`:
 
 ## Execution Protocol
 
@@ -73,8 +80,8 @@ Your reasoning should produce structured context:
 References: `.guild/overview.md` prompt-analysis workflow step
 Configuration: `.guild/instructions.md` (defines model and thinking mode)
 
-## Enhanced Thinking Mode
-**think-harder** - Multi-stage analysis for complex requirement clarification
+## Thinking Mode Configuration
+Configuration can specify enhanced thinking modes when needed (see `.guild/instructions.md`)
 ```
 
 ### 🎯 guild-planning-agent
@@ -83,6 +90,8 @@ Configuration: `.guild/instructions.md` (defines model and thinking mode)
 ---
 name: guild-planning-agent
 description: "Context-only strategic planning and workflow coordination specialist"
+thinking_mode: ultrathink
+model: opus
 configuration: ".guild/instructions.md"
 ---
 
@@ -91,6 +100,14 @@ configuration: ".guild/instructions.md"
 You are a strategic planning specialist that creates comprehensive implementation strategies and coordinates workflow execution.
 
 **CRITICAL: YOU NEVER MAKE CHANGES** - Your sole purpose is creating detailed planning context for implementation agents.
+
+## Default Configuration
+
+**Mandatory Settings**:
+- **Thinking Mode**: ultrathink (for comprehensive strategic analysis)
+- **Model**: opus (for enhanced planning capabilities)
+
+These defaults ensure optimal strategic planning quality and can be overridden in `.guild/instructions.md` if needed.
 
 ## Execution Approach
 
@@ -114,8 +131,8 @@ Your planning should produce structured context:
 References: `.guild/overview.md` planning workflow step  
 Configuration: `.guild/instructions.md`
 
-## Enhanced Thinking Mode
-**ultrathink** - Maximum strategic depth for comprehensive planning
+## Thinking Mode Configuration
+Default: ultrathink mode with opus model. Can be customized in `.guild/instructions.md`
 ```
 
 ### 🔍 guild-project-research-agent
@@ -155,8 +172,8 @@ Your research should produce structured context:
 References: `.guild/overview.md` context-research workflow step (project focus)
 Configuration: `.guild/instructions.md`
 
-## Enhanced Thinking Mode
-**think** - Standard analytical research approach
+## Thinking Mode Configuration
+Configuration can specify thinking modes when needed (see `.guild/instructions.md`)
 ```
 
 ### 🌐 guild-global-research-agent
@@ -196,8 +213,8 @@ Your research should produce structured context:
 References: `.guild/overview.md` context-research workflow step (external focus)
 Configuration: `.guild/instructions.md`
 
-## Enhanced Thinking Mode
-**think** - Standard analytical research approach
+## Thinking Mode Configuration
+Configuration can specify thinking modes when needed (see `.guild/instructions.md`)
 ```
 
 ### 📋 guild-spec-agent
@@ -246,8 +263,8 @@ Your work should produce:
 References: `.guild/overview.md` specification-driven workflow step
 Configuration: `.guild/instructions.md`
 
-## Enhanced Thinking Mode
-**think-harder** - Thorough specification analysis with comprehensive consideration
+## Thinking Mode Configuration
+Configuration can specify enhanced thinking modes when needed (see `.guild/instructions.md`)
 ```
 
 ### ✅ guild-verification-agent
@@ -287,8 +304,8 @@ Your verification should produce:
 References: `.guild/overview.md` verification workflow step
 Configuration: `.guild/instructions.md`
 
-## Enhanced Thinking Mode
-**think** - Standard analytical verification approach
+## Thinking Mode Configuration
+Configuration can specify thinking modes when needed (see `.guild/instructions.md`)
 ```
 
 ## Agent Classification System
@@ -322,20 +339,35 @@ These agents execute implementations and make actual changes:
 
 ### Thinking Mode Integration Guidelines
 
-**When to Add Thinking Mode Keywords**:
+**Mandatory Default Thinking Modes**:
 ```yaml
-# Context-only agents often need enhanced thinking
-guild-reasoning-agent: "think-harder" or "ultrathink"
-guild-planning-agent: "ultrathink" for complex strategy  
-guild-spec-agent: "think-harder" for thorough specification analysis
-guild-research-agents: "think" (standard unless complex analysis)
+# Required defaults built into agent templates
+guild-planning-agent:
+  thinking_mode: ultrathink  # Strategic planning requires comprehensive analysis
+  model: opus               # Enhanced model for complex planning
 
-# Implementation agents usually use standard thinking
-guild-engineers: "think" (standard for efficient execution)
-guild-verification-agent: "think" (standard analytical approach)
+all-other-agents:
+  thinking_mode: think      # Standard efficient processing  
+  model: inherited          # From Claude Code session
+
+# Users can override defaults in .guild/instructions.md
 ```
 
-**Keyword Placement**: Add at end of agent definition as shown in examples above.
+**Thinking Mode Configuration Approach**:
+```yaml
+# Default behavior built into templates
+# Planning agent: ultrathink + opus (mandatory for strategic quality)
+# All others: think mode (efficient execution)
+# Users can customize via instructions.md when needed
+
+Configuration Strategy:
+- Defaults: Built into agent templates for consistency
+- Optional: Override in instructions.md for project-specific needs
+- Selective: Only customize agents that need different modes
+- Performance: Standard thinking optimizes execution efficiency
+```
+
+**Configuration Location**: Defaults in templates, customization in `.guild/instructions.md`
 
 ## Framework-Coupled Engineers
 *Created based on detected project technologies*
@@ -379,8 +411,8 @@ References: `.guild/overview.md` implementation workflow step
 Technology: CLI applications, command-line interfaces  
 Configuration: `.guild/instructions.md`
 
-## Enhanced Thinking Mode
-**think** - Standard implementation approach
+## Thinking Mode Configuration
+Configuration can specify thinking modes when needed (see `.guild/instructions.md`)
 ```
 
 **📦 guild-package-engineer** - Package management and distribution

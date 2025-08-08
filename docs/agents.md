@@ -2,237 +2,992 @@
 
 ## Overview
 
-Guild agents are **thin metadata definitions** that reference centralized processes. They provide specialized capabilities through clean separation of concerns and instruction-based configuration.
+Guild agents are **thin metadata definitions** with integrated thinking modes and context engineering that reference centralized processes. They provide specialized capabilities through clean separation of concerns, structured context management, and instruction-based configuration.
 
 ## Agent Architecture
 
-### Thin Agent Design
+### Enhanced Thin Agent Design
 
-All Guild agents follow a minimal metadata format:
+**Design Philosophy**: Agents are metadata-only (<20 lines) that reference centralized processes with integrated thinking modes and context optimization.
+
+All Guild agents follow a minimal metadata format with context engineering:
 
 ```yaml
 ---
-name: guild-[identifier]-engineer
+name: guild-[identifier]-agent
 role: primary-function
 processes: [process-references]
 scope: operational-boundary
 parallel: true/false
+thinking_mode: think|think-harder|ultrathink
+context_optimization: enabled
 ---
+
+## Role Description
+{Clear, specific role definition following "new employee with amnesia" principle}
+
+## Enhanced Thinking Mode
+**{thinking_mode}** - {Specific reasoning requirements and chain-of-thought guidance}
+
+## Context Management
+- Input: {Expected context structure and requirements}
+- Output: {Generated context format and handoff protocols}
+- Optimization: {Context compression and transfer strategies}
 ```
 
 **Key Principles**:
-- **Metadata Only**: Agents contain no logic, only references (<10 lines)
-- **Process References**: All logic lives in centralized processes
-- **Clear Boundaries**: Well-defined operational scopes
-- **Parallel Support**: Explicit parallelization capability
+- **Metadata Only**: Agents contain no logic, only references and thinking mode specifications
+- **Process References**: All logic lives in centralized processes with context optimization
+- **Clear Boundaries**: Well-defined operational scopes with context management
+- **Thinking Integration**: Appropriate cognitive resource allocation
+- **Context Engineering**: Structured handoff protocols and optimization strategies
 
-### Model Configuration
+## Agent Classification System
 
-Models are assigned through `.guild/instructions.md`, not in agent definitions:
+### Context-Only Agents (Non-Changing)
 
-```yaml
-# In .guild/instructions.md
-models:
-  reasoning: opus
-  planning: sonnet
-  implementation: haiku
+**Characteristics**:
+- **NEVER** make direct code or file changes
+- Create comprehensive context packages for implementation agents
+- Use enhanced thinking modes for complex analysis
+- Generate structured handoff protocols
+- Focus on analysis, research, planning, and specification work
+
+**Context-Only Agent Types**:
+
+**guild-reasoning-agent**:
+- **Role**: Task analysis, clarification, and requirement understanding
+- **Thinking Mode**: ultrathink for comprehensive requirement analysis
+- **Context Role**: Context package generation with structured XML templates
+- **Output**: Validated requirements with constraint analysis and success criteria
+- **Processes**: analyze-task, assess-complexity, generate-structured-context
+
+**guild-planning-agent**:
+- **Role**: Workflow coordination, routing, and strategic planning
+- **Thinking Mode**: ultrathink for comprehensive strategy development
+- **Context Role**: Implementation strategy creation and agent routing
+- **Output**: Structured implementation plans with resource allocation and timeline
+- **Processes**: create-strategy, route-agents, optimize-workflow, context-handoff
+
+**guild-project-research-agent**:
+- **Role**: Project-specific context gathering with progressive detail building
+- **Thinking Mode**: think for efficient information synthesis
+- **Context Role**: Project context synthesis and technical analysis
+- **Output**: Hierarchical context packages with reference-based linking
+- **Processes**: research-project-context, synthesize-findings, build-references
+
+**guild-global-research-agent**:
+- **Role**: External research and best practices integration
+- **Thinking Mode**: think for efficient external context integration
+- **Context Role**: External context gathering and pattern identification
+- **Output**: Best practices context and technology pattern analysis
+- **Processes**: research-external-context, identify-patterns, integrate-practices
+
+**guild-specification-agent**:
+- **Role**: Documentation analysis and specification updates
+- **Thinking Mode**: think-harder for thorough specification analysis
+- **Context Role**: Specification maintenance (ONLY agent that can update specs)
+- **Output**: Updated specifications with implementation guidance and validation criteria
+- **Processes**: analyze-specifications, update-documentation, validate-consistency
+
+### Implementation Agents (Changing)
+
+**Characteristics**:
+- Receive structured context packages from context-only agents
+- Execute actual code changes and file modifications
+- Use standard thinking mode for efficient execution
+- Create tests, documentation, and refactoring based on provided context
+- Validate results against structured success criteria
+
+**Implementation Agent Types**:
+
+**guild-verification-agent**:
+- **Role**: Quality validation and testing execution
+- **Thinking Mode**: think for systematic validation approaches
+- **Implementation Role**: Create tests, validate results, ensure quality criteria
+- **Input**: Structured context from context-only agents
+- **Output**: Validation reports with test coverage and quality metrics
+- **Processes**: run-tests, verify-requirements, validate-quality, create-tests
+
+**Technology-Specific Implementation Engineers**:
+- **guild-frontend-engineer**, **guild-backend-engineer**, etc.
+- **Role**: Task execution specialists for specific technology domains
+- **Thinking Mode**: think for efficient, focused execution
+- **Implementation Role**: Execute code changes based on structured context packages
+- **Input Processing**: Validate context completeness, confirm approach, execute with quality gates
+- **Processes**: implement-solution, validate-changes, execute-domain-tasks
+
+## Context Engineering Integration
+
+### Context Flow Architecture
+
+```xml
+<context-flow>
+  <generation-phase>
+    <context-only-agents>
+      Reasoning Agent (ultrathink) → Planning Agent (ultrathink) → Research Agents (think)
+      ↓
+      Generate structured XML context packages with priority classification
+    </context-only-agents>
+  </generation-phase>
+  
+  <transfer-phase>
+    <structured-handoff>
+      <context-package priority="critical|important|supplementary">
+        <executive-summary>Key decisions and outcomes</executive-summary>
+        <implementation-context>Technical requirements and constraints</implementation-context>
+        <validation-criteria>Success metrics and acceptance criteria</validation-criteria>
+        <references>Relevant files, functions, and documentation</references>
+      </context-package>
+    </structured-handoff>
+  </transfer-phase>
+  
+  <usage-phase>
+    <implementation-agents>
+      Validate context → Confirm approach → Execute with quality gates → Report outcomes
+    </implementation-agents>
+  </usage-phase>
+  
+  <decay-phase>
+    <context-cleanup>
+      Automatic pruning → Retain critical decisions → Archive for future reference
+    </context-cleanup>
+  </decay-phase>
+</context-flow>
 ```
 
-## Agent Types
+### Context Management Capabilities
 
-### Core System Agents
-
-| Agent | Role | Process References |
-|-------|------|-------------------|
-| **guild-reasoning-agent** | Task analysis and clarification | analyze-task, assess-complexity |
-| **guild-planning-agent** | Workflow coordination and routing | create-plan, route-agents |
-| **guild-research-agent** | Context gathering and synthesis | research-context, aggregate-findings |
-| **guild-verification-agent** | Quality assurance and validation | run-tests, verify-requirements |
-
-### Technology Engineers
-
-Engineers are created based on detected technology patterns:
-
-| Pattern | Engineer | Scope |
-|---------|----------|-------|
-| **Frontend Framework** | guild-[framework]-engineer | UI + State + Routing + Testing |
-| **Backend Framework** | guild-[framework]-engineer | API + Middleware + Database + Testing |
-| **Build Tools** | guild-build-engineer | Bundling + Optimization + Dev Server |
-| **Infrastructure** | guild-infra-engineer | Deployment + Monitoring + Scaling |
-
-### Standalone Specialists
-
-Self-contained agents for specific domains:
-
+**Context-Only Agents**:
 ```yaml
----
-name: security-analyst-agent
-role: Security vulnerability assessment
-approach: OWASP methodology
-scope: Authentication, authorization, input validation
-self_contained: true
----
+Input Processing:
+  - Task requirement extraction and validation
+  - Constraint identification and analysis
+  - Complexity assessment and classification
+  
+Context Generation:
+  - Structured XML-tagged packages
+  - Hierarchical summarization with progressive detail
+  - Reference-based linking to avoid duplication
+  - Priority classification (critical/important/supplementary)
+  
+Handoff Protocols:
+  - Validation checkpoints for context completeness
+  - Acknowledgment requirements from receiving agents
+  - Clarification mechanisms for incomplete context
 ```
 
-## Technology Coupling
+**Implementation Agents**:
+```yaml
+Context Processing:
+  - Context validation and completeness verification
+  - Approach confirmation with context-only agents if unclear
+  - Execution planning with atomic, testable steps
+  - Quality gate enforcement throughout implementation
+  
+Output Generation:
+  - Standardized feedback templates
+  - Implementation reports with success/failure status
+  - Quality metrics and validation results
+  - Context for downstream agents (testing, verification)
+```
 
-### Coupling Principle
+## Thinking Mode Integration
 
-Technologies that are **naturally coupled in workflows** share the same engineer:
+### Agent-Specific Thinking Modes
 
-**Correct Coupling**:
+**Strategic Agents (ultrathink)**:
+- guild-reasoning-agent: Comprehensive requirement analysis
+- guild-planning-agent: Strategic workflow coordination and resource allocation
+
+**Analytical Agents (think-harder)**:
+- guild-specification-agent: Thorough specification analysis and documentation updates
+
+**Synthesis Agents (think)**:
+- guild-project-research-agent: Efficient project context synthesis
+- guild-global-research-agent: External context integration and pattern identification
+
+**Implementation Agents (think)**:
+- guild-verification-agent: Systematic quality validation
+- Technology engineers: Focused, efficient execution
+
+### Chain-of-Thought Implementation
+
+**Ultrathink Process Example (guild-planning-agent)**:
+```xml
+<ultrathink-workflow>
+  <comprehensive-analysis>
+    <requirement-decomposition>Break down all requirements and dependencies</requirement-decomposition>
+    <resource-assessment>Evaluate available agents, processes, and constraints</resource-assessment>
+    <complexity-analysis>Determine optimal execution strategy and parallelization</complexity-analysis>
+  </comprehensive-analysis>
+  
+  <strategic-planning>
+    <approach-evaluation>Consider multiple implementation strategies</approach-evaluation>
+    <agent-optimization>Select optimal agents for each component</agent-optimization>
+    <risk-mitigation>Identify potential issues and develop contingency plans</risk-mitigation>
+  </strategic-planning>
+  
+  <context-preparation>
+    <handoff-structuring>Create comprehensive context packages for implementers</handoff-structuring>
+    <validation-criteria>Define success metrics and quality gates</validation-criteria>
+    <coordination-protocols>Establish agent communication and synchronization</coordination-protocols>
+  </context-preparation>
+</ultrathink-workflow>
+```
+
+## Agent Placement Architecture
+
+### Directory Structure
+
+**Standard Guild Agents**: `.claude/agents/guild/`
+```
+.claude/agents/guild/
+├── guild-reasoning-agent.md          # ultrathink, context generation
+├── guild-planning-agent.md           # ultrathink, strategy development  
+├── guild-project-research-agent.md   # think, project context synthesis
+├── guild-global-research-agent.md    # think, external context integration
+├── guild-specification-agent.md      # think-harder, documentation focus
+├── guild-verification-agent.md       # think, validation and testing
+└── [technology-engineers]/           # think, implementation focus
+    ├── guild-frontend-engineer.md
+    ├── guild-backend-engineer.md
+    └── guild-database-engineer.md
+```
+
+**Standalone Specialist Agents**: `.claude/agents/`
+```
+.claude/agents/
+├── security-analyst-agent.md         # think-harder, security analysis
+├── performance-engineer-agent.md     # think-harder, optimization
+├── accessibility-auditor-agent.md    # think, compliance validation
+└── [other-specialists].md            # appropriate thinking modes
+```
+
+**Benefits of Separation**:
+- Clear distinction between guild system agents and standalone specialists
+- Better organization and discoverability of agent types
+- Namespace isolation to prevent conflicts
+- Easier management of agent roles and thinking mode configurations
+
+## Technology Detection and Engineer Creation
+
+### Pattern-Based Agent Generation
+
+Engineers are created based on detected technology patterns with context awareness:
+
+```yaml
+Detection Process:
+  1. Scan project structure and configuration files
+  2. Identify technology patterns and relationships
+  3. Generate appropriate engineers with context optimization
+  4. Configure thinking modes based on complexity requirements
+  5. Set up context handoff protocols between agents
+
+Technology Categories:
+  Frontend Patterns:
+    - Component frameworks (React, Vue, Angular) → UI engineers with component context
+    - State management (Redux, Vuex, Pinia) → State context integration
+    - Routing libraries → Navigation context optimization
+    
+  Backend Patterns:  
+    - API frameworks (Express, FastAPI, Spring) → Backend engineers with service context
+    - ORM/Database libraries → Data context management
+    - Authentication systems → Security context integration
+    
+  Testing Patterns:
+    - Test frameworks (Jest, Pytest, JUnit) → QA engineers with test context
+    - Coverage tools → Quality metrics context
+    - Integration testing → End-to-end context management
+```
+
+### Natural Technology Coupling
+
+**Correct Coupling with Context Engineering**:
 ```yaml
 guild-react-engineer:
-  - React components
-  - Redux/Zustand state
-  - React Router
-  - React Testing Library
-  - React documentation
+  Technologies:
+    - React components and hooks
+    - React Router navigation
+    - React Testing Library
+    - React Developer Tools
+  Context Specialization:
+    - Component lifecycle context
+    - State management context
+    - Routing and navigation context
+    - Testing and debugging context
 ```
 
-**Incorrect Separation**:
-```yaml
-# WRONG - Artificial boundaries
-guild-react-ui-engineer
-guild-redux-engineer
-guild-react-router-engineer
+## Advanced Agent Communication
+
+### Structured Context Handoff Protocol
+
+```xml
+<agent-handoff>
+  <metadata>
+    <from-agent>guild-planning-agent</from-agent>
+    <to-agent>guild-frontend-engineer</to-agent>
+    <handoff-type>implementation</handoff-type>
+    <priority>critical</priority>
+  </metadata>
+  
+  <executive-summary>
+    Frontend implementation for user dashboard with responsive design, 
+    authentication integration, and real-time data updates.
+  </executive-summary>
+  
+  <structured-context>
+    <requirements>
+      - Responsive dashboard layout with mobile-first approach
+      - JWT-based authentication with automatic token refresh
+      - Real-time WebSocket integration for live data updates
+      - Accessibility compliance (WCAG 2.1 AA)
+    </requirements>
+    
+    <technical-constraints>
+      - React 18 with TypeScript
+      - Styled-components for styling
+      - React Query for data fetching
+      - Socket.io for WebSocket connections
+    </technical-constraints>
+    
+    <implementation-strategy>
+      1. Create responsive layout components
+      2. Implement authentication context and hooks
+      3. Set up WebSocket connection management
+      4. Add accessibility features and testing
+    </implementation-strategy>
+  </structured-context>
+  
+  <validation-criteria>
+    - All components render correctly on mobile, tablet, desktop
+    - Authentication flow works with token refresh
+    - Real-time updates display without page refresh
+    - Passes accessibility audit with automated tools
+  </validation-criteria>
+</agent-handoff>
 ```
 
-### Coupling Detection
-
-Engineers are created based on natural technology relationships:
-
-1. **Framework Ecosystems**: Core framework + official extensions
-2. **Build Ecosystems**: Build tool + plugins + configuration
-3. **Testing Ecosystems**: Test runner + utilities + coverage
-4. **Deployment Ecosystems**: Platform + services + monitoring
-
-## Context Management
-
-### Context Flow
-
-```yaml
-Flow Pattern:
-  Research → Planning → Implementation → Verification
-       ↓         ↓            ↓              ↓
-   Findings  Assignment   Execution      Quality
-
-Transfer Protocol:
-  - Executive summary (always)
-  - Key points (important)
-  - Full details (critical only)
-  - References (as needed)
-```
-
-### Context Optimization
-
-Agents use intelligent context management:
-- **Relevance Scoring**: Keep only needed information
-- **Progressive Disclosure**: Start minimal, add as needed
-- **Shared Cache**: Reuse common context across agents
-- **Context Decay**: Remove outdated information
-
-## Coordination Patterns
-
-### Sequential Coordination
-```yaml
-Pattern: Step-by-step execution
-When: Dependencies exist
-Example: Reasoning → Planning → Implementation
-```
-
-### Parallel Coordination
-```yaml
-Pattern: Simultaneous execution
-When: Independent scopes
-Example: Frontend || Backend || Database
-```
-
-### Pipeline Coordination
-```yaml
-Pattern: Overlapping stages
-When: Early starts possible
-Example: Research → Planning (early) → Implementation
-```
-
-## Custom Agent Creation
-
-### Through Instructions
-
-Define custom agents in `.guild/instructions.md`:
-
-```markdown
-Create a specialized security engineer that focuses on:
-- OWASP Top 10 vulnerabilities
-- Authentication best practices
-- Input validation
-- Security headers
-```
-
-### Through Templates
-
-Add custom agent templates in `.guild/agents/`:
+### Error Handling and Recovery
 
 ```yaml
----
-name: guild-custom-engineer
-role: Specialized function
-processes: [custom-processes]
-scope: Domain boundaries
-parallel: true
----
-```
-
-## Agent Communication
-
-### Simple Interfaces
-
-Agents communicate through clean, well-defined interfaces:
-
-1. **Input Contract**: What the agent expects
-2. **Process Execution**: Referenced processes run
-3. **Output Contract**: What the agent provides
-4. **Context Transfer**: Relevant information passed forward
-
-### Error Handling
-
-```yaml
-Error Strategies:
-  process_failure: Retry with backoff
-  context_overflow: Compress and filter
-  timeout: Graceful degradation
-  conflict: Sequential fallback
+Context Transfer Failures:
+  incomplete_context: Request clarification from source agent
+  oversized_context: Apply compression and request executive summary
+  invalid_format: Return to source agent with format requirements
+  
+Implementation Failures:
+  requirement_unclear: Escalate to reasoning agent for clarification
+  technical_constraint: Return to planning agent for approach revision  
+  quality_gate_failure: Engage verification agent for resolution strategy
+  
+Communication Failures:
+  timeout: Retry with exponential backoff
+  agent_unavailable: Route to backup agent or sequential fallback
+  resource_exhaustion: Request planning agent for resource reallocation
 ```
 
 ## Performance Optimization
 
 ### Agent-Level Optimizations
 
-- **Lazy Loading**: Load agents only when needed
-- **Process Caching**: Reuse process definitions
-- **Context Filtering**: Pass only relevant data
-- **Parallel Execution**: Run independent agents concurrently
+**Context Engineering Performance**:
+- **Reference-Based Linking**: Use file:line citations instead of content duplication
+- **Progressive Detail Building**: Start with summaries, expand based on agent requests
+- **Context Compression**: Hierarchical summarization with drill-down capability
+- **Automatic Pruning**: Remove outdated or irrelevant context information
+
+**Thinking Mode Optimization**:
+- **Appropriate Cognitive Load**: Match thinking complexity to task requirements
+- **Parallel Execution**: Use standard thinking for parallel tasks to optimize resources
+- **Strategic Thinking Placement**: Reserve ultrathink for critical decision points
+- **Context-Driven Thinking**: Adjust thinking modes based on context complexity
 
 ### System-Level Optimizations
 
-- **Agent Pooling**: Reuse agent instances
-- **Batch Processing**: Group similar operations
-- **Predictive Loading**: Pre-warm likely agents
-- **Resource Management**: Balance load across agents
+```yaml
+Context Management:
+  - Multi-level context caching with intelligent expiration
+  - Context pooling for similar tasks and shared information
+  - Predictive context loading based on workflow patterns
+  - Context synchronization for parallel agent execution
+  
+Agent Coordination:
+  - Agent pooling and reuse across similar tasks
+  - Batch processing for related context packages
+  - Load balancing across available agent instances
+  - Resource management with graceful degradation
+```
+
+## Custom Agent Creation
+
+### Advanced Custom Agent Template
+
+```yaml
+---
+name: custom-specialist-agent
+role: domain-specific-expertise
+approach: specialized-methodology
+scope: clear-operational-boundaries
+self_contained: true
+thinking_mode: think-harder
+context_optimization: enabled
+---
+
+## Role Description
+Expert in {domain} with focus on {specific areas}. Treats each task like a new
+employee situation requiring comprehensive context and explicit instructions.
+
+## Enhanced Thinking Mode
+**think-harder** - Multi-stage analysis with assumption challenging for {domain}
+specific problems, including exploration of alternative approaches and thorough
+validation of constraints and requirements.
+
+## Context Management
+- Input: Structured context packages with {domain}-specific requirements
+- Output: {Domain} analysis with implementation guidance and quality criteria
+- Optimization: Context compression focused on {domain} relevance and patterns
+
+## Integration Guidelines
+- Activation triggers: {Keywords and task patterns for automatic activation}
+- Collaboration patterns: How to work effectively with other agents
+- Handoff protocols: Context transfer specifications and validation requirements
+
+## Domain Expertise
+- Core competencies: {List of specific skills and knowledge areas}
+- Methodologies: {Standard approaches and best practices}
+- Quality standards: {Success criteria and validation requirements}
+```
 
 ## Best Practices
 
-1. **Keep Agents Thin**: Metadata only, no logic
-2. **Centralize Processes**: All logic in process definitions
-3. **Respect Coupling**: Don't artificially separate coupled technologies
-4. **Optimize Context**: Filter and compress aggressively
-5. **Enable Parallelism**: Design for concurrent execution
+### Context Engineering Excellence
+
+1. **Structure All Handoffs**: Use XML-tagged context packages with clear priority levels
+2. **Progressive Context Building**: Start with summaries, expand detail as implementation needs require
+3. **Reference-Based Optimization**: Use file:line references instead of content duplication
+4. **Validation Checkpoints**: Ensure context completeness before proceeding to implementation
+
+### Thinking Mode Integration
+
+1. **Strategic Placement**: Use ultrathink for high-level planning and architecture decisions
+2. **Analytical Focus**: Use think-harder for specification analysis and complex problem solving  
+3. **Efficient Execution**: Use standard think for implementation and routine validation tasks
+4. **Context-Driven Selection**: Adjust thinking modes based on context complexity and requirements
+
+### Agent Design Principles
+
+1. **Keep Agents Thin**: Metadata and thinking modes only, no implementation logic
+2. **Clear Role Boundaries**: Distinguish context-only vs implementation capabilities clearly
+3. **Structured Communication**: All agent-to-agent communication follows handoff protocols
+4. **Natural Coupling**: Respect technology relationships and workflow dependencies
+5. **Context Optimization**: Filter, compress, and structure all information transfer
 
 ## Summary
 
-Guild agents achieve power through simplicity:
-- **Thin metadata** definitions reference centralized processes
-- **Natural coupling** respects technology relationships
-- **Smart context** management prevents explosion
-- **Flexible coordination** enables optimal execution
-- **Clean interfaces** ensure reliable communication
+Guild agents achieve sophisticated workflow orchestration through:
+
+- **Advanced thin architecture** with integrated thinking modes and context engineering
+- **Clear agent classification** between context-only and implementation roles
+- **Structured communication** with XML-tagged handoff protocols and validation checkpoints
+- **Cognitive resource optimization** through appropriate thinking mode assignment
+- **Technology-aware coupling** that respects natural workflow relationships
+- **Performance optimization** through context engineering and intelligent resource allocation
+
+This creates a **comprehensive agent ecosystem** that combines the simplicity of thin agents with the power of advanced context management and structured reasoning systems.# Guild Agent Specifications
+
+## Overview
+
+Guild agents are **thin metadata definitions** with integrated thinking modes and context engineering that reference centralized processes. They provide specialized capabilities through clean separation of concerns, structured context management, and instruction-based configuration.
+
+## Agent Architecture
+
+### Enhanced Thin Agent Design
+
+**Design Philosophy**: Agents are metadata-only (<20 lines) that reference centralized processes with integrated thinking modes and context optimization.
+
+All Guild agents follow a minimal metadata format with context engineering:
+
+```yaml
+---
+name: guild-[identifier]-agent
+role: primary-function
+processes: [process-references]
+scope: operational-boundary
+parallel: true/false
+thinking_mode: think|think-harder|ultrathink
+context_optimization: enabled
+---
+
+## Role Description
+{Clear, specific role definition following "new employee with amnesia" principle}
+
+## Enhanced Thinking Mode
+**{thinking_mode}** - {Specific reasoning requirements and chain-of-thought guidance}
+
+## Context Management
+- Input: {Expected context structure and requirements}
+- Output: {Generated context format and handoff protocols}
+- Optimization: {Context compression and transfer strategies}
+```
+
+**Key Principles**:
+- **Metadata Only**: Agents contain no logic, only references and thinking mode specifications
+- **Process References**: All logic lives in centralized processes with context optimization
+- **Clear Boundaries**: Well-defined operational scopes with context management
+- **Thinking Integration**: Appropriate cognitive resource allocation
+- **Context Engineering**: Structured handoff protocols and optimization strategies
+
+## Agent Classification System
+
+### Context-Only Agents (Non-Changing)
+
+**Characteristics**:
+- **NEVER** make direct code or file changes
+- Create comprehensive context packages for implementation agents
+- Use enhanced thinking modes for complex analysis
+- Generate structured handoff protocols
+- Focus on analysis, research, planning, and specification work
+
+**Context-Only Agent Types**:
+
+**guild-reasoning-agent**:
+- **Role**: Task analysis, clarification, and requirement understanding
+- **Thinking Mode**: ultrathink for comprehensive requirement analysis
+- **Context Role**: Context package generation with structured XML templates
+- **Output**: Validated requirements with constraint analysis and success criteria
+- **Processes**: analyze-task, assess-complexity, generate-structured-context
+
+**guild-planning-agent**:
+- **Role**: Workflow coordination, routing, and strategic planning
+- **Thinking Mode**: ultrathink for comprehensive strategy development
+- **Context Role**: Implementation strategy creation and agent routing
+- **Output**: Structured implementation plans with resource allocation and timeline
+- **Processes**: create-strategy, route-agents, optimize-workflow, context-handoff
+
+**guild-project-research-agent**:
+- **Role**: Project-specific context gathering with progressive detail building
+- **Thinking Mode**: think for efficient information synthesis
+- **Context Role**: Project context synthesis and technical analysis
+- **Output**: Hierarchical context packages with reference-based linking
+- **Processes**: research-project-context, synthesize-findings, build-references
+
+**guild-global-research-agent**:
+- **Role**: External research and best practices integration
+- **Thinking Mode**: think for efficient external context integration
+- **Context Role**: External context gathering and pattern identification
+- **Output**: Best practices context and technology pattern analysis
+- **Processes**: research-external-context, identify-patterns, integrate-practices
+
+**guild-specification-agent**:
+- **Role**: Documentation analysis and specification updates
+- **Thinking Mode**: think-harder for thorough specification analysis
+- **Context Role**: Specification maintenance (ONLY agent that can update specs)
+- **Output**: Updated specifications with implementation guidance and validation criteria
+- **Processes**: analyze-specifications, update-documentation, validate-consistency
+
+### Implementation Agents (Changing)
+
+**Characteristics**:
+- Receive structured context packages from context-only agents
+- Execute actual code changes and file modifications
+- Use standard thinking mode for efficient execution
+- Create tests, documentation, and refactoring based on provided context
+- Validate results against structured success criteria
+
+**Implementation Agent Types**:
+
+**guild-verification-agent**:
+- **Role**: Quality validation and testing execution
+- **Thinking Mode**: think for systematic validation approaches
+- **Implementation Role**: Create tests, validate results, ensure quality criteria
+- **Input**: Structured context from context-only agents
+- **Output**: Validation reports with test coverage and quality metrics
+- **Processes**: run-tests, verify-requirements, validate-quality, create-tests
+
+**Technology-Specific Implementation Engineers**:
+- **guild-frontend-engineer**, **guild-backend-engineer**, etc.
+- **Role**: Task execution specialists for specific technology domains
+- **Thinking Mode**: think for efficient, focused execution
+- **Implementation Role**: Execute code changes based on structured context packages
+- **Input Processing**: Validate context completeness, confirm approach, execute with quality gates
+- **Processes**: implement-solution, validate-changes, execute-domain-tasks
+
+## Context Engineering Integration
+
+### Context Flow Architecture
+
+```xml
+<context-flow>
+  <generation-phase>
+    <context-only-agents>
+      Reasoning Agent (ultrathink) → Planning Agent (ultrathink) → Research Agents (think)
+      ↓
+      Generate structured XML context packages with priority classification
+    </context-only-agents>
+  </generation-phase>
+  
+  <transfer-phase>
+    <structured-handoff>
+      <context-package priority="critical|important|supplementary">
+        <executive-summary>Key decisions and outcomes</executive-summary>
+        <implementation-context>Technical requirements and constraints</implementation-context>
+        <validation-criteria>Success metrics and acceptance criteria</validation-criteria>
+        <references>Relevant files, functions, and documentation</references>
+      </context-package>
+    </structured-handoff>
+  </transfer-phase>
+  
+  <usage-phase>
+    <implementation-agents>
+      Validate context → Confirm approach → Execute with quality gates → Report outcomes
+    </implementation-agents>
+  </usage-phase>
+  
+  <decay-phase>
+    <context-cleanup>
+      Automatic pruning → Retain critical decisions → Archive for future reference
+    </context-cleanup>
+  </decay-phase>
+</context-flow>
+```
+
+### Context Management Capabilities
+
+**Context-Only Agents**:
+```yaml
+Input Processing:
+  - Task requirement extraction and validation
+  - Constraint identification and analysis
+  - Complexity assessment and classification
+  
+Context Generation:
+  - Structured XML-tagged packages
+  - Hierarchical summarization with progressive detail
+  - Reference-based linking to avoid duplication
+  - Priority classification (critical/important/supplementary)
+  
+Handoff Protocols:
+  - Validation checkpoints for context completeness
+  - Acknowledgment requirements from receiving agents
+  - Clarification mechanisms for incomplete context
+```
+
+**Implementation Agents**:
+```yaml
+Context Processing:
+  - Context validation and completeness verification
+  - Approach confirmation with context-only agents if unclear
+  - Execution planning with atomic, testable steps
+  - Quality gate enforcement throughout implementation
+  
+Output Generation:
+  - Standardized feedback templates
+  - Implementation reports with success/failure status
+  - Quality metrics and validation results
+  - Context for downstream agents (testing, verification)
+```
+
+## Thinking Mode Integration
+
+### Agent-Specific Thinking Modes
+
+**Strategic Agents (ultrathink)**:
+- guild-reasoning-agent: Comprehensive requirement analysis
+- guild-planning-agent: Strategic workflow coordination and resource allocation
+
+**Analytical Agents (think-harder)**:
+- guild-specification-agent: Thorough specification analysis and documentation updates
+
+**Synthesis Agents (think)**:
+- guild-project-research-agent: Efficient project context synthesis
+- guild-global-research-agent: External context integration and pattern identification
+
+**Implementation Agents (think)**:
+- guild-verification-agent: Systematic quality validation
+- Technology engineers: Focused, efficient execution
+
+### Chain-of-Thought Implementation
+
+**Ultrathink Process Example (guild-planning-agent)**:
+```xml
+<ultrathink-workflow>
+  <comprehensive-analysis>
+    <requirement-decomposition>Break down all requirements and dependencies</requirement-decomposition>
+    <resource-assessment>Evaluate available agents, processes, and constraints</resource-assessment>
+    <complexity-analysis>Determine optimal execution strategy and parallelization</complexity-analysis>
+  </comprehensive-analysis>
+  
+  <strategic-planning>
+    <approach-evaluation>Consider multiple implementation strategies</approach-evaluation>
+    <agent-optimization>Select optimal agents for each component</agent-optimization>
+    <risk-mitigation>Identify potential issues and develop contingency plans</risk-mitigation>
+  </strategic-planning>
+  
+  <context-preparation>
+    <handoff-structuring>Create comprehensive context packages for implementers</handoff-structuring>
+    <validation-criteria>Define success metrics and quality gates</validation-criteria>
+    <coordination-protocols>Establish agent communication and synchronization</coordination-protocols>
+  </context-preparation>
+</ultrathink-workflow>
+```
+
+## Agent Placement Architecture
+
+### Directory Structure
+
+**Standard Guild Agents**: `.claude/agents/guild/`
+```
+.claude/agents/guild/
+├── guild-reasoning-agent.md          # ultrathink, context generation
+├── guild-planning-agent.md           # ultrathink, strategy development  
+├── guild-project-research-agent.md   # think, project context synthesis
+├── guild-global-research-agent.md    # think, external context integration
+├── guild-specification-agent.md      # think-harder, documentation focus
+├── guild-verification-agent.md       # think, validation and testing
+└── [technology-engineers]/           # think, implementation focus
+    ├── guild-frontend-engineer.md
+    ├── guild-backend-engineer.md
+    └── guild-database-engineer.md
+```
+
+**Standalone Specialist Agents**: `.claude/agents/`
+```
+.claude/agents/
+├── security-analyst-agent.md         # think-harder, security analysis
+├── performance-engineer-agent.md     # think-harder, optimization
+├── accessibility-auditor-agent.md    # think, compliance validation
+└── [other-specialists].md            # appropriate thinking modes
+```
+
+**Benefits of Separation**:
+- Clear distinction between guild system agents and standalone specialists
+- Better organization and discoverability of agent types
+- Namespace isolation to prevent conflicts
+- Easier management of agent roles and thinking mode configurations
+
+## Technology Detection and Engineer Creation
+
+### Pattern-Based Agent Generation
+
+Engineers are created based on detected technology patterns with context awareness:
+
+```yaml
+Detection Process:
+  1. Scan project structure and configuration files
+  2. Identify technology patterns and relationships
+  3. Generate appropriate engineers with context optimization
+  4. Configure thinking modes based on complexity requirements
+  5. Set up context handoff protocols between agents
+
+Technology Categories:
+  Frontend Patterns:
+    - Component frameworks (React, Vue, Angular) → UI engineers with component context
+    - State management (Redux, Vuex, Pinia) → State context integration
+    - Routing libraries → Navigation context optimization
+    
+  Backend Patterns:  
+    - API frameworks (Express, FastAPI, Spring) → Backend engineers with service context
+    - ORM/Database libraries → Data context management
+    - Authentication systems → Security context integration
+    
+  Testing Patterns:
+    - Test frameworks (Jest, Pytest, JUnit) → QA engineers with test context
+    - Coverage tools → Quality metrics context
+    - Integration testing → End-to-end context management
+```
+
+### Natural Technology Coupling
+
+**Correct Coupling with Context Engineering**:
+```yaml
+guild-react-engineer:
+  Technologies:
+    - React components and hooks
+    - React Router navigation
+    - React Testing Library
+    - React Developer Tools
+  Context Specialization:
+    - Component lifecycle context
+    - State management context
+    - Routing and navigation context
+    - Testing and debugging context
+```
+
+## Advanced Agent Communication
+
+### Structured Context Handoff Protocol
+
+```xml
+<agent-handoff>
+  <metadata>
+    <from-agent>guild-planning-agent</from-agent>
+    <to-agent>guild-frontend-engineer</to-agent>
+    <handoff-type>implementation</handoff-type>
+    <priority>critical</priority>
+  </metadata>
+  
+  <executive-summary>
+    Frontend implementation for user dashboard with responsive design, 
+    authentication integration, and real-time data updates.
+  </executive-summary>
+  
+  <structured-context>
+    <requirements>
+      - Responsive dashboard layout with mobile-first approach
+      - JWT-based authentication with automatic token refresh
+      - Real-time WebSocket integration for live data updates
+      - Accessibility compliance (WCAG 2.1 AA)
+    </requirements>
+    
+    <technical-constraints>
+      - React 18 with TypeScript
+      - Styled-components for styling
+      - React Query for data fetching
+      - Socket.io for WebSocket connections
+    </technical-constraints>
+    
+    <implementation-strategy>
+      1. Create responsive layout components
+      2. Implement authentication context and hooks
+      3. Set up WebSocket connection management
+      4. Add accessibility features and testing
+    </implementation-strategy>
+  </structured-context>
+  
+  <validation-criteria>
+    - All components render correctly on mobile, tablet, desktop
+    - Authentication flow works with token refresh
+    - Real-time updates display without page refresh
+    - Passes accessibility audit with automated tools
+  </validation-criteria>
+</agent-handoff>
+```
+
+### Error Handling and Recovery
+
+```yaml
+Context Transfer Failures:
+  incomplete_context: Request clarification from source agent
+  oversized_context: Apply compression and request executive summary
+  invalid_format: Return to source agent with format requirements
+  
+Implementation Failures:
+  requirement_unclear: Escalate to reasoning agent for clarification
+  technical_constraint: Return to planning agent for approach revision  
+  quality_gate_failure: Engage verification agent for resolution strategy
+  
+Communication Failures:
+  timeout: Retry with exponential backoff
+  agent_unavailable: Route to backup agent or sequential fallback
+  resource_exhaustion: Request planning agent for resource reallocation
+```
+
+## Performance Optimization
+
+### Agent-Level Optimizations
+
+**Context Engineering Performance**:
+- **Reference-Based Linking**: Use file:line citations instead of content duplication
+- **Progressive Detail Building**: Start with summaries, expand based on agent requests
+- **Context Compression**: Hierarchical summarization with drill-down capability
+- **Automatic Pruning**: Remove outdated or irrelevant context information
+
+**Thinking Mode Optimization**:
+- **Appropriate Cognitive Load**: Match thinking complexity to task requirements
+- **Parallel Execution**: Use standard thinking for parallel tasks to optimize resources
+- **Strategic Thinking Placement**: Reserve ultrathink for critical decision points
+- **Context-Driven Thinking**: Adjust thinking modes based on context complexity
+
+### System-Level Optimizations
+
+```yaml
+Context Management:
+  - Multi-level context caching with intelligent expiration
+  - Context pooling for similar tasks and shared information
+  - Predictive context loading based on workflow patterns
+  - Context synchronization for parallel agent execution
+  
+Agent Coordination:
+  - Agent pooling and reuse across similar tasks
+  - Batch processing for related context packages
+  - Load balancing across available agent instances
+  - Resource management with graceful degradation
+```
+
+## Custom Agent Creation
+
+### Advanced Custom Agent Template
+
+```yaml
+---
+name: custom-specialist-agent
+role: domain-specific-expertise
+approach: specialized-methodology
+scope: clear-operational-boundaries
+self_contained: true
+thinking_mode: think-harder
+context_optimization: enabled
+---
+
+## Role Description
+Expert in {domain} with focus on {specific areas}. Treats each task like a new
+employee situation requiring comprehensive context and explicit instructions.
+
+## Enhanced Thinking Mode
+**think-harder** - Multi-stage analysis with assumption challenging for {domain}
+specific problems, including exploration of alternative approaches and thorough
+validation of constraints and requirements.
+
+## Context Management
+- Input: Structured context packages with {domain}-specific requirements
+- Output: {Domain} analysis with implementation guidance and quality criteria
+- Optimization: Context compression focused on {domain} relevance and patterns
+
+## Integration Guidelines
+- Activation triggers: {Keywords and task patterns for automatic activation}
+- Collaboration patterns: How to work effectively with other agents
+- Handoff protocols: Context transfer specifications and validation requirements
+
+## Domain Expertise
+- Core competencies: {List of specific skills and knowledge areas}
+- Methodologies: {Standard approaches and best practices}
+- Quality standards: {Success criteria and validation requirements}
+```
+
+## Best Practices
+
+### Context Engineering Excellence
+
+1. **Structure All Handoffs**: Use XML-tagged context packages with clear priority levels
+2. **Progressive Context Building**: Start with summaries, expand detail as implementation needs require
+3. **Reference-Based Optimization**: Use file:line references instead of content duplication
+4. **Validation Checkpoints**: Ensure context completeness before proceeding to implementation
+
+### Thinking Mode Integration
+
+1. **Strategic Placement**: Use ultrathink for high-level planning and architecture decisions
+2. **Analytical Focus**: Use think-harder for specification analysis and complex problem solving  
+3. **Efficient Execution**: Use standard think for implementation and routine validation tasks
+4. **Context-Driven Selection**: Adjust thinking modes based on context complexity and requirements
+
+### Agent Design Principles
+
+1. **Keep Agents Thin**: Metadata and thinking modes only, no implementation logic
+2. **Clear Role Boundaries**: Distinguish context-only vs implementation capabilities clearly
+3. **Structured Communication**: All agent-to-agent communication follows handoff protocols
+4. **Natural Coupling**: Respect technology relationships and workflow dependencies
+5. **Context Optimization**: Filter, compress, and structure all information transfer
+
+## Summary
+
+Guild agents achieve sophisticated workflow orchestration through:
+
+- **Advanced thin architecture** with integrated thinking modes and context engineering
+- **Clear agent classification** between context-only and implementation roles
+- **Structured communication** with XML-tagged handoff protocols and validation checkpoints
+- **Cognitive resource optimization** through appropriate thinking mode assignment
+- **Technology-aware coupling** that respects natural workflow relationships
+- **Performance optimization** through context engineering and intelligent resource allocation
+
+This creates a **comprehensive agent ecosystem** that combines the simplicity of thin agents with the power of advanced context management and structured reasoning systems.

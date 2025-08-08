@@ -5,9 +5,9 @@
 Claude Guild follows these core architectural principles:
 
 ### 1. Simplicity Over Complexity
-- **Thin agents**: Metadata-only definitions (<10 lines)
-- **Centralized processes**: All logic in one place
-- **Clear separation**: Each layer has single responsibility
+- **Thin agents**: Metadata-only definitions (<20 lines) with integrated thinking modes
+- **Centralized processes**: All logic in one place with context optimization
+- **Clear separation**: Each layer has single responsibility with structured handoffs
 - **Minimal configuration**: Sensible defaults, override when needed
 
 ### 2. Technology Agnostic
@@ -18,9 +18,20 @@ Claude Guild follows these core architectural principles:
 
 ### 3. Performance First
 - **Parallel by default**: Concurrent execution when possible
-- **Context optimization**: Smart filtering and compression
-- **Streaming pipelines**: Continuous flow, no blocking
-- **Adaptive strategies**: Dynamic adjustment based on conditions
+- **Context optimization**: Smart filtering and compression with XML structuring
+- **Streaming pipelines**: Continuous flow with progressive context building
+- **Adaptive strategies**: Dynamic adjustment based on conditions and thinking modes
+
+### 4. Context Engineering Excellence
+- **Long-context optimization**: Reference-based linking and hierarchical summarization
+- **Structured handoffs**: XML-tagged context transfer between agents
+- **Progressive detail**: Start with summaries, expand as needed
+- **Intelligent compression**: Automatic relevance filtering and context pruning
+
+### 5. Cognitive Resource Allocation
+- **Thinking mode integration**: Strategic use of enhanced reasoning capabilities
+- **Chain-of-thought reasoning**: Structured problem decomposition
+- **Appropriate cognitive load**: Match thinking complexity to task requirements
 
 ## Four-Layer Architecture
 
@@ -94,15 +105,30 @@ Claude Guild follows these core architectural principles:
 
 ### Thin Agent Design
 
+**Design Philosophy**: Agents are metadata-only (<20 lines) that reference centralized processes with integrated thinking modes
+
 ```yaml
-# Agent Definition (Metadata Only)
+# Agent Definition (Enhanced with Context Engineering)
 ---
 name: unique-identifier
 role: primary-function
 processes: [process-references]
 scope: operational-boundary
 parallel: true/false
+thinking_mode: think|think-harder|ultrathink
+context_optimization: enabled
 ---
+
+## Role Description
+{Clear, specific role definition following "new employee with amnesia" principle}
+
+## Enhanced Thinking Mode  
+**{thinking_mode}** - {Specific reasoning requirements and chain-of-thought guidance}
+
+## Context Management
+- Input: {Expected context structure and requirements}
+- Output: {Generated context format and handoff protocols}
+- Optimization: {Context compression and transfer strategies}
 ```
 
 ### Agent Lifecycle

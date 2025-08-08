@@ -1,500 +1,311 @@
 # Claude Guild System Specification
 
-## Executive Summary
+**Executive Summary and Navigation Guide**
+
+## Quick Start
 
 Claude Guild is a **workflow orchestration system** for Claude Code that provides:
-- Thin agent architecture with centralized processes
-- Intelligent task routing and parallel execution
-- Configuration-driven customization
-- Technology-agnostic implementation
+- **Thin agent architecture** with centralized processes
+- **Advanced context engineering** for long-context optimization  
+- **Intelligent task routing** and parallel execution
+- **Chain-of-thought reasoning** integration
+- **Configuration-driven customization**
+- **Technology-agnostic** implementation
 
-## Core Architecture
+## Architecture Overview
 
-### Four-Layer System
+**Four-Layer System**: `Commands → Processes → Agents → Configuration`
 
-```
-Commands → Processes → Agents → Configuration
-```
+Each layer has a single responsibility with integrated context engineering and thinking mode optimization for efficient workflow execution.
 
-Each layer has a single responsibility:
-- **Commands**: Orchestrate workflows
-- **Processes**: Define execution logic
-- **Agents**: Provide metadata and roles
-- **Configuration**: Customize behavior
+**📋 Complete Architecture Details**: See [docs/architecture.md](./docs/architecture.md)
 
-### Key Principles
+## Core Components
 
-1. **Technology Agnostic**: Work with any stack
-2. **Configuration Over Code**: Customize through config
-3. **Thin Architecture**: Minimal agent definitions
-4. **Process Reuse**: Centralized logic
-5. **Adaptive Execution**: Respond to conditions
+### Context Engineering
+Advanced context management with XML-structured packages, progressive detail building, and long-context optimization.
 
-## Workflow System
+**📋 Complete Context Engineering Guide**: See [docs/context-engineering.md](./docs/context-engineering.md)
 
-### Execution Stages
+### Thinking Mode Configuration
+**Optional** cognitive resource allocation system allowing user customization of thinking modes through prefilled instructions.md configuration. Supports ultrathink/think-harder/think patterns based on user preferences.
 
+**📋 Complete Thinking Modes Configuration**: See [docs/thinking-modes.md](./docs/thinking-modes.md)
+
+### Workflow Orchestration
+Multi-stage workflow patterns with flag system, parallel execution, and specification-driven development support.
+
+**📋 Complete Workflow Documentation**: See [docs/workflows.md](./docs/workflows.md)
+
+### Agent System
+Thin metadata agents with context-only vs implementation classification, structured handoff protocols, and technology-specific specialization.
+
+**📋 Complete Agent Specifications**: See [docs/agents.md](./docs/agents.md)
+
+### Configuration System
+Hierarchical configuration with optionality-first design, maintaining user control through thin instruction mechanics and priority-based behavior modification.
+
+**Instructions Mechanic Priority Hierarchy**:
 ```yaml
-Core Workflow:
-  1. Analysis: Understand task requirements (context-only)
-  2. Research: Gather context (dual-phase, context-only)
-  3. Planning: Route to appropriate agents (context-only)
-  4. Implementation: Execute task (changes allowed)
-  5. Validation: Verify results (changes allowed)
+Priority Order (Highest to Lowest):
+  1. User Prompts: Direct user requests override all system behavior
+  2. Instructions.md: Optional user customization (thin configuration)
+  3. Default Prompts: System defaults (lowest priority)
 
-Specification-Driven Workflow (--spec flag):
-  1. Analysis: Understand task requirements (context-only)
-  2. Spec Analysis: Analyze current specifications (context-only)
-  3. Spec Update: Update relevant specifications (spec changes only)
-  4. Research: Gather implementation context (context-only)
-  5. Planning: Create implementation strategy (context-only)
-  6. Implementation: Execute based on updated specs (changes allowed)
-  7. Validation: Verify against updated specifications (changes allowed)
-
-Context-Only Stages:
-  - Create comprehensive context for implementation agents
-  - Update specifications and documentation (spec agent only)
-  - No direct code implementation changes
-  - Focus on analysis, research, planning, and specification maintenance
-  - Output structured context packages for implementers
-
-Implementation Stages:
-  - Receive context from context-only agents
-  - Execute actual code changes and file modifications  
-  - Create tests, documentation, and refactoring
-  - Validate results against context and specification requirements
+Optionality Principle:
+  - Instructions.md contains ONLY optional user requirements
+  - Default system behavior remains intact when instructions.md is empty
+  - User always maintains full control through direct prompts
+  - Thin configuration prevents overwhelming complexity
 ```
 
-### Dual-Phase Research
-
-**Strategic (30%)**: Quick overview before planning
-**Tactical (70%)**: Targeted investigation after planning
-
-This prevents unnecessary context gathering and improves efficiency.
-
-### Command System
-
+**Mandatory Default Thinking Modes**:
 ```yaml
-Base: /guild [flags] "task"
-
-Flags:
-  --no-reason    # Skip analysis
-  --no-plan      # Skip planning
-  --no-implement # Planning only
-  --refactor     # Code improvement
-  --test         # Add testing
-  --verify       # Validate results
-  --full         # Comprehensive workflow (--verify + --test + --refactor)
-  --spec         # Specification-driven mode (update specs first, then implement)
-  --project      # Project-wide scope
-
-Specialized Commands:
-  /guild:setup [--standalone]  # Initialize agents
-  /guild:fix                   # Bug fixing
-  /guild:plan                  # Planning only
-  /guild:spec                  # Specifications
-```
-
-## Agent Architecture
-
-### Thin Agents
-
-Agents are metadata-only (<10 lines) that reference processes:
-
-```yaml
----
-name: agent-identifier
-role: primary-function
-processes: [process-references]
-scope: operational-boundary
-parallel: true/false
----
-```
-
-### Core Agent Types
-
-#### Context-Only Agents (Non-Changing)
-- **Reasoning**: Task analysis, clarification, and requirement understanding - **NEVER makes changes, only creates context**
-- **Planning**: Workflow coordination, routing, and strategic planning - **NEVER makes changes, only creates context**
-- **Research**: Context gathering (project/global scope) - **NEVER makes changes, only creates context**
-- **Specification**: Documentation analysis and specification updates - **NEVER makes implementation changes, only updates specifications**
-
-#### Implementation Agents (Changing)
-- **Implementation**: Task execution specialists that make actual code changes
-- **Verification**: Quality validation and testing execution
-
-### Standalone Agents
-
-Self-contained agents for specific domains:
-
-```yaml
----
-name: standalone-agent
-role: domain-specialist
-approach: methodology
-scope: boundaries
-self_contained: true
----
-```
-
-### Thinking Mode Integration
-
-Agents can be configured with enhanced thinking modes through keyword integration:
-
-**Keywords**:
-- **think**: Standard enhanced analytical thinking
-- **ultrathink**: Maximum strategic analysis with comprehensive evaluation
-- **think-harder**: Multi-stage analysis with assumption challenging
-
-**Integration Pattern**:
-When agents require enhanced thinking, the appropriate keyword is added at the end of their definition:
-```yaml
----
-name: guild-reasoning-agent
-role: task-analysis-specialist
-processes: [analysis-processes]
-scope: requirement-understanding
----
-
-## Enhanced Thinking Mode
-**ultrathink** - Maximum strategic depth for complex requirement analysis
-```
-
-**Usage Guidelines**:
-- Reasoning agents often benefit from "think-harder" or "ultrathink" modes
-- Planning agents typically use "ultrathink" for comprehensive strategy
-- Specification agents use "think-harder" for thorough specification analysis
-- Research agents use standard thinking unless complex analysis needed
-- Implementation agents use standard thinking for efficient execution
-
-#### Agent Placement
-
-Guild agents are organized in a structured directory hierarchy:
-
-- **Standard Guild agents**: `.claude/agents/guild/` - Core guild system agents (reasoning, planning, research, verification, engineers)
-- **Standalone specialists**: `.claude/agents/` - Self-contained domain specialists that operate independently
-
-This separation ensures:
-- Clear distinction between guild system agents and standalone specialists
-- Better organization and discoverability
-- Namespace isolation to prevent conflicts
-- Easier management of agent types
-
-## Process System
-
-### Process Structure
-
-```yaml
-process: name
-  description: purpose
-  inputs: [required-data]
-  steps: [execution-actions]
-  outputs: [produced-results]
-  parallel: true/false
-  error_handling: strategy
-```
-
-### Core Process Types
-
-- **Analysis**: Task understanding and clarification
-- **Research**: Information gathering and synthesis
-- **Planning**: Execution strategy and routing
-- **Implementation**: Code changes and creation
-- **Validation**: Testing and verification
-
-## Routing Intelligence
-
-### Task Classification
-
-```yaml
-Complexity Assessment:
-  Simple: Single agent, linear execution
-  Medium: Multiple agents, coordination needed
-  Complex: Many agents, parallel execution
-
-Routing Factors:
-  - Task complexity
-  - Required capabilities
-  - Resource availability
-  - Parallelization potential
-```
-
-### Execution Strategies
-
-1. **Sequential**: One agent at a time
-2. **Parallel**: Multiple independent agents  
-3. **Pipeline**: Overlapping stages
-4. **Hybrid**: Mixed strategies
-5. **Comprehensive**: Full workflow execution (--full flag)
-
-#### --full Flag Execution Pattern
-
-The --full flag triggers comprehensive workflow execution:
-```yaml
---full Flag Stages:
-  1. Analysis: Reasoning agent (context-only)
-  2. Research: Research agents (context-only) 
-  3. Planning: Planning agent (context-only)
-  4. Implementation: Implementation agents (changes)
-  5. Testing: Test creation and validation (changes)
-  6. Verification: Quality validation (changes)
-  7. Refactoring: Code optimization (changes)
-
-Execution Order:
-  Context-Only → Implementation → Quality Assurance
-```
-
-#### --spec Flag Specification-Driven Pattern
-
-The --spec flag triggers specification-first development workflow:
-```yaml
---spec Flag Execution Pattern:
-  1. Analysis: Reasoning agent (context-only)
-  2. Specification Analysis: Spec agent analyzes current specs (context-only)
-  3. Specification Update: Spec agent updates relevant specifications (spec changes only)
-  4. Research: Research agents gather implementation context (context-only)
-  5. Planning: Planning agent creates implementation strategy (context-only)
-  6. Implementation: Implementation agents execute based on updated specs (changes)
-
-Key Principles:
-  - Specifications updated BEFORE implementation
-  - Documentation-driven development enforced
-  - Spec agent uses "think-harder" mode for thorough analysis
-  - Ensures specs remain current with implementation
-
-Specification Scope:
-  - API documentation and interfaces
-  - Technical specifications and requirements
-  - Architecture decisions and design docs
-  - User stories and acceptance criteria
-  - Testing specifications and contracts
-```
-
-## Context Management
-
-### Context Lifecycle
-
-```yaml
-Flow: Generation → Transfer → Usage → Decay → Removal
-
-Optimization:
-  - Filter by relevance
-  - Compress verbose data
-  - Cache frequently used
-  - Decay outdated info
-```
-
-### Transfer Protocol
-
-```yaml
-Priority Levels:
-  Critical: Essential for task
-  Important: Significantly helps
-  Supplementary: Nice to have
-
-Format:
-  - Executive summary
-  - Key points
-  - Detailed context (on-demand)
-  - References
-```
-
-## Planning Framework
-
-### Distributed Planning
-
-Three-tier hierarchy prevents bottlenecks:
-
-```yaml
-Strategic: High-level decomposition (planning agent)
-Tactical: Implementation approach (specialists)
-Micro: Immediate decisions (all agents)
-```
-
-### Task Decomposition
-
-Atomic tasks should be:
-- Single responsibility
-- Clear input/output
-- Independently testable
-- Parallelizable when possible
-
-## Performance Optimization
-
-### Core Strategies
-
-```yaml
-Optimization Techniques:
-  Caching: Multi-level hierarchy
-  Compression: Context reduction
-  Parallelization: Concurrent execution
-  Prediction: Anticipate bottlenecks
-  Streaming: Continuous flow
-```
-
-### Adaptive Execution
-
-Dynamic adjustment based on:
-- System load
-- Task complexity
-- Available resources
-- Historical patterns
-
-## Configuration
-
-### Configuration Hierarchy
-
-```yaml
-Levels: Defaults → Project → Runtime
-
-Schema:
-  models:
-    reasoning: model-choice
-    planning: model-choice
-    implementation: model-choice
+Required Prefilled Configuration:
+  guild-planning-agent:
+    thinking_mode: ultrathink
+    model: opus
     
-  parallel:
-    enabled: boolean
-    max_agents: number
-    
-  routing:
-    preferences: custom-rules
-    overrides: specific-cases
+All Other Agents:
+  thinking_mode: think (default)
+  model: inherited from Claude Code
 ```
 
-## Setup Process
+**📋 Complete Configuration Guide**: See [docs/configuration.md](./docs/configuration.md)
 
-### Technology Detection
+## Key Workflow Patterns
 
-Pattern-based detection (not framework-specific):
-
+### Standard Workflow
 ```yaml
-Detection Categories:
-  Frontend: UI component patterns
-  Backend: Server architecture patterns
-  Database: Data persistence patterns
-  Testing: Quality assurance patterns
-  DevOps: Deployment patterns
+Analysis → Research → Planning → Implementation → Validation
 ```
 
-### Agent Generation
+### --full Flag (Comprehensive Development)
+```yaml  
+Analysis → Research → Planning → Implementation → Testing → Verification → Refactoring
+```
 
-Create agents based on detected patterns:
-- Component patterns → UI engineers
-- API patterns → Backend engineers
-- Data patterns → Database engineers
-- Test patterns → QA engineers
+### --spec Flag (Documentation-First)
+```yaml
+Analysis → Spec Analysis → Spec Update → Research → Planning → Implementation → Validation
+```
 
-#### Generated Files Structure
+## Agent Classification
 
-**Standard Mode**:
+### Context-Only Agents (Never make changes)
+- **guild-reasoning-agent**: Requirement analysis and task understanding
+- **guild-planning-agent**: Strategic workflow coordination and routing  
+- **guild-research-agents**: Context gathering and information synthesis
+- **guild-specification-agent**: Documentation analysis and spec updates
+
+### Implementation Agents (Make changes)
+- **guild-verification-agent**: Quality validation and testing execution
+- **Technology engineers**: Domain-specific implementation specialists
+
+**📋 Complete Agent Details**: See [docs/agents.md](./docs/agents.md)
+
+## Context Transfer Protocol
+
+All agent-to-agent communication follows structured XML handoff templates:
+
+```xml
+<context-handoff>
+  <executive-summary>Key decisions and requirements</executive-summary>
+  <structured-context>Technical and business constraints</structured-context>
+  <implementation-package>Step-by-step guidance and validation criteria</implementation-package>
+  <quality-gates>Success criteria and escalation triggers</quality-gates>
+</context-handoff>
+```
+
+**📋 Complete Context Engineering**: See [docs/context-engineering.md](./docs/context-engineering.md)
+
+## Command System
+
+### Base Command
+`/guild [flags] "task"`
+
+### Key Flags
+- **--full**: Complete development lifecycle (7 stages)
+- **--spec**: Documentation-first development
+- **--project**: Project-wide scope
+- **--no-reason/--no-plan**: Disable specific stages
+- **--refactor/--test/--verify**: Enable optional stages
+
+### Specialized Commands  
+- `/guild:setup [--standalone]`: Initialize system and agents
+- `/guild:fix`: Bug fixing workflow with root cause analysis
+- `/guild:plan`: Planning-only workflow
+- `/guild:spec`: Specification management
+
+**📋 Complete Workflow Details**: See [docs/workflows.md](./docs/workflows.md)
+
+## Setup and Installation
+
+### NPM Installation
+```bash
+npx claude-guild@latest
+```
+
+### Generated Structure
 ```
 .guild/
-├── instructions.md    # User configuration
-├── overview.md       # System reference
+├── instructions.md    # Project configuration
+├── overview.md       # System reference  
 ├── agents.md         # Agent templates
 └── ignore.md         # File patterns
 
 .claude/agents/guild/
-├── guild-reasoning-agent.md
-├── guild-planning-agent.md
-├── guild-project-researcher.md
-├── guild-global-researcher.md
-├── guild-verification-agent.md
-└── [pattern-specific-engineers].md
+├── guild-reasoning-agent.md      # Context generation
+├── guild-planning-agent.md       # Strategy development
+├── guild-specification-agent.md  # Documentation analysis
+├── guild-verification-agent.md   # Validation
+└── [technology-engineers].md     # Implementation
 ```
 
-**Standalone Mode** (`--standalone`):
-```
-.claude/agents/
-├── security-analyst-agent.md
-├── performance-engineer-agent.md
-├── accessibility-auditor-agent.md
-└── [other-specialists].md
-```
+## Performance and Optimization
 
-## Extensibility
+**Context Engineering Optimizations**:
+- Reference-based linking (file:line citations)
+- Progressive detail building 
+- Hierarchical summarization
+- Automatic context pruning
+
+**Thinking Mode Optimizations**:
+- User-configurable thinking modes through instructions.md
+- Optional cognitive enhancement based on task complexity
+- Customizable reasoning strategies for different workflows
+
+**Execution Optimizations**:
+- Parallel agent execution with context synchronization
+- Adaptive workflow routing based on task complexity
+- Context caching and compression
+
+**📋 Complete Performance Guide**: See [docs/performance.md](./docs/performance.md)
+
+## Extension and Customization
+
+### Configuration Hierarchy
+`Defaults → Project (.guild/instructions.md) → Runtime (flags)`
 
 ### Extension Points
+- Custom processes in workflow logic
+- Specialized agents for domain expertise
+- Custom commands for workflow patterns  
+- Plugin architecture for community extensions
 
+### Standalone Agent System
+
+**Self-Contained Specialists**: Independent agents that operate without .guild system infrastructure while providing focused expertise in specific domains.
+
+**Key Characteristics**:
 ```yaml
-Custom Elements:
-  Processes: New workflow logic
-  Agents: Specialized roles
-  Commands: Custom workflows
-  Routing: Advanced rules
-  Patterns: Enhancement templates
+standalone_agents:
+  design: self_contained
+  dependencies: none
+  activation: automatic_based_on_keywords
+  integration: seamless_with_claude_code
+  specialization: domain_specific_expertise
 ```
 
-### Plugin Architecture
+**Available Specialists**:
+- **security-analyst-agent**: OWASP compliance, vulnerability assessment, authentication analysis
+- **accessibility-auditor-agent**: WCAG 2.1 AA compliance, ARIA implementation, screen reader compatibility  
+- **performance-engineer-agent**: Performance profiling, database optimization, caching strategies
+- **code-reviewer-agent**: Code quality analysis, refactoring, best practices enforcement
+- **documentation-writer-agent**: Technical documentation, API docs, user guides
+- **api-architect-agent**: API design patterns, REST/GraphQL architecture, integration strategies
+- **deployment-engineer-agent**: CI/CD optimization, deployment strategies, infrastructure as code
+- **testing-strategist-agent**: Test strategy development, automation, quality assurance
 
+**Usage Pattern**:
 ```yaml
-Plugin Structure:
-  metadata: Description and requirements
-  processes: Logic definitions
-  agents: Role templates
-  integration: Setup instructions
+activation: automatic
+triggers: [security, performance, accessibility, testing, documentation, deployment]
+integration: works_with_all_claude_code_commands
+scope: specialist_domains_only
 ```
 
-## System Structure
+**📋 Complete Configuration Details**: See [docs/configuration.md](./docs/configuration.md)
+**📋 Complete Extensibility Guide**: See [docs/extensibility.md](./docs/extensibility.md)
 
-```
-claude-guild/
-├── templates/           # Core templates
-│   ├── processes.md    # Workflow logic
-│   ├── routing.md      # Task routing
-│   ├── agents.md       # Agent templates
-│   └── instructions.md # Default config
-├── commands/           # Command definitions
-├── docs/              # Documentation
-└── install.js         # NPM installer
-```
+## Key Differentiators
 
-## Documentation
-
-Core documentation in `/docs`:
-- **getting-started.md**: Installation, usage, and setup
-- **architecture.md**: Complete system architecture
-- **agents.md**: Agent specifications and design
-- **performance.md**: Optimization strategies
-- **development.md**: Contributing guidelines
-- **extensibility.md**: Customization and plugins
+- **Advanced context engineering** with XML-structured packages and long-context optimization
+- **Integrated thinking modes** for appropriate cognitive resource allocation
+- **Structured agent communication** with validation checkpoints and quality gates  
+- **Documentation-first development** with specification-driven workflows
+- **Technology-agnostic design** with pattern-based detection and universal workflows
 
 ## Success Metrics
 
-- **Efficiency**: 50-70% performance improvement
-- **Flexibility**: Works with any technology
-- **Maintainability**: Simple, clear structure
-- **Scalability**: Grows with project needs
-- **Adoption**: Quick learning curve
+- **50-70% performance improvement** through context optimization and parallel execution
+- **Enhanced reasoning quality** with appropriate thinking mode selection
+- **Efficient agent communication** with structured handoff protocols
+- **Technology stack flexibility** with universal workflow patterns
+- **Scalable complexity management** through progressive context building
 
-## Implementation Guidelines
+## Documentation Index
 
-### Best Practices
+### Core Documentation
+- **[Architecture](./docs/architecture.md)**: Complete system architecture and design philosophy
+- **[Context Engineering](./docs/context-engineering.md)**: Advanced context management and optimization  
+- **[Thinking Modes](./docs/thinking-modes.md)**: Chain-of-thought reasoning and cognitive resource allocation
+- **[Workflows](./docs/workflows.md)**: Execution patterns, stages, and flag system
+- **[Agents](./docs/agents.md)**: Agent specifications, types, and communication protocols
+- **[Configuration](./docs/configuration.md)**: Setup, customization, and performance tuning
 
-1. Keep agents thin - metadata only
-2. Centralize logic in processes
-3. Use patterns, not specific technologies
-4. Optimize for parallel execution
-5. Monitor and adapt performance
+### Additional Documentation  
+- **[Getting Started](./docs/getting-started.md)**: Installation, setup, and first usage
+- **[Performance](./docs/performance.md)**: Optimization strategies and monitoring
+- **[Development](./docs/development.md)**: Contributing guidelines and development workflow
+- **[Extensibility](./docs/extensibility.md)**: Customization, plugins, and extension patterns
 
-### Common Patterns
+---
 
+## Development Guidelines
+
+**⚠️ CRITICAL WORKFLOW ORDER - MUST FOLLOW:**
+
+1. **FIRST: Update GUIDELINE.md** - This specification defines system behavior
+2. **SECOND: Update Templates** - Reflect specification in implementation templates  
+3. **THIRD: Update Commands** - Ensure commands use updated templates properly
+
+**NEVER** modify `.guild/`, `.serena/`, or `.claude/` directories directly - these are generated from templates.
+
+### Template Management Rules (CRITICAL)
+
+**Template Architecture Principle**: 
+Templates must contain **ONLY** content needed for inline embedding into setup commands. Templates are embedded during development and NOT shipped in NPM packages.
+
+**Required Templates** (Must Keep):
+- `templates/instructions.md` - User configuration template
+- `templates/overview.md` - Process definitions and workflow steps
+- `templates/agents.md` - Agent creation templates  
+- `templates/ignore.md` - File exclusion patterns
+
+**Template Content Requirements**:
 ```yaml
-Simple Task: Direct routing to single specialist
-Feature Development: Parallel UI/API/DB work
-Bug Fix: Sequential investigation and repair
-Refactoring: Distributed code improvement
-Testing: Parallel test generation and execution
+Content Policy:
+  Include: Only content referenced by .guild/ system or commands
+  Exclude: Experimental features, unused mechanisms, development artifacts
+  
+Process:
+  1. Templates embedded into commands/setup.md during development
+  2. Setup command becomes self-contained during NPM packaging
+  3. Templates directory not shipped with package
+  
+Validation:
+  - Every template file must be referenced by Guild commands
+  - Unused templates create package bloat without benefit
+  - All valuable mechanisms belong in GUIDELINE.md documentation
 ```
 
-## Conclusion
+**Template Cleanup Protocol**:
+1. **Extract valuable mechanisms** - Move useful processes/patterns to GUIDELINE.md
+2. **Remove unused templates** - Delete files not referenced by commands
+3. **Validate embedding** - Ensure setup command contains all needed content
+4. **Test package** - Verify NPM package works without templates directory
 
-Claude Guild provides a streamlined, technology-agnostic workflow system that:
-- Simplifies complex orchestration
-- Adapts to any technology stack
-- Scales with project complexity
-- Maintains clean architecture
-- Optimizes performance automatically
+---
 
-The system achieves power through simplicity, not complexity.
+This specification provides the foundation for a **comprehensive development ecosystem** that combines thin agent simplicity with advanced context management and structured reasoning systems.
