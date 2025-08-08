@@ -42,8 +42,8 @@ function runCommand(command, options = {}) {
 }
 
 async function main() {
-    // Prevent recursive calls during npm publish process
-    if (process.env.npm_lifecycle_event === 'prepublishOnly' || process.env.npm_lifecycle_event === 'publish') {
+    // Only prevent recursion during actual npm publish, not our custom script
+    if (process.env.npm_lifecycle_event === 'prepublishOnly' && process.env.npm_command === 'publish') {
         log.info('🔄 Detected npm publish lifecycle - exiting to avoid recursion');
         return;
     }
