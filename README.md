@@ -43,13 +43,8 @@ Claude Guild is a **comprehensive workflow orchestration system** for [Claude Co
 **Best For**: Complex projects requiring systematic development workflows
 
 ```bash
-# Install and set up complete Guild system
+# Install and set up complete Guild commands to selected path
 npx claude-guild@latest
-
-# Creates specialized engineers for your tech stack:
-# - React + TypeScript → guild-react-component-engineer
-# - Express + PostgreSQL → guild-express-api-engineer + guild-postgres-engineer  
-# - Next.js + Tailwind → guild-nextjs-engineer + guild-tailwind-engineer
 ```
 
 **Main Workflow Commands**:
@@ -73,7 +68,7 @@ npx claude-guild@latest
 
 ```bash
 # Install standalone specialist agents
-npx claude-guild@latest --standalone
+/guild:setup --standalone
 
 # Automatically creates domain-specific specialists:
 # - security-analyst-agent (OWASP, vulnerability assessment)
