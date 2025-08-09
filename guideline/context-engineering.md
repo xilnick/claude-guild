@@ -166,9 +166,9 @@ Decay Phase:
     </requirements>
     
     <technical-constraints>
-      - Must integrate with existing Express.js API
-      - PostgreSQL database with existing user table
-      - Redis for session management
+      - Must integrate with existing backend API
+      - Database with existing user table
+      - In-memory cache for session management
       - TypeScript throughout
     </technical-constraints>
     

@@ -19,7 +19,7 @@ Perform comprehensive project analysis:
 ```yaml
 Technology Detection:
   - Scan package.json, requirements.txt, Cargo.toml, etc.
-  - Identify frameworks: React, Vue, Angular, Express, FastAPI, etc.
+  - Identify frameworks: frontend, backend, full-stack, CLI, etc.
   - Analyze architectural patterns: CLI, API, full-stack, package
   - Detect testing frameworks: Jest, Pytest, Cargo test, etc.
   - Identify development tools: TypeScript, ESLint, Docker, etc.
@@ -137,12 +137,12 @@ Package Development:
   Context: "[Specific packaging patterns and distribution requirements]"
   
 Frontend Applications:
-  Agent: guild-[framework]-engineer (React/Vue/Angular/etc.)
+  Agent: guild-frontend-engineer
   Specialization: "[Framework] development with [detected UI libraries]"
   Context: "[Specific component patterns and state management approaches]"
   
 Backend APIs:
-  Agent: guild-[framework]-api-engineer (Express/FastAPI/etc.)
+  Agent: guild-backend-api-engineer
   Specialization: "[Framework] API development with [detected patterns]"
   Context: "[Specific API patterns, middleware, and data handling]"
   
@@ -268,11 +268,11 @@ Standalone Agent Generation:
 
 ## Examples
 
-### React + Express Full-Stack
+### Frontend + Backend Full-Stack
 ```bash
 /guild:setup
-# Generates: React component engineer, Express API engineer, full-stack planning agent
-# Context: Understands React patterns, Express middleware, API-frontend coordination
+# Generates: Frontend component engineer, backend API engineer, full-stack planning agent
+# Context: Understands component patterns, API middleware, frontend-backend coordination
 ```
 
 ### Python CLI Tool  

@@ -20,7 +20,7 @@ Claude Guild is a **comprehensive workflow orchestration system** for [Claude Co
 - **🔨 Specialized Implementation**: Technology-specific engineers with deep domain knowledge
 - **✅ Quality Validation**: Systematic verification with testing and compliance checks
 
-**Universal Compatibility**: Works with any technology stack - from React/Node.js to Python/Django to Rust/WASM. Guild analyzes your project and creates appropriate specialists automatically.
+**Universal Compatibility**: Works with any technology stack - from frontend frameworks to backend APIs to systems programming. Guild analyzes your project and creates appropriate specialists automatically.
 
 ### Self-Contained Architecture (Primary Differentiator)
 
@@ -69,7 +69,7 @@ npx claude-guild@latest
 # Flag-only specialized modes
 /guild --fix "checkout process throwing errors on payment submission"
 /guild --plan "migrate from JavaScript to TypeScript across entire codebase" 
-/guild --research "Next.js 14 server components and data fetching patterns"
+/guild --research "modern server-side rendering patterns and data fetching strategies"
 /guild --spec "design REST API for user profile management"
 
 # Combined flag workflows  
@@ -210,7 +210,7 @@ The main `/guild` command supports specialized execution modes when specific fla
 **Comprehensive context gathering and analysis**:
 
 ```bash
-/guild --research "React 18 concurrent features and Suspense best practices"
+/guild --research "modern frontend framework patterns and performance optimization"
 # Executes: Analysis → Research (with detailed output to user)
 # Focus: Information gathering and context building for future tasks
 ```
@@ -385,8 +385,8 @@ custom_agents:
     activation_keywords: [analytics, tracking, events, metrics]
     
   - name: guild-mobile-engineer  
-    role: "React Native and mobile development"
-    specialization: "React Native, Expo, mobile UI/UX patterns"
+    role: "Mobile application development"
+    specialization: "Cross-platform mobile frameworks and native UI/UX patterns"
     activation_keywords: [mobile, react-native, expo, ios, android]
 ```
 
@@ -460,9 +460,9 @@ Guild uses a **sophisticated dual-agent architecture** with clear separation of 
   - Can make corrective changes based on validation results
 
 - **Technology Engineers**: Domain-specific implementation specialists
-  - **`guild-react-component-engineer`**: React patterns, hooks, state management
-  - **`guild-express-api-engineer`**: Express middleware, routing, authentication
-  - **`guild-postgres-engineer`**: Database schema, queries, performance optimization
+  - **`guild-frontend-component-engineer`**: Component patterns, state management, UI architecture
+  - **`guild-backend-api-engineer`**: API middleware, routing, authentication patterns
+  - **`guild-database-engineer`**: Schema design, queries, performance optimization
   - **Plus 20+ other technology-specific specialists**
 
 ### Context Engineering System
@@ -726,8 +726,8 @@ your-project/
 │   └── agents/guild/      # Specialized implementation engineers
 │       ├── guild-reasoning-agent.md      # Deep analysis specialist
 │       ├── guild-planning-agent.md       # Strategic coordination
-│       ├── guild-react-component-engineer.md  # React specialist
-│       ├── guild-express-api-engineer.md      # Express API specialist
+│       ├── guild-frontend-component-engineer.md  # Frontend framework specialist
+│       ├── guild-backend-api-engineer.md      # Backend API specialist
 │       └── [technology-specific engineers]
 │
 └── CLAUDE.md              # Project instructions updated with Guild integration
@@ -869,7 +869,7 @@ Guild uses a **sophisticated dual-agent architecture** with clear separation of 
 **Make actual modifications** - focused on execution:
 
 - **`guild-verification-agent`**: Quality validation and testing execution
-- **Technology Engineers**: Domain-specific implementation specialists (React, Express, PostgreSQL, etc.)
+- **Technology Engineers**: Domain-specific implementation specialists (frontend frameworks, backend APIs, databases, etc.)
 
 **Communication Protocol**: All agents use structured XML handoff templates for seamless context transfer and quality assurance.
 

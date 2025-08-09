@@ -417,7 +417,7 @@ npx claude-guild
 # Flag-based specialized workflows
 /guild --fix "Installation script fails on Windows with permission errors"
 /guild --plan "Implement user authentication system with JWT tokens"
-/guild --research "React 18 concurrent features and Suspense best practices"
+/guild --research "modern frontend framework patterns and performance optimization"
 /guild --spec "API authentication endpoints with OAuth2 support"
 
 # Complete workflow for complex tasks

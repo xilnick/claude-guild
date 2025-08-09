@@ -286,12 +286,12 @@ Detection Process:
 
 Technology Categories:
   Frontend Patterns:
-    - Component frameworks (React, Vue, Angular) → UI engineers with component context
-    - State management (Redux, Vuex, Pinia) → State context integration
+    - Component frameworks → UI engineers with component context
+    - State management libraries → State context integration
     - Routing libraries → Navigation context optimization
     
   Backend Patterns:  
-    - API frameworks (Express, FastAPI, Spring) → Backend engineers with service context
+    - API frameworks → Backend engineers with service context
     - ORM/Database libraries → Data context management
     - Authentication systems → Security context integration
     
@@ -307,10 +307,10 @@ Technology Categories:
 ```yaml
 guild-react-engineer:
   Technologies:
-    - React components and hooks
-    - React Router navigation
-    - React Testing Library
-    - React Developer Tools
+    - Component architecture and state hooks
+    - Client-side routing navigation
+    - Component testing frameworks
+    - Frontend development tools
   Context Specialization:
     - Component lifecycle context
     - State management context
@@ -345,10 +345,10 @@ guild-react-engineer:
     </requirements>
     
     <technical-constraints>
-      - React 18 with TypeScript
-      - Styled-components for styling
-      - React Query for data fetching
-      - Socket.io for WebSocket connections
+      - Frontend framework with TypeScript
+      - CSS-in-JS styling solution
+      - Data fetching and caching library
+      - WebSocket connection management
     </technical-constraints>
     
     <implementation-strategy>
@@ -782,12 +782,12 @@ Detection Process:
 
 Technology Categories:
   Frontend Patterns:
-    - Component frameworks (React, Vue, Angular) → UI engineers with component context
-    - State management (Redux, Vuex, Pinia) → State context integration
+    - Component frameworks → UI engineers with component context
+    - State management libraries → State context integration
     - Routing libraries → Navigation context optimization
     
   Backend Patterns:  
-    - API frameworks (Express, FastAPI, Spring) → Backend engineers with service context
+    - API frameworks → Backend engineers with service context
     - ORM/Database libraries → Data context management
     - Authentication systems → Security context integration
     
@@ -803,10 +803,10 @@ Technology Categories:
 ```yaml
 guild-react-engineer:
   Technologies:
-    - React components and hooks
-    - React Router navigation
-    - React Testing Library
-    - React Developer Tools
+    - Component architecture and state hooks
+    - Client-side routing navigation
+    - Component testing frameworks
+    - Frontend development tools
   Context Specialization:
     - Component lifecycle context
     - State management context
@@ -841,10 +841,10 @@ guild-react-engineer:
     </requirements>
     
     <technical-constraints>
-      - React 18 with TypeScript
-      - Styled-components for styling
-      - React Query for data fetching
-      - Socket.io for WebSocket connections
+      - Frontend framework with TypeScript
+      - CSS-in-JS styling solution
+      - Data fetching and caching library
+      - WebSocket connection management
     </technical-constraints>
     
     <implementation-strategy>

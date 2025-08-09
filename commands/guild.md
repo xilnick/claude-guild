@@ -152,15 +152,15 @@ Enter your task description:
 
 Based on detected technologies, provide relevant examples:
 
-**React Project:**
-- Create a new dashboard component with Material-UI
+**Frontend Project:**
+- Create a new dashboard component with UI framework
 - Add error boundary to the application
 - Implement lazy loading for routes
 
-**Express API:**
+**Backend API:**
 - Add rate limiting middleware
-- Create CRUD endpoints for products
-- Implement JWT authentication
+- Create CRUD endpoints for resources
+- Implement authentication system
 
 **Full-Stack:**
 - Build user profile feature with API and UI
@@ -403,7 +403,7 @@ Execute activated workflow stages in this mandatory order:
 # Executes: reasoning → research → planning → save plan option
 
 # Research-only mode (comprehensive context gathering)
-/guild --research "React 18 concurrent features and Suspense best practices"
+/guild --research "modern frontend framework patterns and performance optimization"
 # Executes: reasoning → research
 
 # Specification-only mode (creates/updates specs without implementation)

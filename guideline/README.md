@@ -41,7 +41,7 @@ npx claude-guild@latest
 
 ### Dynamic Agent Generation (Primary Differentiator)
 - **Project-Adaptive Agents**: Setup analyzes your project and generates agents with deep contextual understanding
-- **Technology Stack Intelligence**: Agents created specifically for your React/Express/Python/etc. combinations
+- **Technology Stack Intelligence**: Agents created specifically for your frontend/backend/systems programming combinations
 - **Contextual Workflow Optimization**: Each workflow stage optimized for your specific architectural patterns
 - **Zero-Configuration Intelligence**: Agents understand your codebase patterns without manual configuration
 - **Living Agent Ecosystem**: Agents that grow and adapt with your project evolution
@@ -111,8 +111,8 @@ npx claude-guild@latest
 
 ### Dynamic Technology-Aware Agent Generation
 Guild analyzes your project and generates contextually intelligent agents:
-- **Frontend Specialists**: React/Vue/Angular engineers that understand your specific component patterns
-- **Backend API Specialists**: Express/FastAPI/Rails engineers familiar with your API architecture  
+- **Frontend Specialists**: Framework engineers that understand your specific component patterns
+- **Backend API Specialists**: API framework engineers familiar with your service architecture  
 - **CLI Development Experts**: Command-line specialists that know your CLI patterns and user workflows
 - **Package Engineering**: NPM/PyPI/Cargo specialists that understand your distribution requirements
 - **Full-Stack Coordinators**: Cross-technology agents that manage complex application architectures
@@ -146,7 +146,7 @@ Analysis → Research → Planning → Implementation → Testing → Verificati
 ### Implementation Agents (Make Changes)
 **Generated as technology specialists for your stack**:
 - **guild-verification-agent**: Quality validation using your project's testing frameworks and standards
-- **Technology engineers**: Domain-specific specialists generated for your exact technology combination (React+Express, Python CLI, etc.)
+- **Technology engineers**: Domain-specific specialists generated for your exact technology combination (frontend+backend, CLI tools, etc.)
 
 **Communication Protocol**: All agents use structured XML handoff templates optimized for your project's workflow patterns and technology requirements.
 
