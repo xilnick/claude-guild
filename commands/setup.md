@@ -4,213 +4,289 @@
 
 ## Purpose
 
-Initialize comprehensive Guild system by analyzing project technology stack and creating specialized agents with full workflow integration, embedded process definitions, and self-contained operation.
+Analyze project technology stack and generate project-specific Guild agents with contextual understanding and workflow integration.
 
-## Flags
+## Dynamic Agent Generation Architecture
 
-- `--standalone`: Create self-contained agents without .guild system dependencies
-- `[guidance]`: Optional instructions for custom agent creation and specialization
+This setup command creates **project-adaptive agents** rather than generic templates. Each agent is generated with deep understanding of your specific codebase, technology stack, and architectural patterns.
 
 ## Workflow
 
-### 1. Configuration Check
+### 1. Project Analysis Phase
 
-Check if Guild is already configured (`.guild/instructions.md` exists):
-
-**Not Configured**:
-```
-🏛️ **Guild Setup Initializing**
-
-Analyzing project technology stack and creating comprehensive Guild system...
-```
-
-**Already Configured**:
-```
-🏛️ **Guild Configuration Found**
-
-Updating existing configuration with latest Guild system enhancements...
-```
-
-### 2. Technology Detection
-
-Analyze project to identify technology patterns and architectural needs:
+Perform comprehensive project analysis:
 
 ```yaml
-Technology Pattern Detection:
-  Frontend: React, Vue, Angular, Svelte, Next.js, Nuxt, component systems
-  Backend: Express, Fastify, NestJS, Koa, server architectures
-  Database: MongoDB, PostgreSQL, MySQL, Redis, data persistence patterns
-  Testing: Jest, Vitest, Cypress, Playwright, testing frameworks
-  DevOps: Docker, Kubernetes, CI/CD, deployment patterns
-  Mobile: React Native, Expo, mobile development patterns
-  Desktop: Electron, Tauri, desktop application patterns
-  CLI: Command-line applications and tools
-  Package: NPM packages, library distribution
-  Config: Configuration management and environment setup
+Technology Detection:
+  - Scan package.json, requirements.txt, Cargo.toml, etc.
+  - Identify frameworks: React, Vue, Angular, Express, FastAPI, etc.
+  - Analyze architectural patterns: CLI, API, full-stack, package
+  - Detect testing frameworks: Jest, Pytest, Cargo test, etc.
+  - Identify development tools: TypeScript, ESLint, Docker, etc.
+
+Codebase Analysis:
+  - Examine project structure and organization
+  - Identify coding patterns and conventions  
+  - Analyze complexity and scope
+  - Document existing architectural decisions
 ```
 
-### 3. Agent Creation
+### 2. Agent Generation Instructions
 
-Based on detected patterns and Guild system architecture, create appropriate agents:
+Based on analysis, generate project-specific agent creation prompts:
 
-#### Standard Mode (default) - Full Guild System
+#### Core System Agents (Always Generated)
 
-Create comprehensive Guild system with embedded workflow definitions:
-- **Core system agents**: reasoning, planning, research, verification with embedded processes
-- **Technology-specific engineers**: Domain specialists based on detected patterns
-- **Complete system files**: Full .guild/ structure with embedded comprehensive documentation
-- **Integrated workflow support**: All workflow stages and flag systems embedded
-
-#### Standalone Mode (`--standalone`) - Self-Contained Specialists
-
-Create independent domain specialists:
-- **Security specialist**: OWASP compliance, vulnerability assessment
-- **Performance engineer**: Database optimization, caching strategies  
-- **Accessibility auditor**: WCAG 2.1 AA compliance, ARIA implementation
-- **Documentation writer**: Technical docs, API documentation
-- **Code reviewer**: Quality analysis, refactoring recommendations
-- **Testing strategist**: Test strategy, automation, QA
-
-### 4. Comprehensive System Generation
-
-**Standard Mode Files with Embedded Content**:
-
-#### .guild/instructions.md
-Creates project configuration with thinking modes and agent specifications
-
-#### .guild/overview.md  
-Creates comprehensive system reference with workflow definitions
-
-#### .guild/ignore.md
-Creates file exclusion patterns with compliance requirements
-
-#### .guild/agents.md
-Creates agent creation templates and standards
-
-**Standalone Mode Files (--standalone flag)**:
-
-Creates self-contained specialist agents directly in `.claude/agents/` without .guild dependencies:
-- `security-analyst-agent.md` - OWASP compliance, vulnerability assessment
-- `performance-engineer-agent.md` - Database optimization, performance profiling
-- `accessibility-auditor-agent.md` - WCAG 2.1 AA compliance, ARIA implementation
-- `code-reviewer-agent.md` - Quality analysis, refactoring recommendations
-- `documentation-writer-agent.md` - Technical docs, API documentation
-- `testing-strategist-agent.md` - Test strategy, automation, QA
-
-### 5. Comprehensive Agent Creation Engine
-
-**Core System Agents Creation** (Always created in standard mode):
-
-#### guild-reasoning-agent.md
-Creates context-only task analysis specialist with configurable thinking modes
-
-#### guild-planning-agent.md
-Creates strategic planning specialist with ultrathink mode and opus model  
-
-#### guild-project-research-agent.md
-Creates project-specific research specialist for codebase analysis
-
-#### guild-global-research-agent.md
-Creates external research specialist for best practices
-
-**Technology-Specific Engineers Creation** (Based on detected patterns):
-- CLI projects: guild-cli-engineer
-- Package projects: guild-package-engineer
-- Config projects: guild-config-engineer
-- Template projects: guild-template-engineer
-- Framework projects: guild-[framework]-engineer
-
-### 6. Comprehensive Validation and Success Display
-
-**Setup Completion Validation**:
+**guild-reasoning-agent Generation**:
 ```
-✅ **Guild Setup Complete**
+Create a context-only reasoning agent with deep understanding of this specific project:
 
-**Created System Files**:
-- `.guild/instructions.md` - Project configuration ✓
-- `.guild/overview.md` - Complete system reference ✓  
-- `.guild/ignore.md` - File exclusion patterns ✓
-- `.guild/agents.md` - Agent creation templates ✓
+Project Context: [Analyzed project type, complexity, and patterns]
+Technology Stack: [Detected technologies and frameworks]  
+Architecture: [Identified architectural patterns]
+Complexity Level: [Simple/Medium/Complex based on analysis]
 
-**Created Agents Based on Detected Technologies**:
-- `guild-reasoning-agent` - Task analysis & clarification ✓
-- `guild-planning-agent` - Strategic planning (ultrathink + opus) ✓
-- `guild-project-research-agent` - Project context research ✓
-- `guild-global-research-agent` - External research & best practices ✓
-- [Additional technology-specific engineers based on detection]
+Agent Role: Context-only task analysis and clarification specialist
+Thinking Mode: [Configured based on project complexity - think/think-harder/ultrathink]
+Model: [Inherited from Claude Code session unless overridden]
 
-**Next Steps**:
-- Use `/guild "task"` for standard workflow execution
-- Use `/guild --full "task"` for comprehensive development lifecycle
-- Use `/guild --fix "bug"` for systematic bug fixing
-- Use `/guild --plan "task"` for planning-only mode
-- Use `/guild --research "query"` for research-only mode
-- Customize behavior in `.guild/instructions.md` if needed
+Key Behaviors:
+- Understand this project's specific patterns and conventions
+- Analyze tasks in context of [detected technology stack]
+- Provide clarification tailored to [project type] development
+- Consider constraints specific to [architectural pattern]
 
-**Guild System Ready** - All workflows activated with comprehensive agent support
+Configuration: Must follow .guild/instructions.md requirements
+Workflow Reference: Uses prompt-analysis stage from .guild/overview.md
 ```
 
-## Self-Contained Template Embedding
+**guild-planning-agent Generation**:  
+```
+Create a context-only strategic planning agent with deep project knowledge:
 
-This setup command uses clean template embedding via install.js preprocessing that embeds actual template content, ensuring:
+Project Context: [Full project analysis results]
+Strategic Focus: [Based on project type - API design, UI architecture, CLI structure, etc.]
+Coordination Needs: [Based on detected complexity and technology stack]
 
-- **Template Consistency**: install.js embeds current template content during installation
-- **No Content Duplication**: Templates remain as single source of truth
-- **Self-Contained Operation**: Command contains embedded templates after installation
-- **Specification Alignment**: Templates match guideline/README.md specification  
-- **Clean Architecture**: Proper separation between templates and commands
+Agent Role: Strategic planning and workflow coordination specialist
+Thinking Mode: ultrathink (for comprehensive strategic analysis)
+Model: opus (for enhanced planning capabilities)  
+
+Key Behaviors:
+- Create implementation strategies for [specific technology stack]
+- Route tasks to appropriate specialists for [detected technologies]
+- Consider architectural constraints of [project pattern]
+- Plan coordination between [identified technology components]
+
+Configuration: Must follow .guild/instructions.md requirements
+Workflow Reference: Uses planning stage from .guild/overview.md
+```
+
+**guild-project-research-agent Generation**:
+```
+Create a context-only project research specialist with codebase familiarity:
+
+Codebase Knowledge: [Analyzed project structure and patterns]
+Technology Expertise: [Detected frameworks and tools]
+Pattern Recognition: [Identified coding conventions and architecture]
+
+Agent Role: Project-specific analysis and codebase research specialist  
+Key Behaviors:
+- Research within context of [specific technology stack]
+- Identify patterns consistent with [detected architectural style]
+- Analyze constraints specific to [project type and complexity]
+- Provide context relevant to [identified development patterns]
+
+Configuration: Must follow .guild/instructions.md requirements
+Workflow Reference: Uses context-research stage from .guild/overview.md
+```
+
+**guild-global-research-agent Generation**:
+```
+Create a context-only external research specialist with technology focus:
+
+Technology Focus: [Detected primary technologies and frameworks]
+Industry Context: [Project type - web app, CLI tool, API, package, etc.]
+Best Practices Scope: [Relevant to detected technology stack]
+
+Agent Role: External research and best practices specialist
+Key Behaviors:  
+- Research best practices for [specific technology combinations]
+- Find community standards for [detected frameworks]
+- Identify integration patterns for [technology stack]
+- Discover optimization techniques for [project type]
+
+Configuration: Must follow .guild/instructions.md requirements  
+Workflow Reference: Uses context-research stage from .guild/overview.md
+```
+
+#### Technology-Specific Engineers (Generated Based on Detection)
+
+**Dynamic Engineer Generation Logic**:
+```yaml
+Technology Pattern → Generated Engineer:
+  
+CLI Applications:
+  Agent: guild-cli-engineer
+  Specialization: "CLI development for [detected CLI framework/pattern]"
+  Context: "[Specific CLI patterns found in codebase]"
+  
+Package Development:
+  Agent: guild-package-engineer  
+  Specialization: "Package management for [detected package type - npm/pip/cargo]"
+  Context: "[Specific packaging patterns and distribution requirements]"
+  
+Frontend Applications:
+  Agent: guild-[framework]-engineer (React/Vue/Angular/etc.)
+  Specialization: "[Framework] development with [detected UI libraries]"
+  Context: "[Specific component patterns and state management approaches]"
+  
+Backend APIs:
+  Agent: guild-[framework]-api-engineer (Express/FastAPI/etc.)
+  Specialization: "[Framework] API development with [detected patterns]"
+  Context: "[Specific API patterns, middleware, and data handling]"
+  
+Full-Stack Applications:
+  Agents: Multiple engineers for detected frontend + backend combination
+  Coordination: Enhanced planning agent with full-stack coordination
+```
+
+### 3. Project Configuration Generation
+
+Generate project-specific Guild configuration:
+
+**Dynamic .guild/instructions.md**:
+```yaml
+# Project-Specific Guild Configuration
+
+Agent Models and Thinking Modes:
+  guild-planning-agent:
+    thinking_mode: ultrathink
+    model: opus
+    
+  [other-agents]:
+    thinking_mode: [determined by project complexity]
+    model: inherited
+
+Project-Specific Requirements:
+  Technology Stack: [Detected technologies]
+  Architecture Pattern: [Identified pattern]
+  Quality Standards: [Based on project type and existing patterns]
+  Testing Approach: [Based on detected testing frameworks]
+  
+Development Constraints:
+  [Project-specific limitations and requirements based on analysis]
+```
+
+**Dynamic .guild/overview.md**:  
+```yaml
+# Project-Specific Guild Overview
+
+Technology Context: [Detailed analysis of detected stack]
+Architectural Patterns: [Identified patterns and conventions]
+Development Workflow: [Optimized for detected project type]
+
+Workflow Stages Optimized For:
+  - [Project type]-specific reasoning and analysis
+  - [Technology stack]-focused research and context gathering
+  - [Architecture pattern]-appropriate strategic planning
+  - [Framework combination]-specialized implementation
+```
+
+### 4. Agent Creation Execution
+
+Execute agent generation based on analysis:
+
+1. **Create Project Configuration**: Generate .guild/ files with project-specific content
+2. **Generate Core Agents**: Create reasoning, planning, and research agents with project context
+3. **Create Technology Engineers**: Generate engineers specific to detected technology stack  
+4. **Validate Agent Ecosystem**: Ensure agents can coordinate effectively for this project
+5. **Test Workflow Integration**: Verify agents work together for project-specific workflows
+
+### 5. Validation and Success
+
+Display comprehensive setup results:
+
+```
+✅ **Guild Setup Complete - Project-Specific Configuration**
+
+**Project Analysis Results**:
+📊 Project Type: [Detected type - CLI/API/Full-Stack/Package/etc.]
+⚙️  Technology Stack: [Detected technologies and frameworks]
+🏗️ Architecture: [Identified architectural patterns]  
+📈 Complexity: [Analyzed complexity level]
+
+**Generated Project-Specific Agents**:
+🧠 guild-reasoning-agent - Tailored for [project type] task analysis ✓
+🎯 guild-planning-agent - Strategic planning for [technology stack] ✓  
+🔍 guild-project-research-agent - Codebase research with [pattern] expertise ✓
+🌐 guild-global-research-agent - [Technology stack] best practices research ✓
+[🔨 Additional engineers based on detected technologies] ✓
+
+**Generated Configuration**:
+📋 .guild/instructions.md - Project-specific requirements and standards ✓
+📖 .guild/overview.md - [Project type]-optimized workflow definitions ✓
+🚫 .guild/ignore.md - Standard ignore patterns with project adjustments ✓
+🎨 .guild/agents.md - Agent coordination rules for [architecture pattern] ✓
+
+**Ready for Project-Specific Workflows**:
+🚀 Use `/guild "task"` - Standard workflow optimized for [project type]
+🔬 Use `/guild --full "task"` - Comprehensive lifecycle for [technology stack]
+🎯 Use `/guild --fix "bug"` - Bug fixing with [framework] expertise
+📋 Use `/guild --plan "task"` - Planning with [architecture] understanding
+
+**Guild System Active** - All workflows configured for [project description]
+```
+
+## Standalone Mode (--standalone)
+
+Generate self-contained specialists without .guild system:
+
+```yaml
+Standalone Agent Generation:
+  - security-analyst-agent: OWASP compliance for [detected technologies]
+  - performance-engineer-agent: Optimization for [specific tech stack]  
+  - accessibility-auditor-agent: WCAG compliance for [frontend framework]
+  - documentation-writer-agent: Documentation for [project patterns]
+  - code-reviewer-agent: Quality analysis for [detected languages/frameworks]
+  - testing-strategist-agent: Testing strategy for [detected test frameworks]
+```
+
+## Key Principles
+
+### Dynamic Generation Over Static Templates
+- **Project-Adaptive**: Every agent understands your specific codebase
+- **Context-Aware**: Agents know your technology stack and patterns
+- **Tailored Workflow**: Execution optimized for your architectural decisions
+- **Scalable Complexity**: Agent sophistication matches project complexity
+
+### Technology-Agnostic Generation
+- **Universal Patterns**: Works with any technology combination  
+- **Framework Intelligence**: Understands specific framework patterns
+- **Evolution-Ready**: Adapts as projects grow and change
+- **Integration-Focused**: Optimizes for technology stack combinations
 
 ## Examples
 
-### Basic Setup
+### React + Express Full-Stack
 ```bash
 /guild:setup
+# Generates: React component engineer, Express API engineer, full-stack planning agent
+# Context: Understands React patterns, Express middleware, API-frontend coordination
 ```
-Analyzes project technology stack and creates comprehensive Guild system with appropriate agents and full workflow integration.
 
-### Standalone Specialists
+### Python CLI Tool  
 ```bash
-/guild:setup --standalone
+/guild:setup
+# Generates: CLI-focused engineer, Python package engineer, CLI testing specialist
+# Context: Understands argparse patterns, CLI UX, Python packaging, command testing
 ```
-Creates self-contained specialist agents without .guild system dependencies for focused domain expertise.
 
-### Custom Guidance
+### NPM Package Development
 ```bash
-/guild:setup "focus on performance and security optimization"
+/guild:setup  
+# Generates: Package engineer, documentation specialist, testing strategist
+# Context: Understands npm patterns, semantic versioning, package distribution
 ```
-Creates agents with specific focus areas and specialized capabilities based on provided guidance.
 
-### Technology-Specific Setup
-```bash
-/guild:setup "React frontend with Express API and PostgreSQL database"
-```
-Creates agents optimized for specific technology combination with appropriate engineering specialists.
-
-## Success Indicators
-
-Setup is successful when:
-- ✅ Technology patterns detected and analyzed
-- ✅ Appropriate agents created with current template specifications
-- ✅ Configuration files generated with consistent content
-- ✅ Workflow integration complete with embedded process definitions
-- ✅ Agent compliance validation confirmed
-- ✅ Next steps displayed with usage guidance
-
-## Troubleshooting
-
-**No agents created**: Project structure unclear
-- Add more code files to improve pattern detection
-- Ensure package.json exists for project identification
-- Provide explicit guidance parameter for custom setup
-
-**Wrong agents created**: Pattern detection needs refinement
-- Use guidance parameter to specify desired focus areas
-- Manually edit `.guild/instructions.md` for project-specific requirements
-- Re-run setup with corrective guidance
-
-**Setup fails**: System error during creation
-- Check write permissions for .guild/ and .claude/ directories
-- Clear existing .guild/ directory if partial setup exists
-- Verify Claude Code compatibility and agent system access
-
-This redesigned setup command provides clean template embedding architecture that ensures consistent Guild system creation aligned with guideline/README.md specification while maintaining self-contained operation for reliable global NPM distribution.
+This setup command creates a **living agent ecosystem** that grows with your project and understands its unique context, rather than deploying generic agents that require constant explanation.

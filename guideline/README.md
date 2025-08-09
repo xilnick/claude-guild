@@ -39,12 +39,19 @@ npx claude-guild@latest
 
 ## Key Features & Value Proposition
 
-### Self-Contained Architecture (Primary Differentiator)
-- **Zero-dependency global installation** via NPM with 100% reliability
-- **Complete template embedding** - 1,164+ line setup commands contain all workflow definitions, agent templates, and specifications
-- **No missing files** - All content embedded in setup command for consistent results
+### Dynamic Agent Generation (Primary Differentiator)
+- **Project-Adaptive Agents**: Setup analyzes your project and generates agents with deep contextual understanding
+- **Technology Stack Intelligence**: Agents created specifically for your React/Express/Python/etc. combinations
+- **Contextual Workflow Optimization**: Each workflow stage optimized for your specific architectural patterns
+- **Zero-Configuration Intelligence**: Agents understand your codebase patterns without manual configuration
+- **Living Agent Ecosystem**: Agents that grow and adapt with your project evolution
+
+### Self-Contained Distribution Architecture
+- **Zero-dependency global installation** via NPM with 100% reliability  
+- **Dynamic generation system** - Setup contains agent generation logic, not static templates
+- **No missing files** - All generation logic embedded in setup command for consistent results
 - **Global compatibility** - Works identically across all environments via `npx claude-guild@latest`
-- **Template independence** - No runtime dependency on external files
+- **Runtime independence** - No dependency on external template files
 
 ### Advanced Workflow Orchestration  
 - **Multi-stage execution** with intelligent task routing and parallel agent coordination
@@ -53,10 +60,11 @@ npx claude-guild@latest
 - **Technology-agnostic design** with universal workflow patterns
 
 ### Agent System Excellence
-- **Context-only agents** (analysis, research, planning) that never make changes
-- **Implementation agents** (verification, technology engineers) that execute changes
-- **Structured communication** with XML handoff protocols and quality gates
-- **Technology detection** with automatic specialized agent creation
+- **Dynamic agent generation** creates project-specific agents with contextual understanding
+- **Project-adaptive specialization** based on detected technology stack and architectural patterns
+- **Context-only agents** (analysis, research, planning) that understand your specific project
+- **Implementation agents** (verification, technology engineers) specialized for your tech stack
+- **Structured communication** with XML handoff protocols optimized for your project patterns
 
 ## Core Commands
 
@@ -101,13 +109,13 @@ npx claude-guild@latest
 └── [technology-engineers].md     # Implementation specialists
 ```
 
-### Automatic Technology Detection
-Guild analyzes your project and creates specialized agents for detected technologies:
-- **React/Vue/Angular**: Frontend engineering specialists
-- **Express/FastAPI/Rails**: Backend API specialists  
-- **CLI tools**: Command-line interface specialists
-- **NPM packages**: Package development specialists
-- **Database patterns**: Data layer specialists
+### Dynamic Technology-Aware Agent Generation
+Guild analyzes your project and generates contextually intelligent agents:
+- **Frontend Specialists**: React/Vue/Angular engineers that understand your specific component patterns
+- **Backend API Specialists**: Express/FastAPI/Rails engineers familiar with your API architecture  
+- **CLI Development Experts**: Command-line specialists that know your CLI patterns and user workflows
+- **Package Engineering**: NPM/PyPI/Cargo specialists that understand your distribution requirements
+- **Full-Stack Coordinators**: Cross-technology agents that manage complex application architectures
 
 ## Workflow Patterns
 
@@ -130,15 +138,17 @@ Analysis → Research → Planning → Implementation → Testing → Verificati
 ## Agent Classification System
 
 ### Context-Only Agents (Never Make Changes)
-- **guild-reasoning-agent**: Task analysis and requirement clarification
-- **guild-planning-agent**: Strategic workflow coordination (ultrathink mode)
-- **guild-research-agents**: Context gathering and information synthesis
+**Generated with project-specific knowledge**:
+- **guild-reasoning-agent**: Task analysis tailored to your project's complexity and technology stack
+- **guild-planning-agent**: Strategic workflow coordination with understanding of your architectural patterns (ultrathink mode)
+- **guild-research-agents**: Context gathering specialized for your technology ecosystem and development patterns
 
 ### Implementation Agents (Make Changes)
-- **guild-verification-agent**: Quality validation and testing execution
-- **Technology engineers**: Domain-specific implementation specialists
+**Generated as technology specialists for your stack**:
+- **guild-verification-agent**: Quality validation using your project's testing frameworks and standards
+- **Technology engineers**: Domain-specific specialists generated for your exact technology combination (React+Express, Python CLI, etc.)
 
-**Communication Protocol**: All agents use structured XML handoff templates for seamless context transfer and quality assurance.
+**Communication Protocol**: All agents use structured XML handoff templates optimized for your project's workflow patterns and technology requirements.
 
 ## Standalone Agent System
 
@@ -204,21 +214,21 @@ All Other Agents:
 
 ## Key Differentiators
 
-- **Self-contained architecture** with zero-dependency global installation
-- **Complete template embedding** ensuring 100% reliable setup across environments
-- **Advanced context engineering** with XML-structured packages
-- **Integrated thinking modes** for appropriate cognitive resource allocation
-- **Technology-agnostic design** with universal workflow patterns
-- **Structured agent communication** with quality gates and validation checkpoints
+- **Dynamic agent generation** creates project-specific agents with deep contextual understanding
+- **Technology stack intelligence** generates specialists for your exact technology combinations
+- **Project-adaptive workflows** optimized for your specific architectural patterns and complexity
+- **Zero-configuration intelligence** agents understand your codebase without manual setup
+- **Self-contained distribution** with zero-dependency global installation via NPM
+- **Living agent ecosystem** that evolves and adapts with your project's growth
 
 ## Success Metrics
 
-- **100% installation reliability** through self-contained setup architecture
-- **Zero-failure setup process** eliminating missing file errors
-- **50-70% performance improvement** through context optimization  
-- **Enhanced reasoning quality** with appropriate thinking mode selection
-- **Global distribution compatibility** ensuring identical system creation
-- **Technology stack flexibility** with universal workflow patterns
+- **100% installation reliability** through self-contained dynamic generation architecture
+- **Zero-failure setup process** with intelligent project analysis and agent creation
+- **Project-contextual intelligence** agents understand your specific codebase and patterns
+- **Technology stack adaptation** automatic specialization for any technology combination
+- **Enhanced workflow efficiency** through project-optimized agent coordination
+- **Living system evolution** agents that grow and adapt with your project changes
 
 ## Documentation Structure
 
