@@ -55,10 +55,14 @@ npx claude-guild@latest
 # Complete development lifecycle (7 stages including testing, verification, refactoring)
 /guild --full "add real-time notifications system"
 
-# Documentation-first development
-/guild --spec "design new API endpoint for file uploads"
+# Flag-only specialized modes
+/guild --fix "checkout process throwing errors on payment submission"
+/guild --plan "migrate from JavaScript to TypeScript across entire codebase" 
+/guild --research "Next.js 14 server components and data fetching patterns"
+/guild --spec "design REST API for user profile management"
 
-# Project-wide improvements
+# Combined flag workflows  
+/guild --spec --full "design and implement GraphQL API with comprehensive testing"
 /guild --refactor --project "migrate from JavaScript to TypeScript"
 ```
 
@@ -114,14 +118,17 @@ npx claude-guild@latest
 
 **Available Flags**:
 - `--full`: Complete 7-stage development lifecycle with testing and refactoring
-- `--spec`: Documentation-first development with specification management
-- `--project`: Apply changes across entire project (default: focused scope)
+- `--fix`: Bug fixing mode (when used alone) OR enable fix stage (when combined)
+- `--plan`: Planning-only mode (when used alone) with optional file saving
+- `--research`: Research-only mode (when used alone) for context gathering
+- `--spec`: Specification mode (when used alone) OR documentation-first development (when combined)
 - `--refactor`: Enable code optimization and restructuring stage
 - `--test`: Enable comprehensive test creation and execution
 - `--verify`: Enable systematic verification and compliance checking
-- `--fix`: Enable bug detection and resolution capabilities
+- `--project`: Apply changes across entire project (default: focused scope)
 - `--no-reason`: Skip deep analysis stage (faster execution)
 - `--no-plan`: Skip strategic planning stage (direct implementation)
+- `--no-implement`: Legacy planning-only mode (same as `--plan` when used alone)
 
 ### Specialized Workflow Commands
 
@@ -142,39 +149,44 @@ npx claude-guild@latest
 /guild:setup --refresh
 ```
 
-#### `/guild:plan "task"`
-**Strategic planning workflow** - creates detailed implementation plans:
+### Flag-Only Execution Modes
+
+The main `/guild` command supports specialized execution modes when specific flags are used alone:
+
+#### Bug Fixing Mode (`--fix` only)
+**Systematic bug resolution without new feature implementation**:
 
 ```bash
-/guild:plan "migrate monolith to microservices architecture"
-# Creates: .guild/plans/migrate-to-microservices-[timestamp].md
-# Includes: Phases, timelines, risks, dependencies, resource requirements
+/guild --fix "users getting 500 error on checkout"
+# Executes: Analysis → Research → Planning → Fix Stage (no implementation)
+# Focus: Root cause analysis, targeted fixes, regression prevention
 ```
 
-#### `/guild:fix "problem"`
-**Bug fixing workflow** with root cause analysis:
+#### Planning Mode (`--plan` only)  
+**Strategic planning with optional file saving**:
 
 ```bash
-/guild:fix "users getting 500 error on checkout"
-# Executes: Problem Analysis → Context Research → Root Cause Detection → Implementation → Verification
+/guild --plan "migrate monolith to microservices architecture"
+# Executes: Analysis → Research → Planning → Save Plan Option
+# Creates: Detailed implementation plans with phases, timelines, risks, dependencies
 ```
 
-#### `/guild:spec [type] "subject"`
-**Specification and documentation management**:
+#### Research Mode (`--research` only)
+**Comprehensive context gathering and analysis**:
 
 ```bash
-/guild:spec api "user authentication endpoints"
-/guild:spec component "shopping cart component"
-/guild:spec database "user and order schema design"
+/guild --research "React 18 concurrent features and Suspense best practices"
+# Executes: Analysis → Research (with detailed output to user)
+# Focus: Information gathering and context building for future tasks
 ```
 
-#### `/guild:agents`
-**View and manage current agent configuration**:
+#### Specification Mode (`--spec` only)
+**Documentation and specification management**:
 
 ```bash
-/guild:agents              # List all active agents
-/guild:agents --standalone # List standalone specialists  
-/guild:agents --tech       # Show technology-specific engineers
+/guild --spec "API authentication endpoints with OAuth2 support"
+# Executes: Analysis → Research → Planning → Specification Creation
+# Creates: Detailed specifications in .guild/specs/ directory
 ```
 
 ## 🔧 Main Approaches & When to Use Them
@@ -259,10 +271,12 @@ npx claude-guild@latest
 |----------|---------------------|-----------------|
 | **New Feature Development** | Standard Workflow | `/guild "implement user notifications"` |
 | **Critical System Changes** | Comprehensive (`--full`) | `/guild --full "add two-factor authentication"` |
-| **API Design** | Documentation-First (`--spec`) | `/guild --spec api "payment webhooks"` |
-| **Major Refactoring** | Project-Wide (`--project`) | `/guild --refactor --project "migrate to TypeScript"` |
-| **Bug Investigation** | Targeted Fixing | `/guild:fix "memory leak in data processing"` |
-| **Architecture Planning** | Strategic Planning | `/guild:plan "implement caching strategy"` |
+| **Bug Investigation** | Fix-Only Mode | `/guild --fix "memory leak in data processing"` |
+| **Architecture Planning** | Planning-Only Mode | `/guild --plan "implement caching strategy"` |
+| **Research & Context** | Research-Only Mode | `/guild --research "GraphQL best practices 2024"` |
+| **API Design** | Specification Mode | `/guild --spec "design payment webhooks API"` |
+| **Major Refactoring** | Project-Wide Refactoring | `/guild --refactor --project "migrate to TypeScript"` |
+| **Complex API Development** | Spec-Driven Full Workflow | `/guild --spec --full "implement user management API"` |
 | **Security Assessment** | Standalone Specialist | `"Security audit of authentication system"` |
 | **Performance Optimization** | Standalone Specialist | `"Analyze and optimize API response times"` |
 

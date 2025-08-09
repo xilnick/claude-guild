@@ -26,15 +26,17 @@ Guild provides specialized commands with optimized workflows:
 
 ### Core Commands
 - **`/guild:setup [guidance]`** - Analyze project and create specialized agents including mandatory guild-reasoning-agent
-- **`/guild "task"`** - Execute any task with guild-reasoning-agent → research → planning → implementation
-- **`/guild:refactor "description"`** - Execute refactoring with guild-reasoning-agent → research → planning → refactoring
-- **`/guild:fix "bug"`** - Execute bug fixing with guild-reasoning-agent → research → planning → diagnosis → implementation
-- **`/guild:plan "task"`** - Execute planning with guild-reasoning-agent → research → planning → documentation
-- **`/guild:spec [level] "spec"`** - Execute specification with guild-reasoning-agent → research → planning → specification
+- **`/guild [flags] "task"`** - Execute any task with configurable workflow stages:
+  - **Default**: reasoning → research → planning → implementation
+  - **`--fix`**: Bug fixing workflow (reasoning → research → planning → fix stage)
+  - **`--plan`**: Planning-only workflow (reasoning → research → planning → save to file)
+  - **`--research`**: Research-only workflow (reasoning → research)
+  - **`--spec`**: Specification workflow (reasoning → research → planning → spec creation)
+  - **`--refactor`**: Refactoring workflow (reasoning → research → refactor-planning → refactoring)
+  - **`--full`**: Comprehensive workflow (reasoning → research → planning → implementation → testing → verification → refactoring)
 
 ### Management Commands  
 - **`/guild:instructions`** - Manage project instructions and configuration options
-- **`/guild:research`** - Context research engine with configurable MCP integration
 
 **Important**: Guild commands are ONLY active when explicitly invoked with `/guild:` prefix. The workflow is completely isolated and does NOT automatically apply to all tasks.
 
@@ -196,29 +198,50 @@ Guild provides standalone, reusable workflow steps that can be combined into dif
 
 ## Workflow Compositions
 
-Different Guild commands use different combinations of these standalone workflow steps:
+The main `/guild` command supports different combinations of workflow steps based on flags:
 
-### `/guild "task"` - General Workflow (4 steps)
+### `/guild "task"` - Default Workflow (4 steps)
 1. **prompt-analysis**: guild-reasoning-agent analyzes and clarifies task requirements, corrects typos, aligns with project
 2. **context-research**: guild-research-agents gather background information and technical context  
 3. **planning**: guild-planning-agent creates implementation approach
 4. **implementation**: framework-coupled engineers execute with integrated planning and implementation
 
-### `/guild:full "task"` - Comprehensive Workflow (8 steps)
+### `/guild --full "task"` - Comprehensive Workflow (7 steps)
 1. **prompt-analysis**: Analyze and clarify task requirements
 2. **context-research**: Gather comprehensive background information
 3. **planning**: Create detailed implementation specifications
-4. **task-research**: Conduct targeted implementation research
-5. **implementation**: Execute planned specifications
-6. **error-detection**: Systematic error identification and resolution
-7. **refactor-planning**: Plan optimization and cleanup strategies
-8. **verification**: Final validation and quality assurance
+4. **implementation**: Execute planned specifications
+5. **testing**: Create and execute comprehensive tests
+6. **verification**: Final validation and quality assurance
+7. **refactoring**: Plan optimization and cleanup strategies
 
-### `/guild:refactor "description"` - Refactoring Workflow (4 steps)
+### `/guild --fix "bug"` - Bug Fixing Workflow (4 steps)
+1. **prompt-analysis**: Analyze bug description and symptoms
+2. **context-research**: Research current codebase and debugging context
+3. **planning**: Create systematic debugging and fix strategy
+4. **fix-execution**: Execute targeted bug fixes with validation
+
+### `/guild --plan "task"` - Planning-Only Workflow (3 steps + save)
+1. **prompt-analysis**: Analyze planning requirements and scope
+2. **context-research**: Gather comprehensive background information
+3. **planning**: Create detailed implementation specifications
+4. **plan-generation**: Save structured plan to file system
+
+### `/guild --research "query"` - Research-Only Workflow (2 steps)
+1. **prompt-analysis**: Analyze research requirements and scope
+2. **context-research**: Comprehensive research with detailed output
+
+### `/guild --spec "specification"` - Specification Workflow (4 steps)
+1. **prompt-analysis**: Analyze specification requirements and scope  
+2. **context-research**: Research current specifications and standards
+3. **planning**: Create specification structure and content approach
+4. **specification-generation**: Create/update specification files
+
+### `/guild --refactor "description"` - Refactoring Workflow (4 steps)
 1. **prompt-analysis**: Analyze refactoring requirements and scope
 2. **context-research**: Research current codebase and optimization opportunities
 3. **refactor-planning**: Plan comprehensive refactoring strategy
-4. **verification**: Validate refactoring results and quality standards
+4. **refactoring-execution**: Execute refactoring with validation
 
 ## Standard Execution Framework
 
@@ -387,13 +410,23 @@ npx claude-guild
 
 ### Basic Workflow Execution
 ```
-# Simplified workflow for quick tasks
+# Default workflow for standard tasks
 /guild "Add comprehensive error handling to the CLI installation process"
 /guild "Optimize NPM package configuration for better global distribution"
 
+# Flag-based specialized workflows
+/guild --fix "Installation script fails on Windows with permission errors"
+/guild --plan "Implement user authentication system with JWT tokens"
+/guild --research "React 18 concurrent features and Suspense best practices"
+/guild --spec "API authentication endpoints with OAuth2 support"
+
 # Complete workflow for complex tasks
-/guild:full "Create automated tests for the template processing system"
-/guild:full "Implement comprehensive architectural refactoring"
+/guild --full "Create automated tests for the template processing system"
+/guild --full "Implement comprehensive architectural refactoring"
+
+# Combined flag workflows
+/guild --spec --full "Implement REST API with comprehensive documentation and testing"
+/guild --refactor --test --verify "Optimize the template processing system"
 ```
 
 ### Agent Management
@@ -401,12 +434,6 @@ npx claude-guild
 /guild:setup "focus on security and performance optimization"
 /guild:setup
 /guild:instructions "All API interactions must include proper error handling"
-```
-
-### Research Integration
-```
-/guild:research "latest Node.js CLI best practices"
-/guild:research "NPM package optimization techniques"
 ```
 
 ## System Benefits

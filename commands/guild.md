@@ -30,8 +30,11 @@ Guild uses a modular workflow stage system where you can enable/disable specific
 - `--no-implement` - Disable implementation stage (planning/analysis only)
 
 ### Enable Optional Stages  
+- `--reason` - Enable reasoning-only mode (prompt analysis and debugging) when used alone
+- `--fix` - Enable fix stage (error detection and debugging) OR fix-only mode when used alone
+- `--plan` - Enable planning-only mode (no implementation, save plan to file) when used alone
+- `--research` - Enable research-only mode (no planning/implementation) when used alone
 - `--refactor` - Enable refactoring stage (code optimization with refactor-planning)
-- `--fix` - Enable fix stage (error detection and debugging)
 - `--test` - Enable testing stage (test creation and validation)
 - `--verify` - Enable verification stage (requirement validation)
 - `--full` - Enable comprehensive workflow (combines --verify + --test + --refactor)
@@ -44,11 +47,35 @@ Guild uses a modular workflow stage system where you can enable/disable specific
 
 ### Special Stage Combinations
 
-**Planning-Only Mode** (when `--no-implement` is the ONLY flag specified):
+**Reasoning-Only Mode** (when `--reason` is the ONLY flag specified):
+- **Trigger**: `/guild --reason "prompt to analyze"` with no other flags
+- **Stages**: reasoning only (no research/planning/implementation)
+- **Behavior**: Deep prompt analysis, requirement clarification, and interpretation debugging
+- **Use Case**: Prompt debugging, requirement clarification, understanding system interpretation
+
+**Fix-Only Mode** (when `--fix` is the ONLY flag specified):
+- **Trigger**: `/guild --fix "bug description"` with no other flags
+- **Stages**: reasoning → research → planning → fix stage (no implementation)
+- **Behavior**: Systematic bug fixing with root cause analysis and debugging
+- **Use Case**: Bug resolution with comprehensive analysis but no new feature implementation
+
+**Planning-Only Mode** (when `--plan` is the ONLY flag specified):
+- **Trigger**: `/guild --plan "task"` with no other flags  
+- **Stages**: reasoning → research → planning → **prompt to save plan to file**
+- **Behavior**: Create comprehensive planning documentation without implementation
+- **Use Case**: Strategic analysis and architectural design without any implementation
+
+**Research-Only Mode** (when `--research` is the ONLY flag specified):
+- **Trigger**: `/guild --research "query"` with no other flags
+- **Stages**: reasoning → research (no planning/implementation)
+- **Behavior**: Comprehensive context gathering and research synthesis
+- **Use Case**: Information gathering and context building for future tasks
+
+**Legacy Planning Mode** (when `--no-implement` is the ONLY flag specified):
 - **Trigger**: `/guild --no-implement "task"` with no other flags
-- **Stages**: reasoning → research → planning → **prompt to save output**
+- **Stages**: reasoning → research → planning → **prompt to save output**  
 - **Behavior**: Execute reasoning, research and planning stages, then ask user if they want to save planning output to a file
-- **Use Case**: Strategic analysis and planning without any implementation
+- **Use Case**: Strategic analysis and planning without any implementation (legacy support)
 
 **Refactor-Only Mode** (when `--refactor` is the ONLY flag specified):
 - **Trigger**: `/guild --refactor "task"` with no other flags  
@@ -63,8 +90,14 @@ Guild uses a modular workflow stage system where you can enable/disable specific
 - **Use Case**: Complete feature development with full quality assurance
 - **Note**: `--full` flag automatically enables `--test`, `--verify`, and `--refactor`
 
-**Specification-Driven Mode** (when `--spec` flag is specified):
-- **Trigger**: `/guild --spec "task"`
+**Specification-Only Mode** (when `--spec` is the ONLY flag specified):
+- **Trigger**: `/guild --spec "task"` with no other flags
+- **Stages**: reasoning → research → planning → spec-analysis → spec-update (no implementation)
+- **Behavior**: Create or update specifications without implementation
+- **Use Case**: Documentation management and specification creation without code changes
+
+**Specification-Driven Mode** (when `--spec` flag is combined with other flags):
+- **Trigger**: `/guild --spec "task"` combined with other flags (like --full)
 - **Stages**: reasoning → spec-analysis → spec-update → research → planning → implementation
 - **Behavior**: Specifications updated BEFORE implementation, ensuring documentation-driven development
 - **Use Case**: Feature development requiring specification updates and documentation-first approach
@@ -72,12 +105,19 @@ Guild uses a modular workflow stage system where you can enable/disable specific
 - **Quality Gate**: Implementation cannot proceed until specifications are properly updated
 
 **Standard Flag Processing**:
-1. **Start with defaults**: reasoning + research + planning + implementation
-2. **Process --full flag**: If present, enable test + verify + refactor stages
-3. **Process --spec flag**: If present, enable specification-driven workflow
-4. **Apply disable flags**: Remove specified stages  
-5. **Apply enable flags**: Add optional stages
-6. **Handle special modes**: Adjust stage flow for specific combinations
+1. **Detect flag-only modes**: Check for single flags requiring specialized workflow
+   - `--reason` only → reasoning-only mode (reasoning stage only)
+   - `--fix` only → fix-only mode (reasoning + research + planning + fix stage)
+   - `--plan` only → planning-only mode (reasoning + research + planning + save option)
+   - `--research` only → research-only mode (reasoning + research)
+   - `--spec` only → spec-only mode (reasoning + research + planning + spec stages)
+   - `--no-implement` only → legacy planning mode (reasoning + research + planning + save option)
+2. **Start with defaults**: reasoning + research + planning + implementation (if not flag-only mode)
+3. **Process --full flag**: If present, enable test + verify + refactor stages
+4. **Process --spec flag**: If combined with other flags, enable specification-driven workflow
+5. **Apply disable flags**: Remove specified stages  
+6. **Apply enable flags**: Add optional stages
+7. **Handle special modes**: Adjust stage flow for specific combinations
 
 ## Interactive Task Prompting
 
@@ -103,7 +143,7 @@ What task would you like to execute?
 • [Testing/refactoring example if applicable]
 
 **Selected flags:** [Show any flags provided]
-**Available flags:** --refactor, --test, --verify, --project, --fix
+**Available flags:** --reason, --fix, --plan, --research, --spec, --refactor, --test, --verify, --project, --full, --no-implement
 
 Enter your task description:
 ```
@@ -183,17 +223,33 @@ Execute activated workflow stages in this mandatory order:
 **Changes**: **NONE** - Only creates analysis context for other agents
 **Thinking Mode**: Often benefits from "think-harder" or "ultrathink" modes
 
+#### 1a. 🧠 Reasoning-Only Stage (flag-only mode: `--reason` alone)
+**Stage**: `reasoning-only`
+**Agent**: guild-reasoning-agent (context-only)
+**Purpose**: Deep prompt analysis and interpretation debugging without subsequent stages
+**Changes**: **NONE** - Only provides reasoning analysis output to user
+**Input**: User prompt for analysis and clarification
+**Execution Logic**: 
+- **Execute if**: `--reason` is the only flag specified
+- **Output**: Detailed reasoning analysis, requirement clarification, and interpretation insights
+- **Focus**: Prompt debugging, understanding user intent, identifying edge cases and ambiguities
+
 #### 2. 🔍 Context Research Stage (always enabled by default)
 **Stage**: `context-research`  
 **Agents**: guild-project-research-agent, guild-global-research-agent (context-only, parallel execution)
 **Purpose**: Gather background information and technical context for all subsequent stages
 **Changes**: **NONE** - Only creates research context for other agents
 
+**Execution Logic**:
+- **Standard Mode**: Research context for subsequent stages (planning, implementation)
+- **Research-Only Mode**: When `--research` is the only flag, comprehensive research with detailed output to user
+
 **Parallel Research Execution**:
 - **Context Selection**: Automatically determines research focus areas based on task complexity
 - **Project Research**: Analyze codebase patterns, technology stack, constraints, and quality
 - **Global Research**: Research framework practices, community standards, trends, and integration patterns
 - **Coordination**: Smart context distribution to avoid overlap and maximize research coverage
+- **Research-Only Output**: When in research-only mode, provides comprehensive research summary to user
 
 #### 3. 🎯 Planning Stage (unless --no-plan)
 **Stage**: `planning`
@@ -234,9 +290,41 @@ Execute activated workflow stages in this mandatory order:
 **Changes**: **ALLOWED** - Creates code, modifies files, implements features
 **Input**: Structured context from context-only agents (reasoning, research, planning)
 **Execution Logic**: 
-- **Skip if**: `--no-implement` flag is present
+- **Skip if**: Flag-only modes are active (`--reason`, `--fix`, `--plan`, `--research`, `--spec`, or `--no-implement` used alone)
 - **Skip if**: Refactor-only mode (when `--refactor` is the only flag specified)
-- **Execute if**: Standard workflow or when combined with other feature flags
+- **Execute if**: Standard workflow or when flags are combined with other feature flags
+
+#### 4a. 🐛 Fix Stage (flag-only mode: `--fix` alone)
+**Stage**: `fix-execution`
+**Agents**: framework-coupled engineers (implementation agents)
+**Purpose**: Systematic bug detection and resolution without new feature implementation
+**Changes**: **ALLOWED** - Fixes bugs, modifies existing code for debugging
+**Input**: Bug analysis from reasoning, research context, and debugging strategy from planning
+**Execution Logic**: 
+- **Execute if**: `--fix` is the only flag specified
+- **Focus**: Root cause analysis, targeted fixes, regression prevention
+
+#### 4b. 📋 Plan Generation Stage (flag-only modes: `--plan` or `--no-implement` alone)
+**Stage**: `plan-generation`
+**Agents**: guild-planning-agent (context-only) + file generation
+**Purpose**: Create detailed planning documentation and save to file
+**Changes**: **ALLOWED** - Creates plan files in `.guild/plans/` directory
+**Input**: Strategic planning context and implementation approach
+**Execution Logic**:
+- **Execute if**: `--plan` or `--no-implement` is the only flag specified  
+- **Output**: Structured planning files with implementation guidance
+- **User Prompt**: Ask user if they want to save plan to file system
+
+#### 4c. 📝 Specification Generation Stage (flag-only mode: `--spec` alone)
+**Stage**: `specification-generation`
+**Agents**: guild-spec-agent (specification-updates-only)
+**Purpose**: Create or update project specifications without implementation
+**Changes**: **ALLOWED** - Creates/updates specification files in `.guild/specs/` directory
+**Input**: Specification requirements analysis and planning context
+**Execution Logic**:
+- **Execute if**: `--spec` is the only flag specified
+- **Output**: Structured specification files (project/component/model level)
+- **Focus**: Documentation creation without implementation changes
 
 #### 5. ♻️ Refactoring Stage (if --refactor)
 **Stages**: `refactor-planning` + refactoring execution
@@ -302,13 +390,33 @@ Execute activated workflow stages in this mandatory order:
 # Default workflow (reasoning + research + planning + implementation)
 /guild "Add error handling to the CLI installation process"
 
+# Reasoning-only mode (prompt analysis and debugging)
+/guild --reason "Implement a scalable microservices architecture with event-driven communication"
+# Executes: reasoning only (outputs detailed prompt analysis and clarification)
+
+# Fix-only mode (systematic bug fixing without implementation)
+/guild --fix "Installation script fails on Windows with permission errors"
+# Executes: reasoning → research → planning → fix stage
+
+# Planning-only mode (creates detailed plans and saves to file)
+/guild --plan "Implement user authentication system with JWT tokens"
+# Executes: reasoning → research → planning → save plan option
+
+# Research-only mode (comprehensive context gathering)
+/guild --research "React 18 concurrent features and Suspense best practices"
+# Executes: reasoning → research
+
+# Specification-only mode (creates/updates specs without implementation)
+/guild --spec "API authentication endpoints with OAuth2 support"
+# Executes: reasoning → research → planning → spec-analysis → spec-update
+
+# Legacy planning-only mode (saves to file) 
+/guild --no-implement "Analyze the NPM package structure for optimization opportunities"
+# Executes: reasoning → research → planning → option to save plan
+
 # Comprehensive workflow (--full flag: complete development lifecycle)
 /guild --full "Implement user authentication system"
 # Executes: reasoning → research → planning → implementation → testing → verification → refactoring
-
-# Planning-only mode (special combination - saves to file)
-/guild --no-implement "Analyze the NPM package structure for optimization opportunities"
-# Executes: reasoning → research → planning → option to save plan
 
 # Refactor-only mode (special combination - replaces implementation)
 /guild --refactor "Optimize the template processing system"

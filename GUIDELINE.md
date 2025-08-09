@@ -126,16 +126,24 @@ All agent-to-agent communication follows structured XML handoff templates:
 
 ### Key Flags
 - **--full**: Complete development lifecycle (7 stages)
-- **--spec**: Documentation-first development
+- **--fix**: Bug fixing workflow with systematic debugging  
+- **--plan**: Planning-only mode with optional save to file
+- **--research**: Research-only mode for context gathering
+- **--spec**: Documentation-first development with spec management
+- **--refactor/--test/--verify**: Enable optional quality stages
 - **--project**: Project-wide scope
-- **--no-reason/--no-plan**: Disable specific stages
-- **--refactor/--test/--verify**: Enable optional stages
+- **--no-reason/--no-plan/--no-implement**: Disable specific stages
+
+### Flag-Only Execution Modes
+When specific flags are used independently, Guild executes specialized workflow sequences:
+
+- **`--fix` only**: reasoning → research → planning → fix stage (no implementation)
+- **`--plan` only**: reasoning → research → planning → save plan option  
+- **`--research` only**: reasoning → research (no planning/implementation)
+- **`--spec` only**: reasoning → research → planning → specification stages (no implementation)
 
 ### Specialized Commands  
 - `/guild:setup [--standalone]`: Initialize system and agents
-- `/guild:fix`: Bug fixing workflow with root cause analysis
-- `/guild:plan`: Planning-only workflow
-- `/guild:spec`: Specification management
 
 **📋 Complete Workflow Details**: See [docs/workflows.md](./docs/workflows.md)
 
