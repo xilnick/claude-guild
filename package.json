@@ -50,7 +50,7 @@
     "install.js",
     "commands/",
     "README.md",
-    "GUIDELINE.md",
+    "guideline/README.md",
     "package.json"
   ],
   "publishConfig": {

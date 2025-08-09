@@ -31,7 +31,7 @@ claude-guild/
 
 1. **Make Changes**: Edit templates or commands
 2. **Test Locally**: Run `node install.js` to test
-3. **Update Docs**: Keep GUIDELINE.md current
+3. **Update Docs**: Keep guideline/README.md current
 4. **Submit PR**: Include tests and documentation
 
 ## Adding Features
@@ -107,7 +107,7 @@ node ../claude-guild/install.js
 - Put logic in processes
 - Use technology patterns, not names
 - Optimize for parallelization
-- Document changes in GUIDELINE.md
+- Document changes in guideline/README.md
 
 ## Publishing
 
@@ -138,7 +138,7 @@ npm publish
 
 - [ ] Tests pass
 - [ ] Documentation updated
-- [ ] GUIDELINE.md current
+- [ ] guideline/README.md current
 - [ ] Version bumped
 - [ ] Changelog updated
 
@@ -273,7 +273,7 @@ claude-guild/
 
 1. **Make Changes**: Edit templates or commands
 2. **Test Locally**: Run `node install.js` to test
-3. **Update Docs**: Keep GUIDELINE.md current
+3. **Update Docs**: Keep guideline/README.md current
 4. **Submit PR**: Include tests and documentation
 
 ## Adding Features
@@ -349,7 +349,7 @@ node ../claude-guild/install.js
 - Put logic in processes
 - Use technology patterns, not names
 - Optimize for parallelization
-- Document changes in GUIDELINE.md
+- Document changes in guideline/README.md
 
 ## Publishing
 
@@ -380,7 +380,7 @@ npm publish
 
 - [ ] Tests pass
 - [ ] Documentation updated
-- [ ] GUIDELINE.md current
+- [ ] guideline/README.md current
 - [ ] Version bumped
 - [ ] Changelog updated
 
