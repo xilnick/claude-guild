@@ -74,32 +74,33 @@ Claude Guild follows these core architectural principles:
 | **Agents** | Role specifications | Thin metadata files |
 | **Configuration** | User customization | Instructions.md files |
 
-## Template System
+## Dynamic Generation System
 
-### Installation Flow
+### Intelligence-Driven Installation Flow
 
 ```yaml
 1. NPM Package Installation:
-   - User runs: npx claude-guild
-   - System copies templates to project
+   - User runs: npx claude-guild@latest
+   - System analyzes project structure and patterns
    
-2. Template Processing:
-   - Read template files
-   - Inline content into commands
-   - Create .guild structure
+2. Project Intelligence Gathering:
+   - Detect technology stack and architecture patterns
+   - Assess project complexity and requirements
+   - Identify optimal agent specializations and workflow needs
    
-3. Command Registration:
-   - Copy commands to .claude/commands/
-   - Commands contain inlined templates
-   - No external dependencies
+3. Intelligent System Generation:
+   - Generate agents with embedded project intelligence
+   - Create self-contained commands with embedded logic
+   - Configure context engineering for detected patterns
+   - No external dependencies after generation
 ```
 
-### Why Template Inlining?
+### Why Pure Dynamic Generation?
 
-1. **Self-contained**: Commands work without external files
-2. **Version consistency**: Templates frozen at installation
-3. **Performance**: No runtime file reading
-4. **Reliability**: No missing file errors
+1. **True Intelligence**: Agents understand specific project context and patterns
+2. **Future-Proof**: Adapts to any technology evolution without system updates
+3. **Self-Contained**: Generated systems work independently with embedded intelligence
+4. **Project-Adaptive**: Optimized for actual project patterns, architecture, and needs
 
 ## Agent Architecture
 
@@ -131,15 +132,15 @@ context_optimization: enabled
 - Optimization: {Context compression and transfer strategies}
 ```
 
-### Agent Lifecycle
+### Dynamic Agent Generation Lifecycle
 
 ```mermaid
 graph LR
-    A[Template] --> B[Technology Detection]
-    B --> C[Context Injection]
-    C --> D[Agent Creation]
-    D --> E[Process Binding]
-    E --> F[Ready for Execution]
+    A[Project Analysis] --> B[Pattern Recognition]
+    B --> C[Intelligence Synthesis]
+    C --> D[Context-Aware Agent Generation]
+    D --> E[Logic Embedding]
+    E --> F[Self-Contained System Ready]
 ```
 
 ### Agent Types
@@ -324,7 +325,7 @@ Format:
 
 ```yaml
 1. Defaults (Built-in):
-   Location: templates/instructions.md
+   Location: Embedded in setup command logic
    Scope: All projects
    
 2. Project (Customized):
@@ -394,23 +395,23 @@ Resource Management:
 ```yaml
 Custom Processes:
   Location: .guild/processes/
-  Format: Standard process definition
-  Usage: Reference in agents
+  Format: Dynamic process definition with embedded intelligence
+  Usage: Reference in dynamically generated agents
 
 Custom Agents:
-  Location: .guild/agents/
-  Format: Thin agent template
-  Usage: Include in routing
+  Location: .claude/agents/guild/ (standardized placement)
+  Format: Thin agent with embedded project intelligence
+  Usage: Include in intelligent routing system
 
 Custom Commands:
   Location: .claude/commands/
-  Format: Command template
-  Usage: Direct invocation
+  Format: Self-contained command with embedded logic
+  Usage: Direct invocation with project-specific optimization
 
 Custom Patterns:
-  Location: .guild/patterns/
-  Format: Pattern definitions
-  Usage: Technology detection
+  Location: Embedded in setup analysis algorithms
+  Format: Dynamic pattern recognition rules
+  Usage: Intelligent technology detection and adaptation
 ```
 
 ### Plugin System
@@ -422,15 +423,17 @@ Plugin Structure:
     version: semver
     requirements: dependencies
     
-  processes:
-    - custom process definitions
+  analysis_extensions:
+    - custom project pattern recognition
+    - specialized technology detection algorithms
     
-  agents:
-    - specialist agent templates
+  generation_enhancements:
+    - specialist agent generation logic
+    - domain-specific intelligence injection
     
   integration:
-    - setup instructions
-    - configuration
+    - setup command extensions
+    - intelligent configuration enhancement
 ```
 
 ## Integration Points
@@ -517,10 +520,10 @@ Command Level:
 - **Solution**: Separate metadata from logic
 - **Benefit**: Easier maintenance and extension
 
-### Decision: Template Inlining
-- **Problem**: Runtime dependencies and failures
-- **Solution**: Inline templates during installation
-- **Benefit**: Self-contained, reliable commands
+### Decision: Pure Dynamic Generation
+- **Problem**: Static systems can't adapt to diverse project patterns and evolving technologies
+- **Solution**: Intelligent analysis and generation of project-specific agents with embedded logic
+- **Benefit**: True project intelligence, future-proof adaptation, self-contained reliability
 
 ### Decision: Process Centralization
 - **Problem**: Logic duplication across agents
@@ -551,12 +554,12 @@ Command Level:
 
 ## Summary
 
-Claude Guild's architecture achieves power through simplicity:
+Claude Guild's architecture achieves intelligence through dynamic adaptation:
 
-- **Clean separation** between orchestration, logic, metadata, and configuration
-- **Technology agnostic** through pattern detection
-- **Performance optimized** through parallelization and context management
-- **Easily extensible** through plugins and custom definitions
-- **Reliable execution** through template inlining and error handling
+- **Intelligent separation** between analysis, generation, execution, and optimization
+- **Technology adaptive** through dynamic pattern recognition and learning
+- **Performance optimized** through project-specific parallelization and context engineering
+- **Infinitely extensible** through intelligent analysis and dynamic generation capabilities
+- **Reliable execution** through self-contained systems with embedded project intelligence
 
 This architecture scales from simple single-agent tasks to complex parallel workflows while maintaining clarity and maintainability.
