@@ -6,27 +6,89 @@
 
 ## Project Analysis Prompts
 
-### Initial Project Understanding
+### Pattern-Based Project Intelligence
 ```yaml
-prompt: project_analysis
+prompt: project_pattern_analysis
 content: |
-  Analyze this project comprehensively using all available tools.
+  Perform deep pattern-based analysis of this project using all available tools.
   
-  Understand:
-  1. **Purpose**: What does this project do? What problem does it solve?
-  2. **Architecture**: How is the project structured? What patterns does it follow?
-  3. **Technologies**: What languages, frameworks, and tools are used?
-  4. **Complexity**: How complex is the codebase? What are the main challenges?
-  5. **Workflows**: What development patterns and practices are evident?
-  6. **Quality Standards**: What testing, linting, and quality tools are present?
+  **Technology-Agnostic Pattern Recognition**:
   
-  Use your full capabilities to:
-  - Read key files (README, package.json, requirements.txt, etc.)
-  - Analyze directory structure
-  - Understand code patterns
-  - Identify architectural decisions
+  1. **Architectural Patterns**:
+     - What fundamental architectural styles are used? (layered, microservices, component-based, event-driven, domain-driven)
+     - How does the project organize responsibilities and boundaries?
+     - What communication patterns exist between components?
   
-  Provide a comprehensive project profile that will guide agent generation.
+  2. **Development Flow Patterns**:
+     - How is work broken down and organized?
+     - What development lifecycle patterns are evident?
+     - What quality assurance and validation patterns exist?
+  
+  3. **Data Flow Patterns**:
+     - How does information move through the system?
+     - What transformation and processing patterns are used?
+     - Where are the critical data boundaries?
+  
+  4. **Integration Patterns**:
+     - How does the project interact with external systems?
+     - What interface and contract patterns are used?
+     - How are dependencies managed and abstracted?
+  
+  5. **Scalability Patterns**:
+     - How does the project handle growth and change?
+     - What modularity and extensibility patterns are evident?
+     - Where are the flexibility and adaptation points?
+  
+  **Beyond Technology Labels**:
+  - Ignore framework names, focus on underlying patterns
+  - Identify organizational principles that transcend specific tools
+  - Recognize patterns that would apply regardless of technology choices
+  - Understand the "shape" of the project's complexity
+  
+  **Context Understanding**:
+  - What domain knowledge is embedded in the codebase?
+  - What business rules and constraints are evident?
+  - What user interaction patterns exist?
+  - What operational patterns are required?
+  
+  Generate a rich pattern profile that enables creating agents specialized for this project's unique characteristics, not its technology stack.
+```
+
+### Project Complexity Profiling
+```yaml
+prompt: project_complexity_profiling
+content: |
+  Based on pattern analysis: ${pattern_analysis}
+  
+  Create a multi-dimensional complexity profile:
+  
+  1. **Cognitive Complexity**:
+     - How much domain knowledge is required?
+     - What level of context must be maintained?
+     - How interconnected are the various concerns?
+  
+  2. **Structural Complexity**:
+     - How many distinct patterns interact?
+     - What is the depth of abstraction layers?
+     - How many integration points exist?
+  
+  3. **Change Complexity**:
+     - How much context is needed to make safe changes?
+     - What ripple effects do modifications typically have?
+     - How much validation is required for changes?
+  
+  4. **Coordination Complexity**:
+     - How many different concerns must work together?
+     - What level of orchestration is needed?
+     - How much parallel work is possible?
+  
+  **Intelligence Allocation Strategy**:
+  - Which tasks require enhanced thinking modes (ultrathink, think-harder)?
+  - Where can standard thinking modes be effectively used?
+  - What level of agent specialization serves this complexity level?
+  - How should context be managed to optimize performance?
+  
+  Output a complexity profile that guides optimal resource allocation.
 ```
 
 ### Complexity Assessment
@@ -54,32 +116,86 @@ content: |
 
 ## Agent Generation Prompts
 
-### Dynamic Agent Creation
+### Pattern-Driven Agent Generation
 ```yaml
-prompt: generate_agents
+prompt: generate_pattern_agents
 content: |
-  Based on this project profile: ${project_profile}
-  And complexity assessment: ${complexity_assessment}
+  Based on pattern analysis: ${pattern_analysis}
+  And complexity profile: ${complexity_profile}
   
-  Design a specialized agent system:
+  **Generate agents specialized for THIS project's unique patterns**:
   
-  1. **Strategic Agents** (Context-Only):
-     - What reasoning capabilities are needed for this project?
-     - What planning approaches fit the architecture?
-     - What research patterns match the technology stack?
+  **Analysis: What specialization patterns does this project need?**
   
-  2. **Implementation Agents**:
-     - What technical specialists are required?
-     - How should they understand the project's patterns?
-     - What quality standards should they enforce?
+  1. **Pattern Specialization Requirements**:
+     - Which architectural patterns need dedicated understanding?
+     - What domain-specific knowledge requires specialized agents?
+     - Which integration patterns need coordinated handling?
+     - What complexity areas benefit from specialized attention?
   
-  For each agent, define:
-  - Specific role and responsibilities
-  - Project-specific context and knowledge
-  - Appropriate thinking mode
-  - Interaction patterns with other agents
+  2. **Cognitive Load Distribution**:
+     - Which concerns require enhanced thinking capabilities?
+     - What tasks can be efficiently handled with standard thinking?
+     - Where does parallel execution provide optimal benefits?
+     - How should context be distributed across agents?
   
-  Generate agent definitions that deeply understand this specific project.
+  **Agent Generation Strategy**:
+  
+  1. **Context-Only Agents** (Analysis & Planning):
+     - Generate agents that understand the project's specific patterns
+     - Each agent should have deep knowledge of relevant architectural and domain patterns
+     - Configure appropriate thinking modes based on cognitive complexity
+  
+  2. **Implementation Agents** (Execution):
+     - Generate agents specialized for the project's specific implementation patterns
+     - Focus on pattern-based understanding rather than technology labels
+     - Include deep context about the project's conventions and constraints
+  
+  **For each generated agent, provide**:
+  - **Role Definition**: What specific pattern-based responsibility
+  - **Pattern Context**: Deep understanding of relevant project patterns
+  - **Thinking Configuration**: Optimal thinking mode for this agent's complexity
+  - **Coordination Protocol**: How this agent works with others
+  - **Quality Standards**: What this agent optimizes for
+  
+  **Generate agent definitions that are uniquely tuned to this project's patterns and complexity, not generic templates.**
+```
+
+### Agent Context Engineering
+```yaml
+prompt: engineer_agent_context
+content: |
+  For this specific agent role: ${agent_role}
+  In this project context: ${project_patterns}
+  With this complexity profile: ${complexity_profile}
+  
+  **Engineer deep, project-specific agent context**:
+  
+  1. **Pattern Expertise Injection**:
+     - What architectural patterns must this agent deeply understand?
+     - Which domain patterns are critical for this agent's success?
+     - What integration patterns affect this agent's work?
+     - Which quality patterns should this agent enforce?
+  
+  2. **Project-Specific Intelligence**:
+     - What conventions and standards are unique to this project?
+     - Which codebase patterns should this agent recognize and follow?
+     - What are the critical decision points and trade-offs?
+     - Where are the common pitfalls and how to avoid them?
+  
+  3. **Context Optimization**:
+     - What level of detail optimizes this agent's effectiveness?
+     - How should project knowledge be structured for optimal access?
+     - What examples and patterns aid understanding?
+     - What references and citations provide continued learning?
+  
+  4. **Coordination Intelligence**:
+     - How does this agent's work intersect with other agents?
+     - What context should be shared vs. kept specialized?
+     - What handoff protocols optimize workflow efficiency?
+     - How should this agent communicate its work and decisions?
+  
+  **Generate rich, contextual agent intelligence that enables pattern-based reasoning and project-specific optimization.**
 ```
 
 ### Agent Context Injection
@@ -112,36 +228,91 @@ content: |
 
 ## Workflow Orchestration Prompts
 
-### Task Analysis
+### Intelligence-Driven Task Analysis
 ```yaml
-prompt: analyze_task
+prompt: analyze_task_intelligence
 content: |
   Given this task: ${user_task}
-  In this project context: ${project_context}
+  In this pattern context: ${project_patterns}
+  With complexity profile: ${complexity_profile}
+  And available agent capabilities: ${agent_roster}
   
-  Perform comprehensive task analysis:
+  **Perform deep, pattern-aware task analysis**:
   
-  1. **Understanding**:
-     - What is the core requirement?
-     - What are the implicit expectations?
-     - What constitutes success?
+  1. **Intent Understanding**:
+     - What is the core requirement beyond the surface request?
+     - What implicit expectations arise from the project's patterns?
+     - What domain knowledge is required for success?
+     - How does this align with the project's architectural patterns?
   
-  2. **Impact Analysis**:
-     - Which parts of the codebase will be affected?
-     - What are the dependencies and interactions?
-     - What are the potential risks?
+  2. **Pattern Impact Analysis**:
+     - Which architectural patterns will be affected or leveraged?
+     - What domain patterns are relevant to this task?
+     - Which integration patterns create constraints or opportunities?
+     - How do the project's scalability patterns influence the approach?
   
-  3. **Approach Design**:
-     - What is the optimal implementation strategy?
-     - Which agents should be involved and in what sequence?
-     - What context needs to be gathered?
+  3. **Complexity Assessment**:
+     - What level of cognitive complexity does this task require?
+     - Where are the coordination complexity challenges?
+     - What change complexity considerations apply?
+     - How much context needs to be maintained?
   
-  4. **Quality Criteria**:
-     - What tests are needed?
-     - What documentation should be updated?
-     - What review criteria apply?
+  4. **Agent Strategy Design**:
+     - Which agents are optimally suited for different aspects?
+     - What thinking modes should be allocated to each agent?
+     - How should work be parallelized for efficiency?
+     - What context handoff protocols optimize the workflow?
   
-  Output a structured task analysis for workflow execution.
+  5. **Success Criteria Definition**:
+     - What pattern compliance validates success?
+     - What quality gates align with project standards?
+     - How should validation be distributed across agents?
+     - What documentation or tests align with project patterns?
+  
+  **Output a rich task analysis that enables intelligent workflow orchestration based on project-specific patterns and optimal agent allocation.**
+```
+
+### Dynamic Workflow Strategy Generation
+```yaml
+prompt: generate_workflow_strategy
+content: |
+  Based on task analysis: ${task_analysis}
+  With agent capabilities: ${agent_capabilities}  
+  And project patterns: ${project_patterns}
+  
+  **Generate optimal workflow strategy for THIS specific task and project**:
+  
+  1. **Workflow Architecture**:
+     - What workflow composition optimizes for this task type?
+     - How should stages be sequenced for optimal context flow?
+     - Where can parallel execution provide benefits without conflicts?
+     - What are the critical synchronization points?
+  
+  2. **Agent Orchestration**:
+     - Which agents should lead each workflow stage?
+     - How should context be distributed and aggregated?
+     - What thinking modes optimize each stage?
+     - Where should enhanced thinking be allocated for maximum impact?
+  
+  3. **Context Engineering Strategy**:
+     - What context accumulation strategy optimizes workflow efficiency?
+     - How should project patterns be referenced throughout?
+     - What level of detail should be maintained at each stage?
+     - Where can context be compressed without losing critical information?
+  
+  4. **Quality Integration**:
+     - How should validation be distributed across workflow stages?
+     - What quality patterns should be enforced at each stage?
+     - Where are the critical quality gates for this task type?
+     - How should testing and verification be integrated?
+  
+  5. **Adaptive Execution**:
+     - What are the decision points that might change the workflow?
+     - How should the workflow adapt to unexpected discoveries?
+     - What fallback strategies apply if agents encounter issues?
+     - How should the workflow learn and optimize during execution?
+  
+  **Generate an executable workflow strategy that maximizes effectiveness for this specific task within this project's unique patterns.**
 ```
 
 ### Workflow Strategy

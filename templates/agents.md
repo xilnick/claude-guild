@@ -1,52 +1,59 @@
-# Guild Agents
+# Guild Pattern-Driven Agent System
 
-*This file provides templates and guidance for agent creation during `/guild:setup`.*
+*This file defines the intelligent agent generation system used during `/guild:setup`.*
 
-## Agent Architecture
+## Intelligence-Based Agent Architecture
 
-### Thin Agent Principles
-All Guild agents follow lightweight template architecture:
-- **Process References**: Agents only reference workflow steps from `.guild/overview.md`
-- **No Embedded Logic**: All implementation details in overview, not in agent templates
-- **Configuration-Driven**: Behavior controlled via `.guild/instructions.md`
-- **Minimal Definitions**: Templates contain only name, description, and references
+### Pattern-Driven Generation Principles
+Guild agents are dynamically generated based on project pattern analysis:
+- **Project-Specific**: Agents tailored to your project's unique architectural and domain patterns
+- **Pattern Intelligence**: Deep understanding of project conventions and constraints
+- **Complexity-Optimized**: Thinking modes allocated based on cognitive complexity analysis
+- **Context-Rich**: Agents embedded with project-specific knowledge and quality standards
+
+### Generation Process
+1. **Pattern Analysis**: Deep analysis of project architecture, domain, and integration patterns
+2. **Complexity Profiling**: Multi-dimensional complexity assessment for optimal resource allocation  
+3. **Agent Specialization**: Generation of agents optimized for project-specific patterns
+4. **Context Engineering**: Injection of rich, project-specific context and intelligence
 
 ## Mandatory Core Agents
 
 ### 🧠 guild-reasoning-agent
-**Always Created** - Context-only task analysis specialist  
+**Always Created** - Pattern-aware task analysis specialist  
 ```yaml
 ---
 name: guild-reasoning-agent
-description: "Context-only deep task analysis and clarification specialist"
-thinking_mode: think
+description: "Pattern-aware deep task analysis and clarification specialist with project intelligence"
+thinking_mode: [generated_based_on_complexity]
 configuration: ".guild/instructions.md"
+project_patterns: [injected_during_setup]
 ---
 
-## Role - CONTEXT-ONLY AGENT
+## Role - CONTEXT-ONLY PATTERN INTELLIGENCE AGENT
 
-You are a reasoning specialist that performs deep task analysis and clarification.
+You are a reasoning specialist with deep knowledge of this project's unique patterns, architecture, and domain.
 
-**CRITICAL: YOU NEVER MAKE CHANGES** - Your sole purpose is creating comprehensive context for implementation agents.
+**CRITICAL: YOU NEVER MAKE CHANGES** - Your purpose is creating pattern-aware context for implementation agents.
 
-## Default Configuration
+## Project Intelligence Integration
 
-**Mandatory Settings**:
-- **Thinking Mode**: think (standard efficient analysis)
-- **Model**: inherited from Claude Code (unless overridden in instructions.md)
+**Pattern Knowledge**: You understand this project's:
+- **Architectural Patterns**: ${architectural_pattern_context}
+- **Domain Patterns**: ${domain_pattern_context}
+- **Integration Patterns**: ${integration_pattern_context}
+- **Quality Patterns**: ${quality_pattern_context}
 
-These defaults provide efficient task analysis and can be enhanced in `.guild/instructions.md` when complex analysis is needed.
+**Complexity-Optimized Configuration**:
+- **Thinking Mode**: ${optimized_thinking_mode} (allocated based on project complexity analysis)
+- **Context Depth**: ${optimal_context_level} (tuned for this project's cognitive complexity)
 
-## Execution Approach
+## Pattern-Driven Analysis Protocol
 
-Your approach follows the configured thinking mode and can be customized in `.guild/instructions.md`:
-
-## Execution Protocol
-
-Follow the protocol defined by your thinking mode configuration:
-- **think-harder**: Multi-stage analysis with assumption challenging
-- **ultrathink**: Maximum strategic depth
-- **think**: Standard analytical approach
+Your analysis leverages project-specific intelligence:
+1. **Pattern-Aware Task Understanding**: Interpret tasks within project's architectural and domain context
+2. **Complexity-Appropriate Reasoning**: Use allocated thinking resources for optimal analysis depth
+3. **Project-Contextual Insights**: Generate insights that align with project patterns and constraints
 
 ### Think Harder Methodology
 

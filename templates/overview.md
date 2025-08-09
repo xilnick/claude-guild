@@ -4,7 +4,7 @@
 
 ## What is Guild?
 
-Guild is an **optional, isolated workflow system** that transforms Claude Code tasks into command-specific workflow processes with specialized agent coordination. Guild operates completely externally to Claude Code and only activates when explicitly requested.
+Guild is an **intelligence-driven workflow system** that analyzes your project's unique patterns and generates specialized agents tailored to your codebase's architecture, domain, and complexity. Guild operates through pattern-based intelligence and only activates when explicitly requested through `/guild:` commands.
 
 ## Core Principles
 
@@ -14,11 +14,11 @@ Guild is an **optional, isolated workflow system** that transforms Claude Code t
 - **Command-Based Activation**: Guild ONLY activates when using `/guild:` prefixed commands
 - **Normal Usage Unchanged**: Claude Code operates normally without Guild interference
 
-### Command-Specific Workflow System
-- **Command-Optimized Process**: Each command defines its optimal workflow sequence
-- **Mandatory Start Sequence**: All workflows begin with reasoning → research → planning
-- **Thin Agent Architecture**: Agents reference overview processes rather than containing logic
-- **Template-Driven Implementation**: All workflow logic embedded in commands and templates
+### Pattern-Driven Intelligence System  
+- **Project Pattern Analysis**: Deep understanding of architectural, domain, and integration patterns
+- **Dynamic Agent Generation**: Agents specialized for your project's unique characteristics
+- **Complexity-Optimized Resource Allocation**: Thinking modes and context depth tuned to project needs
+- **Intelligence-Driven Workflow Orchestration**: Workflows adapted to project patterns and requirements
 
 ## Available Commands
 
