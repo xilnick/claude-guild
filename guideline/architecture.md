@@ -4,64 +4,71 @@
 
 Claude Guild follows these core architectural principles:
 
-### 1. Simplicity Over Complexity
-- **Thin agents**: Metadata-only definitions (<20 lines) with integrated thinking modes
-- **Centralized processes**: All logic in one place with context optimization
-- **Clear separation**: Each layer has single responsibility with structured handoffs
+### 1. Prompt-First Intelligence
+- **All intelligence through prompts**: No hardcoded detection or patterns
+- **Claude-native analysis**: Leverage Claude's full understanding capabilities
+- **Dynamic adaptation**: Let Claude determine optimal approaches
+- **Future-proof design**: New models automatically improve the system
+
+### 2. Simplicity Through Orchestration
+- **Thin orchestration layer**: <500 lines of coordination code
+- **Prompt library**: All intelligence defined in prompts.md
+- **Clear separation**: Orchestration invokes prompts, Claude provides intelligence
 - **Minimal configuration**: Sensible defaults, override when needed
 
-### 2. Technology Agnostic
-- **Pattern detection**: Recognize patterns, not specific frameworks
-- **Universal workflows**: Work with any technology stack
-- **Future-proof**: Adapts to new technologies automatically
-- **No hardcoding**: No framework-specific implementations
+### 3. Technology Agnostic Through Intelligence
+- **No pattern detection**: Ask Claude to understand projects
+- **Universal understanding**: Claude analyzes any technology stack
+- **Automatic adaptation**: Claude identifies optimal approaches
+- **No hardcoding**: Zero framework-specific implementations
 
-### 3. Performance First
-- **Parallel by default**: Concurrent execution when possible
-- **Context optimization**: Smart filtering and compression with XML structuring
-- **Streaming pipelines**: Continuous flow with progressive context building
-- **Adaptive strategies**: Dynamic adjustment based on conditions and thinking modes
+### 4. Performance Through Intelligence
+- **Smart analysis**: Claude determines what needs investigation
+- **Context optimization**: Claude engineers optimal context packages
+- **Adaptive strategies**: Claude adjusts approach based on project
+- **Thinking mode allocation**: Claude determines cognitive requirements
 
-### 4. Context Engineering Excellence
-- **Long-context optimization**: Reference-based linking and hierarchical summarization
-- **Structured handoffs**: XML-tagged context transfer between agents
-- **Progressive detail**: Start with summaries, expand as needed
-- **Intelligent compression**: Automatic relevance filtering and context pruning
+### 5. Context Engineering Excellence
+- **Prompt-driven optimization**: Claude creates optimal context structures
+- **Structured handoffs**: Claude generates XML-tagged packages
+- **Progressive detail**: Claude determines detail levels
+- **Intelligent compression**: Claude performs relevance filtering
 
-### 5. Cognitive Resource Allocation
-- **Thinking mode integration**: Strategic use of enhanced reasoning capabilities
-- **Chain-of-thought reasoning**: Structured problem decomposition
-- **Appropriate cognitive load**: Match thinking complexity to task requirements
+### 6. Cognitive Resource Allocation
+- **Dynamic thinking modes**: Claude determines appropriate reasoning level
+- **Task-adapted reasoning**: Claude matches complexity to requirements
+- **Efficient resource use**: Claude optimizes cognitive load
 
-## Four-Layer Architecture
+## Prompt-Driven Architecture
 
 ```
 ┌─────────────────────────────────────────────────┐
+│            Prompts (Intelligence)               │
+│  - Project analysis prompts                     │
+│  - Agent generation prompts                     │
+│  - Workflow orchestration prompts               │
+│  - Quality assurance prompts                    │
+└─────────────────────────────────────────────────┘
+                        ↓
+┌─────────────────────────────────────────────────┐
 │            Commands (Orchestration)             │
 │  - Parse input and flags                        │
-│  - Initialize workflow stages                   │
-│  - Coordinate execution                         │
+│  - Invoke appropriate prompts                   │
+│  - Coordinate Claude's execution                │
 └─────────────────────────────────────────────────┘
                         ↓
 ┌─────────────────────────────────────────────────┐
-│           Processes (Logic)                     │
-│  - Define execution steps                       │
-│  - Handle errors and retries                    │
-│  - Support parallelization                      │
+│         Claude Analysis (Understanding)         │
+│  - Analyze project using full capabilities      │
+│  - Understand patterns and architecture         │
+│  - Determine optimal approaches                 │
 └─────────────────────────────────────────────────┘
                         ↓
 ┌─────────────────────────────────────────────────┐
-│            Agents (Metadata)                    │
-│  - Reference processes                          │
-│  - Define roles and boundaries                  │
-│  - Enable coordination                          │
-└─────────────────────────────────────────────────┘
-                        ↓
-┌─────────────────────────────────────────────────┐
-│         Configuration (Customization)           │
-│  - Override defaults                            │
-│  - Set model preferences                        │
-│  - Control parallelization                      │
+│       Dynamic Generation (Adaptation)           │
+│  - Generate project-specific agents             │
+│  - Create optimized workflows                   │
+│  - Configure based on analysis                  │
 └─────────────────────────────────────────────────┘
 ```
 
@@ -69,38 +76,40 @@ Claude Guild follows these core architectural principles:
 
 | Layer | Purpose | Implementation |
 |-------|---------|----------------|
-| **Commands** | User interface and orchestration | Markdown files with embedded logic |
-| **Processes** | Reusable workflow logic | Process definitions in templates |
-| **Agents** | Role specifications | Thin metadata files |
-| **Configuration** | User customization | Instructions.md files |
+| **Prompts** | System intelligence | Prompt library defining all behaviors |
+| **Commands** | Orchestration | Simple coordination invoking prompts |
+| **Analysis** | Understanding | Claude analyzes using full capabilities |
+| **Generation** | Adaptation | Claude generates project-specific system |
 
-## Dynamic Generation System
+## Prompt-Based Generation System
 
-### Intelligence-Driven Installation Flow
+### Intelligence Through Prompts Flow
 
 ```yaml
 1. NPM Package Installation:
    - User runs: npx claude-guild@latest
-   - System analyzes project structure and patterns
+   - System loads prompt library
    
-2. Project Intelligence Gathering:
-   - Detect technology stack and architecture patterns
-   - Assess project complexity and requirements
-   - Identify optimal agent specializations and workflow needs
+2. Claude-Driven Analysis:
+   - Invoke project_analysis prompt
+   - Claude uses all tools to understand project
+   - Claude determines architecture, technologies, patterns
    
 3. Intelligent System Generation:
-   - Generate agents with embedded project intelligence
-   - Create self-contained commands with embedded logic
-   - Configure context engineering for detected patterns
-   - No external dependencies after generation
+   - Claude generates agents using agent generation prompts
+   - Claude creates workflows using orchestration prompts
+   - Claude configures system using configuration prompts
+   - All intelligence from Claude, not hardcoded logic
 ```
 
-### Why Pure Dynamic Generation?
+### Why Prompt-First Generation?
 
-1. **True Intelligence**: Agents understand specific project context and patterns
-2. **Future-Proof**: Adapts to any technology evolution without system updates
-3. **Self-Contained**: Generated systems work independently with embedded intelligence
-4. **Project-Adaptive**: Optimized for actual project patterns, architecture, and needs
+1. **True Intelligence**: Claude understands projects, not pattern matching
+2. **Future-Proof**: New Claude models automatically improve everything
+3. **Zero Maintenance**: No need to update for new technologies
+4. **Maximum Flexibility**: Works with any project Claude can understand
+5. **Self-Contained**: Generated systems work independently
+6. **Project-Adaptive**: Optimized for actual project needs
 
 ## Agent Architecture
 

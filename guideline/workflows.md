@@ -1,22 +1,31 @@
 # Workflow Orchestration
 
-Comprehensive workflow stages, execution patterns, and flag system for Claude Guild.
+Prompt-driven workflow orchestration powered by Claude's intelligence.
 
 ## Overview
 
-Guild workflows provide structured execution patterns that adapt to task complexity and requirements. The system supports multiple workflow types, from simple direct execution to comprehensive development lifecycles.
+Guild workflows are orchestrated through prompts that leverage Claude's full understanding capabilities. Instead of hardcoded patterns, Claude analyzes each task and determines the optimal workflow based on project context and requirements.
 
-## Core Workflow Stages
+## Prompt-Driven Workflow Stages
 
-### Standard Execution Pattern
+### Claude-Orchestrated Execution
 
 ```yaml
-Standard Workflow (Default):
-  1. Analysis: Understand task requirements (context-only, ultrathink)
-  2. Research: Gather context (dual-phase, context-only)
-  3. Planning: Route to appropriate agents (context-only, ultrathink)
-  4. Implementation: Execute task (changes allowed, think)
-  5. Validation: Verify results (changes allowed, think)
+Workflow Orchestration Process:
+  1. Task Analysis (via prompt):
+     - Claude analyzes task using task_analysis prompt
+     - Determines requirements, impacts, approach
+     - Identifies needed agents and context
+     
+  2. Workflow Strategy (via prompt):
+     - Claude creates strategy using workflow_strategy prompt
+     - Determines optimal stage sequence
+     - Assigns appropriate thinking modes
+     
+  3. Dynamic Execution:
+     - Claude orchestrates agents based on analysis
+     - Adapts workflow to project and task needs
+     - Optimizes for efficiency and quality
 ```
 
 ### Specification-Driven Workflow (--spec flag)

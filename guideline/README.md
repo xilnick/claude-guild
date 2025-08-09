@@ -7,9 +7,11 @@
 | Guide | Purpose |
 |-------|---------|
 | **[README.md](../README.md)** | Complete system entry point and user documentation |
+| **[Prompts](prompts.md)** | Core intelligence library - all system prompts |
 | **[Getting Started](getting-started.md)** | Installation, usage, and setup |
-| **[Architecture](architecture.md)** | Complete system architecture |
-| **[Agents](agents.md)** | Agent specifications and design |
+| **[Architecture](architecture.md)** | Prompt-driven system architecture |
+| **[Agents](agents.md)** | Dynamic agent generation through prompts |
+| **[Workflows](workflows.md)** | Prompt-orchestrated workflow patterns |
 | **[Performance](performance.md)** | Optimization strategies |
 | **[Development](development.md)** | Contributing guidelines |
 | **[Extensibility](extensibility.md)** | Customization and plugins |
@@ -18,14 +20,14 @@
 
 ## System Overview
 
-Claude Guild transforms development workflows through zero-dependency global installation and comprehensive workflow orchestration.
+Claude Guild transforms development workflows through prompt-driven intelligence and Claude-native project understanding.
 
-### Installation - Self-Contained & Reliable
+### Installation - Intelligence Through Prompts
 ```bash
 npx claude-guild@latest
 ```
 
-**✅ Global Installation Guarantee**: Guild's self-contained architecture ensures 100% reliable setup across all environments without external dependencies.
+**✅ Claude-Native Intelligence**: Guild leverages Claude's full capabilities through prompts, automatically improving with each new model release.
 
 ### Immediate Setup
 ```bash
@@ -39,12 +41,12 @@ npx claude-guild@latest
 
 ## Key Features & Value Proposition
 
-### Dynamic Agent Generation (Primary Differentiator)
-- **Project-Adaptive Agents**: Setup analyzes your project and generates agents with deep contextual understanding
-- **Technology Stack Intelligence**: Agents created specifically for your frontend/backend/systems programming combinations
-- **Contextual Workflow Optimization**: Each workflow stage optimized for your specific architectural patterns
-- **Zero-Configuration Intelligence**: Agents understand your codebase patterns without manual configuration
-- **Living Agent Ecosystem**: Agents that grow and adapt with your project evolution
+### Prompt-Driven Intelligence (Primary Differentiator)
+- **Claude-Native Analysis**: Claude understands your project using full capabilities, not pattern matching
+- **Dynamic Agent Generation**: Claude creates agents specific to YOUR project through prompts
+- **Intelligent Workflow Orchestration**: Claude determines optimal workflows for each task
+- **Future-Proof Design**: Automatically improves with each new Claude model release
+- **Zero Maintenance**: No need to update for new technologies - Claude understands them
 
 ### Self-Contained Distribution Architecture
 - **Zero-dependency global installation** via NPM with 100% reliability  
