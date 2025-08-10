@@ -4,7 +4,7 @@
 
 **Interactive Mode**: `/guild [flags]` - If no task is provided, Guild will prompt you for the task interactively
 
-**Purpose**: Execute any task with Guild's comprehensive multi-stage workflow system featuring deep reasoning, strategic planning, and systematic implementation.
+**Purpose**: Execute any task with Guild's comprehensive multi-stage workflow system using project-specific agents dynamically discovered at runtime.
 
 ## Workflow Stage System
 
@@ -169,13 +169,28 @@ Based on detected technologies, provide relevant examples:
 
 ## Guild Configuration Check
 
-First, check if Guild is configured for this project by looking for `.guild/instructions.md` and validate Guild file integrity:
+First, dynamically discover Guild agents and configuration for this project:
 
-**Configuration Validation**:
-1. **Instructions File**: Check for `.guild/instructions.md` (required for Guild operation)
-2. **Ignore Patterns**: Check for `.guild/ignore.md` (create default if missing)
-3. **Agent Directory**: Verify `.claude/agents/guild/` contains Guild agents
-4. **Partial Setup Recovery**: If some files missing, provide guidance for completion
+### Dynamic Agent Discovery
+
+**Step 1: Check Guild Configuration**
+- Look for `.guild/instructions.md` (project configuration)
+- Look for `.guild/ignore.md` (ignore patterns)
+- If missing, Guild may not be fully configured
+
+**Step 2: Discover Available Agents**
+- Check `.claude/agents/guild/` directory for Guild agents
+- Dynamically identify available agents:
+  - **Core Agents**: guild-reasoning-agent, guild-planning-agent, guild-*-research-agent
+  - **Implementation Agents**: Any guild-*-engineer agents found
+  - **Quality Agents**: guild-verification-agent, guild-spec-agent if present
+  - **Project-Specific Agents**: Any other guild-* agents discovered
+
+**Step 3: Adapt Workflow to Available Agents**
+- If core agents missing: Provide setup guidance
+- If implementation agents missing: Use available engineers or provide guidance
+- If quality agents missing: Skip those stages or provide alternatives
+- Always work with what's available in the project
 
 ### If Guild NOT Configured
 
@@ -218,7 +233,7 @@ Execute activated workflow stages in this mandatory order:
 
 #### 1. 🧠 Reasoning Stage (unless --no-reason)
 **Stage**: `prompt-analysis`
-**Agent**: guild-reasoning-agent (context-only)
+**Agent**: guild-reasoning-agent (if available) or fallback to direct analysis
 **Purpose**: Analyze user request, correct typos, clarify requirements, align with project context
 **Changes**: **NONE** - Only creates analysis context for other agents
 **Thinking Mode**: Often benefits from "think-harder" or "ultrathink" modes
@@ -235,8 +250,8 @@ Execute activated workflow stages in this mandatory order:
 - **Focus**: Prompt debugging, understanding user intent, identifying edge cases and ambiguities
 
 #### 2. 🔍 Context Research Stage (always enabled by default)
-**Stage**: `context-research`  
-**Agents**: guild-project-research-agent, guild-global-research-agent (context-only, parallel execution)
+**Stage**: `context-research`
+**Agents**: Any guild-*-research-agent agents found (discovered dynamically)
 **Purpose**: Gather background information and technical context for all subsequent stages
 **Changes**: **NONE** - Only creates research context for other agents
 
@@ -253,7 +268,7 @@ Execute activated workflow stages in this mandatory order:
 
 #### 3. 🎯 Planning Stage (unless --no-plan)
 **Stage**: `planning`
-**Agent**: guild-planning-agent (context-only)
+**Agent**: guild-planning-agent (if available) or adaptive planning approach
 **Purpose**: Create implementation approach and coordinate subsequent stages
 **Changes**: **NONE** - Only creates strategic context for implementation agents
 **Thinking Mode**: Often benefits from "ultrathink" mode for comprehensive strategy
@@ -285,7 +300,7 @@ Execute activated workflow stages in this mandatory order:
 
 #### 4. 🔨 Implementation Stage (conditional execution)
 **Stage**: `implementation`
-**Agents**: framework-coupled engineers (implementation agents)
+**Agents**: Any guild-*-engineer agents discovered dynamically
 **Purpose**: Execute planned specifications with quality integration
 **Changes**: **ALLOWED** - Creates code, modifies files, implements features
 **Input**: Structured context from context-only agents (reasoning, research, planning)
@@ -376,13 +391,21 @@ Execute activated workflow stages in this mandatory order:
 
 ## Agent Coordination Protocol
 
-**STAGE-SPECIFIC AGENT SELECTION**:
-- **Core System Agents**: guild-reasoning-agent, guild-planning-agent (always available)
-- **Research Agents**: guild-project-research-agent, guild-global-research-agent (context gathering)
-- **Implementation Agents**: framework-coupled engineers (technology-specific execution)
-- **Verification Agent**: guild-verification-agent (requirement validation)
+**DYNAMIC AGENT SELECTION**:
+- **Agent Discovery**: Dynamically find agents in `.claude/agents/guild/` at runtime
+- **Core System Agents**: Use guild-reasoning-agent, guild-planning-agent if available
+- **Research Agents**: Use any guild-*-research-agent agents found
+- **Implementation Agents**: Use any guild-*-engineer agents discovered
+- **Quality Agents**: Use guild-verification-agent, guild-spec-agent if present
+- **Fallback Strategy**: If specific agents missing, adapt workflow or provide guidance
 
-**Context Handoffs**: Clean context flow between stages with well-defined interfaces matching activated workflow sequence.
+**ADAPTIVE WORKFLOW**:
+- **With Full Agent Set**: Execute complete workflow with all stages
+- **Partial Agent Set**: Execute available stages, skip unavailable ones
+- **Minimal Agent Set**: Provide guidance for completing Guild setup
+- **No Agents**: Direct user to run `/guild:setup` command
+
+**Context Handoffs**: Clean context flow between available agents with well-defined interfaces matching discovered agent capabilities.
 
 ## Example Usage
 

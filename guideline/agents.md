@@ -240,6 +240,8 @@ Output Generation:
 
 ### Directory Structure
 
+**CRITICAL REQUIREMENT**: All Guild setup commands MUST create agents in the `.claude/agents/guild/` subdirectory, NOT directly in `.claude/agents/`. This separation is mandatory for proper Guild system organization.
+
 **Standard Guild Agents**: `.claude/agents/guild/`
 ```
 .claude/agents/guild/
@@ -735,6 +737,8 @@ Output Generation:
 ## Agent Placement Architecture
 
 ### Directory Structure
+
+**CRITICAL REQUIREMENT**: All Guild setup commands MUST create agents in the `.claude/agents/guild/` subdirectory, NOT directly in `.claude/agents/`. This separation is mandatory for proper Guild system organization.
 
 **Standard Guild Agents**: `.claude/agents/guild/`
 ```

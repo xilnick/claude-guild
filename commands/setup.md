@@ -65,7 +65,14 @@ Analyze project using Claude Code's native tools:
 
 **Step 2: Dynamic Agent Generation**
 
-Generate agents with embedded project intelligence using Write tool:
+**CRITICAL**: Create `.claude/agents/guild/` directory if it doesn't exist, then generate all agents in the guild subdirectory.
+
+Generate agents with embedded project intelligence using Write tool at paths:
+- `/path/to/project/.claude/agents/guild/guild-reasoning-agent.md`
+- `/path/to/project/.claude/agents/guild/guild-planning-agent.md`
+- `/path/to/project/.claude/agents/guild/guild-project-research-agent.md`
+- `/path/to/project/.claude/agents/guild/guild-global-research-agent.md`
+- Plus technology-specific engineers in the same guild subdirectory
 
 **Mandatory Core Agents** (Always Generated):
 
@@ -334,68 +341,7 @@ You are a verification specialist that validates implementations and can make co
 **CHANGES PERMITTED** - Fix issues and improve quality during verification.
 ```
 
-**Step 3: Project-Specific Guild Command Generation**
-
-Generate project-specific /guild command using Write tool:
-
-**.claude/commands/guild.md**:
-```yaml
----
-name: guild-command  
-thinking_mode: think
-description: "Project-specific Guild workflow execution command with embedded intelligence"
----
-
-# /guild
-
-**Usage**: `/guild [flags] "task"`
-
-## Purpose
-
-Execute tasks using Guild's comprehensive workflow system with intelligent agent coordination for this specific project.
-
-## Project Intelligence
-
-[EMBEDDED DURING SETUP - Project-specific patterns, technologies, architecture, complexity, workflow optimization]
-
-## Workflow System
-
-**Default Workflow**: `reasoning → research → planning → implementation`
-
-**Specialized Workflows**:
-- **`--fix`**: Bug fixing workflow (reasoning → research → planning → fix stage)
-- **`--plan`**: Planning-only workflow (reasoning → research → planning → save to file)  
-- **`--research`**: Research-only workflow (reasoning → research)
-- **`--spec`**: Specification workflow (reasoning → research → planning → spec creation)
-- **`--refactor`**: Refactoring workflow (reasoning → research → refactor-planning → refactoring)
-- **`--full`**: Comprehensive workflow (reasoning → research → planning → implementation → testing → verification → refactoring)
-
-**Scope Modifiers**:
-- **`--project`**: Apply changes project-wide with comprehensive impact analysis
-
-## Execution Protocol
-
-**Configuration Check**: Verify Guild system is configured for this project (.guild/instructions.md exists).
-
-**Agent Coordination**: Use project-specific agents with embedded intelligence:
-1. **Reasoning Stage**: guild-reasoning-agent analyzes task with ultrathink mode
-2. **Research Stage**: guild-project-research-agent and guild-global-research-agent gather context
-3. **Planning Stage**: guild-planning-agent creates implementation strategy with ultrathink mode  
-4. **Implementation Stage**: Technology-specific engineers execute based on context packages
-5. **Quality Assurance**: guild-verification-agent validates results (if --full or verification flags)
-
-## Project-Specific Optimization
-
-All workflow stages are optimized for this project's:
-- **Technology Stack**: [YOUR detected technologies and frameworks]
-- **Architectural Patterns**: [YOUR project's architectural decisions and conventions]
-- **Development Workflow**: [YOUR build systems, testing approaches, quality tools]
-- **Team Patterns**: [YOUR collaboration and code standards]
-
-This project-specific /guild command provides intelligent workflow execution tailored to your codebase and development patterns.
-```
-
-**Step 4: System Configuration Generation**
+**Step 3: System Configuration Generation**
 
 Create complete Guild system configuration using Write tool:
 
@@ -438,10 +384,9 @@ coverage/
 ```
 ```
 
-**Step 5: Complete System Validation**
+**Step 4: Complete System Validation**
 
-1. **Verify Command Generation**: Confirm all Guild commands created in .claude/commands/
-2. **Verify Agent Generation**: Confirm all agents have appropriate project context embedded  
+1. **Verify Agent Generation**: Confirm all agents have appropriate project context embedded  
 3. **Validate Configuration**: Ensure .guild/ configuration files are properly set up
 4. **Test System Integration**: Verify agent coordination works for detected architecture
 5. **Document Results**: Provide summary of generated system and capabilities
@@ -449,9 +394,6 @@ coverage/
 ## Generated Guild System
 
 After running `/guild:setup`, the complete project-specific Guild system is created:
-
-**Generated Command** (in .claude/commands/):
-- **guild.md**: Project-specific workflow execution command with embedded project intelligence and guideline-compliant workflows
 
 **Generated Agents** (in .claude/agents/guild/):
 - Core agents with embedded project intelligence and patterns
