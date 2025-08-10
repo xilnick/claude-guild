@@ -65,14 +65,19 @@ Analyze project using Claude Code's native tools:
 
 **Step 2: Dynamic Agent Generation**
 
-**CRITICAL**: Create `.claude/agents/guild/` directory if it doesn't exist, then generate all agents in the guild subdirectory.
+**CRITICAL DIRECTORY SETUP**: Execute the following commands in sequence:
+1. **Create .claude directory**: Use bash command `mkdir -p .claude/agents/guild`
+2. **Verify directory creation**: Use LS tool to confirm `.claude/agents/guild/` directory exists
+3. **Generate all agents in guild subdirectory**: All subsequent agent generation MUST use paths starting with `.claude/agents/guild/`
 
-Generate agents with embedded project intelligence using Write tool at paths:
-- `/path/to/project/.claude/agents/guild/guild-reasoning-agent.md`
-- `/path/to/project/.claude/agents/guild/guild-planning-agent.md`
-- `/path/to/project/.claude/agents/guild/guild-project-research-agent.md`
-- `/path/to/project/.claude/agents/guild/guild-global-research-agent.md`
-- Plus technology-specific engineers in the same guild subdirectory
+**MANDATORY AGENT PLACEMENT**: Generate agents with embedded project intelligence using Write tool at these EXACT paths:
+- `.claude/agents/guild/guild-reasoning-agent.md`
+- `.claude/agents/guild/guild-planning-agent.md`
+- `.claude/agents/guild/guild-project-research-agent.md`
+- `.claude/agents/guild/guild-global-research-agent.md`
+- Plus technology-specific engineers (e.g., `.claude/agents/guild/guild-cli-engineer.md`)
+
+**NEVER** create agents directly in `.claude/agents/` - they MUST be in the `guild/` subdirectory.
 
 **Mandatory Core Agents** (Always Generated):
 
@@ -211,7 +216,7 @@ You are a global research specialist that gathers external knowledge and best pr
 
 **Technology-Specific Engineers** (Generated Based on Detected Patterns):
 
-**guild-cli-engineer.md** (If CLI patterns detected):
+**guild-cli-engineer.md** (Created at `.claude/agents/guild/guild-cli-engineer.md` if CLI patterns detected):
 ```yaml
 ---
 name: guild-cli-engineer
@@ -237,7 +242,7 @@ You are a CLI development specialist that creates and modifies command-line appl
 **CHANGES PERMITTED** - Create and modify code for CLI development.
 ```
 
-**guild-frontend-engineer.md** (If frontend patterns detected):
+**guild-frontend-engineer.md** (Created at `.claude/agents/guild/guild-frontend-engineer.md` if frontend patterns detected):
 ```yaml
 ---
 name: guild-frontend-engineer
@@ -263,7 +268,7 @@ You are a frontend development specialist for this project's specific framework 
 **CHANGES PERMITTED** - Create and modify code for frontend development.
 ```
 
-**guild-backend-engineer.md** (If backend patterns detected):
+**guild-backend-engineer.md** (Created at `.claude/agents/guild/guild-backend-engineer.md` if backend patterns detected):
 ```yaml
 ---
 name: guild-backend-engineer
@@ -289,7 +294,7 @@ You are a backend development specialist for this project's specific patterns an
 **CHANGES PERMITTED** - Create and modify code for backend development.
 ```
 
-**guild-package-engineer.md** (If package patterns detected):
+**guild-package-engineer.md** (Created at `.claude/agents/guild/guild-package-engineer.md` if package patterns detected):
 ```yaml
 ---
 name: guild-package-engineer
@@ -315,7 +320,7 @@ You are a package development specialist for this project's distribution and API
 **CHANGES PERMITTED** - Create and modify code for package development.
 ```
 
-**guild-verification-agent.md** (Generated when verification needed):
+**guild-verification-agent.md** (Created at `.claude/agents/guild/guild-verification-agent.md` when verification needed):
 ```yaml
 ---
 name: guild-verification-agent
@@ -395,10 +400,11 @@ coverage/
 
 After running `/guild:setup`, the complete project-specific Guild system is created:
 
-**Generated Agents** (in .claude/agents/guild/):
+**Generated Agents** (ALL in .claude/agents/guild/ subdirectory):
 - Core agents with embedded project intelligence and patterns
-- Technology-specific engineers based on detected technology stack
+- Technology-specific engineers based on detected technology stack  
 - All agents configured with appropriate thinking modes for this project
+- **MANDATORY**: All Guild agents MUST be created in `.claude/agents/guild/` subdirectory, never in `.claude/agents/` directly
 
 **Generated Configuration** (in .guild/):
 - instructions.md with project-specific agent requirements and thinking modes

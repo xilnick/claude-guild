@@ -54,6 +54,7 @@ npx claude-guild@latest
 - **No missing files** - All generation logic embedded in setup command for consistent results
 - **Global compatibility** - Works identically across all environments via `npx claude-guild@latest`
 - **Runtime independence** - No dependency on external template files
+- **Mandatory agent placement** - All Guild agents MUST be created in `.claude/agents/guild/` subdirectory for proper namespace isolation
 
 ### Advanced Workflow Orchestration  
 - **Multi-stage execution** with intelligent task routing and parallel agent coordination
@@ -116,6 +117,8 @@ npx claude-guild@latest
 ├── guild-verification-agent.md   # Quality validation
 └── [technology-engineers].md     # Implementation specialists
 ```
+
+**CRITICAL REQUIREMENT**: All Guild setup commands MUST create agents in the `.claude/agents/guild/` subdirectory, NOT directly in `.claude/agents/`. This separation is mandatory for proper Guild system organization and namespace isolation.
 
 ### Dynamic Technology-Aware Agent Generation
 Guild analyzes your project and generates contextually intelligent agents:
