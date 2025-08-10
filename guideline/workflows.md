@@ -161,11 +161,35 @@ Duration: 70% of total research time
 Focus: Depth and implementation-specific details
 ```
 
-## Command System and Flag Reference
+## Command System Architecture
 
-### Base Command Structure
+### Core Commands
 
-**Base Command**: `/guild [flags] "task"`
+**Setup Command**:
+- **`/guild:setup [guidance]`** - Analyze project and create specialized agents
+
+**Main Command**:
+- **`/guild [flags] "task"`** - Execute any task with configurable workflow stages
+
+**Management Commands**:
+- **`/guild:instructions`** - Manage project instructions and configuration options
+
+### Workflow Flags and Compositions
+
+**Default Workflow**: `reasoning → research → planning → implementation`
+
+**Specialized Workflows**:
+- **`--fix`**: Bug fixing workflow (reasoning → research → planning → fix stage)
+- **`--plan`**: Planning-only workflow (reasoning → research → planning → save to file)
+- **`--research`**: Research-only workflow (reasoning → research)
+- **`--spec`**: Specification workflow (reasoning → research → planning → spec creation)
+- **`--refactor`**: Refactoring workflow (reasoning → research → refactor-planning → refactoring)
+- **`--full`**: Comprehensive workflow (reasoning → research → planning → implementation → testing → verification → refactoring)
+
+**Scope Modifiers**:
+- **`--project`** - Apply changes project-wide with comprehensive impact analysis
+
+### Command Processing Architecture
 
 **Structured Command Processing**:
 ```xml
@@ -183,33 +207,6 @@ Focus: Depth and implementation-specific details
   </workflow-orchestration>
 </command-processing>
 ```
-
-### Flag System
-
-**Disable Flags** (Remove default stages):
-- `--no-reason` - Skip analysis stage (use with caution - reduces context quality)
-- `--no-plan` - Skip planning stage (direct to implementation)
-- `--no-implement` - Planning only mode (context-only workflow)
-
-**Enable Flags** (Add optional stages):
-- `--refactor` - Enable refactoring stage (code optimization with quality analysis)
-- `--test` - Enable testing stage (test creation and validation with coverage analysis)
-- `--verify` - Enable verification stage (requirement validation with acceptance criteria)
-- `--fix` - Enable fix stage (error detection and debugging with root cause analysis)
-
-**Comprehensive Flags** (Multi-stage workflows):
-- `--full` - Complete workflow (analysis + research + planning + implementation + testing + verification + refactoring)
-- `--spec` - Specification-driven mode (specification analysis + update + implementation with documentation-first approach)
-
-**Scope Modifiers**:
-- `--project` - Apply changes project-wide with comprehensive impact analysis
-
-### Specialized Commands
-
-- `/guild:setup [--standalone]` - Initialize agents and system with project analysis
-- `/guild:fix` - Bug fixing workflow with root cause analysis and systematic debugging
-- `/guild:plan` - Planning-only workflow with comprehensive strategy development
-- `/guild:spec` - Specification management with documentation-first development
 
 ## Execution Strategies
 
