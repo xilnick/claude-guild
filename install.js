@@ -317,6 +317,12 @@ async function install(cliOptions = null) {
       process.exit(1);
     }
     
+    // Validate new guideline structure
+    if (!fs.existsSync('guideline/core')) {
+      console.error('❌ Test failed: guideline/core directory not found');
+      process.exit(1);
+    }
+    
     console.log('✅ Test mode: All validation checks passed');
     return;
   }
@@ -400,18 +406,11 @@ async function install(cliOptions = null) {
       }
     }
     
-    // Install commands using hybrid structure (guild.md flat, others in guild/ subdir)
+    // Install commands with enhanced composition system
     await installCommands(claudeDir, installationConfig.guildDirName);
     
     // Create .guild folder for setup command to populate
     await fs.ensureDir(guildDir);
-    
-    // Inline templates into setup command (only during development, not from npm)
-    if (await fs.pathExists(path.join(__dirname, 'templates'))) {
-      await inlineTemplatesIntoSetup(claudeDir, installationConfig.guildDirName);
-    } else {
-      console.log('📦 Using pre-inlined templates from setup command');
-    }
     
     outro(`🎉 Claude Guild installed successfully!
 
@@ -421,94 +420,321 @@ async function install(cliOptions = null) {
 🚀 Next Steps:
    1. Run: /guild:setup  (to configure project agents)
    2. Use: /guild "your task"  (to execute with Guild workflow)
-   3. Try: /guild --refactor --test --verify "complex task"  (for comprehensive workflow)
+   3. Try: /guild --full "complex task"  (for comprehensive workflow)
 
 💡 Quick tip: Use /guild:setup to analyze your project and create specialized agents!`);
     
   } catch (error) {
     console.error('❌ Installation failed:', error.message);
+    console.error('🔍 Debug info:', error.stack);
     process.exit(1);
   }
 }
 
+/**
+ * ENHANCED: Modular Command Installation System
+ * Installs commands with dynamic composition from guideline modules
+ */
 async function installCommands(claudeDir, guildDirName = 'guild') {
   const sourceCommandsDir = path.join(__dirname, 'commands');
+  const guidelineDir = path.join(__dirname, 'guideline');
   const targetCommandsBaseDir = path.join(claudeDir, 'commands');
-  const targetGuildCommandsDir = path.join(targetCommandsBaseDir, 'guild');
+  const targetGuildCommandsDir = path.join(targetCommandsBaseDir, guildDirName);
   
-  // Ensure both commands directory and guild subdirectory exist
+  // Ensure directories exist
   await fs.ensureDir(targetCommandsBaseDir);
   await fs.ensureDir(targetGuildCommandsDir);
   
-  // Read all command files
-  const commandFiles = await fs.readdir(sourceCommandsDir);
+  console.log('🏗️ Installing Guild commands with modular composition...');
   
-  for (const file of commandFiles) {
-    if (file.endsWith('.md')) {
-      const sourcePath = path.join(sourceCommandsDir, file);
-      
-      if (file === 'guild.md') {
-        // Main guild.md goes directly to .claude/commands/guild.md (flat)
-        const targetPath = path.join(targetCommandsBaseDir, 'guild.md');
-        await fs.copy(sourcePath, targetPath);
-      } else {
-        // All other guild commands go to .claude/commands/guild/ subdirectory
-        const targetPath = path.join(targetGuildCommandsDir, file);
-        await fs.copy(sourcePath, targetPath);
-      }
-    }
+  try {
+    // Phase 1: Install base commands from source
+    await installBaseCommands(sourceCommandsDir, targetCommandsBaseDir, targetGuildCommandsDir);
+    
+    // Phase 2: Generate composed setup command
+    await generateComposedSetupCommand(guidelineDir, targetGuildCommandsDir);
+    
+    // Phase 3: Install standalone command specs
+    await installStandaloneCommandSpecs(guidelineDir, targetGuildCommandsDir);
+    
+    console.log(`✅ Guild commands installed successfully`);
+    console.log(`🎯 Primary Command: /guild "your task"`);
+    console.log(`⚙️  Setup Command: /guild:setup (configure project agents)`);
+    console.log(`🔧 Management Commands: /guild:ignore, /guild:instructions`);
+    
+  } catch (error) {
+    console.error('❌ Command installation failed:', error.message);
+    throw error;
   }
-  
-  console.log(`📋 Installed ${commandFiles.filter(f => f.endsWith('.md')).length} Guild commands successfully`);
-  console.log(`🎯 Primary Command: /guild "your task"`);
-  console.log(`⚙️  Setup Command: /guild:setup (configure project agents)`);
-  console.log(`🔧 Available Commands: /guild:fix, /guild:refactor, /guild:plan, /guild:spec`);
 }
 
-async function inlineTemplatesIntoSetup(claudeDir, guildDirName = 'guild') {
-  const setupCommandPath = path.join(claudeDir, 'commands', 'guild', 'setup.md');
-  const templatesDir = path.join(__dirname, 'templates');
+/**
+ * Install base commands from the commands directory
+ */
+async function installBaseCommands(sourceDir, targetBaseDir, targetGuildDir) {
+  if (!await fs.pathExists(sourceDir)) {
+    console.log('📦 No base commands directory found, proceeding with composition-only');
+    return;
+  }
+
+  const commandFiles = await fs.readdir(sourceDir);
+  let installedCount = 0;
   
-  // Phase 2: Template Injection (Setup Composing Process)
-  // Read clean setup command file (contains only setup logic)
-  let setupContent = await fs.readFile(setupCommandPath, 'utf-8');
-  
-  // Read all template files for embedding (excluding workflow.md - commands define workflows)
-  const templateFiles = await fs.readdir(templatesDir);
-  const templates = {};
-  
-  for (const file of templateFiles) {
-    if (file.endsWith('.md') && file !== 'workflow.md') {
-      const templatePath = path.join(templatesDir, file);
-      const templateContent = await fs.readFile(templatePath, 'utf-8');
-      const templateName = file.replace('.md', '');
-      templates[templateName] = templateContent;
+  for (const file of commandFiles) {
+    if (!file.endsWith('.md')) continue;
+    
+    const sourcePath = path.join(sourceDir, file);
+    
+    if (file === 'guild.md') {
+      // Main guild.md goes directly to .claude/commands/
+      const targetPath = path.join(targetBaseDir, 'guild.md');
+      await fs.copy(sourcePath, targetPath);
+      installedCount++;
+    } else if (file === 'setup.md') {
+      // Skip setup.md - will be generated from composition
+      continue;
+    } else {
+      // Other commands go to guild subdirectory
+      const targetPath = path.join(targetGuildDir, file);
+      await fs.copy(sourcePath, targetPath);
+      installedCount++;
     }
   }
   
-  // Build embedded template section with direct content
-  let templateSection = '\n\n## Embedded Templates\n\n' +
-    '**CRITICAL**: These templates are embedded directly in this setup command and used inline for .guild folder creation.\n\n';
+  console.log(`📋 Installed ${installedCount} base commands`);
+}
+
+/**
+ * ENHANCED: Generate setup command from modular composition
+ */
+async function generateComposedSetupCommand(guidelineDir, targetGuildDir) {
+  console.log('🔧 Composing setup command from core modules...');
   
-  // Add each template as a direct embedded section
-  for (const [templateName, templateContent] of Object.entries(templates)) {
-    templateSection += `### ${templateName.charAt(0).toUpperCase() + templateName.slice(1)} Template\n\n` +
-      '```markdown\n' +
-      templateContent +
-      '\n```\n\n';
+  try {
+    // Load all core modules dynamically
+    const coreModules = await loadCoreModules(guidelineDir);
+    
+    // Generate setup command content
+    const setupContent = await composeSetupCommand(coreModules);
+    
+    // Write composed setup command
+    const setupPath = path.join(targetGuildDir, 'setup.md');
+    await fs.writeFile(setupPath, setupContent);
+    
+    console.log(`🎨 Generated setup command with ${Object.keys(coreModules).length} embedded modules`);
+    
+  } catch (error) {
+    console.error('❌ Setup command composition failed:', error.message);
+    
+    // Fallback: copy base setup if available
+    const fallbackSetupPath = path.join(__dirname, 'commands', 'setup.md');
+    if (await fs.pathExists(fallbackSetupPath)) {
+      console.log('🔄 Using fallback setup command');
+      const targetPath = path.join(targetGuildDir, 'setup.md');
+      await fs.copy(fallbackSetupPath, targetPath);
+    } else {
+      throw new Error('No fallback setup command available');
+    }
+  }
+}
+
+/**
+ * Install standalone command specifications
+ */
+async function installStandaloneCommandSpecs(guidelineDir, targetGuildDir) {
+  const commandSpecsDir = path.join(guidelineDir, 'commands');
+  
+  if (!await fs.pathExists(commandSpecsDir)) {
+    console.log('📦 No command specifications found');
+    return;
   }
   
-  templateSection += '**Template Usage**: These templates are used directly during .guild folder creation without external functions.\n';
+  console.log('📝 Installing standalone command specifications...');
   
-  // Replace existing template section or append if none exists
-  if (setupContent.includes('## Embedded Templates')) {
-    setupContent = setupContent.replace(/## Embedded Templates.*$/s, templateSection);
-  } else {
-    setupContent += templateSection;
+  const specFiles = await fs.readdir(commandSpecsDir);
+  let installedSpecs = 0;
+  
+  for (const file of specFiles) {
+    if (!file.endsWith('.md')) continue;
+    
+    const sourcePath = path.join(commandSpecsDir, file);
+    const targetFileName = file.replace('guild-', ''); // Remove guild- prefix for target
+    const targetPath = path.join(targetGuildDir, targetFileName);
+    
+    await fs.copy(sourcePath, targetPath);
+    installedSpecs++;
   }
   
-  await fs.writeFile(setupCommandPath, setupContent);
-  console.log(`📝 Completed setup composition: embedded ${Object.keys(templates).length} templates directly into setup command`);
+  console.log(`📋 Installed ${installedSpecs} command specifications`);
+}
+
+/**
+ * ENHANCED: Load all core modules dynamically
+ */
+async function loadCoreModules(guidelineDir) {
+  const coreDir = path.join(guidelineDir, 'core');
+  const modules = {};
+  
+  if (!await fs.pathExists(coreDir)) {
+    console.warn('⚠️  Core modules directory not found, using empty modules');
+    return modules;
+  }
+  
+  try {
+    const moduleFiles = await fs.readdir(coreDir);
+    
+    for (const file of moduleFiles) {
+      if (!file.endsWith('.md')) continue;
+      
+      const modulePath = path.join(coreDir, file);
+      const moduleContent = await fs.readFile(modulePath, 'utf-8');
+      const moduleName = file.replace('.md', '');
+      
+      // Extract content (remove title and purpose sections)
+      const processedContent = processModuleContent(moduleContent, moduleName);
+      modules[moduleName] = processedContent;
+    }
+    
+    console.log(`📚 Loaded ${Object.keys(modules).length} core modules:`, Object.keys(modules).join(', '));
+    
+  } catch (error) {
+    console.warn('⚠️  Error loading core modules:', error.message);
+  }
+  
+  return modules;
+}
+
+/**
+ * Process module content for embedding
+ */
+function processModuleContent(content, moduleName) {
+  // Remove module-specific headers and metadata
+  let processed = content
+    .replace(/^# .+Module\s*\n/, '') // Remove "X Module" title
+    .replace(/^## Purpose\s*\n[\s\S]*?\n(?=##)/m, '') // Remove Purpose section
+    .replace(/^## Module Dependencies[\s\S]*$/m, '') // Remove dependencies section
+    .replace(/^## Module Consumers[\s\S]*$/m, '') // Remove consumers section
+    .trim();
+  
+  // If content is too short after processing, use original
+  if (processed.length < 100) {
+    processed = content;
+  }
+  
+  return processed;
+}
+
+/**
+ * ENHANCED: Compose complete setup command from modules
+ */
+async function composeSetupCommand(coreModules) {
+  // Base setup command template
+  const template = `# /guild:setup
+
+**Usage**: \`/guild:setup [--standalone] [guidance]\`
+
+---
+name: guild-setup-command
+thinking_mode: ultrathink
+model: opus
+description: "Fully self-contained Guild system setup with complete embedded intelligence"
+---
+
+## Purpose
+
+Perform comprehensive project analysis and generate a complete Guild system tailored specifically to your codebase using fully embedded intelligence. Completely self-contained with zero external dependencies.
+
+## EMBEDDED INTELLIGENCE SYSTEM
+
+This setup command contains complete Guild intelligence embedded from modular components:
+
+${generateEmbeddedIntelligenceSection(coreModules)}
+
+## EXECUTION PROTOCOL
+
+### Step 1: Comprehensive Project Analysis
+
+Execute comprehensive project analysis using embedded intelligence from the **Project Analysis Module**.
+
+### Step 2: Dynamic Agent Generation
+
+**CRITICAL DIRECTORY SETUP**: Execute in sequence:
+1. **Create directory**: Use Bash \`mkdir -p .claude/agents/guild\`
+2. **Verify creation**: Use LS tool to confirm \`.claude/agents/guild/\` exists  
+3. **Generate agents**: All agents MUST be created in \`.claude/agents/guild/\` subdirectory
+
+Generate agents using embedded intelligence from the **Agent Architecture Module**.
+
+### Step 3: System Configuration Generation
+
+Create complete Guild system configuration using embedded intelligence from all modules.
+
+### Step 4: System Validation
+
+Validate the generated system using embedded intelligence and quality standards.
+
+## STANDALONE MODE (--standalone)
+
+When \`--standalone\` flag is used, generate self-contained specialist agents:
+- **security-analyst-agent**: OWASP compliance and security analysis
+- **performance-engineer-agent**: Performance optimization specialist  
+- **accessibility-auditor-agent**: WCAG compliance specialist
+- **documentation-writer-agent**: Technical documentation specialist
+- **code-reviewer-agent**: Code quality analysis specialist
+- **testing-strategist-agent**: Test strategy development specialist
+
+## KEY BENEFITS
+
+**Fully Self-Contained Operation with Complete Intelligence**:
+- **No External Dependencies**: All intelligence embedded in this command
+- **Runtime Independence**: Zero dependency on external files
+- **Complete Agent Intelligence**: All behavior embedded during setup
+- **Project-Specific Optimization**: Understands your unique codebase
+
+This setup command creates a **completely self-contained, intelligently specialized agent ecosystem**.
+`;
+
+  return template;
+}
+
+/**
+ * Generate embedded intelligence section from core modules
+ */
+function generateEmbeddedIntelligenceSection(modules) {
+  let section = '';
+  
+  const moduleOrder = [
+    'system-principles',
+    'agent-architecture', 
+    'workflow-patterns',
+    'context-engineering',
+    'project-analysis'
+  ];
+  
+  for (const moduleName of moduleOrder) {
+    if (modules[moduleName]) {
+      const title = moduleName.split('-').map(w => 
+        w.charAt(0).toUpperCase() + w.slice(1)
+      ).join(' ');
+      
+      section += `\n### ${title} Intelligence (Embedded)\n\n`;
+      section += `${modules[moduleName]}\n\n`;
+    }
+  }
+  
+  // Add any additional modules not in the ordered list
+  for (const [moduleName, moduleContent] of Object.entries(modules)) {
+    if (!moduleOrder.includes(moduleName)) {
+      const title = moduleName.split('-').map(w => 
+        w.charAt(0).toUpperCase() + w.slice(1)
+      ).join(' ');
+      
+      section += `\n### ${title} Intelligence (Embedded)\n\n`;
+      section += `${moduleContent}\n\n`;
+    }
+  }
+  
+  return section;
 }
 
 if (require.main === module) {

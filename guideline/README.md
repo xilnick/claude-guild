@@ -1,303 +1,113 @@
-# Claude Guild System Specification
+# Guild System Guideline
 
-**Self-Contained Workflow Orchestration System for Claude Code**
+## Overview
 
-## Quick Reference
+This directory contains the authoritative specifications for the Claude Guild system. It is organized to support both dynamic composition of the setup command and standalone command specifications.
 
-| Guide | Purpose |
-|-------|---------|
-| **[README.md](../README.md)** | Complete system entry point and user documentation |
-| **[Prompts](prompts.md)** | Core intelligence library - all system prompts |
-| **[Getting Started](getting-started.md)** | Installation, usage, and setup |
-| **[Architecture](architecture.md)** | Prompt-driven system architecture |
-| **[Agents](agents.md)** | Dynamic agent generation through prompts |
-| **[Workflows](workflows.md)** | Prompt-orchestrated workflow patterns |
-| **[Performance](performance.md)** | Optimization strategies |
-| **[Development](development.md)** | Contributing guidelines |
-| **[Extensibility](extensibility.md)** | Customization and plugins |
+## Directory Structure
 
----
-
-## System Overview
-
-Claude Guild transforms development workflows through prompt-driven intelligence and Claude-native project understanding.
-
-### Installation - Intelligence Through Prompts
-```bash
-npx claude-guild@latest
+```
+guideline/
+├── README.md                 # This file - system overview
+├── core/                     # Core intelligence modules for setup command composition
+│   ├── system-principles.md # Fundamental architectural principles
+│   ├── agent-architecture.md # Agent classification and design patterns
+│   ├── workflow-patterns.md  # Workflow execution and coordination
+│   ├── context-engineering.md # Context management and handoff protocols
+│   └── project-analysis.md   # Project analysis and technology detection
+│
+├── commands/                 # Standalone command specifications
+│   ├── guild-ignore.md      # /guild:ignore command specification
+│   └── guild-instructions.md # /guild:instructions command specification
+│
+└── reference/               # Reference documentation
+    ├── agent-templates.md   # Agent template patterns
+    ├── thinking-modes.md    # Thinking mode configurations
+    └── performance.md       # Performance optimization strategies
 ```
 
-**✅ Claude-Native Intelligence**: Guild leverages Claude's full capabilities through prompts, automatically improving with each new model release.
+## Composition Architecture
 
-### Immediate Setup
-```bash
-# Initialize system and agents
-/guild:setup
+### Setup Command Composition
 
-# Start working immediately
-/guild "implement user authentication"
-/guild --full "build complete API with testing"
+The `/guild:setup` command is dynamically composed from core modules by install.js:
+
+1. **System Principles** → Embedded as architectural foundation
+2. **Agent Architecture** → Embedded as agent generation logic
+3. **Workflow Patterns** → Embedded as execution strategies
+4. **Context Engineering** → Embedded as communication protocols
+5. **Project Analysis** → Embedded as detection intelligence
+
+### Standalone Commands
+
+Commands with their own specifications that don't require composition:
+- `/guild:ignore` - File exclusion pattern management
+- `/guild:instructions` - Project configuration management
+- `/guild` - Main workflow command (discovers agents at runtime)
+
+## Core Principles
+
+### Prompt-Driven Intelligence
+- All intelligence through prompts, no hardcoded logic
+- Claude-native analysis using full capabilities
+- Dynamic adaptation to any technology stack
+- Future-proof design that improves with each model
+
+### Self-Contained Distribution
+- Zero-dependency NPM installation
+- Complete intelligence embedded during generation
+- Runtime independence from external files
+- Global consistency across all environments
+
+### Project-Adaptive Generation
+- Dynamic agent creation based on project analysis
+- Technology-specific specialization
+- Context-aware workflow optimization
+- Embedded project intelligence in all components
+
+## Maintenance Guidelines
+
+### Core Modules
+- Keep focused on single responsibility
+- Maintain technology-agnostic patterns
+- Document embedding points for install.js
+- Version control all intelligence updates
+
+### Command Specifications
+- Complete, standalone specifications
+- Clear interface definitions
+- Consistent error handling patterns
+- User-friendly documentation
+
+### Quality Standards
+- No duplication across modules
+- Clear separation of concerns
+- Maintainable and testable design
+- Comprehensive documentation
+
+## Usage in install.js
+
+```javascript
+// Pseudo-code for setup command composition
+const setupCommand = compose({
+  base: 'commands/setup-base.md',
+  modules: [
+    'core/system-principles.md',
+    'core/agent-architecture.md',
+    'core/workflow-patterns.md',
+    'core/context-engineering.md',
+    'core/project-analysis.md'
+  ],
+  output: '.claude/commands/guild-setup.md'
+});
 ```
 
-## Key Features & Value Proposition
+## Evolution Strategy
 
-### Prompt-Driven Intelligence (Primary Differentiator)
-- **Claude-Native Analysis**: Claude understands your project using full capabilities, not pattern matching
-- **Dynamic Agent Generation**: Claude creates agents specific to YOUR project through prompts
-- **Intelligent Workflow Orchestration**: Claude determines optimal workflows for each task
-- **Future-Proof Design**: Automatically improves with each new Claude model release
-- **Zero Maintenance**: No need to update for new technologies - Claude understands them
+1. **Core Module Updates**: Update individual modules without touching commands
+2. **Command Updates**: Modify command specs independently
+3. **Composition Logic**: install.js handles dynamic assembly
+4. **Testing**: Validate composed commands before publishing
+5. **Versioning**: Semantic versioning for breaking changes
 
-### Self-Contained Distribution Architecture
-- **Zero-dependency global installation** via NPM with 100% reliability  
-- **Dynamic generation system** - Setup contains agent generation logic, not static templates
-- **No missing files** - All generation logic embedded in setup command for consistent results
-- **Global compatibility** - Works identically across all environments via `npx claude-guild@latest`
-- **Runtime independence** - No dependency on external template files
-- **Mandatory agent placement** - All Guild agents MUST be created in `.claude/agents/guild/` subdirectory for proper namespace isolation
-
-### Advanced Workflow Orchestration  
-- **Multi-stage execution** with intelligent task routing and parallel agent coordination
-- **Context engineering** with XML-structured packages and long-context optimization
-- **Thinking mode integration** for appropriate cognitive resource allocation
-- **Technology-agnostic design** with universal workflow patterns
-
-### Agent System Excellence
-- **Dynamic agent generation** creates project-specific agents with contextual understanding
-- **Project-adaptive specialization** based on detected technology stack and architectural patterns
-- **Context-only agents** (analysis, research, planning) that understand your specific project
-- **Implementation agents** (verification, technology engineers) specialized for your tech stack
-- **Structured communication** with XML handoff protocols optimized for your project patterns
-
-## Core Commands
-
-### Global Commands (Cross-Project Interface)
-```bash
-# Setup and system generation
-/guild:setup [--standalone] [guidance]
-
-# Global management commands  
-/guild:ignore [add|remove|list] [pattern]
-/guild:instructions [edit|view|reset]
-```
-
-### Project-Specific Command (Generated by Setup)
-```bash
-/guild [flags] "task"
-```
-
-### Essential Flags
-- **--full**: Complete development lifecycle (analysis → research → planning → implementation → testing → verification → refactoring)
-- **--fix**: Systematic bug fixing with debugging workflow
-- **--plan**: Planning-only mode with optional save to file
-- **--research**: Research-only mode for context gathering
-- **--spec**: Documentation-first development with specification management
-- **--project**: Project-wide scope for comprehensive changes
-
-## Command Architecture
-
-**Global Commands**: Consistent interface across all projects, installed via NPM
-**Project-Specific Commands**: Generated with embedded project intelligence during setup
-
-## Generated System Structure
-
-### Complete Installation Result
-```
-.guild/
-├── instructions.md    # Project configuration with thinking modes
-├── overview.md       # Complete system reference  
-├── agents.md         # Agent creation templates
-└── ignore.md         # File exclusion patterns
-
-.claude/agents/guild/
-├── guild-reasoning-agent.md      # Context-only analysis
-├── guild-planning-agent.md       # Strategic planning (ultrathink)
-├── guild-project-research-agent.md   # Project-specific research
-├── guild-global-research-agent.md    # External research
-├── guild-verification-agent.md   # Quality validation
-└── [technology-engineers].md     # Implementation specialists
-```
-
-**CRITICAL REQUIREMENT**: All Guild setup commands MUST create agents in the `.claude/agents/guild/` subdirectory, NOT directly in `.claude/agents/`. This separation is mandatory for proper Guild system organization and namespace isolation.
-
-### Dynamic Technology-Aware Agent Generation
-Guild analyzes your project and generates contextually intelligent agents:
-- **Frontend Specialists**: Framework engineers that understand your specific component patterns
-- **Backend API Specialists**: API framework engineers familiar with your service architecture  
-- **CLI Development Experts**: Command-line specialists that know your CLI patterns and user workflows
-- **Package Engineering**: NPM/PyPI/Cargo specialists that understand your distribution requirements
-- **Full-Stack Coordinators**: Cross-technology agents that manage complex application architectures
-
-## Workflow Patterns
-
-### Standard Development Flow
-```yaml
-Analysis → Research → Planning → Implementation → Validation
-```
-
-### Comprehensive Development (--full)
-```yaml
-Analysis → Research → Planning → Implementation → Testing → Verification → Refactoring
-```
-
-### Specialized Workflows
-- **Bug Fixing**: `--fix` for systematic debugging
-- **Planning Only**: `--plan` for strategic analysis without implementation
-- **Research Mode**: `--research` for context gathering and investigation
-- **Spec-Driven**: `--spec` for documentation-first development
-
-## Agent Classification System
-
-### Context-Only Agents (Never Make Changes)
-**Generated with project-specific knowledge**:
-- **guild-reasoning-agent**: Task analysis tailored to your project's complexity and technology stack
-- **guild-planning-agent**: Strategic workflow coordination with understanding of your architectural patterns (ultrathink mode)
-- **guild-research-agents**: Context gathering specialized for your technology ecosystem and development patterns
-
-### Implementation Agents (Make Changes)
-**Generated as technology specialists for your stack**:
-- **guild-verification-agent**: Quality validation using your project's testing frameworks and standards
-- **Technology engineers**: Domain-specific specialists generated for your exact technology combination (frontend+backend, CLI tools, etc.)
-
-**Communication Protocol**: All agents use structured XML handoff templates optimized for your project's workflow patterns and technology requirements.
-
-## Standalone Agent System
-
-### Self-Contained Specialists
-Independent agents operating without .guild system infrastructure:
-
-**Security & Compliance**:
-- **security-analyst-agent**: Vulnerability assessment, OWASP compliance
-- **accessibility-auditor-agent**: WCAG 2.1 AA compliance, ARIA implementation
-
-**Performance & Quality**:
-- **performance-engineer-agent**: Database optimization, caching strategies
-- **code-reviewer-agent**: Code quality analysis, refactoring recommendations
-
-**Documentation & Architecture**: 
-- **documentation-writer-agent**: Technical docs, API documentation
-- **api-architect-agent**: API design patterns, integration strategies
-
-**Operations & Testing**:
-- **deployment-engineer-agent**: CI/CD optimization, infrastructure as code
-- **testing-strategist-agent**: Test strategy development, automation
-
-### Automatic Activation
-Standalone agents activate automatically based on task keywords:
-```bash
-"Review security vulnerabilities" → security-analyst-agent
-"Optimize database performance" → performance-engineer-agent  
-"Ensure accessibility compliance" → accessibility-auditor-agent
-```
-
-## Configuration System
-
-### Priority Hierarchy
-```yaml
-1. User Prompts: Direct requests override all system behavior
-2. Instructions.md: Optional user customization (thin configuration)  
-3. Default Prompts: System defaults (lowest priority)
-```
-
-### Thinking Mode Configuration
-```yaml
-Required Prefilled Configuration:
-  guild-planning-agent:
-    thinking_mode: ultrathink
-    model: opus
-    
-All Other Agents:
-  thinking_mode: think (default)
-  model: inherited from Claude Code
-```
-
-## Performance Optimizations
-
-### Context Engineering
-- Reference-based linking with file:line citations
-- Progressive detail building and hierarchical summarization
-- Automatic context pruning and compression
-
-### Execution Efficiency
-- Parallel agent execution with context synchronization
-- Adaptive workflow routing based on task complexity
-- User-configurable thinking modes through instructions.md
-
-## Key Differentiators
-
-- **Dynamic agent generation** creates project-specific agents with deep contextual understanding
-- **Technology stack intelligence** generates specialists for your exact technology combinations
-- **Project-adaptive workflows** optimized for your specific architectural patterns and complexity
-- **Zero-configuration intelligence** agents understand your codebase without manual setup
-- **Self-contained distribution** with zero-dependency global installation via NPM
-- **Living agent ecosystem** that evolves and adapts with your project's growth
-
-## Success Metrics
-
-- **100% installation reliability** through self-contained dynamic generation architecture
-- **Zero-failure setup process** with intelligent project analysis and agent creation
-- **Project-contextual intelligence** agents understand your specific codebase and patterns
-- **Technology stack adaptation** automatic specialization for any technology combination
-- **Enhanced workflow efficiency** through project-optimized agent coordination
-- **Living system evolution** agents that grow and adapt with your project changes
-
-## Documentation Structure
-
-### Core Specification
-**README.md** is the single source of truth containing:
-- Complete system overview and entry point
-- Workflow orchestration and execution patterns
-- Core architecture principles and agent classification
-- Installation and setup procedures
-- Command reference and usage examples
-- Configuration hierarchy and customization
-
-### Practical Guides
-Supporting documentation focuses on specific aspects:
-- **Getting Started**: New user onboarding and setup
-- **Architecture**: Detailed system design and decisions
-- **Agents**: Thin agent architecture and coupling principles
-- **Performance**: Optimization techniques and metrics
-- **Development**: Contributing code and guidelines
-- **Extensibility**: Creating custom extensions
-
-## Documentation Principles
-
-1. **No Duplication**: Each topic covered in one place
-2. **Technology Agnostic**: Patterns over specific frameworks
-3. **Practical Focus**: How-to over theoretical
-4. **Clear Structure**: Easy navigation and discovery
-5. **Minimal Maintenance**: Focused, essential content only
-
-## Quick Start
-
-New to Guild? Start here:
-1. Read [Getting Started](getting-started.md) for installation
-2. Understand [Architecture](architecture.md) for system design
-3. Review [README.md](../README.md) for specifications
-4. Explore [Agents](agents.md) for agent design
-
-Optimizing Guild?
-1. Follow [Performance](performance.md) for optimization
-2. Check [Extensibility](extensibility.md) for customization
-
-Contributing to Guild?
-1. Follow [Development](development.md) for guidelines
-2. Keep [README.md](../README.md) as source of truth
-
-## Key Concepts
-
-### Four-Layer Architecture
-Commands → Processes → Agents → Configuration
-
-### Thin Agents
-Metadata-only definitions that reference centralized processes
-
-### Pattern Detection
-Technology-agnostic approach using patterns instead of hardcoded frameworks
-
-### Parallel Execution
-Multiple strategies for concurrent agent coordination
-
-### Context Management
-Smart filtering, compression, and decay to prevent context explosion
+This modular architecture ensures the Guild system remains maintainable, extensible, and aligned with our principles of prompt-driven intelligence and self-contained distribution.
