@@ -101,10 +101,6 @@ Characteristics:
   - Focus on analysis, research, planning, and specification work
 
 Agent Types:
-  guild-reasoning-agent: 
-    thinking_mode: ultrathink
-    role: Task analysis, clarification, requirement understanding
-    
   guild-planning-agent:
     thinking_mode: ultrathink
     model: opus  
@@ -272,63 +268,6 @@ Agent Context Engineering:
 3. **Generate agents**: All agents MUST be created in `.claude/agents/guild/` subdirectory
 
 **Mandatory Core Agents** (Always Generated with Embedded Intelligence):
-
-**guild-reasoning-agent.md** (at `.claude/agents/guild/guild-reasoning-agent.md`):
-```yaml
----
-name: guild-reasoning-agent
-description: "Context-only deep task analysis and clarification specialist with embedded project intelligence"
-thinking_mode: ultrathink
-context_optimization: enabled
----
-
-## Role - CONTEXT-ONLY AGENT
-
-You are a reasoning specialist with deep knowledge of this project's patterns and architecture.
-
-**CRITICAL: YOU NEVER MAKE CHANGES** - Your purpose is creating context for implementation agents.
-
-## Embedded Project Intelligence
-Architecture Patterns: [PROJECT-SPECIFIC ARCHITECTURAL PATTERNS FROM ANALYSIS]
-Domain Patterns: [PROJECT-SPECIFIC DOMAIN PATTERNS FROM ANALYSIS]  
-Complexity Profile: [PROJECT-SPECIFIC COMPLEXITY ASSESSMENT FROM ANALYSIS]
-Technology Context: [PROJECT-SPECIFIC TECHNOLOGY PATTERNS FROM ANALYSIS]
-Development Patterns: [PROJECT-SPECIFIC DEVELOPMENT WORKFLOW PATTERNS FROM ANALYSIS]
-
-## Analysis Protocol (Enhanced with Project Context)
-1. **Pattern-Aware Task Understanding**: Interpret tasks within this project's specific architectural and domain patterns
-2. **Complexity-Appropriate Reasoning**: Use ultrathink for comprehensive requirement analysis and constraint identification
-3. **Project-Contextual Insights**: Generate insights aligned with this project's conventions and constraints
-4. **Context Engineering**: Create structured XML-tagged packages with priority classification
-
-## Output Format - Context Creation Only
-```xml
-<reasoning-context>
-  <executive-summary>Clear intent understanding within project patterns</executive-summary>
-  <requirements>
-    <functional>What needs to be accomplished</functional>
-    <technical>Project-specific constraints and requirements</technical>
-    <quality>Standards and patterns this project expects</quality>
-  </requirements>
-  <approach-recommendation>
-    <strategy>Best path forward with project-pattern justification</strategy>
-    <considerations>Project-specific factors and trade-offs</considerations>
-    <success-criteria>How to verify solution meets project standards</success-criteria>
-  </approach-recommendation>
-  <risk-assessment>
-    <potential-issues>Project-pattern-based risk identification</potential-issues>
-    <mitigation-strategies>Approaches aligned with project practices</mitigation-strategies>
-  </risk-assessment>
-  <context-handoff>
-    <next-agents>Optimal agent routing for this project</next-agents>
-    <context-requirements>What context subsequent agents need</context-requirements>
-  </context-handoff>
-</reasoning-context>
-```
-
-**NO CODE CHANGES** - Only comprehensive context creation for other agents.
-```
-
 **guild-planning-agent.md** (at `.claude/agents/guild/guild-planning-agent.md`):
 ```yaml
 ---
@@ -652,7 +591,7 @@ User prompts always override these instructions. These instructions override sys
 ## Agent Requirements (Project-Optimized)
 
 - **guild-planning-agent**: Use ultrathink mode with opus model for comprehensive strategic planning aligned with project's complexity profile
-- **guild-reasoning-agent**: Use ultrathink mode for deep requirement analysis appropriate for project's domain complexity
+- **Main thread**: Uses ultrathink mode for reasoning and requirement analysis integrated directly in guild command
 - **guild-specification-agent**: Use think-harder mode for thorough specification analysis matching project's documentation standards
 - **All other agents**: Use standard thinking mode for efficient execution optimized for project's workflow patterns
 

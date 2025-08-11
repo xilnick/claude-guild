@@ -54,7 +54,7 @@ Agent Configuration:
     model: opus (required)
     thinking_mode: ultrathink
     
-  guild-reasoning-agent:
+  main-thread-reasoning:
     thinking_mode: ultrathink
     
   guild-specification-agent:

@@ -10,8 +10,8 @@ Comprehensive guide to thinking mode configurations and their application in Gui
 Purpose: Comprehensive strategic analysis
 Usage: Critical decisions and complex planning
 Agents:
-  - guild-reasoning-agent
   - guild-planning-agent
+  - Main thread (for reasoning stage)
 
 Characteristics:
   - Deep multi-stage analysis
@@ -79,11 +79,6 @@ When to Use:
 
 ### Strategic Agents
 ```yaml
-guild-reasoning-agent:
-  mode: ultrathink
-  rationale: Comprehensive requirement analysis
-  focus: Understanding full context and implications
-  
 guild-planning-agent:
   mode: ultrathink
   model: opus
@@ -263,7 +258,7 @@ Location: .guild/instructions.md
 Format:
   ## Agent Requirements
   - guild-planning-agent: ultrathink + opus
-  - guild-reasoning-agent: ultrathink
+  - main-thread (reasoning stage): ultrathink
   - guild-specification-agent: think-harder
   - Others: think (default)
 ```

@@ -344,9 +344,9 @@ thinking_modes:
     thinking_mode: ultrathink  # Maximum reasoning for strategic planning
     model: opus               # Premium model for complex planning
     
-  guild-reasoning-agent:
-    thinking_mode: think-harder  # Enhanced analysis for requirements
-    model: opus                  # Premium model for deep reasoning
+  main-thread-reasoning:
+    thinking_mode: ultrathink    # Enhanced analysis integrated in guild command
+    model: sonnet               # Main thread uses selected model
     
   implementation_agents:
     thinking_mode: think      # Standard efficiency for implementation
@@ -436,7 +436,7 @@ Guild uses a **sophisticated dual-agent architecture** with clear separation of 
 #### Context-Only Agents (Analysis & Planning)
 **Never modify code** - focused on understanding and strategy:
 
-- **`guild-reasoning-agent`**: Deep requirement analysis with ultrathink reasoning
+- **Main thread reasoning**: Deep requirement analysis with ultrathink reasoning (integrated)
   - Identifies edge cases, constraints, and implications
   - Clarifies ambiguous requirements and technical dependencies
   - Provides structured analysis for implementation agents
@@ -496,7 +496,7 @@ Guild uses a **sophisticated dual-agent architecture** with clear separation of 
 
 **Multi-Stage Process Orchestration**:
 
-1. **🧠 Analysis Stage** (`guild-reasoning-agent` with ultrathink)
+1. **🧠 Analysis Stage** (Main thread with ultrathink)
    - Deep requirement analysis and edge case identification
    - Technical constraint evaluation and dependency mapping
    - Risk assessment and implementation complexity analysis
@@ -724,7 +724,7 @@ your-project/
 │   │   └── [other guild commands]
 │   │
 │   └── agents/guild/      # Specialized implementation engineers
-│       ├── guild-reasoning-agent.md      # Deep analysis specialist
+│       # Reasoning integrated in guild command main thread
 │       ├── guild-planning-agent.md       # Strategic coordination
 │       ├── guild-frontend-component-engineer.md  # Frontend framework specialist
 │       ├── guild-backend-api-engineer.md      # Backend API specialist
@@ -861,7 +861,7 @@ Guild uses a **sophisticated dual-agent architecture** with clear separation of 
 ### Context-Only Agents (Analysis & Planning)
 **Never modify code** - focused on understanding and strategy:
 
-- **`guild-reasoning-agent`**: Deep requirement analysis with ultrathink reasoning
+- **Main thread reasoning**: Deep requirement analysis with ultrathink reasoning (integrated)
 - **`guild-planning-agent`**: Strategic workflow coordination (ultrathink mode)  
 - **`guild-research-agents`**: Context gathering and information synthesis
 

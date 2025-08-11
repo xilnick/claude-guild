@@ -6,51 +6,41 @@ This file provides guidance to Claude Code when working with code in this reposi
 
 **CRITICAL**: Follow this mandatory workflow when modifying the Guild system architecture.
 
-### **Reference-First Development Architecture**
+### **Development Architecture**
 
-The Guild system uses a **reference → core generation** architecture where:
-- **Reference documents** are the authoritative source of truth
-- **Core modules** are generated/extracted from reference documents  
-- **Setup command** is composed from generated core modules
+The Guild system uses a **modular core architecture** where:
+- **Core modules** in `guideline/core/` are the authoritative source
+- **Setup command** is dynamically composed from core modules
+- **Commands** are installed with embedded intelligence
 
-### **🔄 MANDATORY WORKFLOW SEQUENCE**
+### **🔄 DEVELOPMENT WORKFLOW**
 
 When making changes to Guild intelligence or architecture:
 
-#### **1. FIRST: Modify Reference Documents**
-```
-guideline/reference/
-├── master-system-principles.md     ← Comprehensive source of truth
-├── master-agent-architecture.md    ← Complete agent specifications  
-├── master-workflow-patterns.md     ← Full workflow documentation
-├── master-context-engineering.md   ← Complete context protocols
-└── master-project-analysis.md      ← Full analysis strategies
-```
-
-**Requirements**:
-- Update the comprehensive reference document FIRST
-- Include all changes in the authoritative reference
-- Mark sections for core extraction with `<!-- CORE-START -->` and `<!-- CORE-END -->`
-- Ensure reference is complete and self-contained
-
-#### **2. SECOND: Generate Core Modules**
+#### **1. Update Core Modules**
 ```
 guideline/core/
-├── system-principles.md      ← Generated from reference
-├── agent-architecture.md     ← Generated from reference  
-├── workflow-patterns.md      ← Generated from reference
-├── context-engineering.md    ← Generated from reference
-└── project-analysis.md       ← Generated from reference
+├── system-principles.md     ← System architecture and principles
+├── agent-architecture.md    ← Agent classification and design  
+├── workflow-patterns.md     ← Workflow execution patterns
+├── context-engineering.md   ← Context management protocols
+└── project-analysis.md      ← Project analysis strategies
 ```
 
-**Process**:
-```bash
-# Run the core generation process
-node scripts/generate-core.js
+**Guidelines**:
+- Edit core modules directly for intelligence updates
+- Keep modules focused and embeddable
+- Ensure modules are self-contained
+- Test composition after changes
 
-# Or manually extract marked sections from reference documents
-# Extract content between <!-- CORE-START --> and <!-- CORE-END -->
+#### **2. Optional: Reference-First Workflow (Future Enhancement)**
 ```
+guideline/reference/        ← Create master-*.md documents
+├── master-*.md            ← Mark core sections with <!-- CORE-START/END -->
+└── (run generation)       ← node scripts/generate-core.js
+```
+
+**Note**: Reference-first workflow is available but not required. Core modules can be maintained directly.
 
 #### **3. THIRD: Validate Setup Command Composition**
 ```bash
@@ -100,7 +90,7 @@ npm run validate-setup
 
 <!-- CORE-START -->
 ### Strategic Agents (ultrathink)
-- guild-reasoning-agent: Comprehensive requirement analysis  
+- Main thread: Comprehensive requirement analysis using ultrathink mode
 - guild-planning-agent: Strategic workflow coordination
 
 ### Analytical Agents (think-harder)  

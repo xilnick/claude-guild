@@ -77,7 +77,7 @@ minimal_preset:
   
   agents:
     core_agents:
-      - guild-reasoning-agent:
+      - main-thread-reasoning:
           thinking_mode: think
           model: inherited
       - guild-planning-agent:
@@ -120,7 +120,7 @@ web_application_preset:
   
   agents:
     core_agents:
-      - guild-reasoning-agent:
+      - main-thread-reasoning:
           thinking_mode: ultrathink
           model: inherited
           specialization: web_application_understanding
@@ -184,7 +184,7 @@ cli_tool_preset:
   
   agents:
     core_agents:
-      - guild-reasoning-agent:
+      - main-thread-reasoning:
           thinking_mode: ultrathink
           specialization: user_workflow_understanding
       - guild-planning-agent:
@@ -237,7 +237,7 @@ library_package_preset:
   
   agents:
     core_agents:
-      - guild-reasoning-agent:
+      - main-thread-reasoning:
           thinking_mode: ultrathink
           specialization: api_design_understanding
       - guild-planning-agent:
@@ -296,7 +296,7 @@ enterprise_application_preset:
   
   agents:
     core_agents:
-      - guild-reasoning-agent:
+      - main-thread-reasoning:
           thinking_mode: ultrathink
           model: opus
           specialization: enterprise_requirements_analysis
@@ -372,7 +372,7 @@ microservice_preset:
   
   agents:
     core_agents:
-      - guild-reasoning-agent:
+      - main-thread-reasoning:
           thinking_mode: ultrathink
           specialization: service_boundary_analysis
       - guild-planning-agent:

@@ -1,10 +1,22 @@
-# Project Analysis Module
+# Master Project Analysis Reference
 
-## Purpose
-Core project analysis that defines the Guild system's intelligence. This module is embedded into the setup command.
+## Overview
 
-## Embedded Intelligence
+This is the comprehensive reference for Guild project analysis strategies, technology detection, and complexity profiling. Core sections are extracted for embedding into the setup command.
 
+## Table of Contents
+
+1. [Analysis Intelligence](#analysis-intelligence)
+2. [Technology Detection](#technology-detection)
+3. [Complexity Profiling](#complexity-profiling)
+4. [Agent Generation Strategy](#agent-generation-strategy)
+5. [Pattern Recognition](#pattern-recognition)
+
+## Analysis Intelligence
+
+The Guild system uses intelligent project analysis to understand codebases without hardcoded patterns.
+
+<!-- CORE-START -->
 ## Project Analysis Intelligence
 
 ### Pattern-Based Analysis
@@ -76,7 +88,15 @@ Intelligence Allocation:
   Low Complexity → Efficient execution modes
   Mixed Complexity → Adaptive strategies
 ```
+<!-- CORE-END -->
 
+## Technology Detection
+
+### Detection Methodology
+
+The system uses pattern-based detection rather than hardcoded framework names.
+
+<!-- CORE-START -->
 ## Technology Detection
 
 ### Detection Process
@@ -193,7 +213,45 @@ Package Patterns:
     - API stability
     - Backward compatibility
 ```
+<!-- CORE-END -->
 
+## Complexity Profiling
+
+### Multi-Dimensional Analysis
+
+The system profiles project complexity across multiple dimensions.
+
+**Cognitive Complexity Indicators**:
+- Number of domain concepts
+- Concept interdependencies
+- Knowledge prerequisites
+- Mental model requirements
+
+**Structural Complexity Indicators**:
+- Component count
+- Dependency depth
+- Interface complexity
+- Coupling metrics
+
+**Change Complexity Indicators**:
+- Test requirements
+- Impact radius
+- Context needs
+- Validation complexity
+
+**Coordination Complexity Indicators**:
+- Team boundaries
+- Service interactions
+- Synchronization points
+- Communication patterns
+
+## Agent Generation Strategy
+
+### Intelligent Agent Creation
+
+Agents are generated based on detected patterns and complexity profiles.
+
+<!-- CORE-START -->
 ## Agent Generation Strategy
 
 ### Pattern to Agent Mapping
@@ -271,7 +329,15 @@ Project-Specific Knowledge:
     - Data models
     - External integrations
 ```
+<!-- CORE-END -->
 
+## Pattern Recognition
+
+### Analysis Prompts
+
+The system uses sophisticated prompts for project analysis.
+
+<!-- CORE-START -->
 ## Analysis Prompts
 
 ### Project Analysis Prompt Template
@@ -331,7 +397,29 @@ Based on project analysis, generate specialized agents with:
 
 Output: Complete agent definitions with embedded intelligence
 ```
+<!-- CORE-END -->
 
+## Best Practices
+
+### Analysis Guidelines
+
+1. **Pattern Over Names**: Focus on patterns, not framework names
+2. **Holistic View**: Consider all aspects of the project
+3. **Context Awareness**: Understand domain and business logic
+4. **Quality Focus**: Identify testing and validation patterns
+5. **Evolution Ready**: Design for project growth
+
+### Detection Strategies
+
+1. **Start Broad**: Begin with high-level patterns
+2. **Drill Down**: Progressively analyze details
+3. **Cross-Reference**: Validate findings across sources
+4. **Avoid Assumptions**: Let evidence guide conclusions
+5. **Document Findings**: Record analysis results
+
+## Integration Points
+
+<!-- CORE-START -->
 ## Integration Points
 
 ### Setup Command Embedding
@@ -362,16 +450,57 @@ Influences workflow:
 3. **Complexity-Driven**: Match resources to complexity
 4. **Technology-Agnostic**: Work with any technology stack
 5. **Adaptive Generation**: Create agents based on actual needs
+<!-- CORE-END -->
 
-## Integration Points
+## Troubleshooting
 
-### Setup Command Embedding
-This module is embedded into `/guild:setup` command during installation.
+### Common Issues
 
-### Module Dependencies
-- Extracted from: master-project-analysis.md
+1. **Pattern Misidentification**: Verify with multiple sources
+2. **Complexity Underestimation**: Review all dimensions
+3. **Missing Technologies**: Check configuration files
+4. **Agent Mismatch**: Validate pattern detection
+5. **Intelligence Gaps**: Ensure comprehensive analysis
 
-### Module Consumers
-- `/guild:setup` command (primary)
-- Agent generation logic
-- Workflow orchestration
+### Debug Strategies
+
+- Enable verbose analysis logging
+- Inspect intermediate results
+- Validate pattern detection
+- Review complexity scores
+- Check agent generation
+
+## Advanced Topics
+
+### Custom Pattern Definition
+
+Creating new pattern categories for specialized domains.
+
+**Process**:
+1. Identify unique characteristics
+2. Define detection criteria
+3. Map to agent types
+4. Embed intelligence
+5. Test generation
+
+### Complexity Calibration
+
+Adjusting complexity thresholds for specific environments.
+
+**Calibration Factors**:
+- Team expertise level
+- Project maturity
+- Performance requirements
+- Quality standards
+- Resource constraints
+
+### Evolution Tracking
+
+Monitoring project evolution over time.
+
+**Tracking Metrics**:
+- Pattern emergence
+- Complexity growth
+- Technology adoption
+- Quality improvements
+- Architecture changes

@@ -1,10 +1,22 @@
-# Agent Architecture Module
+# Master Agent Architecture Reference
 
-## Purpose
-Core agent architecture that defines the Guild system's intelligence. This module is embedded into the setup command.
+## Overview
 
-## Embedded Intelligence
+This is the comprehensive reference for Guild agent architecture, classification systems, and design patterns. Core sections are extracted for embedding into the setup command.
 
+## Table of Contents
+
+1. [Agent Classification System](#agent-classification-system)
+2. [Agent Design Patterns](#agent-design-patterns)
+3. [Thinking Mode Integration](#thinking-mode-integration)
+4. [Agent Generation Strategy](#agent-generation-strategy)
+5. [Best Practices](#best-practices)
+
+## Agent Classification System
+
+The Guild system uses a sophisticated agent classification model based on capabilities and responsibilities.
+
+<!-- CORE-START -->
 ## Agent Classification System
 
 ### Context-Only Agents (Non-Changing)
@@ -66,7 +78,15 @@ Technology Engineers:
     - guild-cli-engineer
     - guild-package-engineer
 ```
+<!-- CORE-END -->
 
+## Agent Design Patterns
+
+### Thin Agent Architecture
+
+Agents are lightweight entities with metadata and references to centralized processes.
+
+<!-- CORE-START -->
 ## Agent Placement Architecture
 
 ### Directory Structure Requirements
@@ -95,7 +115,13 @@ All Guild agents MUST be created in: `.claude/agents/guild/`
   ├── performance-engineer-agent.md
   └── [other-specialists].md
 ```
+<!-- CORE-END -->
 
+### Agent Template Structure
+
+Each agent follows a consistent template for predictability and maintainability.
+
+<!-- CORE-START -->
 ## Thin Agent Design
 
 ### Agent Template Structure
@@ -131,7 +157,15 @@ context_optimization: enabled
 - Dynamic Generation: Created based on analysis
 - Automatic Optimization: Claude determines configurations
 - Future-Proof: Better models generate better agents
+<!-- CORE-END -->
 
+## Thinking Mode Integration
+
+### Strategic Mode Assignment
+
+The system assigns thinking modes based on task complexity and cognitive requirements.
+
+<!-- CORE-START -->
 ## Thinking Mode Integration
 
 ### Mode Assignment Strategy
@@ -176,7 +210,15 @@ context_optimization: enabled
   </context-preparation>
 </ultrathink-workflow>
 ```
+<!-- CORE-END -->
 
+## Agent Generation Strategy
+
+### Dynamic Generation Lifecycle
+
+Agents are generated dynamically based on project analysis results.
+
+<!-- CORE-START -->
 ## Dynamic Agent Generation
 
 ### Generation Lifecycle
@@ -226,7 +268,77 @@ Package Patterns → guild-package-engineer:
   - Distribution strategy knowledge
   - Documentation standards
 ```
+<!-- CORE-END -->
 
+### Intelligence Embedding Process
+
+Each agent receives comprehensive project intelligence during generation.
+
+**Embedded Knowledge Types**:
+1. **Architectural Patterns**: How the project is structured
+2. **Technology Context**: Frameworks, libraries, tools
+3. **Domain Knowledge**: Business logic and workflows
+4. **Quality Standards**: Testing, documentation, style
+5. **Development Patterns**: Workflows and practices
+
+## Best Practices
+
+### Agent Development Guidelines
+
+1. **Single Responsibility**: Each agent has one clear purpose
+2. **Clear Interfaces**: Well-defined inputs and outputs
+3. **Project Intelligence**: Embed relevant project knowledge
+4. **Appropriate Thinking**: Match cognitive resources to needs
+5. **Testability**: Agents should be verifiable
+
+### Common Pitfalls
+
+1. **Over-Engineering**: Keep agents simple and focused
+2. **Hardcoding**: Avoid technology-specific hardcoding
+3. **Context Bloat**: Minimize context transfer size
+4. **Wrong Placement**: Always use correct directory structure
+5. **Missing Intelligence**: Ensure project knowledge embedded
+
+## Integration Patterns
+
+### Agent Coordination
+
+Agents work together through structured handoffs and coordination protocols.
+
+**Coordination Mechanisms**:
+- XML-based context packages
+- Priority-based routing
+- Validation checkpoints
+- Error recovery protocols
+
+### Workflow Integration
+
+Agents integrate seamlessly with workflow stages:
+- Context-only agents in analysis stages
+- Implementation agents in execution stages
+- Verification agents in quality stages
+
+## Evolution and Maintenance
+
+### Agent Updates
+
+When updating agents:
+1. Preserve project intelligence
+2. Maintain interface compatibility
+3. Test coordination protocols
+4. Validate thinking modes
+5. Document changes
+
+### Version Management
+
+- Semantic versioning for breaking changes
+- Backward compatibility when possible
+- Migration guides for updates
+- Deprecation warnings
+
+## Key Invariants
+
+<!-- CORE-START -->
 ## Key Invariants
 
 1. **Placement Requirement**: All Guild agents in `.claude/agents/guild/`
@@ -234,16 +346,22 @@ Package Patterns → guild-package-engineer:
 3. **Thinking Mode Discipline**: Strategic = ultrathink, Execution = think
 4. **Dynamic Generation**: Agents created based on project analysis
 5. **Embedded Intelligence**: All agents contain project knowledge
+<!-- CORE-END -->
 
-## Integration Points
+## Troubleshooting
 
-### Setup Command Embedding
-This module is embedded into `/guild:setup` command during installation.
+### Common Issues
 
-### Module Dependencies
-- Extracted from: master-agent-architecture.md
+1. **Agent Not Found**: Check directory placement
+2. **Context Transfer Failure**: Validate XML format
+3. **Thinking Mode Issues**: Verify assignment logic
+4. **Generation Failures**: Check project analysis
+5. **Coordination Problems**: Review handoff protocols
 
-### Module Consumers
-- `/guild:setup` command (primary)
-- Agent generation logic
-- Workflow orchestration
+### Debug Strategies
+
+- Enable verbose agent logging
+- Inspect context packages
+- Validate agent metadata
+- Monitor thinking mode usage
+- Check placement requirements

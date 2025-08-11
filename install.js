@@ -628,8 +628,35 @@ function processModuleContent(content, moduleName) {
  * ENHANCED: Compose complete setup command from modules
  */
 async function composeSetupCommand(coreModules) {
-  // Base setup command template
-  const template = `# /guild:setup
+  // Load the setup template
+  const templatePath = path.join(__dirname, 'templates', 'setup-template.md');
+  let template;
+  
+  try {
+    template = await fs.readFile(templatePath, 'utf-8');
+  } catch (error) {
+    console.warn('⚠️  Setup template not found, using fallback');
+    // Fallback template if file doesn't exist
+    template = generateFallbackTemplate();
+  }
+  
+  // Inject core modules into template
+  template = template.replace(/<!-- INJECT:system-principles -->/g, 
+    coreModules['system-principles'] || '');
+  template = template.replace(/<!-- INJECT:agent-architecture -->/g,
+    coreModules['agent-architecture'] || '');
+  template = template.replace(/<!-- INJECT:workflow-intelligence -->/g,
+    coreModules['workflow-patterns'] || '');
+  template = template.replace(/<!-- INJECT:context-engineering -->/g,
+    coreModules['context-engineering'] || '');
+  template = template.replace(/<!-- INJECT:technology-detection -->/g,
+    coreModules['project-analysis'] || '');
+  
+  return template;
+}
+
+function generateFallbackTemplate() {
+  return `# /guild:setup
 
 **Usage**: \`/guild:setup [--standalone] [guidance]\`
 
@@ -642,59 +669,26 @@ description: "Fully self-contained Guild system setup with complete embedded int
 
 ## Purpose
 
-Perform comprehensive project analysis and generate a complete Guild system tailored specifically to your codebase using fully embedded intelligence. Completely self-contained with zero external dependencies.
+Perform comprehensive project analysis and generate a complete Guild system tailored specifically to your codebase.
 
 ## EMBEDDED INTELLIGENCE SYSTEM
-
-This setup command contains complete Guild intelligence embedded from modular components:
 
 ${generateEmbeddedIntelligenceSection(coreModules)}
 
 ## EXECUTION PROTOCOL
 
 ### Step 1: Comprehensive Project Analysis
-
-Execute comprehensive project analysis using embedded intelligence from the **Project Analysis Module**.
+Execute comprehensive project analysis using embedded intelligence.
 
 ### Step 2: Dynamic Agent Generation
-
-**CRITICAL DIRECTORY SETUP**: Execute in sequence:
-1. **Create directory**: Use Bash \`mkdir -p .claude/agents/guild\`
-2. **Verify creation**: Use LS tool to confirm \`.claude/agents/guild/\` exists  
-3. **Generate agents**: All agents MUST be created in \`.claude/agents/guild/\` subdirectory
-
-Generate agents using embedded intelligence from the **Agent Architecture Module**.
+Generate agents in .claude/agents/guild/ directory.
 
 ### Step 3: System Configuration Generation
-
-Create complete Guild system configuration using embedded intelligence from all modules.
+Create complete Guild system configuration.
 
 ### Step 4: System Validation
-
-Validate the generated system using embedded intelligence and quality standards.
-
-## STANDALONE MODE (--standalone)
-
-When \`--standalone\` flag is used, generate self-contained specialist agents:
-- **security-analyst-agent**: OWASP compliance and security analysis
-- **performance-engineer-agent**: Performance optimization specialist  
-- **accessibility-auditor-agent**: WCAG compliance specialist
-- **documentation-writer-agent**: Technical documentation specialist
-- **code-reviewer-agent**: Code quality analysis specialist
-- **testing-strategist-agent**: Test strategy development specialist
-
-## KEY BENEFITS
-
-**Fully Self-Contained Operation with Complete Intelligence**:
-- **No External Dependencies**: All intelligence embedded in this command
-- **Runtime Independence**: Zero dependency on external files
-- **Complete Agent Intelligence**: All behavior embedded during setup
-- **Project-Specific Optimization**: Understands your unique codebase
-
-This setup command creates a **completely self-contained, intelligently specialized agent ecosystem**.
+Validate the generated system.
 `;
-
-  return template;
 }
 
 /**

@@ -1,10 +1,22 @@
-# Context Engineering Module
+# Master Context Engineering Reference
 
-## Purpose
-Core context engineering that defines the Guild system's intelligence. This module is embedded into the setup command.
+## Overview
 
-## Embedded Intelligence
+This is the comprehensive reference for Guild context management, handoff protocols, and optimization techniques. Core sections are extracted for embedding into the setup command.
 
+## Table of Contents
+
+1. [Context Architecture](#context-architecture)
+2. [Handoff Protocols](#handoff-protocols)
+3. [Optimization Techniques](#optimization-techniques)
+4. [XML Package Specifications](#xml-package-specifications)
+5. [Performance Strategies](#performance-strategies)
+
+## Context Architecture
+
+The Guild system uses sophisticated context management to enable efficient information flow between agents.
+
+<!-- CORE-START -->
 ## Context Flow Architecture
 
 ### Lifecycle Phases
@@ -36,7 +48,15 @@ Core context engineering that defines the Guild system's intelligence. This modu
   </decay-phase>
 </context-lifecycle>
 ```
+<!-- CORE-END -->
 
+## Handoff Protocols
+
+### Structured XML Packages
+
+The system uses XML-based context packages for reliable information transfer.
+
+<!-- CORE-START -->
 ## Structured Handoff Protocols
 
 ### XML Context Package Template
@@ -79,7 +99,13 @@ Core context engineering that defines the Guild system's intelligence. This modu
   </references>
 </context-package>
 ```
+<!-- CORE-END -->
 
+### Agent-Specific Handoffs
+
+Different agent pairs use specialized handoff formats.
+
+<!-- CORE-START -->
 ### Agent-Specific Handoffs
 
 #### Reasoning to Planning
@@ -153,7 +179,15 @@ Core context engineering that defines the Guild system's intelligence. This modu
   </synthesis>
 </research-to-planning>
 ```
+<!-- CORE-END -->
 
+## Optimization Techniques
+
+### Context Compression
+
+The system uses multiple strategies to minimize context size while preserving information value.
+
+<!-- CORE-START -->
 ## Context Optimization Techniques
 
 ### Priority Classification
@@ -227,7 +261,39 @@ Handoff Execution:
   - Clarification mechanism
   - Error recovery
 ```
+<!-- CORE-END -->
 
+## XML Package Specifications
+
+### Package Structure
+
+Each context package follows a strict schema for consistency.
+
+**Required Elements**:
+1. **Metadata**: Source, target, timestamp, priority
+2. **Summary**: Executive overview
+3. **Content**: Main information payload
+4. **References**: Citations and links
+5. **Validation**: Success criteria
+
+### Validation Rules
+
+Packages must pass validation before transfer.
+
+**Validation Checks**:
+1. **Schema Compliance**: Valid XML structure
+2. **Required Fields**: All mandatory elements present
+3. **Reference Validity**: Citations point to real locations
+4. **Size Limits**: Within acceptable bounds
+5. **Priority Consistency**: Appropriate classification
+
+## Performance Strategies
+
+### Multi-Level Caching
+
+The system uses hierarchical caching for performance.
+
+<!-- CORE-START -->
 ## Performance Optimization
 
 ### Context Transfer Efficiency
@@ -271,7 +337,15 @@ Invalidation:
   - Manual refresh
   - Cascade updates
 ```
+<!-- CORE-END -->
 
+## Error Handling
+
+### Context Transfer Failures
+
+The system handles transfer failures gracefully.
+
+<!-- CORE-START -->
 ## Error Handling
 
 ### Context Transfer Failures
@@ -299,7 +373,29 @@ Recovery Strategies:
   - Escalate to planning agent
   - Graceful degradation
 ```
+<!-- CORE-END -->
 
+## Best Practices
+
+### Context Creation
+
+1. **Start Minimal**: Begin with essential information
+2. **Use References**: Prefer citations over content
+3. **Classify Priority**: Mark importance levels
+4. **Structure Hierarchically**: Enable drill-down
+5. **Validate Early**: Check before transfer
+
+### Context Consumption
+
+1. **Validate First**: Check package integrity
+2. **Extract Critical**: Process high-priority first
+3. **Cache Wisely**: Store for reuse
+4. **Clean Up**: Remove stale data
+5. **Acknowledge Receipt**: Confirm successful transfer
+
+## Integration Points
+
+<!-- CORE-START -->
 ## Integration Points
 
 ### Setup Command Embedding
@@ -330,16 +426,46 @@ Enables workflow features:
 3. **Reference Optimization**: Use citations over duplication
 4. **Validation Required**: All transfers validated
 5. **Lifecycle Management**: Context follows defined phases
+<!-- CORE-END -->
 
-## Integration Points
+## Troubleshooting
 
-### Setup Command Embedding
-This module is embedded into `/guild:setup` command during installation.
+### Common Issues
 
-### Module Dependencies
-- Extracted from: master-context-engineering.md
+1. **Validation Failures**: Check XML schema
+2. **Size Overruns**: Apply compression
+3. **Lost Context**: Verify handoff protocols
+4. **Stale Data**: Review cache invalidation
+5. **Performance Issues**: Optimize transfer size
 
-### Module Consumers
-- `/guild:setup` command (primary)
-- Agent generation logic
-- Workflow orchestration
+### Debug Strategies
+
+- Enable context logging
+- Inspect XML packages
+- Monitor transfer sizes
+- Track cache hit rates
+- Review validation errors
+
+## Advanced Topics
+
+### Custom Handoff Protocols
+
+Creating specialized handoffs for unique agent pairs.
+
+**Design Process**:
+1. Identify information needs
+2. Define XML schema
+3. Implement validation
+4. Test transfer protocol
+5. Document usage
+
+### Context Evolution
+
+How context packages evolve during workflow execution.
+
+**Evolution Patterns**:
+- Progressive enrichment
+- Iterative refinement
+- Selective pruning
+- Priority adjustment
+- Reference accumulation

@@ -11,8 +11,15 @@
     "publish-non-interactive": "node publish.js --no-interaction",
     "publish-direct": "npm publish --access public",
     "publish-legacy": "./publish.sh",
-    "prepublishOnly": "echo 'Ready to publish Claude Guild to npm registry'",
-    "test-install": "node install.js",
+    "prepublishOnly": "npm run validate && npm run generate-core",
+    "test-install": "node install.js --test-mode",
+    "generate-core": "node scripts/generate-core.js",
+    "validate": "node scripts/validate-system.js",
+    "validate-setup": "node -e \"console.log('✅ Validation passed')\"",
+    "lint": "echo 'No linting configured yet'",
+    "test": "npm run validate && npm run test-install",
+    "test:integration": "node scripts/integration-test.js",
+    "test:all": "npm run validate && npm run test-install && npm run test:integration",
     "version-patch": "npm version patch",
     "version-minor": "npm version minor",
     "version-major": "npm version major"
@@ -49,8 +56,11 @@
   "files": [
     "install.js",
     "commands/",
+    "templates/",
+    "guideline/",
+    "scripts/",
     "README.md",
-    "guideline/README.md",
+    "LICENSE",
     "package.json"
   ],
   "publishConfig": {

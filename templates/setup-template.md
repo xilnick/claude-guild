@@ -54,11 +54,6 @@ Generate specialized agents based on embedded intelligence:
 
 #### Context-Only Agents (Analysis & Planning)
 ```yaml
-guild-reasoning-agent.md:
-  thinking_mode: ultrathink
-  role: Task analysis, clarification, requirement understanding
-  constraints: NEVER make direct changes, create structured context packages
-  
 guild-research-agent.md:
   thinking_mode: think-harder
   role: Codebase investigation, dependency analysis, pattern recognition

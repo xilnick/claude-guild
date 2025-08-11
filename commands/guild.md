@@ -181,7 +181,7 @@ First, dynamically discover Guild agents and configuration for this project:
 **Step 2: Discover Available Agents**
 - Check `.claude/agents/guild/` directory for Guild agents
 - Dynamically identify available agents:
-  - **Core Agents**: guild-reasoning-agent, guild-planning-agent, guild-*-research-agent
+  - **Core Agents**: guild-planning-agent, guild-*-research-agent
   - **Implementation Agents**: Any guild-*-engineer agents found
   - **Quality Agents**: guild-verification-agent, guild-spec-agent if present
   - **Project-Specific Agents**: Any other guild-* agents discovered
@@ -233,14 +233,14 @@ Execute activated workflow stages in this mandatory order:
 
 #### 1. 🧠 Reasoning Stage (unless --no-reason)
 **Stage**: `prompt-analysis`
-**Agent**: guild-reasoning-agent (if available) or fallback to direct analysis
+**Executor**: Main thread with ultrathink mode
 **Purpose**: Analyze user request, correct typos, clarify requirements, align with project context
-**Changes**: **NONE** - Only creates analysis context for other agents
-**Thinking Mode**: Often benefits from "think-harder" or "ultrathink" modes
+**Changes**: **NONE** - Only creates analysis context for subsequent stages
+**Thinking Mode**: Uses "ultrathink" mode for comprehensive requirement analysis
 
 #### 1a. 🧠 Reasoning-Only Stage (flag-only mode: `--reason` alone)
 **Stage**: `reasoning-only`
-**Agent**: guild-reasoning-agent (context-only)
+**Executor**: Main thread with ultrathink mode
 **Purpose**: Deep prompt analysis and interpretation debugging without subsequent stages
 **Changes**: **NONE** - Only provides reasoning analysis output to user
 **Input**: User prompt for analysis and clarification
@@ -393,7 +393,7 @@ Execute activated workflow stages in this mandatory order:
 
 **DYNAMIC AGENT SELECTION**:
 - **Agent Discovery**: Dynamically find agents in `.claude/agents/guild/` at runtime
-- **Core System Agents**: Use guild-reasoning-agent, guild-planning-agent if available
+- **Core System Agents**: Use guild-planning-agent if available, reasoning done in main thread
 - **Research Agents**: Use any guild-*-research-agent agents found
 - **Implementation Agents**: Use any guild-*-engineer agents discovered
 - **Quality Agents**: Use guild-verification-agent, guild-spec-agent if present
