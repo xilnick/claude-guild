@@ -422,6 +422,172 @@ microservice_preset:
       - Distributed tracing integration
 ```
 
+## Large-Scale Project Presets
+
+### Monorepo Preset
+```yaml
+monorepo_preset:
+  description: "Optimized for monorepo project structures with multiple packages"
+  use_cases: [lerna_projects, nx_workspaces, rush_monorepos, yarn_workspaces]
+  
+  agents:
+    core_agents:
+      - guild-monorepo-coordinator:
+          thinking_mode: ultrathink
+          model: opus
+          specialization: package_coordination
+      - guild-dependency-analyzer:
+          thinking_mode: think-harder
+          specialization: cross_package_dependencies
+      - guild-boundary-validator:
+          thinking_mode: think
+          specialization: package_boundary_enforcement
+    
+    per_package_agents:
+      - Dynamic generation based on package types
+      - Specialized agents per package domain
+      - Shared library specialists
+    
+  parallel_execution:
+    strategy: package_based_parallel
+    max_parallel: package_count * 1.5
+    coordination: dependency_aware
+    conflict_resolution: package_boundary
+    
+  workflow:
+    default_stages: [package_discovery, dependency_analysis, parallel_package_work, integration_validation]
+    package_level_stages: [package_reasoning, package_implementation, package_testing]
+    cross_package_stages: [integration_testing, dependency_validation]
+    
+  context_engineering:
+    level: package_scoped
+    optimization: monorepo_optimized
+    handoff_protocols: package_boundary_aware
+    shared_context: cross_package_cache
+    
+  monorepo_optimizations:
+    dependency_management:
+      - Automatic dependency graph analysis
+      - Circular dependency detection
+      - Version conflict resolution
+      - Shared dependency optimization
+    build_optimization:
+      - Incremental build strategies
+      - Parallel package builds
+      - Cache sharing between packages
+      - Smart rebuild detection
+```
+
+### Multi-Domain Preset
+```yaml
+multi_domain_preset:
+  description: "For projects with multiple distinct business domains"
+  use_cases: [enterprise_applications, multi_tenant_saas, platform_products, domain_driven_design]
+  
+  agents:
+    boundary_agents:
+      - guild-integration-coordinator:
+          thinking_mode: think-harder
+          specialization: cross_domain_integration
+      - guild-contract-validator:
+          thinking_mode: think
+          specialization: domain_contract_enforcement
+    
+    domain_agents:
+      - Generated per detected domain
+      - Specialized knowledge per domain
+      - Domain-specific patterns and rules
+    
+  parallel_execution:
+    strategy: domain_based_parallel
+    max_parallel: domain_count * 2
+    boundary_management: strict
+    conflict_resolution: automatic_with_escalation
+    synchronization: event_driven
+    
+  workflow:
+    default_stages: [domain_discovery, boundary_analysis, parallel_domain_work, integration_validation]
+    domain_level_stages: [domain_analysis, domain_planning, domain_implementation]
+    integration_stages: [boundary_validation, contract_testing, integration_testing]
+    
+  context_engineering:
+    level: domain_scoped
+    optimization: boundary_preserving
+    handoff_protocols: contract_based
+    domain_isolation: strict
+    
+  domain_optimizations:
+    boundary_management:
+      - Automatic boundary detection
+      - Contract generation and validation
+      - Anti-corruption layer patterns
+      - Domain event handling
+    knowledge_preservation:
+      - Domain-specific terminology
+      - Business rule encoding
+      - Domain expert knowledge
+      - Ubiquitous language enforcement
+```
+
+### Large-Scale Enterprise Preset
+```yaml
+large_scale_preset:
+  description: "Maximum performance configuration for very large codebases"
+  use_cases: [>100k_loc, >50_contributors, complex_architectures, fortune_500_systems]
+  
+  agents:
+    orchestration_layer:
+      - guild-master-coordinator:
+          thinking_mode: ultrathink
+          model: opus
+          specialization: hierarchical_coordination
+      - guild-resource-manager:
+          thinking_mode: think
+          specialization: resource_allocation
+    
+    scope_coordinators:
+      - Generated per major scope
+      - Hierarchical organization
+      - Delegation capabilities
+    
+    specialist_pools:
+      - Technology specialists
+      - Domain experts
+      - Quality engineers
+      - Performance optimizers
+    
+  parallel_execution:
+    strategy: hierarchical_parallel
+    max_parallel: 20+
+    levels: [master, scope, sub_scope, component]
+    coordination: distributed_consensus
+    resource_management: dynamic_pooling
+    
+  workflow:
+    orchestration: hierarchical
+    stages: [analysis, decomposition, delegation, parallel_execution, aggregation, validation]
+    checkpoints: [scope_complete, integration_ready, quality_verified]
+    rollback_capability: true
+    
+  optimization:
+    performance:
+      - Aggressive parallelization
+      - Multi-level caching
+      - Incremental processing
+      - Smart scope detection
+      - Predictive resource allocation
+    scalability:
+      - Horizontal scaling support
+      - Distributed execution capability
+      - Cloud-native optimization
+      - Elastic resource management
+    reliability:
+      - Failure isolation
+      - Automatic recovery
+      - Checkpoint/restart
+      - Partial success handling
+```
+
 ## Preset Selection Examples
 
 ### Selection Logic Examples

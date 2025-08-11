@@ -193,88 +193,94 @@ Strategy Selection:
   Simple Tasks: Sequential execution
   Complex Tasks: Parallel with coordination
   Large Projects: Pipeline with checkpoints
+  Multi-Scope Projects: Maximum parallelization
   
 Factors:
   - Task complexity
   - Available agents
   - Context size
   - Performance requirements
+  - Number of scopes
+  - Inter-scope dependencies
 ```
 
-## Coordination Mechanisms
-
-### Context Synchronization
+### Large Project Workflows
 
 ```yaml
-Isolation:
-  - Separate working contexts per agent
-  - File access boundaries
-  - Independent state management
-  
-Synchronization Points:
-  - Stage transitions
-  - Result aggregation
-  - Phase checkpoints
-  
-Conflict Resolution:
-  - Lock mechanisms for shared resources
-  - Sequential fallback for conflicts
-  - Merge strategies for parallel results
-```
-
-### Stage Handoffs
-
-```yaml
-Handoff Protocol:
-  1. Stage completion signal
-  2. Context package creation
-  3. Validation checkpoint
-  4. Next stage activation
-  5. Acknowledgment receipt
-  
-Context Transfer:
-  - Structured XML packages
-  - Priority classification
-  - Reference-based linking
-  - Compression when needed
-```
-
-## Workflow Optimization
-
-### Performance Strategies
-
-```yaml
-Optimization Techniques:
-  - Stream execution for fast response
-  - Parallel research for efficiency
-  - Context caching between stages
-  - Smart agent pooling
-  
-Metrics:
-  - First response time
-  - End-to-end completion
-  - Context transfer size
-  - Resource utilization
-```
-
-### Adaptive Routing
-
-```yaml
-Routing Decisions:
-  Task Analysis:
-    - Complexity assessment
-    - Technology detection
-    - Scope determination
+Scope Discovery Workflow:
+  stages: [scope_analysis, boundary_detection, agent_generation, scope_planning]
+  parallel: true
+  description: Discover and analyze project scopes
+  execution:
+    - Parallel directory scanning
+    - Concurrent pattern matching
+    - Simultaneous boundary detection
+    - Parallel agent generation per scope
     
-  Agent Selection:
-    - Capability matching
-    - Load balancing
-    - Specialization alignment
+Multi-Scope Workflow:
+  stages: [reasoning, scope_analysis, parallel_research, parallel_planning, parallel_implementation, integration_testing]
+  description: Handle multi-scope projects efficiently
+  execution:
+    - Sequential reasoning for requirements
+    - Parallel scope analysis
+    - Parallel research per scope
+    - Parallel planning with boundary coordination
+    - Parallel implementation per scope
+    - Integration testing across boundaries
     
-  Strategy Selection:
-    - Sequential for simple
-    - Parallel for complex
-    - Pipeline for large
+Monorepo Workflow:
+  stages: [package_discovery, dependency_analysis, parallel_package_work, integration_validation]
+  description: Optimized for monorepo structures
+  execution:
+    - Discover all packages
+    - Analyze inter-package dependencies
+    - Parallel work on independent packages
+    - Validate package integration
+```
+
+### Parallel Execution Control
+
+```yaml
+Parallelization Flags:
+  --parallel:
+    description: Enable parallel execution
+    default: auto-detect based on project size
+    levels: [none, minimal, balanced, maximum]
+    
+  --max-parallel:
+    description: Maximum parallel agents
+    default: number_of_cpu_cores
+    range: 1-32
+    
+  --scope-parallel:
+    description: Enable scope-based parallelization
+    default: true for multi-scope projects
+    
+  --parallel-strategy:
+    description: Parallelization strategy
+    options: [sequential, parallel, pipeline, adaptive]
+    default: adaptive
+
+Parallel Stage Configuration:
+  research:
+    max_parallel: unlimited
+    strategy: scatter-gather
+    coordination: merge_results
+    
+  planning:
+    max_parallel: number_of_scopes
+    strategy: hierarchical
+    coordination: boundary_validation
+    
+  implementation:
+    max_parallel: 2_per_scope
+    strategy: scope_isolated
+    coordination: conflict_detection
+    
+  testing:
+    max_parallel: test_suite_count
+    strategy: test_parallel
+    coordination: result_aggregation
 ```
 
 ## Integration Points

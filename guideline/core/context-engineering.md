@@ -154,6 +154,66 @@ Core context engineering that defines the Guild system's intelligence. This modu
 </research-to-planning>
 ```
 
+### Scope-Boundary Handoffs
+
+#### Cross-Scope Communication
+
+```xml
+<scope-boundary-handoff>
+  <metadata>
+    <from-scope>payments</from-scope>
+    <to-scope>user-management</to-scope>
+    <integration-point>user-payment-linking</integration-point>
+    <priority>critical</priority>
+  </metadata>
+  
+  <contract>
+    <interface>PaymentUserInterface</interface>
+    <data-schema>UserPaymentSchema</data-schema>
+    <validation-rules>payment-user-rules</validation-rules>
+  </contract>
+  
+  <dependencies>
+    <required>user-id-validation</required>
+    <optional>payment-history-access</optional>
+  </dependencies>
+  
+  <constraints>
+    <security>PCI-compliance-required</security>
+    <performance>sub-100ms-response</performance>
+    <consistency>eventual-consistency-ok</consistency>
+  </constraints>
+</scope-boundary-handoff>
+```
+
+#### Domain Agent Coordination
+
+```xml
+<domain-coordination>
+  <scope-analysis>
+    <scope-name>e-commerce</scope-name>
+    <sub-scopes>[cart, checkout, inventory, pricing]</sub-scopes>
+    <complexity>high</complexity>
+    <dependencies>external-payment-gateway</dependencies>
+  </scope-analysis>
+  
+  <agent-allocation>
+    <primary>guild-ecommerce-domain-agent</primary>
+    <supporting>
+      - guild-payments-domain-agent
+      - guild-inventory-specialist
+      - guild-pricing-engine
+    </supporting>
+  </agent-allocation>
+  
+  <execution-strategy>
+    <parallelization>scope-level</parallelization>
+    <coordination>boundary-validation</coordination>
+    <conflict-resolution>automatic</conflict-resolution>
+  </execution-strategy>
+</domain-coordination>
+```
+
 ## Context Optimization Techniques
 
 ### Priority Classification

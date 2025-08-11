@@ -194,6 +194,152 @@ Package Patterns:
     - Backward compatibility
 ```
 
+## Scope Discovery and Analysis
+
+### Project Scope Detection
+
+```yaml
+Scope Discovery Patterns:
+  Monorepo Structures:
+    - packages/* directories (npm/yarn workspaces)
+    - lerna.json, rush.json, nx.json configurations
+    - Workspace protocol dependencies
+    - Independent versioning patterns
+    - Shared build configurations
+    
+  Multi-Domain Boundaries:
+    - Domain-driven design patterns
+    - Bounded contexts (auth/, payments/, analytics/)
+    - Service boundaries in microservices
+    - Module federation patterns
+    - Clear separation of concerns
+    
+  Team Ownership Patterns:
+    - CODEOWNERS files
+    - Team-specific directories
+    - Documentation patterns by team
+    - Responsibility matrices
+    - Component ownership mapping
+    
+  Architectural Boundaries:
+    - Hexagonal architecture layers
+    - Clean architecture boundaries
+    - Vertical slice architecture
+    - Event-driven boundaries
+    - API gateway patterns
+
+Scope Complexity Indicators:
+  High Complexity Scopes:
+    - Cross-scope dependencies > 5
+    - Shared state management
+    - Complex integration patterns
+    - Multiple team ownership
+    
+  Medium Complexity Scopes:
+    - 2-5 cross-scope dependencies
+    - Well-defined interfaces
+    - Single team ownership
+    - Clear boundaries
+    
+  Low Complexity Scopes:
+    - Minimal external dependencies
+    - Self-contained functionality
+    - Simple interfaces
+    - Independent deployment
+```
+
+### Scope-Based Agent Mapping
+
+```yaml
+Scope → Specialized Agent Generation:
+  
+  Payment Processing Scope:
+    detection: [payment/, transactions/, billing/]
+    generate: guild-payments-domain-agent
+    intelligence:
+      - PCI compliance patterns
+      - Transaction flow understanding
+      - Payment gateway integrations
+      - Financial calculation accuracy
+      - Idempotency patterns
+    
+  User Management Scope:
+    detection: [auth/, users/, identity/]
+    generate: guild-auth-domain-agent
+    intelligence:
+      - Authentication flows
+      - Authorization patterns
+      - Session management
+      - Security best practices
+      - GDPR compliance
+    
+  Analytics Scope:
+    detection: [analytics/, metrics/, reporting/]
+    generate: guild-analytics-domain-agent
+    intelligence:
+      - Data pipeline patterns
+      - ETL processes
+      - Metrics aggregation
+      - Visualization patterns
+      - Performance optimization
+    
+  Infrastructure Scope:
+    detection: [.github/, .circleci/, terraform/, k8s/]
+    generate: guild-infrastructure-agent
+    intelligence:
+      - CI/CD pipeline patterns
+      - Container orchestration
+      - Infrastructure as code
+      - Monitoring and alerting
+      - Deployment strategies
+    
+  E-commerce Domain:
+    detection: [cart/, checkout/, inventory/]
+    generate: guild-ecommerce-domain-agent
+    intelligence:
+      - Order processing flows
+      - Inventory management
+      - Cart state patterns
+      - Checkout workflows
+      - Pricing calculations
+    
+  Content Management:
+    detection: [cms/, content/, media/]
+    generate: guild-content-domain-agent
+    intelligence:
+      - Content modeling
+      - Media handling
+      - Publishing workflows
+      - Version control patterns
+      - CDN integration
+```
+
+### Inter-Scope Analysis
+
+```yaml
+Boundary Detection:
+  Integration Points:
+    - Shared libraries and utilities
+    - Cross-scope API calls
+    - Event bus connections
+    - Database relationships
+    - Message queue topics
+    
+  Dependency Mapping:
+    - Direct dependencies
+    - Transitive dependencies
+    - Circular dependency detection
+    - Version conflicts
+    - Breaking change impact
+    
+  Contract Identification:
+    - API contracts between scopes
+    - Data schemas and formats
+    - Event contracts
+    - Protocol definitions
+    - SLA requirements
+```
+
 ## Agent Generation Strategy
 
 ### Pattern to Agent Mapping
@@ -306,6 +452,33 @@ Focus Areas:
 Output: Comprehensive project profile for agent generation
 ```
 
+### Scope Analysis Prompt Template
+
+```
+Perform comprehensive scope discovery and analysis.
+
+Scope Discovery:
+1. Identify Project Boundaries
+   - Detect monorepo packages
+   - Find domain boundaries
+   - Identify service boundaries
+   - Discover team ownership patterns
+   
+2. Analyze Scope Complexity
+   - Assess inter-scope dependencies
+   - Evaluate scope isolation
+   - Determine integration complexity
+   - Identify shared resources
+   
+3. Map Scope Relationships
+   - Create dependency graph
+   - Identify integration points
+   - Find circular dependencies
+   - Detect coupling patterns
+
+Output: Comprehensive scope map with boundaries and relationships
+```
+
 ### Agent Generation Prompt Template
 
 ```
@@ -317,13 +490,19 @@ Based on project analysis, generate specialized agents with:
    - Domain knowledge
    - Quality standards
    
-2. Optimal Configuration
+2. Scope-Specific Intelligence
+   - Domain expertise for detected scopes
+   - Inter-scope boundary understanding
+   - Integration point knowledge
+   - Scope-specific patterns
+   
+3. Optimal Configuration
    - Thinking mode assignment
    - Context optimization settings
    - Parallel execution capability
    - Handoff protocols
    
-3. Specialization Focus
+4. Specialization Focus
    - Core competencies
    - Technology coupling
    - Workflow integration

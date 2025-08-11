@@ -67,6 +67,74 @@ Technology Engineers:
     - guild-package-engineer
 ```
 
+### Scope-Specialized Agents
+
+**Characteristics**:
+- Deep domain expertise in specific project areas
+- Maintain context for their scope throughout workflow
+- Understand inter-scope boundaries and contracts
+- Can coordinate with other scope agents
+- Generated dynamically based on scope discovery
+
+**Scope Agent Categories**:
+```yaml
+Boundary Agents:
+  role: Manage inter-scope communication and integration
+  thinking_mode: think-harder
+  capabilities:
+    - Validate inter-scope contracts
+    - Detect integration conflicts
+    - Coordinate cross-scope changes
+    - Manage shared resources
+  focus: Integration points, data contracts, API boundaries
+  
+Domain Expert Agents:
+  role: Scope-specific implementation and analysis
+  thinking_mode: think
+  capabilities:
+    - Deep domain knowledge
+    - Scope-specific patterns
+    - Business logic understanding
+    - Domain best practices
+  focus: Domain logic, patterns, standards
+  examples:
+    - guild-payments-domain-agent
+    - guild-auth-domain-agent
+    - guild-analytics-domain-agent
+    - guild-infrastructure-agent
+  
+Scope Coordinator Agents:
+  role: Orchestrate work within a specific scope
+  thinking_mode: ultrathink
+  capabilities:
+    - Scope-level planning
+    - Dependency management
+    - Resource allocation
+    - Progress tracking
+  focus: Scope planning, dependencies, coordination
+```
+
+### Scope Agent Placement
+
+**Directory Structure for Scope Agents**:
+```
+.claude/agents/guild/
+  ├── core/
+  │   ├── guild-planning-agent.md
+  │   ├── guild-project-research-agent.md
+  │   └── guild-verification-agent.md
+  ├── technology/
+  │   ├── guild-frontend-engineer.md
+  │   ├── guild-backend-engineer.md
+  │   └── guild-cli-engineer.md
+  └── scopes/
+      ├── guild-payments-domain-agent.md
+      ├── guild-auth-domain-agent.md
+      ├── guild-analytics-domain-agent.md
+      ├── guild-ecommerce-domain-agent.md
+      └── guild-[scope]-agent.md
+```
+
 ## Agent Placement Architecture
 
 ### Directory Structure Requirements
@@ -225,6 +293,87 @@ Package Patterns → guild-package-engineer:
   - API design expertise
   - Distribution strategy knowledge
   - Documentation standards
+```
+
+### Scope-Specific Generation
+
+**Scope Detection → Domain Agent Generation**:
+
+```yaml
+Payment Processing Scope → guild-payments-domain-agent:
+  detection_patterns:
+    - payment/, transactions/, billing/ directories
+    - Payment gateway integrations
+    - Transaction processing logic
+  embedded_intelligence:
+    - PCI compliance requirements
+    - Idempotency patterns
+    - Financial calculations
+    - Payment provider APIs
+    
+User Management Scope → guild-auth-domain-agent:
+  detection_patterns:
+    - auth/, users/, identity/ directories
+    - Authentication middleware
+    - Session management code
+  embedded_intelligence:
+    - Security best practices
+    - OAuth/JWT patterns
+    - GDPR compliance
+    - Session strategies
+    
+Analytics Scope → guild-analytics-domain-agent:
+  detection_patterns:
+    - analytics/, metrics/, reporting/ directories
+    - Data pipeline code
+    - ETL processes
+  embedded_intelligence:
+    - Data aggregation patterns
+    - Performance optimization
+    - Visualization best practices
+    - Real-time vs batch processing
+    
+E-commerce Scope → guild-ecommerce-domain-agent:
+  detection_patterns:
+    - cart/, checkout/, inventory/ directories
+    - Order processing logic
+    - Product catalog structures
+  embedded_intelligence:
+    - Cart state management
+    - Checkout workflows
+    - Inventory tracking
+    - Pricing strategies
+```
+
+### Parallel Execution Configuration
+
+**Agent Parallel Execution Capabilities**:
+
+```yaml
+Parallel Execution Settings:
+  Scope Agents:
+    parallel: true
+    max_parallel: number_of_scopes
+    coordination: boundary_agents
+    conflict_resolution: automatic
+    
+  Research Agents:
+    parallel: true
+    max_parallel: unlimited
+    coordination: none_required
+    merge_strategy: intelligent_aggregation
+    
+  Implementation Agents:
+    parallel: true_within_scope
+    max_parallel: 2_per_scope
+    coordination: scope_coordinator
+    conflict_resolution: scope_level
+    
+  Boundary Agents:
+    parallel: false
+    execution: sequential_at_boundaries
+    coordination: central_planning
+    validation: strict
 ```
 
 ## Key Invariants
