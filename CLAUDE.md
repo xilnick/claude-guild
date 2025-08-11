@@ -2,6 +2,28 @@
 
 This file provides guidance to Claude Code when working with code in this repository.
 
+## Main Principles
+
+The Guild system is built on these fundamental principles:
+
+### **Core Philosophy**
+- **Framework-Agnostic**: Works with any framework, library, or tool
+- **Project-Agnostic**: Adapts to any project structure or domain
+- **Technology-Agnostic**: Supports all programming languages and tech stacks
+- **Prompt-First Design**: Intelligence and workflows are defined through prompts, not hardcoded logic
+
+### **Architecture Principles**
+- **Structured Intelligence**: Everything is organized in clear, modular components
+- **Consolidated Management**: All system intelligence lives in well-defined locations
+- **Maintainable Design**: Clean separation of concerns for easy understanding and modification
+- **Self-Documenting**: The system's structure inherently documents its behavior
+
+### **Implementation Focus**
+- Agents and workflows are created through **prompt engineering**, not programming
+- System adapts to **any project context** through intelligent analysis
+- All configurations are **human-readable and editable**
+- Changes propagate through a **defined, testable workflow**
+
 ## Guild System Development Workflow
 
 **CRITICAL**: Follow this mandatory workflow when modifying the Guild system architecture.
