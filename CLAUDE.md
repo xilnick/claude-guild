@@ -26,211 +26,77 @@ The Guild system is built on these fundamental principles:
 
 ## Guild System Development Workflow
 
-**CRITICAL**: Follow this mandatory workflow when modifying the Guild system architecture.
+**SIMPLIFIED**: The Guild system now uses a streamlined approach focused on core modules only.
 
 ### **Development Architecture**
 
-The Guild system uses a **modular core architecture** where:
-- **Core modules** in `guideline/core/` are the authoritative source
+The Guild system uses a **simplified core architecture** where:
+- **Core modules** in `guideline/core/` are the single source of truth
 - **Setup command** is dynamically composed from core modules
-- **Commands** are installed with embedded intelligence
+- **No complex generation** - just maintain core modules directly
 
-### **🔄 DEVELOPMENT WORKFLOW**
+### **🔄 SIMPLIFIED DEVELOPMENT WORKFLOW**
 
 When making changes to Guild intelligence or architecture:
 
-#### **1. Update Core Modules**
+#### **1. Update Core Modules Directly**
 ```
 guideline/core/
-├── system-principles.md     ← System architecture and principles
-├── agent-architecture.md    ← Agent classification and design  
-├── workflow-patterns.md     ← Workflow execution patterns
-├── context-engineering.md   ← Context management protocols
-└── project-analysis.md      ← Project analysis strategies
+├── principles.md        ← Core philosophy and principles
+├── agents.md           ← Generic agent framework  
+├── workflows.md        ← Essential workflow patterns
+├── parallel.md         ← Parallel execution strategies
+└── instructions-template.md ← User configuration template
 ```
 
 **Guidelines**:
-- Edit core modules directly for intelligence updates
+- Edit core modules directly - they are the authoritative source
 - Keep modules focused and embeddable
-- Ensure modules are self-contained
+- Ensure modules are self-contained and clear
 - Test composition after changes
 
-#### **2. Optional: Reference-First Workflow (Future Enhancement)**
-```
-guideline/reference/        ← Create master-*.md documents
-├── master-*.md            ← Mark core sections with <!-- CORE-START/END -->
-└── (run generation)       ← node scripts/generate-core.js
-```
-
-**Note**: Reference-first workflow is available but not required. Core modules can be maintained directly.
-
-#### **3. THIRD: Validate Setup Command Composition**
+#### **2. Validate Setup Command Composition**
 ```bash
 # Test the installation process
 node install.js --test-mode
 
-# Verify setup command generation
-node -e "
-const { loadCoreModules, composeSetupCommand } = require('./install.js');
-// Test module loading and composition
-"
-```
-
-#### **4. FOURTH: Test Complete System**
-```bash
-# Full installation test
+# Verify setup command generation works
 npm run test-install
-
-# Validate generated setup command
-npm run validate-setup
 ```
 
-### **❌ NEVER DO THIS**
+### **✅ CORRECT WORKFLOW**
 
-**DO NOT modify core modules directly**:
-```
-❌ Editing guideline/core/*.md directly
-❌ Making changes to core without updating reference
-❌ Bypassing the reference → core generation workflow
-```
+**Task**: Update agent behavior or system principles
 
-**Consequences of direct core modification**:
-- Changes will be lost when core is regenerated
-- Reference and core become inconsistent
-- System intelligence degrades
-- Maintenance becomes impossible
-
-### **✅ CORRECT WORKFLOW EXAMPLE**
-
-**Task**: Update agent thinking mode assignments
-
-**Step 1 - Modify Reference**:
-```markdown
-<!-- In guideline/reference/master-agent-architecture.md -->
-
-## Agent Thinking Mode Strategy
-
-<!-- CORE-START -->
-### Strategic Agents (ultrathink)
-- Main thread: Comprehensive requirement analysis using ultrathink mode
-- guild-planning-agent: Strategic workflow coordination
-
-### Analytical Agents (think-harder)  
-- guild-specification-agent: Thorough specification analysis
-- guild-security-agent: Deep security analysis (NEW)
-
-### Implementation Agents (think)
-- All technology engineers: Focused execution
-- guild-verification-agent: Systematic validation
-<!-- CORE-END -->
-
-## Detailed Thinking Mode Implementation
-[Comprehensive explanation of each thinking mode...]
-```
-
-**Step 2 - Generate Core**:
+**Step 1 - Modify Core Module**:
 ```bash
-# Extract the CORE-START/CORE-END section to core/agent-architecture.md
-node scripts/generate-core.js --module agent-architecture
+# Edit the appropriate core module directly
+vim guideline/core/agents.md    # For agent changes
+vim guideline/core/workflows.md # For workflow changes
+vim guideline/core/principles.md # For principle changes
 ```
 
-**Step 3 - Validate**:
+**Step 2 - Test System**:
 ```bash
 # Test installation and setup command generation
 node install.js --test-mode
+npm run test-install
 ```
 
-### **🛠️ Core Generation Implementation**
+### **⚡ Benefits of Simplified Approach**
 
-**Future Enhancement**: The system will include automated core generation:
+✅ **Single Source of Truth**: Core modules are directly maintained  
+✅ **No Complex Generation**: Simpler workflow without extraction scripts  
+✅ **Easier Maintenance**: Direct editing without intermediate steps  
+✅ **Clear Ownership**: Each module has clear responsibility  
+✅ **Faster Iteration**: Immediate changes without generation delays
 
-```javascript
-// scripts/generate-core.js
-async function generateCoreFromReference() {
-  const referenceDir = 'guideline/reference';
-  const coreDir = 'guideline/core';
-  
-  // Find master reference documents
-  const masterFiles = await fs.readdir(referenceDir);
-  
-  for (const file of masterFiles) {
-    if (file.startsWith('master-') && file.endsWith('.md')) {
-      const referenceContent = await fs.readFile(
-        path.join(referenceDir, file), 'utf-8'
-      );
-      
-      // Extract core sections
-      const coreContent = extractCoreSections(referenceContent);
-      const coreFileName = file.replace('master-', '');
-      
-      await fs.writeFile(
-        path.join(coreDir, coreFileName),
-        coreContent
-      );
-    }
-  }
-}
+### **🚨 Key Success Factors**
 
-function extractCoreSections(content) {
-  const corePattern = /<!-- CORE-START -->([\s\S]*?)<!-- CORE-END -->/g;
-  const matches = [...content.matchAll(corePattern)];
-  
-  return matches.map(match => match[1].trim()).join('\n\n');
-}
-```
-
-### **📝 Reference Document Structure**
-
-**Template for reference documents**:
-```markdown
-# Master [Topic] Reference
-
-## Overview
-Comprehensive explanation of the topic...
-
-## Core Intelligence
-<!-- CORE-START -->
-Essential intelligence content that gets embedded in setup command:
-- Key patterns and configurations
-- Critical system behavior
-- Essential templates and examples
-<!-- CORE-END -->
-
-## Implementation Details  
-Detailed explanation for developers...
-
-## Best Practices
-Guidelines and recommendations...
-
-## Troubleshooting
-Common issues and solutions...
-
-## Examples
-Comprehensive examples and patterns...
-```
-
-### **🔄 Migration Strategy**
-
-**Phase 1**: Create comprehensive reference documents
-**Phase 2**: Implement core generation scripts  
-**Phase 3**: Automate generation in build process
-**Phase 4**: Remove manual core editing workflow
-
-### **⚡ Benefits of This Workflow**
-
-✅ **Single Source of Truth**: Reference documents are authoritative  
-✅ **Automated Consistency**: Core always reflects latest reference  
-✅ **Better Documentation**: Comprehensive without embedding constraints  
-✅ **Maintainable**: Update once, propagate everywhere  
-✅ **Flexible**: Generate different intelligence profiles as needed  
-
-### **🚨 Critical Success Factors**
-
-1. **Always update reference first** - This is the source of truth
-2. **Use core generation process** - Never edit core directly  
-3. **Mark embedding sections clearly** - Use CORE-START/CORE-END consistently
-4. **Validate after changes** - Test installation and setup generation
-5. **Keep reference comprehensive** - Include all context developers need
+1. **Edit core modules directly** - They are the authoritative source
+2. **Keep modules focused** - Each module has a clear, specific purpose  
+3. **Test after changes** - Validate installation and setup generation
+4. **Maintain simplicity** - Prefer simple patterns over complex specifications
 
 ---
 
@@ -243,7 +109,24 @@ Comprehensive examples and patterns...
 
 ## Guild System Rules
 
-- **Reference documents are authoritative** - Always modify reference first
-- **Core modules are generated** - Never edit core directly
+- **Core modules are authoritative** - Edit them directly for changes
+- **Keep it simple** - Prefer simple patterns over complex specifications
 - **Test after changes** - Validate installation and setup generation
-- **Follow the workflow** - Reference → Core → Validation → Testing
+- **Trust Claude** - Let Claude's intelligence handle complexity rather than hardcoding
+
+## Language & Technology Verification
+
+**CRITICAL**: When working with language or technology-specific content:
+
+### **Correctness Questions**
+Before implementing or modifying language/technology-specific features, ask:
+- **"Is this terminology correct for [language/technology]?"**
+- **"Are these patterns idiomatic for [language/technology]?"** 
+- **"Do these conventions match [language/technology] best practices?"**
+
+### **When to Ask**
+Ask verification questions when:
+- Working with unfamiliar languages or technologies
+- Updating language-specific configurations
+- Creating technology-specific workflows
+- Setting up language conventions or patterns

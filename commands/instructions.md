@@ -64,6 +64,36 @@ Manage structured project instructions and configuration options in `.guild/inst
 `/guild:instructions --all-agents-analysis true` - Enable comprehensive analysis mode for all agents
 `/guild:instructions --agent-model [agent-name] [model]` - Set specific agent model
 `/guild:instructions --quality-standard [standard]` - Set project quality requirements
+`/guild:instructions --max-domain-instances [number]` - Set maximum parallel instances for single-domain agents (default: 5)
+
+## Parallel Execution Limitations
+
+### Single-Domain Agent Instance Limits
+**CRITICAL**: To prevent resource exhaustion and maintain coordination efficiency:
+
+- **Default Limit**: Single-domain specialized agents limited to **5 parallel instances** by default
+- **Applies To**: Domain-specific agents like:
+  - `guild-[domain]-specialist` agents
+  - `guild-[domain]-architect` agents  
+  - `guild-[scope]-coordinator` agents
+  - Any agent focused on a single domain/scope
+- **Does NOT Apply To**: 
+  - Research agents (unlimited parallelization)
+  - Cross-domain integration agents
+  - General utility agents
+  - Verification agents
+
+### Configuration Options
+- Use `--max-domain-instances` to override default (range: 1-10)
+- Higher limits may cause coordination overhead
+- Lower limits ensure better consistency within domains
+
+### Rationale
+Single-domain agents often modify the same files and share domain context. Limiting parallel instances:
+- Reduces file-level conflicts
+- Improves domain coherence
+- Optimizes coordination overhead
+- Maintains quality within domain boundaries
 
 ## Custom Prompt & Reasoning
 

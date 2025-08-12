@@ -640,17 +640,17 @@ async function composeSetupCommand(coreModules) {
     template = generateFallbackTemplate();
   }
   
-  // Inject core modules into template
+  // Inject core modules into template with new simplified names
   template = template.replace(/<!-- INJECT:system-principles -->/g, 
-    coreModules['system-principles'] || '');
+    coreModules['principles'] || '');
   template = template.replace(/<!-- INJECT:agent-architecture -->/g,
-    coreModules['agent-architecture'] || '');
+    coreModules['agents'] || '');
   template = template.replace(/<!-- INJECT:workflow-intelligence -->/g,
-    coreModules['workflow-patterns'] || '');
-  template = template.replace(/<!-- INJECT:context-engineering -->/g,
-    coreModules['context-engineering'] || '');
-  template = template.replace(/<!-- INJECT:technology-detection -->/g,
-    coreModules['project-analysis'] || '');
+    coreModules['workflows'] || '');
+  template = template.replace(/<!-- INJECT:parallel-execution -->/g,
+    coreModules['parallel'] || '');
+  template = template.replace(/<!-- INJECT:instructions-template -->/g,
+    coreModules['instructions-template'] || '');
   
   return template;
 }
@@ -673,7 +673,7 @@ Perform comprehensive project analysis and generate a complete Guild system tail
 
 ## EMBEDDED INTELLIGENCE SYSTEM
 
-${generateEmbeddedIntelligenceSection(coreModules)}
+This setup command contains embedded intelligence from the Guild core modules for dynamic system generation.
 
 ## EXECUTION PROTOCOL
 
@@ -698,11 +698,11 @@ function generateEmbeddedIntelligenceSection(modules) {
   let section = '';
   
   const moduleOrder = [
-    'system-principles',
-    'agent-architecture', 
-    'workflow-patterns',
-    'context-engineering',
-    'project-analysis'
+    'principles',
+    'agents', 
+    'workflows',
+    'parallel',
+    'instructions-template'
   ];
   
   for (const moduleName of moduleOrder) {

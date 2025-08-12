@@ -7,102 +7,114 @@ Configures Guild agent behavior including model assignments, thinking modes, and
 
 ### Usage Modes
 ```bash
-/guild:instructions                           # Display configuration
-/guild:instructions "instruction text"        # Add instruction
-/guild:instructions --option value            # Set configuration option
+/guild:instructions                           # Display current instructions
+/guild:instructions "instruction text"        # Add simple instruction
+/guild:instructions --option value            # Update specific setting
+/guild:instructions --reset                   # Reset to defaults
 ```
 
 ### Configuration Options
-- `--planning-agent-model [model]` - Set planning agent model
-- `--all-agents-analysis [true/false]` - Enable comprehensive analysis
-- `--agent-model [agent] [model]` - Set specific agent model
-- `--quality-standard [standard]` - Set quality requirements
+- `--concurrency [number]` - Set default instances per agent type (default: 3)
+- `--max-total-agents [number]` - Set maximum total parallel agents (default: 20)
+- `--enable-testing [true/false]` - Enable testing stage by default
+- `--enable-verification [true/false]` - Enable verification stage by default
+- `--enable-research-parallel [true/false]` - Enable parallel research execution
+- `--quality-standard [text]` - Set quality requirements description
+- `--agent-model [agent] [model]` - Set specific agent model (opus/inherit) - Set coordination strategy (hierarchical/flat/hybrid)
 
 ## Implementation Requirements
 
 ### File Management
 ```yaml
 Location: .guild/instructions.md
-Format: Structured markdown with sections
-Updates: Immediate effect on agent behavior
+Format: Simple English instructions with clear sections
+Updates: Read by all commands and applied immediately
 
 Structure:
-  # Guild Agent Instructions
+  # Guild System Instructions
   
-  User prompts always override these instructions.
+  These are simple instructions that all Guild agents and commands follow.
   
-  ## Embedded Project Intelligence
-  - Project context summary
-  - Complexity profile
-  - Technology context
-  - Quality standards
+  ## Concurrency Settings
+  - Simple bullet points with current settings
   
-  ## Agent Requirements
-  - Model assignments
-  - Thinking mode configurations
-  - Behavior specifications
+  ## Agent Model Settings  
+  - Model assignments for different agent types
   
-  ## Custom Requirements
-  - Project-specific instructions
-  - Timestamp for each addition
+  ## Workflow Settings
+  - Stage execution preferences
+  
+  ## Task Routing Rules
+  - How tasks are assigned to specialists
+  
+  ## Quality Standards
+  - Project quality requirements
+  
+  ## Project-Specific Rules
+  - Custom instructions added by user
 ```
 
-### Configuration Schema
-```yaml
-Agent Configuration:
-  guild-planning-agent:
-    model: opus (required)
-    thinking_mode: ultrathink
-    
-  main-thread-reasoning:
-    thinking_mode: ultrathink
-    
-  guild-specification-agent:
-    thinking_mode: think-harder
-    
-  Other Agents:
-    thinking_mode: think (default)
-    model: inherited from Claude Code
+### Instructions Format
 
-Project Instructions:
-  - Requirements with timestamps
-  - Architect assignments
-  - Quality standards
-  - Workflow preferences
+The instructions file should contain simple, clear English instructions that all agents must follow:
+
+```markdown
+# Guild System Instructions
+
+Simple instructions that all Guild agents follow.
+
+## Core Settings
+- Run up to 3 instances of each agent type in parallel
+- Maximum 20 total agents at once
+- Planning agent uses opus model, others inherit
+- Balance tasks across available agents
+
+## Workflow Rules
+- Main thread: reasoning and requirement analysis only
+- Research: parallel project and technology context gathering
+- Planning: task decomposition and intelligent routing
+- Implementation: parallel execution by specialized agents
+- Testing/verification: optional unless complexity requires it
+
+## Agent Creation Rules
+- Claude analyzes project and creates needed specialists
+- Agents receive focused context for their area
+- Route tasks to most appropriate specialist
+- No code embedding - use project analysis and Claude's capabilities
+
+## Quality Standards
+- Follow discovered project patterns and conventions
+- Maintain consistency with existing code
+- Validate against requirements and integration points
+- Test when complexity or risk requires it
+
+## Project-Specific Rules
+[Add your custom instructions here]
 ```
 
 ### Instruction Categories
 
-#### General Instructions
+#### Simple Instructions
 ```yaml
 Examples:
-  - "Must maintain 90%+ test coverage"
-  - "All API endpoints require authentication"
-  - "Use TypeScript strict mode"
-  - "Follow company coding standards"
-  - "Performance budget: <2s page load"
+  - "All API endpoints must validate authentication"
+  - "Interface components must handle loading states"
+  - "Follow TypeScript strict mode"
+  - "Test when complexity requires validation"
 
 Processing:
-  - Add to Custom Requirements section
-  - Include timestamp
-  - Update agent behavior
-  - Validate against conflicts
+  - Add to Project-Specific Rules section
+  - Apply to all relevant agents
+  - Clear and actionable language
 ```
 
-#### Architect Assignments
+#### Configuration Options
 ```yaml
-Pattern: "guild:[role]-architect [responsibility]"
-
-Examples:
-  - "guild:data-architect maintains all database schemas"
-  - "guild:security-architect handles authentication code"
-  - "guild:api-architect maintains REST API consistency"
-  
-Effects:
-  - Creates ongoing responsibility
-  - Auto-engages for relevant tasks
-  - Maintains code ownership
-  - Enforces standards
+Basic Settings:
+  --concurrency [N]: Instances per agent type (default: 3)
+  --max-agents [N]: Total parallel agents (default: 20)
+  --enable-testing [true/false]: Enable testing by default
+  --agent-model [agent] [model]: Set specific agent model
 ```
 
 ## Command Logic
@@ -145,66 +157,32 @@ Validation:
 Process:
   1. Parse option and value
   2. Validate option exists
-  3. Check value validity
-  4. Update configuration
-  5. Apply immediate effects
-  6. Confirm change
+  3. Update configuration
+  4. Apply changes immediately
+  5. Confirm change
 
-Options:
-  - Model assignments
-  - Thinking modes
-  - Quality standards
-  - Workflow preferences
+Basic Options:
+  --concurrency [N]: Instances per agent type
+  --max-agents [N]: Total parallel agents
+  --enable-testing [true/false]: Default testing behavior
+  --agent-model [agent] [model]: Specific agent models
 ```
 
-## Reasoning Protocol
-
-### Enhanced Reasoning
-```yaml
-Configuration Analysis:
-  - Evaluate current state
-  - Understand implications
-  - Assess compatibility
-  - Predict impacts
-
-Option Validation:
-  - Verify against standards
-  - Check project needs
-  - Ensure consistency
-  - Validate performance
-
-Impact Assessment:
-  - Agent behavior changes
-  - Workflow effects
-  - Quality implications
-  - Performance impacts
-
-Change Management:
-  - Structured implementation
-  - Validation checks
-  - Rollback capability
-  - Change logging
-```
+## Simple Configuration
 
 ### Instruction Processing
 ```yaml
-Categorization:
-  - Identify instruction type
-  - Determine scope
-  - Assess priority
-  - Plan integration
+Simple Approach:
+  - Parse instruction or configuration change
+  - Validate against system capabilities
+  - Apply change to .guild/instructions.md
+  - Confirm successful update
 
-Prioritization:
-  - Critical requirements first
-  - Quality standards next
-  - Preferences last
-  - Conflicts resolved
-
-Integration:
-  - Update agent workflows
-  - Modify quality gates
-  - Adjust thinking modes
-  - Configure models
+Configuration Rules:
+  - Use plain English instructions
+  - Keep settings simple and clear
+  - Apply changes immediately
+  - Validate before saving
 ```
 
 ## Error Handling
@@ -287,20 +265,33 @@ Model Specifications:
 ## Command Examples
 
 ```bash
-# Display current configuration
+# Display current instructions
 /guild:instructions
 
-# Add project instruction
-/guild:instructions "All database queries must use prepared statements"
+# Add simple instruction
+/guild:instructions "All data operations must validate input"
 
-# Set planning agent model
-/guild:instructions --planning-agent-model opus
+# Set concurrency limits
+/guild:instructions --concurrency 5
+/guild:instructions --max-total-agents 30
 
-# Enable comprehensive analysis
-/guild:instructions --all-agents-analysis true
+# Enable optional stages by default
+/guild:instructions --enable-testing true
+/guild:instructions --enable-verification true
 
-# Assign architect responsibility
-/guild:instructions "guild:security-architect maintains auth modules"
+# Set quality standards
+/guild:instructions --quality-standard "maintain 90% test coverage and document complex logic"
+
+# Add project-specific rules (technology-agnostic)
+/guild:instructions "Interface components must handle loading states"
+/guild:instructions "Service endpoints must validate authentication"
+/guild:instructions "Data schemas must include audit trails"
+
+# Set specific agent model
+/guild:instructions --agent-model guild-planning-agent opus
+
+# Reset to defaults
+/guild:instructions --reset
 ```
 
 ## Notes

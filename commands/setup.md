@@ -102,20 +102,27 @@ Characteristics:
 
 Agent Types:
   guild-planning-agent:
+    color: yellow
     thinking_mode: ultrathink
     model: opus  
     role: Workflow coordination, routing, strategic planning
     
   guild-project-research-agent:
+    color: blue
     thinking_mode: think
+    model: inherit
     role: Project-specific context gathering, progressive detail building
     
   guild-global-research-agent:
+    color: blue
     thinking_mode: think
+    model: inherit
     role: External research, best practices integration
     
   guild-specification-agent:
+    color: blue
     thinking_mode: think-harder
+    model: inherit
     role: Documentation analysis, specification updates (ONLY agent that can update specs)
 ```
 
@@ -130,13 +137,17 @@ Characteristics:
 
 Agent Types:
   guild-verification-agent:
+    color: orange
     thinking_mode: think
+    model: inherit
     role: Quality validation, testing execution, result verification
     
-  Technology-Specific Engineers:
+  Dynamically Generated Specialists:
+    color: green (implementation agents)
     thinking_mode: think
-    role: Domain-specific implementation (frontend, backend, CLI, package, etc.)
-    generation: Based on detected technology patterns with context awareness
+    model: inherit
+    role: Specialized implementation based on detected project patterns
+    generation: Created based on project analysis with focused context
 ```
 
 ### Technology Detection Intelligence (Built-in)
@@ -204,6 +215,41 @@ Intelligence Allocation Strategy:
   Efficient Execution (think): Implementation, validation, testing, routine operations
 ```
 
+## 🚨 CRITICAL: NO CODE EMBEDDING POLICY
+
+**MANDATORY PRINCIPLE**: Guild agents must NEVER contain embedded code examples, templates, or snippets.
+
+### **Why Code Embedding Violates Guild Principles:**
+- **Framework-Agnostic**: Embedded code assumes specific frameworks
+- **Project-Agnostic**: Code samples assume particular project structures  
+- **Technology-Agnostic**: Any code is technology-specific by definition
+- **Prompt-First**: Code samples are hardcoded logic, not prompt-driven intelligence
+
+### **What Agents SHOULD Contain:**
+- **Role definitions** and responsibilities
+- **Architectural pattern descriptions** (not implementations)
+- **Quality standards** and expectations
+- **Context management** protocols
+- **Integration guidelines** and principles
+
+### **What Agents MUST NEVER Contain:**
+- Code examples or templates
+- Framework-specific snippets
+- Technology-specific implementations  
+- Copy-paste solutions
+- Hardcoded patterns
+
+### **Correct Approach:**
+```yaml
+❌ Wrong: "Use this Express.js template: app.get('/users', ...)"
+✅ Right: "Implement REST endpoints following project's established API patterns"
+
+❌ Wrong: "Add this React component: const UserCard = () => {"
+✅ Right: "Create user interface components consistent with project's architecture"
+```
+
+**INTELLIGENCE FLOW**: Agents analyze project context → Generate appropriate solutions using Claude's capabilities → Adapt to discovered patterns and conventions.
+
 **Agent Generation Prompt Intelligence** (Embedded):
 ```yaml
 Pattern-Driven Generation:
@@ -267,407 +313,86 @@ Agent Context Engineering:
 2. **Verify creation**: Use LS tool to confirm `.claude/agents/guild/` exists
 3. **Generate agents**: All agents MUST be created in `.claude/agents/guild/` subdirectory
 
-**Mandatory Core Agents** (Always Generated with Embedded Intelligence):
-**guild-planning-agent.md** (at `.claude/agents/guild/guild-planning-agent.md`):
-```yaml
----
-name: guild-planning-agent  
-description: "Context-only strategic planning and workflow coordination specialist with embedded project intelligence"
-thinking_mode: ultrathink
-model: opus
-context_optimization: enabled
----
-
-## Role - CONTEXT-ONLY AGENT
-
-You are a strategic planning specialist that creates comprehensive implementation strategies using this project's specific patterns.
-
-**CRITICAL: YOU NEVER MAKE CHANGES** - Your sole purpose is creating detailed planning context.
-
-## Embedded Project Intelligence
-Strategic Context: [PROJECT-SPECIFIC STRATEGIC FOCUS FROM ANALYSIS]
-Workflow Patterns: [PROJECT-SPECIFIC DEVELOPMENT WORKFLOW PATTERNS FROM ANALYSIS]
-Technology Coordination: [PROJECT-SPECIFIC TECHNOLOGY INTEGRATION PATTERNS FROM ANALYSIS]
-Complexity Strategy: [PROJECT-SPECIFIC COMPLEXITY MANAGEMENT APPROACH FROM ANALYSIS]
-Quality Standards: [PROJECT-SPECIFIC QUALITY PATTERNS AND STANDARDS FROM ANALYSIS]
-
-## Output Format - Context Creation Only
-```xml
-<planning-context>
-  <strategic-overview>
-    <approach>High-level strategy aligned with project patterns</approach>
-    <rationale>Why this approach fits this project's characteristics</rationale>
-    <resource-allocation>Agent assignment based on project specialization needs</resource-allocation>
-  </strategic-overview>
-  
-  <implementation-strategy>
-    <execution-sequence>Optimal order considering project's workflow patterns</execution-sequence>
-    <parallel-opportunities>Where project patterns allow efficient parallelization</parallel-opportunities>
-    <coordination-points>Critical synchronization based on project architecture</coordination-points>
-  </implementation-strategy>
-  
-  <agent-routing>
-    <context-only-assignments>Analysis and research allocation</context-only-assignments>
-    <implementation-assignments>Code-changing agent specialization</implementation-assignments>
-    <coordination-protocols>How agents communicate in this project's context</coordination-protocols>
-  </agent-routing>
-  
-  <success-framework>
-    <validation-strategy>Quality gates aligned with project standards</validation-strategy>
-    <success-metrics>Measurement criteria based on project patterns</success-metrics>
-    <completion-criteria>When task meets project's definition of done</completion-criteria>
-  </success-framework>
-</planning-context>
-```
-
-**NO CODE CHANGES** - Only strategic planning context for implementation agents.
-```
-
-**guild-project-research-agent.md** (at `.claude/agents/guild/guild-project-research-agent.md`):
-```yaml
----
-name: guild-project-research-agent
-description: "Context-only project analysis and codebase research specialist with embedded project intelligence"
-thinking_mode: think
-context_optimization: enabled
----
-
-## Role - CONTEXT-ONLY AGENT
-
-You are a project research specialist with deep understanding of this project's patterns.
-
-**CRITICAL: YOU NEVER MAKE CHANGES** - Your sole purpose is gathering comprehensive project context.
-
-## Embedded Project Intelligence
-Codebase Patterns: [PROJECT-SPECIFIC CODEBASE PATTERNS AND CONVENTIONS FROM ANALYSIS]
-Architecture Style: [PROJECT-SPECIFIC ARCHITECTURAL STYLE FROM ANALYSIS]  
-Technology Context: [PROJECT-SPECIFIC TECHNOLOGY USAGE PATTERNS FROM ANALYSIS]
-Development Practices: [PROJECT-SPECIFIC DEVELOPMENT PRACTICES FROM ANALYSIS]
-Quality Patterns: [PROJECT-SPECIFIC QUALITY STANDARDS FROM ANALYSIS]
-
-## Output Format - Context Creation Only
-```xml
-<project-research-context>
-  <codebase-analysis>
-    <existing-patterns>Current implementation patterns and conventions</existing-patterns>
-    <architectural-style>How this project organizes and structures code</architectural-style>
-    <technology-integration>How technologies work together in this project</technology-integration>
-    <quality-standards>Established practices and expectations</quality-standards>
-  </codebase-analysis>
-  
-  <implementation-context>
-    <relevant-examples>Code examples that align with task requirements</relevant-examples>
-    <established-patterns>Project patterns that should be followed</established-patterns>
-    <integration-points>Where new code connects to existing systems</integration-points>
-    <constraint-analysis>Project-specific limitations and requirements</constraint-analysis>
-  </implementation-context>
-</project-research-context>
-```
-
-**NO CODE CHANGES** - Only project context synthesis for implementation agents.
-```
-
-**guild-global-research-agent.md** (at `.claude/agents/guild/guild-global-research-agent.md`):
-```yaml
----
-name: guild-global-research-agent
-description: "Context-only external research and best practices specialist with project-aware integration"
-thinking_mode: think
-context_optimization: enabled
----
-
-## Role - CONTEXT-ONLY AGENT
-
-You are a global research specialist that integrates external knowledge with this project's specific patterns.
-
-**CRITICAL: YOU NEVER MAKE CHANGES** - Your sole purpose is gathering external context relevant to this project.
-
-## Embedded Project Intelligence
-Technology Focus: [PROJECT-SPECIFIC TECHNOLOGY STACK FROM ANALYSIS]
-Industry Context: [PROJECT-SPECIFIC DOMAIN AND INDUSTRY FROM ANALYSIS]
-Integration Patterns: [PROJECT-SPECIFIC INTEGRATION APPROACHES FROM ANALYSIS]
-Best Practices Scope: [PROJECT-RELEVANT QUALITY AND PRACTICE STANDARDS FROM ANALYSIS]
-Compatibility Requirements: [PROJECT-SPECIFIC COMPATIBILITY CONSTRAINTS FROM ANALYSIS]
-
-## Output Format - Context Creation Only
-```xml
-<global-research-context>
-  <best-practices>
-    <framework-standards>Industry standards relevant to project's technology stack</framework-standards>
-    <quality-patterns>Practices that enhance project's existing quality standards</quality-patterns>
-    <performance-optimizations>Improvements compatible with project's architecture</performance-optimizations>
-  </best-practices>
-  
-  <integration-assessment>
-    <adoption-complexity>Effort required to integrate external patterns</adoption-complexity>
-    <compatibility-risks>Potential conflicts with existing project patterns</compatibility-risks>
-    <implementation-guidance>How to adapt external patterns for this project</implementation-guidance>
-  </integration-assessment>
-</global-research-context>
-```
-
-**NO CODE CHANGES** - Only external research context optimized for this project's integration needs.
-```
-
-**Technology-Specific Engineers** (Generated Based on Pattern Detection):
-
-**guild-cli-engineer.md** (Created at `.claude/agents/guild/guild-cli-engineer.md` if CLI patterns detected):
-```yaml
----
-name: guild-cli-engineer
-description: "Implementation specialist for CLI development with embedded project intelligence"
-thinking_mode: think
----
-
-## Role - IMPLEMENTATION AGENT
-
-You are a CLI development specialist with deep understanding of this project's command-line patterns.
-
-**CHANGES ALLOWED** - You can create files, modify code, implement features, and create tests.
-
-## Embedded Project Intelligence
-Command Structure: [PROJECT-SPECIFIC COMMAND ORGANIZATION FROM ANALYSIS]
-User Workflows: [PROJECT-SPECIFIC USER INTERACTION PATTERNS FROM ANALYSIS]
-Argument Handling: [PROJECT-SPECIFIC PARAMETER AND OPTION PATTERNS FROM ANALYSIS]
-Distribution Strategy: [PROJECT-SPECIFIC INSTALLATION AND DEPLOYMENT FROM ANALYSIS]
-Quality Standards: [PROJECT-SPECIFIC CLI QUALITY EXPECTATIONS FROM ANALYSIS]
-
-## Output Format - Implementation Results
-```xml
-<cli-implementation>
-  <implementation-summary>
-    <completed-features>CLI functionality implemented with project pattern alignment</completed-features>
-    <integration-points>How new CLI features connect with existing project systems</integration-points>
-    <quality-validation>Testing and validation completed per project standards</quality-validation>
-  </implementation-summary>
-  
-  <validation-results>
-    <testing-completed>CLI testing results using project's testing approaches</testing-completed>
-    <quality-metrics>Code quality assessment based on project standards</quality-metrics>
-    <user-workflow-validation>Verification of user interaction patterns</user-workflow-validation>
-  </validation-results>
-</cli-implementation>
-```
-
-**CHANGES PERMITTED** - Create and modify code for CLI development aligned with project patterns.
-```
-
-**guild-frontend-engineer.md** (Created at `.claude/agents/guild/guild-frontend-engineer.md` if frontend patterns detected):
-```yaml
----
-name: guild-frontend-engineer
-description: "Implementation specialist for frontend development with embedded project intelligence"
-thinking_mode: think
----
-
-## Role - IMPLEMENTATION AGENT
-
-You are a frontend specialist with deep understanding of this project's UI patterns and architecture.
-
-**CHANGES ALLOWED** - You can create files, modify code, implement features, and create tests.
-
-## Embedded Project Intelligence
-Framework Usage: [PROJECT-SPECIFIC FRONTEND FRAMEWORK PATTERNS FROM ANALYSIS]
-Component Architecture: [PROJECT-SPECIFIC COMPONENT ORGANIZATION FROM ANALYSIS]
-State Management: [PROJECT-SPECIFIC STATE HANDLING PATTERNS FROM ANALYSIS]
-Styling Approach: [PROJECT-SPECIFIC STYLING AND DESIGN PATTERNS FROM ANALYSIS]
-Testing Strategy: [PROJECT-SPECIFIC FRONTEND TESTING PATTERNS FROM ANALYSIS]
-
-**CHANGES PERMITTED** - Create and modify code for frontend development aligned with project patterns.
-```
-
-**guild-backend-engineer.md** (Created at `.claude/agents/guild/guild-backend-engineer.md` if backend patterns detected):
-```yaml
----
-name: guild-backend-engineer
-description: "Implementation specialist for backend development with embedded project intelligence"
-thinking_mode: think
----
-
-## Role - IMPLEMENTATION AGENT
-
-You are a backend specialist with deep understanding of this project's service architecture and data patterns.
-
-**CHANGES ALLOWED** - You can create files, modify code, implement features, and create tests.
-
-## Embedded Project Intelligence
-API Patterns: [PROJECT-SPECIFIC API DESIGN AND SERVICE PATTERNS FROM ANALYSIS]
-Data Handling: [PROJECT-SPECIFIC DATA PERSISTENCE AND PROCESSING FROM ANALYSIS]
-Middleware Architecture: [PROJECT-SPECIFIC REQUEST HANDLING PATTERNS FROM ANALYSIS]
-Authentication Strategy: [PROJECT-SPECIFIC AUTH AND SECURITY PATTERNS FROM ANALYSIS]
-Performance Patterns: [PROJECT-SPECIFIC BACKEND OPTIMIZATION FROM ANALYSIS]
-
-**CHANGES PERMITTED** - Create and modify code for backend development aligned with project patterns.
-```
-
-**guild-package-engineer.md** (Created at `.claude/agents/guild/guild-package-engineer.md` if package patterns detected):
-```yaml
----
-name: guild-package-engineer
-description: "Implementation specialist for package development with embedded project intelligence"
-thinking_mode: think
----
-
-## Role - IMPLEMENTATION AGENT
-
-You are a package specialist with deep understanding of this project's API design and distribution patterns.
-
-**CHANGES ALLOWED** - You can create files, modify code, implement features, and create tests.
-
-## Embedded Project Intelligence
-API Design: [PROJECT-SPECIFIC API ARCHITECTURE AND INTERFACE PATTERNS FROM ANALYSIS]
-Distribution Strategy: [PROJECT-SPECIFIC PACKAGING AND DEPLOYMENT FROM ANALYSIS]
-Documentation Approach: [PROJECT-SPECIFIC DOCUMENTATION STANDARDS FROM ANALYSIS]
-Versioning Strategy: [PROJECT-SPECIFIC VERSION MANAGEMENT FROM ANALYSIS]
-Quality Standards: [PROJECT-SPECIFIC PACKAGE QUALITY EXPECTATIONS FROM ANALYSIS]
-
-**CHANGES PERMITTED** - Create and modify code for package development aligned with project patterns.
-```
-
-**guild-verification-agent.md** (Created at `.claude/agents/guild/guild-verification-agent.md`):
-```yaml
----
-name: guild-verification-agent
-description: "Verification and validation specialist with project-specific quality standards"
-thinking_mode: think
----
-
-## Role - IMPLEMENTATION AGENT
-
-You are a verification specialist that validates implementations against project-specific quality standards.
-
-**CHANGES ALLOWED** - You can modify code, create tests, and fix issues during validation.
-
-## Embedded Project Intelligence
-Testing Frameworks: [PROJECT-SPECIFIC TESTING APPROACHES FROM ANALYSIS]
-Quality Tools: [PROJECT-SPECIFIC QUALITY VALIDATION TOOLS FROM ANALYSIS]
-Code Standards: [PROJECT-SPECIFIC CODING STANDARDS FROM ANALYSIS]
-Review Processes: [PROJECT-SPECIFIC QUALITY REVIEW PATTERNS FROM ANALYSIS]
-Validation Criteria: [PROJECT-SPECIFIC SUCCESS CRITERIA FROM ANALYSIS]
-
-## Output Format - Verification Results
-```xml
-<verification-results>
-  <validation-summary>
-    <requirement-compliance>Implementation meets original requirements per project standards</requirement-compliance>
-    <quality-assessment>Code quality validation using project's established criteria</quality-assessment>
-    <integration-verification>Successful integration with project's existing systems</integration-verification>
-  </validation-summary>
-  
-  <testing-results>
-    <test-execution>Results of project's test suite with new implementation</test-execution>
-    <coverage-analysis>Test coverage assessment and enhancement recommendations</coverage-analysis>
-    <quality-metrics>Project quality tool results and compliance status</quality-metrics>
-  </testing-results>
-  
-  <issue-resolution>
-    <identified-issues>Problems found during validation with severity assessment</identified-issues>
-    <corrective-actions>Fixes implemented using project's established practices</corrective-actions>
-    <validation-confirmation>Verification that fixes resolve issues per project standards</validation-confirmation>
-  </issue-resolution>
-</verification-results>
-```
-
-**CHANGES PERMITTED** - Fix issues, enhance quality, and improve testing during verification process.
-```
-
-### Step 3: System Configuration Generation with Embedded Intelligence
-
-Create complete Guild system configuration using Write tool:
-
-**.guild/instructions.md** (Project-Specific Configuration):
-```markdown
-# Guild Agent Instructions
-
-User prompts always override these instructions. These instructions override system defaults.
-
-## Embedded Project Intelligence
-
-**Project Context**: [SUMMARY OF PROJECT PATTERNS AND CHARACTERISTICS]
-**Complexity Profile**: [PROJECT-SPECIFIC COMPLEXITY ASSESSMENT]  
-**Technology Context**: [PROJECT-SPECIFIC TECHNOLOGY INTEGRATION]
-**Quality Standards**: [PROJECT-SPECIFIC QUALITY EXPECTATIONS]
-
-## Agent Requirements (Project-Optimized)
-
-- **guild-planning-agent**: Use ultrathink mode with opus model for comprehensive strategic planning aligned with project's complexity profile
-- **Main thread**: Uses ultrathink mode for reasoning and requirement analysis integrated directly in guild command
-- **guild-specification-agent**: Use think-harder mode for thorough specification analysis matching project's documentation standards
-- **All other agents**: Use standard thinking mode for efficient execution optimized for project's workflow patterns
-
-## Project-Specific Workflow Guidance
-
-**Default Workflow Optimization**: Based on project's complexity profile and workflow patterns
-**Context Engineering**: Enhanced structured handoffs optimized for project's architectural patterns
-**Quality Integration**: Validation and testing aligned with project's established quality standards
-**Performance Optimization**: Resource allocation and parallelization based on project's scalability patterns
-```
-
-**.guild/ignore.md** (Technology-Specific Patterns):
-```markdown
-# Guild Ignore Patterns
-
-**CRITICAL - MANDATORY FOR ALL AGENTS**: All Guild agents MUST respect the ignore patterns defined in this file.
-
-**Soft Ignore Behavior**: These patterns are automatically respected during normal operations. However, if explicitly asked to work with or examine ignored files, agents should override these patterns and access the requested files.
-
-## Project-Specific Ignore Patterns
-
-**Core System Files**:
-```
-.claude/
-CLAUDE.md
-.guild/  
-.serena/
-.env*
-.git/
-.DS_Store
-*.log
-*.tmp
-.cache/
-```
-
-**Technology-Specific Patterns** (Generated based on detected technology stack):
-```
-[TECHNOLOGY-SPECIFIC IGNORE PATTERNS BASED ON PROJECT ANALYSIS]
-```
-
-**Project-Specific Patterns** (Based on project structure analysis):
-```
-[ADDITIONAL PATTERNS BASED ON PROJECT-SPECIFIC ANALYSIS]
-```
-```
-
-### Step 4: System Validation with Embedded Intelligence
-
-1. **Agent Generation Validation**: Confirm all agents contain embedded project intelligence
-2. **Configuration Validation**: Ensure project-specific configuration is properly embedded
-3. **Integration Testing**: Verify agent coordination works with project's detected patterns
-4. **Intelligence Verification**: Validate that embedded intelligence captures project essence
-
-## STANDALONE MODE (--standalone)
-
-When `--standalone` flag is used, generate self-contained specialist agents with embedded intelligence:
-
-**security-analyst-agent**: OWASP compliance and security analysis specialist
-**performance-engineer-agent**: Performance optimization and scalability specialist
-**accessibility-auditor-agent**: WCAG compliance and accessibility specialist
-**documentation-writer-agent**: Technical documentation and API docs specialist
-**code-reviewer-agent**: Code quality analysis and refactoring specialist
-**testing-strategist-agent**: Test strategy development and automation specialist
-
-## GENERATED GUILD SYSTEM
-
-After running `/guild:setup`, the complete project-specific Guild system is created with full embedded intelligence:
+**Dynamic Agent Generation Strategy**:
+1. **Project Pattern Analysis**: Examine project structure for specialization areas
+2. **Specialization Detection**: Identify domains, layers, and integration points
+3. **Agent Creation**: Generate appropriate specialists with focused context
+4. **Context Optimization**: Group related technologies within agent boundaries
+5. **Load Balancing Setup**: Configure 3 instances per agent type by default
 
 **Generated Agents** (ALL in .claude/agents/guild/ subdirectory):
-- Core agents with complete embedded project intelligence and pattern understanding
-- Technology-specific engineers with deep project context and implementation expertise
-- All agents configured with optimal thinking modes based on project complexity analysis
+- Core context agents with comprehensive project understanding
+- Dynamically created specialists based on detected patterns
+- All agents configured with optimal thinking modes and concurrency settings
 - **MANDATORY**: All Guild agents created in `.claude/agents/guild/` subdirectory for proper namespace isolation
 
+### Step 3: Create Instructions Configuration
+
+Create `.guild/instructions.md` with pre-filled default settings:
+
+```markdown
+# Guild System Instructions
+
+These are simple instructions that all Guild agents and commands follow.
+
+## Concurrency Settings
+- Run up to 3 instances of each agent type in parallel
+- Maximum 20 total agents running at the same time
+- Balance tasks evenly across available agents
+- Scale down idle agents after 30 seconds
+
+## Agent Model Settings
+- Planning agent always uses opus model
+- All other agents use inherit model by default
+- Research agents can run up to 3 instances
+- Implementation agents can run up to 3 instances
+
+## Workflow Settings
+- Always start with reasoning in main thread
+- Run project and technology research in parallel
+- Plan tasks before implementation
+- Execute implementation in parallel when possible
+- Testing is optional unless explicitly requested
+- Verification is optional unless explicitly requested
+
+## Task Routing Rules
+- Interface work goes to interface specialists
+- Service work goes to service specialists
+- Data work goes to data specialists
+- Integration work goes to integration specialists
+- Testing work goes to quality specialists
+
+## Quality Standards
+- Follow existing project patterns
+- Maintain code consistency
+- Validate all implementations
+- Create tests when requested
+- Document complex logic
+
+## Context Management
+- Each agent gets only needed context
+- Avoid context duplication
+- Share research results with planning
+- Provide task-specific context to implementation
+
+## Coordination Rules
+- No blocking between research agents
+- Planning waits for research completion
+- Implementation runs independently
+- Integration validates completed work
+
+## Performance Settings
+- Optimize for parallel execution
+- Minimize coordination overhead
+- Progressive result collection
+- Early feedback when possible
+
+## Project-Specific Rules
+[Add your project-specific instructions here]
+```
+
 **Generated Configuration** (in .guild/):
-- instructions.md with project-specific agent requirements and embedded intelligence summaries
+- instructions.md with simple, pre-filled default settings that can be easily modified
 - ignore.md with technology-appropriate and project-specific exclusion patterns
 
 **Complete Embedded Intelligence**: All generated components contain comprehensive project understanding, technology patterns, architectural knowledge, and workflow optimization - making the entire system completely self-contained and project-specialized.

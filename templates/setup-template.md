@@ -36,21 +36,21 @@ Perform comprehensive project analysis and generate a complete Guild system tail
    - Identify technology stack using embedded detection intelligence
    - Assess project complexity and sophistication level
 
-2. **Workflow Pattern Recognition**
-   - Map existing development workflows using embedded workflow intelligence
-   - Identify testing, building, and deployment patterns
-   - Determine optimal Guild workflow integration points
+2. **Dynamic Pattern Detection**
+   - Use Claude's natural understanding to identify project patterns
+   - Detect technology specializations through intelligent analysis
+   - Recognize quality standards and testing approaches from context
 
-3. **Agent Architecture Planning**
-   - Apply embedded agent architecture principles
-   - Design context-only vs implementation agent distribution
-   - Plan agent placement in `.claude/agents/guild/` directory (MANDATORY)
+3. **Specialist Agent Planning**
+   - Generate specialist agents based on detected patterns (not hardcoded templates)
+   - Plan parallel execution with 3/20 concurrency limits
+   - Design agent specializations with color coding for workflow stages
 
 ### Phase 2: Agent Generation
 
 **MANDATORY DIRECTORY**: All Guild agents MUST be created in `.claude/agents/guild/` subdirectory.
 
-Generate specialized agents based on embedded intelligence:
+Generate specialized agents using prompt-first pattern detection and dynamic analysis:
 
 #### Context-Only Agents (Analysis & Planning)
 ```yaml
@@ -66,42 +66,56 @@ guild-planning-agent.md:
   constraints: NEVER make direct changes, create execution roadmaps
 ```
 
-#### Implementation Agents (Execution)
+#### Dynamic Specialist Agents (Implementation)
 ```yaml
-guild-implementation-agent.md:
+# Generated based on project analysis - examples:
+guild-interface-specialist.md:
   thinking_mode: think
-  role: Execute changes based on context packages from context-only agents
-  constraints: Only act on validated context packages
+  color: green
+  model: inherit
+  role: Interface components and user interaction implementation
+  specialization: Detected UI patterns and framework conventions
   
-guild-testing-agent.md:
+guild-service-specialist.md:
   thinking_mode: think
-  role: Test generation, validation, quality assurance
-  constraints: Focus on comprehensive testing strategies
+  color: green
+  model: inherit
+  role: Business logic and API endpoint implementation
+  specialization: Detected service patterns and architecture
   
-guild-refactoring-agent.md:
+guild-data-specialist.md:
   thinking_mode: think
-  role: Code optimization, architectural improvements
-  constraints: Only refactor based on planning agent context
+  color: green
+  model: inherit
+  role: Data schemas and persistence implementation
+  specialization: Detected data patterns and storage conventions
+
+guild-quality-specialist.md:
+  thinking_mode: think
+  color: orange
+  model: inherit
+  role: Testing, validation, and quality assurance
+  specialization: Detected testing patterns and quality standards
 ```
 
 ### Phase 3: Instructions File Creation
 
 Create `.guild/instructions.md` with:
 
-1. **Project-Specific Configuration**
-   - Technology stack integration
-   - Custom workflow patterns identified during analysis
-   - Quality gates and validation requirements
+1. **Agent Specialization Configuration**
+   - Detected technology patterns and specialist routing rules
+   - Dynamic agent creation based on project analysis
+   - Concurrency limits (3 instances per specialist type, 20 total)
 
-2. **Context Engineering Protocols**
-   - XML-based handoff templates using embedded specifications
-   - Priority classification system for context packages
-   - Reference-based linking patterns for efficient context management
+2. **Workflow Integration**
+   - Main thread reasoning with parallel research execution
+   - Prompt-first pattern detection and analysis
+   - Quality standards based on project conventions
 
-3. **Agent Orchestration Rules**
-   - Sequential vs parallel execution strategies
-   - Context synchronization protocols
-   - Quality gate checkpoints
+3. **Plain English Instructions**
+   - Simple, clear rules that all agents must follow
+   - Project-specific adaptations and requirements
+   - Single source of truth for all Guild behavior
 
 ### Phase 4: Validation & Completion
 
@@ -125,19 +139,68 @@ Create `.guild/instructions.md` with:
 ### Instructions Template
 
 ```markdown
-# Guild Project Instructions
+# Guild System Instructions
 
-## Project Configuration
-[Project-specific configuration will be inserted here]
+These are simple instructions that all Guild agents and commands follow.
 
-## Agent Orchestration
-[Orchestration rules based on embedded intelligence]
+## Single Source of Truth
 
-## Context Engineering
-[XML protocols and handoff specifications]
+This file is the DEFINITIVE source for all Guild system behavior configuration. All commands, agents, and workflows must read and strictly follow these instructions.
 
-## Quality Gates
-[Validation and testing requirements]
+## Concurrency Settings
+- Run up to 3 instances of each agent type in parallel
+- Maximum 20 total agents running at the same time
+- Balance tasks evenly across available agents
+- Scale down idle agents after 30 seconds
+
+## Agent Model Settings
+- Planning agent always uses opus model
+- All other agents use inherit model by default
+- Research agents can run up to 3 instances
+- Implementation agents can run up to 3 instances
+
+## Workflow Settings
+- Always start with reasoning in main thread
+- Run project and technology research in parallel
+- Plan tasks before implementation
+- Execute implementation in parallel when possible
+- Testing is optional unless explicitly requested
+- Verification is optional unless explicitly requested
+
+## Task Routing Rules
+- Interface work goes to interface specialists
+- Service work goes to service specialists
+- Data work goes to data specialists
+- Integration work goes to integration specialists
+- Testing work goes to quality specialists
+
+## Quality Standards
+- Follow existing project patterns
+- Maintain code consistency
+- Validate all implementations
+- Create tests when requested
+- Document complex logic
+
+## Context Management
+- Each agent gets only needed context
+- Avoid context duplication
+- Share research results with planning
+- Provide task-specific context to implementation
+
+## Coordination Rules
+- No blocking between research agents
+- Planning waits for research completion
+- Implementation runs independently
+- Integration validates completed work
+
+## Performance Settings
+- Optimize for parallel execution
+- Minimize coordination overhead
+- Progressive result collection
+- Early feedback when possible
+
+## Project-Specific Rules
+[Add your project-specific instructions here]
 ```
 
 ### Ignore Template

@@ -1,7 +1,7 @@
 # /guild:ignore Command Specification
 
 ## Overview
-Manages file exclusion patterns that Guild agents must respect during workflow execution. Maintains a `.guild/ignore.md` file specifying which files and folders should be excluded from Guild operations unless explicitly requested.
+Manages soft ignore patterns for Guild agents by maintaining a `.guild/ignore.md` file. This file works like .gitignore but implements "soft ignore" behavior - files matching patterns are ignored during normal Guild operations but can still be accessed when explicitly requested by the user.
 
 ## Command Interface
 
@@ -27,13 +27,23 @@ Updates: Immediate effect on all Guild operations
 Structure:
   # Guild Ignore Patterns
   
-  **Soft Ignore Behavior**: Patterns respected during normal operations
-  but overridable when explicitly requested
+  # Files and directories listed here are soft-ignored by Guild agents.
+  # They won't be analyzed or modified during normal operations,
+  # but can still be accessed when explicitly requested.
   
-  ## Patterns
-  - Pattern 1
-  - Pattern 2
-  ...
+  # System files
+  .git/
+  .DS_Store
+  *.log
+  *.tmp
+  
+  # Dependencies
+  node_modules/
+  __pycache__/
+  
+  # Build outputs
+  build/
+  dist/
 ```
 
 ### Default Patterns
