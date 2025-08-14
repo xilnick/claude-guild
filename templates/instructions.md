@@ -7,22 +7,22 @@ These are simple instructions that all Guild agents and commands follow.
 This file is the DEFINITIVE source for all Guild system behavior configuration. All commands, agents, and workflows must read and strictly follow these instructions.
 
 ## Concurrency Settings
-- Run up to 3 instances of each agent type in parallel
+- Adaptive 1-3 instances of each agent type based on workload complexity
 - Maximum 20 total agents running at the same time
-- Balance tasks evenly across available agents
+- Work estimation-based task distribution with affinity grouping
 - Scale down idle agents after 30 seconds
 
 ## Agent Model Settings
 - Planning agent always uses opus model
 - All other agents use inherit model by default
-- Research agents can run up to 3 instances
-- Implementation agents can run up to 3 instances
+- Research agents can run up to 3 instances with parallel context gathering
+- Implementation agents use adaptive 1-3 instances with dependency-aware scheduling
 
 ## Workflow Settings
 - Always start with reasoning in main thread
-- Run project and technology research in parallel
+- Run dependency-aware project and technology research in parallel
 - Plan tasks before implementation
-- Execute implementation in parallel when possible
+- Execute implementation in parallel with intelligent coordination and real-time rebalancing
 - Testing is optional unless explicitly requested
 - Verification is optional unless explicitly requested
 
@@ -53,7 +53,7 @@ This file is the DEFINITIVE source for all Guild system behavior configuration. 
 - Integration validates completed work
 
 ## Performance Settings
-- Optimize for parallel execution
+- Optimize for enhanced parallel execution with cross-specialization work stealing
 - Minimize coordination overhead
 - Progressive result collection
 - Early feedback when possible

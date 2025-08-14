@@ -318,7 +318,7 @@ Agent Context Engineering:
 2. **Specialization Detection**: Identify domains, layers, and integration points
 3. **Agent Creation**: Generate appropriate specialists with focused context
 4. **Context Optimization**: Group related technologies within agent boundaries
-5. **Load Balancing Setup**: Configure 3 instances per agent type by default
+5. **Intelligent Load Balancing Setup**: Configure adaptive 1-3 instances per agent type with complexity-aware distribution
 
 **Generated Agents** (ALL in .claude/agents/guild/ subdirectory):
 - Core context agents with comprehensive project understanding
@@ -357,10 +357,10 @@ Agent Context Engineering:
 
 ## System Configuration
 
-**Concurrency**: Up to 3 instances per agent type  
+**Concurrency**: Adaptive 1-3 instances per agent type with intelligent scaling  
 **Thinking Modes**: Strategic planning (ultrathink), Analysis (think-harder), Execution (think)  
 **Context Management**: Structured XML handoffs with progressive detail building  
-**Performance**: Parallel execution with main thread coordination  
+**Performance**: Enhanced parallel execution with dependency-aware scheduling and real-time rebalancing  
 
 ## Usage
 
@@ -382,17 +382,19 @@ Ignore patterns: Manage via `.guild/ignore.md`
 
 These are simple instructions that all Guild agents and commands follow.
 
-## Concurrency Settings
-- Run up to 3 instances of each agent type in parallel
-- Maximum 20 total agents running at the same time
-- Balance tasks evenly across available agents
-- Scale down idle agents after 30 seconds
+## Enhanced Concurrency Settings
+- Adaptive 1-3 instances of each agent type based on workload analysis
+- Maximum 20 total agents with intelligent resource management
+- Work estimation-based task distribution with affinity grouping
+- Dynamic rebalancing with cross-specialization work stealing
+- Predictive scaling with real-time performance monitoring
 
 ## Agent Model Settings
 - Planning agent always uses opus model
 - All other agents use inherit model by default
-- Research agents can run up to 3 instances
-- Implementation agents can run up to 3 instances
+- Research agents can run up to 3 instances with parallel context gathering
+- Implementation agents use adaptive 1-3 instances with dependency-aware scheduling
+- Cross-specialization work stealing enables idle agents to assist overloaded specialists
 
 ## Workflow Settings
 - Always start with reasoning in main thread

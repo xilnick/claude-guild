@@ -105,10 +105,10 @@ Create `.guild/instructions.md` with:
 1. **Agent Specialization Configuration**
    - Detected technology patterns and specialist routing rules
    - Dynamic agent creation based on project analysis
-   - Concurrency limits (3 instances per specialist type, 20 total)
+   - Enhanced concurrency with adaptive 1-3 instances per specialist type, intelligent scaling
 
 2. **Workflow Integration**
-   - Main thread reasoning with parallel research execution
+   - Main thread reasoning with dependency-aware parallel research execution
    - Prompt-first pattern detection and analysis
    - Quality standards based on project conventions
 
@@ -147,17 +147,19 @@ These are simple instructions that all Guild agents and commands follow.
 
 This file is the DEFINITIVE source for all Guild system behavior configuration. All commands, agents, and workflows must read and strictly follow these instructions.
 
-## Concurrency Settings
-- Run up to 3 instances of each agent type in parallel
-- Maximum 20 total agents running at the same time
-- Balance tasks evenly across available agents
-- Scale down idle agents after 30 seconds
+## Enhanced Concurrency Settings
+- Adaptive 1-3 instances of each agent type based on workload complexity
+- Maximum 20 total agents with intelligent resource management
+- Work estimation-based task distribution with affinity grouping  
+- Dynamic rebalancing with cross-specialization work stealing
+- Predictive scaling with real-time performance monitoring
 
 ## Agent Model Settings
 - Planning agent always uses opus model
 - All other agents use inherit model by default
-- Research agents can run up to 3 instances
-- Implementation agents can run up to 3 instances
+- Research agents can run up to 3 instances with parallel context gathering
+- Implementation agents use adaptive 1-3 instances with dependency-aware scheduling  
+- Cross-specialization work stealing enables idle agents to assist overloaded specialists
 
 ## Workflow Settings
 - Always start with reasoning in main thread
