@@ -326,9 +326,56 @@ Agent Context Engineering:
 - All agents configured with optimal thinking modes and concurrency settings
 - **MANDATORY**: All Guild agents created in `.claude/agents/guild/` subdirectory for proper namespace isolation
 
-### Step 3: Create Instructions Configuration
+### Step 3: Create Guild System Configuration
 
-Create `.guild/instructions.md` with pre-filled default settings:
+**CRITICAL**: Create configuration files that Guild command will recognize:
+
+1. **Create `.guild/overview.md`** (Primary setup completion indicator):
+
+```markdown
+# Guild System Overview
+
+**Setup Status**: ✅ Complete  
+**Setup Date**: [Current Date]  
+**Project Type**: [Detected project type]  
+**Technology Stack**: [Detected technologies]
+
+## Generated Agents
+
+**Location**: `.claude/agents/guild/`
+
+### Context Generation Agents
+- guild-planning-agent: Strategic workflow coordination and task orchestration
+- guild-project-research-agent: Project-specific context and pattern analysis
+- guild-global-research-agent: Best practices and external knowledge integration
+
+### Implementation Agents
+[List of dynamically generated specialist agents based on project analysis]
+
+### Quality Assurance Agents
+- guild-verification-agent: Quality validation and testing coordination
+
+## System Configuration
+
+**Concurrency**: Up to 3 instances per agent type  
+**Thinking Modes**: Strategic planning (ultrathink), Analysis (think-harder), Execution (think)  
+**Context Management**: Structured XML handoffs with progressive detail building  
+**Performance**: Parallel execution with main thread coordination  
+
+## Usage
+
+Primary command: `/guild "your task"`  
+Configuration: Edit `.guild/instructions.md` for project-specific rules  
+Ignore patterns: Manage via `.guild/ignore.md`  
+
+## Next Steps
+
+1. Try: `/guild "simple task"` to test basic workflow
+2. Use: `/guild --full "complex task"` for comprehensive development
+3. Customize: Edit `.guild/instructions.md` for your project needs
+```
+
+2. **Create `.guild/instructions.md`** with pre-filled default settings:
 
 ```markdown
 # Guild System Instructions
@@ -391,9 +438,46 @@ These are simple instructions that all Guild agents and commands follow.
 [Add your project-specific instructions here]
 ```
 
+3. **Create `.guild/ignore.md`** (Soft ignore patterns):
+
+```markdown
+# Guild Ignore Patterns
+
+These files and patterns are soft-ignored during Guild operations but can be accessed when explicitly requested.
+
+## Generated/Compiled Files
+*.min.js
+*.min.css
+dist/
+build/
+out/
+
+## Dependencies
+node_modules/
+vendor/
+.venv/
+venv/
+
+## System Files
+.DS_Store
+*.log
+.env
+.env.*
+
+## IDE/Editor Files
+.vscode/settings.json
+.idea/workspace.xml
+*.swp
+*.tmp
+
+## Project-Specific Patterns
+[Add patterns specific to your project here]
+```
+
 **Generated Configuration** (in .guild/):
-- instructions.md with simple, pre-filled default settings that can be easily modified
-- ignore.md with technology-appropriate and project-specific exclusion patterns
+- **overview.md**: Primary setup completion indicator with system summary and agent inventory
+- **instructions.md**: Simple, pre-filled default settings that can be easily modified  
+- **ignore.md**: Technology-appropriate and project-specific exclusion patterns
 
 **Complete Embedded Intelligence**: All generated components contain comprehensive project understanding, technology patterns, architectural knowledge, and workflow optimization - making the entire system completely self-contained and project-specialized.
 

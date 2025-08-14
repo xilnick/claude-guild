@@ -28,19 +28,56 @@ Parallelization Triggers:
 
 **Core Concept**: Spawn multiple instances of the SAME specialist agent to process independent tasks in parallel.
 
-**Automatic Instance Spawning**:
+**Enhanced Automatic Instance Spawning**:
 ```yaml
-When Planning Agent Detects:
-  - Multiple files needing same type of modification
-  - Independent components requiring same specialist
-  - Batch operations on similar code patterns
-  - Parallel test creation for multiple modules
+Advanced Detection Patterns:
+  file_affinity_patterns:
+    - Multiple files needing same type of modification
+    - Files sharing common dependencies or imports
+    - Components within same domain/feature area
+    - Files with similar complexity characteristics
+  
+  component_affinity_patterns:
+    - Independent components requiring same specialist
+    - Related UI components (List/Card/Detail patterns)
+    - Service layer components with shared patterns
+    - Data models with similar structure
+    
+  operation_affinity_patterns:
+    - Batch operations on similar code patterns
+    - Parallel test creation for related modules
+    - Migration tasks across similar structures
+    - Refactoring operations with shared goals
 
-Spawning Strategy:
-  1. Planning agent identifies N similar tasks
-  2. Spawns min(N, 3) instances of same specialist
-  3. Distributes tasks evenly across instances
-  4. Each instance works independently on assigned files
+Predictive Spawning Strategy:
+  1. Planning agent analyzes task complexity and affinity patterns
+  2. Estimates optimal instance count using predictive algorithms:
+     instance_count = min(max(tasks/optimal_load_per_agent, 1), 3)
+     optimal_load_per_agent = base_capacity * complexity_adjustment
+  3. Applies affinity-based grouping before distribution
+  4. Spawns instances with specialized context packages
+  5. Monitors performance and adjusts dynamically
+
+Affinity-Based Task Grouping:
+  domain_affinity:
+    - Group tasks by business domain (user, product, order)
+    - Assign domain-related tasks to same instance
+    - Benefits: Domain expertise accumulation, consistent patterns
+    
+  technical_affinity:
+    - Group by file type or technology (.tsx, .service.ts, .test.ts)
+    - Assign similar technical patterns to same instance
+    - Benefits: Technical specialization, optimized tooling usage
+    
+  dependency_affinity:
+    - Group files sharing common imports or dependencies
+    - Assign interdependent components to same instance
+    - Benefits: Reduced context switching, better integration awareness
+    
+  complexity_affinity:
+    - Group tasks by estimated complexity level
+    - Assign similar complexity tasks to specialized instances
+    - Benefits: Balanced workloads, specialized handling approaches
 ```
 
 **Real-World Examples**:
@@ -64,17 +101,53 @@ Example 3 - Test Specialist (3 instances):
   Result: Full test coverage 3x faster
 ```
 
-**Task Distribution Algorithm**:
+**Enhanced Task Distribution Algorithm**:
 ```yaml
-Distribution Logic:
-  tasks = [file1, file2, file3, file4, file5, file6, file7]
-  agents = 3
+Work Estimation-Based Distribution:
+  complexity_factors:
+    - File size and lines of code
+    - Number of dependencies and imports
+    - Pattern complexity (regex, loops, conditionals)
+    - Historical completion times for similar tasks
+    
+  estimation_formula:
+    base_time = file_size_factor * complexity_multiplier
+    adjusted_time = base_time * (1 + dependency_factor)
+    final_estimate = adjusted_time * historical_adjustment
+
+Intelligent Distribution Logic:
+  # Instead of simple round-robin, use work estimation
+  tasks = [
+    {file: "file1.ts", estimated_time: 5min, complexity: "medium"},
+    {file: "file2.ts", estimated_time: 2min, complexity: "low"},
+    {file: "file3.ts", estimated_time: 8min, complexity: "high"},
+    {file: "file4.ts", estimated_time: 3min, complexity: "medium"},
+    {file: "file5.ts", estimated_time: 4min, complexity: "medium"},
+    {file: "file6.ts", estimated_time: 6min, complexity: "high"},
+    {file: "file7.ts", estimated_time: 2min, complexity: "low"}
+  ]
   
-  Agent 1: [file1, file4, file7]
-  Agent 2: [file2, file5]
-  Agent 3: [file3, file6]
+  # Optimal distribution for 3 agents (total: 30min → 10min each)
+  Agent 1: [file3.ts(8min), file7.ts(2min)] = 10min
+  Agent 2: [file6.ts(6min), file4.ts(3min)] = 9min  
+  Agent 3: [file1.ts(5min), file5.ts(4min), file2.ts(2min)] = 11min
+
+Affinity-Based Assignment:
+  principle: Assign similar tasks to same instance for context reuse
+  patterns:
+    - Same file type → same agent (*.tsx files to agent 1)
+    - Similar complexity → same agent (complex files to specialized agent)
+    - Related components → same agent (UserList, UserCard to same agent)
+    - Shared dependencies → same agent (files importing same modules)
   
-Round-Robin Assignment:
+  benefits:
+    - Reduced context switching overhead
+    - Better pattern recognition and consistency
+    - Improved code quality through specialization
+    - Faster execution due to context reuse
+
+Round-Robin Fallback:
+  - When work estimation unavailable
   - Ensures even distribution
   - Minimizes idle time
   - Allows work stealing if one finishes early
@@ -117,25 +190,54 @@ Benefits: 5-10x speedup in validation phases
 
 ### Load Balancing Strategy
 
-**Automatic Distribution**:
+**Enhanced Automatic Distribution**:
 ```yaml
-Task Routing:
+Intelligent Task Routing:
   - Route tasks to most appropriate specialist type
-  - Balance workload across available instances
+  - Balance workload across available instances using work estimation
   - Prefer agents with relevant context and capacity
+  - Apply affinity-based routing for related tasks
   - Avoid overloading any single agent or specialization
 
-Dynamic Scaling:
-  scale_up: Create new instances when workload exceeds capacity
-  scale_down: Terminate idle instances to conserve resources
-  work_stealing: Idle agents help with overflow from busy specialists
-  resource_optimization: Continuous monitoring and adjustment
+Predictive Scaling Strategy:
+  adaptive_spawning:
+    - Start with 1 instance, scale to 3 as workload increases
+    - Spawn instances based on queue depth and complexity analysis
+    - Consider context transfer overhead in scaling decisions
+    
+  scale_up_triggers:
+    - Queue depth > 5 tasks with high complexity
+    - Average wait time > 2x estimated task completion time
+    - Agent utilization > 85% for sustained period
+    
+  scale_down_triggers:
+    - Agent idle > 30% of time for 5+ minutes
+    - Queue depth < 2 tasks for sustained period
+    - Overall system utilization < 60%
 
-Performance Monitoring:
-  - Track agent utilization and performance
-  - Monitor resource usage and system capacity
-  - Identify bottlenecks and rebalance accordingly
-  - Optimize context transfer and communication
+Enhanced Work Stealing:
+  cross_specialization_stealing:
+    - Idle specialists can adapt to help overloaded specialists
+    - Context transfer protocols for seamless handoffs
+    - Priority-based task redistribution
+    
+  intelligent_redistribution:
+    - Consider task complexity and agent capability
+    - Minimize context switching overhead
+    - Maintain quality through appropriate specialist matching
+
+Real-Time Performance Optimization:
+  metrics_collection:
+    - Track completion times vs. estimates (accuracy improvement)
+    - Monitor resource usage patterns (CPU, memory, I/O)
+    - Analyze bottleneck patterns across different project types
+    - Measure context transfer and startup overhead
+  
+  adaptive_algorithms:
+    - Machine learning from historical performance data
+    - Dynamic adjustment of complexity multipliers
+    - Real-time optimization of distribution algorithms
+    - Predictive modeling for resource requirements
 ```
 
 ### Coordination Mechanisms
@@ -186,25 +288,80 @@ Cross-Scope Integration:
 
 ### Adaptive Parallelization
 
-**Claude-Driven Optimization**:
+**Advanced Claude-Driven Optimization**:
 ```yaml
-Dynamic Assessment:
-  - Claude analyzes project structure and complexity
-  - Determines optimal parallelization strategy
-  - Adjusts based on available resources and constraints
-  - Monitors performance and adjusts in real-time
+Multi-Dimensional Assessment:
+  project_analysis:
+    - Codebase size and complexity metrics
+    - Dependency graph analysis and coupling measurement
+    - File type distribution and pattern complexity
+    - Historical performance data from similar projects
+    
+  resource_analysis:
+    - Available system resources (CPU, memory, I/O)
+    - Network latency and bandwidth constraints
+    - Context window utilization and memory pressure
+    - Agent spawn/teardown overhead measurements
+    
+  task_analysis:
+    - Task interdependency mapping and critical path analysis
+    - Complexity scoring using multiple factors
+    - Affinity pattern recognition for grouping opportunities
+    - Risk assessment for parallel execution feasibility
 
-Complexity-Based Scaling:
-  simple_projects: Minimal parallelization (2-3 agents)
-  medium_projects: Balanced parallelization (5-10 agents)
-  large_projects: Aggressive parallelization (10-20 agents)
-  enterprise_projects: Maximum parallelization (up to limits)
+Predictive Scaling Algorithms:
+  ml_based_prediction:
+    model_inputs:
+      - Project characteristics (size, complexity, patterns)
+      - Task characteristics (type, dependencies, scope)
+      - Historical performance metrics
+      - Resource availability and constraints
+    
+    prediction_outputs:
+      - Optimal instance count per specialist type
+      - Expected completion times and resource usage
+      - Bottleneck probability and mitigation strategies
+      - Quality risk assessment and validation needs
+  
+  dynamic_scaling_rules:
+    conservative_start: Begin with 1 instance, scale based on queue depth
+    aggressive_scale: Rapidly spawn instances when high parallelization potential detected
+    adaptive_threshold: Adjust scaling triggers based on historical accuracy
+    predictive_preemption: Scale down before bottlenecks based on pattern recognition
 
-Performance Optimization:
-  - Intelligent work distribution
-  - Context optimization for parallel agents
-  - Resource pooling and sharing
-  - Bottleneck identification and resolution
+Enhanced Complexity-Based Scaling:
+  nano_projects: Single-agent execution (1 agent)
+    characteristics: <10 files, minimal dependencies, simple patterns
+    strategy: Sequential execution with minimal overhead
+    
+  simple_projects: Conservative parallelization (2-3 agents)
+    characteristics: 10-100 files, low coupling, standard patterns
+    strategy: Basic parallel execution with simple coordination
+    
+  medium_projects: Intelligent parallelization (4-8 agents)
+    characteristics: 100-500 files, moderate coupling, mixed complexity
+    strategy: Affinity-based grouping with predictive scaling
+    
+  large_projects: Aggressive parallelization (8-15 agents)
+    characteristics: 500-2000 files, high coupling, complex patterns
+    strategy: Advanced coordination with machine learning optimization
+    
+  enterprise_projects: Maximum parallelization (15-20 agents)
+    characteristics: >2000 files, complex architecture, multiple domains
+    strategy: Domain-based parallelization with sophisticated coordination
+
+Real-Time Performance Optimization:
+  adaptive_learning:
+    - Continuous model updates from execution data
+    - Pattern recognition for optimization opportunities
+    - Automatic adjustment of scaling parameters
+    - Performance regression detection and correction
+    
+  predictive_optimization:
+    - Resource usage forecasting and preemptive scaling
+    - Bottleneck prediction and proactive mitigation
+    - Quality risk assessment with preventive measures
+    - Context optimization based on usage patterns
 ```
 
 ### Error Handling and Recovery

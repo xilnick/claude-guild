@@ -195,10 +195,11 @@ First, read Guild instructions and discover available agents for this project:
 
 ### Dynamic Agent Discovery
 
-**Step 2: Check Guild Configuration**
-- Look for `.guild/instructions.md` (project configuration and rules)
-- Look for `.guild/ignore.md` (ignore patterns)
-- If missing, Guild may not be fully configured
+**Step 2: Check Guild Configuration Status**
+- Look for `.guild/overview.md` (primary indicator of setup completion)
+- OR look for `.guild/instructions.md` (project configuration)
+- If either exists, Guild IS configured (proceed with available resources)
+- Also check for `.guild/ignore.md` (ignore patterns)
 
 **Step 3: Discover Available Agents**
 - Check `.claude/agents/guild/` directory for Guild agents
@@ -208,15 +209,21 @@ First, read Guild instructions and discover available agents for this project:
   - **Quality Agents**: guild-verification-agent, guild-spec-agent if present
   - **Project-Specific Agents**: Any other guild-* agents discovered
 
-**Step 4: Adapt Workflow to Available Agents**
-- If core agents missing: Provide setup guidance
-- If implementation agents missing: Use available engineers or provide guidance
+**Step 4: Adapt Workflow to Available Resources**
+- If Guild configured but agents missing: Continue with main thread fallback and offer agent regeneration
+- If core agents missing: Use enhanced main thread processing
+- If implementation agents missing: Use available engineers or main thread fallback
 - If quality agents missing: Skip those stages or provide alternatives
 - Always work with what's available in the project
 
 ### If Guild NOT Configured
 
-Display this message and STOP:
+Check these conditions to determine if Guild is truly not configured:
+1. `.guild` directory does not exist
+2. `.guild/overview.md` is missing
+3. `.guild/instructions.md` is missing
+
+If ALL above are true, display this message and STOP:
 
 ```
 🏛️ **Guild Not Configured**
@@ -228,6 +235,26 @@ Guild is not yet set up for this project. To use the workflow:
 3. **Available Flags**: --refactor, --fix, --test, --verify, --project, --no-reason, --no-plan, --no-implement
 
 **To get started**: `/guild:setup [optional-guidance]`
+```
+
+### If Guild Configured but Agents Missing
+
+If `.guild` exists but `.claude/agents/guild/` is missing or empty:
+
+Display this message and CONTINUE with main thread execution:
+
+```
+🏛️ **Guild Configured - Agents Need Generation**
+
+Guild setup detected but agents are missing.
+
+Options:
+1. **Regenerate Agents**: `/guild:setup --regenerate-agents`
+2. **Continue Without Agents**: The system will use main thread coordination
+
+Note: Performance is optimized with agents. Consider regenerating them.
+
+Proceeding with main thread fallback execution...
 ```
 
 ### If Guild IS Configured
@@ -474,10 +501,11 @@ ls .claude/agents/guild/
 ```
 
 **Process Discovery Results**:
-1. **If directory exists**: Scan for available agents using LS tool
-2. **If directory missing**: Display Guild not configured message and stop execution
-3. **Parse Available Agents**: Identify agent types and capabilities
-4. **Build Execution Plan**: Determine workflow stages based on available agents
+1. **Check Configuration Status**: First verify Guild setup by checking for `.guild/overview.md` or `.guild/instructions.md`
+2. **If Guild NOT configured**: Display "Guild Not Configured" message and stop execution  
+3. **If Guild configured but agents missing**: Display "Agents Need Generation" message and continue with main thread fallback
+4. **If agents exist**: Scan available agents and parse agent types and capabilities
+5. **Build Execution Plan**: Determine workflow stages based on available resources (agents or main thread fallback)
 
 ### Step 2: Workflow Orchestration Implementation
 
@@ -700,15 +728,19 @@ FINAL_VALIDATION:
 ```
 1. PARSE COMMAND FLAGS → determine workflow stages
 2. VALIDATE USER TASK → enter interactive mode if missing
-3. DISCOVER AGENTS: LS .claude/agents/guild/
-4. CATEGORIZE discovered agents by TYPE:
+3. CHECK GUILD CONFIGURATION: Verify Guild setup by checking `.guild/overview.md` or `.guild/instructions.md`
+4. HANDLE CONFIGURATION STATUS:
+   - If NOT configured: Display "Guild Not Configured" and STOP
+   - If configured but agents missing: Display "Agents Need Generation" and continue with main thread fallback
+   - If agents available: Proceed with agent-based execution
+5. DISCOVER AND CATEGORIZE available agents by TYPE (if agents exist):
    - Context Generation Agents (research, analysis, synthesis)
    - Strategic Planning Agents (planning, coordination, architecture)
    - Domain Specialist Agents (technology-specific, scope-specific)
    - Implementation Agents (engineers, builders, integrators)
    - Quality Assurance Agents (validation, verification, testing)
    - Utility Agents (general-purpose, async workers)
-5. BUILD orchestration plan based on available agent types
+6. BUILD orchestration plan based on available resources (agents or main thread fallback)
 ```
 
 ### EXECUTION PHASE 2: Main Thread Reasoning (ONLY Main Thread Work)
