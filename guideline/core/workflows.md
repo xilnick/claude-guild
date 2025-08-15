@@ -1,4 +1,5 @@
 # Workflow Patterns Module
+**Version**: 2.1.0 | **Last Updated**: 2024-08-14 | **Dependencies**: principles.md, agents.md
 
 ## Purpose
 Essential workflow patterns for Guild system execution. This module is embedded into the setup command.
@@ -27,13 +28,16 @@ Key Principles:
 
 **Basic Workflows**:
 ```yaml
-Standard (default):
+Standard (DEFAULT - ALWAYS USED UNLESS FLAGS SPECIFIED):
   stages: [reasoning, research, planning, implementation]
-  description: Main development workflow with parallel execution
+  description: Simple 4-stage workflow - fast and efficient for most tasks
+  testing: OFF (use --test or --full to enable)
+  verification: OFF (use --verify or --full to enable)
+  refactoring: OFF (use --refactor or --full to enable)
   
-Full (--full flag):
-  stages: [reasoning, research, planning, implementation, testing, verification]
-  description: Comprehensive workflow with quality stages
+Full (--full flag - OPTIONAL ENHANCEMENT):
+  stages: [reasoning, research, planning, implementation, testing, verification, refactoring]
+  description: Comprehensive 7-stage workflow with quality assurance - use when thorough validation needed
   
 Focused Modes:
   research_only: [reasoning, research]
@@ -45,11 +49,70 @@ Focused Modes:
 
 **Core Stages**:
 ```yaml
-Reasoning Stage:
+Enhanced Reasoning Stage:
   executor: main thread (only stage executed by main thread)
   thinking_mode: ultrathink
-  purpose: Requirement analysis and task decomposition strategy
-  output: Clear task breakdown and agent orchestration plan
+  purpose: Requirement analysis, approach validation, and task decomposition strategy
+  
+  Analysis Components:
+    1. Requirement Analysis:
+       - Parse user requirements and clarify ambiguities
+       - Identify task scope and complexity
+       - Determine success criteria
+    
+    2. Approach Suitability Validation:
+       - Analyze proposed technical approach and technology choices
+       - Detect potential inefficiencies or anti-patterns
+       - Evaluate security and performance implications
+       - Check for modern best practices alignment
+    
+    3. Alternative Assessment:
+       - Identify better tools or approaches when issues detected
+       - Research more efficient patterns and solutions
+       - Consider security, performance, and maintainability factors
+       - Provide specific recommendations with rationale
+  
+  output: Enhanced task breakdown with approach validation and agent orchestration plan
+
+Approach Verification Checkpoint:
+  executor: main thread analysis (post-reasoning validation)
+  trigger: Immediately after reasoning stage completion
+  purpose: Critical validation gate for approach appropriateness
+  
+  Verification Criteria:
+    technology_appropriateness:
+      - Is the chosen technology stack suitable for the task?
+      - Are there more appropriate tools available?
+      - Is the approach aligned with project constraints?
+    
+    efficiency_analysis:
+      - Does the approach follow best practices?
+      - Are there performance implications to consider?
+      - Is the solution appropriately scoped?
+    
+    anti_pattern_detection:
+      - Using regex for complex parsing (recommend proper parsers)
+      - Manual HTTP handling (recommend HTTP libraries)
+      - SQL string concatenation (recommend parameterized queries)
+      - Poor authentication methods (recommend secure alternatives)
+    
+    security_considerations:
+      - Are security best practices followed?
+      - Are there known security vulnerabilities in the approach?
+      - Is input validation and sanitization properly considered?
+  
+  Actions When Issues Detected:
+    workflow_halt: STOP execution immediately
+    issue_analysis: Present detailed concerns and risks
+    alternative_proposal: Suggest better approaches with explanations
+    user_decision_gate: Require explicit user choice to proceed/adjust
+  
+  Actions When Approach Validated:
+    validation_confirmation: Log approach as verified and appropriate
+    workflow_continuation: Proceed to research stage
+    risk_documentation: Note any minor risks for planning stage
+  
+  output: Approach validation report with proceed/halt decision
   
 Research Stage:
   agents: research specialists (project + technology)
@@ -266,6 +329,7 @@ Mode Control:
   --reason: Reasoning analysis only
   --research: Research gathering only
   --plan: Planning only (save plan to file)
+  --show-plan: Show execution plan preview before starting (requires confirmation)
 ```
 
 ### Coordination Patterns
@@ -276,7 +340,7 @@ Independent Execution:
   principle: Agents work independently whenever possible
   coordination: Only at clear integration boundaries
   communication: Async progress reporting
-  conflict_resolution: File ownership and merge rules
+  conflict_resolution: Apply unified strategy from principles.md
   
 Boundary Management:
   planning: Define interfaces and contracts upfront

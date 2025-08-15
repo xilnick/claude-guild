@@ -1,4 +1,5 @@
 # Parallel Execution Module
+**Version**: 2.1.0 | **Last Updated**: 2024-08-14 | **Dependencies**: principles.md, agents.md, workflows.md
 
 ## Purpose
 Essential parallel execution strategies for efficient Guild system performance. This module is embedded into the setup command.
@@ -381,10 +382,10 @@ Recovery Strategies:
   partial_rollback: Rollback only affected components
 
 Conflict Resolution:
-  detection: Real-time monitoring for file and resource conflicts
-  prevention: Ownership rules and boundary definitions
-  resolution: Automatic resolution for simple conflicts
-  escalation: Manual intervention for complex conflicts
+  strategy: Follow unified conflict resolution from principles.md
+  implementation: Lock-free coordination with optimistic concurrency
+  prevention: File ownership and clear component boundaries
+  escalation: Defined hierarchy for human intervention when needed
 ```
 
 ### Performance Metrics

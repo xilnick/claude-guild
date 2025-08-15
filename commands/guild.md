@@ -24,17 +24,19 @@
 
 Guild uses a modular workflow stage system where you can enable/disable specific execution stages:
 
-### Default Workflow Stages (Always Enabled)
+### Default Workflow Stages (Simple 4-Stage - Always Enabled)
 - **🧠 Reasoning Stage**: Prompt analysis, typo correction, and requirement clarification (`prompt-analysis` stage)
 - **🔍 Research Stage**: Context gathering and background research (`context-research` stage)
 - **🎯 Planning Stage**: Strategic planning and implementation architecture (`planning` stage)  
 - **🔨 Implementation Stage**: Code execution and development (`implementation` stage)
 
-### Optional Workflow Stages (Enable with Flags)
-- **♻️ Refactoring Stage**: Code optimization and cleanup (`refactor-planning` + refactoring execution)
-- **🐛 Fix Stage**: Error detection and systematic debugging (`error-detection` stage)
-- **🧪 Testing Stage**: Test creation and quality assurance (`testing` stage)
-- **✅ Verification Stage**: Final validation against requirements (`verification` stage)
+**Note**: This simple 4-stage workflow is the DEFAULT. Quality stages below are OFF by default.
+
+### Optional Quality Stages (Require Explicit Flags)
+- **🧪 Testing Stage**: Test creation and quality assurance (`testing` stage) - **Use --test or --full**
+- **✅ Verification Stage**: Final validation against requirements (`verification` stage) - **Use --verify or --full**
+- **♻️ Refactoring Stage**: Code optimization and cleanup (`refactor-planning` + refactoring execution) - **Use --refactor or --full**
+- **🐛 Fix Stage**: Error detection and systematic debugging (`error-detection` stage) - **Use --fix**
 
 ## Command Flags & Stage Triggering Logic
 
@@ -56,6 +58,9 @@ Guild uses a modular workflow stage system where you can enable/disable specific
 
 ### Scope Modifiers
 - `--project` - Apply testing and refactoring to entire project (default: focused on changes only)
+
+### Workflow Control
+- `--show-plan` - Display execution plan preview and require confirmation before starting
 
 ## Stage Triggering Logic
 
@@ -181,6 +186,113 @@ Based on detected technologies, provide relevant examples:
 - Add real-time notifications with WebSocket
 - Implement file upload with progress tracking
 
+## Approach Verification & Plan Preview
+
+### Approach Verification Checkpoint
+
+After the reasoning stage, Guild automatically validates the proposed approach:
+
+**Verification Process**:
+```yaml
+Technology Assessment:
+  - Evaluate if chosen technologies are appropriate for the task
+  - Detect common anti-patterns and inefficient approaches
+  - Check alignment with security and performance best practices
+  
+Common Issues Detected:
+  - Using regex for complex parsing (→ recommend proper parsers)
+  - Manual HTTP handling (→ recommend HTTP libraries)  
+  - SQL string concatenation (→ recommend parameterized queries)
+  - Insecure authentication methods (→ recommend secure alternatives)
+  - Outdated patterns (→ recommend modern alternatives)
+
+Actions When Issues Found:
+  1. HALT workflow execution immediately
+  2. Display detailed analysis of concerns
+  3. Propose specific alternative approaches
+  4. Require user confirmation to proceed or adjust
+```
+
+**Example Verification Alert**:
+```
+⚠️ Approach Verification Alert
+
+Issue: Using regex for JSON parsing is error-prone and inefficient
+Recommendation: Use proper JSON parsing libraries
+
+Alternatives:
+• JSON.parse() for JavaScript
+• json module for Python  
+• Built-in JSON support in most languages
+
+Risk Level: HIGH - Regex cannot handle nested structures correctly
+
+Would you like to:
+1. Proceed with regex approach (not recommended)
+2. Use recommended JSON parsing approach ✓
+3. Cancel and adjust requirements
+```
+
+### Plan Preview (--show-plan flag)
+
+When `--show-plan` is specified, Guild displays the complete execution plan before starting:
+
+**Plan Preview Process**:
+```yaml
+Plan Generation:
+  1. Complete reasoning and approach verification
+  2. Perform planning stage to build execution strategy
+  3. Display comprehensive plan preview
+  4. Request user confirmation before execution
+
+Plan Preview Contains:
+  - Workflow stages to execute
+  - Agents to be used (with instance counts)
+  - Task distribution strategy  
+  - Approach summary and key decisions
+  - Estimated execution timeline
+```
+
+**Example Plan Preview**:
+```
+📋 Execution Plan Preview
+
+Task: "Add JWT authentication to REST API"
+Approach: Verified ✓ - JWT with middleware integration
+
+Workflow Stages:
+✓ Reasoning (approach validation completed)
+✓ Research (gather authentication patterns)
+✓ Planning (strategy development)  
+✓ Implementation (code changes)
+
+Agents to Execute:
+• guild-project-research-agent (2 instances)
+• guild-global-research-agent (1 instance)
+• guild-planning-agent (1 instance)
+• guild-backend-engineer (adaptive 1-3 instances)
+
+Task Distribution:
+• Instance 1: JWT token generation and validation
+• Instance 2: Middleware integration and route protection
+• Instance 3: User authentication endpoints and tests
+
+Implementation Approach:
+• JWT-based stateless authentication
+• Express.js middleware integration
+• Role-based access control
+• Secure token storage recommendations
+
+Estimated Timeline: 15-20 minutes
+
+Proceed with this plan? (y/n)
+```
+
+**User Decisions**:
+- **Y/Yes**: Continue with planned execution
+- **N/No**: Stop and allow task/approach adjustments
+- **Modify**: Request specific changes to approach or scope
+
 ## Guild Configuration Check
 
 First, read Guild instructions and discover available agents for this project:
@@ -267,7 +379,7 @@ Proceeding with main thread fallback execution...
 
 ### Stage Selection & Validation
 1. **Parse Flags**: Analyze command flags to determine stage configuration
-2. **Default Configuration**: Start with reasoning + planning + implementation stages enabled
+2. **Default Configuration**: Start with reasoning + research + planning + implementation stages enabled (4-stage workflow)
 3. **Apply Disable Flags**: Remove stages based on --no-* flags
 4. **Apply Enable Flags**: Add optional stages based on feature flags
 5. **Special Mode Detection**: Handle planning-only and refactor-only modes

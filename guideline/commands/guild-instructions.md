@@ -20,7 +20,9 @@ Configures Guild agent behavior including model assignments, thinking modes, and
 - `--enable-verification [true/false]` - Enable verification stage by default
 - `--enable-research-parallel [true/false]` - Enable parallel research execution
 - `--quality-standard [text]` - Set quality requirements description
-- `--agent-model [agent] [model]` - Set specific agent model (opus/inherit) - Set coordination strategy (hierarchical/flat/hybrid)
+- `--agent-model [agent] [model]` - Set specific agent model (opus/inherit)
+- `--show-plan [true/false]` - Enable plan preview by default (requires confirmation before execution)
+- `--approach-verification [true/false]` - Enable approach verification checkpoint (default: true)
 
 ## Implementation Requirements
 
@@ -64,7 +66,7 @@ The instructions file should contain simple, clear English instructions that all
 Simple instructions that all Guild agents follow.
 
 ## Core Settings
-- Run up to 3 instances of each agent type in parallel
+- Run adaptive 1-3 instances of each agent type based on workload complexity
 - Maximum 20 total agents at once
 - Planning agent uses opus model, others inherit
 - Balance tasks across available agents

@@ -48,11 +48,12 @@ Perform comprehensive project analysis and generate a complete Guild system tail
 ```yaml
 Default: reasoning → research → planning → implementation
 --full: reasoning → research → planning → implementation → testing → verification → refactoring
---fix: reasoning → research → planning → fix stage  
---plan: reasoning → research → planning → save to file
---research: reasoning → research
+--fix: reasoning → approach verification → research → planning → fix stage  
+--plan: reasoning → approach verification → research → planning → save to file
+--research: reasoning → approach verification → research
 --spec: reasoning → spec_analysis → spec_update → research → planning → implementation → validation
---refactor: reasoning → research → refactor-planning → refactoring
+--refactor: reasoning → approach verification → research → refactor-planning → refactoring
+--show-plan: Complete reasoning and planning, then display execution plan for user confirmation
 ```
 
 **Execution Strategies** (Embedded):

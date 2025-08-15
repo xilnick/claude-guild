@@ -1,4 +1,5 @@
 # Agent Framework Module
+**Version**: 2.1.0 | **Last Updated**: 2024-08-14 | **Dependencies**: principles.md
 
 ## Purpose
 Generic agent framework that enables dynamic specialist creation based on project analysis. This module is embedded into the setup command.
@@ -109,10 +110,10 @@ Lock-Free Independence Model:
     - Boundary validation automated at completion checkpoints
     
   conflict_resolution:
-    - Automatic detection of write conflicts through file monitoring
-    - Priority-based resolution (first-come-first-served for equal priority)
-    - Graceful rollback and retry mechanisms for failed operations
-    - Escalation to planning agent for complex conflicts
+    - Follow unified conflict resolution strategy from principles.md
+    - Implement lock-free coordination with optimistic concurrency
+    - Apply automatic prevention through ownership rules
+    - Escalate complex conflicts per defined hierarchy
 
 Intelligent Load Balancing:
   work_estimation_distribution:

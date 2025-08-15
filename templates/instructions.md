@@ -23,8 +23,10 @@ This file is the DEFINITIVE source for all Guild system behavior configuration. 
 - Run dependency-aware project and technology research in parallel
 - Plan tasks before implementation
 - Execute implementation in parallel with intelligent coordination and real-time rebalancing
-- Testing is optional unless explicitly requested
-- Verification is optional unless explicitly requested
+- **DEFAULT**: Testing is OFF (use --test or --full flag to enable)
+- **DEFAULT**: Verification is OFF (use --verify or --full flag to enable)
+- **DEFAULT**: Simple 4-stage workflow (reasoning → research → planning → implementation)
+- **OPTIONAL**: Full 7-stage workflow with --full flag adds testing + verification + refactoring
 
 ## Task Routing Rules
 - Interface work goes to interface specialists

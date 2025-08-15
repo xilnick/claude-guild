@@ -108,7 +108,7 @@ Create `.guild/instructions.md` with:
    - Enhanced concurrency with adaptive 1-3 instances per specialist type, intelligent scaling
 
 2. **Workflow Integration**
-   - Main thread reasoning with dependency-aware parallel research execution
+   - Main thread reasoning with approach verification and dependency-aware parallel research execution
    - Prompt-first pattern detection and analysis
    - Quality standards based on project conventions
 
@@ -162,7 +162,7 @@ This file is the DEFINITIVE source for all Guild system behavior configuration. 
 - Cross-specialization work stealing enables idle agents to assist overloaded specialists
 
 ## Workflow Settings
-- Always start with reasoning in main thread
+- Always start with reasoning and approach verification in main thread
 - Run project and technology research in parallel
 - Plan tasks before implementation
 - Execute implementation in parallel when possible

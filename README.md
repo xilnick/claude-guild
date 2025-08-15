@@ -14,7 +14,7 @@ Claude Guild is a **comprehensive workflow orchestration system** for [Claude Co
 ### Core Purpose
 
 **Transform Development Workflow**: Every task becomes a thorough, multi-stage process:
-- **🧠 Deep Analysis**: Ultrathink reasoning for requirement clarification and edge case identification
+- **🧠 Deep Analysis**: Ultrathink reasoning with approach verification - detects inappropriate technologies and suggests better alternatives
 - **🔍 Context Research**: Intelligent codebase analysis with advanced context engineering
 - **📋 Strategic Planning**: Comprehensive implementation strategy with enhanced parallel execution coordination and dependency analysis
 - **🔨 Specialized Implementation**: Technology-specific engineers with deep domain knowledge
@@ -41,7 +41,7 @@ Claude Guild is a **comprehensive workflow orchestration system** for [Claude Co
 - Limited systematic validation
 
 **With Guild** (Multi-Stage Approach):
-- ✅ **Systematic Requirement Analysis**: Ultrathink reasoning identifies all implications
+- ✅ **Systematic Requirement Analysis**: Ultrathink reasoning with approach verification prevents inappropriate technology choices
 - ✅ **Comprehensive Context Building**: Advanced context engineering with long-context optimization
 - ✅ **Strategic Implementation Planning**: Enhanced parallel execution with dependency-aware coordination and 4-5x speedup
 - ✅ **Technology-Aware Execution**: Domain-specific engineers with deep framework knowledge
@@ -60,10 +60,10 @@ npx claude-guild@latest
 
 **Main Workflow Commands**:
 ```bash
-# Standard multi-stage workflow (Analysis → Research → Planning → Implementation → Validation)
+# Simple 4-stage workflow (Analysis → Research → Planning → Implementation)
 /guild "implement user authentication with JWT"
 
-# Complete development lifecycle (7 stages including testing, verification, refactoring)
+# Optional comprehensive lifecycle (--full flag adds testing, verification, refactoring)
 /guild --full "add real-time notifications system"
 
 # Flag-only specialized modes
@@ -111,10 +111,10 @@ npx claude-guild@latest
 ### Quick Start Commands
 
 ```bash
-# Standard multi-stage workflow (Analysis → Research → Planning → Implementation → Validation)
+# Simple 4-stage workflow (Analysis → Research → Planning → Implementation)
 /guild "implement user authentication with JWT"
 
-# Complete development lifecycle (7 stages including testing, verification, refactoring)
+# Optional comprehensive lifecycle (--full flag adds testing, verification, refactoring)
 /guild --full "add real-time notifications system"
 
 # Initialize system and agents
@@ -125,7 +125,7 @@ npx claude-guild@latest
 ```
 
 ### Essential Flags
-- **--full**: Complete development lifecycle (analysis → research → planning → implementation → testing → verification → refactoring)
+- **--full**: OPTIONAL comprehensive lifecycle (adds testing, verification, refactoring to default 4-stage workflow)
 - **--fix**: Systematic bug fixing with debugging workflow
 - **--plan**: Planning-only mode with optional save to file
 - **--research**: Research-only mode for context gathering
@@ -138,9 +138,9 @@ npx claude-guild@latest
 **The primary workflow command** - executes tasks through systematic multi-stage process:
 
 ```bash
-# Standard 5-stage workflow
+# Simple 4-stage workflow (DEFAULT)
 /guild "implement shopping cart functionality"
-# Executes: Analysis → Research → Planning → Implementation → Validation
+# Executes: Analysis → Research → Planning → Implementation
 
 # Interactive mode (Guild prompts for task)
 /guild
@@ -152,7 +152,7 @@ npx claude-guild@latest
 ```
 
 **Available Flags**:
-- `--full`: Complete 7-stage development lifecycle with testing and refactoring
+- `--full`: OPTIONAL comprehensive lifecycle (adds testing, verification, refactoring to default workflow)
 - `--fix`: Bug fixing mode (when used alone) OR enable fix stage (when combined)
 - `--plan`: Planning-only mode (when used alone) with optional file saving
 - `--research`: Research-only mode (when used alone) for context gathering
@@ -164,6 +164,7 @@ npx claude-guild@latest
 - `--no-reason`: Skip deep analysis stage (faster execution)
 - `--no-plan`: Skip strategic planning stage (direct implementation)
 - `--no-implement`: Legacy planning-only mode (same as `--plan` when used alone)
+- `--show-plan`: Display execution plan preview and require confirmation before starting
 
 ### Specialized Workflow Commands
 

@@ -1,4 +1,5 @@
 # Instructions Template Module
+**Version**: 2.1.0 | **Last Updated**: 2024-08-14 | **Dependencies**: principles.md, agents.md, workflows.md
 
 ## Purpose
 Simple instructions template for Guild system configuration. This module is embedded into the setup command.
@@ -75,3 +76,8 @@ Creates `.guild/instructions.md` with defaults.
 - principles.md (core philosophy)
 - agents.md (agent framework)
 - workflows.md (workflow patterns)
+
+### Module Consumers
+- Setup command (creates .guild/instructions.md)
+- Guild command (reads project configuration)
+- All agents (follow project-specific rules)
