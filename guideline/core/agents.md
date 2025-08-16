@@ -17,19 +17,19 @@ Research Agents:
   thinking_mode: think
   parallel: true (up to 3 instances)
   examples: project analysis, technology research, pattern discovery
-  
+
 Planning Agent:
   purpose: Task decomposition and intelligent routing
   thinking_mode: ultrathink
   parallel: false (single coordinator)
   role: Break down work and route to appropriate specialists
-  
+
 Implementation Specialists:
   purpose: Execute specific areas of work
   thinking_mode: think
   parallel: true (up to 3 per specialization)
   created: Based on project analysis and task requirements
-  
+
 Quality Specialists:
   purpose: Validation, testing, verification when needed
   thinking_mode: think
@@ -46,16 +46,16 @@ Project Analysis:
   2. Identifies areas requiring specialized attention
   3. Determines appropriate specialist types
   4. Creates agents with focused context packages
-  
+
 Specialization Examples:
   # Based on discovered patterns, not hardcoded types
   - Interface patterns → interface specialist
-  - Service patterns → service specialist  
+  - Service patterns → service specialist
   - Data patterns → data specialist
   - Integration patterns → integration specialist
   - Security patterns → security specialist
   - Performance patterns → performance specialist
-  
+
 Context Package Creation:
   - Project-specific patterns and conventions
   - Relevant technology best practices
@@ -76,14 +76,14 @@ Agent Context Package:
   task_requirements: Specific work to accomplish
   integration_points: Boundaries and interfaces with other work
   quality_standards: Expected quality criteria and validation approaches
-  
+
 Agent File Operation Rules:
   1. Check `{project_root}/.guild/ignore.md` patterns before file operations
   2. Exclude matching files from automatic analysis
   3. Skip ignored files during batch modifications
   4. Allow access when user explicitly names ignored files
   5. Report when accessing ignored files by explicit request
-  
+
 Agent Execution:
   1. Analyze provided context package
   2. Understand specific task requirements
@@ -102,13 +102,13 @@ Lock-Free Independence Model:
     - Optimistic locking with conflict detection and rollback
     - Read-only access to project context shared across all instances
     - Write permissions granted exclusively to assigned agent
-    
+
   boundary_management:
     - Clear component boundaries defined upfront in planning
     - Interface contracts established before parallel execution
     - Integration points marked with dependency requirements
     - Boundary validation automated at completion checkpoints
-    
+
   conflict_resolution:
     - Follow unified conflict resolution strategy from principles.md
     - Implement lock-free coordination with optimistic concurrency
@@ -121,13 +121,13 @@ Intelligent Load Balancing:
     - Real-time workload monitoring and rebalancing
     - Affinity-based assignment for related tasks
     - Predictive scaling based on queue depth and complexity
-    
+
   adaptive_scaling:
     - Dynamic instance spawning based on workload patterns
     - Automatic scaling up to limits (3 per type, 20 total)
     - Intelligent work stealing with context transfer optimization
     - Resource monitoring with predictive adjustment algorithms
-    
+
   context_optimization:
     - Shared context packages to minimize duplication
     - Incremental context updates for efficiency
@@ -140,13 +140,13 @@ Advanced Progress Tracking:
     - Performance tracking against estimated completion times
     - Resource utilization monitoring (CPU, memory, I/O)
     - Quality metrics collection for continuous improvement
-    
+
   coordination_protocols:
     - No blocking waits during normal execution
     - Checkpoint-based synchronization for integration points
     - Streaming progress updates for real-time visibility
     - Automated integration validation at completion
-    
+
   quality_coordination:
     - Consistent quality gates applied across all instances
     - Cross-instance quality metric aggregation
@@ -159,7 +159,7 @@ Instance Lifecycle Management:
     - Staggered startup to minimize context transfer overhead
     - Instance health monitoring and automatic replacement
     - Graceful shutdown with work preservation
-    
+
   state_management:
     - Instance state isolation to prevent cross-contamination
     - Shared read-only state for project context
@@ -224,18 +224,18 @@ Instance Creation:
 
 Example Orchestration:
   Task: "Update all API endpoints to add authentication"
-  
+
   Planning Analysis:
     - Found 12 API endpoint files
     - All need same service specialist
     - Files are independent (no shared dependencies)
-  
+
   Execution Plan:
     - Spawn 3 service specialist instances
     - Instance 1: Updates endpoints 1-4
-    - Instance 2: Updates endpoints 5-8  
+    - Instance 2: Updates endpoints 5-8
     - Instance 3: Updates endpoints 9-12
-    
+
   Result: 12 files updated in time of 4 sequential updates
 ```
 
@@ -269,24 +269,24 @@ Advanced Concurrency Limits:
   load_balancing: intelligent task distribution with affinity and complexity awareness
   resource_monitoring: real-time performance tracking with predictive analytics
   context_memory: optimized context sharing to minimize memory overhead
-  
+
 Intelligent Scaling Strategy:
-  predictive_scale_up: 
+  predictive_scale_up:
     - Anticipate capacity needs based on queue analysis
     - Consider task complexity and estimated completion times
     - Spawn instances before bottlenecks occur
-    
+
   graceful_scale_down:
     - Monitor idle time and resource utilization
     - Preserve context for potential reuse
     - Coordinate shutdown to prevent work interruption
-    
+
   cross_specialization_work_stealing:
     - Enable idle specialists to adapt and help overloaded specialists
     - Context transfer protocols for seamless specialist adaptation
     - Capability matching for appropriate task reassignment
     - Quality preservation through supervised adaptation
-    
+
   adaptive_optimization:
     - Real-time performance analysis and adjustment
     - Historical data-driven scaling decisions
@@ -299,13 +299,13 @@ Performance Monitoring Hooks:
     - Resource utilization per instance (CPU, memory, I/O)
     - Context transfer overhead and optimization opportunities
     - Quality metrics and consistency measurements
-    
+
   predictive_analytics:
     - Machine learning models for performance prediction
     - Bottleneck identification and prevention
     - Optimal resource allocation recommendations
     - Quality risk assessment and early warning systems
-    
+
   continuous_optimization:
     - Automatic parameter tuning based on performance data
     - A/B testing of different scaling strategies
@@ -321,13 +321,13 @@ Intelligent Task Distribution:
     - Apply affinity-based assignment for related tasks
     - Consider context overlap and reuse opportunities
     - Balance workload using complexity-aware algorithms
-    
+
   cross_specialization_adaptation:
     - Enable specialists to handle adjacent specialization tasks when idle
     - Provide context adaptation protocols for specialist expansion
     - Maintain quality through supervised cross-specialization
     - Track adaptation success rates for optimization
-    
+
   dynamic_rebalancing:
     - Real-time workload monitoring and redistribution
     - Predictive task assignment based on completion estimates
@@ -340,13 +340,13 @@ Advanced Resource Management:
     - Resource utilization forecasting and optimization
     - Context memory usage monitoring and optimization
     - I/O bandwidth and latency impact assessment
-    
+
   adaptive_scaling:
     - Intelligent instance scaling based on workload patterns
     - Context-aware spawning to minimize overhead
     - Graceful instance termination with state preservation
     - Resource pooling and sharing optimization
-    
+
   context_optimization:
     - Dynamic context package sizing based on task requirements
     - Shared context caching for memory efficiency
@@ -359,13 +359,13 @@ Cross-Specialization Work Stealing:
     - Identify tasks suitable for cross-specialization handling
     - Assess context transfer requirements and overhead
     - Evaluate quality risk and mitigation strategies
-    
+
   stealing_protocols:
     - Idle specialist detection and availability advertising
     - Task complexity assessment for stealing suitability
     - Context transfer and adaptation procedures
     - Quality assurance for cross-specialization work
-    
+
   adaptation_mechanisms:
     - Specialist capability expansion through guided learning
     - Context package enhancement for new specialization areas
@@ -378,13 +378,13 @@ Performance Monitoring Hooks:
     - Resource consumption patterns (CPU, memory, I/O)
     - Context loading and transfer performance
     - Error rates and quality metrics per instance
-    
+
   system_metrics:
     - Overall system throughput and efficiency
     - Agent utilization rates and idle time analysis
     - Cross-specialization success rates and impact
     - Resource contention and bottleneck identification
-    
+
   optimization_triggers:
     - Performance threshold alerts and automated responses
     - Degradation detection with automatic mitigation

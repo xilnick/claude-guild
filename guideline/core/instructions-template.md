@@ -51,11 +51,11 @@ Simple instructions that all Guild agents follow.
 Concurrency:
   --concurrency [N]: Instances per agent type (default: 3)
   --max-agents [N]: Total parallel agents (default: 20)
-  
+
 Quality:
   --enable-testing [true/false]: Enable testing by default
   --enable-verification [true/false]: Enable verification by default
-  
+
 Models:
   --agent-model [agent] [model]: Set specific agent model
 ```

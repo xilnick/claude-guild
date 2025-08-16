@@ -36,11 +36,11 @@ async function validateSystem() {
   // Validate core modules
   console.log('\n📚 Checking core modules...');
   const coreModules = [
-    'system-principles.md',
-    'agent-architecture.md',
-    'workflow-patterns.md',
-    'context-engineering.md',
-    'project-analysis.md'
+    'principles.md',
+    'agents.md',
+    'workflows.md',
+    'parallel.md',
+    'instructions-template.md'
   ];
   
   const coreDir = path.join(__dirname, '..', 'guideline', 'core');
@@ -99,11 +99,11 @@ async function validateSystem() {
       // Check for injection points in setup template
       if (template === 'setup-template.md') {
         const injectionPoints = [
-          '<!-- INJECT:system-principles -->',
-          '<!-- INJECT:agent-architecture -->',
-          '<!-- INJECT:workflow-intelligence -->',
-          '<!-- INJECT:context-engineering -->',
-          '<!-- INJECT:technology-detection -->'
+          '<!-- INJECT:principles -->',
+          '<!-- INJECT:agents -->',
+          '<!-- INJECT:workflows -->',
+          '<!-- INJECT:parallel -->',
+          '<!-- INJECT:instructions-template -->'
         ];
         
         let hasAllInjections = true;

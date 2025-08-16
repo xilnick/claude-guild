@@ -1,6 +1,6 @@
 {
   "name": "claude-guild",
-  "version": "1.1.0",
+  "version": "2.2.0",
   "description": "Comprehensive workflow integration for Claude Code via custom commands with intelligent parallel agent execution and dependency analysis",
   "main": "install.js",
   "bin": {

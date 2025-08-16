@@ -37,13 +37,13 @@ Advanced Detection Patterns:
     - Files sharing common dependencies or imports
     - Components within same domain/feature area
     - Files with similar complexity characteristics
-  
+
   component_affinity_patterns:
     - Independent components requiring same specialist
     - Related UI components (List/Card/Detail patterns)
     - Service layer components with shared patterns
     - Data models with similar structure
-    
+
   operation_affinity_patterns:
     - Batch operations on similar code patterns
     - Parallel test creation for related modules
@@ -64,17 +64,17 @@ Affinity-Based Task Grouping:
     - Group tasks by business domain (user, product, order)
     - Assign domain-related tasks to same instance
     - Benefits: Domain expertise accumulation, consistent patterns
-    
+
   technical_affinity:
     - Group by file type or technology (.tsx, .service.ts, .test.ts)
     - Assign similar technical patterns to same instance
     - Benefits: Technical specialization, optimized tooling usage
-    
+
   dependency_affinity:
     - Group files sharing common imports or dependencies
     - Assign interdependent components to same instance
     - Benefits: Reduced context switching, better integration awareness
-    
+
   complexity_affinity:
     - Group tasks by estimated complexity level
     - Assign similar complexity tasks to specialized instances
@@ -85,7 +85,7 @@ Affinity-Based Task Grouping:
 ```yaml
 Example 1 - Interface Specialist (3 instances):
   Instance 1: Updates UserList.tsx, UserCard.tsx
-  Instance 2: Updates ProductList.tsx, ProductCard.tsx  
+  Instance 2: Updates ProductList.tsx, ProductCard.tsx
   Instance 3: Updates OrderList.tsx, OrderCard.tsx
   Result: 3x faster than sequential processing
 
@@ -110,7 +110,7 @@ Work Estimation-Based Distribution:
     - Number of dependencies and imports
     - Pattern complexity (regex, loops, conditionals)
     - Historical completion times for similar tasks
-    
+
   estimation_formula:
     base_time = file_size_factor * complexity_multiplier
     adjusted_time = base_time * (1 + dependency_factor)
@@ -127,10 +127,10 @@ Intelligent Distribution Logic:
     {file: "file6.ts", estimated_time: 6min, complexity: "high"},
     {file: "file7.ts", estimated_time: 2min, complexity: "low"}
   ]
-  
+
   # Optimal distribution for 3 agents (total: 30min → 10min each)
   Agent 1: [file3.ts(8min), file7.ts(2min)] = 10min
-  Agent 2: [file6.ts(6min), file4.ts(3min)] = 9min  
+  Agent 2: [file6.ts(6min), file4.ts(3min)] = 9min
   Agent 3: [file1.ts(5min), file5.ts(4min), file2.ts(2min)] = 11min
 
 Affinity-Based Assignment:
@@ -140,7 +140,7 @@ Affinity-Based Assignment:
     - Similar complexity → same agent (complex files to specialized agent)
     - Related components → same agent (UserList, UserCard to same agent)
     - Shared dependencies → same agent (files importing same modules)
-  
+
   benefits:
     - Reduced context switching overhead
     - Better pattern recognition and consistency
@@ -203,12 +203,12 @@ Predictive Scaling Strategy:
   - Start with 1 instance, scale to 3 based on workload
   - Scale up on queue depth and complexity
   - Scale down when agents idle for extended periods
-    
+
   scale_up_triggers:
     - Queue depth > 5 tasks with high complexity
     - Average wait time > 2x estimated task completion time
     - Agent utilization > 85% for sustained period
-    
+
   scale_down_triggers:
     - Agent idle > 30% of time for 5+ minutes
     - Queue depth < 2 tasks for sustained period
@@ -219,7 +219,7 @@ Enhanced Work Stealing:
     - Idle specialists can adapt to help overloaded specialists
     - Context transfer protocols for seamless handoffs
     - Priority-based task redistribution
-    
+
   intelligent_redistribution:
     - Consider task complexity and agent capability
     - Minimize context switching overhead
@@ -231,7 +231,7 @@ Real-Time Performance Optimization:
     - Monitor resource usage patterns (CPU, memory, I/O)
     - Analyze bottleneck patterns across different project types
     - Measure context transfer and startup overhead
-  
+
   adaptive_algorithms:
     - Machine learning from historical performance data
     - Dynamic adjustment of complexity multipliers
@@ -295,13 +295,13 @@ Multi-Dimensional Assessment:
     - Dependency graph analysis and coupling measurement
     - File type distribution and pattern complexity
     - Historical performance data from similar projects
-    
+
   resource_analysis:
     - Available system resources (CPU, memory, I/O)
     - Network latency and bandwidth constraints
     - Context window utilization and memory pressure
     - Agent spawn/teardown overhead measurements
-    
+
   task_analysis:
     - Task interdependency mapping and critical path analysis
     - Complexity scoring using multiple factors
@@ -315,13 +315,13 @@ Predictive Scaling Algorithms:
       - Task characteristics (type, dependencies, scope)
       - Historical performance metrics
       - Resource availability and constraints
-    
+
     prediction_outputs:
       - Optimal instance count per specialist type
       - Expected completion times and resource usage
       - Bottleneck probability and mitigation strategies
       - Quality risk assessment and validation needs
-  
+
   dynamic_scaling_rules:
     conservative_start: Begin with 1 instance, scale based on queue depth
     aggressive_scale: Rapidly spawn instances when high parallelization potential detected
@@ -332,19 +332,19 @@ Enhanced Complexity-Based Scaling:
   nano_projects: Single-agent execution (1 agent)
     characteristics: <10 files, minimal dependencies, simple patterns
     strategy: Sequential execution with minimal overhead
-    
+
   simple_projects: Conservative parallelization (2-3 agents)
     characteristics: 10-100 files, low coupling, standard patterns
     strategy: Basic parallel execution with simple coordination
-    
+
   medium_projects: Intelligent parallelization (4-8 agents)
     characteristics: 100-500 files, moderate coupling, mixed complexity
     strategy: Affinity-based grouping with predictive scaling
-    
+
   large_projects: Aggressive parallelization (8-15 agents)
     characteristics: 500-2000 files, high coupling, complex patterns
     strategy: Advanced coordination with machine learning optimization
-    
+
   enterprise_projects: Maximum parallelization (15-20 agents)
     characteristics: >2000 files, complex architecture, multiple domains
     strategy: Domain-based parallelization with sophisticated coordination
@@ -355,7 +355,7 @@ Real-Time Performance Optimization:
     - Pattern recognition for optimization opportunities
     - Automatic adjustment of scaling parameters
     - Performance regression detection and correction
-    
+
   predictive_optimization:
     - Resource usage forecasting and preemptive scaling
     - Bottleneck prediction and proactive mitigation
@@ -394,13 +394,13 @@ Efficiency Metrics:
   load_balancing: >85% agent utilization efficiency
   coordination_overhead: <5% of total execution time
   resource_utilization: 60-75% average CPU across agents
-  
+
 Speedup Expectations:
   research_phase: 3-5x through parallel context gathering
   planning_phase: 2-3x through distributed analysis
   implementation_phase: 4-6x through specialist parallelization
   validation_phase: 5-10x through parallel quality assessment
-  
+
 Overall Performance:
   simple_projects: 40% faster through basic parallelization
   medium_projects: 60% faster through intelligent load balancing
