@@ -1,7 +1,7 @@
 # /guild:ignore Command Specification
 
 ## Overview
-Manages soft ignore patterns for Guild agents by maintaining a `.guild/ignore.md` file. This file works like .gitignore but implements "soft ignore" behavior - files matching patterns are ignored during normal Guild operations but can still be accessed when explicitly requested by the user.
+Manages soft ignore patterns for Guild agents by maintaining a `{project_root}/.guild/ignore.md` file. This file works like .gitignore but implements "soft ignore" behavior - files matching patterns are ignored during normal Guild operations but can still be accessed when explicitly requested by the user.
 
 ## Command Interface
 
@@ -20,7 +20,7 @@ Manages soft ignore patterns for Guild agents by maintaining a `.guild/ignore.md
 
 ### File Management
 ```yaml
-Location: .guild/ignore.md
+Location: {project_root}/.guild/ignore.md
 Format: Markdown with structured pattern list
 Updates: Immediate effect on all Guild operations
 
@@ -51,7 +51,7 @@ Structure:
 Core System Files:
   - .claude/
   - CLAUDE.md
-  - .guild/
+  - {project_root}/.guild/
   - .serena/
   - .env*
   - .git/
@@ -88,7 +88,7 @@ Override Mechanism:
 #### Integration Points
 ```yaml
 Agent Integration:
-  - Read .guild/ignore.md on initialization
+  - Read {project_root}/.guild/ignore.md on initialization
   - Apply patterns to all file operations
   - Log when patterns are applied
   - Report when override occurs
@@ -104,7 +104,7 @@ Command Integration:
 ### List Patterns
 ```yaml
 Process:
-  1. Check if .guild/ignore.md exists
+  1. Check if {project_root}/.guild/ignore.md exists
   2. If not, create with defaults
   3. Parse and display patterns
   4. Show pattern count and status
@@ -125,7 +125,7 @@ Output Format:
 Process:
   1. Validate pattern syntax
   2. Check for duplicates
-  3. Add to .guild/ignore.md
+  3. Add to {project_root}/.guild/ignore.md
   4. Sort patterns for consistency
   5. Confirm addition
 
@@ -157,7 +157,7 @@ Process:
   1. Confirm reset action
   2. Restore default patterns
   3. Add technology-specific patterns
-  4. Save to .guild/ignore.md
+  4. Save to {project_root}/.guild/ignore.md
   5. Report changes
 
 Defaults Include:
@@ -171,7 +171,7 @@ Defaults Include:
 ### Common Errors
 ```yaml
 File Not Found:
-  - Create .guild/ignore.md with defaults
+  - Create {project_root}/.guild/ignore.md with defaults
   - Continue with operation
   
 Invalid Pattern:
@@ -222,7 +222,7 @@ Examples:
 ## Integration Requirements
 
 ### Guild System Compliance
-- Follow system rules in .guild/overview.md
+- Follow system rules in {project_root}/.guild/overview.md
 - Maintain consistency with other commands
 - Respect agent boundaries
 - Preserve user overrides

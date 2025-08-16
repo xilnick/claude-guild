@@ -310,9 +310,10 @@ Agent Context Engineering:
 ### Step 2: Dynamic Agent Generation with Embedded Intelligence
 
 **CRITICAL DIRECTORY SETUP**: Execute in sequence:
-1. **Create directory**: Use Bash `mkdir -p .claude/agents/guild`
-2. **Verify creation**: Use LS tool to confirm `.claude/agents/guild/` exists
-3. **Generate agents**: All agents MUST be created in `.claude/agents/guild/` subdirectory
+1. **Determine project root**: Use Bash `PROJECT_ROOT=$(git rev-parse --show-toplevel 2>/dev/null || pwd)`
+2. **Create directory**: Use Bash `mkdir -p "$PROJECT_ROOT/.claude/agents/guild"`
+3. **Verify creation**: Use LS tool to confirm `$PROJECT_ROOT/.claude/agents/guild/` exists
+4. **Generate agents**: All agents MUST be created in `$PROJECT_ROOT/.claude/agents/guild/` subdirectory
 
 **Dynamic Agent Generation Strategy**:
 1. **Project Pattern Analysis**: Examine project structure for specialization areas
@@ -325,13 +326,13 @@ Agent Context Engineering:
 - Core context agents with comprehensive project understanding
 - Dynamically created specialists based on detected patterns
 - All agents configured with optimal thinking modes and concurrency settings
-- **MANDATORY**: All Guild agents created in `.claude/agents/guild/` subdirectory for proper namespace isolation
+- **MANDATORY**: All Guild agents created in `$PROJECT_ROOT/.claude/agents/guild/` subdirectory for proper namespace isolation
 
 ### Step 3: Create Guild System Configuration
 
 **CRITICAL**: Create configuration files that Guild command will recognize:
 
-1. **Create `.guild/overview.md`** (Primary setup completion indicator):
+1. **Create `$PROJECT_ROOT/.guild/overview.md`** (Primary setup completion indicator):
 
 ```markdown
 # Guild System Overview
@@ -343,7 +344,7 @@ Agent Context Engineering:
 
 ## Generated Agents
 
-**Location**: `.claude/agents/guild/`
+**Location**: `$PROJECT_ROOT/.claude/agents/guild/`
 
 ### Context Generation Agents
 - guild-planning-agent: Strategic workflow coordination and task orchestration
@@ -366,17 +367,17 @@ Agent Context Engineering:
 ## Usage
 
 Primary command: `/guild "your task"`  
-Configuration: Edit `.guild/instructions.md` for project-specific rules  
-Ignore patterns: Manage via `.guild/ignore.md`  
+Configuration: Edit `$PROJECT_ROOT/.guild/instructions.md` for project-specific rules  
+Ignore patterns: Manage via `$PROJECT_ROOT/.guild/ignore.md`  
 
 ## Next Steps
 
 1. Try: `/guild "simple task"` to test basic workflow
 2. Use: `/guild --full "complex task"` for comprehensive development
-3. Customize: Edit `.guild/instructions.md` for your project needs
+3. Customize: Edit `$PROJECT_ROOT/.guild/instructions.md` for your project needs
 ```
 
-2. **Create `.guild/instructions.md`** with pre-filled default settings:
+2. **Create `$PROJECT_ROOT/.guild/instructions.md`** with pre-filled default settings:
 
 ```markdown
 # Guild System Instructions
@@ -441,7 +442,7 @@ These are simple instructions that all Guild agents and commands follow.
 [Add your project-specific instructions here]
 ```
 
-3. **Create `.guild/ignore.md`** (Soft ignore patterns):
+3. **Create `$PROJECT_ROOT/.guild/ignore.md`** (Soft ignore patterns):
 
 ```markdown
 # Guild Ignore Patterns
@@ -477,7 +478,7 @@ venv/
 [Add patterns specific to your project here]
 ```
 
-**Generated Configuration** (in .guild/):
+**Generated Configuration** (in $PROJECT_ROOT/.guild/):
 - **overview.md**: Primary setup completion indicator with system summary and agent inventory
 - **instructions.md**: Simple, pre-filled default settings that can be easily modified  
 - **ignore.md**: Technology-appropriate and project-specific exclusion patterns

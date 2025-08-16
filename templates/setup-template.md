@@ -48,7 +48,7 @@ Perform comprehensive project analysis and generate a complete Guild system tail
 
 ### Phase 2: Agent Generation
 
-**MANDATORY DIRECTORY**: All Guild agents MUST be created in `.claude/agents/guild/` subdirectory.
+**MANDATORY DIRECTORY**: All Guild agents MUST be created in `$PROJECT_ROOT/.claude/agents/guild/` subdirectory.
 
 Generate specialized agents using prompt-first pattern detection and dynamic analysis:
 
@@ -100,7 +100,7 @@ guild-quality-specialist.md:
 
 ### Phase 3: Instructions File Creation
 
-Create `.guild/instructions.md` with:
+Create `$PROJECT_ROOT/.guild/instructions.md` with:
 
 1. **Agent Specialization Configuration**
    - Detected technology patterns and specialist routing rules
@@ -119,16 +119,16 @@ Create `.guild/instructions.md` with:
 
 ### Phase 4: Validation & Completion
 
-1. **Verify Agent Placement**: Confirm all agents created in `.claude/agents/guild/` directory
+1. **Verify Agent Placement**: Confirm all agents created in `$PROJECT_ROOT/.claude/agents/guild/` directory
 2. **Test Context Flow**: Validate XML handoff protocols
 3. **Integration Check**: Ensure seamless integration with existing project workflows
 
 ## Success Criteria
 
-- ✅ All Guild agents created in `.claude/agents/guild/` directory (MANDATORY)
+- ✅ All Guild agents created in `$PROJECT_ROOT/.claude/agents/guild/` directory (MANDATORY)
 - ✅ Context-only agents properly configured with enhanced thinking modes
 - ✅ Implementation agents configured with appropriate execution modes
-- ✅ Project-specific instructions created in `.guild/instructions.md`
+- ✅ Project-specific instructions created in `$PROJECT_ROOT/.guild/instructions.md`
 - ✅ XML-based context engineering protocols established
 - ✅ Zero external dependencies - complete self-contained operation
 

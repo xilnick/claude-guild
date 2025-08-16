@@ -78,7 +78,7 @@ Agent Context Package:
   quality_standards: Expected quality criteria and validation approaches
   
 Agent File Operation Rules:
-  1. Check `.guild/ignore.md` patterns before file operations
+  1. Check `{project_root}/.guild/ignore.md` patterns before file operations
   2. Exclude matching files from automatic analysis
   3. Skip ignored files during batch modifications
   4. Allow access when user explicitly names ignored files

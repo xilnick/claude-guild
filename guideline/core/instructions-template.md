@@ -8,7 +8,7 @@ Simple instructions template for Guild system configuration. This module is embe
 
 ### Default Instructions Template
 
-**Location**: `.guild/instructions.md`
+**Location**: `{project_root}/.guild/instructions.md`
 
 ```markdown
 # Guild System Instructions
@@ -70,7 +70,7 @@ Models:
 ## Integration Points
 
 ### Setup Command
-Creates `.guild/instructions.md` with defaults.
+Creates `{project_root}/.guild/instructions.md` with defaults.
 
 ### Module Dependencies
 - principles.md (core philosophy)
@@ -78,6 +78,6 @@ Creates `.guild/instructions.md` with defaults.
 - workflows.md (workflow patterns)
 
 ### Module Consumers
-- Setup command (creates .guild/instructions.md)
+- Setup command (creates {project_root}/.guild/instructions.md)
 - Guild command (reads project configuration)
 - All agents (follow project-specific rules)

@@ -1,7 +1,7 @@
 # /guild:instructions Command Specification
 
 ## Overview
-Configures Guild agent behavior including model assignments, thinking modes, and project-specific instructions. Manages structured project configuration in `.guild/instructions.md`.
+Configures Guild agent behavior including model assignments, thinking modes, and project-specific instructions. Manages structured project configuration in `{project_root}/.guild/instructions.md`.
 
 ## Command Interface
 
@@ -28,7 +28,7 @@ Configures Guild agent behavior including model assignments, thinking modes, and
 
 ### File Management
 ```yaml
-Location: .guild/instructions.md
+Location: {project_root}/.guild/instructions.md
 Format: Simple English instructions with clear sections
 Updates: Read by all commands and applied immediately
 
@@ -124,7 +124,7 @@ Basic Settings:
 ### Display Configuration
 ```yaml
 Process:
-  1. Check .guild/instructions.md exists
+  1. Check {project_root}/.guild/instructions.md exists
   2. Parse structured sections
   3. Format for display
   4. Show all configurations
@@ -177,7 +177,7 @@ Basic Options:
 Simple Approach:
   - Parse instruction or configuration change
   - Validate against system capabilities
-  - Apply change to .guild/instructions.md
+  - Apply change to {project_root}/.guild/instructions.md
   - Confirm successful update
 
 Configuration Rules:
@@ -221,7 +221,7 @@ Response:
 ### System Compliance
 ```yaml
 Requirements:
-  - Follow .guild/overview.md rules
+  - Follow {project_root}/.guild/overview.md rules
   - Maintain agent boundaries
   - Respect workflow stages
   - Preserve system integrity

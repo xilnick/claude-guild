@@ -69,7 +69,7 @@ Agent Intelligence:
 ### Soft Ignore Pattern Respect
 
 **Ignore File Management**:
-- Guild maintains `.guild/ignore.md` with gitignore-like patterns
+- Guild maintains `{project_root}/.guild/ignore.md` with gitignore-like patterns
 - Files matching patterns are soft-ignored during normal operations
 - Explicit user requests override ignore patterns
 - Agents must check patterns before file operations
