@@ -1,5 +1,5 @@
 # Core Principles Module
-**Version**: 2.1.0 | **Last Updated**: 2024-08-14 | **Dependencies**: None
+**Version**: 2.2.0 | **Last Updated**: 2025-08-16 | **Dependencies**: None
 
 ## Purpose
 Fundamental principles that guide all Guild system behavior. This module is embedded into the setup command.
@@ -90,40 +90,20 @@ Agent Intelligence:
 
 ## Unified Conflict Resolution Strategy
 
-**Core Principles**:
-- **Prevention First**: Use ownership rules and boundary definitions to prevent conflicts
-- **Optimistic Concurrency**: Allow parallel work with rollback mechanisms
+**Simple Coordination Principles**:
+- **Prevention First**: File ownership prevents most conflicts
+- **Optimistic Execution**: Work in parallel with rollback capability
 - **Graceful Degradation**: Continue with partial success when conflicts occur
-- **Clear Escalation**: Well-defined paths for human intervention
 
-**Resolution Hierarchy**:
+**Resolution Strategy**:
 ```yaml
-1. Automatic Prevention:
-   - File-level ownership assignment
-   - Clear component boundaries
-   - Dependency analysis and scheduling
-
-2. Real-Time Detection:
-   - Monitor file and resource conflicts
-   - Track integration boundary violations
-   - Identify dependency resolution issues
-
-3. Automatic Resolution:
-   - Simple conflicts resolved via priority rules
-   - Optimistic rollback and retry mechanisms
-   - Work redistribution for load balancing
-
-4. Manual Escalation:
-   - Complex conflicts requiring human decision
-   - Integration failures beyond automatic resolution
-   - Quality issues requiring review
+Prevention: File-level ownership assignment and clear boundaries
+Detection: Monitor file conflicts and integration violations
+Resolution: Priority-based resolution with rollback and retry
+Escalation: Human intervention for complex conflicts
 ```
 
-**Implementation Strategy**:
-- Lock-free coordination with conflict detection
-- Priority-based resolution (first-come-first-served for equal priority)
-- Context preservation during rollback operations
-- Clear reporting of resolution actions taken
+**Implementation**: Lock-free coordination with simple priority rules and clear conflict reporting
 
 ## Integration Points
 

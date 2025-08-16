@@ -1,5 +1,5 @@
 # Agent Framework Module
-**Version**: 2.1.0 | **Last Updated**: 2024-08-14 | **Dependencies**: principles.md
+**Version**: 2.2.0 | **Last Updated**: 2025-08-16 | **Dependencies**: principles.md
 
 ## Purpose
 Generic agent framework that enables dynamic specialist creation based on project analysis. This module is embedded into the setup command.
@@ -239,64 +239,24 @@ Example Orchestration:
   Result: 12 files updated in time of 4 sequential updates
 ```
 
-**Enhanced Instance Coordination**:
+**Smart Instance Coordination**:
 ```yaml
-Advanced Coordination Rules:
-  instance_identification:
-    - Each instance gets unique ID with role suffix (e.g., service-specialist-1, service-specialist-2)
-    - Instance capabilities and specialization context clearly defined
-    - Performance history and affinity patterns tracked per instance
-    - Health status and availability monitoring for each instance
-    
-  conflict_prevention:
-    - File-level ownership assignment with atomic operations
-    - Dependency analysis to prevent circular dependencies
-    - Resource locking protocols for shared dependencies
-    - Optimistic concurrency with rollback mechanisms
-    
-  context_management:
-    - Shared read access to immutable project context
-    - Independent write access to assigned files with versioning
-    - Context updates propagated efficiently across instances
-    - Memory-efficient context sharing to prevent duplication
+Instance Management:
+  - Unique instance IDs (e.g., service-specialist-1, service-specialist-2)
+  - File-level ownership assignment prevents conflicts
+  - Shared read access to project context, independent write access
+  - Memory-efficient context sharing
 
-Smart Task Assignment:
-  affinity_based_assignment:
-    - Assign related files to same instance for context reuse
-    - Group files by domain, complexity, or technical patterns
-    - Consider dependency graphs in assignment decisions
-    - Optimize for minimal context switching overhead
-    
-  dynamic_rebalancing:
-    - Real-time monitoring of instance workload and progress
-    - Automatic task redistribution when imbalances detected
-    - Work stealing protocols for idle instances
-    - Priority-based task migration for urgent changes
-    
-  quality_coordination:
-    - Cross-instance consistency checking and validation
-    - Shared quality standards and validation protocols
-    - Automated integration testing at coordination points
-    - Quality metric aggregation and reporting
+Task Assignment:
+  - Affinity-based grouping (related files to same instance)
+  - Dynamic rebalancing based on workload
+  - Work stealing protocols for idle instances
+  - Quality coordination across all instances
 
-Communication Protocols:
-  progress_reporting:
-    - Asynchronous progress updates with detailed metrics
-    - Real-time status broadcasting for coordination awareness
-    - Milestone-based synchronization for integration points
-    - Performance data collection for optimization
-    
-  coordination_messaging:
-    - Event-driven communication for state changes
-    - Resource availability announcements for work stealing
-    - Error and exception propagation across instances
-    - Completion notifications with integration metadata
-    
-  orchestrator_interface:
-    - Centralized coordination through planning agent
-    - Load balancing decisions based on real-time data
-    - Conflict resolution and escalation protocols
-    - Resource allocation and optimization management
+Communication:
+  - Asynchronous progress reporting
+  - Event-driven coordination messaging
+  - Centralized coordination through planning agent
 ```
 
 ## Concurrency and Load Balancing

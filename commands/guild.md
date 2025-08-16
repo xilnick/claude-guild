@@ -6,19 +6,15 @@
 
 **Purpose**: Execute any task with Guild's comprehensive multi-stage workflow system using project-specific agents dynamically discovered at runtime.
 
-## ⚠️ MANDATORY AGENT ORCHESTRATION REQUIREMENT
+## ⚠️ MANDATORY AGENT ORCHESTRATION
 
-**CRITICAL**: Guild operates through COMPLETE AGENT DELEGATION. The main thread performs ONLY reasoning - ALL other work MUST be delegated to agents.
+**CRITICAL**: Guild operates through complete agent delegation. Main thread performs ONLY reasoning - all other work delegated to agents.
 
-**ORCHESTRATION PRINCIPLES**:
-1. **Main Thread = Reasoning ONLY**: Uses ultrathink for prompt analysis, then orchestrates agents
-2. **Everything Else = Agent Execution**: Research, planning, implementation, validation ALL through agents
-3. **Maximum Parallelization**: Execute agents asynchronously whenever possible
-4. **No Direct Execution**: Main thread NEVER executes implementation, only coordinates
-5. **General-Purpose Agents**: Use for non-specialized async tasks
-6. **100% Agent Utilization**: Every non-reasoning task MUST go through an agent
-
-**COMPLIANCE**: This is MANDATORY for prompt-first, agent-orchestrated architecture.
+**KEY PRINCIPLES**:
+- Main thread: Reasoning and coordination only
+- All work: Research, planning, implementation through agents
+- Maximum parallelization whenever possible
+- 100% agent utilization for non-reasoning tasks
 
 ## Workflow Stage System
 

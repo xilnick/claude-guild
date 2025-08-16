@@ -15,15 +15,15 @@ Perform comprehensive project analysis and generate a complete Guild system tail
 
 ## Embedded Guild Intelligence
 
-<!-- INJECT:system-principles -->
+<!-- INJECT:principles -->
 
-<!-- INJECT:agent-architecture -->
+<!-- INJECT:agents -->
 
-<!-- INJECT:workflow-intelligence -->
+<!-- INJECT:workflows -->
 
-<!-- INJECT:context-engineering -->
+<!-- INJECT:parallel -->
 
-<!-- INJECT:technology-detection -->
+<!-- INJECT:instructions-template -->
 
 ## Execution Protocol
 

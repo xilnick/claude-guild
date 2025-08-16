@@ -1,5 +1,5 @@
 # Parallel Execution Module
-**Version**: 2.1.0 | **Last Updated**: 2024-08-14 | **Dependencies**: principles.md, agents.md, workflows.md
+**Version**: 2.2.0 | **Last Updated**: 2025-08-16 | **Dependencies**: principles.md, agents.md, workflows.md
 
 ## Purpose
 Essential parallel execution strategies for efficient Guild system performance. This module is embedded into the setup command.
@@ -193,18 +193,16 @@ Benefits: 5-10x speedup in validation phases
 
 **Enhanced Automatic Distribution**:
 ```yaml
-Intelligent Task Routing:
+Task Routing:
   - Route tasks to most appropriate specialist type
-  - Balance workload across available instances using work estimation
-  - Prefer agents with relevant context and capacity
+  - Balance workload using work estimation
   - Apply affinity-based routing for related tasks
-  - Avoid overloading any single agent or specialization
+  - Avoid overloading any single specialist
 
 Predictive Scaling Strategy:
-  adaptive_spawning:
-    - Start with 1 instance, scale to 3 as workload increases
-    - Spawn instances based on queue depth and complexity analysis
-    - Consider context transfer overhead in scaling decisions
+  - Start with 1 instance, scale to 3 based on workload
+  - Scale up on queue depth and complexity
+  - Scale down when agents idle for extended periods
     
   scale_up_triggers:
     - Queue depth > 5 tasks with high complexity

@@ -31,18 +31,17 @@ Manage structured project instructions and configuration options in `.guild/inst
 
 ## Guild System Compliance
 
-**CRITICAL COMPLIANCE REQUIREMENTS**: Guild instructions management MUST operate within Guild system architecture:
+Guild instructions management operates within the Guild system architecture:
 
-#### System Integration
-1. **Follow Guild system rules defined in .guild/overview.md** for instruction management and agent configuration protocols
-2. **Guild System Authority**: Reference .guild/overview.md as master authority for all Guild system compliance requirements and workflow definitions
-3. **Configuration Consistency**: Ensure instructions align with Guild system architecture and agent requirements defined in system overview
+**System Integration**:
+- Follow Guild system rules defined in .guild/overview.md
+- Ensure configuration consistency with Guild architecture
+- All agents follow instructions in .guild/instructions.md
 
-#### Agent Integration
-- **Agent Compliance**: All agents MUST follow instructions defined in .guild/instructions.md as mandated by .guild/overview.md
-- **Model Specifications**: Planning agents and other model assignments must follow Guild system requirements
-- **Workflow Integration**: Instructions must integrate with Guild workflow stages and coordination patterns
-- **Master Reference System**: All instruction management operations must respect .guild/overview.md as central authority
+**Agent Integration**:
+- Instructions influence agent behavior and workflows
+- Model specifications follow Guild requirements
+- Integration with Guild workflow stages
 
 ## Usage Modes
 

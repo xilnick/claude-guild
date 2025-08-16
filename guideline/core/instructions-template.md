@@ -1,5 +1,5 @@
 # Instructions Template Module
-**Version**: 2.1.0 | **Last Updated**: 2024-08-14 | **Dependencies**: principles.md, agents.md, workflows.md
+**Version**: 2.2.0 | **Last Updated**: 2025-08-16 | **Dependencies**: principles.md, agents.md, workflows.md
 
 ## Purpose
 Simple instructions template for Guild system configuration. This module is embedded into the setup command.

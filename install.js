@@ -640,14 +640,14 @@ async function composeSetupCommand(coreModules) {
     template = generateFallbackTemplate();
   }
   
-  // Inject core modules into template with new simplified names
-  template = template.replace(/<!-- INJECT:system-principles -->/g, 
+  // Inject core modules into template
+  template = template.replace(/<!-- INJECT:principles -->/g, 
     coreModules['principles'] || '');
-  template = template.replace(/<!-- INJECT:agent-architecture -->/g,
+  template = template.replace(/<!-- INJECT:agents -->/g,
     coreModules['agents'] || '');
-  template = template.replace(/<!-- INJECT:workflow-intelligence -->/g,
+  template = template.replace(/<!-- INJECT:workflows -->/g,
     coreModules['workflows'] || '');
-  template = template.replace(/<!-- INJECT:parallel-execution -->/g,
+  template = template.replace(/<!-- INJECT:parallel -->/g,
     coreModules['parallel'] || '');
   template = template.replace(/<!-- INJECT:instructions-template -->/g,
     coreModules['instructions-template'] || '');

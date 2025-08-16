@@ -1,5 +1,5 @@
 # Workflow Patterns Module
-**Version**: 2.1.0 | **Last Updated**: 2024-08-14 | **Dependencies**: principles.md, agents.md
+**Version**: 2.2.0 | **Last Updated**: 2025-08-16 | **Dependencies**: principles.md, agents.md
 
 ## Purpose
 Essential workflow patterns for Guild system execution. This module is embedded into the setup command.
@@ -165,40 +165,17 @@ Implementation Stage:
   purpose: Execute decomposed tasks independently with task distribution
   output: Completed implementations with integration validation
   
-  Advanced Task Decomposition Example:
+  Task Decomposition Example:
     Request: "Add error handling to all service methods"
     
-    Dependency Analysis Output:
-      - 15 service files identified with dependency mapping
-      - Core services (user.service.ts) → dependent services (order.service.ts)
-      - Shared utilities (error-handler.ts) → all service files
-      - 3 independent clusters identified for parallel execution
-      
-    Dependency Graph:
-      Cluster 1: [user.service.ts, profile.service.ts, auth.service.ts] (independent)
-      Cluster 2: [product.service.ts, inventory.service.ts, catalog.service.ts] (independent)  
-      Cluster 3: [order.service.ts, payment.service.ts, shipping.service.ts] (depends on user/product)
-      Foundation: [error-handler.ts, base.service.ts] (must complete first)
+    Analysis: 15 service files → 3 clusters (independent, dependent, foundation)
     
-    Optimized Execution Plan:
-      Phase 1 (Parallel): Create shared error handling utilities
-        - 1 infrastructure specialist creates base error handling
-        - Duration: 3 minutes
-        
-      Phase 2 (Parallel): Update independent service clusters
-        - Agent 1: Updates Cluster 1 services (3 files)
-        - Agent 2: Updates Cluster 2 services (3 files)
-        - Duration: 6 minutes
-        
-      Phase 3 (Parallel): Update dependent services
-        - Agent 3: Updates Cluster 3 services (3 files)
-        - Agents 1&2: Update remaining independent services (6 files)
-        - Duration: 4 minutes
+    Execution Plan:
+      Phase 1: Create shared utilities (3 min)
+      Phase 2: Update independent clusters in parallel (6 min)  
+      Phase 3: Update dependent services (4 min)
     
-    Performance Comparison:
-      Sequential: 15 files × 2 min = 30 minutes
-      Dependency-Aware Parallel: 3 + 6 + 4 = 13 minutes  
-      Speedup: 2.3x (vs 3x naive parallel with dependency conflicts)
+    Result: 13 minutes vs 30 minutes sequential (2.3x speedup)
   
 Validation Stages (optional):
   testing: Create and run tests when complexity requires validation
