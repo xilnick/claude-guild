@@ -98,6 +98,74 @@ guild-quality-specialist.md:
   specialization: Detected testing patterns and quality standards
 ```
 
+#### Parallel Execution Intelligence Integration
+
+**CRITICAL**: All generated agents MUST include parallel execution capabilities using embedded intelligence.
+
+**Agent Parallel Execution Configuration**:
+```yaml
+# Each specialist agent receives parallel execution context:
+parallel_capabilities:
+  max_instances: 3 per agent type
+  instance_spawning_triggers:
+    - 3+ independent tasks of same pattern
+    - Multiple files requiring same specialist
+    - Batch operations on similar components
+  
+  task_distribution_strategies:
+    - Affinity-based grouping (domain, technical, dependency)
+    - Complexity-based work balancing
+    - Round-robin fallback for even distribution
+  
+  coordination_protocols:
+    - File-level ownership for conflict prevention
+    - Asynchronous progress reporting
+    - Result aggregation and integration validation
+    - Cross-specialization work stealing when capacity available
+
+# Parallel execution patterns embedded in agent instructions:
+parallel_execution_patterns:
+  detection: "When multiple independent tasks require your specialization..."
+  spawning: "Use Task tool to create up to 3 instances with clear assignments..."
+  distribution: "Distribute work using affinity grouping or complexity balancing..."
+  coordination: "Maintain file ownership, report progress, aggregate results..."
+```
+
+**Agent Template Enhancement for Parallelization**:
+```yaml
+# Add to each generated agent's instructions:
+parallel_execution_instructions: |
+  ## Parallel Execution Protocol
+  
+  When you receive multiple independent tasks requiring your specialization:
+  
+  1. **Detection Phase**:
+     - Count similar tasks (3+ triggers parallel execution)
+     - Verify task independence (no cross-dependencies)
+     - Confirm same specialist pattern needed
+  
+  2. **Instance Spawning**:
+     - Calculate instances: min(ceil(tasks/3), 3)
+     - Use Task tool to spawn parallel instances
+     - Assign clear task batches to each instance
+  
+  3. **Task Distribution**:
+     - Prefer affinity grouping (domain/technical/dependency)
+     - Use complexity balancing when possible
+     - Fallback to round-robin for even distribution
+  
+  4. **Coordination**:
+     - Each instance owns specific files (no conflicts)
+     - Report progress asynchronously
+     - Aggregate results after completion
+     - Enable work stealing if capacity available
+  
+  5. **Integration**:
+     - Validate integration between parallel outputs
+     - Ensure consistency across instances
+     - Report combined results to user
+```
+
 ### Phase 3: Instructions File Creation
 
 Create `$PROJECT_ROOT/.guild/instructions.md` with:
@@ -148,11 +216,43 @@ These are simple instructions that all Guild agents and commands follow.
 This file is the DEFINITIVE source for all Guild system behavior configuration. All commands, agents, and workflows must read and strictly follow these instructions.
 
 ## Enhanced Concurrency Settings
-- Adaptive 1-3 instances of each agent type based on workload complexity
-- Maximum 20 total agents with intelligent resource management
-- Work estimation-based task distribution with affinity grouping  
+
+**Core Parallelization Philosophy**: Work in parallel when tasks are independent, coordinate only at integration boundaries.
+
+**Instance Limits and Scaling**:
+- Per agent type: 3 instances maximum (configurable)
+- Total parallel agents: 20 maximum (configurable)  
+- Spawn threshold: 3+ independent tasks triggers parallel execution
+- Adaptive scaling: Start with 1, scale up based on workload analysis
+
+**Task Distribution Intelligence**:
+- Work estimation-based distribution using complexity analysis
+- Affinity grouping by domain (user/product/order), technical patterns, dependencies
 - Dynamic rebalancing with cross-specialization work stealing
 - Predictive scaling with real-time performance monitoring
+
+**Parallel Execution Triggers**:
+- Multiple independent files needing same type of modification
+- Batch operations on similar code patterns (API endpoints, components, tests)
+- Component refactoring with consistent patterns
+- Cross-cutting concerns applied to multiple modules
+
+**Coordination Mechanisms**:
+- File-level ownership prevents conflicts during parallel execution
+- Asynchronous progress reporting with streaming results
+- Integration validation at completion boundaries
+- Minimal coordination overhead (<5% of execution time)
+
+**Performance Expectations**:
+- 3x speedup for tasks with 9+ similar operations
+- 2x speedup for tasks with 6-8 similar operations
+- Near-linear scaling up to 3 instances per specialist
+- >85% agent utilization efficiency through intelligent load balancing
+
+**Example Parallel Scenarios**:
+- "Add authentication to 12 API endpoints" → 3 backend instances, 4 endpoints each
+- "Convert 15 class components to functional" → 3 frontend instances, domain-grouped
+- "Create tests for 20 utility functions" → 3 instances, complexity-balanced workload
 
 ## Agent Model Settings
 - Planning agent always uses opus model

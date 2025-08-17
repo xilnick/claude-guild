@@ -158,7 +158,7 @@ async function detectExistingInstallation(claudeDir) {
       if (dir.isDirectory() && dir.name !== 'guild') {
         const dirPath = path.join(commandsDir, dir.name);
         const files = await fs.readdir(dirPath);
-        if (files.some(f => f.startsWith('guild-') && f.endsWith('.md'))) {
+        if (files.some(f => ['setup.md', 'ignore.md', 'instructions.md'].includes(f))) {
           customGuildDirs.push(dir.name);
         }
       }
@@ -631,15 +631,9 @@ async function composeSetupCommand(coreModules) {
   // Load the setup template
   const templatePath = path.join(__dirname, 'templates', 'setup-template.md');
   let template;
-  
-  try {
-    template = await fs.readFile(templatePath, 'utf-8');
-  } catch (error) {
-    console.warn('⚠️  Setup template not found, using fallback');
-    // Fallback template if file doesn't exist
-    template = generateFallbackTemplate();
-  }
-  
+
+  template = await fs.readFile(templatePath, 'utf-8');
+
   // Inject core modules into template
   template = template.replace(/<!-- INJECT:principles -->/g, 
     coreModules['principles'] || '');
@@ -653,42 +647,6 @@ async function composeSetupCommand(coreModules) {
     coreModules['instructions-template'] || '');
   
   return template;
-}
-
-function generateFallbackTemplate() {
-  return `# /guild:setup
-
-**Usage**: \`/guild:setup [--standalone] [guidance]\`
-
----
-name: guild-setup-command
-thinking_mode: ultrathink
-model: opus
-description: "Fully self-contained Guild system setup with complete embedded intelligence"
----
-
-## Purpose
-
-Perform comprehensive project analysis and generate a complete Guild system tailored specifically to your codebase.
-
-## EMBEDDED INTELLIGENCE SYSTEM
-
-This setup command contains embedded intelligence from the Guild core modules for dynamic system generation.
-
-## EXECUTION PROTOCOL
-
-### Step 1: Comprehensive Project Analysis
-Execute comprehensive project analysis using embedded intelligence.
-
-### Step 2: Dynamic Agent Generation
-Generate agents in .claude/agents/guild/ directory.
-
-### Step 3: System Configuration Generation
-Create complete Guild system configuration.
-
-### Step 4: System Validation
-Validate the generated system.
-`;
 }
 
 /**

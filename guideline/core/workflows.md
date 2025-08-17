@@ -1,5 +1,5 @@
 # Workflow Patterns Module
-**Version**: 2.2.0 | **Last Updated**: 2025-08-16 | **Dependencies**: principles.md, agents.md
+**Version**: 2.3.0 | **Last Updated**: 2025-01-16 | **Dependencies**: principles.md, agents.md
 
 ## Purpose
 Essential workflow patterns for Guild system execution. This module is embedded into the setup command.
@@ -288,6 +288,189 @@ Parallel Execution Strategies:
     monitoring: Comprehensive metrics with strategy effectiveness tracking
 ```
 
+### Claude Parallel Coordination Instructions
+
+**CRITICAL**: These are direct execution patterns for Claude to follow when orchestrating parallel workflows.
+
+**Stage-Level Parallel Coordination**:
+```yaml
+Research Stage Parallel Execution:
+  WHEN multiple research agents needed:
+    Task guild-project-research-agent:
+    "Analyze project context for: [USER_TASK]
+     Focus on codebase patterns, architecture, and project-specific constraints."
+    
+    Task guild-global-research-agent:
+    "Research global best practices for: [USER_TASK]
+     Focus on industry patterns, framework conventions, and modern approaches."
+    
+    EXECUTE in parallel (no dependencies between research types)
+    WAIT for both to complete
+    AGGREGATE results into comprehensive research context
+
+Planning Stage Coordination:
+  SINGLE planning agent coordinates all:
+    Task guild-planning-agent:
+    "Create implementation strategy using research context.
+     Decompose into parallel tasks and route to appropriate specialists.
+     Include dependency analysis and optimal execution sequencing."
+    
+    RECEIVE comprehensive plan with parallel execution strategy
+    PREPARE for implementation stage coordination
+
+Implementation Stage Parallel Orchestration:
+  BASED ON planning output, execute parallel pattern:
+    
+    IF multiple independent tasks for same specialist:
+      APPLY same-agent parallelization (up to 3 instances)
+      
+      Task [specialist] (Instance 1): "[batch_1_tasks]"
+      Task [specialist] (Instance 2): "[batch_2_tasks]"  
+      Task [specialist] (Instance 3): "[batch_3_tasks]"
+      
+      COORDINATE instance execution and aggregate results
+    
+    IF multiple different specialists needed:
+      APPLY cross-specialist parallelization
+      
+      Task guild-frontend-engineer: "[frontend_tasks]"
+      Task guild-backend-engineer: "[backend_tasks]"
+      Task guild-cli-engineer: "[cli_tasks]"
+      
+      COORDINATE across different specialists for integration
+```
+
+**Parallel Coordination Protocol**:
+```yaml
+Cross-Instance Coordination:
+  BEFORE spawning instances:
+    1. Verify task independence (no shared file write access)
+    2. Assign file ownership to prevent conflicts
+    3. Create shared context package for all instances
+    4. Define integration validation checkpoints
+
+  DURING parallel execution:
+    1. Monitor progress from each instance asynchronously
+    2. Collect intermediate progress reports
+    3. Identify opportunities for work rebalancing
+    4. Enable work stealing for early-finishing instances
+
+  AFTER instance completion:
+    1. Validate all assigned work was completed
+    2. Check for integration issues between instance outputs
+    3. Aggregate results into consolidated implementation
+    4. Report performance metrics and coordination efficiency
+
+Cross-Specialist Coordination:
+  WHEN different specialists work in parallel:
+    1. Define clear integration boundaries upfront
+    2. Establish interface contracts between specialists
+    3. Validate integration points at completion
+    4. Ensure consistent quality standards across all work
+
+Dependency-Aware Coordination:
+  WHEN tasks have dependencies:
+    1. Execute independent tasks in parallel first
+    2. Release dependent tasks as prerequisites complete
+    3. Use dependency graph to optimize parallel paths
+    4. Validate dependency resolution before proceeding
+```
+
+**Real-Time Coordination Examples**:
+```yaml
+Example 1: API + Frontend + Tests Parallel Development
+User Request: "Add user profile management with API and UI"
+
+Parallel Coordination:
+  Task guild-backend-engineer:
+  "Implement user profile API endpoints with CRUD operations.
+   Focus on data models, validation, and security."
+  
+  Task guild-frontend-engineer:
+  "Implement user profile UI components and forms.
+   Focus on user experience and data binding."
+  
+  Task guild-quality-specialist:
+  "Create comprehensive tests for user profile feature.
+   Focus on API testing and UI interaction testing."
+  
+  COORDINATE integration between API contracts and UI implementation
+  VALIDATE end-to-end functionality across all parallel work
+
+Example 2: Multi-Component Parallel Instance Execution
+User Request: "Add error handling to 12 service files"
+
+Instance Coordination:
+  Detection: 12 independent files, same specialist needed
+  Distribution: Domain affinity grouping
+  
+  Task guild-backend-engineer (Instance 1):
+  "Add error handling to user service files: [user.service.ts, auth.service.ts, profile.service.ts]
+   Apply consistent error patterns and logging approaches."
+  
+  Task guild-backend-engineer (Instance 2):
+  "Add error handling to product service files: [product.service.ts, category.service.ts, search.service.ts]
+   Apply consistent error patterns and logging approaches."
+  
+  Task guild-backend-engineer (Instance 3):
+  "Add error handling to order service files: [order.service.ts, payment.service.ts, shipping.service.ts]
+   Apply consistent error patterns and logging approaches."
+  
+  MONITOR progress: "Instance 1: 2/3 complete", "Instance 2: 3/3 complete"
+  ENABLE work stealing: Instance 2 takes remaining tasks from Instance 1
+  AGGREGATE final results with validation
+```
+
+**Error Handling and Recovery Coordination**:
+```yaml
+Instance Failure Recovery:
+  IF instance fails during parallel execution:
+    1. Log failure details and identify affected tasks
+    2. Extract incomplete work from failed instance
+    3. Redistribute tasks to other instances OR main thread
+    4. Continue with successful instances
+    5. Report partial completion with clear issue identification
+    
+Cross-Specialist Integration Failure:
+  IF integration validation fails between parallel work:
+    1. Identify specific integration point failures
+    2. Determine which specialist needs to adjust implementation
+    3. Execute targeted fixes maintaining parallel work where possible
+    4. Re-validate integration and report resolution
+
+Coordination Timeout Handling:
+  IF parallel coordination takes too long:
+    1. Switch to sequential execution for remaining work
+    2. Preserve successful parallel results
+    3. Report coordination issues for future optimization
+    4. Complete task with hybrid parallel/sequential approach
+```
+
+**Performance Optimization Coordination**:
+```yaml
+Dynamic Load Balancing During Execution:
+  MONITOR instance performance in real-time:
+  - Track completion rates vs estimates
+  - Identify fast and slow instances
+  - Detect capacity for additional work
+  
+  REBALANCE when beneficial:
+  - Redistribute tasks from slow to fast instances
+  - Add work to early-finishing instances
+  - Optimize overall completion time
+  
+  EXAMPLE rebalancing:
+  "Instance 1 completed early, taking 2 additional tasks from Instance 3's queue.
+   Expected completion time reduced from 12 to 8 minutes."
+
+Cross-Specialization Work Stealing:
+  WHEN specialist idle and others overloaded:
+  - Assess cross-specialization capabilities
+  - Transfer suitable tasks with context adaptation
+  - Maintain quality through supervised adaptation
+  - Track effectiveness for future optimization
+```
+
 ### Flag-Based Control
 
 **Essential Flags**:
@@ -355,6 +538,86 @@ Adaptive Adjustments:
   - Add coordination when dependencies exist
   - Include quality gates for critical functionality
   - Optimize for performance and resource usage
+```
+
+### Complex Project Structure Workflows
+
+**Multi-Repository Workflow** (Submodules):
+```yaml
+Enhanced Workflow for Git Submodules:
+  reasoning: Analyze task requirements across main project and submodules
+  research: 
+    - Main project context gathering (from root)
+    - Recursive submodule analysis with boundary detection
+    - Cross-submodule dependency mapping
+    - Integration point identification between main and submodules
+  planning: 
+    - Route tasks to appropriate submodule specialists
+    - Coordinate changes that span submodule boundaries
+    - Plan integration testing for cross-submodule changes
+  implementation:
+    - Execute in main project and affected submodules
+    - Respect submodule boundaries and protocols
+    - Update submodule references when needed
+    - Validate cross-submodule integration points
+
+Coordination Strategy:
+  - Single .guild/ directory coordinates all submodules
+  - Agents receive submodule structure context
+  - Changes tracked per submodule with integration validation
+  - Submodule commit coordination when changes span boundaries
+```
+
+**Monorepo Workflow** (Packages/Workspaces):
+```yaml
+Enhanced Workflow for Monorepos:
+  reasoning: Identify affected packages and cross-package dependencies
+  research:
+    - Package structure analysis from root
+    - Inter-package dependency mapping
+    - Workspace configuration understanding
+    - Build and test coordination requirements
+  planning:
+    - Distribute tasks across packages in dependency order
+    - Plan coordinated changes for shared dependencies
+    - Route package-specific tasks to appropriate specialists
+  implementation:
+    - Execute changes in correct dependency order
+    - Update package configurations when needed
+    - Maintain workspace integrity and build consistency
+    - Validate cross-package interface compatibility
+
+Coordination Strategy:
+  - Single root-level coordination for all packages
+  - Package-aware task distribution and execution
+  - Dependency-ordered change implementation
+  - Workspace-level validation and testing
+```
+
+**Multi-Language Workflow** (Polyglot Projects):
+```yaml
+Enhanced Workflow for Multi-Language Projects:
+  reasoning: Analyze requirements across language boundaries
+  research:
+    - Per-language pattern discovery from root scan
+    - Cross-language interface identification
+    - Build system and dependency coordination
+    - Language-specific tooling and conventions
+  planning:
+    - Route tasks to language-appropriate specialists
+    - Plan interface consistency across languages
+    - Coordinate build and test strategies
+  implementation:
+    - Language-specific implementation with interface awareness
+    - Cross-language integration validation
+    - Consistent pattern application across languages
+    - Build system coordination and testing
+
+Coordination Strategy:
+  - Single agent set handles all languages from root
+  - Language-specific context packages for specialists
+  - Cross-language interface validation and consistency
+  - Unified build and test coordination from root
 ```
 
 ## Integration Points

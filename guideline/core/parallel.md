@@ -1,10 +1,261 @@
 # Parallel Execution Module
-**Version**: 2.2.0 | **Last Updated**: 2025-08-16 | **Dependencies**: principles.md, agents.md, workflows.md
+**Version**: 2.3.0 | **Last Updated**: 2025-01-16 | **Dependencies**: principles.md, agents.md, workflows.md
 
 ## Purpose
 Essential parallel execution strategies for efficient Guild system performance. This module is embedded into the setup command.
 
+## Claude Execution Instructions
+
+**CRITICAL**: These are direct execution patterns for Claude to follow when implementing parallel task execution.
+
+### Parallel Task Detection Protocol
+
+**When to Parallelize**:
+```yaml
+Detection Pattern:
+  IF (task involves multiple similar operations):
+    AND (operations are independent):
+    AND (same specialist type required):
+    THEN enable parallel execution
+
+Examples:
+  - "Update error handling in all service files" → Multiple files, same pattern
+  - "Add tests to all components" → Multiple files, same specialist
+  - "Refactor 15 UI components for new design" → Independent components, same changes
+  - "Implement CRUD endpoints for 5 entities" → Similar patterns, independent entities
+```
+
+### Instance Spawning Execution Pattern
+
+**Claude Task Tool Usage**:
+```yaml
+Step 1: Analyze Task Independence
+  - Count total similar tasks
+  - Verify no cross-dependencies  
+  - Identify specialist type needed
+
+Step 2: Calculate Instance Count
+  optimal_instances = min(ceil(task_count / 3), 3)
+  
+  Examples:
+  - 2-3 tasks → 1 instance (not worth parallelizing)
+  - 4-6 tasks → 2 instances 
+  - 7+ tasks → 3 instances (maximum)
+
+Step 3: Distribute Tasks Using Task Tool
+  FOR each instance (1 to optimal_instances):
+    Task [specialist-agent] (Instance {i}): 
+    "Handle your assigned batch: [specific task assignments]
+    
+    Context Package:
+    - Overall Task: [original user request]
+    - Your Batch: [files/components assigned to this instance]
+    - Project Patterns: [relevant patterns and conventions]
+    - Integration Requirements: [how your work fits with others]
+    
+    Specific Instructions:
+    - Work only on assigned files: [list]
+    - Follow project patterns discovered in context
+    - Coordinate with parallel instances for integration
+    - Report progress and completion status
+    
+    Expected Output: [specific deliverables for this batch]"
+
+Step 4: Aggregate Results
+  - Wait for all instances to complete
+  - Collect and merge all outputs
+  - Validate integration between instances
+  - Report combined results to user
+```
+
+### Task Distribution Algorithms
+
+**Complexity-Based Distribution**:
+```yaml
+When task complexity varies significantly:
+
+Estimation Factors:
+  - File size (lines of code)
+  - Dependencies count
+  - Pattern complexity (simple update vs major refactor)
+  - Historical timing data (if available)
+
+Distribution Strategy:
+  1. Estimate work for each task (low/medium/high)
+  2. Sort tasks by complexity (high first)
+  3. Assign to least-loaded instance
+  
+Example: 9 tasks, 3 instances
+  High complexity: [task1(8min), task2(7min), task3(6min)]
+  Medium: [task4(4min), task5(4min), task6(3min)]  
+  Low: [task7(2min), task8(2min), task9(1min)]
+  
+  Distribution:
+  Instance 1: [task1(8min), task9(1min)] = 9min
+  Instance 2: [task2(7min), task8(2min)] = 9min  
+  Instance 3: [task3(6min), task4(4min)] = 10min
+```
+
+**Affinity-Based Distribution**:
+```yaml
+When tasks have natural groupings:
+
+Domain Affinity (preferred):
+  - User-related files → Instance 1
+  - Product-related files → Instance 2  
+  - Order-related files → Instance 3
+
+Technical Affinity:
+  - React components (.tsx) → Instance 1
+  - Services (.service.ts) → Instance 2
+  - Tests (.test.ts) → Instance 3
+
+Dependency Affinity:
+  - Files importing UserTypes → Instance 1
+  - Files importing ProductTypes → Instance 2
+  - Independent utilities → Instance 3
+
+Benefits: Context reuse, pattern consistency, fewer conflicts
+```
+
+**Round-Robin Fallback**:
+```yaml
+When no clear complexity or affinity patterns:
+
+Simple Distribution:
+  Instance 1: Tasks [1, 4, 7, 10, ...]
+  Instance 2: Tasks [2, 5, 8, 11, ...]
+  Instance 3: Tasks [3, 6, 9, 12, ...]
+  
+Ensures: Even distribution, minimal coordination overhead
+```
+
+### Coordination Execution Patterns
+
+**File Ownership Strategy**:
+```yaml
+Assignment Pattern:
+  - Each file assigned to exactly one instance
+  - No shared write access during execution
+  - Read-only access to shared context/patterns
+  - Clear boundaries prevent conflicts
+
+Implementation:
+  Instance 1 owns: [file1.ts, file4.ts, file7.ts]
+  Instance 2 owns: [file2.ts, file5.ts, file8.ts]
+  Instance 3 owns: [file3.ts, file6.ts, file9.ts]
+  
+Validation: Check no file appears in multiple instance assignments
+```
+
+**Progress Reporting Pattern**:
+```yaml
+Each Instance Reports:
+  - "Starting work on assigned batch: [file_list]"
+  - "Completed [N/total] files in batch"
+  - "Finished all assigned work: [summary_of_changes]"
+  
+Aggregation:
+  - Monitor all instance progress
+  - Collect completion reports
+  - Validate no missing work
+  - Synthesize final results
+```
+
+### Error Handling Execution
+
+**Instance Failure Recovery**:
+```yaml
+IF instance fails or produces errors:
+  1. Log the specific failure with details
+  2. Extract unfinished tasks from failed instance
+  3. Redistribute failed tasks to other instances OR
+  4. Handle failed tasks in main thread
+  5. Continue with successful instance results
+  6. Report partial success with issue details
+
+Example Recovery:
+  "Instance 2 failed on complex refactoring task.
+   Redistributing remaining files [X, Y, Z] to Instance 1.
+   Completed 80% of requested changes successfully."
+```
+
+### Performance Optimization Patterns
+
+**Dynamic Load Balancing**:
+```yaml
+IF instance finishes early:
+  1. Check if other instances still have pending work
+  2. Identify tasks that can be safely redistributed
+  3. Use Task tool to assign additional work:
+     Task [specialist-agent] (Instance {fast_instance}):
+     "Take on additional tasks from overloaded instances: [new_tasks]"
+  4. Update progress tracking
+
+Work Stealing Example:
+  Instance 1: Finished early (completed 3 tasks in 5 min)
+  Instance 2: Still working (2/5 tasks completed, struggling)
+  Action: Reassign 1-2 tasks from Instance 2 to Instance 1
+```
+
+### Concrete Execution Examples
+
+**Example 1: API Endpoint Updates**
+```yaml
+User Request: "Add authentication middleware to all 12 API endpoints"
+
+Detection: 12 independent files, same pattern, backend specialist needed
+Instance Count: 3 (12 tasks / 3 = 4 each)
+
+Execution:
+Task guild-backend-engineer (Instance 1):
+"Add authentication middleware to your assigned endpoints:
+- /api/users/*, /api/users/profile, /api/users/settings, /api/users/preferences
+Follow existing middleware patterns in project.
+Output: Updated endpoint files with auth middleware"
+
+Task guild-backend-engineer (Instance 2):  
+"Add authentication middleware to your assigned endpoints:
+- /api/products/*, /api/products/search, /api/products/categories, /api/products/reviews
+Follow existing middleware patterns in project.
+Output: Updated endpoint files with auth middleware"
+
+Task guild-backend-engineer (Instance 3):
+"Add authentication middleware to your assigned endpoints:  
+- /api/orders/*, /api/orders/history, /api/orders/tracking, /api/orders/refunds
+Follow existing middleware patterns in project.
+Output: Updated endpoint files with auth middleware"
+
+Expected Result: 3x speedup (4 min instead of 12 min)
+```
+
+**Example 2: Component Refactoring**
+```yaml
+User Request: "Convert 15 class components to functional components with hooks"
+
+Detection: 15 independent components, same pattern, frontend specialist needed
+Instance Count: 3 (15 tasks / 3 = 5 each)
+
+Affinity Distribution:
+Instance 1: User-related components [UserProfile, UserList, UserCard, UserSettings, UserModal]
+Instance 2: Product components [ProductList, ProductCard, ProductDetail, ProductSearch, ProductFilter]  
+Instance 3: Order components [OrderList, OrderCard, OrderDetail, OrderHistory, OrderTracking]
+
+Execution:
+Task guild-frontend-engineer (Instance 1):
+"Convert your assigned user components to functional with hooks:
+[UserProfile.tsx, UserList.tsx, UserCard.tsx, UserSettings.tsx, UserModal.tsx]
+Use project's existing hook patterns and follow component conventions.
+Maintain all existing functionality and props interfaces.
+Output: Converted functional components with hooks"
+
+[Similar patterns for instances 2 and 3]
+
+Expected Result: 3x speedup with domain expertise benefits
+```
+
 ## Embedded Intelligence
+
 
 ### Core Parallelization Philosophy
 
@@ -456,6 +707,92 @@ Performance Characteristics:
   - Minimal coordination overhead
   - Near-perfect resource utilization
   - Automatic load balancing
+```
+
+### Structure-Aware Parallelization
+
+**Project Structure Parallelization Strategy**:
+```yaml
+Submodule-Aware Parallelization:
+  pattern: Parallel work across git submodules with boundary respect
+  coordination: Single root .guild/ coordinates all submodule operations
+  execution:
+    - Agents receive submodule structure context
+    - Tasks distributed across submodules independently
+    - Integration validation at submodule boundaries
+    - Submodule commit coordination when needed
+  benefits: Near-linear speedup based on number of independent submodules
+
+Monorepo Package Parallelization:
+  pattern: Package-level task distribution with workspace awareness
+  coordination: Root-level orchestration of package operations
+  execution:
+    - Agents understand package boundaries and dependencies
+    - Tasks routed to appropriate packages in dependency order
+    - Workspace-level validation and build coordination
+    - Cross-package interface consistency maintained
+  benefits: 3-5x speedup through package-level parallelization
+
+Multi-Language Parallelization:
+  pattern: Language-specific specialist coordination
+  coordination: Single agent set handles all languages from root
+  execution:
+    - Language-specific context packages for specialists
+    - Cross-language interface validation and consistency
+    - Unified build and test coordination from root
+    - Language boundary respect with interface validation
+  benefits: 4-6x speedup through language-specific specialization
+
+Complex Structure Coordination:
+  pattern: Hybrid parallelization for projects with multiple structure types
+  examples: Monorepo with submodules, multi-language with packages
+  coordination: Hierarchical boundary management from single root
+  execution:
+    - Structure hierarchy understanding in all agents
+    - Multi-level boundary validation and coordination
+    - Complex dependency chain management
+    - Integrated testing across all structure types
+  benefits: Optimized speedup while maintaining structural integrity
+```
+
+**Enhanced Load Balancing for Complex Projects**:
+```yaml
+Structure-Aware Task Distribution:
+  submodule_affinity:
+    - Group tasks by submodule to minimize boundary crossing
+    - Assign submodule-specific tasks to same agent instances
+    - Benefits: Reduced context switching, better integration awareness
+
+  package_affinity:
+    - Group monorepo package tasks for workspace consistency
+    - Respect package dependencies in task ordering
+    - Benefits: Workspace integrity, dependency-aware execution
+
+  language_affinity:
+    - Group cross-language interface tasks for consistency
+    - Assign language-specific patterns to specialized instances
+    - Benefits: Interface coherence, language expertise accumulation
+
+  complexity_distribution:
+    - Balance complex structure operations across instances
+    - Prevent overloading single instances with boundary coordination
+    - Benefits: Even workload distribution, optimal resource utilization
+
+Structure Coordination Overhead Management:
+  boundary_validation_batching:
+    - Batch boundary validations to minimize coordination overhead
+    - Validate integration points at completion rather than per-operation
+    - Benefits: <3% coordination overhead even in complex structures
+
+  context_sharing_optimization:
+    - Share structure context across instances efficiently
+    - Minimize duplicate structure analysis and boundary detection
+    - Benefits: Faster startup, reduced memory usage
+
+  conflict_prevention:
+    - Use structure boundaries as natural conflict prevention
+    - File ownership aligned with structure boundaries
+    - Benefits: Near-zero conflicts in structure-aware operations
 ```
 
 ## Integration Points

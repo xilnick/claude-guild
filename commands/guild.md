@@ -304,32 +304,56 @@ First, read Guild instructions and discover available agents for this project:
 ### Dynamic Agent Discovery
 
 **Step 2: Check Guild Configuration Status**
-- Look for `.guild/overview.md` (primary indicator of setup completion)
-- OR look for `.guild/instructions.md` (project configuration)
-- If either exists, Guild IS configured (proceed with available resources)
-- Also check for `.guild/ignore.md` (ignore patterns)
+Use the Read tool to check for Guild configuration:
+- Try: Read `.guild/overview.md` (primary indicator of setup completion)
+- If that fails, try: Read `.guild/instructions.md` (project configuration)
+- If either succeeds, Guild IS configured (proceed with available resources)
+- Also check: Read `.guild/ignore.md` for ignore patterns (optional)
 
-**Step 3: Discover Available Agents**
+Alternative: Use LS tool to check if `.guild` directory exists:
+- Execute: LS `.guild`
+- If successful and contains overview.md or instructions.md, Guild is configured
+
+**Step 3: Enhanced Context Discovery & Agent Analysis**
 - Check `.claude/agents/guild/` directory for Guild agents
-- Dynamically identify available agents:
+- Load project structure context from previous setup analysis
+- Dynamically identify available agents with structure awareness:
   - **Core Agents**: guild-planning-agent, guild-*-research-agent
-  - **Implementation Agents**: Any guild-*-engineer agents found
+  - **Implementation Agents**: Any guild-*-engineer agents found (including structure specialists)
   - **Quality Agents**: guild-verification-agent, guild-spec-agent if present
+  - **Structure Specialists**: Any monorepo, polyglot, or submodule specialists
   - **Project-Specific Agents**: Any other guild-* agents discovered
 
-**Step 4: Adapt Workflow to Available Resources**
+- Analyze project structure capabilities:
+  - **Submodule Support**: Check if agents understand submodule boundaries
+  - **Monorepo Support**: Verify package/workspace coordination capabilities
+  - **Multi-Language Support**: Confirm cross-language interface handling
+  - **Complex Dependencies**: Validate cross-boundary coordination abilities
+
+**Step 4: Structure-Aware Workflow Adaptation**
 - If Guild configured but agents missing: Continue with main thread fallback and offer agent regeneration
-- If core agents missing: Use enhanced main thread processing
+- If core agents missing: Use enhanced main thread processing with structure context
 - If implementation agents missing: Use available engineers or main thread fallback
+- If structure specialists missing: Add structure awareness to existing agents
 - If quality agents missing: Skip those stages or provide alternatives
-- Always work with what's available in the project
+- Always work with what's available, providing structure context to all agents
+
+**Enhanced Context Package Distribution**:
+```yaml
+All agents receive enhanced context including:
+  project_structure: Full structure map from root
+  submodule_info: Boundaries, remotes, and integration points
+  package_info: Monorepo structure and dependencies
+  language_mapping: Cross-language interfaces and boundaries
+  coordination_rules: How to handle cross-boundary operations
+```
 
 ### If Guild NOT Configured
 
-Check these conditions to determine if Guild is truly not configured:
-1. `.guild` directory does not exist
-2. `.guild/overview.md` is missing
-3. `.guild/instructions.md` is missing
+Use standard tools to determine if Guild is truly not configured:
+1. Execute: LS `.guild` - If this fails, directory does not exist
+2. Try: Read `.guild/overview.md` - If this fails, file is missing
+3. Try: Read `.guild/instructions.md` - If this fails, file is missing
 
 If ALL above are true, display this message and STOP:
 
@@ -611,7 +635,10 @@ ls .claude/agents/guild/
 ```
 
 **Process Discovery Results**:
-1. **Check Configuration Status**: First verify Guild setup by checking for `.guild/overview.md` or `.guild/instructions.md`
+1. **Check Configuration Status**: First verify Guild setup using Read tool:
+   - Try: Read `.guild/overview.md`
+   - Or: Read `.guild/instructions.md`
+   - If either succeeds, Guild is configured
 2. **If Guild NOT configured**: Display "Guild Not Configured" message and stop execution  
 3. **If Guild configured but agents missing**: Display "Agents Need Generation" message and continue with main thread fallback
 4. **If agents exist**: Scan available agents and parse agent types and capabilities
@@ -838,7 +865,10 @@ FINAL_VALIDATION:
 ```
 1. PARSE COMMAND FLAGS → determine workflow stages
 2. VALIDATE USER TASK → enter interactive mode if missing
-3. CHECK GUILD CONFIGURATION: Verify Guild setup by checking `.guild/overview.md` or `.guild/instructions.md`
+3. CHECK GUILD CONFIGURATION: Use Read tool to verify Guild setup:
+   - Try: Read `.guild/overview.md`
+   - Or: Read `.guild/instructions.md`
+   - If either succeeds, Guild is configured
 4. HANDLE CONFIGURATION STATUS:
    - If NOT configured: Display "Guild Not Configured" and STOP
    - If configured but agents missing: Display "Agents Need Generation" and continue with main thread fallback
@@ -953,56 +983,131 @@ DETERMINE required implementation agents based on:
 - Implementation strategy from PLANNING_CONTEXT
 
 ANALYZE PARALLELIZATION OPPORTUNITIES:
+- Use embedded parallel execution intelligence from guideline modules
 - Identify multiple independent tasks requiring same specialist
 - Group similar work by agent specialization type
 - Calculate optimal instance count (min(task_count, 3) per agent type)
 
+EXECUTE PARALLEL EXECUTION PROTOCOL:
+
 FOR EACH required implementation (frontend, backend, cli, package, etc):
   IF corresponding guild-*-engineer agent FOUND:
     
-    DETECT ENHANCED SAME-AGENT PARALLELIZATION:
-    parallel_tasks = analyze_tasks_with_dependency_mapping()
-    complexity_estimation = estimate_task_complexity(parallel_tasks)
-    affinity_groups = group_tasks_by_affinity(parallel_tasks)
-    instance_count = calculate_optimal_instances(parallel_tasks, complexity_estimation, max=3)
+    STEP 1: DETECT PARALLELIZATION POTENTIAL
+    task_list = extract_independent_tasks_from_planning()
+    specialist_needed = identify_required_specialist_type()
     
-    IF instance_count > 1:
-      SPAWN multiple instances of guild-*-engineer:
+    IF task_list.length >= 3 AND tasks_are_independent(task_list):
+      ENABLE parallel execution
+      instance_count = min(ceil(task_list.length / 3), 3)
+      
+      STEP 2: DISTRIBUTE TASKS INTELLIGENTLY
+      
+      # Affinity-Based Distribution (Preferred)
+      IF can_group_by_domain_affinity(task_list):
+        groups = group_by_domain(task_list)  # user, product, order domains
+        assign_groups_to_instances(groups, instance_count)
+      
+      ELSE IF can_group_by_technical_affinity(task_list):
+        groups = group_by_file_type(task_list)  # .tsx, .service.ts, .test.ts
+        assign_groups_to_instances(groups, instance_count)
+      
+      ELSE IF can_estimate_complexity(task_list):
+        # Complexity-Based Distribution
+        estimated_work = estimate_task_complexity(task_list)
+        distribute_by_work_balance(estimated_work, instance_count)
+      
+      ELSE:
+        # Round-Robin Fallback
+        distribute_round_robin(task_list, instance_count)
+      
+      STEP 3: SPAWN MULTIPLE INSTANCES using Task tool
       
       FOR instance 1 to instance_count:
-        TASK guild-*-engineer-{instance}:
-        "IMPLEMENT [ASSIGNED_TASKS] for: [USER_TASK]
+        assigned_tasks = get_assigned_tasks_for_instance(instance)
         
-        Input Context:
+        Task guild-{specialist}-engineer (Instance {instance}):
+        "PARALLEL IMPLEMENTATION for: [USER_TASK]
+        
+        Your Assigned Batch ({instance}/{instance_count}):
+        [SPECIFIC_TASK_LIST_FOR_THIS_INSTANCE]
+        
+        Context Package:
+        - Overall Task: [USER_TASK]
         - Strategic Plan: [PLANNING_CONTEXT]
         - Technical Research: [RESEARCH_CONTEXT]  
-        - Requirements: [REASONING_CONTEXT]
-        - Assigned Tasks: [AFFINITY_GROUPED_TASK_BATCH_FOR_INSTANCE]
-        - Task Complexity Estimates: [COMPLEXITY_ANALYSIS]
-        - Dependency Information: [TASK_DEPENDENCIES]
+        - Project Patterns: [DISCOVERED_PATTERNS]
+        - Integration Requirements: [BOUNDARIES_AND_INTERFACES]
         
-        Implementation Requirements:
-        - Work on assigned files/components only: [TASK_LIST]
-        - Follow strategic plan and architecture
-        - Adhere to project quality standards
-        - Integrate with existing patterns
-        - Coordinate with parallel instances for integration using dependency-aware scheduling
-        - Apply affinity-based optimizations for context reuse
-        - Enable cross-specialization work stealing if capacity available
+        Parallel Execution Instructions:
+        - Work ONLY on your assigned files/components: [ASSIGNED_FILE_LIST]
+        - Follow project patterns and conventions from context
+        - Coordinate with other instances for integration points
+        - Use affinity optimizations (same domain/type benefits)
+        - Report progress and completion status
+        - Apply cross-specialization assistance if capacity available
         
-        Output: Implementation for assigned tasks with changes"
+        File Ownership (Conflict Prevention):
+        - Your exclusive write access: [ASSIGNED_FILES]
+        - Read-only access: Project context and patterns
+        - No shared write operations with other instances
         
-      EXECUTE instances in parallel
-      AGGREGATE results from all instances
+        Expected Output: Implementation for assigned batch with detailed changes"
+      
+      STEP 4: PARALLEL EXECUTION COORDINATION
+      - Execute all instances simultaneously using Task tool
+      - Monitor progress from each instance
+      - Collect completion reports as they finish
+      - Validate no file conflicts or missing assignments
+      
+      STEP 5: AGGREGATE PARALLEL RESULTS
+      - Wait for all instances to complete
+      - Collect and merge implementation results
+      - Validate integration between instance outputs
+      - Verify no work was missed or duplicated
+      - Create consolidated implementation report
+      
+      PERFORMANCE TRACKING:
+      - Log instance count and task distribution strategy used
+      - Note any load balancing or work stealing that occurred
+      - Report speedup achieved vs sequential execution
+      - Document any coordination issues for future optimization
       
     ELSE:
-      TASK single guild-*-engineer (standard single-agent execution)
+      # Single Instance Execution (< 3 tasks or dependencies exist)
+      TASK single guild-{specialist}-engineer (standard execution)
       
   ELSE:
     FALLBACK: Execute implementation using main thread with full context
 
 COORDINATE all implementation results (including parallel instance outputs)
 VALIDATE integration between different implementation aspects and parallel work
+
+EXAMPLE PARALLEL EXECUTION SCENARIOS:
+
+Scenario 1: "Add error handling to all 12 API endpoints"
+Detection: 12 independent files, backend specialist needed
+Distribution: 3 instances × 4 endpoints each
+Execution: 
+  Instance 1: [/api/users/*, /api/auth/*, /api/profiles/*, /api/settings/*]
+  Instance 2: [/api/products/*, /api/categories/*, /api/search/*, /api/reviews/*]  
+  Instance 3: [/api/orders/*, /api/payments/*, /api/shipping/*, /api/refunds/*]
+Expected: 3x speedup (4 min vs 12 min sequential)
+
+Scenario 2: "Convert 15 class components to functional with hooks"
+Detection: 15 independent components, frontend specialist needed
+Distribution: Affinity-based by domain
+Execution:
+  Instance 1: User components [UserProfile, UserList, UserCard, UserSettings, UserModal]
+  Instance 2: Product components [ProductList, ProductCard, ProductDetail, ProductSearch, ProductFilter]
+  Instance 3: Order components [OrderList, OrderCard, OrderDetail, OrderHistory, OrderTracking]
+Expected: 3x speedup + domain expertise benefits
+
+Scenario 3: "Create unit tests for 20 utility functions"
+Detection: 20 independent test files, specialist needed
+Distribution: Complexity-based (high complexity tests balanced across instances)
+Execution: Work-balanced distribution ensuring equal estimated completion times
+Expected: 3x speedup with intelligent load balancing
 ```
 
 #### CONDITIONAL STAGE 5: Quality Assurance (If Flags Enabled)

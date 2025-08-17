@@ -301,11 +301,41 @@ Agent Context Engineering:
    - Context management strategy for optimal performance
    ```
 
-3. **Technology Stack Detection** (Pattern-based):
+3. **Comprehensive Project Structure Discovery** (Pattern-based):
+   ```
+   Execute comprehensive recursive analysis from project root:
+   
+   Git Structure Analysis:
+   - Detect git submodules: git submodule status --recursive
+   - Map submodule paths and remote URLs
+   - Identify submodule boundaries and integration points
+   
+   Monorepo and Workspace Detection:
+   - Find workspace configurations: lerna.json, pnpm-workspace.yaml, yarn workspaces
+   - Discover package directories and interdependencies
+   - Map package.json files across all packages
+   
+   Multi-Language Project Mapping:
+   - Recursive scan for all config files: package.json, requirements.txt, Cargo.toml, go.mod, etc.
+   - Identify language boundaries and interface files
+   - Map cross-language dependencies and build systems
+   
+   Technology Stack Detection:
    - Search for framework patterns using Grep tool
-   - Find testing patterns and quality tool configurations
+   - Find testing patterns and quality tool configurations  
    - Discover workflow patterns (development, build, deployment)
    - Identify architectural styles and implementation patterns
+   
+   Structure Context Creation:
+   project_structure:
+     root_path: {absolute_project_root}
+     submodules: [{name, path, remote_url, active}]
+     packages: [{name, path, type, dependencies}]
+     languages: {path_pattern → primary_language}
+     config_files: [{type, path, scope}]
+     boundaries: {submodule_boundaries, package_boundaries, service_boundaries}
+     cross_dependencies: [{from_path, to_path, type}]
+   ```
 
 ### Step 2: Dynamic Agent Generation with Embedded Intelligence
 

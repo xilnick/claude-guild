@@ -9,21 +9,12 @@ This directory contains the authoritative specifications for the Claude Guild sy
 ```
 guideline/
 ├── README.md                 # This file - system overview
-├── core/                     # Core intelligence modules for setup command composition
-│   ├── system-principles.md # Fundamental architectural principles
-│   ├── agent-architecture.md # Agent classification and design patterns
-│   ├── workflow-patterns.md  # Workflow execution and coordination
-│   ├── context-engineering.md # Context management and handoff protocols
-│   └── project-analysis.md   # Project analysis and technology detection
-│
-├── commands/                 # Standalone command specifications
-│   ├── guild-ignore.md      # /guild:ignore command specification
-│   └── guild-instructions.md # /guild:instructions command specification
-│
-└── reference/               # Reference documentation
-    ├── agent-templates.md   # Agent template patterns
-    ├── thinking-modes.md    # Thinking mode configurations
-    └── performance.md       # Performance optimization strategies
+└── core/                     # Core intelligence modules for setup command composition
+    ├── principles.md         # Fundamental architectural principles and project structure
+    ├── agents.md             # Agent classification and design patterns
+    ├── workflows.md          # Workflow execution and coordination
+    ├── parallel.md           # Parallel execution strategies and optimization
+    └── instructions-template.md # User configuration template
 ```
 
 ## Composition Architecture
@@ -32,18 +23,19 @@ guideline/
 
 The `/guild:setup` command is dynamically composed from core modules by install.js:
 
-1. **System Principles** → Embedded as architectural foundation
-2. **Agent Architecture** → Embedded as agent generation logic
-3. **Workflow Patterns** → Embedded as execution strategies
-4. **Context Engineering** → Embedded as communication protocols
-5. **Project Analysis** → Embedded as detection intelligence
+1. **Core Principles** → Embedded as architectural foundation and project structure intelligence
+2. **Agent Framework** → Embedded as agent generation logic with structure awareness
+3. **Workflow Patterns** → Embedded as execution strategies for complex projects
+4. **Parallel Execution** → Embedded as parallelization strategies
+5. **Instructions Template** → Embedded as user configuration defaults
 
 ### Standalone Commands
 
-Commands with their own specifications that don't require composition:
+Commands with their own specifications (located in `/commands` directory):
+- `/guild:setup` - Project analysis and agent generation
+- `/guild` - Main workflow command (discovers agents at runtime)
 - `/guild:ignore` - File exclusion pattern management
 - `/guild:instructions` - Project configuration management
-- `/guild` - Main workflow command (discovers agents at runtime)
 
 ## Core Principles
 
@@ -92,11 +84,11 @@ Commands with their own specifications that don't require composition:
 const setupCommand = compose({
   base: 'commands/setup-base.md',
   modules: [
-    'core/system-principles.md',
-    'core/agent-architecture.md',
-    'core/workflow-patterns.md',
-    'core/context-engineering.md',
-    'core/project-analysis.md'
+    'core/principles.md',
+    'core/agents.md',
+    'core/workflows.md',
+    'core/parallel.md',
+    'core/instructions-template.md'
   ],
   output: '.claude/commands/guild-setup.md'
 });

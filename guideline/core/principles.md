@@ -1,5 +1,5 @@
 # Core Principles Module
-**Version**: 2.2.0 | **Last Updated**: 2025-08-16 | **Dependencies**: None
+**Version**: 2.3.0 | **Last Updated**: 2025-01-16 | **Dependencies**: None
 
 ## Purpose
 Fundamental principles that guide all Guild system behavior. This module is embedded into the setup command.
@@ -65,6 +65,33 @@ Agent Intelligence:
 - Complex analysis: Enhanced thinking modes
 - Routine implementation: Standard thinking mode
 - Strategic planning: Comprehensive analysis mode
+
+### Project Structure Intelligence
+
+**Single-Root Architecture**:
+- Guild maintains single `.guild/` directory at project root (working directory)
+- Single `.claude/agents/guild/` directory manages entire project hierarchy
+- All complex structures (submodules, monorepos, nested projects) coordinated from root
+- No nested Guild configurations - one control point for entire project
+
+**Comprehensive Project Coverage**:
+- **Git Submodules**: Recursive detection and mapping from project root
+- **Multi-Language Projects**: Single agent set handles polyglot codebases  
+- **Monorepos**: Workspace-aware operations coordinated from root
+- **Nested Structures**: Deep recursive analysis while maintaining root coordination
+- **Cross-Repository Dependencies**: Context includes inter-repo relationships
+
+**Project Structure Context**:
+```yaml
+Structure Intelligence:
+  root_path: Working directory (single source of truth)
+  submodules: Mapped paths and boundaries from .gitmodules
+  packages: Monorepo package structure (lerna, yarn, pnpm workspaces)
+  languages: File path to language mapping across entire project
+  config_files: All configuration files discovered recursively
+  boundaries: Submodule, package, and service boundaries
+  dependencies: Cross-boundary relationships and interfaces
+```
 
 ### Soft Ignore Pattern Respect
 

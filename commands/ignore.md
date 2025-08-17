@@ -49,6 +49,34 @@ By default, Guild ignores these files and folders:
 - `.guild/` - Guild configuration and generated files
 - `.serena/` - Serena agent configuration and memories
 
+## Structure-Aware Ignore Patterns
+
+Guild automatically handles complex project structures:
+
+**Submodule Integration**:
+- Respects `.gitignore` files in each submodule
+- Applies root-level ignore patterns across all submodules
+- Maintains submodule boundary awareness during ignore processing
+- Coordinates ignore patterns across main project and submodules
+
+**Monorepo Package Support**:
+- Honors workspace package-specific ignore patterns
+- Applies workspace-level ignores across all packages
+- Respects package boundary isolation while maintaining coordination
+- Integrates with package.json ignore configurations
+
+**Multi-Language Project Handling**:
+- Detects and applies language-specific ignore patterns
+- Coordinates cross-language build artifact exclusions
+- Maintains interface file visibility across language boundaries
+- Supports polyglot project ignore coordination
+
+**Structure Boundary Preservation**:
+- Maintains component isolation through ignore patterns
+- Enables cross-boundary operations when explicitly requested
+- Preserves structural integrity while allowing coordination
+- Supports hierarchical ignore pattern inheritance
+
 ## Guild System Compliance
 
 Guild ignore management operates within the Guild system architecture:

@@ -7,7 +7,10 @@
 
 **Purpose**: Configure Guild agent behavior including model assignments, thinking modes, and project-specific instructions.
 
-First, check if Guild is configured for this project by looking for `.guild/instructions.md`.
+First, check if Guild is configured for this project using the Read tool:
+- Execute: Read `.guild/instructions.md`
+- If successful, Guild is configured
+- If it fails, Guild is not configured
 
 ## If Guild NOT Configured
 
@@ -64,6 +67,13 @@ Guild instructions management operates within the Guild system architecture:
 `/guild:instructions --agent-model [agent-name] [model]` - Set specific agent model
 `/guild:instructions --quality-standard [standard]` - Set project quality requirements
 `/guild:instructions --max-domain-instances [number]` - Set maximum parallel instances for single-domain agents (default: 5)
+
+### Configure Project Structure Options
+`/guild:instructions --submodule-mode [integrated|isolated]` - Set submodule handling strategy (default: integrated)
+`/guild:instructions --monorepo-strategy [unified|package-scoped]` - Set monorepo coordination approach (default: unified)
+`/guild:instructions --cross-language [strict|flexible]` - Set cross-language interface enforcement (default: strict)
+`/guild:instructions --boundary-enforcement [true|false]` - Enable structural boundary respect (default: true)
+`/guild:instructions --structure-parallelization [true|false]` - Enable structure-aware parallelization (default: true)
 
 ## Parallel Execution Limitations
 
