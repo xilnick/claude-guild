@@ -17,9 +17,7 @@ async function validateSystem() {
   console.log('📁 Checking directory structure...');
   const requiredDirs = [
     'guideline/core',
-    'guideline/reference',
-    'guideline/commands',
-    'templates',
+
     'commands',
     'scripts'
   ];
@@ -82,48 +80,9 @@ async function validateSystem() {
     }
   }
   
-  // Validate templates
-  console.log('\n📝 Checking templates...');
-  const templatesDir = path.join(__dirname, '..', 'templates');
-  const requiredTemplates = [
-    'setup-template.md',
-    'instructions.md',
-    'ignore.md'
-  ];
-  
-  for (const template of requiredTemplates) {
-    const templatePath = path.join(templatesDir, template);
-    if (await fs.pathExists(templatePath)) {
-      const content = await fs.readFile(templatePath, 'utf-8');
-      
-      // Check for injection points in setup template
-      if (template === 'setup-template.md') {
-        const injectionPoints = [
-          '<!-- INJECT:principles -->',
-          '<!-- INJECT:agents -->',
-          '<!-- INJECT:workflows -->',
-          '<!-- INJECT:parallel -->',
-          '<!-- INJECT:instructions-template -->'
-        ];
-        
-        let hasAllInjections = true;
-        for (const point of injectionPoints) {
-          if (!content.includes(point)) {
-            warnings.push(`⚠️  Missing injection point: ${point}`);
-            hasAllInjections = false;
-          }
-        }
-        
-        if (hasAllInjections) {
-          successes.push('✅ Setup template has all injection points');
-        }
-      } else {
-        successes.push(`✅ Template exists: ${template}`);
-      }
-    } else {
-      errors.push(`❌ Missing template: ${template}`);
-    }
-  }
+  // Templates no longer needed - using pure guideline-driven generation
+  console.log('\n📝 Template system replaced with guideline-driven generation...');
+  successes.push('✅ Pure guideline-driven generation active');
   
   // Validate commands
   console.log('\n⚙️  Checking commands...');
@@ -158,7 +117,7 @@ async function validateSystem() {
     // Check for key functions
     const requiredFunctions = [
       'loadCoreModules',
-      'composeSetupCommand',
+      'generateSetupCommand',
       'installCommands',
       'generateComposedSetupCommand'
     ];

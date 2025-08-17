@@ -1,87 +1,121 @@
 # Core Principles Module
-**Version**: 2.4.0 | **Last Updated**: 2025-01-17 | **Dependencies**: None
+**Version**: 5.0.0 | **Last Updated**: 2025-01-18 | **Dependencies**: None
 
 ## Purpose
-Fundamental principles that guide all Guild system behavior. This module is embedded into the setup command.
+Fundamental principles that guide all Guild system behavior with hierarchical agent coordination and think-only specialized agents. This module is embedded into the setup command.
 
 ## Embedded Intelligence
 
-### Claude-First Philosophy with Thinking Modes
+### Planning Router with Think-Only Agents Philosophy
 
-**Core Approach**: Trust Claude's intelligence to understand, analyze, and implement appropriately based on project context, using appropriate thinking modes for optimal cognitive resource allocation.
+**Core Approach**: Planning router handles all complex analysis using think-harder/ultrathink while specialized agents use think mode only for efficient parallel execution.
 
-**Thinking Mode Strategy**:
-- **ultrathink**: Complex architectural decisions, project-wide analysis, specialist detection
-- **think harder**: Strategic planning, coordination patterns, quality assessments  
-- **think**: Standard implementation, routine operations, pattern following
+**Hierarchical Thinking Strategy**:
+- **Planning Router**: ultrathink/think-harder for complex coordination and task decomposition
+- **Domain Lead Agents**: think mode for domain-specific coordination and sub-agent management
+- **Execution Specialists**: think mode only for focused implementation with pre-computed context
 
 **Key Principles**:
-- **Prompt-driven**: All behavior defined through prompts, not hardcoded patterns
-- **Thinking-optimized**: Match cognitive complexity to task requirements
-- **Dynamic adaptation**: Claude determines optimal approaches for each project
-- **Technology-agnostic**: Universal patterns that work with any tech stack
-- **Context-aware**: Intelligence emerges from understanding project patterns
+- **Cognitive Load Separation**: Heavy thinking upfront, light execution in parallel
+- **Hierarchical Coordination**: Planning router → domain leads → sub-agents
+- **Think-Only Execution**: All specialized agents use think mode exclusively
+- **Planning Router Orchestration**: Single point for complex decision-making
+- **Context Pre-Computation**: All complex analysis done before agent spawning
 
-### Agent Intelligence Framework
+### Reasoning-First Confirmation Framework
 
-**Dynamic Agent Creation**:
-- Claude analyzes project and determines needed specialists
-- Agents created based on actual patterns found, not predefined types
-- Each agent receives focused context for their specialization
-- No code embedding - agents use project analysis and Claude's capabilities
+**MAIN THREAD REASONING EXCLUSIVITY**: The main thread has exclusive responsibility for analyzing user prompts, identifying logical issues, and obtaining explicit user confirmation before any planning or implementation begins.
 
-**Basic Agent Pattern**:
+**MANDATORY CONFIRMATION PROTOCOL**:
 ```yaml
-Agent Creation Process:
-  1. Analyze project structure and patterns
-  2. Identify areas needing specialization
-  3. Create agents with appropriate context
-  4. Route tasks to most suitable specialists
-
-Agent Intelligence:
-  - Context package with project patterns
-  - Task-specific requirements
-  - Integration points and constraints
-  - Quality standards from project analysis
+reasoning_phase_responsibilities:
+  prompt_analysis: Parse user requirements for completeness and consistency
+  logical_issue_identification: Detect contradictions, ambiguities, or missing information
+  feasibility_assessment: Analyze technical feasibility within project context
+  assumption_validation: Identify and validate any assumptions required to proceed
+  
+confirmation_requirements:
+  explicit_understanding_presentation: Present clear interpretation of requirements
+  logical_issue_disclosure: Highlight any contradictions or ambiguities found
+  assumption_acknowledgment: State any assumptions made during analysis
+  user_validation_request: Ask explicit confirmation before proceeding
+  
+post_confirmation_handoff:
+  planning_agent_invocation: Call planning agent only after user confirms understanding
+  validated_context_transfer: Pass confirmed understanding to planning agent
+  no_planning_without_confirmation: Never proceed to planning without explicit user approval
 ```
 
-### Intelligent Parallel Architecture
+**SEPARATION OF CONCERNS**: Main thread reasons about "what" needs to be done, planning agent focuses exclusively on "how" to implement the confirmed understanding.
 
-**Parallel-First Philosophy**: Think harder about every task to identify parallelization opportunities and optimize execution strategy.
+### Hierarchical Agent Intelligence Framework
 
-**Core Parallel Strategy**:
-- **Default assumption**: Most tasks benefit from parallel execution
-- **Required evaluation**: Every task should be assessed for parallel opportunities  
-- **Dynamic scaling**: 2 instances for 3-4 tasks, 3 instances for 5+ tasks (per specialist type)
-- **Justification needed**: Single-threaded execution should have clear reasoning
-- **Performance target**: 80%+ of tasks executed in parallel
+**Planning Router Orchestration**:
+- Planning router analyzes project and decomposes tasks using complex thinking
+- Spawns domain lead agents based on project patterns and requirements
+- Pre-computes all coordination strategies and context packages
+- Handles all complex decision-making to enable think-only execution
 
-**Parallel Execution Patterns**:
+**Hierarchical Agent Creation**:
 ```yaml
-Different Specialists (Cross-domain):
-  Strategy: Execute different specialist types simultaneously
-  Example: Frontend + Backend + DevOps specialists work in parallel
-  Thinking: Standard coordination with clear boundaries
+Planning Router Process (think-harder/ultrathink):
+  1. Comprehensive task analysis and decomposition
+  2. Domain pattern detection and agent requirement analysis
+  3. File ownership assignment and conflict prevention planning
+  4. Context package creation for domain leads
 
-Same Specialist (Multi-instance):
-  Trigger: >2 similar tasks detected
-  Scaling Strategy: 
-    - 1-2 tasks → Single instance
-    - 3-4 tasks → 2 instances  
-    - 5+ tasks → 3 instances
-  Thinking: Think harder to optimize task distribution and prevent conflicts
+Domain Lead Process (think mode):
+  1. Receive complete context from planning router
+  2. Analyze workload within specialization domain
+  3. Spawn sub-agents when 3+ similar tasks detected
+  4. Distribute tasks and monitor progress
 
-Hybrid Execution:
-  Approach: Combine cross-domain and multi-instance strategies
-  Coordination: File ownership with intelligent task affinity
-  Thinking: Ultrathink for complex coordination scenarios
+Sub-Agent Process (think mode):
+  1. Execute assigned tasks with provided context
+  2. Follow established patterns and conventions
+  3. Report progress asynchronously
+  4. Escalate complex issues to domain lead
 ```
 
-**Intelligent Workflow Strategy**:
-- Main thread: Reasoning and requirement analysis (ultrathink)
-- Planning agent: Parallel execution planning and routing (think harder for coordination)
-- Implementation: Specialist execution with intelligent coordination (think for standard tasks)
-- Quality: Cross-specialist validation with appropriate thinking modes
+**Think-Only Agent Design**:
+- All agents except planning router use think mode exclusively
+- Complex coordination pre-computed by planning router
+- Simple, efficient execution with minimal cognitive overhead
+- Clear boundaries and responsibilities prevent conflicts
+
+### Hierarchical Parallel Architecture
+
+**Proactively Parallel Philosophy**: Planning router decomposes tasks into micro-tasks enabling 10-20x speedup through intelligent hierarchical coordination.
+
+**Hierarchical Parallel Strategy**:
+- **Planning Router Orchestration**: Complex task decomposition using think-harder/ultrathink
+- **Domain Lead Coordination**: Think mode for domain-specific agent management
+- **Sub-Agent Execution**: Think mode only for efficient parallel execution
+- **Performance Target**: 10-20x speedup through intelligent hierarchical coordination
+
+**Hierarchical Execution Patterns**:
+```yaml
+Planning Router (think-harder/ultrathink):
+  Strategy: Master orchestration and task decomposition
+  Responsibilities: Agent spawning, conflict prevention, integration planning
+  Spawning: 1-5 domain leads based on project patterns
+
+Domain Leads (think mode):
+  Strategy: Domain-specific coordination and sub-agent management
+  Spawning Triggers: 3+ similar tasks → spawn 2-3 sub-agents
+  Coordination: File ownership, progress monitoring, quality assurance
+
+Sub-Agents (think mode):
+  Strategy: Focused execution with pre-computed context
+  Responsibilities: Implement specific tasks, report progress
+  Coordination: Minimal overhead through domain leads
+```
+
+**Hierarchical Workflow Strategy**:
+- Main thread: Initial reasoning and context gathering (ultrathink)
+- Planning router: Task decomposition and agent orchestration (think-harder/ultrathink)
+- Domain leads: Domain coordination and sub-agent management (think)
+- Sub-agents: Efficient parallel execution (think only)
 
 ### Quality Through Intelligence
 
@@ -91,10 +125,10 @@ Hybrid Execution:
 - Validate against requirements and integration points
 - Test when complexity or risk requires it
 
-**Thinking Mode Allocation**:
-- **ultrathink**: Architectural decisions, project analysis, complex specialist coordination
-- **think harder**: Strategic planning, parallel optimization, quality gates, complex integration
-- **think**: Standard implementation, routine tasks, pattern following, simple coordination
+**Hierarchical Thinking Mode Allocation**:
+- **ultrathink**: Planning router for massive coordination (10+ agents), complex architecture
+- **think-harder**: Planning router for moderate coordination (3-8 agents), strategic planning
+- **think**: ALL specialized agents (domain leads and sub-agents) use think mode exclusively
 
 ### Project Structure Intelligence
 
@@ -139,22 +173,24 @@ Structure Intelligence:
 
 ## Key Principles
 
-1. **Claude-First**: Trust Claude's capabilities over hardcoded logic
-2. **Thinking-Optimized**: Use appropriate thinking modes for cognitive efficiency
-3. **Parallel-Intelligent**: Think harder to identify and implement parallel opportunities
-4. **Context-Driven**: All decisions based on actual project analysis
-5. **Evaluated Parallelization**: Every task should be assessed for parallel execution
-6. **Simplicity**: Prefer clear patterns over complex specifications
-7. **Adaptability**: System adapts to any project type or technology
-8. **Performance**: Intelligent parallel execution targeting 80%+ parallel task rate
+1. **Planning Router Orchestration**: Single point for complex decision-making and coordination
+2. **Think-Only Specialized Agents**: All agents except planning router use think mode exclusively
+3. **Hierarchical Coordination**: Planning router → domain leads → sub-agents architecture
+4. **Cognitive Load Separation**: Heavy thinking upfront, light execution in parallel
+5. **Context Pre-Computation**: All complex analysis done before agent spawning
+6. **Proactively Parallel Execution**: Target 10-20x speedup through intelligent task decomposition
+7. **Reasoning-First Confirmation**: Main thread exclusively handles user prompt reasoning and logical issue identification, requiring explicit user confirmation before invoking planning agent
+8. **Dynamic Composition**: Agents are composed based on actual project analysis rather than hardcoded templates
+9. **Adaptability**: System adapts to any project type or technology through intelligent analysis
+10. **Performance**: Efficient parallel execution with minimal coordination overhead
 
 ## Unified Conflict Resolution Strategy
 
-**Intelligent Coordination Principles**:
-- **Prevention First**: File ownership prevents most conflicts
-- **Optimistic Execution**: Work in parallel with rollback capability  
-- **Graceful Degradation**: Continue with partial success when conflicts occur
-- **Think Harder**: Use enhanced thinking for complex coordination decisions
+**Hierarchical Coordination Principles**:
+- **Planning Router Prevention**: Pre-compute file ownership and conflict prevention
+- **Domain Lead Management**: Coordinate sub-agents within domain boundaries
+- **Think-Only Execution**: Simple execution agents avoid complex coordination decisions
+- **Escalation Protocol**: Complex issues escalate through hierarchy to planning router
 
 **Resolution Strategy**:
 ```yaml

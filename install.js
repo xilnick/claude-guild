@@ -419,8 +419,8 @@ async function install(cliOptions = null) {
 
 🚀 Next Steps:
    1. Run: /guild:setup  (to configure project agents)
-   2. Use: /guild "your task"  (to execute with Guild workflow)
-   3. Try: /guild --full "complex task"  (for comprehensive workflow)
+   2. Use: /guild "your task"  (convenient alias for Guild workflow)
+   3. Use: /guild:agent "your task"  (direct agent execution)
 
 💡 Quick tip: Use /guild:setup to analyze your project and create specialized agents!`);
     
@@ -458,7 +458,8 @@ async function installCommands(claudeDir, guildDirName = 'guild') {
     await installStandaloneCommandSpecs(guidelineDir, targetGuildCommandsDir);
     
     console.log(`✅ Guild commands installed successfully`);
-    console.log(`🎯 Primary Command: /guild "your task"`);
+    console.log(`🎯 Primary Command: /guild "your task" (alias for /guild:agent)`);
+    console.log(`🔧 Agent Command: /guild:agent "your task" (full agent execution)`);
     console.log(`⚙️  Setup Command: /guild:setup (configure project agents)`);
     console.log(`🔧 Management Commands: /guild:ignore, /guild:instructions`);
     
@@ -485,9 +486,14 @@ async function installBaseCommands(sourceDir, targetBaseDir, targetGuildDir) {
     
     const sourcePath = path.join(sourceDir, file);
     
-    if (file === 'guild.md') {
-      // Main guild.md goes directly to .claude/commands/
+    if (file === 'agent.md') {
+      // agent.md becomes the main /guild command at .claude/commands/guild.md
       const targetPath = path.join(targetBaseDir, 'guild.md');
+      await fs.copy(sourcePath, targetPath);
+      installedCount++;
+    } else if (file === 'guild.md') {
+      // guild.md becomes /guild:agent command in subdirectory
+      const targetPath = path.join(targetGuildDir, 'guild.md');
       await fs.copy(sourcePath, targetPath);
       installedCount++;
     } else if (file === 'setup.md') {
@@ -508,23 +514,31 @@ async function installBaseCommands(sourceDir, targetBaseDir, targetGuildDir) {
  * ENHANCED: Generate setup command from modular composition
  */
 async function generateComposedSetupCommand(guidelineDir, targetGuildDir) {
-  console.log('🔧 Composing setup command from core modules...');
+  console.log('🔧 Composing commands from core modules...');
   
   try {
     // Load all core modules dynamically
     const coreModules = await loadCoreModules(guidelineDir);
     
     // Generate setup command content
-    const setupContent = await composeSetupCommand(coreModules);
+    const setupContent = await generateSetupCommand(coreModules);
     
-    // Write composed setup command
+    // Generate guild agent command content
+    const guildContent = await generateGuildCommand(coreModules);
+    
+    // Write composed commands
     const setupPath = path.join(targetGuildDir, 'setup.md');
-    await fs.writeFile(setupPath, setupContent);
+    const guildPath = path.join(targetGuildDir, 'guild.md');
     
-    console.log(`🎨 Generated setup command with ${Object.keys(coreModules).length} embedded modules`);
+    await fs.writeFile(setupPath, setupContent);
+    await fs.writeFile(guildPath, guildContent);
+    
+    console.log(`🎨 Generated commands with ${Object.keys(coreModules).length} embedded modules:
+    - Setup command: ${setupPath}
+    - Guild agent command: ${guildPath}`);
     
   } catch (error) {
-    console.error('❌ Setup command composition failed:', error.message);
+    console.error('❌ Command composition failed:', error.message);
     
     // Fallback: copy base setup if available
     const fallbackSetupPath = path.join(__dirname, 'commands', 'setup.md');
@@ -625,69 +639,53 @@ function processModuleContent(content, moduleName) {
 }
 
 /**
- * ENHANCED: Compose complete setup command from modules
+ * Generate setup command from template with embedded guideline intelligence
  */
-async function composeSetupCommand(coreModules) {
-  // Load the setup template
-  const templatePath = path.join(__dirname, 'templates', 'setup-template.md');
-  let template;
+async function generateSetupCommand(coreModules) {
+  try {
+    // Load template from file
+    const templatePath = path.join(__dirname, 'guideline', 'templates', 'setup-command.md');
+    let template = await fs.readFile(templatePath, 'utf8');
+    
+    // Replace placeholders with actual module content
+    for (const [moduleKey, moduleContent] of Object.entries(coreModules)) {
+      const placeholder = `{{${moduleKey}}}`;
+      template = template.replace(new RegExp(placeholder, 'g'), moduleContent || '');
+    }
+    
+    return template;
+  } catch (error) {
+    console.error('❌ Failed to load setup command template:', error.message);
+    throw error;
+  }
+}
 
-  template = await fs.readFile(templatePath, 'utf-8');
-
-  // Inject core modules into template
-  template = template.replace(/<!-- INJECT:principles -->/g, 
-    coreModules['principles'] || '');
-  template = template.replace(/<!-- INJECT:agents -->/g,
-    coreModules['agents'] || '');
-  template = template.replace(/<!-- INJECT:workflows -->/g,
-    coreModules['workflows'] || '');
-  template = template.replace(/<!-- INJECT:parallel -->/g,
-    coreModules['parallel'] || '');
-  template = template.replace(/<!-- INJECT:instructions-template -->/g,
-    coreModules['instructions-template'] || '');
-  
-  return template;
+/**
+ * Generate guild agent command from template with embedded guideline intelligence
+ */
+async function generateGuildCommand(coreModules) {
+  try {
+    // Load template from file
+    const templatePath = path.join(__dirname, 'guideline', 'templates', 'guild-agent-command.md');
+    let template = await fs.readFile(templatePath, 'utf8');
+    
+    // Replace placeholders with actual module content
+    for (const [moduleKey, moduleContent] of Object.entries(coreModules)) {
+      const placeholder = `{{${moduleKey}}}`;
+      template = template.replace(new RegExp(placeholder, 'g'), moduleContent || '');
+    }
+    
+    return template;
+  } catch (error) {
+    console.error('❌ Failed to load guild agent command template:', error.message);
+    throw error;
+  }
 }
 
 /**
  * Generate embedded intelligence section from core modules
  */
-function generateEmbeddedIntelligenceSection(modules) {
-  let section = '';
-  
-  const moduleOrder = [
-    'principles',
-    'agents', 
-    'workflows',
-    'parallel',
-    'instructions-template'
-  ];
-  
-  for (const moduleName of moduleOrder) {
-    if (modules[moduleName]) {
-      const title = moduleName.split('-').map(w => 
-        w.charAt(0).toUpperCase() + w.slice(1)
-      ).join(' ');
-      
-      section += `\n### ${title} Intelligence (Embedded)\n\n`;
-      section += `${modules[moduleName]}\n\n`;
-    }
-  }
-  
-  // Add any additional modules not in the ordered list
-  for (const [moduleName, moduleContent] of Object.entries(modules)) {
-    if (!moduleOrder.includes(moduleName)) {
-      const title = moduleName.split('-').map(w => 
-        w.charAt(0).toUpperCase() + w.slice(1)
-      ).join(' ');
-      
-      section += `\n### ${title} Intelligence (Embedded)\n\n`;
-      section += `${moduleContent}\n\n`;
-    }
-  }
-  
-  return section;
-}
+// This function is no longer needed - using pure guideline-driven generation
 
 if (require.main === module) {
   install();

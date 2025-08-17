@@ -30,73 +30,101 @@ The Guild system is built on these fundamental principles:
 
 ### **Development Architecture**
 
-The Guild system uses a **simplified core architecture** where:
-- **Core modules** in `guideline/core/` are the single source of truth
-- **Setup command** is dynamically composed from core modules
-- **No complex generation** - just maintain core modules directly
+The Guild system uses a **template-based intelligence architecture** where:
+- **Core modules** in `guideline/core/` contain all intelligence and behavior
+- **Command templates** in `guideline/templates/` define command structure  
+- **Guild commands** are dynamically generated from templates + embedded intelligence
+- **No hardcoded logic** - templates contain structure, modules contain intelligence
 
 ### **🔄 SIMPLIFIED DEVELOPMENT WORKFLOW**
 
 When making changes to Guild intelligence or architecture:
 
-#### **1. Update Core Modules Directly**
+#### **1. Template-Based Intelligence System**
+
+The Guild system uses templates + intelligence embedding:
+
 ```
-guideline/core/
-├── principles.md        ← Core philosophy and principles
-├── agents.md           ← Generic agent framework  
-├── workflows.md        ← Essential workflow patterns
-├── parallel.md         ← Parallel execution strategies
-└── instructions-template.md ← User configuration template
+guideline/
+├── core/                    # Intelligence modules (source of truth)
+│   ├── principles.md        ← Core philosophy and principles
+│   ├── agents.md           ← Generic agent framework  
+│   ├── workflows.md        ← Essential workflow patterns
+│   ├── parallel.md         ← Parallel execution strategies
+│   ├── planning-router.md   ← Planning router intelligence
+│   ├── testing.md          ← Testing strategies
+│   ├── mcp-integration.md   ← MCP integration patterns
+│   └── instructions-template.md ← User configuration template
+└── templates/               # Command templates with placeholders
+    ├── setup-command.md     ← /guild:setup template
+    └── guild-agent-command.md ← /guild:agent template
 ```
+
+#### **2. Development Workflow**
+
+**For Intelligence Changes** (behavior, logic, patterns):
+- Edit modules in `guideline/core/` - they contain all Guild intelligence
+- Changes automatically flow to all generated commands
+
+**For Command Structure Changes** (layout, format, sections):
+- Edit templates in `guideline/templates/` 
+- Templates use `{{module-name}}` placeholders for intelligence embedding
 
 **Guidelines**:
-- Edit core modules directly - they are the authoritative source
-- Keep modules focused and embeddable
-- Ensure modules are self-contained and clear
+- **Intelligence**: Edit core modules - they are the authoritative source
+- **Structure**: Edit templates for command layout and organization
+- **Both embedded**: Templates + modules = final commands with full intelligence
 - Test composition after changes
 
-#### **2. Validate Setup Command Composition**
+#### **3. Validate Command Generation**
 ```bash
 # Test the installation process
-node install.js --test-mode
+node install.js --no-interaction --scope project
 
-# Verify setup command generation works
-npm run test-install
+# Verify both commands are generated with embedded intelligence
+ls .claude/commands/guild/setup.md    # Generated from setup-command.md template
+ls .claude/commands/guild/guild.md    # Generated from guild-agent-command.md template
 ```
 
 ### **✅ CORRECT WORKFLOW**
 
-**Task**: Update agent behavior or system principles
+**Task**: Update Guild intelligence or command structure
 
-**Step 1 - Modify Core Module**:
+**Step 1 - Identify Change Type**:
 ```bash
-# Edit the appropriate core module directly
-vim guideline/core/agents.md    # For agent changes
-vim guideline/core/workflows.md # For workflow changes
-vim guideline/core/principles.md # For principle changes
+# Intelligence changes (behavior, logic, patterns):
+vim guideline/core/agents.md           # Agent behavior
+vim guideline/core/workflows.md        # Workflow patterns
+vim guideline/core/principles.md       # Core principles
+vim guideline/core/parallel.md         # Parallel execution strategies
+
+# Structure changes (command layout, sections):
+vim guideline/templates/setup-command.md       # Setup command structure
+vim guideline/templates/guild-agent-command.md # Guild agent command structure
 ```
 
-**Step 2 - Test System**:
+**Step 2 - Test Command Generation**:
 ```bash
-# Test installation and setup command generation
-node install.js --test-mode
-npm run test-install
+# Test installation and command generation with embedded intelligence
+node install.js --no-interaction --scope project
 ```
 
-### **⚡ Benefits of Simplified Approach**
+### **⚡ Benefits of Template-Based Intelligence**
 
-✅ **Single Source of Truth**: Core modules are directly maintained  
-✅ **No Complex Generation**: Simpler workflow without extraction scripts  
-✅ **Easier Maintenance**: Direct editing without intermediate steps  
-✅ **Clear Ownership**: Each module has clear responsibility  
-✅ **Faster Iteration**: Immediate changes without generation delays
+✅ **Embedded Intelligence**: All commands get full guideline intelligence automatically  
+✅ **Separation of Concerns**: Templates handle structure, modules handle behavior  
+✅ **Single Source of Truth**: Core modules define all Guild intelligence  
+✅ **Consistent Approach**: Both setup and guild:agent commands use same pattern  
+✅ **Easy Updates**: Change intelligence once, flows to all generated commands  
+✅ **No Hardcoded Logic**: Templates contain structure, modules contain intelligence
 
 ### **🚨 Key Success Factors**
 
-1. **Edit core modules directly** - They are the authoritative source
-2. **Keep modules focused** - Each module has a clear, specific purpose  
-3. **Test after changes** - Validate installation and setup generation
-4. **Maintain simplicity** - Prefer simple patterns over complex specifications
+1. **Intelligence in modules** - Edit `guideline/core/` for behavior changes
+2. **Structure in templates** - Edit `guideline/templates/` for layout changes  
+3. **Test command generation** - Validate installation produces correct commands
+4. **No hardcoded logic** - Templates + modules = complete embedded intelligence
+5. **Maintain separation** - Keep structure (templates) and intelligence (modules) separate
 
 ---
 
