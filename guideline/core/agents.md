@@ -1,60 +1,202 @@
 # Agent Framework Module
-**Version**: 2.3.0 | **Last Updated**: 2025-01-16 | **Dependencies**: principles.md
+**Version**: 2.4.0 | **Last Updated**: 2025-01-17 | **Dependencies**: principles.md
 
 ## Purpose
 Generic agent framework that enables dynamic specialist creation based on project analysis. This module is embedded into the setup command.
 
 ## Embedded Intelligence
 
-### Generic Agent Architecture
+### Intelligent Specialist Architecture
 
-**Dynamic Specialization**: Claude creates specialists based on actual project patterns, not predefined types.
+**Smart Agent Detection**: Claude uses ultrathink to analyze projects and intelligently creates specialists when patterns indicate they would be beneficial.
 
-**Core Agent Types**:
+**Intelligent Specialist Patterns**:
 ```yaml
-Research Agents:
-  purpose: Gather context and analyze patterns
-  thinking_mode: think
-  parallel: true (up to 3 instances)
-  examples: project analysis, technology research, pattern discovery
+Project Analysis Triggers:
+  startup: Ultrathink to analyze project for specialist opportunities
+  file_discovery: Think harder to detect specialist domains from file patterns
+  task_complexity: Think harder to determine when specialists would help
+  
+Intelligent Specialist Creation:
+  codebase_scan: Analyze patterns that benefit from specialists
+  smart_creation: Create appropriate specialists based on analysis
+  context_sharing: Create shared context packages for coordination
+  early_preparation: Think ahead to prepare specialists for implementation
+
+Core Agent Types:
+```yaml
+Meta-Planning Agent:
+  purpose: Project analysis and specialist orchestration
+  thinking_mode: ultrathink
+  parallel: false (single orchestrator)
+  role: Intelligently detect and create appropriate specialists
+  responsibility: Project pattern analysis and specialist management
+  triggers: Project startup, file discovery, complexity analysis
 
 Planning Agent:
-  purpose: Task decomposition and intelligent routing
-  thinking_mode: ultrathink
+  purpose: Task decomposition and parallel execution coordination
+  thinking_mode: think harder
   parallel: false (single coordinator)
   role: Break down work and route to appropriate specialists
+  responsibility: Evaluate parallelization opportunities for every task
 
 Implementation Specialists:
-  purpose: Execute specific areas of work
+  purpose: Execute domain-specific work with shared context
   thinking_mode: think
-  parallel: true (up to 3 per specialization)
-  created: Based on project analysis and task requirements
-
-Quality Specialists:
-  purpose: Validation, testing, verification when needed
-  thinking_mode: think
-  parallel: true (up to 3 instances)
-  triggered: When complexity or risk requires validation
+  parallel: true (when >2 tasks per specialist type)
+  created: Based on intelligent project analysis
+  scaling: Dynamic - 2 instances for 3-4 tasks, 3 instances for 5+ tasks
+  context: Shared context pool with intelligent coordination
 ```
 
-### Agent Creation Process
+### Intelligent Specialist Detection Catalog
 
-**Pattern-Based Generation**:
+**Pattern Recognition**: Meta-planning agent uses ultrathink to analyze project patterns and intelligently creates specialists when beneficial.
+
+**Specialist Creation Triggers**:
 ```yaml
-Project Analysis:
-  1. Claude examines project structure and patterns
-  2. Identifies areas requiring specialized attention
-  3. Determines appropriate specialist types
+Frontend Specialists:
+  triggers: 
+    - React/Vue/Angular files detected (*.jsx, *.tsx, *.vue)
+    - Component directories with >3 components
+    - UI state management patterns (Redux, Vuex, Context)
+    - Frontend test files detected
+  creation: When frontend patterns detected (think harder to determine benefit)
+  context_sharing: Component patterns, design system, state flows
+  responsibilities: UI components, client-side logic, styling, frontend tests
+
+Backend Specialists:
+  triggers:
+    - API endpoint files detected (routes/, api/, controllers/)
+    - Database models or schemas (models/, entities/, schema/)
+    - Service layer patterns (services/, business/)
+    - Backend configuration (config/, middleware/)
+  creation: When backend patterns detected (think harder to evaluate complexity)
+  context_sharing: Data models, API contracts, business rules
+  responsibilities: REST/GraphQL APIs, database operations, business logic, auth
+
+CLI Specialists:
+  triggers:
+    - CLI command definitions (cli/, bin/, commands/)
+    - Package.json scripts with complex patterns
+    - Command-line tools detected (commander.js, click, argparse)
+    - Automation scripts (scripts/, tasks/)
+  creation: When CLI patterns found (think to assess tool complexity)
+  context_sharing: Command patterns, help systems, configuration
+  responsibilities: CLI commands, automation scripts, build tools, deployment
+
+Database Specialists:
+  triggers:
+    - Migration files detected (migrations/, db/migrate/)
+    - Schema definitions (schema.sql, models/, entities/)
+    - Database configuration (database.yml, knexfile.js)
+    - Query files or repositories (queries/, repositories/)
+  creation: When database patterns found (think harder for schema complexity)
+  context_sharing: Schema patterns, migration strategies, query optimization
+  responsibilities: Database schema, queries, migrations, data modeling
+
+DevOps Specialists:
+  triggers:
+    - Dockerfile or docker-compose.yml detected
+    - CI/CD configuration (.github/, .gitlab-ci.yml, Jenkinsfile)
+    - Infrastructure as code (terraform/, ansible/, k8s/)
+    - Deployment scripts (deploy/, scripts/)
+  creation: When infrastructure patterns found (think harder for deployment complexity)
+  context_sharing: Deployment patterns, environment configuration
+  responsibilities: Deployment pipelines, containerization, infrastructure
+
+Test Specialists:
+  triggers:
+    - Test files detected (*.test.*, *.spec.*, __tests__/)
+    - Test configuration (jest.config.js, pytest.ini, vitest.config.ts)
+    - E2E test patterns (cypress/, playwright/, selenium/)
+    - Test utilities or fixtures
+  creation: When testing patterns found (think to evaluate test strategy)
+  context_sharing: Test patterns, fixtures, assertion libraries
+  responsibilities: Test creation, test automation, quality assurance
+
+Documentation Specialists:
+  triggers:
+    - Documentation files (docs/, documentation/, *.md files)
+    - API documentation tools (swagger/, openapi/)
+    - README files with complex structure
+    - Documentation generation tools
+  creation: When documentation patterns found (think to assess documentation needs)
+  context_sharing: Documentation styles, API documentation patterns
+  responsibilities: Documentation creation, API documentation, user guides
+
+Architecture Specialists:
+  triggers:
+    - Complex project structure (>5 directories, >20 files)
+    - Multiple technology stacks detected
+    - Microservices patterns (multiple services/, apps/)
+    - Cross-cutting concerns (logging/, monitoring/, security/)
+  creation: For complex architectures (ultrathink for system design decisions)
+  context_sharing: System-wide patterns and architectural interactions
+  responsibilities: System design, integration patterns, cross-cutting concerns
+```
+
+### Intelligent Agent Creation Process
+
+**Smart Pattern Analysis**:
+```yaml
+Intelligent Project Analysis:
+  startup_analysis: Ultrathink to analyze project for specialist opportunities
+  pattern_monitoring: Think harder to detect emerging specialist needs
+  complexity_assessment: Think harder to determine specialist benefits
+  context_preparation: Create shared context packages for coordination
+
+Smart Specialist Creation:
+  pattern_recognition: Analyze patterns intelligently to determine value
+  intelligent_creation: Create specialists when analysis shows benefit
+  context_sharing: Build shared context for effective coordination
+  preparation: Think ahead to prepare specialists for upcoming work
+
+Shared Context Architecture:
+  context_pool: 
+    - Specialists share common project understanding
+    - Context updates flow between related specialists
+    - Patterns and conventions accessible to all specialists
+    - Cross-specialist communication through shared context
+    
+  context_packages:
+    - Domain expertise built on shared foundation
+    - Updates shared when specialists discover new patterns
+    - Intelligent conflict detection and resolution
+    - Knowledge sharing between related specialists
+
+Context Structure:
+  shared_foundation:
+    project_patterns: Project conventions and established styles
+    technology_context: Technology understanding and best practices
+    architectural_decisions: System design patterns and principles
+    integration_points: Component interfaces and boundaries
+    
+  specialist_expertise:
+    domain_knowledge: Deep understanding of specialist's area
+    related_patterns: Patterns from closely related specialists
+    dependencies: Understanding of upstream/downstream impacts
+    quality_standards: Domain-specific validation criteria
+    
+  intelligent_updates:
+    context_sharing: Think to synchronize important context changes
+    pattern_learning: Learn from new patterns and decisions
+    conflict_resolution: Think harder to resolve context conflicts
+    knowledge_flow: Cross-pollination between specialists
+
+Agent Creation Process:
+  1. Ultrathink: Examine project structure and identify patterns
+  2. Think harder: Assess areas requiring specialized attention
+  3. Think: Determine appropriate specialist types and create agents
   4. Creates agents with focused context packages
 
 Specialization Examples:
   # Based on discovered patterns, not hardcoded types
-  - Interface patterns → interface specialist
-  - Service patterns → service specialist
-  - Data patterns → data specialist
-  - Integration patterns → integration specialist
-  - Security patterns → security specialist
-  - Performance patterns → performance specialist
+  - Frontend patterns → frontend specialist
+  - Backend patterns → backend specialist
+  - CLI patterns → CLI specialist
+  - Database patterns → database specialist
+  - API patterns → API specialist
 
 Context Package Creation:
   - Project-specific patterns and conventions
@@ -64,142 +206,145 @@ Context Package Creation:
   - Specific task requirements and success criteria
 ```
 
-### Agent Intelligence Model
+### Intelligent Context Model
 
-**No Code Embedding**: Agents receive analysis and use Claude's full capabilities, never hardcoded templates.
+**Shared Context Pool**: Specialists share context intelligently to coordinate effectively and avoid conflicts.
 
-**Context-Driven Behavior**:
+**Smart Context-Driven Behavior**:
 ```yaml
-Enhanced Agent Context Package:
+Intelligent Context Architecture:
+  shared_context:
+    context_sharing: Specialists maintain shared understanding of project
+    pattern_sharing: Discoveries shared between related specialists
+    conflict_resolution: Think harder to detect and resolve context conflicts
+    knowledge_evolution: Continuous learning and pattern refinement
+
+  specialist_layers:
+    foundation_layer: Shared project understanding (all specialists)
+    domain_layer: Specialist-specific expertise and patterns
+    integration_layer: Cross-specialist communication and coordination
+    adaptation_layer: Learning and context evolution over time
+
+Context Coordination:
+  intelligent_discovery: New patterns shared when relevant to other specialists
+  context_flow: Context updates flow between related specialists
+  conflict_detection: Think harder to identify contradicting patterns
+  resolution_protocols: Intelligent conflict resolution using context analysis
+  
+Smart Agent Coordination:
+  complexity_assessment: Think harder to determine when specialists should engage
+  pattern_recognition: Engage specialists when their expertise patterns detected
+  quality_triggers: Think to involve specialists for quality concerns
+  integration_coordination: Think harder to coordinate specialists for integration
+
+Agent Context Package:
   project_patterns: Discovered conventions and architectural styles
   technology_context: Relevant best practices and patterns
   task_requirements: Specific work to accomplish
   integration_points: Boundaries and interfaces with other work
   quality_standards: Expected quality criteria and validation approaches
-  
-  # Enhanced for Complex Projects
-  project_structure:
-    root_path: Absolute path to project root (working directory)
-    submodules: [{name, path, remote_url, boundaries}]
-    packages: [{name, path, type, dependencies, scope}]
-    languages: {path_pattern → primary_language_and_patterns}
-    config_files: [{type, path, scope, related_configs}]
-    boundaries: 
-      submodule_boundaries: Clear separation points between submodules
-      package_boundaries: Monorepo package isolation rules
-      service_boundaries: Microservice and API boundaries
-      language_boundaries: Cross-language interface definitions
-    cross_dependencies: [{from_path, to_path, type, interface}]
-    
-  structure_awareness:
-    monorepo_coordination: How to handle workspace operations
-    submodule_protocols: When and how to modify submodule content
-    cross_language_interfaces: How different languages interact
-    dependency_chains: Understanding of dependency flow
 
-Agent File Operation Rules:
-  1. Check `{project_root}/.guild/ignore.md` patterns before file operations
-  2. Exclude matching files from automatic analysis
-  3. Skip ignored files during batch modifications
-  4. Allow access when user explicitly names ignored files
-  5. Report when accessing ignored files by explicit request
-  6. Respect submodule boundaries (understand when crossing is appropriate)
-  7. Honor package/workspace isolation in monorepos
-  8. Maintain cross-language interface consistency
-
-Agent Execution with Structure Awareness:
-  1. Analyze provided context package including project structure
-  2. Understand task requirements within structural constraints
-  3. Apply Claude's full capabilities respecting boundaries
-  4. Follow discovered patterns across all project components
-  5. Coordinate changes across submodules/packages when needed
-  6. Validate against success criteria and structural integrity
+Agent Operation Guidelines:
+  1. Use standard Read/Write tools for all .guild directory operations
+  2. Check `.guild/ignore.md` patterns before file operations
+  3. Exclude matching files from automatic analysis
+  4. Work on assigned files to prevent conflicts
+  5. Follow discovered patterns across project components
+  6. Share discoveries through intelligent context coordination
+  7. Think harder to resolve conflicts through shared context
 ```
 
-### Agent Coordination
+### Intelligent Coordination Strategy
 
-**Enhanced Coordination Strategy**:
+**Smart Context Coordination**:
 ```yaml
-Lock-Free Independence Model:
+Intelligent Context Sharing:
+  shared_context:
+    - Specialists synchronize important project understanding
+    - Think to share discoveries and patterns between related specialists
+    - Think harder to detect and resolve context conflicts intelligently
+    - Cross-specialist knowledge sharing for better coordination
+    
+  smart_coordination:
+    - Think harder to determine when specialists should engage
+    - Coordinate when integration points detected
+    - Think to prevent conflicts through shared understanding
+    - Quality assurance through cross-specialist validation
+
+Context-Aware Task Management:
   file_ownership:
-    - Each file assigned to single agent instance during execution
-    - Optimistic locking with conflict detection and rollback
-    - Read-only access to project context shared across all instances
-    - Write permissions granted exclusively to assigned agent
+    - Each file assigned to primary specialist during execution
+    - Shared read access to context pool for coordination
+    - Context updated when specialists make changes
+    - Related specialists notified of relevant changes
+    
+  intelligent_boundaries:
+    - Think harder to detect integration points and dependencies
+    - Think ahead to coordinate before conflicts arise
+    - Validate changes against shared context
+    - Think harder to resolve conflicts through context intelligence
 
-  boundary_management:
-    - Clear component boundaries defined upfront in planning
-    - Interface contracts established before parallel execution
-    - Integration points marked with dependency requirements
-    - Boundary validation automated at completion checkpoints
+Smart Load Balancing:
+  intelligent_distribution:
+    - Route tasks based on specialist expertise and context affinity
+    - Think to balance load with context-aware task grouping
+    - Redistribute work when specialists become available
+    - Maintain context coherence during coordination
+    
+  context_coordination:
+    - Shared understanding of work progress and patterns
+    - Context updates shared as work progresses
+    - Cross-specialist validation and quality checks
+    - Integration testing through shared context
+    - Standard Read/Write tools for .guild operations
 
-  conflict_resolution:
-    - Follow unified conflict resolution strategy from principles.md
-    - Implement lock-free coordination with optimistic concurrency
-    - Apply automatic prevention through ownership rules
-    - Escalate complex conflicts per defined hierarchy
-
-Intelligent Load Balancing:
-  work_estimation_distribution:
-    - Tasks distributed using complexity-based algorithms
-    - Real-time workload monitoring and rebalancing
-    - Affinity-based assignment for related tasks
-    - Predictive scaling based on queue depth and complexity
-
-  adaptive_scaling:
-    - Dynamic instance spawning based on workload patterns
-    - Automatic scaling up to limits (3 per type, 20 total)
-    - Intelligent work stealing with context transfer optimization
-    - Resource monitoring with predictive adjustment algorithms
-
-  context_optimization:
-    - Shared context packages to minimize duplication
-    - Incremental context updates for efficiency
-    - Context affinity for related task assignment
-    - Memory pressure monitoring and optimization
-
-Advanced Progress Tracking:
-  real_time_monitoring:
-    - Asynchronous progress reporting with detailed metrics
-    - Performance tracking against estimated completion times
-    - Resource utilization monitoring (CPU, memory, I/O)
-    - Quality metrics collection for continuous improvement
-
-  coordination_protocols:
-    - No blocking waits during normal execution
-    - Checkpoint-based synchronization for integration points
-    - Streaming progress updates for real-time visibility
-    - Automated integration validation at completion
-
-  quality_coordination:
-    - Consistent quality gates applied across all instances
-    - Cross-instance quality metric aggregation
-    - Automated quality regression detection
-    - Quality-driven task redistribution when needed
-
-Instance Lifecycle Management:
-  spawn_coordination:
-    - Coordinated instance spawning to prevent resource conflicts
-    - Staggered startup to minimize context transfer overhead
-    - Instance health monitoring and automatic replacement
-    - Graceful shutdown with work preservation
-
-  state_management:
-    - Instance state isolation to prevent cross-contamination
-    - Shared read-only state for project context
-    - Transactional state updates for consistency
-    - State recovery mechanisms for failure scenarios
 ```
 
-### Agent Template Structure
+### Intelligent Multiple Instance Coordination
 
-**Generic Agent Definition**:
+**Smart Same-Agent Parallelization**:
+```yaml
+Instance Creation:
+  trigger: When >2 tasks identified for same specialization (think harder to assess benefit)
+  process:
+    1. Think harder to analyze task patterns for parallelization opportunities
+    2. Group tasks by required specialist type with context coordination
+    3. Spawn multiple instances when beneficial: 2 for 3-4 tasks, 3 for 5+ tasks
+    4. Think to distribute tasks using context-aware affinity grouping
+    5. Monitor progress and coordinate through shared context
+  
+Intelligent Scaling:
+  - 1-2 tasks → 1 instance with full context access
+  - 3-4 tasks → 2 instances with shared context coordination
+  - 5+ tasks → 3 instances with intelligent context synchronization
+  - Mixed specialist types → Think harder to parallelize across different specialists
+
+Example Orchestration:
+  Task: "Update all API endpoints to add authentication"
+
+  Planning Analysis (think harder):
+    - Found 12 API endpoint files
+    - All need same backend specialist
+    - Files are independent (no shared dependencies)
+
+  Execution Plan:
+    - Spawn 3 backend specialist instances
+    - Instance 1: Updates endpoints 1-4
+    - Instance 2: Updates endpoints 5-8
+    - Instance 3: Updates endpoints 9-12
+
+  Result: 12 files updated efficiently with intelligent coordination
+```
+
+### Smart Agent Template Structure
+
+**Generic Agent Definition with Intelligent Context**:
 ```yaml
 ---
 name: guild-[specialization]-specialist
 color: [auto-assigned based on type]
 model: inherit
-description: [Specific area] specialist - [determined from project analysis]
+description: [Specific area] specialist with intelligent context coordination
 thinking_mode: think
 parallel: true
 max_instances: 3
@@ -207,7 +352,7 @@ context_embedded: true
 ---
 
 ## Role
-You are a specialist in [specific area] based on analysis of this project's patterns and requirements.
+You are an intelligent specialist in [specific area] based on analysis of this project's patterns and requirements.
 
 ## Context
 Your context package includes:
@@ -216,370 +361,72 @@ Your context package includes:
 - Integration requirements and boundary definitions
 - Quality standards and validation approaches
 - Specific task requirements and success criteria
+- Shared context with related specialists for coordination
 
 ## Execution Approach
-1. Review context package for your specialization
+1. Think to review context package for your specialization
 2. Understand specific task requirements and constraints
 3. Use Claude's full capabilities to implement appropriate solution
 4. Follow discovered project patterns and conventions
-5. Validate implementation against success criteria
-6. Ensure integration compatibility with related components
+5. Use standard Read/Write tools for .guild directory operations
+6. Think to coordinate with related specialists through shared context
+7. Validate implementation against success criteria
+8. Ensure integration compatibility with related components
 
 ## Quality Standards
 - Follow project's established patterns and conventions
 - Maintain consistency with existing code style and architecture
 - Validate against provided requirements and constraints
 - Ensure proper integration with other components
-- Apply appropriate testing when complexity requires it
+- Use standard Read/Write tools for .guild operations
+- Think harder to resolve conflicts through intelligent context coordination
 ```
 
-## Multiple Instance Orchestration
+### Intelligent Concurrency and Load Balancing
 
-**Same-Agent Parallelization**:
+**Smart Scaling Settings**:
 ```yaml
-Instance Creation:
-  Trigger: Planning agent identifies multiple independent tasks for same specialization
-  Process:
-    1. Analyze task list for parallelization opportunities
-    2. Group tasks by required specialist type
-    3. Spawn multiple instances (up to 3) of same specialist
-    4. Assign task batches to each instance
-    5. Monitor progress and rebalance if needed
+Concurrency Strategy:
+  per_agent_type: 3 instances (maximum)
+  scaling_threshold: Think harder when >2 tasks for same specialist type
+  load_balancing: Intelligent task distribution with context affinity
+  coordination: File-based ownership with smart conflict prevention
 
-Example Orchestration:
-  Task: "Update all API endpoints to add authentication"
+Intelligent Scaling:
+  scaling_decisions: Think harder to determine when multiple instances beneficial
+  coordination: File ownership prevents conflicts + affinity-based grouping
+  standard_tools: All .guild operations use Read/Write tools
+  justification: Think about single-threaded vs parallel execution benefits
 
-  Planning Analysis:
-    - Found 12 API endpoint files
-    - All need same service specialist
-    - Files are independent (no shared dependencies)
-
-  Execution Plan:
-    - Spawn 3 service specialist instances
-    - Instance 1: Updates endpoints 1-4
-    - Instance 2: Updates endpoints 5-8
-    - Instance 3: Updates endpoints 9-12
-
-  Result: 12 files updated in time of 4 sequential updates
+Smart Load Balancing:
+  routing: Think to route tasks to most appropriate specialist type
+  distribution: Assign related tasks to same instances for efficiency
+  conflict_prevention: Clear file ownership assignments
+  parallel_assessment: Think harder to evaluate parallel opportunities before single-threaded execution
+  standard_operations: Use Read/Write tools for .guild directory
 ```
 
-**Smart Instance Coordination**:
+### Error Handling
+
+**Simple Error Management**:
 ```yaml
-Instance Management:
-  - Unique instance IDs (e.g., service-specialist-1, service-specialist-2)
-  - File-level ownership assignment prevents conflicts
-  - Shared read access to project context, independent write access
-  - Memory-efficient context sharing
-
-Task Assignment:
-  - Affinity-based grouping (related files to same instance)
-  - Dynamic rebalancing based on workload
-  - Work stealing protocols for idle instances
-  - Quality coordination across all instances
-
-Communication:
-  - Asynchronous progress reporting
-  - Event-driven coordination messaging
-  - Centralized coordination through planning agent
-```
-
-### Claude Instance Spawning Instructions
-
-**CRITICAL**: These are direct execution patterns for Claude to follow when managing agent instances.
-
-**Instance Detection and Spawning Protocol**:
-```yaml
-STEP 1: Parallel Opportunity Detection
-  WHEN analyzing implementation tasks:
-    task_count = count_independent_similar_tasks()
-    specialist_type = identify_required_specialist()
+Agent Missing Fallbacks:
+  IF agent NOT FOUND in .claude/agents/guild/:
+    LOG: "Agent [agent-name] not found, using fallback approach"
     
-    IF task_count >= 3 AND tasks_are_independent():
-      TRIGGER parallel instance spawning
-      optimal_instances = min(ceil(task_count / 3), 3)
-
-STEP 2: Task Distribution Strategy Selection
-  # Analyze task characteristics to choose distribution method
-  
-  Domain Affinity Distribution (PREFERRED):
-    IF tasks_group_by_business_domain():
-      user_tasks = [tasks related to users/auth/profiles]
-      product_tasks = [tasks related to products/catalog/search]  
-      order_tasks = [tasks related to orders/payments/shipping]
-      ASSIGN domain groups to instances for context coherence
-  
-  Technical Affinity Distribution:
-    ELSE IF tasks_group_by_file_type():
-      component_tasks = [*.tsx, *.jsx files]
-      service_tasks = [*.service.ts, *.api.ts files]
-      test_tasks = [*.test.ts, *.spec.ts files]
-      ASSIGN technical groups to instances for specialization
-
-  Complexity Balancing Distribution:
-    ELSE IF can_estimate_task_complexity():
-      high_complexity = [large files, many dependencies, complex patterns]
-      medium_complexity = [standard files, moderate dependencies]
-      low_complexity = [small files, simple patterns]
-      BALANCE total work across instances using estimates
-
-  Round-Robin Distribution (FALLBACK):
-    ELSE:
-      DISTRIBUTE tasks evenly: [1,4,7...], [2,5,8...], [3,6,9...]
-
-STEP 3: Instance Spawning with Task Tool
-  FOR each instance (1 to optimal_instances):
-    assigned_batch = get_tasks_for_instance(instance_number)
+    FALLBACK OPTIONS:
+    1. Execute stage using main thread with enhanced context
+    2. Skip stage if not critical to task completion  
+    3. Provide user guidance for agent setup if critical
     
-    Task [specialist-agent] (Instance {instance_number}):
-    "PARALLEL IMPLEMENTATION BATCH for: [USER_TASK]
-    
-    Instance Assignment ({instance_number}/{total_instances}):
-    Your Specific Tasks: [CLEAR_LIST_OF_ASSIGNED_TASKS]
-    Your File Ownership: [EXACT_FILES_THIS_INSTANCE_OWNS]
-    
-    Shared Context Package:
-    - Overall Objective: [USER_TASK]
-    - Project Patterns: [DISCOVERED_PATTERNS_AND_CONVENTIONS]
-    - Integration Requirements: [BOUNDARIES_AND_INTERFACES]
-    - Quality Standards: [PROJECT_QUALITY_CRITERIA]
-    
-    Instance-Specific Context:
-    - Task Batch: [DETAILED_TASK_DESCRIPTIONS_FOR_THIS_INSTANCE]
-    - Affinity Group: [DOMAIN/TECHNICAL/COMPLEXITY_GROUP_IF_APPLICABLE]
-    - Estimated Complexity: [WORK_ESTIMATION_FOR_BATCH]
-    - Dependencies: [ANY_DEPENDENCIES_OR_COORDINATION_NEEDS]
-    
-    Parallel Execution Rules:
-    - Work EXCLUSIVELY on your assigned files: [FILE_LIST]
-    - Coordinate with other instances for integration points
-    - Report progress: 'Started batch', 'Completed N/M tasks', 'Finished batch'
-    - Enable work stealing: Accept additional tasks if you finish early
-    - Prevent conflicts: No shared write access with other instances
-    
-    Expected Output: Complete implementation for your assigned task batch"
+    CONTINUE with available agents and adapted workflow
 
-STEP 4: Progress Monitoring and Coordination
-  MONITOR instance progress:
-  - Track completion status from each instance
-  - Identify fast/slow instances for potential rebalancing
-  - Collect intermediate progress reports
-  
-  ENABLE dynamic work stealing:
-  IF instance finishes early AND other instances still working:
-    available_tasks = identify_redistributable_tasks()
-    Task [fast-instance]: "Take additional work: [available_tasks]"
-
-STEP 5: Result Aggregation
-  WAIT for all instances to complete
-  COLLECT implementation results from each instance
-  VALIDATE integration between instance outputs
-  VERIFY no missing work or file conflicts
-  SYNTHESIZE final consolidated results
-```
-
-**Instance Coordination Patterns**:
-```yaml
-File Ownership Management:
-  # Critical for conflict prevention
-  instance_1_files = [file1.ts, file4.ts, file7.ts, ...]
-  instance_2_files = [file2.ts, file5.ts, file8.ts, ...]
-  instance_3_files = [file3.ts, file6.ts, file9.ts, ...]
-  
-  VALIDATE: No file appears in multiple instance assignments
-  ENSURE: Each instance has exclusive write access to assigned files
-
-Progress Reporting Protocol:
-  EACH instance reports:
-  - "Starting parallel batch: [assigned_files]"
-  - "Progress update: completed [N] of [total] assigned tasks"
-  - "Batch complete: [summary_of_changes_made]"
-  
-  AGGREGATE progress:
-  - Monitor overall completion percentage
-  - Identify bottlenecks or blocked instances
-  - Enable work redistribution when beneficial
-
-Error Recovery and Fallback:
-  IF instance fails or produces errors:
-    1. Log specific failure details and affected tasks
-    2. Extract incomplete tasks from failed instance
-    3. Redistribute failed tasks to other instances OR main thread
-    4. Continue with successful instances
-    5. Report partial completion with issue details
-  
-  GRACEFUL degradation ensures partial success even with instance failures
-```
-
-**Real Execution Examples**:
-```yaml
-Example: "Add TypeScript types to 15 JavaScript files"
-Detection: 15 independent files, frontend specialist needed
-Distribution: Technical affinity + complexity balancing
-Instance Spawning:
-  Task guild-frontend-engineer (Instance 1):
-  "Convert your assigned files to TypeScript: [file1.js, file6.js, file11.js, file14.js, file15.js]
-   Focus on complex components requiring careful type definitions."
-  
-  Task guild-frontend-engineer (Instance 2):
-  "Convert your assigned files to TypeScript: [file2.js, file5.js, file8.js, file10.js, file13.js]
-   Focus on service layer files with API type definitions."
-  
-  Task guild-frontend-engineer (Instance 3):
-  "Convert your assigned files to TypeScript: [file3.js, file4.js, file7.js, file9.js, file12.js]
-   Focus on utility and helper files with simpler type requirements."
-
-Expected: 3x speedup with technical specialization benefits
-
-Example: "Implement CRUD operations for 6 database entities"
-Detection: 6 independent entities, backend specialist needed
-Distribution: Domain affinity grouping
-Instance Spawning:
-  Task guild-backend-engineer (Instance 1):
-  "Implement CRUD for user-related entities: [User, Profile] 
-   Apply consistent authentication and authorization patterns."
-  
-  Task guild-backend-engineer (Instance 2):  
-  "Implement CRUD for product-related entities: [Product, Category]
-   Apply consistent validation and search patterns."
-  
-  Task guild-backend-engineer (Instance 3):
-  "Implement CRUD for order-related entities: [Order, Payment]
-   Apply consistent transaction and audit patterns."
-
-Expected: 3x speedup with domain expertise accumulation
-```
-
-## Concurrency and Load Balancing
-
-**Enhanced Default Settings**:
-```yaml
-Advanced Concurrency Limits:
-  per_agent_type: 3 instances (configurable, auto-tuned based on performance)
-  total_parallel: 20 agents maximum (configurable, scaled based on system resources)
-  load_balancing: intelligent task distribution with affinity and complexity awareness
-  resource_monitoring: real-time performance tracking with predictive analytics
-  context_memory: optimized context sharing to minimize memory overhead
-
-Intelligent Scaling Strategy:
-  predictive_scale_up:
-    - Anticipate capacity needs based on queue analysis
-    - Consider task complexity and estimated completion times
-    - Spawn instances before bottlenecks occur
-
-  graceful_scale_down:
-    - Monitor idle time and resource utilization
-    - Preserve context for potential reuse
-    - Coordinate shutdown to prevent work interruption
-
-  cross_specialization_work_stealing:
-    - Enable idle specialists to adapt and help overloaded specialists
-    - Context transfer protocols for seamless specialist adaptation
-    - Capability matching for appropriate task reassignment
-    - Quality preservation through supervised adaptation
-
-  adaptive_optimization:
-    - Real-time performance analysis and adjustment
-    - Historical data-driven scaling decisions
-    - Resource constraint awareness and optimization
-    - Bottleneck prediction and proactive mitigation
-
-Performance Monitoring Hooks:
-  real_time_metrics:
-    - Task completion time vs. estimates (accuracy tracking)
-    - Resource utilization per instance (CPU, memory, I/O)
-    - Context transfer overhead and optimization opportunities
-    - Quality metrics and consistency measurements
-
-  predictive_analytics:
-    - Machine learning models for performance prediction
-    - Bottleneck identification and prevention
-    - Optimal resource allocation recommendations
-    - Quality risk assessment and early warning systems
-
-  continuous_optimization:
-    - Automatic parameter tuning based on performance data
-    - A/B testing of different scaling strategies
-    - Performance regression detection and alerting
-    - Continuous improvement through feedback loops
-```
-
-**Advanced Load Balancing Rules**:
-```yaml
-Intelligent Task Distribution:
-  primary_routing:
-    - Route tasks to most appropriate specialist type using capability matching
-    - Apply affinity-based assignment for related tasks
-    - Consider context overlap and reuse opportunities
-    - Balance workload using complexity-aware algorithms
-
-  cross_specialization_adaptation:
-    - Enable specialists to handle adjacent specialization tasks when idle
-    - Provide context adaptation protocols for specialist expansion
-    - Maintain quality through supervised cross-specialization
-    - Track adaptation success rates for optimization
-
-  dynamic_rebalancing:
-    - Real-time workload monitoring and redistribution
-    - Predictive task assignment based on completion estimates
-    - Priority-based task migration for urgent requirements
-    - Load variance minimization across all active instances
-
-Advanced Resource Management:
-  capacity_monitoring:
-    - Real-time agent capacity and performance tracking
-    - Resource utilization forecasting and optimization
-    - Context memory usage monitoring and optimization
-    - I/O bandwidth and latency impact assessment
-
-  adaptive_scaling:
-    - Intelligent instance scaling based on workload patterns
-    - Context-aware spawning to minimize overhead
-    - Graceful instance termination with state preservation
-    - Resource pooling and sharing optimization
-
-  context_optimization:
-    - Dynamic context package sizing based on task requirements
-    - Shared context caching for memory efficiency
-    - Context transfer optimization for cross-specialization
-    - Context versioning and incremental updates
-
-Cross-Specialization Work Stealing:
-  capability_mapping:
-    - Map specialist capabilities and adaptation potential
-    - Identify tasks suitable for cross-specialization handling
-    - Assess context transfer requirements and overhead
-    - Evaluate quality risk and mitigation strategies
-
-  stealing_protocols:
-    - Idle specialist detection and availability advertising
-    - Task complexity assessment for stealing suitability
-    - Context transfer and adaptation procedures
-    - Quality assurance for cross-specialization work
-
-  adaptation_mechanisms:
-    - Specialist capability expansion through guided learning
-    - Context package enhancement for new specialization areas
-    - Performance monitoring for adaptation effectiveness
-    - Rollback mechanisms for unsuccessful adaptations
-
-Performance Monitoring Hooks:
-  execution_metrics:
-    - Task start/completion timestamps with duration tracking
-    - Resource consumption patterns (CPU, memory, I/O)
-    - Context loading and transfer performance
-    - Error rates and quality metrics per instance
-
-  system_metrics:
-    - Overall system throughput and efficiency
-    - Agent utilization rates and idle time analysis
-    - Cross-specialization success rates and impact
-    - Resource contention and bottleneck identification
-
-  optimization_triggers:
-    - Performance threshold alerts and automated responses
-    - Degradation detection with automatic mitigation
-    - Capacity planning recommendations based on trends
-    - Quality regression detection and correction protocols
+Task Failure Recovery:
+  IF agent task fails:
+    1. Log failure details and affected tasks
+    2. Redistribute tasks to other instances OR main thread
+    3. Continue with successful agents
+    4. Report partial completion with clear status
 ```
 
 ## Integration Points

@@ -28,7 +28,7 @@ Perform comprehensive project analysis and generate a complete Guild system tail
 - **Context-Only Agents**: Never make changes, create comprehensive context packages
 - **Implementation Agents**: Execute changes based on structured context from context-only agents
 - **Thin Agent Architecture**: Metadata-only (<20 lines) that reference centralized processes
-- **Thinking Mode Integration**: Ultrathink for strategic decisions, think-harder for analysis, think for execution
+- **Thinking Mode Integration**: ultrathink for strategic decisions and project analysis, think harder for complex planning and coordination, think for standard execution and routine tasks
 
 **Context Engineering Excellence** (Built-in):
 - **Structured Handoffs**: XML-tagged context packages with priority classification
@@ -66,7 +66,7 @@ Default: reasoning → research → planning → implementation
 ```xml
 <context-flow>
   <generation-phase>
-    Context-only agents (ultrathink/think-harder) → structured XML packages
+    Context-only agents (think) → structured XML packages
   </generation-phase>
   <transfer-phase>
     <context-package priority="critical|important|supplementary">
@@ -97,32 +97,32 @@ Default: reasoning → research → planning → implementation
 Characteristics:
   - NEVER make direct code or file changes
   - Create comprehensive context packages for implementation agents
-  - Use enhanced thinking modes (ultrathink, think-harder) for complex analysis
+  - Use appropriate thinking modes (ultrathink for complex analysis, think harder for strategic planning)
   - Generate structured handoff protocols using XML templates
   - Focus on analysis, research, planning, and specification work
 
 Agent Types:
   guild-planning-agent:
     color: yellow
-    thinking_mode: ultrathink
+    thinking_mode: think harder
     model: opus  
     role: Workflow coordination, routing, strategic planning
     
   guild-project-research-agent:
     color: blue
-    thinking_mode: think
+    thinking_mode: ultrathink
     model: inherit
     role: Project-specific context gathering, progressive detail building
     
   guild-global-research-agent:
     color: blue
-    thinking_mode: think
+    thinking_mode: think harder
     model: inherit
     role: External research, best practices integration
     
   guild-specification-agent:
     color: blue
-    thinking_mode: think-harder
+    thinking_mode: think harder
     model: inherit
     role: Documentation analysis, specification updates (ONLY agent that can update specs)
 ```
@@ -211,9 +211,9 @@ Complexity Profiling:
   Coordination Complexity: Concern interaction, orchestration, parallelization potential
 
 Intelligence Allocation Strategy:
-  Enhanced Thinking (ultrathink): Strategic planning, architecture decisions, requirement analysis
-  Analytical Thinking (think-harder): Specification analysis, complex problem solving, impact analysis
-  Efficient Execution (think): Implementation, validation, testing, routine operations
+  Ultrathink: Strategic planning, architecture decisions, project-wide analysis, specialist detection
+  Think Harder: Coordination planning, complex problem solving, quality assessment, parallel optimization
+  Think: Implementation, validation, testing, routine operations, pattern following
 ```
 
 ## 🚨 CRITICAL: NO CODE EMBEDDING POLICY
@@ -254,9 +254,9 @@ Intelligence Allocation Strategy:
 **Agent Generation Prompt Intelligence** (Embedded):
 ```yaml
 Pattern-Driven Generation:
-  Specialization Analysis: Which patterns need dedicated understanding
-  Cognitive Load Distribution: Enhanced vs standard thinking allocation
-  Context Engineering: Optimal context distribution and handoff protocols
+  Specialization Analysis: Which patterns need dedicated understanding (ultrathink for complex patterns)
+  Cognitive Load Distribution: ultrathink vs think harder vs think allocation based on complexity
+  Context Engineering: Optimal context distribution and handoff protocols (think harder for coordination)
   
 Agent Context Engineering:
   Pattern Expertise Injection: Architectural, domain, integration, quality patterns
@@ -273,7 +273,7 @@ Agent Context Engineering:
 
 1. **Pattern-Based Project Intelligence** (Using embedded prompts):
    ```
-   Perform deep pattern-based analysis of this project using all available tools.
+   Ultrathink to perform deep pattern-based analysis of this project using all available tools.
    
    Technology-Agnostic Pattern Recognition:
    - Architectural patterns (layered, microservices, component-based, event-driven, domain-driven)
@@ -282,21 +282,22 @@ Agent Context Engineering:
    - Integration patterns (external systems, interfaces, dependencies)
    - Scalability patterns (growth handling, modularity, extensibility)
    
-   Beyond Technology Labels - focus on underlying patterns that transcend tools
-   Context Understanding - domain knowledge, business rules, user interactions, operations
+   Beyond Technology Labels - ultrathink to focus on underlying patterns that transcend tools
+   Context Understanding - think harder to understand domain knowledge, business rules, user interactions, operations
    ```
 
 2. **Complexity Profiling** (Using embedded intelligence):
    ```
-   Create multi-dimensional complexity profile:
+   Think harder to create multi-dimensional complexity profile:
    - Cognitive complexity (domain knowledge, context maintenance, interconnection)
    - Structural complexity (pattern interaction, abstraction layers, integration points)
    - Change complexity (context requirements, ripple effects, validation needs)
    - Coordination complexity (concern interaction, orchestration, parallelization)
    
    Intelligence Allocation Strategy:
-   - Enhanced thinking modes for strategic decisions and complex analysis
-   - Standard thinking modes for efficient execution and routine operations
+   - Ultrathink for strategic decisions and complex architectural analysis
+   - Think harder for coordination planning and quality assessment
+   - Think for efficient execution and routine operations
    - Agent specialization level appropriate for complexity
    - Context management strategy for optimal performance
    ```
@@ -390,7 +391,7 @@ Agent Context Engineering:
 ## System Configuration
 
 **Concurrency**: Adaptive 1-3 instances per agent type with intelligent scaling  
-**Thinking Modes**: Strategic planning (ultrathink), Analysis (think-harder), Execution (think)  
+**Thinking Modes**: Strategic planning (ultrathink), Complex coordination (think harder), Standard execution (think)  
 **Context Management**: Structured XML handoffs with progressive detail building  
 **Performance**: Enhanced parallel execution with dependency-aware scheduling and real-time rebalancing  
 
@@ -414,6 +415,21 @@ Ignore patterns: Manage via `$PROJECT_ROOT/.guild/ignore.md`
 
 These are simple instructions that all Guild agents and commands follow.
 
+## Thinking Mode Strategy
+
+**Cognitive Optimization**: Use appropriate thinking modes for optimal performance and resource allocation.
+
+**Thinking Mode Guidelines**:
+- **ultrathink**: Complex architectural decisions, project-wide analysis, specialist detection, system design
+- **think harder**: Strategic planning, coordination patterns, quality assessments, parallel optimization
+- **think**: Standard implementation, routine operations, pattern following, simple coordination
+
+**Application Rules**:
+- Use ultrathink for project analysis and specialist detection
+- Use think harder for planning coordination and conflict resolution  
+- Use think for standard implementation and routine tasks
+- Match cognitive complexity to task requirements
+
 ## Enhanced Concurrency Settings
 - Adaptive 1-3 instances of each agent type based on workload analysis
 - Maximum 20 total agents with intelligent resource management
@@ -429,19 +445,19 @@ These are simple instructions that all Guild agents and commands follow.
 - Cross-specialization work stealing enables idle agents to assist overloaded specialists
 
 ## Workflow Settings
-- Always start with reasoning in main thread
-- Run project and technology research in parallel
-- Plan tasks before implementation
-- Execute implementation in parallel when possible
-- Testing is optional unless explicitly requested
-- Verification is optional unless explicitly requested
+- Always start with reasoning in main thread (ultrathink)
+- Run project and technology research in parallel (ultrathink for project analysis, think harder for global research)
+- Think harder to plan tasks before implementation
+- Think to execute implementation in parallel when possible
+- Testing is optional unless explicitly requested (think harder for quality assessment)
+- Verification is optional unless explicitly requested (think for standard validation)
 
 ## Task Routing Rules
-- Interface work goes to interface specialists
-- Service work goes to service specialists
-- Data work goes to data specialists
-- Integration work goes to integration specialists
-- Testing work goes to quality specialists
+- Think harder to route interface work to interface specialists
+- Think to route service work to service specialists
+- Think to route data work to data specialists
+- Think harder to route integration work to integration specialists
+- Think harder to route testing work to quality specialists
 
 ## Quality Standards
 - Follow existing project patterns
@@ -453,18 +469,18 @@ These are simple instructions that all Guild agents and commands follow.
 ## Context Management
 - Each agent gets only needed context
 - Avoid context duplication
-- Share research results with planning
-- Provide task-specific context to implementation
+- Think to share research results with planning
+- Think to provide task-specific context to implementation
 
 ## Coordination Rules
 - No blocking between research agents
-- Planning waits for research completion
-- Implementation runs independently
-- Integration validates completed work
+- Think harder for planning to wait for research completion
+- Think for implementation to run independently
+- Think to validate completed work during integration
 
 ## Performance Settings
-- Optimize for parallel execution
-- Minimize coordination overhead
+- Think harder to optimize for parallel execution
+- Think to minimize coordination overhead
 - Progressive result collection
 - Early feedback when possible
 

@@ -1,138 +1,59 @@
 # /guild
 
+---
+name: guild
+thinking_mode: ultrathink
+model: opus
+description: "Execute any task using Guild's intelligent 3-stage workflow with parallel agent execution"
+---
+
 **Usage**: `/guild [flags] "your task prompt"`
 
 **Interactive Mode**: `/guild [flags]` - If no task is provided, Guild will prompt you for the task interactively
 
-**Purpose**: Execute any task with Guild's comprehensive multi-stage workflow system using project-specific agents dynamically discovered at runtime.
+**Purpose**: Execute any task using Guild's simple 3-stage workflow with parallel agent execution.
 
-## ⚠️ MANDATORY AGENT ORCHESTRATION
+## Intelligent Parallel Execution Strategy
 
-**CRITICAL**: Guild operates through complete agent delegation. Main thread performs ONLY reasoning - all other work delegated to agents.
+**Smart Approach**: Guild operates with intelligent parallel execution using thinking modes for optimal performance.
 
-**KEY PRINCIPLES**:
-- Main thread: Reasoning and coordination only
-- All work: Research, planning, implementation through agents
-- Maximum parallelization whenever possible
-- 100% agent utilization for non-reasoning tasks
+**Intelligent Principles**:
+- Main thread: Reasoning and coordination with appropriate thinking modes
+- Planning agent: Think harder to evaluate parallelization for every task
+- Implementation: Think to determine parallel execution when >2 tasks for same specialist
+- Smart scaling: 2 instances for 3-4 tasks, 3 instances for 5+ tasks
+- Single-threaded execution: Think about justification when beneficial
+- TARGET: Intelligent parallel execution based on analysis
+- Standard Read/Write tools for all .guild directory operations
 
-## Workflow Stage System
+**Smart Decision Making**:
+- Planning agent thinks harder to determine optimal execution strategy
+- Think to spawn instances when threshold met (>2 tasks)
+- Agent responsibility catalog guides intelligent task routing
+- Parallel-first default with thinking mode optimization
 
-Guild uses a modular workflow stage system where you can enable/disable specific execution stages:
+## Simple 3-Stage Workflow
 
-### Default Workflow Stages (Simple 4-Stage - Always Enabled)
-- **🧠 Reasoning Stage**: Prompt analysis, typo correction, and requirement clarification (`prompt-analysis` stage)
-- **🔍 Research Stage**: Context gathering and background research (`context-research` stage)
-- **🎯 Planning Stage**: Strategic planning and implementation architecture (`planning` stage)  
-- **🔨 Implementation Stage**: Code execution and development (`implementation` stage)
+Guild uses a simple, focused workflow:
 
-**Note**: This simple 4-stage workflow is the DEFAULT. Quality stages below are OFF by default.
+### Default Workflow Stages (Always Enabled)
+- **🧠 Reasoning Stage**: Prompt analysis and requirement understanding
+- **🎯 Planning Stage**: Task decomposition and parallel execution strategy  
+- **🔨 Implementation Stage**: Parallel code execution and development
 
-### Optional Quality Stages (Require Explicit Flags)
-- **🧪 Testing Stage**: Test creation and quality assurance (`testing` stage) - **Use --test or --full**
-- **✅ Verification Stage**: Final validation against requirements (`verification` stage) - **Use --verify or --full**
-- **♻️ Refactoring Stage**: Code optimization and cleanup (`refactor-planning` + refactoring execution) - **Use --refactor or --full**
-- **🐛 Fix Stage**: Error detection and systematic debugging (`error-detection` stage) - **Use --fix**
+## Command Flags
 
-## Command Flags & Stage Triggering Logic
+### Basic Control Flags
+- `--no-reason` - Skip reasoning stage
+- `--no-plan` - Skip planning stage (reasoning only)
+- `--no-implement` - Skip implementation stage (planning only)
 
-### Disable Default Stages
-- `--no-reason` - Disable reasoning stage (skip prompt analysis)
-- `--no-plan` - Disable planning stage (skip strategic planning)
-- `--no-implement` - Disable implementation stage (planning/analysis only)
+## Stage Processing
 
-### Enable Optional Stages  
-- `--reason` - Enable reasoning-only mode (prompt analysis and debugging) when used alone
-- `--fix` - Enable fix stage (error detection and debugging) OR fix-only mode when used alone
-- `--plan` - Enable planning-only mode (no implementation, save plan to file) when used alone
-- `--research` - Enable research-only mode (no planning/implementation) when used alone
-- `--refactor` - Enable refactoring stage (code optimization with refactor-planning)
-- `--test` - Enable testing stage (test creation and validation)
-- `--verify` - Enable verification stage (requirement validation)
-- `--full` - Enable comprehensive workflow (combines --verify + --test + --refactor)
-- `--spec` - Enable specification-driven mode (update specs first, then implement)
-
-### Scope Modifiers
-- `--project` - Apply testing and refactoring to entire project (default: focused on changes only)
-
-### Workflow Control
-- `--show-plan` - Display execution plan preview and require confirmation before starting
-
-## Stage Triggering Logic
-
-### Special Stage Combinations
-
-**Reasoning-Only Mode** (when `--reason` is the ONLY flag specified):
-- **Trigger**: `/guild --reason "prompt to analyze"` with no other flags
-- **Stages**: reasoning only (no research/planning/implementation)
-- **Behavior**: Deep prompt analysis, requirement clarification, and interpretation debugging
-- **Use Case**: Prompt debugging, requirement clarification, understanding system interpretation
-
-**Fix-Only Mode** (when `--fix` is the ONLY flag specified):
-- **Trigger**: `/guild --fix "bug description"` with no other flags
-- **Stages**: reasoning → research → planning → fix stage (no implementation)
-- **Behavior**: Systematic bug fixing with root cause analysis and debugging
-- **Use Case**: Bug resolution with comprehensive analysis but no new feature implementation
-
-**Planning-Only Mode** (when `--plan` is the ONLY flag specified):
-- **Trigger**: `/guild --plan "task"` with no other flags  
-- **Stages**: reasoning → research → planning → **prompt to save plan to file**
-- **Behavior**: Create comprehensive planning documentation without implementation
-- **Use Case**: Strategic analysis and architectural design without any implementation
-
-**Research-Only Mode** (when `--research` is the ONLY flag specified):
-- **Trigger**: `/guild --research "query"` with no other flags
-- **Stages**: reasoning → research (no planning/implementation)
-- **Behavior**: Comprehensive context gathering and research synthesis
-- **Use Case**: Information gathering and context building for future tasks
-
-**Legacy Planning Mode** (when `--no-implement` is the ONLY flag specified):
-- **Trigger**: `/guild --no-implement "task"` with no other flags
-- **Stages**: reasoning → research → planning → **prompt to save output**  
-- **Behavior**: Execute reasoning, research and planning stages, then ask user if they want to save planning output to a file
-- **Use Case**: Strategic analysis and planning without any implementation (legacy support)
-
-**Refactor-Only Mode** (when `--refactor` is the ONLY flag specified):
-- **Trigger**: `/guild --refactor "task"` with no other flags  
-- **Stages**: reasoning → research → refactor-planning → refactoring execution (skips regular implementation)
-- **Behavior**: Focus entirely on code optimization, refactor-planning stage is mandatory
-- **Use Case**: Code optimization and cleanup without new feature implementation
-
-**Comprehensive Mode** (when `--full` flag is specified):
-- **Trigger**: `/guild --full "task"`
-- **Stages**: reasoning → research → planning → implementation → testing → verification → refactoring
-- **Behavior**: Complete development lifecycle from analysis through quality assurance
-- **Use Case**: Complete feature development with full quality assurance
-- **Note**: `--full` flag automatically enables `--test`, `--verify`, and `--refactor`
-
-**Specification-Only Mode** (when `--spec` is the ONLY flag specified):
-- **Trigger**: `/guild --spec "task"` with no other flags
-- **Stages**: reasoning → research → planning → spec-analysis → spec-update (no implementation)
-- **Behavior**: Create or update specifications without implementation
-- **Use Case**: Documentation management and specification creation without code changes
-
-**Specification-Driven Mode** (when `--spec` flag is combined with other flags):
-- **Trigger**: `/guild --spec "task"` combined with other flags (like --full)
-- **Stages**: reasoning → spec-analysis → spec-update → research → planning → implementation
-- **Behavior**: Specifications updated BEFORE implementation, ensuring documentation-driven development
-- **Use Case**: Feature development requiring specification updates and documentation-first approach
-- **Agent**: Automatically includes guild-spec-agent with "think-harder" mode
-- **Quality Gate**: Implementation cannot proceed until specifications are properly updated
-
-**Standard Flag Processing**:
-1. **Detect flag-only modes**: Check for single flags requiring specialized workflow
-   - `--reason` only → reasoning-only mode (reasoning stage only)
-   - `--fix` only → fix-only mode (reasoning + research + planning + fix stage)
-   - `--plan` only → planning-only mode (reasoning + research + planning + save option)
-   - `--research` only → research-only mode (reasoning + research)
-   - `--spec` only → spec-only mode (reasoning + research + planning + spec stages)
-   - `--no-implement` only → legacy planning mode (reasoning + research + planning + save option)
-2. **Start with defaults**: reasoning + research + planning + implementation (if not flag-only mode)
-3. **Process --full flag**: If present, enable test + verify + refactor stages
-4. **Process --spec flag**: If combined with other flags, enable specification-driven workflow
-5. **Apply disable flags**: Remove specified stages  
-6. **Apply enable flags**: Add optional stages
-7. **Handle special modes**: Adjust stage flow for specific combinations
+**Standard Processing**:
+1. **Start with defaults**: reasoning → planning → implementation
+2. **Apply disable flags**: Remove specified stages as requested
+3. **Execute remaining stages**: Run enabled stages with parallel agents
 
 ## Interactive Task Prompting
 
@@ -155,478 +76,126 @@ What task would you like to execute?
 **Examples for your project:**
 • [Context-specific example based on detected stack]
 • [Another relevant example]
-• [Testing/refactoring example if applicable]
+• [Simple task example]
 
 **Selected flags:** [Show any flags provided]
-**Available flags:** --reason, --fix, --plan, --research, --spec, --refactor, --test, --verify, --project, --full, --no-implement
+**Available flags:** --no-reason, --no-plan, --no-implement
 
 Enter your task description:
 ```
 
-### Context-Aware Examples
+## Intelligent Parallel Execution Flow
 
-Based on detected technologies, provide relevant examples:
+Guild intelligently executes optimized parallel workflow using thinking modes:
 
-**Frontend Project:**
-- Create a new dashboard component with UI framework
-- Add error boundary to the application
-- Implement lazy loading for routes
-
-**Backend API:**
-- Add rate limiting middleware
-- Create CRUD endpoints for resources
-- Implement authentication system
-
-**Full-Stack:**
-- Build user profile feature with API and UI
-- Add real-time notifications with WebSocket
-- Implement file upload with progress tracking
-
-## Approach Verification & Plan Preview
-
-### Approach Verification Checkpoint
-
-After the reasoning stage, Guild automatically validates the proposed approach:
-
-**Verification Process**:
-```yaml
-Technology Assessment:
-  - Evaluate if chosen technologies are appropriate for the task
-  - Detect common anti-patterns and inefficient approaches
-  - Check alignment with security and performance best practices
-  
-Common Issues Detected:
-  - Using regex for complex parsing (→ recommend proper parsers)
-  - Manual HTTP handling (→ recommend HTTP libraries)  
-  - SQL string concatenation (→ recommend parameterized queries)
-  - Insecure authentication methods (→ recommend secure alternatives)
-  - Outdated patterns (→ recommend modern alternatives)
-
-Actions When Issues Found:
-  1. HALT workflow execution immediately
-  2. Display detailed analysis of concerns
-  3. Propose specific alternative approaches
-  4. Require user confirmation to proceed or adjust
-```
-
-**Example Verification Alert**:
-```
-⚠️ Approach Verification Alert
-
-Issue: Using regex for JSON parsing is error-prone and inefficient
-Recommendation: Use proper JSON parsing libraries
-
-Alternatives:
-• JSON.parse() for JavaScript
-• json module for Python  
-• Built-in JSON support in most languages
-
-Risk Level: HIGH - Regex cannot handle nested structures correctly
-
-Would you like to:
-1. Proceed with regex approach (not recommended)
-2. Use recommended JSON parsing approach ✓
-3. Cancel and adjust requirements
-```
-
-### Plan Preview (--show-plan flag)
-
-When `--show-plan` is specified, Guild displays the complete execution plan before starting:
-
-**Plan Preview Process**:
-```yaml
-Plan Generation:
-  1. Complete reasoning and approach verification
-  2. Perform planning stage to build execution strategy
-  3. Display comprehensive plan preview
-  4. Request user confirmation before execution
-
-Plan Preview Contains:
-  - Workflow stages to execute
-  - Agents to be used (with instance counts)
-  - Task distribution strategy  
-  - Approach summary and key decisions
-  - Estimated execution timeline
-```
-
-**Example Plan Preview**:
-```
-📋 Execution Plan Preview
-
-Task: "Add JWT authentication to REST API"
-Approach: Verified ✓ - JWT with middleware integration
-
-Workflow Stages:
-✓ Reasoning (approach validation completed)
-✓ Research (gather authentication patterns)
-✓ Planning (strategy development)  
-✓ Implementation (code changes)
-
-Agents to Execute:
-• guild-project-research-agent (2 instances)
-• guild-global-research-agent (1 instance)
-• guild-planning-agent (1 instance)
-• guild-backend-engineer (adaptive 1-3 instances)
-
-Task Distribution:
-• Instance 1: JWT token generation and validation
-• Instance 2: Middleware integration and route protection
-• Instance 3: User authentication endpoints and tests
-
-Implementation Approach:
-• JWT-based stateless authentication
-• Express.js middleware integration
-• Role-based access control
-• Secure token storage recommendations
-
-Estimated Timeline: 15-20 minutes
-
-Proceed with this plan? (y/n)
-```
-
-**User Decisions**:
-- **Y/Yes**: Continue with planned execution
-- **N/No**: Stop and allow task/approach adjustments
-- **Modify**: Request specific changes to approach or scope
+1. **🧠 Reasoning**: Think harder to analyze requirements and determine approach (ultrathink for complex projects)
+2. **🎯 Planning**: Think harder to decompose task and plan intelligent parallel execution
+3. **🔨 Implementation**: Think to execute work using parallel agents when >2 tasks
 
 ## Guild Configuration Check
 
-First, read Guild instructions and discover available agents for this project:
+First, check Guild setup and discover available agents:
 
-### Read Instructions First
+### Configuration Discovery
 
-**Step 1: Load Guild Instructions**
-- Read `.guild/instructions.md` to get current configuration
-- Parse concurrency settings, workflow preferences, and project rules
-- Apply these settings to all subsequent execution
-- If missing, create with default settings during execution
+**Step 1: Check Guild Configuration**
+- Use Read tool to check `.guild/overview.md` or `.guild/instructions.md`
+- If either exists, Guild is configured
+- Use LS tool to check `.guild` directory exists
 
-### Dynamic Agent Discovery
+**Step 2: Agent Discovery**
+- Check `.claude/agents/guild/` directory for available agents
+- Identify core agents: guild-planning-agent, guild-*-research-agent
+- Identify implementation agents: guild-*-engineer agents
+- Adapt workflow based on available agents
 
-**Step 2: Check Guild Configuration Status**
-Use the Read tool to check for Guild configuration:
-- Try: Read `.guild/overview.md` (primary indicator of setup completion)
-- If that fails, try: Read `.guild/instructions.md` (project configuration)
-- If either succeeds, Guild IS configured (proceed with available resources)
-- Also check: Read `.guild/ignore.md` for ignore patterns (optional)
+### Configuration States
 
-Alternative: Use LS tool to check if `.guild` directory exists:
-- Execute: LS `.guild`
-- If successful and contains overview.md or instructions.md, Guild is configured
-
-**Step 3: Enhanced Context Discovery & Agent Analysis**
-- Check `.claude/agents/guild/` directory for Guild agents
-- Load project structure context from previous setup analysis
-- Dynamically identify available agents with structure awareness:
-  - **Core Agents**: guild-planning-agent, guild-*-research-agent
-  - **Implementation Agents**: Any guild-*-engineer agents found (including structure specialists)
-  - **Quality Agents**: guild-verification-agent, guild-spec-agent if present
-  - **Structure Specialists**: Any monorepo, polyglot, or submodule specialists
-  - **Project-Specific Agents**: Any other guild-* agents discovered
-
-- Analyze project structure capabilities:
-  - **Submodule Support**: Check if agents understand submodule boundaries
-  - **Monorepo Support**: Verify package/workspace coordination capabilities
-  - **Multi-Language Support**: Confirm cross-language interface handling
-  - **Complex Dependencies**: Validate cross-boundary coordination abilities
-
-**Step 4: Structure-Aware Workflow Adaptation**
-- If Guild configured but agents missing: Continue with main thread fallback and offer agent regeneration
-- If core agents missing: Use enhanced main thread processing with structure context
-- If implementation agents missing: Use available engineers or main thread fallback
-- If structure specialists missing: Add structure awareness to existing agents
-- If quality agents missing: Skip those stages or provide alternatives
-- Always work with what's available, providing structure context to all agents
-
-**Enhanced Context Package Distribution**:
-```yaml
-All agents receive enhanced context including:
-  project_structure: Full structure map from root
-  submodule_info: Boundaries, remotes, and integration points
-  package_info: Monorepo structure and dependencies
-  language_mapping: Cross-language interfaces and boundaries
-  coordination_rules: How to handle cross-boundary operations
-```
-
-### If Guild NOT Configured
-
-Use standard tools to determine if Guild is truly not configured:
-1. Execute: LS `.guild` - If this fails, directory does not exist
-2. Try: Read `.guild/overview.md` - If this fails, file is missing
-3. Try: Read `.guild/instructions.md` - If this fails, file is missing
-
-If ALL above are true, display this message and STOP:
-
+**If Guild NOT Configured**:
 ```
 🏛️ **Guild Not Configured**
 
-Guild is not yet set up for this project. To use the workflow:
+Guild is not yet set up for this project.
 
-1. **Run Setup**: Use `/guild:setup` to analyze your project and create appropriate agents
-2. **Flag-Based Workflow**: After setup, use `/guild [flags] "task"` with configurable workflow stages
-3. **Available Flags**: --refactor, --fix, --test, --verify, --project, --no-reason, --no-plan, --no-implement
-
-**To get started**: `/guild:setup [optional-guidance]`
+**To get started**: `/guild:setup`
 ```
 
-### If Guild Configured but Agents Missing
-
-If `.guild` exists but `.claude/agents/guild/` is missing or empty:
-
-Display this message and CONTINUE with main thread execution:
-
+**If Guild Configured but Agents Missing**:
 ```
 🏛️ **Guild Configured - Agents Need Generation**
 
-Guild setup detected but agents are missing.
-
 Options:
 1. **Regenerate Agents**: `/guild:setup --regenerate-agents`
-2. **Continue Without Agents**: The system will use main thread coordination
+2. **Continue Without Agents**: Use main thread coordination
 
-Note: Performance is optimized with agents. Consider regenerating them.
-
-Proceeding with main thread fallback execution...
+Proceeding with main thread fallback...
 ```
 
-### If Guild IS Configured
+**If Guild IS Configured**:
+Activate the 3-stage Guild workflow with available agents.
 
-**CRITICAL**: This command MUST activate the Guild workflow with user-specified flags and stages.
+## Simple 3-Stage Workflow Processing
 
-## Workflow Stage Processing
+**WORKFLOW ACTIVATION**: Execute the simple 3-stage Guild workflow:
 
-**MANDATORY WORKFLOW ACTIVATION**: Execute the flag-based Guild workflow system with configurable stages:
-
-### Stage Selection & Validation
-1. **Parse Flags**: Analyze command flags to determine stage configuration
-2. **Default Configuration**: Start with reasoning + research + planning + implementation stages enabled (4-stage workflow)
+### Stage Processing
+1. **Parse Flags**: Check for --no-* flags to disable stages
+2. **Default Configuration**: reasoning → planning → implementation
 3. **Apply Disable Flags**: Remove stages based on --no-* flags
-4. **Apply Enable Flags**: Add optional stages based on feature flags
-5. **Special Mode Detection**: Handle planning-only and refactor-only modes
-6. **Stage Validation**: Ensure at least one meaningful stage is enabled
-7. **Scope Configuration**: Set global vs focused scope for testing/refactoring stages
+4. **Execute Remaining Stages**: Run enabled stages with agents
 
-### Workflow Stage Execution Sequence
+### Stage Execution Sequence
 
-Execute activated workflow stages in this mandatory order:
+#### 1. 🧠 Reasoning Stage
+**Executor**: Main thread only
+**Thinking Mode**: ultrathink
+**Purpose**: Analyze user request and clarify requirements
+**Changes**: None - creates analysis context only
+**Output**: Task understanding and decomposition strategy
 
-### Context-Only Stages (No Changes Allowed)
+#### 2. 🎯 Planning Stage  
+**Executor**: Planning agent (guild-planning-agent)
+**Thinking Mode**: think harder for coordination and parallel optimization
+**Purpose**: Task decomposition and intelligent parallel execution strategy
+**Input**: Requirements from reasoning stage
+**Output**: Implementation plan with intelligent parallel task assignments
+**Requirement**: Think harder to evaluate parallelization for every task, think about single-threaded execution justification
 
-#### 1. 🧠 Reasoning Stage (ONLY Main Thread Work)
-**Stage**: `prompt-analysis`
-**Executor**: **MAIN THREAD ONLY** with ultrathink mode
-**Purpose**: Analyze user request, clarify requirements, create orchestration plan
-**Changes**: **NONE** - Only creates analysis and orchestration context
-**Output**: Agent orchestration plan with task decomposition
-**CRITICAL**: This is the ONLY stage executed by main thread
+#### 3. 🔨 Implementation Stage
+**Executor**: Implementation agents (guild-*-engineer)
+**Thinking Mode**: think for standard tasks, think harder for complex coordination
+**Purpose**: Think to execute work using parallel agents when >2 tasks
+**Input**: Implementation plan from planning stage
+**Output**: Completed code changes and implementations
+**Scaling**: Smart scaling: 2 instances for 3-4 tasks, 3 instances for 5+ tasks
 
-#### 1a. 🧠 Reasoning-Only Stage (flag-only mode: `--reason` alone)
-**Stage**: `reasoning-only`
-**Executor**: Main thread with ultrathink mode
-**Purpose**: Deep prompt analysis and interpretation debugging without subsequent stages
-**Changes**: **NONE** - Only provides reasoning analysis output to user
-**Input**: User prompt for analysis and clarification
-**Execution Logic**: 
-- **Execute if**: `--reason` is the only flag specified
-- **Output**: Detailed reasoning analysis, requirement clarification, and interpretation insights
-- **Focus**: Prompt debugging, understanding user intent, identifying edge cases and ambiguities
-
-#### 2. 🔍 Context Research Stage (FULL Agent Delegation)
-**Stage**: `context-research`
-**Orchestrator**: Main thread dispatches ALL context agents
-**Agent Types**: 
-  - Research agents (project, global, domain-specific)
-  - Analysis agents (patterns, complexity, dependencies)
-  - Synthesis agents (context aggregation, insights)
-  - Discovery agents (automatic exploration)
-**Purpose**: Massive parallel context generation
-**Execution**: **100% AGENT-BASED** - Zero main thread work
-
-**Parallel Execution Pattern**:
-```
-DISCOVER all context-generation agents
-CREATE task decomposition for each agent type
-DISPATCH all agents simultaneously
-STREAM results progressively
-AGGREGATE into unified context
-```
-
-#### 3. 🎯 Planning Stage (Agent Delegation)
-**Stage**: `planning`
-**Orchestrator**: Main thread coordinates planning agents
-**Agent Types**:
-  - Strategic planning agents (architecture, approach)
-  - Coordination agents (workflow, dependencies)
-  - Technical planning agents (implementation design)
-  - Risk assessment agents (mitigation strategies)
-**Purpose**: Distributed planning through specialized agents
-**Execution**: **100% AGENT-BASED** - Main thread aggregates only
-
-**Planning Orchestration**:
-```
-IDENTIFY all planning-capable agents
-DISPATCH based on planning specialization
-ENABLE inter-agent coordination
-SYNTHESIZE distributed plans
-CREATE unified execution strategy
-```
-
-### Specification-Driven Stages (--spec flag)
-
-#### 2a. 📋 Specification Analysis Stage (if --spec)
-**Stage**: `specification-analysis`
-**Agent**: guild-spec-agent (context-only)
-**Purpose**: Analyze current project specifications and identify update requirements
-**Changes**: **NONE** - Only analyzes existing specifications
-**Thinking Mode**: **MANDATORY "think-harder"** for thorough specification analysis
-**Input**: Task analysis from reasoning stage
-**Output**: Specification gap analysis and update requirements
-
-#### 2b. 📝 Specification Update Stage (if --spec)
-**Stage**: `specification-update`
-**Agent**: guild-spec-agent (specification-updates-only)
-**Purpose**: Update project specifications and documentation before implementation
-**Changes**: **SPECIFICATION UPDATES ONLY** - Updates docs/specs, never implementation
-**Scope**: API docs, technical specs, requirements, testing specifications, integration contracts
-**Quality Gate**: Implementation cannot proceed until specifications are properly updated
-**Output**: Updated specifications and implementation guidelines
-
-### Implementation Stages (Changes Allowed)
-
-#### 4. 🔨 Implementation Stage (Full Agent Parallelization)
-**Stage**: `implementation`
-**Orchestrator**: Main thread orchestrates agent swarm
-**Agent Types**:
-  - Technology engineers (frontend, backend, CLI, etc.)
-  - Domain specialists (auth, payments, analytics, etc.)
-  - Integration agents (cross-cutting, boundaries)
-  - Utility agents (helpers, async workers)
-  - Quality agents (validation, testing)
-**Purpose**: Massive parallel implementation
-**Execution**: **100% AGENT-BASED** - Agent swarm architecture
-
-**Swarm Implementation**:
-```
-DECOMPOSE implementation into parallel work
-DISCOVER all available implementation agents
-DISPATCH entire agent swarm
-ENABLE autonomous agent coordination
-STREAM progressive results
-DYNAMICALLY rebalance workload
-AGGREGATE into cohesive implementation
-```
-
-#### 4a. 🐛 Fix Stage (flag-only mode: `--fix` alone)
-**Stage**: `fix-execution`
-**Agents**: framework-coupled engineers (implementation agents)
-**Purpose**: Systematic bug detection and resolution without new feature implementation
-**Changes**: **ALLOWED** - Fixes bugs, modifies existing code for debugging
-**Input**: Bug analysis from reasoning, research context, and debugging strategy from planning
-**Execution Logic**: 
-- **Execute if**: `--fix` is the only flag specified
-- **Focus**: Root cause analysis, targeted fixes, regression prevention
-
-#### 4b. 📋 Plan Generation Stage (flag-only modes: `--plan` or `--no-implement` alone)
-**Stage**: `plan-generation`
-**Agents**: guild-planning-agent (context-only) + file generation
-**Purpose**: Create detailed planning documentation and save to file
-**Changes**: **ALLOWED** - Creates plan files in `.guild/plans/` directory
-**Input**: Strategic planning context and implementation approach
-**Execution Logic**:
-- **Execute if**: `--plan` or `--no-implement` is the only flag specified  
-- **Output**: Structured planning files with implementation guidance
-- **User Prompt**: Ask user if they want to save plan to file system
-
-#### 4c. 📝 Specification Generation Stage (flag-only mode: `--spec` alone)
-**Stage**: `specification-generation`
-**Agents**: guild-spec-agent (specification-updates-only)
-**Purpose**: Create or update project specifications without implementation
-**Changes**: **ALLOWED** - Creates/updates specification files in `.guild/specs/` directory
-**Input**: Specification requirements analysis and planning context
-**Execution Logic**:
-- **Execute if**: `--spec` is the only flag specified
-- **Output**: Structured specification files (project/component/model level)
-- **Focus**: Documentation creation without implementation changes
-
-#### 5. ♻️ Refactoring Stage (if --refactor)
-**Stages**: `refactor-planning` + refactoring execution
-**Agents**: guild-planning-agent + framework-coupled engineers
-**Purpose**: Plan and execute code optimization with scope based on --project flag
-**Execution Modes**:
-- **Refactor-Only Mode**: When `--refactor` is the only flag, replaces implementation stage entirely
-- **Combined Mode**: When `--refactor` used with other flags, executes after implementation stage
-- **Planning**: Refactor-planning stage is always mandatory when refactoring is enabled
-
-#### 6. 🐛 Fix Stage (if --fix)
-**Stage**: `error-detection`
-**Agents**: framework-coupled engineers
-**Purpose**: Systematic error identification and resolution
-
-#### 7. 🧪 Testing Stage (if --test)
-**Stage**: `testing`
-**Agents**: framework-coupled engineers
-**Purpose**: Create and execute tests with scope based on --project flag
-
-### Quality Assurance Stages (Changes Allowed)
-
-#### 5. 🧪 Testing Stage (if --test or --full)
-**Stage**: `testing`
-**Agents**: framework-coupled engineers (implementation agents)
-**Purpose**: Create comprehensive tests and validate functionality
-**Changes**: **ALLOWED** - Creates test files, modifies test suites
-**Input**: Implementation results and context from previous stages
-**Scope**: Controlled by --project flag (focused vs project-wide)
-
-#### 6. ✅ Verification Stage (if --verify or --full)
-**Stage**: `verification`
-**Agent**: guild-verification-agent (implementation agent)
-**Purpose**: Validate changes against original prompt and plan requirements  
-**Changes**: **ALLOWED** - Can fix issues discovered during validation
-**Input**: All implementation and testing results
-**Validation**: Requirements compliance, functionality verification, quality assessment
-
-#### 7. ♻️ Refactoring Stage (if --refactor or --full)
-**Stages**: `refactor-planning` + refactoring execution
-**Agents**: guild-planning-agent + framework-coupled engineers
-**Purpose**: Plan and execute code optimization with scope based on --project flag
-**Changes**: **ALLOWED** - Optimizes code structure and quality
-**Execution Modes**:
-- **Refactor-Only Mode**: When `--refactor` is the only flag, replaces implementation stage entirely
-- **Combined Mode**: When `--refactor` used with other flags, executes after implementation stage
-- **--full Mode**: Executes as final quality assurance step
-**Planning**: Refactor-planning stage is always mandatory when refactoring is enabled
+**Intelligent Parallel Execution**: Think to spawn multiple instances when >2 tasks identified
 
 ## Agent Coordination Protocol
 
-**ENHANCED SAME-AGENT PARALLELIZATION**:
-- **Adaptive Instance Spawning**: Intelligently create 1-3 instances based on workload analysis and complexity estimation
-- **Work Estimation Distribution**: Tasks distributed using complexity analysis, not simple round-robin
-- **Affinity-Based Task Grouping**: Related tasks (same domain, file type, dependencies) assigned to same instance for context reuse
-- **Performance Acceleration**: 4-5x speedup through intelligent parallel processing with minimal coordination overhead
-- **Cross-Specialization Work Stealing**: Idle specialists can adapt to help overloaded specialists
-- **Example**: 12 API endpoints → dependency analysis identifies 3 clusters → optimal distribution across instances with 13min total (vs 30min sequential)
+**INTELLIGENT PARALLEL EXECUTION**:
+- **Smart Instance Spawning**: Think to create 2-3 instances when >2 tasks exist
+- **Intelligent Task Distribution**: Think to assign related tasks to same instance for efficiency
+- **Smart File Ownership**: Each file assigned to single instance to prevent conflicts
+- **Standard Tools**: All .guild directory operations use standard Read/Write tools
+- **Thinking-Based Decisions**: Think about single-threaded execution when beneficial
 
 **DYNAMIC AGENT SELECTION**:
-- **Agent Discovery**: Dynamically find agents in `.claude/agents/guild/` at runtime
-- **Core System Agents**: Use guild-planning-agent if available, reasoning done in main thread
-- **Research Agents**: Use any guild-*-research-agent agents found
+- **Agent Discovery**: Find available agents in `.claude/agents/guild/` at runtime
+- **Core Agents**: Use guild-planning-agent if available
 - **Implementation Agents**: Use any guild-*-engineer agents discovered
-- **Quality Agents**: Use guild-verification-agent, guild-spec-agent if present
-- **Fallback Strategy**: If specific agents missing, adapt workflow or provide guidance
+- **Fallback Strategy**: Use main thread if specific agents missing
 
 **ADAPTIVE WORKFLOW**:
-- **With Full Agent Set**: Execute complete workflow with all stages
-- **Partial Agent Set**: Execute available stages, skip unavailable ones
-- **Minimal Agent Set**: Provide guidance for completing Guild setup
-- **No Agents**: Direct user to run `/guild:setup` command
+- **With Agents**: Execute 3-stage workflow with parallel agents
+- **Without Agents**: Execute using main thread coordination
+- **Standard Operations**: All file operations use standard Read/Write tools
 
-**Context Handoffs**: Clean context flow between available agents with well-defined interfaces matching discovered agent capabilities.
+## IMPLEMENTATION: Simple Agent Orchestration
 
-## IMPLEMENTATION: Agent Orchestration System
+**CRITICAL**: Standard Read/Write tools must be used for all .guild directory operations.
 
-**CRITICAL**: The following implementation steps MUST be executed by Claude Code to achieve Guild compliance:
-
-### Step 1: Agent Discovery Implementation
+### Step 1: Agent Discovery
 
 **Execute Agent Discovery**:
 ```bash
@@ -635,635 +204,190 @@ ls .claude/agents/guild/
 ```
 
 **Process Discovery Results**:
-1. **Check Configuration Status**: First verify Guild setup using Read tool:
-   - Try: Read `.guild/overview.md`
-   - Or: Read `.guild/instructions.md`
-   - If either succeeds, Guild is configured
-2. **If Guild NOT configured**: Display "Guild Not Configured" message and stop execution  
-3. **If Guild configured but agents missing**: Display "Agents Need Generation" message and continue with main thread fallback
-4. **If agents exist**: Scan available agents and parse agent types and capabilities
-5. **Build Execution Plan**: Determine workflow stages based on available resources (agents or main thread fallback)
+1. **Check Configuration**: Use Read tool to verify Guild setup
+2. **If Guild NOT configured**: Display "Guild Not Configured" message and stop
+3. **If agents missing**: Display "Agents Need Generation" and use main thread
+4. **If agents exist**: Use available agents for 3-stage workflow
 
-### Step 2: Workflow Orchestration Implementation
+### Step 2: Simple 3-Stage Execution
 
-**Multi-Stage Agent Execution**:
+#### Stage 1: Reasoning (Main Thread)
+- Analyze user prompt and clarify requirements
+- Create structured context for next stages
+- Use standard thinking mode
 
-#### Stage 1: Reasoning Stage (Main Thread with Ultrathink)
-**Implementation**:
-- Execute reasoning using ultrathink mode for comprehensive analysis
-- Analyze user prompt, correct typos, clarify requirements
-- Create structured reasoning context for subsequent agents
-- **Context Output**: Structured analysis package for next stages
-
-#### Stage 2: Research Stage (Parallel Agent Coordination)
-**Implementation**:
-```
-EXECUTE IN PARALLEL:
-
-IF guild-project-research-agent EXISTS:
-  Task guild-project-research-agent with: 
-  "Analyze project context for: [USER_TASK]
-  
-  Focus on:
-  - Codebase patterns and architecture
-  - Technology stack and constraints
-  - Quality standards and testing approaches
-  - Project-specific patterns and conventions
-  
-  Input Context: [REASONING_OUTPUT]
-  Output: Structured project research package"
-
-IF guild-global-research-agent EXISTS:
-  Task guild-global-research-agent with:
-  "Research best practices for: [USER_TASK]
-  
-  Focus on:
-  - Framework patterns and community standards
-  - Integration approaches and libraries
-  - Performance and scalability considerations
-  - Security and quality best practices
-  
-  Input Context: [REASONING_OUTPUT]
-  Output: Structured global research package"
-
-WAIT FOR PARALLEL COMPLETION
-MERGE RESEARCH RESULTS into comprehensive research context
-```
-
-#### Stage 3: Planning Stage (Strategic Coordination)
-**Implementation**:
+#### Stage 2: Planning (Planning Agent)
 ```
 IF guild-planning-agent EXISTS:
   Task guild-planning-agent with:
-  "Create implementation strategy for: [USER_TASK]
+  "Think harder to create intelligent parallel implementation strategy for: [USER_TASK]
   
-  Input Context: 
-  - Reasoning Analysis: [REASONING_OUTPUT]
-  - Research Results: [RESEARCH_OUTPUT]
+  Input Context: [REASONING_OUTPUT]
   
-  Create strategic plan including:
-  - Implementation approach and architecture
-  - Agent assignments and coordination
-  - Risk assessment and mitigation
-  - Success criteria and validation
+  Intelligent parallel execution planning:
+  - Think harder to identify independent tasks (default: evaluate parallelizable opportunities)
+  - Think to determine agent requirements using responsibility catalog
+  - Smart scaling: Think to spawn 2 instances for 3-4 tasks, 3 instances for 5+ tasks
+  - Think to plan file ownership to prevent conflicts
+  - TARGET: Intelligent parallel execution based on analysis
+  - Think about single-threaded execution when beneficial
   
-  Output: Strategic implementation plan with agent coordination"
-
-ELSE:
-  Create basic implementation plan using main thread analysis
+  Output: Implementation plan with intelligent parallel task assignments"
 ```
 
-#### Stage 4: Implementation Stage (Specialized Agent Execution)
-**Implementation**:
+#### Stage 3: Implementation (Implementation Agents)
 ```
-IDENTIFY REQUIRED IMPLEMENTATION AGENTS based on:
-- Detected technology patterns
-- Available guild-*-engineer agents
-- Task complexity and requirements
-
-FOR EACH REQUIRED IMPLEMENTATION AGENT:
-  IF agent EXISTS in .claude/agents/guild/:
-    Task [agent] with:
-    "Execute implementation for: [USER_TASK]
-    
-    Input Context:
-    - Strategic Plan: [PLANNING_OUTPUT]
-    - Research Context: [RESEARCH_OUTPUT] 
-    - Requirements: [REASONING_OUTPUT]
-    
-    Implement according to plan with focus on:
-    - Code quality and project standards
-    - Integration with existing patterns
-    - Testing and validation requirements
-    
-    Output: Implementation results and changes"
+Think to identify required implementation agents from planning output
+IF >2 tasks for same specialist type (SMART TRIGGER):
+  Think to spawn multiple instances: 2 for 3-4 tasks, 3 for 5+ tasks
+  Think to assign file ownership to prevent conflicts
+  USE standard Read/Write tools for all .guild operations
   
-  ELSE:
-    Execute implementation using main thread with available context
-
-COORDINATE IMPLEMENTATION RESULTS
-VALIDATE INTEGRATION BETWEEN AGENT OUTPUTS
-```
-
-#### Stage 5: Quality Assurance Stages (If Enabled)
-**Implementation**:
-```
-IF --test OR --full flag enabled:
-  IF guild-verification-agent EXISTS:
-    Task guild-verification-agent with:
-    "Create comprehensive tests for: [USER_TASK]
-    
-    Input Context: [IMPLEMENTATION_OUTPUT]
-    
-    Create and execute tests including:
-    - Unit tests for new functionality
-    - Integration tests for system interaction
-    - Validation tests for requirements compliance
-    
-    Output: Test results and coverage analysis"
-
-IF --verify OR --full flag enabled:
-  Task guild-verification-agent with:
-  "Validate implementation against requirements
+FOR EACH implementation task:
+  Task [agent] (Instance [N]) with:
+  "Think to execute implementation for: [USER_TASK]
   
-  Input Context: 
-  - Original Requirements: [REASONING_OUTPUT]
-  - Implementation: [IMPLEMENTATION_OUTPUT]
+  Input Context: [PLANNING_OUTPUT]
+  Your Assigned Tasks: [SPECIFIC_TASK_BATCH]
+  File Ownership: [ASSIGNED_FILES_FOR_THIS_INSTANCE]
   
-  Verify:
-  - Requirements compliance
-  - Quality standards adherence
-  - Integration correctness
+  Smart Requirements:
+  - Work only on assigned files to prevent conflicts
+  - Use standard Read/Write tools for .guild directory
+  - Think to follow project patterns from planning context
+  - Report progress and completion status
   
-  Output: Validation results and issue resolution"
-
-IF --refactor OR --full flag enabled:
-  Execute refactoring workflow with planning and implementation agents
+  Output: Implementation results for assigned batch"
 ```
 
-### Step 3: Context Engineering Implementation
+### Step 3: Standard File Operations
 
-**Structured Context Handoffs**:
-```xml
-BETWEEN EACH STAGE, CREATE CONTEXT PACKAGE:
+**Guild Directory Operations**:
+- Use Read tool for reading .guild files
+- Use Write tool for creating .guild files  
+- Use Edit tool for modifying .guild files
+- No special guild-specific file handling
 
-<context-handoff>
-  <metadata>
-    <from-stage>[source-stage]</from-stage>
-    <to-stage>[target-stage]</to-stage>
-    <timestamp>[ISO-8601]</timestamp>
-    <priority>critical</priority>
-  </metadata>
-  
-  <content>
-    <summary>[High-level overview]</summary>
-    <details>[Stage-specific results]</details>
-    <requirements>[Key requirements and constraints]</requirements>
-    <next-actions>[Recommended next steps]</next-actions>
-  </content>
-  
-  <validation>
-    <success-criteria>[How to measure success]</success-criteria>
-    <quality-gates>[Required standards]</quality-gates>
-  </validation>
-</context-handoff>
+## SIMPLE EXECUTION WORKFLOW
 
-PASS CONTEXT PACKAGE TO NEXT STAGE AGENT
-VALIDATE CONTEXT RECEIPT AND UNDERSTANDING
-```
+**CRITICAL**: Use standard Read/Write tools for all .guild directory operations.
 
-### Step 4: Error Handling and Fallbacks
-
-**Agent Missing Fallbacks**:
-```
-FOR EACH REQUIRED AGENT:
-  IF agent NOT FOUND in .claude/agents/guild/:
-    LOG: "Agent [agent-name] not found, using fallback approach"
-    
-    FALLBACK OPTIONS:
-    1. Execute stage using main thread with enhanced context
-    2. Skip stage if not critical to task completion  
-    3. Provide user guidance for agent setup if critical
-    
-    CONTINUE with available agents and adapted workflow
-```
-
-**Quality Assurance**:
-- Validate each stage completion before proceeding
-- Ensure context handoffs are successful
-- Monitor agent execution for errors or failures
-- Provide clear feedback on workflow progress and results
-
-### Step 5: Dynamic Workflow Adaptation
-
-**Adaptive Execution Based on Available Agents**:
-```
-DISCOVERED_AGENTS = scan_guild_directory()
-REQUIRED_STAGES = parse_flags_and_determine_stages()
-
-FOR EACH REQUIRED_STAGE:
-  IF required_agent_available(DISCOVERED_AGENTS):
-    execute_stage_with_agent(stage, agent, context)
-  ELSE:
-    execute_stage_with_fallback(stage, context)
-  
-  UPDATE context_package WITH stage_results
-  VALIDATE stage_completion
-
-FINAL_VALIDATION:
-- Ensure all required stages completed
-- Validate final output meets requirements
-- Provide comprehensive summary of workflow execution
-```
-
-## MANDATORY EXECUTION WORKFLOW
-
-**CRITICAL**: Guild operates through COMPLETE AGENT ORCHESTRATION. Main thread is ONLY for reasoning and coordination.
-
-### EXECUTION PHASE 1: Pre-Flight & Agent Discovery
+### EXECUTION PHASE 1: Setup & Discovery
 
 ```
-1. PARSE COMMAND FLAGS → determine workflow stages
+1. PARSE COMMAND FLAGS → determine which stages to run
 2. VALIDATE USER TASK → enter interactive mode if missing
-3. CHECK GUILD CONFIGURATION: Use Read tool to verify Guild setup:
-   - Try: Read `.guild/overview.md`
-   - Or: Read `.guild/instructions.md`
-   - If either succeeds, Guild is configured
-4. HANDLE CONFIGURATION STATUS:
-   - If NOT configured: Display "Guild Not Configured" and STOP
-   - If configured but agents missing: Display "Agents Need Generation" and continue with main thread fallback
-   - If agents available: Proceed with agent-based execution
-5. DISCOVER AND CATEGORIZE available agents by TYPE (if agents exist):
-   - Context Generation Agents (research, analysis, synthesis)
-   - Strategic Planning Agents (planning, coordination, architecture)
-   - Domain Specialist Agents (technology-specific, scope-specific)
-   - Implementation Agents (engineers, builders, integrators)
-   - Quality Assurance Agents (validation, verification, testing)
-   - Utility Agents (general-purpose, async workers)
-6. BUILD orchestration plan based on available resources (agents or main thread fallback)
+3. CHECK GUILD CONFIGURATION: Use Read tool to verify setup
+4. DISCOVER available agents in .claude/agents/guild/
+5. BUILD simple execution plan (3 stages)
 ```
 
-### EXECUTION PHASE 2: Main Thread Reasoning (ONLY Main Thread Work)
+### EXECUTION PHASE 2: Reasoning (Main Thread Only)
 
 ```
-EXECUTE with ultrathink mode (MAIN THREAD):
+EXECUTE reasoning analysis:
 "Analyze user request: [USER_TASK]
 
-Create comprehensive orchestration plan:
-- Clarify requirements and identify constraints
-- Decompose task into parallel agent assignments
-- Determine optimal agent coordination strategy
-- Define success criteria for each agent
-- Create structured context packages for agents
+- Clarify requirements and constraints
+- Identify key objectives
+- Understand scope and complexity
 
-Output: Agent orchestration plan with task decomposition"
+Output: Task understanding and requirements"
 
-SAVE as: ORCHESTRATION_PLAN
+SAVE as: TASK_ANALYSIS
 ```
 
-### EXECUTION PHASE 3: 100% Agent-Based Execution
+### EXECUTION PHASE 3: Planning (Planning Agent)
 
-#### STAGE 1: Context Generation Phase (Parallel Agent Groups)
 ```
-DISPATCH DISCOVERED CONTEXT AGENTS IN PARALLEL:
+IF guild-planning-agent EXISTS:
+  Task guild-planning-agent:
+  "Create implementation plan for: [USER_TASK]
+  
+  Input: [TASK_ANALYSIS]
+  
+  Plan:
+  - Break down into specific tasks
+  - Identify parallel execution opportunities
+  - Assign file ownership to prevent conflicts
+  - Use standard Read/Write tools for .guild operations
+  
+  Output: Implementation plan with task assignments"
 
-CONTEXT GENERATION WAVE:
-- All research-type agents → gather diverse context
-- All analysis-type agents → analyze patterns
-- All synthesis-type agents → combine insights
-- Project-specific context agents → domain knowledge
-
-EXECUTION PATTERN:
-- Main thread creates task decomposition
-- Dispatch ALL context agents simultaneously
-- Each agent works on assigned context scope
-- Progressive result aggregation
-
-WAIT for context generation completion
-AGGREGATE → COMPREHENSIVE_CONTEXT
-```
-
-#### STAGE 2: Strategic Planning Phase (Planning Agent Types)
-```
-DISPATCH PLANNING AGENTS BY CAPABILITY:
-
-PLANNING ORCHESTRATION:
-- Strategic planning agents → high-level architecture
-- Coordination agents → workflow orchestration
-- Architecture agents → technical design
-- Scope planning agents → domain-specific plans
-- Integration planning agents → cross-cutting concerns
-
-PARALLEL PLANNING:
-- Each planning agent type works on its specialty
-- Agents coordinate through shared context
-- Progressive refinement of plans
-
-WAIT for planning completion
-SYNTHESIZE → ORCHESTRATED_PLAN
-
-CRITICAL: Main thread ONLY aggregates, NEVER plans
+ELSE:
+  Create basic plan using main thread
 ```
 
-#### STAGE 3: Implementation Phase (Maximum Parallelization)
+### EXECUTION PHASE 4: Implementation (Parallel Agents)
+
 ```
-IDENTIFY implementation scopes from ORCHESTRATED_PLAN
-DISPATCH ALL IMPLEMENTATION AGENTS:
-
-IMPLEMENTATION WAVES:
-WAVE 1 - Domain Specialists:
-  - Technology-specific engineers (frontend, backend, CLI, etc.)
-  - Scope-specific specialists (auth, payments, etc.)
-  - Pattern-specific implementers (API, UI, data, etc.)
-
-WAVE 2 - Integration & Support:
-  - Integration agents (cross-cutting concerns)
-  - Utility agents (helper tasks)
-  - Async workers (parallel subtasks)
-
-WAVE 3 - Continuous Quality:
-  - Validation agents (incremental checks)
-  - Testing agents (progressive testing)
-  - Quality agents (standards enforcement)
-
-PROGRESSIVE COORDINATION:
-- Dispatch all available implementation agents
-- Agents self-organize based on dependencies
-- Continuous result streaming and aggregation
-- Dynamic re-tasking as work completes
-
-FINAL: COMPLETE_IMPLEMENTATION
-```
-
-#### MANDATORY STAGE 4: Implementation (Specialized Agent Execution with Parallelization)
-```
-DETERMINE required implementation agents based on:
-- Task requirements from REASONING_CONTEXT
-- Technology patterns from RESEARCH_CONTEXT
-- Implementation strategy from PLANNING_CONTEXT
-
-ANALYZE PARALLELIZATION OPPORTUNITIES:
-- Use embedded parallel execution intelligence from guideline modules
-- Identify multiple independent tasks requiring same specialist
-- Group similar work by agent specialization type
-- Calculate optimal instance count (min(task_count, 3) per agent type)
-
-EXECUTE PARALLEL EXECUTION PROTOCOL:
-
-FOR EACH required implementation (frontend, backend, cli, package, etc):
-  IF corresponding guild-*-engineer agent FOUND:
+FOR EACH required implementation:
+  IF multiple independent tasks AND same specialist needed:
+    SPAWN multiple instances (up to 3):
     
-    STEP 1: DETECT PARALLELIZATION POTENTIAL
-    task_list = extract_independent_tasks_from_planning()
-    specialist_needed = identify_required_specialist_type()
+    Task guild-{specialist}-engineer (Instance {N}):
+    "Execute your assigned tasks: [SPECIFIC_TASKS]
     
-    IF task_list.length >= 3 AND tasks_are_independent(task_list):
-      ENABLE parallel execution
-      instance_count = min(ceil(task_list.length / 3), 3)
-      
-      STEP 2: DISTRIBUTE TASKS INTELLIGENTLY
-      
-      # Affinity-Based Distribution (Preferred)
-      IF can_group_by_domain_affinity(task_list):
-        groups = group_by_domain(task_list)  # user, product, order domains
-        assign_groups_to_instances(groups, instance_count)
-      
-      ELSE IF can_group_by_technical_affinity(task_list):
-        groups = group_by_file_type(task_list)  # .tsx, .service.ts, .test.ts
-        assign_groups_to_instances(groups, instance_count)
-      
-      ELSE IF can_estimate_complexity(task_list):
-        # Complexity-Based Distribution
-        estimated_work = estimate_task_complexity(task_list)
-        distribute_by_work_balance(estimated_work, instance_count)
-      
-      ELSE:
-        # Round-Robin Fallback
-        distribute_round_robin(task_list, instance_count)
-      
-      STEP 3: SPAWN MULTIPLE INSTANCES using Task tool
-      
-      FOR instance 1 to instance_count:
-        assigned_tasks = get_assigned_tasks_for_instance(instance)
-        
-        Task guild-{specialist}-engineer (Instance {instance}):
-        "PARALLEL IMPLEMENTATION for: [USER_TASK]
-        
-        Your Assigned Batch ({instance}/{instance_count}):
-        [SPECIFIC_TASK_LIST_FOR_THIS_INSTANCE]
-        
-        Context Package:
-        - Overall Task: [USER_TASK]
-        - Strategic Plan: [PLANNING_CONTEXT]
-        - Technical Research: [RESEARCH_CONTEXT]  
-        - Project Patterns: [DISCOVERED_PATTERNS]
-        - Integration Requirements: [BOUNDARIES_AND_INTERFACES]
-        
-        Parallel Execution Instructions:
-        - Work ONLY on your assigned files/components: [ASSIGNED_FILE_LIST]
-        - Follow project patterns and conventions from context
-        - Coordinate with other instances for integration points
-        - Use affinity optimizations (same domain/type benefits)
-        - Report progress and completion status
-        - Apply cross-specialization assistance if capacity available
-        
-        File Ownership (Conflict Prevention):
-        - Your exclusive write access: [ASSIGNED_FILES]
-        - Read-only access: Project context and patterns
-        - No shared write operations with other instances
-        
-        Expected Output: Implementation for assigned batch with detailed changes"
-      
-      STEP 4: PARALLEL EXECUTION COORDINATION
-      - Execute all instances simultaneously using Task tool
-      - Monitor progress from each instance
-      - Collect completion reports as they finish
-      - Validate no file conflicts or missing assignments
-      
-      STEP 5: AGGREGATE PARALLEL RESULTS
-      - Wait for all instances to complete
-      - Collect and merge implementation results
-      - Validate integration between instance outputs
-      - Verify no work was missed or duplicated
-      - Create consolidated implementation report
-      
-      PERFORMANCE TRACKING:
-      - Log instance count and task distribution strategy used
-      - Note any load balancing or work stealing that occurred
-      - Report speedup achieved vs sequential execution
-      - Document any coordination issues for future optimization
-      
-    ELSE:
-      # Single Instance Execution (< 3 tasks or dependencies exist)
-      TASK single guild-{specialist}-engineer (standard execution)
-      
+    Context: [PLANNING_OUTPUT]
+    File Ownership: [ASSIGNED_FILES]
+    
+    Requirements:
+    - Use standard Read/Write tools for .guild directory
+    - Work only on assigned files
+    - Report completion status
+    
+    Output: Implementation results"
+  
   ELSE:
-    FALLBACK: Execute implementation using main thread with full context
+    Task single guild-{specialist}-engineer
 
-COORDINATE all implementation results (including parallel instance outputs)
-VALIDATE integration between different implementation aspects and parallel work
-
-EXAMPLE PARALLEL EXECUTION SCENARIOS:
-
-Scenario 1: "Add error handling to all 12 API endpoints"
-Detection: 12 independent files, backend specialist needed
-Distribution: 3 instances × 4 endpoints each
-Execution: 
-  Instance 1: [/api/users/*, /api/auth/*, /api/profiles/*, /api/settings/*]
-  Instance 2: [/api/products/*, /api/categories/*, /api/search/*, /api/reviews/*]  
-  Instance 3: [/api/orders/*, /api/payments/*, /api/shipping/*, /api/refunds/*]
-Expected: 3x speedup (4 min vs 12 min sequential)
-
-Scenario 2: "Convert 15 class components to functional with hooks"
-Detection: 15 independent components, frontend specialist needed
-Distribution: Affinity-based by domain
-Execution:
-  Instance 1: User components [UserProfile, UserList, UserCard, UserSettings, UserModal]
-  Instance 2: Product components [ProductList, ProductCard, ProductDetail, ProductSearch, ProductFilter]
-  Instance 3: Order components [OrderList, OrderCard, OrderDetail, OrderHistory, OrderTracking]
-Expected: 3x speedup + domain expertise benefits
-
-Scenario 3: "Create unit tests for 20 utility functions"
-Detection: 20 independent test files, specialist needed
-Distribution: Complexity-based (high complexity tests balanced across instances)
-Execution: Work-balanced distribution ensuring equal estimated completion times
-Expected: 3x speedup with intelligent load balancing
-```
-
-#### CONDITIONAL STAGE 5: Quality Assurance (If Flags Enabled)
-```
-IF --test OR --full flag enabled:
-  IF guild-verification-agent FOUND:
-    TASK guild-verification-agent:
-    "CREATE COMPREHENSIVE TESTS for: [USER_TASK]
-    
-    Input Context: [IMPLEMENTATION_OUTPUT]
-    
-    Testing Requirements:
-    - Unit tests for new functionality
-    - Integration tests for system interaction
-    - Edge case and error condition testing
-    - Performance validation if applicable
-    
-    Execute tests and provide results"
-
-IF --verify OR --full flag enabled:
-  TASK guild-verification-agent (or main thread):
-  "VALIDATE IMPLEMENTATION AGAINST REQUIREMENTS
-  
-  Compare:
-  - Original requirements: [REASONING_CONTEXT]
-  - Implementation results: [IMPLEMENTATION_OUTPUT]
-  
-  Verify:
-  - All requirements met
-  - Quality standards maintained
-  - Integration correctness
-  - No regression introduced
-  
-  Fix any identified issues"
-
-IF --refactor OR --full flag enabled:
-  Execute refactoring workflow following same pattern
-```
-
-### EXECUTION PHASE 4: Final Validation and Summary
-
-```
-1. VALIDATE all required stages completed successfully
-2. VERIFY implementation meets original requirements
-3. CHECK for any errors or incomplete tasks
-4. PROVIDE comprehensive summary:
-   - What was accomplished
-   - Which agents were used
-   - Any limitations or recommendations
-   - Next steps if applicable
+AGGREGATE all results
+VALIDATE integration
 ```
 
 ## Example Usage
 
 ```bash
-# Default workflow (reasoning + research + planning + implementation)
+# Default workflow (reasoning → planning → implementation)
 /guild "Add error handling to the CLI installation process"
 
-# Reasoning-only mode (prompt analysis and debugging)
-/guild --reason "Implement a scalable microservices architecture with event-driven communication"
-# Executes: reasoning only (outputs detailed prompt analysis and clarification)
+# Skip reasoning stage
+/guild --no-reason "Fix the broken build script"
+# Executes: planning → implementation
 
-# Fix-only mode (systematic bug fixing without implementation)
-/guild --fix "Installation script fails on Windows with permission errors"
-# Executes: reasoning → research → planning → fix stage
+# Planning only
+/guild --no-implement "Analyze the project structure for optimization"
+# Executes: reasoning → planning
 
-# Planning-only mode (creates detailed plans and saves to file)
-/guild --plan "Implement user authentication system with JWT tokens"
-# Executes: reasoning → research → planning → save plan option
+# Reasoning only
+/guild --no-plan --no-implement "Analyze this complex requirement"
+# Executes: reasoning only
 
-# Research-only mode (comprehensive context gathering)
-/guild --research "modern frontend framework patterns and performance optimization"
-# Executes: reasoning → research
+# Simple task execution
+/guild "Implement user login feature"
+# Executes: reasoning → planning → implementation (with parallel agents if beneficial)
 
-# Specification-only mode (creates/updates specs without implementation)
-/guild --spec "API authentication endpoints with OAuth2 support"
-# Executes: reasoning → research → planning → spec-analysis → spec-update
-
-# Legacy planning-only mode (saves to file) 
-/guild --no-implement "Analyze the NPM package structure for optimization opportunities"
-# Executes: reasoning → research → planning → option to save plan
-
-# Comprehensive workflow (--full flag: complete development lifecycle)
-/guild --full "Implement user authentication system"
-# Executes: reasoning → research → planning → implementation → testing → verification → refactoring
-
-# Refactor-only mode (special combination - replaces implementation)
-/guild --refactor "Optimize the template processing system"
-# Executes: reasoning → research → refactor-planning → refactoring
-
-# Implementation with testing
-/guild --test "Add comprehensive error handling to the CLI installation process"
-
-# Full workflow with project-wide scope
-/guild --full --project "Implement comprehensive logging system"
-
-# Comprehensive workflow for complex features
-/guild --full "Build real-time chat system with WebSocket support"
-
-# Specification-driven development (update specs first, then implement)
-/guild --spec "Add user authentication system with OAuth2 support"
-# Executes: reasoning → spec-analysis → spec-update → research → planning → implementation
-
-# Specification-driven with comprehensive quality assurance
-/guild --spec --full "Implement REST API for user management"
-# Executes: reasoning → spec-analysis → spec-update → research → planning → implementation → testing → verification → refactoring
-
-# Bug fixing with comprehensive validation
-/guild --fix --full "Fix database connection issues and ensure reliability"
-
-# Specification-driven refactoring (update specs during optimization)
-/guild --spec --refactor "Refactor authentication system to support multiple providers"
-
-# Refactoring with global scope and testing (equivalent to --full for refactoring)
-/guild --refactor --test --verify --project "Optimize the template processing system"
-
-# Reasoning disabled, direct to specification-driven implementation
-/guild --no-reason --spec "Update package.json version to 1.1.0 with spec updates"
+# Interactive mode
+/guild
+# Prompts for task, then executes 3-stage workflow
 ```
 
-## Workflow Stage Benefits
+## Simple Workflow Benefits
 
-**🎯 Configurable Workflow**: Choose exactly which stages you need for each task
-**⚡ Efficient Execution**: Skip unnecessary stages for simple tasks  
-**🔍 Comprehensive Options**: Add testing, verification, and refactoring as needed
-**🏆 Complete Lifecycle**: Use `--full` flag for comprehensive development workflow
-**🌐 Flexible Scope**: Focus changes or apply globally with --project flag
-**🧠 Smart Defaults**: Reasoning + planning + implementation enabled by default
-**🔄 Stage Composition**: Combine multiple optional stages for complex workflows
-**🎭 Special Modes**: Planning-only and refactor-only modes for specialized workflows
-**🔒 Quality Assurance**: `--full` flag ensures testing, verification, and refactoring
-**📋 Specification-First**: `--spec` flag enforces documentation-driven development
-**🎨 Agent Specialization**: Clear separation between context-only and implementation agents
+**🎯 Simple & Focused**: Just 3 essential stages for efficient execution
+**⚡ Fast Execution**: No unnecessary stages or complex coordination
+**🔄 Parallel Execution**: Automatic parallel agents when tasks are independent
+**🧠 Smart Reasoning**: Main thread focuses on understanding requirements
+**📋 Intelligent Planning**: Dedicated planning agent optimizes task execution
+**🔨 Effective Implementation**: Specialized agents handle actual work
+**📁 Standard Tools**: All .guild operations use standard Read/Write tools
+**🎨 Agent Coordination**: Clean separation of concerns with minimal overhead
 
-### --full Flag Advantages
-
-**🚀 One-Command Excellence**: Complete development lifecycle in single command
-**📋 Systematic Quality**: Mandatory testing, verification, and refactoring stages  
-**🧠 Context-Driven**: Context-only agents provide comprehensive analysis before implementation
-**⚙️ Production-Ready**: Ensures code meets quality standards before completion
-**🔄 Integrated Workflow**: Seamless flow from analysis through implementation to quality assurance
-
-### --spec Flag Advantages
-
-**📚 Documentation-Driven**: Specifications always updated before implementation
-**🎯 Requirements Clarity**: Clear specifications guide implementation decisions
-**📝 Living Documentation**: Specs remain synchronized with actual implementation
-**🔍 Think-Harder Analysis**: Guild-spec-agent uses enhanced thinking for thorough spec analysis
-**🏗️ Architecture Consistency**: Implementation follows well-defined specifications
-**✅ Quality Gates**: Implementation blocked until specifications are properly updated
-
-The flag-based workflow stage system provides precise control over Guild execution while maintaining systematic quality through configurable workflow stages and specialized agent coordination.
+The simplified 3-stage workflow provides focused execution while maintaining the power of parallel agent coordination for efficient task completion.
 
 ## IMPLEMENTATION TEMPLATES FOR CLAUDE CODE
 
-### Agent Discovery Example
+### Simple Agent Discovery
 
 **Step 1: Execute Agent Discovery**
 ```
@@ -1276,185 +400,103 @@ EXPECTED RESPONSES:
 EXAMPLE PROCESSING:
 Found agents:
 - guild-planning-agent.md → AVAILABLE
-- guild-project-research-agent.md → AVAILABLE  
 - guild-cli-engineer.md → AVAILABLE
-- guild-verification-agent.md → AVAILABLE
 
-EXECUTION PLAN: Full workflow with specialized agents
+EXECUTION PLAN: Simple 3-stage workflow with available agents
 ```
 
-### Agent Task Execution Templates
+### Simple Agent Task Templates
 
-**Template: Research Agent Invocation**
-```
-TASK guild-project-research-agent:
-
-"PROJECT CONTEXT RESEARCH for: 'Add user authentication to the CLI app'
-
-Input Context:
-- Task: Add user authentication to CLI app
-- Requirements: Secure login, JWT tokens, session management
-- Constraints: Must integrate with existing CLI architecture
-
-Analyze:
-- Current CLI project structure and patterns
-- Authentication libraries compatible with detected tech stack
-- Security best practices for CLI applications
-- Testing approaches for authentication flows
-- Integration points with existing commands
-
-Output: Structured project context package with recommendations"
-
-EXPECTED OUTPUT: Comprehensive analysis of project-specific context
-```
-
-**Template: Planning Agent Invocation**
+**Template: Planning Agent**
 ```
 TASK guild-planning-agent:
 
-"STRATEGIC IMPLEMENTATION PLANNING for: 'Add user authentication to the CLI app'
+"Think harder to create implementation plan for: [USER_TASK]
 
-Input Context:
-[REASONING_OUTPUT]: Requirements and constraints analysis
-[RESEARCH_OUTPUT]: Project context and technical recommendations
+Input Context: [REASONING_OUTPUT]
 
-Create comprehensive plan:
-- Authentication architecture design
-- Implementation phases and priorities
-- Integration strategy with existing CLI commands
-- Security considerations and best practices
-- Testing strategy and validation criteria
-- Error handling and user experience
+Plan:
+- Think harder to break down into specific tasks
+- Think harder to identify parallel execution opportunities  
+- Think to assign file ownership to prevent conflicts
+- Use standard Read/Write tools for .guild operations
 
-Output: Strategic implementation plan with step-by-step approach"
-
-EXPECTED OUTPUT: Detailed implementation strategy
+Output: Implementation plan with task assignments"
 ```
 
-**Template: Implementation Agent Invocation**
+**Template: Implementation Agent**
 ```
-TASK guild-cli-engineer:
+TASK guild-[specialist]-engineer:
 
-"IMPLEMENT CLI AUTHENTICATION for: 'Add user authentication to the CLI app'
+"Think to execute implementation for: [USER_TASK]
 
-Input Context:
-[PLANNING_OUTPUT]: Strategic implementation plan
-[RESEARCH_OUTPUT]: Technical context and recommendations
-[REASONING_OUTPUT]: Original requirements
+Input Context: [PLANNING_OUTPUT]
+File Ownership: [ASSIGNED_FILES]
 
-Implementation Requirements:
-- Follow established CLI patterns and conventions
-- Implement secure authentication with JWT tokens
-- Add login/logout commands to existing CLI
-- Integrate session management with command execution
-- Include comprehensive error handling
-- Add appropriate tests for authentication flow
+Requirements:
+- Use standard Read/Write tools for .guild directory
+- Work only on assigned files
+- Think to follow project patterns and conventions
+- Report completion status
 
-Output: Complete authentication implementation with code changes"
-
-EXPECTED OUTPUT: Working authentication system integrated into CLI
+Output: Implementation results"
 ```
 
-### Error Handling Scenarios
+### Error Handling
 
-**Scenario 1: Agent Not Found**
+**Agent Not Found**:
 ```
 IF guild-planning-agent NOT FOUND:
-  DISPLAY: "guild-planning-agent not found, using enhanced main thread planning"
-  EXECUTE: Enhanced planning using main thread with full context
+  DISPLAY: "Planning agent not found, using main thread"
+  EXECUTE: Main thread planning
   CONTINUE: with available agents
-```
-
-**Scenario 2: Agent Execution Failure**
-```
-IF agent task fails or times out:
-  DISPLAY: "Agent [agent-name] failed, executing with fallback approach"
-  EXECUTE: Fallback implementation using main thread
-  LOG: Agent failure for debugging
-  CONTINUE: workflow with remaining stages
-```
-
-**Scenario 3: No Agents Available**
-```
-IF NO agents found in .claude/agents/guild/:
-  DISPLAY: "No Guild agents found. The system will execute using main thread coordination."
-  EXECUTE: Complete workflow using enhanced main thread processing
-  RECOMMEND: "Run /guild:setup to create specialized agents for better performance"
-```
-
-### Validation Checkpoints
-
-**After Each Stage**:
-```
-VALIDATE:
-1. Stage completed successfully
-2. Required output generated  
-3. Context properly structured for next stage
-4. No critical errors occurred
-
-IF validation fails:
-  RETRY once with adjusted approach
-  IF still fails: FALLBACK to main thread execution
-  LOG issue for user awareness
 ```
 
 **Final Validation**:
 ```
 BEFORE COMPLETION:
-1. All requested stages executed
-2. Implementation meets original requirements
-3. Quality standards maintained
-4. User feedback provided on process and results
+1. All stages executed successfully
+2. Implementation meets requirements
+3. Standard tools used for .guild operations
 
 PROVIDE SUMMARY:
 - Stages executed and agents used
 - Key accomplishments
-- Any limitations or fallbacks used  
-- Recommendations for improvement
+- Any fallbacks used
 ```
 
-This implementation ensures Guild operates as designed with proactive sub-agent coordination while maintaining reliability through comprehensive error handling and fallback strategies.
+## ⚠️ CRITICAL: STANDARD TOOLS & NO CODE EMBEDDING
 
-## ⚠️ CRITICAL: AGENT TASKING WITHOUT CODE EMBEDDING
+**When tasking agents, follow these policies:**
 
-**When tasking agents, follow the NO CODE EMBEDDING policy:**
+### **✅ CORRECT Agent Tasking:**
 
-### **✅ CORRECT Agent Tasking Examples:**
-
-**Research Agent Tasking:**
+**Planning Agent:**
 ```
-"Analyze project's authentication patterns and security approach.
-Identify existing authentication methods, session management patterns,
-and security considerations used in this project."
+"Think harder to create implementation plan for user authentication feature.
+Use standard Read/Write tools for any .guild directory operations.
+Think harder to plan parallel execution when beneficial."
 ```
 
-**Planning Agent Tasking:**
-```  
-"Create implementation strategy for user authentication feature.
-Base plan on discovered project patterns and security requirements.
-Include integration approach with existing systems."
+**Implementation Agent:**
+```
+"Think to implement user authentication following project patterns.
+Use standard Read/Write tools for .guild directory.
+Work only on assigned files to prevent conflicts."
 ```
 
-**Implementation Agent Tasking:**
-```
-"Implement user authentication system following project's established patterns.
-Integrate with existing architecture and maintain consistency with
-discovered security practices and coding conventions."
-```
-
-### **❌ WRONG Agent Tasking (Violates Policy):**
+### **❌ WRONG Agent Tasking:**
 
 ```
-"Use this authentication code template:
-const express = require('express');
-const jwt = require('jsonwebtoken');
-app.post('/login', (req, res) => {"
+"Use this code template: const auth = require('...');"
 ```
 
-**Why Wrong**: Contains embedded code, assumes Express.js, violates all core principles.
+**Why Wrong**: Contains embedded code, violates intelligence principles.
 
-### **Intelligence Advantage:**
-- **Dynamic Analysis**: Agents analyze YOUR actual project
-- **Context-Aware**: Solutions fit YOUR specific architecture
-- **Future-Proof**: Works with any technology stack evolution  
-- **Intelligent**: Uses Claude's full capabilities, not templates
+### **Standard Tools Requirement:**
+- **Read Tool**: For reading .guild files
+- **Write Tool**: For creating .guild files
+- **Edit Tool**: For modifying .guild files
+- **No Special Handling**: No guild-specific file operations
+
+This simplified implementation ensures Guild operates efficiently with focused 3-stage execution while maintaining parallel agent capabilities and standard file operations.

@@ -4,7 +4,7 @@
 
 ---
 name: guild-setup-command
-thinking_mode: ultrathink
+thinking_mode: think
 model: opus
 description: "Fully self-contained Guild system setup with complete embedded guideline intelligence"
 ---
@@ -55,12 +55,12 @@ Generate specialized agents using prompt-first pattern detection and dynamic ana
 #### Context-Only Agents (Analysis & Planning)
 ```yaml
 guild-research-agent.md:
-  thinking_mode: think-harder
+  thinking_mode: think
   role: Codebase investigation, dependency analysis, pattern recognition
   constraints: NEVER make direct changes, provide comprehensive research context
 
 guild-planning-agent.md:
-  thinking_mode: ultrathink
+  thinking_mode: think
   model: opus
   role: Workflow coordination, strategic planning, architecture decisions
   constraints: NEVER make direct changes, create execution roadmaps

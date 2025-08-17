@@ -1,5 +1,5 @@
 # Instructions Template Module
-**Version**: 2.3.0 | **Last Updated**: 2025-01-16 | **Dependencies**: principles.md, agents.md, workflows.md, parallel.md
+**Version**: 2.4.0 | **Last Updated**: 2025-01-17 | **Dependencies**: principles.md, agents.md, workflows.md, parallel.md
 
 ## Purpose
 Simple instructions template for Guild system configuration. This module is embedded into the setup command.
@@ -15,6 +15,21 @@ Simple instructions template for Guild system configuration. This module is embe
 
 Simple instructions that all Guild agents follow.
 
+## Thinking Mode Strategy
+
+**Cognitive Optimization**: Use appropriate thinking modes for optimal performance and resource allocation.
+
+**Thinking Mode Guidelines**:
+- **ultrathink**: Complex architectural decisions, project-wide analysis, specialist detection, system design
+- **think harder**: Strategic planning, coordination patterns, quality assessments, parallel optimization
+- **think**: Standard implementation, routine operations, pattern following, simple coordination
+
+**Application Rules**:
+- Use ultrathink for project analysis and specialist detection
+- Use think harder for planning coordination and conflict resolution  
+- Use think for standard implementation and routine tasks
+- Match cognitive complexity to task requirements
+
 ## Core Settings
 - Run up to 3 instances of each agent type in parallel
 - Maximum 20 total agents at once
@@ -24,10 +39,10 @@ Simple instructions that all Guild agents follow.
 ## Parallel Execution Settings
 
 **Instance Spawning Rules**:
-- Trigger parallel execution when 3+ independent tasks need same specialist
-- Calculate optimal instances: min(ceil(task_count / 3), 3)
-- Prefer affinity-based task distribution over round-robin
-- Enable cross-specialization work stealing for idle agents
+- Think harder to trigger parallel execution when 3+ independent tasks need same specialist
+- Calculate optimal instances: min(ceil(task_count / 3), 3) using intelligent analysis
+- Think to prefer affinity-based task distribution over round-robin
+- Enable cross-specialization work stealing for idle agents using smart coordination
 
 **Task Distribution Strategies**:
 - Domain Affinity (Preferred): Group by business domain (user, product, order)
@@ -38,8 +53,8 @@ Simple instructions that all Guild agents follow.
 **Coordination Protocols**:
 - File-level ownership prevents conflicts during parallel execution
 - Asynchronous progress reporting with streaming updates
-- Integration validation at completion boundaries
-- Work stealing protocols for dynamic load balancing
+- Think to validate integration at completion boundaries
+- Think harder to implement work stealing protocols for dynamic load balancing
 
 **Performance Targets**:
 - 3x speedup for tasks with 9+ similar operations
@@ -60,18 +75,19 @@ Simple instructions that all Guild agents follow.
 - Structure context: all agents receive comprehensive project structure information
 
 ## Workflow Rules
-- Main thread: reasoning and requirement analysis only
-- Research: parallel project and technology context gathering with structure awareness
-- Planning: task decomposition and intelligent routing with boundary consideration
-- Implementation: parallel execution by specialized agents respecting structure boundaries
-- Testing/verification: optional unless complexity requires it
+- Main thread: reasoning and requirement analysis (ultrathink)
+- Research: parallel project and technology context gathering with structure awareness (think harder for analysis)
+- Planning: task decomposition and intelligent routing with boundary consideration (think harder for coordination)
+- Implementation: parallel execution by specialized agents respecting structure boundaries (think for standard tasks)
+- Testing/verification: optional unless complexity requires it (think harder for quality assessment)
 
 ## Agent Creation Rules
-- Claude analyzes project structure and creates needed specialists
+- Claude uses ultrathink to analyze project structure and create needed specialists
 - Agents receive focused context including project structure information
-- Route tasks to most appropriate specialist with structure awareness
+- Think harder to route tasks to most appropriate specialist with structure awareness
 - No code embedding - use project analysis and Claude's capabilities
-- Structure specialists created based on detected project patterns
+- Think harder to create structure specialists based on detected project patterns
+- Use think for standard specialist coordination and task execution
 
 ## Quality Standards
 - Follow discovered project patterns and conventions across all project components
@@ -95,6 +111,12 @@ Simple instructions that all Guild agents follow.
 
 **Basic Settings**:
 ```yaml
+Thinking Modes:
+  --thinking-strategy [adaptive|explicit]: Thinking mode allocation strategy (default: adaptive)
+  --ultrathink-threshold [low|medium|high]: Complexity threshold for ultrathink (default: medium)
+  --think-harder-coordination [true|false]: Use think harder for coordination (default: true)
+  --thinking-mode-logging [true|false]: Log thinking mode decisions (default: false)
+
 Concurrency:
   --concurrency [N]: Instances per agent type (default: 3)
   --max-agents [N]: Total parallel agents (default: 20)
@@ -165,20 +187,32 @@ Coordination Behavior:
 
 # Custom project rules with parallel optimization
 /guild:instructions "All API endpoints must validate authentication" --concurrency 4 --affinity-mode technical
+
+# Thinking mode optimization configurations
+/guild:instructions --thinking-strategy explicit --ultrathink-threshold low --think-harder-coordination true
+
+# Adaptive thinking with performance monitoring
+/guild:instructions --thinking-strategy adaptive --thinking-mode-logging true --track-performance true
 ```
 
 **Generated Instructions Template Enhancement**:
 ```markdown
 # Project-Specific Parallel Execution Rules
 
+## Thinking Mode Strategy for This Project
+- Project complexity: [low|medium|high] - determines default thinking mode allocation
+- Ultrathink triggers: [complex architectural decisions, system design, specialist detection]
+- Think harder triggers: [coordination planning, quality gates, parallel optimization]
+- Think triggers: [standard implementation, routine operations, pattern following]
+
 ## Detected Parallelization Opportunities
-[Based on project analysis, list specific patterns that benefit from parallel execution]
+[Based on project analysis using ultrathink, list specific patterns that benefit from parallel execution]
 
 ## Specialist-Specific Instance Limits
-- guild-frontend-engineer: Up to [N] instances for UI component work
-- guild-backend-engineer: Up to [N] instances for API/service development  
-- guild-cli-engineer: Up to [N] instances for command-line functionality
-- guild-quality-specialist: Up to [N] instances for testing and validation
+- guild-frontend-engineer: Up to [N] instances for UI component work (think harder for coordination)
+- guild-backend-engineer: Up to [N] instances for API/service development (think harder for integration)
+- guild-cli-engineer: Up to [N] instances for command-line functionality (think for standard tasks)
+- guild-quality-specialist: Up to [N] instances for testing and validation (think harder for quality assessment)
 
 ## Project-Specific Affinity Rules
 - Domain grouping: [user|auth|profile] → Instance 1, [product|catalog|search] → Instance 2, etc.
@@ -192,10 +226,11 @@ Coordination Behavior:
 - Work stealing threshold: Redistribute when [N]% capacity difference detected
 
 ## Integration and Quality Rules
-- Parallel work validation: Validate integration at [boundaries|completion|continuous]
-- Quality standards: Apply [same|specialized] quality checks across all instances
-- Error handling: [continue-with-partial|retry-failed-work|sequential-fallback]
+- Parallel work validation: Think to validate integration at [boundaries|completion|continuous]
+- Quality standards: Think harder to apply [same|specialized] quality checks across all instances
+- Error handling: Think harder to choose [continue-with-partial|retry-failed-work|sequential-fallback]
 - Progress reporting: [detailed|summary|minimal] progress updates during parallel execution
+- Thinking mode coordination: Use appropriate thinking modes for different complexity levels
 ```
 
 ## Integration Points

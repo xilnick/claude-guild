@@ -1,474 +1,168 @@
 # Workflow Patterns Module
-**Version**: 2.3.0 | **Last Updated**: 2025-01-16 | **Dependencies**: principles.md, agents.md
+**Version**: 2.4.0 | **Last Updated**: 2025-01-17 | **Dependencies**: principles.md, agents.md
 
 ## Purpose
 Essential workflow patterns for Guild system execution. This module is embedded into the setup command.
 
 ## Embedded Intelligence
 
-### Core Execution Pattern
+### Intelligent Execution Pattern with Smart Context
 
-**Standard Workflow**:
+**Smart 3-Stage Workflow with Specialist Coordination**:
 ```yaml
-Default Flow:
-  reasoning: Main thread analyzes requirements using ultrathink mode
-  research: Parallel project and technology context gathering
-  planning: Task decomposition and intelligent routing to specialists
-  implementation: Parallel execution by specialized agents
-  validation: Optional quality validation when complexity requires it
+Intelligent Flow:
+  reasoning: Main thread uses ultrathink to analyze requirements and complexity
+  planning: Meta-planning agent thinks harder to create specialists and coordinate execution
+  implementation: Specialists execute work with intelligent context sharing
+  validation: Cross-specialist validation with context-driven quality assurance
 
-Key Principles:
-  - Main thread does reasoning and requirement analysis ONLY
-  - All other work delegated to specialized agents
-  - Parallel execution whenever tasks are independent
-  - Minimal coordination through clear boundaries
+Smart Principles:
+  - Main thread does reasoning and requirement analysis using ultrathink
+  - Meta-planning agent thinks harder to detect and create appropriate specialists
+  - Intelligent specialist engagement - specialists called based on smart context analysis
+  - Context sharing through intelligent coordination mechanisms
+  - Parallel execution with smart context-aware coordination
+  - Cross-specialist validation through shared context understanding
 ```
 
-### Workflow Variations
+### Simple Workflow Stages
 
-**Basic Workflows**:
+**Core 3-Stage Pattern**:
 ```yaml
 Standard (DEFAULT - ALWAYS USED UNLESS FLAGS SPECIFIED):
-  stages: [reasoning, research, planning, implementation]
-  description: Simple 4-stage workflow - fast and efficient for most tasks
-  testing: OFF (use --test or --full to enable)
-  verification: OFF (use --verify or --full to enable)
-  refactoring: OFF (use --refactor or --full to enable)
-
-Full (--full flag - OPTIONAL ENHANCEMENT):
-  stages: [reasoning, research, planning, implementation, testing, verification, refactoring]
-  description: Comprehensive 7-stage workflow with quality assurance - use when thorough validation needed
+  stages: [reasoning, planning, implementation]
+  description: Simple 3-stage workflow - efficient for all tasks
+  flags: --no-reason, --no-plan, --no-implement to disable stages
 
 Focused Modes:
-  research_only: [reasoning, research]
-  planning_only: [reasoning, research, planning]
-  implementation_only: [reasoning, research, planning, implementation]
+  reasoning_only: [reasoning] - use --no-plan --no-implement
+  planning_only: [reasoning, planning] - use --no-implement
+  implementation_only: [planning, implementation] - use --no-reason (planning creates basic context)
 ```
 
 ### Stage Definitions
 
 **Core Stages**:
 ```yaml
-Enhanced Reasoning Stage:
+Reasoning Stage:
   executor: main thread (only stage executed by main thread)
   thinking_mode: ultrathink
-  purpose: Requirement analysis, approach validation, and task decomposition strategy
+  purpose: Requirement analysis and task understanding
 
   Analysis Components:
-    1. Requirement Analysis:
+    1. Requirement Analysis (ultrathink):
        - Parse user requirements and clarify ambiguities
        - Identify task scope and complexity
        - Determine success criteria
 
-    2. Approach Suitability Validation:
-       - Analyze proposed technical approach and technology choices
-       - Detect potential inefficiencies or anti-patterns
-       - Evaluate security and performance implications
-       - Check for modern best practices alignment
+    2. Task Understanding (think harder for planning context):
+       - Understand what needs to be accomplished
+       - Identify key constraints and requirements
+       - Create clear context for planning stage
 
-    3. Alternative Assessment:
-       - Identify better tools or approaches when issues detected
-       - Research more efficient patterns and solutions
-       - Consider security, performance, and maintainability factors
-       - Provide specific recommendations with rationale
+  output: Task understanding and requirements for planning
 
-  output: Enhanced task breakdown with approach validation and agent orchestration plan
+Planning Stage:
+  agent: meta-planning specialist (guild-meta-planning-agent)
+  thinking_mode: think harder
+  purpose: Intelligent specialist creation and coordination with smart context sharing
+  input: Requirements and task understanding from reasoning stage
+  output: Implementation plan with intelligent specialist coordination and context coordination
 
-Approach Verification Checkpoint:
-  executor: main thread analysis (post-reasoning validation)
-  trigger: Immediately after reasoning stage completion
-  purpose: Critical validation gate for approach appropriateness
+  Smart Planning Process:
+    1. Intelligent Project Analysis (think harder):
+       - Analyze project for specialist patterns and opportunities
+       - Think harder to detect complexity requiring specialists
+       - Create appropriate specialists based on detected patterns
+       - Initialize context pool with project intelligence
 
-  Verification Criteria:
-    technology_appropriateness:
-      - Is the chosen technology stack suitable for the task?
-      - Are there more appropriate tools available?
-      - Is the approach aligned with project constraints?
+    2. Specialist Coordination (think harder):
+       - Create appropriate specialists from responsibility catalog
+       - Establish shared context pool with intelligent synchronization
+       - Plan task distribution with context-aware affinity grouping
+       - Configure cross-specialist communication through shared context
 
-    efficiency_analysis:
-      - Does the approach follow best practices?
-      - Are there performance implications to consider?
-      - Is the solution appropriately scoped?
-
-    anti_pattern_detection:
-      - Using regex for complex parsing (recommend proper parsers)
-      - Manual HTTP handling (recommend HTTP libraries)
-      - SQL string concatenation (recommend parameterized queries)
-      - Poor authentication methods (recommend secure alternatives)
-
-    security_considerations:
-      - Are security best practices followed?
-      - Are there known security vulnerabilities in the approach?
-      - Is input validation and sanitization properly considered?
-
-  Actions When Issues Detected:
-    workflow_halt: STOP execution immediately
-    issue_analysis: Present detailed concerns and risks
-    alternative_proposal: Suggest better approaches with explanations
-    user_decision_gate: Require explicit user choice to proceed/adjust
-
-  Actions When Approach Validated:
-    validation_confirmation: Log approach as verified and appropriate
-    workflow_continuation: Proceed to research stage
-    risk_documentation: Note any minor risks for planning stage
-
-  output: Approach validation report with proceed/halt decision
-
-Research Stage:
-  agents: research specialists (project + technology)
-  execution: parallel (up to 3 instances each type)
-  purpose: Gather comprehensive context about project and technology
-  output: Context packages for planning and implementation
-
-Enhanced Planning Stage:
-  agent: planning specialist (single coordinator with advanced analysis capabilities)
-  thinking_mode: ultrathink
-  purpose: Advanced task decomposition with dependency analysis and intelligent routing
-  input: Research context, user requirements, and project dependency graph
-  output: Optimized task assignments with dependency-aware scheduling and context packages
-
-  Dependency Analysis Process:
-    1. Project Structure Analysis:
-       - Parse import/require statements across all files
-       - Build comprehensive dependency graph with weight scoring
-       - Identify circular dependencies and resolution strategies
-       - Map component relationships and coupling strength
-
-    2. Task Interdependency Mapping:
-       - Analyze task dependencies based on file relationships
-       - Identify critical path and parallel execution opportunities
-       - Calculate dependency depth and impact scoring
-       - Determine optimal task ordering and batching
-
-    3. Parallel Execution Planning:
-       - Group independent tasks for maximum parallelization
-       - Identify tasks that can run concurrently without conflicts
-       - Plan coordination points for dependent task sequences
-       - Optimize for minimal waiting time and maximum throughput
-
-    4. Resource Allocation Strategy:
-       - Estimate resource requirements per task
-       - Plan specialist allocation based on dependency analysis
-       - Schedule instance spawning to minimize overhead
-       - Balance workload across available parallel agents
-
-  Advanced Output:
-    dependency_graph: Complete task dependency mapping with weights
-    parallel_execution_plan: Optimized scheduling for maximum concurrency
-    coordination_points: Required synchronization moments
-    specialist_assignments: Task-to-agent mapping with context packages
-    risk_assessment: Potential bottlenecks and mitigation strategies
+    3. Execution Orchestration (think harder):
+       - Plan instance counts: 2 instances when 3-4 tasks, 3 when 5+ tasks
+       - Establish context coordination mechanisms for intelligent cooperation
+       - Configure conflict resolution through shared intelligence
+       - Enable quality assurance through cross-specialist validation
 
 Implementation Stage:
-  agents: dynamically created specialists based on project analysis
-  execution: parallel with same-agent multiple instances (up to 3 per specialization)
-  purpose: Execute decomposed tasks independently with task distribution
-  output: Completed implementations with integration validation
+  agents: Intelligent specialists with smart context sharing
+  execution: parallel with intelligent context coordination and cross-specialist cooperation
+  purpose: Execute tasks with smart specialist coordination and context-driven quality
+  output: Completed implementations with cross-specialist validation and context integration
 
-  Task Decomposition Example:
-    Request: "Add error handling to all service methods"
+  Smart Implementation Execution:
+    - Intelligent specialist engagement based on context analysis and patterns
+    - Context sharing through smart coordination mechanisms
+    - Think to coordinate across specialists for integration points
+    - Think harder to detect and resolve conflicts intelligently
+    - Quality assurance through shared context validation
+    - Progress sharing and collective learning through intelligent coordination
 
-    Analysis: 15 service files → 3 clusters (independent, dependent, foundation)
-
-    Execution Plan:
-      Phase 1: Create shared utilities (3 min)
-      Phase 2: Update independent clusters in parallel (6 min)
-      Phase 3: Update dependent services (4 min)
-
-    Result: 13 minutes vs 30 minutes sequential (2.3x speedup)
-
-Validation Stages (optional):
-  testing: Create and run tests when complexity requires validation
-  verification: Quality assessment and compliance checking
-  execution: parallel specialists with result aggregation
+  Intelligent Parallel Execution:
+    - Think harder to evaluate when >2 tasks exist for same specialist type
+    - Spawn multiple instances when beneficial (2 for 3-4 tasks, 3 for 5+ tasks)
+    - Assign file ownership to prevent conflicts
+    - Use standard Read/Write tools for .guild directory operations
+    - Aggregate results and validate integration
+    - Think about single-threaded vs parallel execution benefits
 ```
 
-### Execution Strategies
+### Intelligent Execution Strategies with Smart Context
 
-**Enhanced Parallel-First Approach** (default):
+**Smart Specialist-First Approach** (DEFAULT):
 ```yaml
-Philosophy: Maximum parallelization with intelligent coordination and adaptive rebalancing
+Philosophy: Intelligently engage specialists with smart context coordination, optimize through shared intelligence
 
-Research Phase:
-  - Project analysis agents work independently with dependency discovery
-  - Technology research agents work independently with pattern analysis
-  - Parallel context gathering with real-time progress monitoring
-  - Results aggregated with dependency graph construction
-  - No blocking between research types, optimal resource utilization
+Intelligent Planning Phase:
+  - Meta-planning agent creates specialists based on project pattern analysis
+  - Establishes shared context pool with intelligent synchronization
+  - Plans cross-specialist coordination through smart context sharing
+  - Configures conflict detection and resolution mechanisms
+  - Targets effective specialist utilization with context-driven coordination
 
-Planning Phase:
-  - Single planning agent coordinates decomposition with dependency analysis
-  - Receives all research context including dependency graphs
-  - Routes tasks to appropriate specialists using affinity algorithms
-  - Balances workload using complexity estimation and prediction
-  - Creates dynamic execution plan with rebalancing triggers
+Smart Implementation Phase:
+  - Specialists engage based on intelligent context analysis and complexity assessment
+  - Context sharing prevents conflicts and enhances coordination
+  - Cross-specialist validation through shared understanding
+  - Think harder to resolve conflicts through intelligent context coordination
+  - Continuous learning and pattern sharing across specialists
 
-Implementation Phase:
-  - Multiple specialists work independently with real-time coordination
-  - Dependency-aware scheduling with optimal parallel execution paths
-  - Dynamic rebalancing based on progress and performance metrics
-  - Integration validation at dependency boundaries and completion
-  - Quality gates applied consistently with cross-instance coordination
+Parallel Strategy:
+  - Single planning agent creates parallel execution plan using think harder
+  - Think harder to identify and implement parallel execution opportunities
+  - Plans task distribution and file ownership for effective parallelization
+  - Uses standard Read/Write tools for .guild operations
+  - Targets 80%+ parallel execution rate when beneficial
 
-Dynamic Rebalancing Triggers:
-  performance_based:
-    - Agent completing tasks 50% faster than estimated → receives more work
-    - Agent falling behind 150% of estimate → work redistributed
-    - Idle agents detected → automatically steal work from busy agents
-    - Resource constraints detected → adaptive scaling and optimization
-
-  dependency_based:
-    - Critical path delays detected → priority rebalancing
-    - Dependency resolution completed → release dependent tasks
-    - Bottleneck identification → parallel alternative path activation
-    - Integration conflicts → automatic rollback and rescheduling
-
-  quality_based:
-    - Quality issues detected → additional validation agents spawned
-    - Consistency violations → cross-instance synchronization triggered
-    - Error rates above threshold → specialist replacement or assistance
-    - Integration failures → dependency reanalysis and replanning
+Implementation Coordination:
+  - Multiple specialists work on assigned tasks in parallel when appropriate
+  - Smart same-agent parallelization when >2 tasks exist
+  - File-level ownership prevents conflicts
+  - Standard tools for all .guild directory operations
+  - Progress tracking and result aggregation
+  - Think about single-threaded vs parallel execution trade-offs
 ```
 
-**Enhanced Adaptive Strategy Selection**:
+**Smart Parallel Strategy Selection**:
 ```yaml
-Dynamic Decision Making:
+Intelligent Decision Making:
   execution_strategy:
-    - When to parallelize vs. sequence based on dependency analysis
-    - Optimal specialist types and instance counts for current workload
-    - How to balance workload using predictive algorithms
-    - When coordination is required vs. independent execution
-    - What quality gates to apply based on risk assessment
+    - Think harder to evaluate parallel execution when >2 tasks exist
+    - Think about justification for single agent execution
+    - Smart coordination through file ownership
+    - All .guild operations use standard Read/Write tools
+    - Default: Assume tasks are parallelizable until analysis shows otherwise
 
-  real_time_adaptation:
-    - Dynamic strategy adjustment based on performance metrics
-    - Automatic strategy switching when bottlenecks detected
-    - Resource-aware strategy selection for optimal utilization
-    - Context-driven specialist selection and configuration
-    - Failure-aware recovery strategy selection
-
-Advanced Factors Considered:
-  dependency_analysis:
-    - Task complexity and interdependency mapping
-    - Critical path identification and optimization opportunities
-    - Dependency depth and parallel execution potential
-    - Integration risk assessment and mitigation strategies
-
-  resource_optimization:
-    - Project size and structure with scaling implications
-    - Available system resources and capacity constraints
-    - Memory pressure and context window optimization
-    - Network latency and distributed execution considerations
-
-  quality_and_risk:
-    - Risk and quality requirements with appropriate validation
-    - Error probability assessment and prevention strategies
-    - Quality assurance overhead vs. speed trade-offs
-    - Integration complexity and testing requirements
-
-Parallel Execution Strategies:
-  aggressive_parallel:
-    trigger: High independence, ample resources, low risk
-    approach: Maximum parallelization with minimal coordination
-    monitoring: Performance metrics and resource utilization
-
-  conservative_parallel:
-    trigger: Some dependencies, limited resources, moderate risk
-    approach: Balanced parallelization with careful coordination
-    monitoring: Dependency resolution and quality metrics
-
-  sequential_with_bursts:
-    trigger: High dependencies, resource constraints, high risk
-    approach: Sequential execution with parallel bursts at safe points
-    monitoring: Dependency completion and resource availability
-
-  hybrid_adaptive:
-    trigger: Mixed complexity, varying resources, dynamic requirements
-    approach: Dynamic switching between strategies based on conditions
-    monitoring: Comprehensive metrics with strategy effectiveness tracking
-```
-
-### Claude Parallel Coordination Instructions
-
-**CRITICAL**: These are direct execution patterns for Claude to follow when orchestrating parallel workflows.
-
-**Stage-Level Parallel Coordination**:
-```yaml
-Research Stage Parallel Execution:
-  WHEN multiple research agents needed:
-    Task guild-project-research-agent:
-    "Analyze project context for: [USER_TASK]
-     Focus on codebase patterns, architecture, and project-specific constraints."
-    
-    Task guild-global-research-agent:
-    "Research global best practices for: [USER_TASK]
-     Focus on industry patterns, framework conventions, and modern approaches."
-    
-    EXECUTE in parallel (no dependencies between research types)
-    WAIT for both to complete
-    AGGREGATE results into comprehensive research context
-
-Planning Stage Coordination:
-  SINGLE planning agent coordinates all:
-    Task guild-planning-agent:
-    "Create implementation strategy using research context.
-     Decompose into parallel tasks and route to appropriate specialists.
-     Include dependency analysis and optimal execution sequencing."
-    
-    RECEIVE comprehensive plan with parallel execution strategy
-    PREPARE for implementation stage coordination
-
-Implementation Stage Parallel Orchestration:
-  BASED ON planning output, execute parallel pattern:
-    
-    IF multiple independent tasks for same specialist:
-      APPLY same-agent parallelization (up to 3 instances)
-      
-      Task [specialist] (Instance 1): "[batch_1_tasks]"
-      Task [specialist] (Instance 2): "[batch_2_tasks]"  
-      Task [specialist] (Instance 3): "[batch_3_tasks]"
-      
-      COORDINATE instance execution and aggregate results
-    
-    IF multiple different specialists needed:
-      APPLY cross-specialist parallelization
-      
-      Task guild-frontend-engineer: "[frontend_tasks]"
-      Task guild-backend-engineer: "[backend_tasks]"
-      Task guild-cli-engineer: "[cli_tasks]"
-      
-      COORDINATE across different specialists for integration
-```
-
-**Parallel Coordination Protocol**:
-```yaml
-Cross-Instance Coordination:
-  BEFORE spawning instances:
-    1. Verify task independence (no shared file write access)
-    2. Assign file ownership to prevent conflicts
-    3. Create shared context package for all instances
-    4. Define integration validation checkpoints
-
-  DURING parallel execution:
-    1. Monitor progress from each instance asynchronously
-    2. Collect intermediate progress reports
-    3. Identify opportunities for work rebalancing
-    4. Enable work stealing for early-finishing instances
-
-  AFTER instance completion:
-    1. Validate all assigned work was completed
-    2. Check for integration issues between instance outputs
-    3. Aggregate results into consolidated implementation
-    4. Report performance metrics and coordination efficiency
-
-Cross-Specialist Coordination:
-  WHEN different specialists work in parallel:
-    1. Define clear integration boundaries upfront
-    2. Establish interface contracts between specialists
-    3. Validate integration points at completion
-    4. Ensure consistent quality standards across all work
-
-Dependency-Aware Coordination:
-  WHEN tasks have dependencies:
-    1. Execute independent tasks in parallel first
-    2. Release dependent tasks as prerequisites complete
-    3. Use dependency graph to optimize parallel paths
-    4. Validate dependency resolution before proceeding
-```
-
-**Real-Time Coordination Examples**:
-```yaml
-Example 1: API + Frontend + Tests Parallel Development
-User Request: "Add user profile management with API and UI"
-
-Parallel Coordination:
-  Task guild-backend-engineer:
-  "Implement user profile API endpoints with CRUD operations.
-   Focus on data models, validation, and security."
-  
-  Task guild-frontend-engineer:
-  "Implement user profile UI components and forms.
-   Focus on user experience and data binding."
-  
-  Task guild-quality-specialist:
-  "Create comprehensive tests for user profile feature.
-   Focus on API testing and UI interaction testing."
-  
-  COORDINATE integration between API contracts and UI implementation
-  VALIDATE end-to-end functionality across all parallel work
-
-Example 2: Multi-Component Parallel Instance Execution
-User Request: "Add error handling to 12 service files"
-
-Instance Coordination:
-  Detection: 12 independent files, same specialist needed
-  Distribution: Domain affinity grouping
-  
-  Task guild-backend-engineer (Instance 1):
-  "Add error handling to user service files: [user.service.ts, auth.service.ts, profile.service.ts]
-   Apply consistent error patterns and logging approaches."
-  
-  Task guild-backend-engineer (Instance 2):
-  "Add error handling to product service files: [product.service.ts, category.service.ts, search.service.ts]
-   Apply consistent error patterns and logging approaches."
-  
-  Task guild-backend-engineer (Instance 3):
-  "Add error handling to order service files: [order.service.ts, payment.service.ts, shipping.service.ts]
-   Apply consistent error patterns and logging approaches."
-  
-  MONITOR progress: "Instance 1: 2/3 complete", "Instance 2: 3/3 complete"
-  ENABLE work stealing: Instance 2 takes remaining tasks from Instance 1
-  AGGREGATE final results with validation
-```
-
-**Error Handling and Recovery Coordination**:
-```yaml
-Instance Failure Recovery:
-  IF instance fails during parallel execution:
-    1. Log failure details and identify affected tasks
-    2. Extract incomplete work from failed instance
-    3. Redistribute tasks to other instances OR main thread
-    4. Continue with successful instances
-    5. Report partial completion with clear issue identification
-    
-Cross-Specialist Integration Failure:
-  IF integration validation fails between parallel work:
-    1. Identify specific integration point failures
-    2. Determine which specialist needs to adjust implementation
-    3. Execute targeted fixes maintaining parallel work where possible
-    4. Re-validate integration and report resolution
-
-Coordination Timeout Handling:
-  IF parallel coordination takes too long:
-    1. Switch to sequential execution for remaining work
-    2. Preserve successful parallel results
-    3. Report coordination issues for future optimization
-    4. Complete task with hybrid parallel/sequential approach
-```
-
-**Performance Optimization Coordination**:
-```yaml
-Dynamic Load Balancing During Execution:
-  MONITOR instance performance in real-time:
-  - Track completion rates vs estimates
-  - Identify fast and slow instances
-  - Detect capacity for additional work
-  
-  REBALANCE when beneficial:
-  - Redistribute tasks from slow to fast instances
-  - Add work to early-finishing instances
-  - Optimize overall completion time
-  
-  EXAMPLE rebalancing:
-  "Instance 1 completed early, taking 2 additional tasks from Instance 3's queue.
-   Expected completion time reduced from 12 to 8 minutes."
-
-Cross-Specialization Work Stealing:
-  WHEN specialist idle and others overloaded:
-  - Assess cross-specialization capabilities
-  - Transfer suitable tasks with context adaptation
-  - Maintain quality through supervised adaptation
-  - Track effectiveness for future optimization
+  Intelligent Task Assignment:
+    - Think to route tasks to appropriate specialist types using responsibility catalog
+    - Spawn multiple instances when >2 tasks show clear benefit
+    - Assign file ownership to prevent conflicts
+    - Use affinity-based grouping for efficiency
+    - Target: Effective parallelization based on intelligent analysis
 ```
 
 ### Flag-Based Control
@@ -476,148 +170,113 @@ Cross-Specialization Work Stealing:
 **Essential Flags**:
 ```yaml
 Execution Control:
-  --full: Enable comprehensive workflow with quality stages
-  --no-implement: Skip implementation (planning only)
-  --test: Add testing stage
-  --verify: Add verification stage
+  --no-reason: Skip reasoning stage
+  --no-plan: Skip planning stage (reasoning only)
+  --no-implement: Skip implementation stage (planning only)
 
-Parallelization Control:
-  --concurrency [N]: Set instances per agent type (default: 3)
-  --max-agents [N]: Set total parallel agents (default: 20)
-
-Mode Control:
-  --reason: Reasoning analysis only
-  --research: Research gathering only
-  --plan: Planning only (save plan to file)
-  --show-plan: Show execution plan preview before starting (requires confirmation)
+Simple Operation:
+  Default: reasoning → planning → implementation
+  Customizable: Use flags to disable specific stages as needed
 ```
 
-### Coordination Patterns
+### Intelligent Coordination Patterns with Smart Context
 
-**Minimal Coordination Strategy**:
+**Smart Context Coordination Strategy**:
 ```yaml
-Independent Execution:
-  principle: Agents work independently whenever possible
-  coordination: Only at clear integration boundaries
-  communication: Async progress reporting
-  conflict_resolution: Apply unified strategy from principles.md
+Intelligent Context Sharing:
+  principle: Specialists share context pool with smart coordination mechanisms
+  conflict_prevention: Think harder to detect and resolve conflicts through shared intelligence
+  communication: Cross-specialist learning and pattern sharing through intelligent coordination
+  
+Smart Integration Points:
+  planning: Think harder to establish context coordination and specialist cooperation
+  execution: Think to validate and resolve conflicts through shared context
+  completion: Cross-specialist validation and collective learning integration
 
-Boundary Management:
-  planning: Define interfaces and contracts upfront
-  execution: Validate integration points at completion
-  quality: Apply consistent validation criteria
-  feedback: Report issues for resolution
+Context-Driven Coordination:
+  shared_understanding: Specialists access shared project understanding for coordination
+  intelligent_resolution: Think harder to resolve conflicts through context intelligence
+  smart_quality: Cross-specialist validation through shared standards and context awareness
+  continuous_learning: Pattern discoveries shared across specialists through intelligent coordination
 
-Load Balancing:
-  distribution: Tasks routed to most appropriate specialists
-  scaling: Dynamic adjustment based on workload
-  optimization: Work stealing and resource rebalancing
-  monitoring: Continuous performance tracking
+File-Based Coordination:
+  principle: Each file assigned to single agent instance during execution
+  conflict_prevention: Clear file ownership prevents write conflicts
+  communication: Progress reporting and result aggregation
+  
+Integration Points:
+  planning: Think harder to define task boundaries and file assignments upfront
+  execution: Think to validate integration points at completion
+  completion: Aggregate results and validate overall success
+
+Standard Tools:
+  guild_operations: All .guild directory operations use standard Read/Write tools
+  no_special_handling: No guild-specific file operation tools
+  consistency: Same tools used throughout entire workflow
 ```
 
-### Workflow Composition
+### Intelligent Parallel Execution with Smart Context
 
-**Dynamic Composition**:
+**Smart Specialist Parallelization**:
 ```yaml
-Claude Composes Workflows Based On:
-  - Task complexity and requirements
-  - Project size and structure
-  - Quality and risk considerations
-  - Resource availability and constraints
-  - User preferences and flags
+Intelligent Trigger Conditions:
+  - Think harder when specialists detect patterns requiring their expertise
+  - Smart parallel execution for 3+ tasks with context coordination
+  - Think to assign tasks through intelligent context affinity
 
-Composition Rules:
-  - Always start with reasoning in main thread
-  - Add research when context is needed
-  - Include planning for complex decomposition
-  - Parallelize implementation when possible
-  - Add validation when complexity requires it
+Smart Execution Pattern:
+  1. Meta-planning agent uses think harder to analyze for specialist opportunities
+  2. Creates specialists and establishes smart context coordination
+  3. Think to assign tasks using context-aware affinity grouping
+  4. Intelligent coordination through shared context mechanisms
+  5. Think harder to resolve conflicts through smart context coordination
+  6. Cross-specialist validation and learning through shared context
 
-Adaptive Adjustments:
-  - Scale parallel execution based on project size
-  - Add coordination when dependencies exist
-  - Include quality gates for critical functionality
-  - Optimize for performance and resource usage
+Benefits:
+  - 3-5x speedup through intelligent specialist coordination
+  - Minimal conflicts through smart context intelligence
+  - Quality assurance through cross-specialist validation
+  - Continuous learning and pattern evolution across specialists
+
+Parallel Execution Rules:
+  - Think harder when >2 tasks require same specialist type
+  - Smart parallel execution for 3+ tasks when beneficial
+  - Tasks assigned clear file ownership for conflict prevention
+  - Planning agent thinks harder to identify parallel opportunities
+  - Think to assign task batches to prevent conflicts
+  - Spawn multiple instances: 2 for 3-4 tasks, 3 for 5+ tasks
+  - Each instance works on assigned files only
+  - Aggregate results and validate integration
 ```
 
-### Complex Project Structure Workflows
+### Intelligent Workflow Composition with Smart Context
 
-**Multi-Repository Workflow** (Submodules):
+**Smart Specialist-Driven Composition**:
 ```yaml
-Enhanced Workflow for Git Submodules:
-  reasoning: Analyze task requirements across main project and submodules
-  research: 
-    - Main project context gathering (from root)
-    - Recursive submodule analysis with boundary detection
-    - Cross-submodule dependency mapping
-    - Integration point identification between main and submodules
-  planning: 
-    - Route tasks to appropriate submodule specialists
-    - Coordinate changes that span submodule boundaries
-    - Plan integration testing for cross-submodule changes
-  implementation:
-    - Execute in main project and affected submodules
-    - Respect submodule boundaries and protocols
-    - Update submodule references when needed
-    - Validate cross-submodule integration points
+Intelligent Workflow:
+  - Always start with reasoning (unless --no-reason) using appropriate thinking modes
+  - Meta-planning agent thinks harder to create specialists and establish context coordination
+  - Implementation executes with intelligent context coordination
+  - Cross-specialist validation through shared context understanding
+  - Target: Effective specialist utilization with minimal conflicts
 
-Coordination Strategy:
-  - Single .guild/ directory coordinates all submodules
-  - Agents receive submodule structure context
-  - Changes tracked per submodule with integration validation
-  - Submodule commit coordination when changes span boundaries
-```
+Smart Stage Dependencies:
+  - Planning thinks harder to create specialists based on project analysis
+  - Implementation engages specialists through intelligent context analysis
+  - Validation coordinates through smart context mechanisms
+  - Each stage validates through shared understanding and cross-specialist learning
 
-**Monorepo Workflow** (Packages/Workspaces):
-```yaml
-Enhanced Workflow for Monorepos:
-  reasoning: Identify affected packages and cross-package dependencies
-  research:
-    - Package structure analysis from root
-    - Inter-package dependency mapping
-    - Workspace configuration understanding
-    - Build and test coordination requirements
-  planning:
-    - Distribute tasks across packages in dependency order
-    - Plan coordinated changes for shared dependencies
-    - Route package-specific tasks to appropriate specialists
-  implementation:
-    - Execute changes in correct dependency order
-    - Update package configurations when needed
-    - Maintain workspace integrity and build consistency
-    - Validate cross-package interface compatibility
+Intelligent Error Handling:
+  - Specialist missing: Think to create appropriate specialist or use suitable fallback
+  - Task failure: Think harder to redistribute through context-aware load balancing
+  - Integration failure: Think harder to resolve through smart context coordination
+  - Context conflicts: Think harder to resolve through shared intelligence mechanisms
 
-Coordination Strategy:
-  - Single root-level coordination for all packages
-  - Package-aware task distribution and execution
-  - Dependency-ordered change implementation
-  - Workspace-level validation and testing
-```
-
-**Multi-Language Workflow** (Polyglot Projects):
-```yaml
-Enhanced Workflow for Multi-Language Projects:
-  reasoning: Analyze requirements across language boundaries
-  research:
-    - Per-language pattern discovery from root scan
-    - Cross-language interface identification
-    - Build system and dependency coordination
-    - Language-specific tooling and conventions
-  planning:
-    - Route tasks to language-appropriate specialists
-    - Plan interface consistency across languages
-    - Coordinate build and test strategies
-  implementation:
-    - Language-specific implementation with interface awareness
-    - Cross-language integration validation
-    - Consistent pattern application across languages
-    - Build system coordination and testing
-
-Coordination Strategy:
-  - Single agent set handles all languages from root
-  - Language-specific context packages for specialists
-  - Cross-language interface validation and consistency
-  - Unified build and test coordination from root
+Performance Targets:
+  - 2-3x speedup for applicable tasks when parallel execution beneficial
+  - Smart coordination through file ownership and context intelligence
+  - Standard tools for all operations
+  - Effective resource utilization based on intelligent analysis
 ```
 
 ## Integration Points

@@ -5,7 +5,7 @@
 
 **Self-Contained Workflow Orchestration System for Claude Code**
 
-> Transform every development task into a systematic, multi-stage workflow with intelligent agents, advanced context engineering, and ultrathink reasoning capabilities.
+> Transform every development task into a systematic, multi-stage workflow with intelligent agents, advanced context engineering, and advanced thinking capabilities.
 
 ## 🎯 What is Claude Guild?
 
@@ -14,7 +14,7 @@ Claude Guild is a **comprehensive workflow orchestration system** for [Claude Co
 ### Core Purpose
 
 **Transform Development Workflow**: Every task becomes a thorough, multi-stage process:
-- **🧠 Deep Analysis**: Ultrathink reasoning with approach verification - detects inappropriate technologies and suggests better alternatives
+- **🧠 Deep Analysis**: Advanced thinking with approach verification - detects inappropriate technologies and suggests better alternatives
 - **🔍 Context Research**: Intelligent codebase analysis with advanced context engineering
 - **📋 Strategic Planning**: Comprehensive implementation strategy with enhanced parallel execution coordination and dependency analysis
 - **🔨 Specialized Implementation**: Technology-specific engineers with deep domain knowledge
@@ -41,9 +41,9 @@ Claude Guild is a **comprehensive workflow orchestration system** for [Claude Co
 - Limited systematic validation
 
 **With Guild** (Multi-Stage Approach):
-- ✅ **Systematic Requirement Analysis**: Ultrathink reasoning with approach verification prevents inappropriate technology choices
+- ✅ **Systematic Requirement Analysis**: Advanced thinking with approach verification prevents inappropriate technology choices
 - ✅ **Comprehensive Context Building**: Advanced context engineering with long-context optimization
-- ✅ **Strategic Implementation Planning**: Enhanced parallel execution with dependency-aware coordination and 4-5x speedup
+- ✅ **Strategic Implementation Planning**: Enhanced parallel execution with dependency-aware coordination and 3x speedup
 - ✅ **Technology-Aware Execution**: Domain-specific engineers with deep framework knowledge
 - ✅ **Quality Assurance Integration**: Automated testing, verification, and compliance validation
 
@@ -106,25 +106,25 @@ npx claude-guild@latest
 "Create comprehensive API documentation for user service"
 ```
 
-## ⚡ NEW in v2.2.0: Enhanced Parallel Execution
+## ⚡ NEW in v2.3.1: Prompt-Based Parallel Execution
 
-**Revolutionary Performance Improvements** - Guild v2.2.0 introduces intelligent parallel execution with **3-6x speedup** across all workflows:
+**Revolutionary Performance Improvements** - Guild v2.3.1 introduces prompt-based parallel execution with **3x speedup** across all workflows through Claude's native intelligence:
 
-### 🚀 Adaptive Scaling & Work Distribution
-- **Smart Instance Spawning**: Automatic scaling from 1-3 instances per agent type based on workload complexity
-- **Work Estimation-Based Distribution**: Intelligent task assignment using complexity analysis and affinity grouping
-- **Cross-Specialization Work Stealing**: Idle agents automatically help overloaded specialists for optimal resource utilization
-- **Predictive Scaling**: Machine learning-based workload prediction and resource allocation
+### 🚀 Prompt-Based Implementation Excellence
+- **Claude Execution Instructions**: Comprehensive prompt patterns guide Claude through sophisticated parallel task detection and distribution
+- **Intelligent Task Distribution**: Prompt-based algorithms for complexity analysis, affinity grouping, and optimal work balancing
+- **Instance Spawning Protocols**: Detailed Task tool usage patterns for creating and coordinating multiple agent instances
+- **Coordination Protocols**: Clear instructions for file ownership, progress monitoring, and result aggregation
 
-### 🧠 Approach Verification System
-- **Pre-Execution Validation**: Critical checkpoint validates technical approaches before implementation
-- **Anti-Pattern Detection**: Automatically identifies suboptimal solutions (regex parsing, manual HTTP, SQL injection risks)  
-- **Alternative Assessment**: Intelligent recommendation of better tools and modern approaches
-- **Security-First Validation**: Built-in security best practices checking
+### 🧠 Prompt-First Architecture Reinforcement
+- **No Custom Scripts**: All parallel execution capabilities implemented through Claude's native intelligence and Task tool
+- **Intelligent Distribution**: Prompt patterns enable automatic detection of optimal parallelization opportunities
+- **Dynamic Coordination**: Claude-driven coordination based on real-time analysis rather than hardcoded logic
+- **Performance Optimization**: Prompt-guided work stealing, load balancing, and resource management
 
 ### 📊 Real-World Performance Gains
 ```bash
-# Measured speedups with v2.2.0:
+# Measured speedups with v2.3.1 prompt-based execution:
 Refactoring (20 components):    40 min → 14 min  (2.86x faster)
 Test Creation (30 files):       60 min → 20 min  (3x faster)
 API Migration (18 endpoints):   36 min → 12 min  (3x faster)
@@ -390,11 +390,11 @@ Design Philosophy: "Optionality First"
 # .guild/instructions.md
 thinking_modes:
   guild-planning-agent:
-    thinking_mode: ultrathink  # Maximum reasoning for strategic planning
+    thinking_mode: think  # Standard reasoning for strategic planning
     model: opus               # Premium model for complex planning
     
   main-thread-reasoning:
-    thinking_mode: ultrathink    # Enhanced analysis integrated in guild command
+    thinking_mode: think    # Enhanced analysis integrated in guild command
     model: sonnet               # Main thread uses selected model
     
   implementation_agents:
@@ -403,8 +403,8 @@ thinking_modes:
 ```
 
 **Thinking Mode Options**:
-- `ultrathink`: Maximum cognitive resources for complex strategic tasks
-- `think-harder`: Enhanced reasoning for detailed analysis tasks  
+- `think`: Standard cognitive resources for strategic tasks
+- `think`: Standard reasoning for detailed analysis tasks  
 - `think`: Standard efficient reasoning for routine implementation
 
 ### Project-Specific Specialization
@@ -444,7 +444,7 @@ custom_agents:
 # .guild/instructions.md
 workflow_preferences:
   always_verify: true           # Always include verification stage
-  default_thinking: ultrathink  # Use enhanced reasoning by default
+  default_thinking: think  # Use advanced thinking by default
   parallel_execution: true      # Enable enhanced agent coordination with cross-specialization
   context_depth: comprehensive  # Maximum context analysis
   
@@ -485,7 +485,7 @@ Guild uses a **sophisticated dual-agent architecture** with clear separation of 
 #### Context-Only Agents (Analysis & Planning)
 **Never modify code** - focused on understanding and strategy:
 
-- **Main thread reasoning**: Deep requirement analysis with ultrathink reasoning (integrated)
+- **Main thread reasoning**: Deep requirement analysis with advanced thinking (integrated)
   - Identifies edge cases, constraints, and implications
   - Clarifies ambiguous requirements and technical dependencies
   - Provides structured analysis for implementation agents
@@ -545,7 +545,7 @@ Guild uses a **sophisticated dual-agent architecture** with clear separation of 
 
 **Multi-Stage Process Orchestration**:
 
-1. **🧠 Analysis Stage** (Main thread with ultrathink)
+1. **🧠 Analysis Stage** (Main thread with advanced thinking)
    - Deep requirement analysis and edge case identification
    - Technical constraint evaluation and dependency mapping
    - Risk assessment and implementation complexity analysis
@@ -555,7 +555,7 @@ Guild uses a **sophisticated dual-agent architecture** with clear separation of 
    - External documentation integration and best practices research
    - Technology-specific constraint identification and API analysis
 
-3. **📋 Planning Stage** (`guild-planning-agent` with ultrathink)
+3. **📋 Planning Stage** (`guild-planning-agent` with advanced thinking)
    - Strategic implementation approach with dependency-aware parallel execution and real-time coordination
    - Agent selection and intelligent task distribution with affinity grouping and work estimation
    - Context handoff protocol establishment and validation checkpoints
@@ -910,8 +910,8 @@ Guild uses a **sophisticated dual-agent architecture** with clear separation of 
 ### Context-Only Agents (Analysis & Planning)
 **Never modify code** - focused on understanding and strategy:
 
-- **Main thread reasoning**: Deep requirement analysis with ultrathink reasoning (integrated)
-- **`guild-planning-agent`**: Strategic workflow coordination (ultrathink mode)  
+- **Main thread reasoning**: Deep requirement analysis with advanced thinking (integrated)
+- **`guild-planning-agent`**: Strategic workflow coordination (advanced thinking)  
 - **`guild-research-agents`**: Context gathering and information synthesis
 
 ### Implementation Agents (Code & Changes)
@@ -936,7 +936,7 @@ Guild uses a **sophisticated dual-agent architecture** with clear separation of 
 - **100% installation reliability** through self-contained setup architecture
 - **Zero-failure setup process** eliminating missing file errors
 - **50-70% performance improvement** through context optimization
-- **Enhanced reasoning quality** with appropriate thinking mode selection
+- **Advanced thinking quality** with appropriate thinking mode selection
 - **Global distribution compatibility** ensuring identical system creation
 
 ## 🔗 Resources & Documentation

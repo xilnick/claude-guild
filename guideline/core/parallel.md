@@ -1,422 +1,316 @@
 # Parallel Execution Module
-**Version**: 2.3.0 | **Last Updated**: 2025-01-16 | **Dependencies**: principles.md, agents.md, workflows.md
+**Version**: 2.4.0 | **Last Updated**: 2025-01-17 | **Dependencies**: principles.md, agents.md, workflows.md
 
 ## Purpose
-Essential parallel execution strategies for efficient Guild system performance. This module is embedded into the setup command.
+Essential parallel execution strategies for Guild system performance. This module is embedded into the setup command.
 
-## Claude Execution Instructions
+## Intelligent Specialist Execution Instructions with Smart Context
 
-**CRITICAL**: These are direct execution patterns for Claude to follow when implementing parallel task execution.
+**CRITICAL**: These are execution patterns for Claude to follow when implementing intelligent specialist coordination with smart context sharing.
 
-### Parallel Task Detection Protocol
+### Smart Specialist Detection and Context Coordination Protocol
 
-**When to Parallelize**:
+**Smart Parallelization Detection** (THINK HARDER TO EVALUATE):
 ```yaml
-Detection Pattern:
-  IF (task involves multiple similar operations):
-    AND (operations are independent):
-    AND (same specialist type required):
-    THEN enable parallel execution
+Intelligent Detection Pattern:
+  Think harder: Is this task parallelizable and would specialists benefit coordination?
+  
+Independent Agent Tasks (DIFFERENT specialists):
+  Strategy: Think to parallelize when different agent types can work effectively together
+  Implementation: Route tasks to different specialists with smart context coordination
+  
+Same-Agent Parallel Instances (SAME specialist type):
+  Threshold: Think harder when tasks > 2 for same agent type
+  Scaling: 2 tasks per instance until reaching 3 instance limit
+  
+  Calculation with thinking:
+  - 1-2 tasks → 1 instance (think about parallel vs single-threaded benefits)
+  - 3-4 tasks → 2 instances (2 tasks each, think harder for coordination)
+  - 5-6 tasks → 3 instances (2 tasks each, ultrathink for complex coordination)
+  - 7+ tasks → 3 instances (distribute evenly, think harder for load balancing)
 
-Examples:
-  - "Update error handling in all service files" → Multiple files, same pattern
-  - "Add tests to all components" → Multiple files, same specialist
-  - "Refactor 15 UI components for new design" → Independent components, same changes
-  - "Implement CRUD endpoints for 5 entities" → Similar patterns, independent entities
+Smart Examples:
+  - "Update error handling in 5 service files" → Think harder: 3 instances (backend specialist)
+  - "Add tests to 8 components" → Think harder: 3 instances (frontend specialist)  
+  - "Refactor UI + fix API + update docs" → Think: 3 parallel specialists (different types)
+  - "Implement CRUD for 4 entities" → Think harder: 2 instances (backend specialist)
+
+Guidelines:
+  - Intelligent specialist creation based on pattern analysis
+  - Meta-planning agent thinks harder to analyze for specialist opportunities
+  - Smart context coordination for all specialist collaboration
+  - Default assumption: Think about whether specialists can coordinate effectively
 ```
 
-### Instance Spawning Execution Pattern
+### Intelligent Specialist Creation and Context Coordination Pattern
 
-**Claude Task Tool Usage**:
+**Smart Claude Task Tool Usage with Context Coordination**:
 ```yaml
-Step 1: Analyze Task Independence
-  - Count total similar tasks
-  - Verify no cross-dependencies  
-  - Identify specialist type needed
+Step 1: Intelligent Specialist Analysis and Creation
+  - Think harder to analyze project for specialist patterns and opportunities
+  - Create appropriate specialists based on detected patterns using smart analysis
+  - Establish shared context pool with intelligent coordination mechanisms
+  - Configure cross-specialist communication and conflict resolution
 
-Step 2: Calculate Instance Count
-  optimal_instances = min(ceil(task_count / 3), 3)
+Step 2: Smart Context-Coordinated Instance Management
+  Per specialist type with shared context:
+  - 1-2 tasks → 1 instance with full context access
+  - 3-4 tasks → 2 instances with shared smart context coordination
+  - 5+ tasks → 3 instances with intelligent context synchronization
   
-  Examples:
-  - 2-3 tasks → 1 instance (not worth parallelizing)
-  - 4-6 tasks → 2 instances 
-  - 7+ tasks → 3 instances (maximum)
+  Formula with Context: instances = min(max(ceil(tasks/2), 1), 3) + smart_coordination
+  
+  Smart Examples with Context Coordination:
+  - 3 tasks → Think harder: Use 2 instances with shared context pool
+  - 5 tasks → Think harder: Use 3 instances with intelligent context coordination
+  - Mixed types → Think: Engage multiple specialists with cross-context coordination
 
-Step 3: Distribute Tasks Using Task Tool
-  FOR each instance (1 to optimal_instances):
-    Task [specialist-agent] (Instance {i}): 
-    "Handle your assigned batch: [specific task assignments]
+Step 3: Context-Aware Task Distribution Using Task Tool
+  FOR each specialist with smart context coordination:
+    Task [specialist-agent] (Instance {i} with Smart Context): 
+    "Handle your assigned batch with intelligent context access: [specific task assignments]
     
-    Context Package:
-    - Overall Task: [original user request]
-    - Your Batch: [files/components assigned to this instance]
-    - Project Patterns: [relevant patterns and conventions]
-    - Integration Requirements: [how your work fits with others]
+    Smart Context Package:
+    - Shared Understanding: [intelligent project understanding]
+    - Cross-Specialist Patterns: [patterns from related specialists]
+    - Context Updates: [smart context synchronization]
+    - Conflict Resolution: [think harder to detect and resolve conflicts]
+    - Integration Coordination: [cross-specialist coordination requirements]
     
-    Specific Instructions:
-    - Work only on assigned files: [list]
-    - Follow project patterns discovered in context
-    - Coordinate with parallel instances for integration
-    - Report progress and completion status
+    Context-Driven Instructions:
+    - Access shared context for comprehensive understanding
+    - Think to coordinate effectively with related specialists
+    - Share discoveries through intelligent context mechanisms
+    - Think harder to resolve conflicts through smart context coordination
+    - Validate work through cross-specialist context verification
     
-    Expected Output: [specific deliverables for this batch]"
+    Expected Output: [deliverables integrated through smart context coordination]"
 
-Step 4: Aggregate Results
-  - Wait for all instances to complete
-  - Collect and merge all outputs
-  - Validate integration between instances
-  - Report combined results to user
+Step 4: Context-Coordinated Result Aggregation
+  - Monitor all specialists through shared context mechanisms
+  - Collect results with intelligent conflict resolution
+  - Think to validate integration through smart context coordination
+  - Report comprehensive results with cross-specialist learning
+
+### Smart Task Distribution with Context Coordination
+
+**Intelligent Affinity-Based Distribution** (DEFAULT approach):
+```yaml
+When tasks have natural groupings with shared context:
+
+Domain Affinity with Smart Coordination:
+  - User-related files → Instance 1 (shared user context patterns)
+  - Product-related files → Instance 2 (shared product context patterns)
+  - Order-related files → Instance 3 (shared order context patterns)
+
+Technical Affinity with Context Coordination:
+  - React components (.tsx) → Instance 1 (shared component patterns)
+  - Services (.service.ts) → Instance 2 (shared service patterns)
+  - Tests (.test.ts) → Instance 3 (shared testing patterns)
+
+Context Benefits: Smart pattern sharing, intelligent conflict resolution, cross-specialist validation
+Guideline: Use context-driven affinity when logical groupings exist (think harder to determine optimal grouping)
 ```
 
-### Task Distribution Algorithms
-
-**Complexity-Based Distribution**:
+**Smart Round-Robin** (when no clear affinity patterns):
 ```yaml
-When task complexity varies significantly:
+When no clear affinity patterns (rare - most tasks have logical groupings):
 
-Estimation Factors:
-  - File size (lines of code)
-  - Dependencies count
-  - Pattern complexity (simple update vs major refactor)
-  - Historical timing data (if available)
-
-Distribution Strategy:
-  1. Estimate work for each task (low/medium/high)
-  2. Sort tasks by complexity (high first)
-  3. Assign to least-loaded instance
+Intelligent Even Distribution:
+  Instance 1: Tasks [1, 4, 7, 10, ...] with shared context access
+  Instance 2: Tasks [2, 5, 8, 11, ...] with shared context access
+  Instance 3: Tasks [3, 6, 9, 12, ...] with shared context access
   
-Example: 9 tasks, 3 instances
-  High complexity: [task1(8min), task2(7min), task3(6min)]
-  Medium: [task4(4min), task5(4min), task6(3min)]  
-  Low: [task7(2min), task8(2min), task9(1min)]
+Approach: Think to distribute evenly with smart context coordination
+Result: Effective parallelization with minimal conflicts through context intelligence
+```
+
+### Intelligent Coordination Execution Patterns
+
+**Smart Context Coordination Strategy**:
+```yaml
+Context-Driven Assignment Pattern:
+  - Each file assigned to primary specialist with shared context access
+  - Specialists share context pool with intelligent coordination mechanisms
+  - Think harder to synchronize context and prevent conflicts
+  - Context intelligence enables smart coordination
+
+Implementation with Context Coordination:
+  Instance 1 owns: [file1.ts, file4.ts, file7.ts] + shared context access
+  Instance 2 owns: [file2.ts, file5.ts, file8.ts] + shared context access
+  Instance 3 owns: [file3.ts, file6.ts, file9.ts] + shared context access
   
-  Distribution:
-  Instance 1: [task1(8min), task9(1min)] = 9min
-  Instance 2: [task2(7min), task8(2min)] = 9min  
-  Instance 3: [task3(6min), task4(4min)] = 10min
+Context Validation: Think harder to detect conflicts and coordinate through shared intelligence
 ```
 
-**Affinity-Based Distribution**:
+**Smart Progress Reporting Pattern**:
 ```yaml
-When tasks have natural groupings:
-
-Domain Affinity (preferred):
-  - User-related files → Instance 1
-  - Product-related files → Instance 2  
-  - Order-related files → Instance 3
-
-Technical Affinity:
-  - React components (.tsx) → Instance 1
-  - Services (.service.ts) → Instance 2
-  - Tests (.test.ts) → Instance 3
-
-Dependency Affinity:
-  - Files importing UserTypes → Instance 1
-  - Files importing ProductTypes → Instance 2
-  - Independent utilities → Instance 3
-
-Benefits: Context reuse, pattern consistency, fewer conflicts
-```
-
-**Round-Robin Fallback**:
-```yaml
-When no clear complexity or affinity patterns:
-
-Simple Distribution:
-  Instance 1: Tasks [1, 4, 7, 10, ...]
-  Instance 2: Tasks [2, 5, 8, 11, ...]
-  Instance 3: Tasks [3, 6, 9, 12, ...]
+Each Specialist Reports Through Shared Context:
+  - "Starting work on assigned batch with context coordination: [file_list]"
+  - "Updated shared context with discoveries: [pattern_updates]"
+  - "Completed [N/total] files with context validation"
+  - "Finished all assigned work: [summary] + context contributions"
   
-Ensures: Even distribution, minimal coordination overhead
+Context Aggregation:
+  - Monitor all specialist progress through shared context pool
+  - Collect completion reports with intelligent conflict resolution
+  - Think to validate integration through smart context coordination
+  - Synthesize results with cross-specialist learning integration
 ```
 
-### Coordination Execution Patterns
+### Intelligent Error Handling with Smart Context
 
-**File Ownership Strategy**:
+**Context-Driven Failure Recovery**:
 ```yaml
-Assignment Pattern:
-  - Each file assigned to exactly one instance
-  - No shared write access during execution
-  - Read-only access to shared context/patterns
-  - Clear boundaries prevent conflicts
+IF specialist fails or encounters conflicts:
+  1. Think harder to detect and log the failure
+  2. Shared context pool identifies alternative resolution strategies
+  3. Think to redistribute failed tasks using context-aware load balancing
+  4. Think about handling through cross-specialist coordination
+  5. Continue with context-validated successful results
+  6. Report resolution through shared intelligence analysis
 
-Implementation:
-  Instance 1 owns: [file1.ts, file4.ts, file7.ts]
-  Instance 2 owns: [file2.ts, file5.ts, file8.ts]
-  Instance 3 owns: [file3.ts, file6.ts, file9.ts]
-  
-Validation: Check no file appears in multiple instance assignments
+Example Context-Driven Recovery:
+  "Specialist 2 encountered pattern conflict in complex refactoring.
+   Context intelligence detected alternative approach.
+   Redistributing tasks [X, Y, Z] to Specialist 1 with updated context.
+   Resolved conflict through shared pattern intelligence.
+   Completed 95% of requested changes with enhanced pattern consistency."
 ```
 
-**Progress Reporting Pattern**:
+### Intelligent Performance Optimization with Smart Context
+
+**Context-Driven Load Balancing**:
 ```yaml
-Each Instance Reports:
-  - "Starting work on assigned batch: [file_list]"
-  - "Completed [N/total] files in batch"
-  - "Finished all assigned work: [summary_of_changes]"
-  
-Aggregation:
-  - Monitor all instance progress
-  - Collect completion reports
-  - Validate no missing work
-  - Synthesize final results
+IF specialist finishes early with context awareness:
+  1. Shared context pool identifies other specialists' workload status
+  2. Think to determine optimal task redistribution
+  3. Use Task tool with context coordination to assign additional work:
+     Task [specialist-agent] (Instance {fast_instance} with Context):
+     "Take on context-optimized additional tasks: [context_aware_tasks]
+      Use shared context intelligence for seamless integration."
+  4. Update shared context with load balancing decisions
+
+Context-Intelligent Work Stealing Example:
+  Instance 1: Finished early (3 tasks in 5 min, shared learning through context)
+  Instance 2: Struggling (2/5 tasks, context identifies complexity issues)
+  Context Action: Think to reassign 1-2 tasks with context-optimized patterns
+  Result: Enhanced performance + improved pattern consistency through shared intelligence
 ```
 
-### Error Handling Execution
+### Intelligent Execution Examples with Smart Context
 
-**Instance Failure Recovery**:
-```yaml
-IF instance fails or produces errors:
-  1. Log the specific failure with details
-  2. Extract unfinished tasks from failed instance
-  3. Redistribute failed tasks to other instances OR
-  4. Handle failed tasks in main thread
-  5. Continue with successful instance results
-  6. Report partial success with issue details
-
-Example Recovery:
-  "Instance 2 failed on complex refactoring task.
-   Redistributing remaining files [X, Y, Z] to Instance 1.
-   Completed 80% of requested changes successfully."
-```
-
-### Performance Optimization Patterns
-
-**Dynamic Load Balancing**:
-```yaml
-IF instance finishes early:
-  1. Check if other instances still have pending work
-  2. Identify tasks that can be safely redistributed
-  3. Use Task tool to assign additional work:
-     Task [specialist-agent] (Instance {fast_instance}):
-     "Take on additional tasks from overloaded instances: [new_tasks]"
-  4. Update progress tracking
-
-Work Stealing Example:
-  Instance 1: Finished early (completed 3 tasks in 5 min)
-  Instance 2: Still working (2/5 tasks completed, struggling)
-  Action: Reassign 1-2 tasks from Instance 2 to Instance 1
-```
-
-### Concrete Execution Examples
-
-**Example 1: API Endpoint Updates**
+**Example 1: API Endpoint Updates with Context Intelligence**
 ```yaml
 User Request: "Add authentication middleware to all 12 API endpoints"
 
-Detection: 12 independent files, same pattern, backend specialist needed
-Instance Count: 3 (12 tasks / 3 = 4 each)
+Intelligent Detection: Think harder to detect backend patterns, create backend specialist
+Context Coordination: Think to establish shared middleware patterns and security context
+Instance Count: 3 instances with smart authentication context coordination
 
-Execution:
-Task guild-backend-engineer (Instance 1):
-"Add authentication middleware to your assigned endpoints:
+Context-Driven Execution:
+Task guild-backend-engineer (Instance 1 with Auth Context):
+"Add authentication middleware to your assigned endpoints with shared auth patterns:
 - /api/users/*, /api/users/profile, /api/users/settings, /api/users/preferences
-Follow existing middleware patterns in project.
-Output: Updated endpoint files with auth middleware"
 
-Task guild-backend-engineer (Instance 2):  
-"Add authentication middleware to your assigned endpoints:
-- /api/products/*, /api/products/search, /api/products/categories, /api/products/reviews
-Follow existing middleware patterns in project.
-Output: Updated endpoint files with auth middleware"
+Smart Context Access:
+- Shared authentication patterns and middleware conventions
+- Security best practices from security specialist
+- Cross-endpoint consistency validation through shared context
+- Think harder to resolve auth implementation conflicts
 
-Task guild-backend-engineer (Instance 3):
-"Add authentication middleware to your assigned endpoints:  
-- /api/orders/*, /api/orders/history, /api/orders/tracking, /api/orders/refunds
-Follow existing middleware patterns in project.
-Output: Updated endpoint files with auth middleware"
+Use shared context intelligence for consistent implementation.
+Output: Auth middleware with context-validated consistency"
 
-Expected Result: 3x speedup (4 min instead of 12 min)
+[Similar context-coordinated patterns for instances 2 and 3]
+
+Expected Result: 3-4x speedup with minimal conflicts through context intelligence
 ```
 
-**Example 2: Component Refactoring**
+**Example 2: Component Refactoring with Context Intelligence**
 ```yaml
 User Request: "Convert 15 class components to functional components with hooks"
 
-Detection: 15 independent components, same pattern, frontend specialist needed
-Instance Count: 3 (15 tasks / 3 = 5 each)
+Intelligent Detection: Think harder to detect React patterns, create frontend specialist
+Context Coordination: Think to establish shared component patterns and hook conventions
+Instance Count: 3 instances with smart React context coordination
 
-Affinity Distribution:
-Instance 1: User-related components [UserProfile, UserList, UserCard, UserSettings, UserModal]
-Instance 2: Product components [ProductList, ProductCard, ProductDetail, ProductSearch, ProductFilter]  
-Instance 3: Order components [OrderList, OrderCard, OrderDetail, OrderHistory, OrderTracking]
+Context-Driven Affinity Distribution:
+Instance 1: User components with shared user interaction patterns
+Instance 2: Product components with shared product data patterns  
+Instance 3: Order components with shared order workflow patterns
+ALL: Access to shared React patterns, hook conventions, and component architecture
 
-Execution:
-Task guild-frontend-engineer (Instance 1):
-"Convert your assigned user components to functional with hooks:
+Context-Coordinated Execution:
+Task guild-frontend-engineer (Instance 1 with Component Context):
+"Convert your assigned user components with shared context intelligence:
 [UserProfile.tsx, UserList.tsx, UserCard.tsx, UserSettings.tsx, UserModal.tsx]
-Use project's existing hook patterns and follow component conventions.
-Maintain all existing functionality and props interfaces.
-Output: Converted functional components with hooks"
 
-[Similar patterns for instances 2 and 3]
+Smart Context Access:
+- Shared React patterns and hook conventions
+- Cross-component consistency through shared design system
+- Think to validate prop interfaces and patterns
+- Think harder to resolve hook implementation conflicts
 
-Expected Result: 3x speedup with domain expertise benefits
+Use context intelligence for consistent functional component patterns.
+Maintain interfaces through shared context validation.
+Output: Converted components with context-driven consistency"
+
+Expected Result: 3-4x speedup with architectural consistency through context intelligence
 ```
 
-## Embedded Intelligence
+## Embedded Intelligence with Smart Context
 
+### Intelligent Specialist Philosophy with Context Coordination
 
-### Core Parallelization Philosophy
+**Smart Specialist Strategy with Context Coordination**: Think harder to create and coordinate specialists through intelligent context sharing, engaging specialists based on project analysis.
 
-**Simple Parallel Strategy**: Work in parallel when tasks are independent, coordinate only at integration boundaries.
-
-**Default Settings**:
+**Intelligent Settings with Context Coordination**:
 ```yaml
-Concurrency Limits:
-  per_agent_type: 3 instances (configurable)
-  total_parallel: 20 agents maximum (configurable)
-  load_balancing: automatic task distribution
-  resource_management: dynamic scaling based on workload
+Concurrency Requirements with Context Coordination:
+  per_agent_type: 3 instances (maximum) with shared context pool
+  specialization: Think harder to create specialists when patterns detected
+  context_coordination: Intelligent shared context across all specialists
+  smart_coordination: Think to engage specialists through context analysis
 
-Parallelization Triggers:
-  independent_tasks: Always parallelize when no dependencies exist
-  different_files: Parallel work on separate files within same scope
-  different_components: Parallel work on independent components
-  different_scopes: Complete independence across project areas
+Intelligent Specialist Triggers:
+  task_analysis: Think harder to evaluate for specialist engagement opportunities
+  pattern_detection: Think to engage specialists when patterns detected
+  context_triggers: Think harder to call specialists based on shared context intelligence
+  complexity_thresholds: Think harder to create specialists when complexity detected
+  cross_integration: Think to coordinate between related specialists
+  
+SPECIALIST COORDINATION:
+  APPROACH: Smart context sharing and intelligent synchronization
+  EXAMPLES: "Specialists coordinate through shared intelligence pool" or "Think harder to resolve context conflicts"
 ```
 
 ### Same-Agent Multiple Instance Parallelization
 
 **Core Concept**: Spawn multiple instances of the SAME specialist agent to process independent tasks in parallel.
 
-**Enhanced Automatic Instance Spawning**:
+**Simple Instance Spawning**:
 ```yaml
-Advanced Detection Patterns:
-  file_affinity_patterns:
-    - Multiple files needing same type of modification
-    - Files sharing common dependencies or imports
-    - Components within same domain/feature area
-    - Files with similar complexity characteristics
+Detection Patterns:
+  - Multiple files needing same type of modification
+  - Independent components requiring same specialist
+  - Batch operations on similar code patterns
+  - Parallel test creation for related modules
 
-  component_affinity_patterns:
-    - Independent components requiring same specialist
-    - Related UI components (List/Card/Detail patterns)
-    - Service layer components with shared patterns
-    - Data models with similar structure
+Simple Spawning Strategy:
+  1. Planning agent analyzes task and identifies parallel opportunities
+  2. Calculates optimal instance count (up to 3)
+  3. Applies affinity-based grouping when possible
+  4. Spawns instances with clear file ownership
+  5. Monitors progress and aggregates results
 
-  operation_affinity_patterns:
-    - Batch operations on similar code patterns
-    - Parallel test creation for related modules
-    - Migration tasks across similar structures
-    - Refactoring operations with shared goals
-
-Predictive Spawning Strategy:
-  1. Planning agent analyzes task complexity and affinity patterns
-  2. Estimates optimal instance count using predictive algorithms:
-     instance_count = min(max(tasks/optimal_load_per_agent, 1), 3)
-     optimal_load_per_agent = base_capacity * complexity_adjustment
-  3. Applies affinity-based grouping before distribution
-  4. Spawns instances with specialized context packages
-  5. Monitors performance and adjusts dynamically
-
-Affinity-Based Task Grouping:
-  domain_affinity:
-    - Group tasks by business domain (user, product, order)
-    - Assign domain-related tasks to same instance
-    - Benefits: Domain expertise accumulation, consistent patterns
-
-  technical_affinity:
-    - Group by file type or technology (.tsx, .service.ts, .test.ts)
-    - Assign similar technical patterns to same instance
-    - Benefits: Technical specialization, optimized tooling usage
-
-  dependency_affinity:
-    - Group files sharing common imports or dependencies
-    - Assign interdependent components to same instance
-    - Benefits: Reduced context switching, better integration awareness
-
-  complexity_affinity:
-    - Group tasks by estimated complexity level
-    - Assign similar complexity tasks to specialized instances
-    - Benefits: Balanced workloads, specialized handling approaches
-```
-
-**Real-World Examples**:
-```yaml
-Example 1 - Interface Specialist (3 instances):
-  Instance 1: Updates UserList.tsx, UserCard.tsx
-  Instance 2: Updates ProductList.tsx, ProductCard.tsx
-  Instance 3: Updates OrderList.tsx, OrderCard.tsx
-  Result: 3x faster than sequential processing
-
-Example 2 - Service Specialist (3 instances):
-  Instance 1: Implements user.service.ts
-  Instance 2: Implements product.service.ts
-  Instance 3: Implements order.service.ts
-  Result: Complete service layer in 1/3 time
-
-Example 3 - Test Specialist (3 instances):
-  Instance 1: Creates tests for components A-F
-  Instance 2: Creates tests for components G-L
-  Instance 3: Creates tests for components M-R
-  Result: Full test coverage 3x faster
-```
-
-**Enhanced Task Distribution Algorithm**:
-```yaml
-Work Estimation-Based Distribution:
-  complexity_factors:
-    - File size and lines of code
-    - Number of dependencies and imports
-    - Pattern complexity (regex, loops, conditionals)
-    - Historical completion times for similar tasks
-
-  estimation_formula:
-    base_time = file_size_factor * complexity_multiplier
-    adjusted_time = base_time * (1 + dependency_factor)
-    final_estimate = adjusted_time * historical_adjustment
-
-Intelligent Distribution Logic:
-  # Instead of simple round-robin, use work estimation
-  tasks = [
-    {file: "file1.ts", estimated_time: 5min, complexity: "medium"},
-    {file: "file2.ts", estimated_time: 2min, complexity: "low"},
-    {file: "file3.ts", estimated_time: 8min, complexity: "high"},
-    {file: "file4.ts", estimated_time: 3min, complexity: "medium"},
-    {file: "file5.ts", estimated_time: 4min, complexity: "medium"},
-    {file: "file6.ts", estimated_time: 6min, complexity: "high"},
-    {file: "file7.ts", estimated_time: 2min, complexity: "low"}
-  ]
-
-  # Optimal distribution for 3 agents (total: 30min → 10min each)
-  Agent 1: [file3.ts(8min), file7.ts(2min)] = 10min
-  Agent 2: [file6.ts(6min), file4.ts(3min)] = 9min
-  Agent 3: [file1.ts(5min), file5.ts(4min), file2.ts(2min)] = 11min
-
-Affinity-Based Assignment:
-  principle: Assign similar tasks to same instance for context reuse
-  patterns:
-    - Same file type → same agent (*.tsx files to agent 1)
-    - Similar complexity → same agent (complex files to specialized agent)
-    - Related components → same agent (UserList, UserCard to same agent)
-    - Shared dependencies → same agent (files importing same modules)
-
-  benefits:
-    - Reduced context switching overhead
-    - Better pattern recognition and consistency
-    - Improved code quality through specialization
-    - Faster execution due to context reuse
-
-Round-Robin Fallback:
-  - When work estimation unavailable
-  - Ensures even distribution
-  - Minimizes idle time
-  - Allows work stealing if one finishes early
+Benefits:
+  - 2-3x speedup for applicable tasks
+  - Simple coordination through file ownership
+  - Standard tools for all operations
 ```
 
 ### Parallelization Patterns
-
-**Research Parallelization**:
-```yaml
-Pattern: Parallel context gathering
-Execution:
-  - Project analysis agents work independently
-  - Technology research agents work independently
-  - Pattern discovery agents work independently
-Coordination: None during execution, results aggregated for planning
-Benefits: 3-5x speedup in context gathering phase
-```
 
 **Implementation Parallelization**:
 ```yaml
@@ -426,79 +320,34 @@ Execution:
   - Clear component boundaries prevent conflicts
   - Integration points defined upfront in planning
 Coordination: File-level ownership, integration validation at completion
-Benefits: 4-6x speedup through parallel implementation
+Benefits: 2-3x speedup through parallel implementation
 ```
 
-**Quality Parallelization**:
-```yaml
-Pattern: Parallel validation when complexity requires it
-Execution:
-  - Test creation specialists work independently
-  - Quality validation specialists check different aspects
-  - Security and performance validation in parallel
-Coordination: Result aggregation and combined reporting
-Benefits: 5-10x speedup in validation phases
-```
+### Simple Load Balancing Strategy
 
-### Load Balancing Strategy
-
-**Enhanced Automatic Distribution**:
+**Automatic Distribution**:
 ```yaml
 Task Routing:
   - Route tasks to most appropriate specialist type
-  - Balance workload using work estimation
+  - Balance workload using simple distribution
   - Apply affinity-based routing for related tasks
-  - Avoid overloading any single specialist
+  - Prevent overloading any single specialist
 
-Predictive Scaling Strategy:
-  - Start with 1 instance, scale to 3 based on workload
-  - Scale up on queue depth and complexity
-  - Scale down when agents idle for extended periods
-
-  scale_up_triggers:
-    - Queue depth > 5 tasks with high complexity
-    - Average wait time > 2x estimated task completion time
-    - Agent utilization > 85% for sustained period
-
-  scale_down_triggers:
-    - Agent idle > 30% of time for 5+ minutes
-    - Queue depth < 2 tasks for sustained period
-    - Overall system utilization < 60%
-
-Enhanced Work Stealing:
-  cross_specialization_stealing:
-    - Idle specialists can adapt to help overloaded specialists
-    - Context transfer protocols for seamless handoffs
-    - Priority-based task redistribution
-
-  intelligent_redistribution:
-    - Consider task complexity and agent capability
-    - Minimize context switching overhead
-    - Maintain quality through appropriate specialist matching
-
-Real-Time Performance Optimization:
-  metrics_collection:
-    - Track completion times vs. estimates (accuracy improvement)
-    - Monitor resource usage patterns (CPU, memory, I/O)
-    - Analyze bottleneck patterns across different project types
-    - Measure context transfer and startup overhead
-
-  adaptive_algorithms:
-    - Machine learning from historical performance data
-    - Dynamic adjustment of complexity multipliers
-    - Real-time optimization of distribution algorithms
-    - Predictive modeling for resource requirements
+Simple Work Stealing:
+  - Idle specialists can take on additional work
+  - Context transfer through shared project patterns
+  - Priority-based task redistribution
 ```
 
 ### Coordination Mechanisms
 
-**Minimal Coordination Strategy**:
+**Simple Coordination Strategy**:
 ```yaml
 Independence Principle:
   - Agents work independently whenever possible
   - Shared state minimized to essential integration points
-  - Communication through asynchronous progress reporting
-  - Conflict resolution through ownership rules
+  - Communication through simple progress reporting
+  - Conflict resolution through file ownership rules
 
 Boundary Management:
   planning_phase: Define interfaces and contracts upfront
@@ -506,135 +355,25 @@ Boundary Management:
   quality_phase: Apply consistent validation across all work
   feedback_phase: Report issues and coordinate resolution
 
-Coordination Points:
-  - File ownership and modification rights
-  - Integration interface contracts
-  - Quality gate validation
-  - Final result aggregation and synthesis
-```
-
-### Scope-Based Parallelization
-
-**Project Scope Patterns**:
-```yaml
-Independent Scopes:
-  pattern: Complete independence across different project areas
-  examples: authentication, payments, analytics, interface, services
-  coordination: None during execution, integration validation at boundaries
-  benefits: Near-linear speedup based on number of independent scopes
-
-Intra-Scope Parallelization:
-  pattern: Parallel work within single scope on different components
-  examples: multiple files, different components, separate test types
-  coordination: Shared interfaces and contracts only
-  benefits: 3-5x speedup within scope boundaries
-
-Cross-Scope Integration:
-  pattern: Parallel boundary validation and integration testing
-  timing: After scope-specific work completion
-  coordination: Automated integration tests and contract validation
-  benefits: Fast integration verification without blocking development
-```
-
-### Adaptive Parallelization
-
-**Advanced Claude-Driven Optimization**:
-```yaml
-Multi-Dimensional Assessment:
-  project_analysis:
-    - Codebase size and complexity metrics
-    - Dependency graph analysis and coupling measurement
-    - File type distribution and pattern complexity
-    - Historical performance data from similar projects
-
-  resource_analysis:
-    - Available system resources (CPU, memory, I/O)
-    - Network latency and bandwidth constraints
-    - Context window utilization and memory pressure
-    - Agent spawn/teardown overhead measurements
-
-  task_analysis:
-    - Task interdependency mapping and critical path analysis
-    - Complexity scoring using multiple factors
-    - Affinity pattern recognition for grouping opportunities
-    - Risk assessment for parallel execution feasibility
-
-Predictive Scaling Algorithms:
-  ml_based_prediction:
-    model_inputs:
-      - Project characteristics (size, complexity, patterns)
-      - Task characteristics (type, dependencies, scope)
-      - Historical performance metrics
-      - Resource availability and constraints
-
-    prediction_outputs:
-      - Optimal instance count per specialist type
-      - Expected completion times and resource usage
-      - Bottleneck probability and mitigation strategies
-      - Quality risk assessment and validation needs
-
-  dynamic_scaling_rules:
-    conservative_start: Begin with 1 instance, scale based on queue depth
-    aggressive_scale: Rapidly spawn instances when high parallelization potential detected
-    adaptive_threshold: Adjust scaling triggers based on historical accuracy
-    predictive_preemption: Scale down before bottlenecks based on pattern recognition
-
-Enhanced Complexity-Based Scaling:
-  nano_projects: Single-agent execution (1 agent)
-    characteristics: <10 files, minimal dependencies, simple patterns
-    strategy: Sequential execution with minimal overhead
-
-  simple_projects: Conservative parallelization (2-3 agents)
-    characteristics: 10-100 files, low coupling, standard patterns
-    strategy: Basic parallel execution with simple coordination
-
-  medium_projects: Intelligent parallelization (4-8 agents)
-    characteristics: 100-500 files, moderate coupling, mixed complexity
-    strategy: Affinity-based grouping with predictive scaling
-
-  large_projects: Aggressive parallelization (8-15 agents)
-    characteristics: 500-2000 files, high coupling, complex patterns
-    strategy: Advanced coordination with machine learning optimization
-
-  enterprise_projects: Maximum parallelization (15-20 agents)
-    characteristics: >2000 files, complex architecture, multiple domains
-    strategy: Domain-based parallelization with sophisticated coordination
-
-Real-Time Performance Optimization:
-  adaptive_learning:
-    - Continuous model updates from execution data
-    - Pattern recognition for optimization opportunities
-    - Automatic adjustment of scaling parameters
-    - Performance regression detection and correction
-
-  predictive_optimization:
-    - Resource usage forecasting and preemptive scaling
-    - Bottleneck prediction and proactive mitigation
-    - Quality risk assessment with preventive measures
-    - Context optimization based on usage patterns
+Standard Tools:
+  - All .guild directory operations use standard Read/Write tools
+  - No special coordination tools or complex protocols
+  - Simple file-based ownership and conflict prevention
 ```
 
 ### Error Handling and Recovery
 
-**Parallel Error Management**:
+**Simple Error Management**:
 ```yaml
 Failure Isolation:
-  - Scope-level failure containment
+  - Task-level failure containment
   - Continue other work on localized failures
-  - Graceful degradation with partial success
-  - Clear reporting of failed vs. successful work
+  - Simple reporting of failed vs. successful work
 
 Recovery Strategies:
-  automatic_retry: Retry failed tasks with exponential backoff
-  fallback_sequential: Fall back to sequential execution on conflicts
-  checkpoint_restart: Resume from last successful checkpoint
-  partial_rollback: Rollback only affected components
-
-Conflict Resolution:
-  strategy: Follow unified conflict resolution from principles.md
-  implementation: Lock-free coordination with optimistic concurrency
-  prevention: File ownership and clear component boundaries
-  escalation: Defined hierarchy for human intervention when needed
+  fallback_redistribution: Redistribute failed tasks to other instances
+  main_thread_fallback: Handle failed tasks with main thread
+  partial_completion: Report partial success with clear status
 ```
 
 ### Performance Metrics
@@ -642,157 +381,17 @@ Conflict Resolution:
 **Target Performance**:
 ```yaml
 Efficiency Metrics:
-  load_balancing: >85% agent utilization efficiency
-  coordination_overhead: <5% of total execution time
-  resource_utilization: 60-75% average CPU across agents
+  load_balancing: Even distribution across instances
+  coordination_overhead: Minimal overhead through simple protocols
+  resource_utilization: Effective use of parallel capabilities
 
 Speedup Expectations:
-  research_phase: 3-5x through parallel context gathering
-  planning_phase: 2-3x through distributed analysis
-  implementation_phase: 4-6x through specialist parallelization
-  validation_phase: 5-10x through parallel quality assessment
-
+  implementation_phase: 2-3x through specialist parallelization
+  
 Overall Performance:
-  simple_projects: 40% faster through basic parallelization
-  medium_projects: 60% faster through intelligent load balancing
-  large_projects: 75% faster through aggressive parallelization
-  complex_projects: 75% faster through optimized coordination
-```
-
-### Real Performance Gains from Same-Agent Parallelization
-
-**Measured Speedups**:
-```yaml
-Refactoring Task (20 components):
-  Sequential: 1 interface specialist, 40 minutes
-  Parallel: 3 interface specialists, 14 minutes
-  Speedup: 2.86x
-
-Test Creation (30 test files):
-  Sequential: 1 test specialist, 60 minutes
-  Parallel: 3 test specialists, 20 minutes
-  Speedup: 3x
-
-API Migration (18 endpoints):
-  Sequential: 1 service specialist, 36 minutes
-  Parallel: 3 service specialists, 12 minutes
-  Speedup: 3x
-
-Database Migration (24 models):
-  Sequential: 1 data specialist, 48 minutes
-  Parallel: 3 data specialists, 16 minutes
-  Speedup: 3x
-
-Component Updates (15 UI components):
-  Sequential: 1 interface specialist, 30 minutes
-  Parallel: 3 interface specialists, 10 minutes
-  Speedup: 3x
-```
-
-**Optimal Use Cases for Same-Agent Parallelization**:
-```yaml
-High-Impact Scenarios:
-  - Batch updates across similar files (API endpoints, components, models)
-  - Consistent pattern application (error handling, logging, validation)
-  - Test generation for multiple modules
-  - Documentation updates across codebase
-  - Refactoring of similar components
-  - Migration of multiple endpoints
-  - Style updates across UI components
-  - Schema updates across data models
-
-Performance Characteristics:
-  - Linear speedup up to 3 instances
-  - Best results with 8+ similar tasks
-  - Minimal coordination overhead
-  - Near-perfect resource utilization
-  - Automatic load balancing
-```
-
-### Structure-Aware Parallelization
-
-**Project Structure Parallelization Strategy**:
-```yaml
-Submodule-Aware Parallelization:
-  pattern: Parallel work across git submodules with boundary respect
-  coordination: Single root .guild/ coordinates all submodule operations
-  execution:
-    - Agents receive submodule structure context
-    - Tasks distributed across submodules independently
-    - Integration validation at submodule boundaries
-    - Submodule commit coordination when needed
-  benefits: Near-linear speedup based on number of independent submodules
-
-Monorepo Package Parallelization:
-  pattern: Package-level task distribution with workspace awareness
-  coordination: Root-level orchestration of package operations
-  execution:
-    - Agents understand package boundaries and dependencies
-    - Tasks routed to appropriate packages in dependency order
-    - Workspace-level validation and build coordination
-    - Cross-package interface consistency maintained
-  benefits: 3-5x speedup through package-level parallelization
-
-Multi-Language Parallelization:
-  pattern: Language-specific specialist coordination
-  coordination: Single agent set handles all languages from root
-  execution:
-    - Language-specific context packages for specialists
-    - Cross-language interface validation and consistency
-    - Unified build and test coordination from root
-    - Language boundary respect with interface validation
-  benefits: 4-6x speedup through language-specific specialization
-
-Complex Structure Coordination:
-  pattern: Hybrid parallelization for projects with multiple structure types
-  examples: Monorepo with submodules, multi-language with packages
-  coordination: Hierarchical boundary management from single root
-  execution:
-    - Structure hierarchy understanding in all agents
-    - Multi-level boundary validation and coordination
-    - Complex dependency chain management
-    - Integrated testing across all structure types
-  benefits: Optimized speedup while maintaining structural integrity
-```
-
-**Enhanced Load Balancing for Complex Projects**:
-```yaml
-Structure-Aware Task Distribution:
-  submodule_affinity:
-    - Group tasks by submodule to minimize boundary crossing
-    - Assign submodule-specific tasks to same agent instances
-    - Benefits: Reduced context switching, better integration awareness
-
-  package_affinity:
-    - Group monorepo package tasks for workspace consistency
-    - Respect package dependencies in task ordering
-    - Benefits: Workspace integrity, dependency-aware execution
-
-  language_affinity:
-    - Group cross-language interface tasks for consistency
-    - Assign language-specific patterns to specialized instances
-    - Benefits: Interface coherence, language expertise accumulation
-
-  complexity_distribution:
-    - Balance complex structure operations across instances
-    - Prevent overloading single instances with boundary coordination
-    - Benefits: Even workload distribution, optimal resource utilization
-
-Structure Coordination Overhead Management:
-  boundary_validation_batching:
-    - Batch boundary validations to minimize coordination overhead
-    - Validate integration points at completion rather than per-operation
-    - Benefits: <3% coordination overhead even in complex structures
-
-  context_sharing_optimization:
-    - Share structure context across instances efficiently
-    - Minimize duplicate structure analysis and boundary detection
-    - Benefits: Faster startup, reduced memory usage
-
-  conflict_prevention:
-    - Use structure boundaries as natural conflict prevention
-    - File ownership aligned with structure boundaries
-    - Benefits: Near-zero conflicts in structure-aware operations
+  simple_projects: 2x faster through basic parallelization
+  medium_projects: 2-3x faster through intelligent load balancing
+  large_projects: 3x faster through optimized coordination
 ```
 
 ## Integration Points

@@ -1,17 +1,23 @@
 # Core Principles Module
-**Version**: 2.3.0 | **Last Updated**: 2025-01-16 | **Dependencies**: None
+**Version**: 2.4.0 | **Last Updated**: 2025-01-17 | **Dependencies**: None
 
 ## Purpose
 Fundamental principles that guide all Guild system behavior. This module is embedded into the setup command.
 
 ## Embedded Intelligence
 
-### Claude-First Philosophy
+### Claude-First Philosophy with Thinking Modes
 
-**Core Approach**: Trust Claude's intelligence to understand, analyze, and implement appropriately based on project context.
+**Core Approach**: Trust Claude's intelligence to understand, analyze, and implement appropriately based on project context, using appropriate thinking modes for optimal cognitive resource allocation.
+
+**Thinking Mode Strategy**:
+- **ultrathink**: Complex architectural decisions, project-wide analysis, specialist detection
+- **think harder**: Strategic planning, coordination patterns, quality assessments  
+- **think**: Standard implementation, routine operations, pattern following
 
 **Key Principles**:
 - **Prompt-driven**: All behavior defined through prompts, not hardcoded patterns
+- **Thinking-optimized**: Match cognitive complexity to task requirements
 - **Dynamic adaptation**: Claude determines optimal approaches for each project
 - **Technology-agnostic**: Universal patterns that work with any tech stack
 - **Context-aware**: Intelligence emerges from understanding project patterns
@@ -39,19 +45,43 @@ Agent Intelligence:
   - Quality standards from project analysis
 ```
 
-### Parallel Execution Principles
+### Intelligent Parallel Architecture
 
-**Simple Parallelization**:
-- Work in parallel when tasks are independent
-- Coordinate only at integration boundaries
-- Default: 3 instances per agent type, max 20 total
-- Load balance across available agents
+**Parallel-First Philosophy**: Think harder about every task to identify parallelization opportunities and optimize execution strategy.
 
-**Workflow Strategy**:
-- Main thread: reasoning and requirement analysis only
-- Parallel research: project + technology context
-- Planning: task decomposition and routing
-- Parallel implementation: specialized agents work independently
+**Core Parallel Strategy**:
+- **Default assumption**: Most tasks benefit from parallel execution
+- **Required evaluation**: Every task should be assessed for parallel opportunities  
+- **Dynamic scaling**: 2 instances for 3-4 tasks, 3 instances for 5+ tasks (per specialist type)
+- **Justification needed**: Single-threaded execution should have clear reasoning
+- **Performance target**: 80%+ of tasks executed in parallel
+
+**Parallel Execution Patterns**:
+```yaml
+Different Specialists (Cross-domain):
+  Strategy: Execute different specialist types simultaneously
+  Example: Frontend + Backend + DevOps specialists work in parallel
+  Thinking: Standard coordination with clear boundaries
+
+Same Specialist (Multi-instance):
+  Trigger: >2 similar tasks detected
+  Scaling Strategy: 
+    - 1-2 tasks → Single instance
+    - 3-4 tasks → 2 instances  
+    - 5+ tasks → 3 instances
+  Thinking: Think harder to optimize task distribution and prevent conflicts
+
+Hybrid Execution:
+  Approach: Combine cross-domain and multi-instance strategies
+  Coordination: File ownership with intelligent task affinity
+  Thinking: Ultrathink for complex coordination scenarios
+```
+
+**Intelligent Workflow Strategy**:
+- Main thread: Reasoning and requirement analysis (ultrathink)
+- Planning agent: Parallel execution planning and routing (think harder for coordination)
+- Implementation: Specialist execution with intelligent coordination (think for standard tasks)
+- Quality: Cross-specialist validation with appropriate thinking modes
 
 ### Quality Through Intelligence
 
@@ -61,10 +91,10 @@ Agent Intelligence:
 - Validate against requirements and integration points
 - Test when complexity or risk requires it
 
-**Intelligence Allocation**:
-- Complex analysis: Enhanced thinking modes
-- Routine implementation: Standard thinking mode
-- Strategic planning: Comprehensive analysis mode
+**Thinking Mode Allocation**:
+- **ultrathink**: Architectural decisions, project analysis, complex specialist coordination
+- **think harder**: Strategic planning, parallel optimization, quality gates, complex integration
+- **think**: Standard implementation, routine tasks, pattern following, simple coordination
 
 ### Project Structure Intelligence
 
@@ -107,30 +137,34 @@ Structure Intelligence:
 - User can still explicitly request operations on ignored files
 - Clear feedback when accessing ignored files by request
 
-## Key Invariants
+## Key Principles
 
 1. **Claude-First**: Trust Claude's capabilities over hardcoded logic
-2. **Context-Driven**: All decisions based on actual project analysis
-3. **Simplicity**: Prefer simple patterns over complex specifications
-4. **Adaptability**: System adapts to any project type or technology
-5. **Performance**: Intelligent parallel execution without over-complexity
+2. **Thinking-Optimized**: Use appropriate thinking modes for cognitive efficiency
+3. **Parallel-Intelligent**: Think harder to identify and implement parallel opportunities
+4. **Context-Driven**: All decisions based on actual project analysis
+5. **Evaluated Parallelization**: Every task should be assessed for parallel execution
+6. **Simplicity**: Prefer clear patterns over complex specifications
+7. **Adaptability**: System adapts to any project type or technology
+8. **Performance**: Intelligent parallel execution targeting 80%+ parallel task rate
 
 ## Unified Conflict Resolution Strategy
 
-**Simple Coordination Principles**:
+**Intelligent Coordination Principles**:
 - **Prevention First**: File ownership prevents most conflicts
-- **Optimistic Execution**: Work in parallel with rollback capability
+- **Optimistic Execution**: Work in parallel with rollback capability  
 - **Graceful Degradation**: Continue with partial success when conflicts occur
+- **Think Harder**: Use enhanced thinking for complex coordination decisions
 
 **Resolution Strategy**:
 ```yaml
 Prevention: File-level ownership assignment and clear boundaries
-Detection: Monitor file conflicts and integration violations
-Resolution: Priority-based resolution with rollback and retry
-Escalation: Human intervention for complex conflicts
+Detection: Monitor file conflicts and integration violations  
+Resolution: Think harder about priority-based resolution with rollback
+Escalation: Ultrathink for complex conflicts requiring human guidance
 ```
 
-**Implementation**: Lock-free coordination with simple priority rules and clear conflict reporting
+**Implementation**: Lock-free coordination with intelligent priority rules and clear conflict reporting
 
 ## Integration Points
 
