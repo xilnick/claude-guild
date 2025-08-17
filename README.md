@@ -3,275 +3,250 @@
 [![npm version](https://img.shields.io/npm/v/claude-guild.svg)](https://www.npmjs.com/package/claude-guild)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Self-Contained Workflow Orchestration System for Claude Code**
+**This project is a tiny command set for creating specialized agents with parallel execution. Highly customizable with instructions.md and tolerant to ignore.md.**
 
-> Transform every development task into a systematic, multi-stage workflow with intelligent agents, advanced context engineering, and advanced thinking capabilities.
+> Simple, powerful workflow automation for Claude Code - transform any task into systematic multi-stage execution with intelligent agents.
 
 ## 🎯 What is Claude Guild?
 
-Claude Guild is a **comprehensive workflow orchestration system** for [Claude Code](https://claude.ai/code) that transforms how you approach development tasks. Instead of ad-hoc conversations, Guild provides structured **multi-stage workflows** with specialized agents that understand your project, analyze requirements deeply, and execute implementations systematically.
+Claude Guild is a **lightweight command set** for [Claude Code](https://claude.ai/code) that creates specialized agents with customizable workflows. Instead of complex configuration, Guild provides **simple setup** with `instructions.md` customization and `ignore.md` tolerance, enabling systematic multi-stage execution tailored to your project.
 
 ### Core Purpose
 
-**Transform Development Workflow**: Every task becomes a thorough, multi-stage process:
-- **🧠 Deep Analysis**: Advanced thinking with approach verification - detects inappropriate technologies and suggests better alternatives
-- **🔍 Context Research**: Intelligent codebase analysis with advanced context engineering
-- **📋 Strategic Planning**: Comprehensive implementation strategy with enhanced parallel execution coordination and dependency analysis
-- **🔨 Specialized Implementation**: Technology-specific engineers with deep domain knowledge
-- **✅ Quality Validation**: Systematic verification with testing and compliance checks
+**Simple Workflow Automation**: Transform any task into systematic execution:
+- **🧠 Analysis**: Smart requirement understanding and approach verification
+- **🔍 Research**: Codebase context gathering and pattern analysis  
+- **📋 Planning**: Coordinated task breakdown with parallel execution
+- **🔨 Implementation**: Specialized agents for your technology stack
+- **✅ Validation**: Quality checks and testing integration
+
+**Highly Customizable**: Adapt workflows to your needs:
+- **📝 instructions.md**: Define project-specific requirements and preferences
+- **🚫 ignore.md**: Exclude files and patterns from analysis
+- **⚡ Parallel Execution**: Automatic task distribution for 3x speedup
 
 **Universal Compatibility**: Works with any technology stack - from frontend frameworks to backend APIs to systems programming. Guild analyzes your project and creates appropriate specialists automatically.
 
-### Self-Contained Architecture (Primary Differentiator)
+### Main Usage Patterns
 
-**✅ Global Installation Guarantee**: Guild's self-contained architecture ensures 100% reliable setup across all environments:
-- **Zero-dependency global installation** via NPM with complete reliability
-- **Complete template embedding** - 1,164+ line setup commands contain all workflow definitions, agent templates, and specifications
-- **No missing files** - All content embedded in setup command for consistent results
-- **Global compatibility** - Works identically across all environments via `npx claude-guild@latest`
-- **Template independence** - No runtime dependency on external files
-
-### Why Multi-Stage Workflow?
-
-**Without Guild** (Traditional Approach):
-- Single-pass conversations with missed requirements
-- Context switching between files and concepts
-- Inconsistent implementation patterns
-- Manual task breakdown and coordination
-- Limited systematic validation
-
-**With Guild** (Multi-Stage Approach):
-- ✅ **Systematic Requirement Analysis**: Advanced thinking with approach verification prevents inappropriate technology choices
-- ✅ **Comprehensive Context Building**: Advanced context engineering with long-context optimization
-- ✅ **Strategic Implementation Planning**: Enhanced parallel execution with dependency-aware coordination and 3x speedup
-- ✅ **Technology-Aware Execution**: Domain-specific engineers with deep framework knowledge
-- ✅ **Quality Assurance Integration**: Automated testing, verification, and compliance validation
-
-## 🚀 Two Ways to Use Guild
-
-### 1. Full Guild System (Comprehensive Workflows)
-
-**Best For**: Complex projects requiring systematic development workflows
-
+**1. Quick Setup & Go**:
 ```bash
-# Install and set up complete Guild commands to selected path
+# Install anywhere, works everywhere
+npx claude-guild@latest
+
+# Start using immediately  
+/guild "implement user authentication"
+```
+
+**2. Customize with instructions.md**:
+```yaml
+# .guild/instructions.md
+project:
+  stack: [react, typescript, postgresql]
+  testing: [jest, playwright]
+  
+preferences:
+  always_include_tests: true
+  code_style: prettier
+  deployment: vercel
+```
+
+**3. Control scope with ignore.md**:
+```
+# .guild/ignore.md
+node_modules/
+*.test.js
+legacy/
+docs/
+```
+
+### Why Use Guild?
+
+**Before Guild**: Ad-hoc conversations, missed requirements, manual coordination
+**With Guild**: Systematic workflow with specialized agents
+
+**Key Benefits**:
+- ✅ **Automatic Task Breakdown**: Smart analysis and parallel execution
+- ✅ **Technology-Aware**: Agents specialized for your stack  
+- ✅ **Customizable Workflow**: Adapt to your project needs via instructions.md
+- ✅ **Quality Built-in**: Testing and validation integrated by default
+- ✅ **3x Faster**: Parallel agent coordination for complex tasks
+
+## 🚀 Simple Setup Examples
+
+### Basic Installation & Usage
+```bash
+# One command setup - works anywhere
+npx claude-guild@latest
+
+# Start using immediately with simple commands
+/guild "add user login feature"
+/guild --fix "payment form validation issues"  
+/guild --plan "migrate to TypeScript"
+```
+
+### Setup Customization Examples
+
+**Example 1: Frontend React Project**
+```yaml
+# .guild/instructions.md
+project:
+  type: frontend
+  stack: [react, typescript, vite]
+  styling: tailwindcss
+  testing: [jest, react-testing-library]
+  
+preferences:
+  component_style: functional
+  state_management: zustand
+  always_include_tests: true
+```
+
+**Example 2: Full-Stack Node.js API**  
+```yaml
+# .guild/instructions.md
+project:
+  type: fullstack
+  backend: [node, express, postgresql]
+  frontend: [react, nextjs]
+  deployment: vercel
+  
+workflow:
+  always_verify_security: true
+  include_api_docs: true
+  parallel_execution: true
+```
+
+**Example 3: Mobile Development**
+```yaml
+# .guild/instructions.md
+project:
+  type: mobile
+  framework: react-native
+  platforms: [ios, android]
+  backend_integration: rest_api
+  
+preferences:
+  navigation: react-navigation
+  testing: detox
+  state: redux-toolkit
+```
+
+## ⚡ Core Commands & Usage
+
+### Essential Commands
+```bash
+# Main workflow command - handles any development task
+/guild "task description"
+
+# Setup and configuration  
+/guild:setup                    # Install agents for your project
+/guild:setup --standalone       # Install specialist agents only
+
+# Workflow flags for specific approaches
+/guild --fix "bug description"     # Focus on debugging
+/guild --plan "large changes"      # Planning only
+/guild --full "critical feature"   # Complete lifecycle including tests
+```
+
+### Real-World Usage Examples
+
+**Feature Development**:
+```bash
+/guild "add shopping cart with local storage persistence"
+# → Analysis → Research → Planning → Implementation → Validation
+```
+
+**Bug Fixing**:
+```bash
+/guild --fix "checkout form not submitting on mobile devices"
+# → Focused debugging workflow with systematic root cause analysis
+```
+
+**Architecture Planning**:
+```bash
+/guild --plan "migrate from REST to GraphQL across all endpoints"
+# → Comprehensive planning with dependency analysis and migration strategy
+```
+
+**Performance Gains**: 3x speedup through intelligent parallel execution
+- Multiple agents work simultaneously on different parts
+- Smart coordination prevents conflicts
+- Automatic dependency management
+
+## 📋 Quick Reference
+
+### Main Commands
+```bash
+/guild "task"           # Standard workflow: analyze → research → plan → implement
+/guild --fix "bug"      # Bug fixing workflow  
+/guild --plan "change"  # Planning only
+/guild --full "feature" # Full lifecycle with testing
+/guild:setup            # Install for your project
+```
+
+### Customization Files
+- **`.guild/instructions.md`** - Project preferences, tech stack, workflow settings
+- **`.guild/ignore.md`** - Files/patterns to exclude from analysis
+- **`.claude/commands/`** - Generated workflow commands
+- **`.claude/agents/`** - Technology-specific specialist agents
+
+### How It Works
+
+**Simple 4-Stage Process**:
+1. **Analyze** - Understand requirements and constraints
+2. **Research** - Gather codebase context and patterns  
+3. **Plan** - Break down into coordinated tasks
+4. **Implement** - Execute with specialized agents
+
+**Parallel Execution**: Multiple agents work simultaneously on different parts while maintaining coordination and preventing conflicts.
+
+**Technology Detection**: Automatically creates specialists for your tech stack (React, Node.js, Python, etc.)
+
+## 🛠️ Installation & Getting Started
+
+### 1. Quick Install
+```bash
+# Works anywhere, no dependencies
 npx claude-guild@latest
 ```
 
-**Main Workflow Commands**:
+### 2. Start Using
 ```bash
-# Simple 4-stage workflow (Analysis → Research → Planning → Implementation)
-/guild "implement user authentication with JWT"
+# Basic usage - works immediately  
+/guild "add login form with validation"
 
-# Optional comprehensive lifecycle (--full flag adds testing, verification, refactoring)
-/guild --full "add real-time notifications system"
+# Bug fixing workflow
+/guild --fix "form not submitting on Safari"
 
-# Flag-only specialized modes
-/guild --fix "checkout process throwing errors on payment submission"
-/guild --plan "migrate from JavaScript to TypeScript across entire codebase" 
-/guild --research "modern server-side rendering patterns and data fetching strategies"
-/guild --spec "design REST API for user profile management"
-
-# Combined flag workflows  
-/guild --spec --full "design and implement GraphQL API with comprehensive testing"
-/guild --refactor --project "migrate from JavaScript to TypeScript"
+# Planning only
+/guild --plan "add real-time chat feature"
 ```
 
-### 2. Standalone Agents (Instant Specialists)
-
-**Best For**: Projects needing specific expertise without full workflow system
-
-```bash
-# Install standalone specialist agents
-/guild:setup --standalone
-
-# Automatically creates domain-specific specialists:
-# - security-analyst-agent (OWASP, vulnerability assessment)
-# - performance-engineer-agent (optimization, caching, monitoring)
-# - accessibility-auditor-agent (WCAG 2.1 AA compliance)
-# - code-reviewer-agent (quality analysis, refactoring)
-# - documentation-writer-agent (technical docs, API guides)
-# - testing-strategist-agent (test strategy, automation)
+### 3. Customize (Optional)
+Create `.guild/instructions.md` to adapt to your project:
+```yaml
+project:
+  stack: [react, typescript]
+  testing: jest
+  styling: tailwindcss
 ```
 
-**Automatic Activation**: Specialists activate based on task content
-```bash
-# Security tasks → security-analyst-agent automatically engages
-"Review authentication system for security vulnerabilities"
+## 📚 Documentation & Resources
 
-# Performance tasks → performance-engineer-agent automatically engages  
-"Optimize database queries causing slow API responses"
+### Complete Documentation
+- **Installation Guide**: Works anywhere with `npx claude-guild@latest`
+- **Customization**: Use `.guild/instructions.md` for project-specific settings
+- **File Control**: Use `.guild/ignore.md` to exclude files from analysis
 
-# Documentation tasks → documentation-writer-agent automatically engages
-"Create comprehensive API documentation for user service"
-```
+### Community & Support
+- **GitHub**: [claude-guild repository](https://github.com/anthropics/claude-guild)
+- **NPM**: [claude-guild package](https://www.npmjs.com/package/claude-guild)  
+- **Issues**: Report bugs and request features on GitHub
 
-## ⚡ NEW in v2.3.1: Prompt-Based Parallel Execution
+---
 
-**Revolutionary Performance Improvements** - Guild v2.3.1 introduces prompt-based parallel execution with **3x speedup** across all workflows through Claude's native intelligence:
-
-### 🚀 Prompt-Based Implementation Excellence
-- **Claude Execution Instructions**: Comprehensive prompt patterns guide Claude through sophisticated parallel task detection and distribution
-- **Intelligent Task Distribution**: Prompt-based algorithms for complexity analysis, affinity grouping, and optimal work balancing
-- **Instance Spawning Protocols**: Detailed Task tool usage patterns for creating and coordinating multiple agent instances
-- **Coordination Protocols**: Clear instructions for file ownership, progress monitoring, and result aggregation
-
-### 🧠 Prompt-First Architecture Reinforcement
-- **No Custom Scripts**: All parallel execution capabilities implemented through Claude's native intelligence and Task tool
-- **Intelligent Distribution**: Prompt patterns enable automatic detection of optimal parallelization opportunities
-- **Dynamic Coordination**: Claude-driven coordination based on real-time analysis rather than hardcoded logic
-- **Performance Optimization**: Prompt-guided work stealing, load balancing, and resource management
-
-### 📊 Real-World Performance Gains
-```bash
-# Measured speedups with v2.3.1 prompt-based execution:
-Refactoring (20 components):    40 min → 14 min  (2.86x faster)
-Test Creation (30 files):       60 min → 20 min  (3x faster)
-API Migration (18 endpoints):   36 min → 12 min  (3x faster)
-Database Migration (24 models): 48 min → 16 min  (3x faster)
-Component Updates (15 files):   30 min → 10 min  (3x faster)
-```
-
-### 🎯 Dependency-Aware Scheduling
-- **Project Structure Analysis**: Complete dependency graph construction with weight scoring
-- **Task Interdependency Mapping**: Critical path identification and parallel execution optimization
-- **Smart Coordination**: Minimal overhead synchronization only at dependency boundaries
-- **Resource Optimization**: 60-75% average CPU utilization with 85%+ agent efficiency
-
-### 🔧 Advanced Agent Coordination
-- **Lock-Free Execution**: File-level ownership with optimistic concurrency control
-- **Context Memory Optimization**: Efficient context sharing and incremental updates
-- **Real-Time Performance Monitoring**: Continuous optimization with automatic rebalancing
-- **Quality Gate Integration**: Risk-based testing and verification triggers
-
-### 💡 NEW in v2.3.1: Prompt-Based Implementation
-**Enhanced Parallel Execution Through Intelligent Prompts** - All parallel execution capabilities implemented through Claude's native intelligence:
-
-- **Claude Execution Instructions**: Comprehensive prompt patterns guide Claude through sophisticated parallel task detection and distribution
-- **Intelligent Task Distribution**: Prompt-based algorithms for complexity analysis, affinity grouping, and optimal work balancing  
-- **Coordination Protocols**: Clear instructions for file ownership, progress monitoring, and result aggregation
-- **Prompt-First Architecture**: No custom scripts - leverages Claude's Task tool and native reasoning for maximum reliability
-
-**Result**: Tasks that previously took hours now complete in minutes, with intelligent quality assurance and modern best practices automatically applied.
-
-## 📋 Complete Command Reference
-
-### Quick Start Commands
-
-```bash
-# Simple 4-stage workflow (Analysis → Research → Planning → Implementation)
-/guild "implement user authentication with JWT"
-
-# Optional comprehensive lifecycle (--full flag adds testing, verification, refactoring)
-/guild --full "add real-time notifications system"
-
-# Initialize system and agents
-/guild:setup
-
-# Standalone specialists (independent agents)
-/guild:setup --standalone
-```
-
-### Essential Flags
-- **--full**: OPTIONAL comprehensive lifecycle (adds testing, verification, refactoring to default 4-stage workflow)
-- **--fix**: Systematic bug fixing with debugging workflow
-- **--plan**: Planning-only mode with optional save to file
-- **--research**: Research-only mode for context gathering
-- **--spec**: Documentation-first development with specification management
-- **--project**: Project-wide scope for comprehensive changes
-
-### Core Workflow Commands
-
-#### `/guild [flags] "task"`
-**The primary workflow command** - executes tasks through systematic multi-stage process:
-
-```bash
-# Simple 4-stage workflow (DEFAULT)
-/guild "implement shopping cart functionality"
-# Executes: Analysis → Research → Planning → Implementation
-
-# Interactive mode (Guild prompts for task)
-/guild
-# Provides context-aware task suggestions based on your project
-
-# Comprehensive development lifecycle  
-/guild --full "build admin dashboard with user management"
-# Executes: Analysis → Research → Planning → Implementation → Testing → Verification → Refactoring
-```
-
-**Available Flags**:
-- `--full`: OPTIONAL comprehensive lifecycle (adds testing, verification, refactoring to default workflow)
-- `--fix`: Bug fixing mode (when used alone) OR enable fix stage (when combined)
-- `--plan`: Planning-only mode (when used alone) with optional file saving
-- `--research`: Research-only mode (when used alone) for context gathering
-- `--spec`: Specification mode (when used alone) OR documentation-first development (when combined)
-- `--refactor`: Enable code optimization and restructuring stage
-- `--test`: Enable comprehensive test creation and execution
-- `--verify`: Enable systematic verification and compliance checking
-- `--project`: Apply changes across entire project (default: focused scope)
-- `--no-reason`: Skip deep analysis stage (faster execution)
-- `--no-plan`: Skip strategic planning stage (direct implementation)
-- `--no-implement`: Legacy planning-only mode (same as `--plan` when used alone)
-- `--show-plan`: Display execution plan preview and require confirmation before starting
-
-### Specialized Workflow Commands
-
-#### `/guild:setup [options]`
-**Initialize Guild system and create specialized agents**:
-
-```bash
-# Analyze project and create full Guild system
-/guild:setup
-
-# Create standalone agents only
-/guild:setup --standalone
-
-# Create standalone agents with specific focus
-/guild:setup --standalone "focus on security and performance optimization"
-
-# Reinitialize after major project changes
-/guild:setup --refresh
-```
-
-### Flag-Only Execution Modes
-
-The main `/guild` command supports specialized execution modes when specific flags are used alone:
-
-#### Bug Fixing Mode (`--fix` only)
-**Systematic bug resolution without new feature implementation**:
-
-```bash
-/guild --fix "users getting 500 error on checkout"
-# Executes: Analysis → Research → Planning → Fix Stage (no implementation)
-# Focus: Root cause analysis, targeted fixes, regression prevention
-```
-
-#### Planning Mode (`--plan` only)  
-**Strategic planning with optional file saving**:
-
-```bash
-/guild --plan "migrate monolith to microservices architecture"
-# Executes: Analysis → Research → Planning → Save Plan Option
-# Creates: Detailed implementation plans with phases, timelines, risks, dependencies
-```
-
-#### Research Mode (`--research` only)
-**Comprehensive context gathering and analysis**:
-
-```bash
-/guild --research "modern frontend framework patterns and performance optimization"
-# Executes: Analysis → Research (with detailed output to user)
-# Focus: Information gathering and context building for future tasks
-```
-
-#### Specification Mode (`--spec` only)
-**Documentation and specification management**:
-
-```bash
-/guild --spec "API authentication endpoints with OAuth2 support"
-# Executes: Analysis → Research → Planning → Specification Creation
-# Creates: Detailed specifications in .guild/specs/ directory
-```
+**Claude Guild: Simple command set → Specialized agents → Systematic workflows → 3x faster development** 🏛️
 
 ## 🔧 Main Approaches & When to Use Them
 

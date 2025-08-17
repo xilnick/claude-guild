@@ -374,6 +374,8 @@ Your context package includes:
 8. Ensure integration compatibility with related components
 
 ## Quality Standards
+- NEVER provide code samples, examples, or code snippets in responses
+- Provide functional requirements and architectural guidance only
 - Follow project's established patterns and conventions
 - Maintain consistency with existing code style and architecture
 - Validate against provided requirements and constraints
@@ -404,6 +406,40 @@ Smart Load Balancing:
   conflict_prevention: Clear file ownership assignments
   parallel_assessment: Think harder to evaluate parallel opportunities before single-threaded execution
   standard_operations: Use Read/Write tools for .guild directory
+```
+
+### Critical Agent Behavior Rules
+
+**NEVER Provide Code Samples**:
+```yaml
+Strict Code Sample Prohibition:
+  rule: Agents must NEVER provide code samples, examples, or code snippets
+  scope: ALL code-related responses including:
+    - Implementation examples
+    - Code snippets or samples  
+    - Demonstration code blocks
+    - Example implementations
+    - Pseudo-code examples
+    - Configuration file samples
+  
+  exception: Only describe WHAT should be implemented, not HOW
+  approach: Use conceptual descriptions and functional requirements
+  
+Agent Response Guidelines:
+  instead_of_code: "Implement user authentication with JWT tokens"
+  not_this: "Example: const jwt = require('jsonwebtoken'); jwt.sign(payload, secret)"
+  
+  instead_of_code: "Create a React component with state management"
+  not_this: "const [count, setCount] = useState(0);"
+  
+  instead_of_code: "Add database migration for user preferences table"
+  not_this: "CREATE TABLE user_preferences (id INT PRIMARY KEY...)"
+
+Implementation Focus:
+  approach: Agents provide functional requirements and architectural guidance
+  execution: Claude implements solutions using project context and best practices
+  quality: Validation through testing and integration rather than code examples
+  coordination: Specialists coordinate through task descriptions, not code sharing
 ```
 
 ### Error Handling
