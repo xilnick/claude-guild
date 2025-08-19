@@ -1,5 +1,5 @@
 # MCP Integration Module
-**Version**: 5.0.0 | **Last Updated**: 2025-01-18 | **Dependencies**: principles.md, agents.md, workflows.md, instructions-template.md
+**Version**: 5.0.0 | **Last Updated**: 2025-01-18 | **Dependencies**: principles.md, agents.md, workflows.md
 
 ## Purpose
 Comprehensive Model Context Protocol (MCP) server discovery, categorization, and intelligent utilization framework for Guild system. This module enables automatic detection of available MCP servers and configures intelligent integration based on project patterns and user preferences.
@@ -449,7 +449,7 @@ This module provides MCP server discovery and configuration intelligence embedde
 - principles.md (core philosophy and thinking approaches)
 - agents.md (agent framework enhanced with MCP capabilities)
 - workflows.md (execution patterns with MCP integration)
-- instructions-template.md (configuration template with MCP sections)
+- ../templates/instructions-template.md (configuration template with MCP sections)
 
 ### Module Consumers
 - Setup command (embeds MCP discovery and configuration)

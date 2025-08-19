@@ -16,9 +16,10 @@ async function validateSystem() {
   // Validate directory structure
   console.log('📁 Checking directory structure...');
   const requiredDirs = [
-    'guideline/core',
-
-    'commands',
+    'guideline/shared',
+    'guideline/setup', 
+    'guideline/execution',
+    'guideline/templates',
     'scripts'
   ];
   
@@ -31,28 +32,28 @@ async function validateSystem() {
     }
   }
   
-  // Validate core modules
-  console.log('\n📚 Checking core modules...');
-  const coreModules = [
-    'principles.md',
-    'agents.md',
-    'workflows.md',
-    'parallel.md',
-    'instructions-template.md'
-  ];
+  // Validate intelligence modules in new structure
+  console.log('\n📚 Checking intelligence modules...');
+  const moduleCategories = {
+    'shared': ['principles.md', 'mcp-integration.md'],
+    'setup': ['agents.md', 'testing.md'], 
+    'execution': ['planning-router.md', 'workflows.md', 'parallel.md']
+  };
   
-  const coreDir = path.join(__dirname, '..', 'guideline', 'core');
-  for (const module of coreModules) {
-    const modulePath = path.join(coreDir, module);
-    if (await fs.pathExists(modulePath)) {
-      const content = await fs.readFile(modulePath, 'utf-8');
-      if (content.length > 100) {
-        successes.push(`✅ Core module valid: ${module}`);
+  for (const [category, modules] of Object.entries(moduleCategories)) {
+    const categoryDir = path.join(__dirname, '..', 'guideline', category);
+    for (const module of modules) {
+      const modulePath = path.join(categoryDir, module);
+      if (await fs.pathExists(modulePath)) {
+        const content = await fs.readFile(modulePath, 'utf-8');
+        if (content.length > 100) {
+          successes.push(`✅ ${category} module valid: ${module}`);
+        } else {
+          warnings.push(`⚠️  ${category} module too small: ${module}`);
+        }
       } else {
-        warnings.push(`⚠️  Core module too small: ${module}`);
+        errors.push(`❌ Missing ${category} module: ${module}`);
       }
-    } else {
-      errors.push(`❌ Missing core module: ${module}`);
     }
   }
   
@@ -84,27 +85,29 @@ async function validateSystem() {
   console.log('\n📝 Template system replaced with guideline-driven generation...');
   successes.push('✅ Pure guideline-driven generation active');
   
-  // Validate commands
-  console.log('\n⚙️  Checking commands...');
-  const commandsDir = path.join(__dirname, '..', 'commands');
-  const requiredCommands = [
-    'guild.md',
-    'setup.md',
-    'instructions.md',
-    'ignore.md'
+  // Validate command templates
+  console.log('\n⚙️  Checking command templates...');
+  const templatesDir = path.join(__dirname, '..', 'guideline', 'templates');
+  const requiredTemplates = [
+    'setup-command.md',
+    'agent-command.md', 
+    'instructions-command.md',
+    'ignore-command.md',
+    'instructions-template.md',
+    'agent-templates.md'
   ];
   
-  for (const command of requiredCommands) {
-    const commandPath = path.join(commandsDir, command);
-    if (await fs.pathExists(commandPath)) {
-      const content = await fs.readFile(commandPath, 'utf-8');
-      if (content.length > 500) {
-        successes.push(`✅ Command valid: ${command}`);
+  for (const template of requiredTemplates) {
+    const templatePath = path.join(templatesDir, template);
+    if (await fs.pathExists(templatePath)) {
+      const content = await fs.readFile(templatePath, 'utf-8');
+      if (content.length > 100) {
+        successes.push(`✅ Template valid: ${template}`);
       } else {
-        warnings.push(`⚠️  Command seems incomplete: ${command}`);
+        warnings.push(`⚠️  Template seems incomplete: ${template}`);
       }
     } else {
-      errors.push(`❌ Missing command: ${command}`);
+      errors.push(`❌ Missing template: ${template}`);
     }
   }
   

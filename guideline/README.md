@@ -9,11 +9,22 @@ This directory contains the authoritative specifications for the Claude Guild sy
 ```
 guideline/
 ├── README.md                 # This file - system overview
-└── core/                     # Core intelligence modules for setup command composition
-    ├── principles.md         # Fundamental architectural principles and project structure
-    ├── agents.md             # Agent classification and design patterns
-    ├── workflows.md          # Workflow execution and coordination
-    ├── parallel.md           # Parallel execution strategies and optimization
+├── shared/                   # Shared intelligence (both setup & execution)
+│   ├── principles.md         # Core Guild philosophy and principles
+│   └── mcp-integration.md    # MCP integration patterns
+├── setup/                    # Setup command intelligence
+│   ├── agents.md            # Agent generation and composition patterns
+│   └── testing.md           # Testing setup patterns
+├── execution/                # Execution command intelligence
+│   ├── planning-router.md    # Planning router intelligence
+│   ├── workflows.md         # Workflow orchestration patterns
+│   └── parallel.md          # Parallel execution strategies
+└── templates/                # Command templates with embedded intelligence
+    ├── setup-command.md      # /guild:setup template (shared + setup)
+    ├── agent-command.md      # /guild:agent template (shared + execution)
+    ├── instructions-command.md # /guild:instructions template (shared)
+    ├── ignore-command.md     # /guild:ignore template (shared)
+    ├── agent-templates.md    # Agent template patterns
     └── instructions-template.md # User configuration template
 ```
 
@@ -80,26 +91,39 @@ Commands with their own specifications (located in `/commands` directory):
 ## Usage in install.js
 
 ```javascript
-// Pseudo-code for setup command composition
+// Pseudo-code for command composition with intelligence separation
 const setupCommand = compose({
-  base: 'commands/setup-base.md',
+  template: 'templates/setup-command.md',
   modules: [
-    'core/principles.md',
-    'core/agents.md',
-    'core/workflows.md',
-    'core/parallel.md',
-    'core/instructions-template.md'
+    'shared/principles.md',        // shared intelligence
+    'shared/mcp-integration.md',   // shared intelligence  
+    'setup/agents.md',            // setup intelligence
+    'setup/testing.md',           // setup intelligence
+    'templates/instructions-template.md'
   ],
-  output: '.claude/commands/guild-setup.md'
+  output: '.claude/commands/guild/setup.md'
+});
+
+const agentCommand = compose({
+  template: 'templates/agent-command.md',
+  modules: [
+    'shared/principles.md',        // shared intelligence
+    'shared/mcp-integration.md',   // shared intelligence
+    'execution/planning-router.md', // execution intelligence
+    'execution/workflows.md',       // execution intelligence
+    'execution/parallel.md'         // execution intelligence
+  ],
+  output: '.claude/commands/guild/agent.md'
 });
 ```
 
 ## Evolution Strategy
 
-1. **Core Module Updates**: Update individual modules without touching commands
-2. **Command Updates**: Modify command specs independently
-3. **Composition Logic**: install.js handles dynamic assembly
-4. **Testing**: Validate composed commands before publishing
-5. **Versioning**: Semantic versioning for breaking changes
+1. **Intelligence Module Updates**: Update individual intelligence modules for focused changes
+2. **Template Updates**: Modify command templates for structure changes
+3. **Intelligence Separation**: Keep setup and execution intelligence separate
+4. **Composition Logic**: install.js handles dynamic assembly with appropriate intelligence
+5. **Testing**: Validate composed commands with embedded intelligence before publishing
+6. **Versioning**: Semantic versioning for breaking changes
 
-This modular architecture ensures the Guild system remains maintainable, extensible, and aligned with our principles of prompt-driven intelligence and self-contained distribution.
+This intelligence separation architecture ensures the Guild system remains maintainable, focused, and aligned with our principles of separated concerns and focused command intelligence.

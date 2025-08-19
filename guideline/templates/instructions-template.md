@@ -88,6 +88,7 @@ reasoning:
 planning_router:
   enabled: {{default_planning_router_enabled}}         # true | false - use planning router for coordination
   thinking_mode: {{default_router_thinking}}           # adaptive | think-harder | ultrathink
+  model: opus                                          # MANDATORY - planning router uses Opus for all operations
   orchestration_style: {{default_orchestration}}       # conservative | balanced | aggressive
   coordination_overhead_limit: {{default_overhead}}    # 5-20% maximum coordination time
 ```
@@ -101,6 +102,7 @@ planning_router:
 planning_router:
   enabled: false
   thinking_mode: think
+  model: opus
   orchestration_style: conservative
   coordination_overhead_limit: 5%
 </configuration>
@@ -112,6 +114,7 @@ planning_router:
 planning_router:
   enabled: true
   thinking_mode: ultrathink
+  model: opus
   orchestration_style: aggressive
   coordination_overhead_limit: 15%
 </configuration>
@@ -123,6 +126,7 @@ planning_router:
 planning_router:
   enabled: true
   thinking_mode: think-harder
+  model: opus
   orchestration_style: balanced
   coordination_overhead_limit: 10%
 </configuration>

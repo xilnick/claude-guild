@@ -11,21 +11,17 @@ description: "Complete Guild system setup with embedded intelligence"
 
 Guild system installation with complete embedded guideline intelligence.
 
-## Complete Embedded Guideline Intelligence
+## Setup-Focused Intelligence
 
-{{principles}}
+**Shared Intelligence**:
+{{shared/principles}}
 
-{{agents}}
+{{shared/mcp-integration}}
 
-{{workflows}}
+**Setup-Specific Intelligence**:
+{{setup/agents}}
 
-{{parallel}}
-
-{{planning-router}}
-
-{{testing}}
-
-{{mcp-integration}}
+{{setup/testing}}
 
 ## Setup Execution Protocol
 
@@ -54,27 +50,26 @@ Guild system installation with complete embedded guideline intelligence.
 
 Generate specialized agents using prompt-first pattern detection and dynamic analysis:
 
-#### Planning Router (Master Orchestrator)
-```yaml
-guild-planning-router.md:
-  thinking_mode: think-harder
-  model: opus
-  role: Master orchestration, task decomposition, and hierarchical agent coordination
-  instructions: Think harder about task decomposition and agent coordination strategies.
-  constraints: NEVER make direct changes, orchestrate through domain leads only
-```
+#### Dynamic Agent Generation from Templates
+Generate specialized agents using project analysis and agent templates from `agent-templates.md`:
 
-#### Dynamic Specialist Agents (Implementation)
-```yaml
-# Generated based on project analysis - ALL USE THINK MODE ONLY:
-guild-[domain]-lead.md:
-  thinking_mode: think
-  model: inherit
-  role: [Domain] domain lead with sub-agent spawning capability
-  specialization: [Domain-specific] coordination
-  instructions: Think through [domain] architecture and coordination.
-  sub_agent_spawning: Can spawn 2-3 sub-agents when 3+ similar tasks
-```
+**Agent Creation Process**:
+1. **Analyze Project Patterns**: Use embedded intelligence to detect technologies, frameworks, and architectural patterns
+2. **Select Templates**: Choose appropriate agent templates based on detected patterns
+3. **Substitute Variables**: Replace template variables with project-specific values
+4. **Generate Agents**: Create .md files in `$PROJECT_ROOT/.claude/agents/guild/` directory
+
+**Generated Agent Types**:
+- **Planning Router**: Master orchestrator using planning router template
+- **Domain Lead Agents**: Technology-specific coordinators (e.g., React Frontend Lead, FastAPI Backend Lead)
+- **Research Agents**: Project and external intelligence gatherers
+- **Execution Specialists**: Focused implementation agents spawned by domain leads
+
+**Template Variable Sources**:
+- Project technology stack (detected from package.json, requirements.txt, etc.)
+- Architectural patterns (discovered through code analysis)
+- Existing conventions (extracted from codebase analysis)
+- Quality standards (identified from existing testing and validation patterns)
 
 ### Phase 3: Instructions File Creation
 
@@ -109,6 +104,10 @@ Create `$PROJECT_ROOT/.guild/instructions.md` with:
 - ✅ Project-specific instructions created in `$PROJECT_ROOT/.guild/instructions.md`
 - ✅ Coordination protocols established
 - ✅ Zero external dependencies - complete self-contained operation
+
+## Agent Templates
+
+{{agent-templates}}
 
 ## Configuration Template
 

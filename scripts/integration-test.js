@@ -81,11 +81,11 @@ async function runIntegrationTest() {
     
     // Check for embedded intelligence (should have core modules injected)
     const requiredSections = [
-      'Prompt-Driven Intelligence',
-      'Agent Classification System',
-      'Workflow Patterns',
-      'Context Engineering',
-      'Project Analysis'
+      'Dynamic Agent Composition Philosophy',
+      'Hierarchical Workflow with Planning Router',
+      'Planning Router Orchestration',
+      'Proactively Parallel',
+      'Planning Router with Think-Only Agents Philosophy'
     ];
     
     for (const section of requiredSections) {

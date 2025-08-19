@@ -131,90 +131,24 @@ well_defined_request_pattern:
 
 <research_agent_framework>
 <project_research_agent_patterns>
-**Project Research Agent Specializations**:
-```yaml
-architecture_research_specialist:
-  responsibility: "Analyze project structure, module boundaries, and architectural patterns"
-  capabilities:
-    - Examine file structure and organization patterns
-    - Map component relationships and dependencies
-    - Identify architectural layers and boundaries
-    - Document integration points and interfaces
-  mcp_server_integration: [GitHub, AST-Grep, DeepView]
-  deliverable_format: "Architectural overview with module structure and integration analysis"
-  thinking_mode: think
-  
-technology_stack_research_specialist:
-  responsibility: "Identify frameworks, libraries, versions, and configuration patterns"
-  capabilities:
-    - Inventory all dependencies and their versions
-    - Analyze configuration files and build systems
-    - Map technology relationships and compatibility
-    - Document technology-specific patterns and conventions
-  mcp_server_integration: [GitHub, Context7, Ref Tools]
-  deliverable_format: "Technology inventory with compatibility matrix and usage patterns"
-  thinking_mode: think
-  
-pattern_discovery_specialist:
-  responsibility: "Extract coding conventions, design patterns, and quality standards"
-  capabilities:
-    - Analyze existing code for established patterns
-    - Document coding style and naming conventions
-    - Identify design patterns and architectural approaches
-    - Extract quality standards and validation requirements
-  mcp_server_integration: [GitHub, Semgrep, DeepView]
-  deliverable_format: "Pattern library with conventions and quality requirements"
-  thinking_mode: think
-  
-dependency_mapping_specialist:
-  responsibility: "Map internal dependencies and external integrations"
-  capabilities:
-    - Analyze inter-module dependencies
-    - Map external API integrations and requirements
-    - Document data flow and communication patterns
-    - Identify potential integration challenges
-  mcp_server_integration: [GitHub, Supabase, Neo4j]
-  deliverable_format: "Dependency graph with integration complexity analysis"
-  thinking_mode: think
-```
+**Project Research Agent Framework**:
+Research agents are dynamically composed based on project analysis. See `agent-templates.md` for specific template patterns including:
+- Architecture research specialists for project structure analysis
+- Technology stack researchers for framework and library inventory
+- Pattern discovery specialists for coding convention extraction
+- Dependency mapping specialists for integration analysis
+
+All research agents use think mode and integrate with relevant MCP servers based on project needs.
 </project_research_agent_patterns>
 
 <external_research_agent_patterns>
-**External Research Agent Specializations**:
-```yaml
-api_documentation_research_specialist:
-  responsibility: "Research external API documentation and integration patterns"
-  capabilities:
-    - Gather comprehensive API documentation
-    - Analyze integration examples and best practices
-    - Document authentication and security requirements
-    - Identify rate limits and usage constraints
-  mcp_server_integration: [Context7, Ref Tools, WebFetch]
-  deliverable_format: "API integration guide with examples and constraints"
-  thinking_mode: think
-  
-best_practice_research_specialist:
-  responsibility: "Gather current best practices for discovered technologies"
-  capabilities:
-    - Research current technology best practices
-    - Identify performance optimization techniques
-    - Document security and compliance requirements
-    - Gather testing and validation approaches
-  mcp_server_integration: [Context7, Ref Tools, WebSearch]
-  deliverable_format: "Best practice guide with implementation recommendations"
-  thinking_mode: think
-  
-framework_documentation_specialist:
-  responsibility: "Research framework-specific patterns and advanced usage"
-  capabilities:
-    - Deep dive into framework documentation
-    - Identify advanced features and optimization opportunities
-    - Document migration paths and upgrade considerations
-    - Research community best practices and common pitfalls
-  mcp_server_integration: [Context7, Ref Tools, WebFetch]
-  deliverable_format: "Framework expertise guide with advanced patterns"
-  thinking_mode: think
-```
+**External Research Agent Framework**:
+External research agents gather intelligence from documentation and best practices. See `agent-templates.md` for specific template patterns including:
+- API documentation researchers for external service integration
+- Best practice researchers for technology-specific guidance
+- Framework documentation specialists for advanced usage patterns
+
+All external research agents use think mode and leverage documentation MCP servers.
 </external_research_agent_patterns>
 
 <parallel_research_coordination>

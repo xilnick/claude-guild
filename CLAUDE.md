@@ -6,6 +6,10 @@ This file provides guidance to Claude Code when working with code in this reposi
 
 The Guild system is built on these fundamental principles:
 
+- **install.js must not contain any templates** - Only handles command installation
+- **ALWAYS modify guideline first, then update templates, commands and install.js**
+- **Intelligence separation** - Setup and execution commands have focused, relevant intelligence
+
 ### **Core Philosophy**
 - **Framework-Agnostic**: Works with any framework, library, or tool
 - **Project-Agnostic**: Adapts to any project structure or domain
@@ -13,7 +17,7 @@ The Guild system is built on these fundamental principles:
 - **Prompt-First Design**: Intelligence and workflows are defined through prompts, not hardcoded logic
 
 ### **Architecture Principles**
-- **Structured Intelligence**: Everything is organized in clear, modular components
+- **Intelligence Separation**: Setup and execution intelligence are separated for focused commands
 - **Consolidated Management**: All system intelligence lives in well-defined locations
 - **Maintainable Design**: Clean separation of concerns for easy understanding and modification
 - **Self-Documenting**: The system's structure inherently documents its behavior
@@ -26,105 +30,126 @@ The Guild system is built on these fundamental principles:
 
 ## Guild System Development Workflow
 
-**SIMPLIFIED**: The Guild system now uses a streamlined approach focused on core modules only.
+The Guild system uses **intelligence separation architecture** where setup and execution commands have focused, relevant intelligence.
 
 ### **Development Architecture**
 
-The Guild system uses a **template-based intelligence architecture** where:
-- **Core modules** in `guideline/core/` contain all intelligence and behavior
-- **Command templates** in `guideline/templates/` define command structure  
-- **Guild commands** are dynamically generated from templates + embedded intelligence
-- **No hardcoded logic** - templates contain structure, modules contain intelligence
+The Guild system uses **separated intelligence embedding**:
+- **Shared modules** contain intelligence needed by both setup and execution
+- **Setup modules** contain project configuration and agent generation intelligence
+- **Execution modules** contain task planning, coordination, and workflow intelligence
+- **Templates** embed appropriate intelligence modules based on command purpose
 
-### **🔄 SIMPLIFIED DEVELOPMENT WORKFLOW**
+### **🔄 INTELLIGENCE SEPARATION WORKFLOW**
 
 When making changes to Guild intelligence or architecture:
 
-#### **1. Template-Based Intelligence System**
-
-The Guild system uses templates + intelligence embedding:
+#### **1. Intelligence Separation Architecture**
 
 ```
 guideline/
-├── core/                    # Intelligence modules (source of truth)
-│   ├── principles.md        ← Core philosophy and principles
-│   ├── agents.md           ← Generic agent framework  
-│   ├── workflows.md        ← Essential workflow patterns
-│   ├── parallel.md         ← Parallel execution strategies
+├── shared/                  # Intelligence for both setup & execution
+│   ├── principles.md        ← Core Guild philosophy
+│   └── mcp-integration.md   ← MCP integration patterns
+├── setup/                   # Setup command intelligence only
+│   ├── agents.md           ← Agent generation and composition
+│   └── testing.md          ← Testing setup patterns
+├── execution/               # Execution command intelligence only
 │   ├── planning-router.md   ← Planning router intelligence
-│   ├── testing.md          ← Testing strategies
-│   ├── mcp-integration.md   ← MCP integration patterns
-│   └── instructions-template.md ← User configuration template
-└── templates/               # Command templates with placeholders
-    ├── setup-command.md     ← /guild:setup template
-    └── guild-agent-command.md ← /guild:agent template
+│   ├── workflows.md        ← Workflow orchestration patterns
+│   └── parallel.md         ← Parallel execution strategies
+└── templates/               # Command templates with focused intelligence
+    ├── setup-command.md     ← Embeds: shared + setup intelligence
+    ├── agent-command.md     ← Embeds: shared + execution intelligence
+    ├── instructions-command.md ← Embeds: shared intelligence (management)
+    ├── ignore-command.md    ← Embeds: shared intelligence (management)
+    ├── instructions-template.md ← User configuration template
+    └── agent-templates.md   ← Agent template patterns
 ```
 
-#### **2. Development Workflow**
+#### **2. Intelligence-Focused Development Workflow**
 
-**For Intelligence Changes** (behavior, logic, patterns):
-- Edit modules in `guideline/core/` - they contain all Guild intelligence
-- Changes automatically flow to all generated commands
+**Step 1 - Identify Intelligence Type**:
 
-**For Command Structure Changes** (layout, format, sections):
-- Edit templates in `guideline/templates/` 
-- Templates use `{{module-name}}` placeholders for intelligence embedding
+🎯 **Shared Intelligence** (affects both setup and execution):
+- Core Guild philosophy and principles
+- MCP integration patterns
+- Cross-command concepts
 
-**Guidelines**:
-- **Intelligence**: Edit core modules - they are the authoritative source
-- **Structure**: Edit templates for command layout and organization
-- **Both embedded**: Templates + modules = final commands with full intelligence
-- Test composition after changes
+📋 **Setup Intelligence** (affects project configuration):
+- Agent generation patterns
+- Project analysis logic
+- Configuration creation
+- Testing setup patterns
 
-#### **3. Validate Command Generation**
+⚡ **Execution Intelligence** (affects task execution):
+- Planning router logic
+- Workflow orchestration
+- Parallel coordination strategies
+- Task decomposition patterns
+
+🏗️ **Template Structure** (affects command layout):
+- Command organization and sections
+- User interface and help text
+- Template embedding structure
+
+**Step 2 - Edit Appropriate Modules**:
 ```bash
-# Test the installation process
+# Shared intelligence changes (affects all commands):
+vim guideline/shared/principles.md      # Core philosophy
+vim guideline/shared/mcp-integration.md # MCP patterns
+
+# Setup intelligence changes (affects setup/management commands):
+vim guideline/setup/agents.md           # Agent generation logic
+vim guideline/setup/testing.md          # Testing setup patterns
+
+# Execution intelligence changes (affects execution commands):
+vim guideline/execution/planning-router.md  # Planning logic
+vim guideline/execution/workflows.md        # Workflow patterns
+vim guideline/execution/parallel.md         # Parallel strategies
+
+# Template structure changes (affects command layout):
+vim guideline/templates/setup-command.md        # Setup command structure
+vim guideline/templates/agent-command.md        # Agent command structure
+vim guideline/templates/instructions-command.md # Instructions command structure
+vim guideline/templates/ignore-command.md       # Ignore command structure
+```
+
+**Step 3 - Test Intelligence Embedding**:
+```bash
+# Test installation and command generation with separated intelligence
 node install.js --no-interaction --scope project
 
-# Verify both commands are generated with embedded intelligence
-ls .claude/commands/guild/setup.md    # Generated from setup-command.md template
-ls .claude/commands/guild/guild.md    # Generated from guild-agent-command.md template
+# Verify commands are generated with appropriate intelligence
+ls .claude/commands/guild/setup.md         # Should have shared + setup intelligence
+ls .claude/commands/guild/agent.md         # Should have shared + execution intelligence
+ls .claude/commands/guild/instructions.md  # Should have shared intelligence only
+ls .claude/commands/guild/ignore.md        # Should have shared intelligence only
 ```
 
-### **✅ CORRECT WORKFLOW**
+### **⚡ Benefits of Intelligence Separation**
 
-**Task**: Update Guild intelligence or command structure
+✅ **Focused Commands**: Each command gets only relevant intelligence, not bloated with unrelated logic  
+✅ **Independent Evolution**: Setup and execution intelligence can evolve separately without conflicts  
+✅ **Reduced Complexity**: Commands are simpler and more maintainable  
+✅ **Clear Ownership**: Obvious which intelligence affects which commands  
+✅ **Faster Development**: Changes in one area don't require understanding all areas  
+✅ **Better Performance**: Commands load faster with less irrelevant intelligence
 
-**Step 1 - Identify Change Type**:
-```bash
-# Intelligence changes (behavior, logic, patterns):
-vim guideline/core/agents.md           # Agent behavior
-vim guideline/core/workflows.md        # Workflow patterns
-vim guideline/core/principles.md       # Core principles
-vim guideline/core/parallel.md         # Parallel execution strategies
+### **🚨 Intelligence Separation Success Factors**
 
-# Structure changes (command layout, sections):
-vim guideline/templates/setup-command.md       # Setup command structure
-vim guideline/templates/guild-agent-command.md # Guild agent command structure
-```
+1. **Think about command purpose** - Is this setup or execution intelligence?
+2. **Keep intelligence focused** - Don't mix setup and execution logic
+3. **Use shared for common concepts** - Only put truly shared intelligence in shared/
+4. **Test intelligence embedding** - Validate commands get appropriate intelligence
+5. **Maintain clear boundaries** - Setup creates/configures, execution plans/coordinates
 
-**Step 2 - Test Command Generation**:
-```bash
-# Test installation and command generation with embedded intelligence
-node install.js --no-interaction --scope project
-```
+### **⚠️ Common Anti-Patterns to Avoid**
 
-### **⚡ Benefits of Template-Based Intelligence**
-
-✅ **Embedded Intelligence**: All commands get full guideline intelligence automatically  
-✅ **Separation of Concerns**: Templates handle structure, modules handle behavior  
-✅ **Single Source of Truth**: Core modules define all Guild intelligence  
-✅ **Consistent Approach**: Both setup and guild:agent commands use same pattern  
-✅ **Easy Updates**: Change intelligence once, flows to all generated commands  
-✅ **No Hardcoded Logic**: Templates contain structure, modules contain intelligence
-
-### **🚨 Key Success Factors**
-
-1. **Intelligence in modules** - Edit `guideline/core/` for behavior changes
-2. **Structure in templates** - Edit `guideline/templates/` for layout changes  
-3. **Test command generation** - Validate installation produces correct commands
-4. **No hardcoded logic** - Templates + modules = complete embedded intelligence
-5. **Maintain separation** - Keep structure (templates) and intelligence (modules) separate
+❌ **Intelligence Mixing**: Putting execution logic in setup modules or vice versa  
+❌ **Over-sharing**: Putting setup-specific logic in shared modules  
+❌ **Template Bloat**: Embedding irrelevant intelligence in command templates  
+❌ **Boundary Confusion**: Not understanding which command needs which intelligence  
 
 ---
 
@@ -137,10 +162,35 @@ node install.js --no-interaction --scope project
 
 ## Guild System Rules
 
-- **Core modules are authoritative** - Edit them directly for changes
-- **Keep it simple** - Prefer simple patterns over complex specifications
-- **Test after changes** - Validate installation and setup generation
+- **Intelligence modules are authoritative** - Edit them directly for changes
+- **Maintain intelligence separation** - Keep setup and execution intelligence separate
+- **Test after changes** - Validate installation and command generation
 - **Trust Claude** - Let Claude's intelligence handle complexity rather than hardcoding
+
+## Responsibility Separation
+
+### **install.js Responsibilities** (system installation only):
+- Creates `.claude/commands/guild/` directory structure
+- Loads intelligence modules from separated structure
+- Generates commands with embedded intelligence
+- **Does NOT** create project files, agents, or `.guild/` directories
+
+### **Setup Command Responsibilities** (project configuration only):
+- Creates `.guild/` directory and config files
+- Generates agents in `.claude/agents/guild/`
+- Analyzes project and creates appropriate configuration
+- **Uses** setup + shared intelligence only
+
+### **Execution Commands Responsibilities** (task execution only):
+- Reads existing configuration and agents
+- Plans and coordinates task execution
+- Manages workflow orchestration and parallel processing
+- **Uses** execution + shared intelligence only
+
+### **Management Commands Responsibilities** (configuration management):
+- Manages `.guild/instructions.md` and `.guild/ignore.md` files
+- Provides project configuration interfaces
+- **Uses** shared intelligence only
 
 ## Language & Technology Verification
 

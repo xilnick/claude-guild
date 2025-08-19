@@ -1,8 +1,11 @@
 # Planning Router Module
-**Version**: 5.0.0 | **Last Updated**: 2025-01-18 | **Dependencies**: principles.md, agents.md, workflows.md, parallel.md
+**Version**: 5.0.0 | **Last Updated**: 2025-01-19 | **Dependencies**: principles.md, agents.md, workflows.md, parallel.md
 
 ## Purpose
 Master orchestration module that provides intelligent task decomposition, agent spawning coordination, and hierarchical execution management. **CRITICAL**: This module is invoked ONLY after explicit user confirmation of reasoning phase. The planning router handles all heavy cognitive work while specialized agents focus on efficient execution using only "think" mode.
+
+## Model Requirements
+**MANDATORY OPUS MODEL**: The planning router MUST use the Opus model for all operations to ensure maximum intelligence for complex orchestration, task decomposition, and agent coordination. This requirement applies to all thinking modes and orchestration scenarios.
 
 ## Planning-Only Architecture
 
@@ -185,12 +188,12 @@ primary_functions:
     thinking_mode: ultrathink for complex analysis
     
   agent_spawning_strategy:
-    domain_detection: Identify required specialist types
-    instance_calculation: Determine optimal agent count (1-20)
-    multi_instance_spawning: Create 3-5 instances per specialist type for large tasks
-    hierarchy_planning: Design router → domain → sub-agent structure
-    resource_allocation: Balance workload across available agents
-    context_overflow_prevention: Monitor context usage and spawn fresh instances proactively
+    domain_detection: Identify required specialist types based on task analysis
+    instance_calculation: Determine optimal agent count within configuration limits (max_parallel_agents)
+    adaptive_spawning: Scale agent instances based on task complexity and configuration constraints
+    hierarchy_planning: Design router → domain → sub-agent structure respecting limits
+    resource_allocation: Balance workload across available agents within configured maximum
+    context_overflow_prevention: Monitor context usage and spawn fresh instances as needed within limits
     
   coordination_protocols:
     conflict_prevention: File-level ownership assignment
@@ -200,18 +203,21 @@ primary_functions:
 
 cognitive_modes:
   ultrathink: 
-    triggers: [massive_parallelization_10plus_agents, complex_architectural_decisions, cross_domain_integration]
+    triggers: [complex_architectural_decisions, cross_domain_integration, massive_task_decomposition, multi_layer_architecture_analysis]
     duration: 60-120_seconds
+    model: opus
     output: comprehensive_execution_plan_with_agent_assignments
     
   think_harder:
-    triggers: [moderate_coordination_3_8_agents, strategic_planning, task_decomposition]
+    triggers: [strategic_planning, moderate_complexity_analysis, integration_design, task_decomposition]
     duration: 30-90_seconds
+    model: opus
     output: structured_task_breakdown_with_specialist_assignments
     
   think:
-    triggers: [simple_coordination_1_2_agents, routine_planning, status_updates]
+    triggers: [routine_planning, simple_coordination, status_updates, straightforward_task_assignment]
     duration: 15-30_seconds
+    model: opus
     output: basic_task_assignment_and_progress_updates
 ```
 
@@ -301,28 +307,21 @@ level_3_execution_specialists:
     - Integration with other specialists through defined interfaces
     - Quality validation within assigned scope
 
-agent_spawning_matrix:
-  simple_tasks_1_3_operations:
-    structure: planning_router → single_specialist
-    agents: 2-3_total
-    coordination: minimal_through_router
+configuration_aware_spawning:
+  task_complexity_analysis:
+    structure: Analyze task requirements independent of hardcoded agent counts
+    agents: Respect max_parallel_agents configuration limit from instructions.md
+    coordination: Scale coordination complexity based on actual agent count spawned
     
-  moderate_tasks_4_8_operations:
-    structure: planning_router → domain_leads → execution_specialists
-    agents: 4-8_total
-    coordination: router_manages_domains_leads_manage_specialists
+  adaptive_architecture:
+    structure: planning_router → domain_leads → execution_specialists (as needed)
+    agents: Dynamic scaling within configured maximum limits
+    coordination: Intelligent coordination scaling based on spawned agent count
     
-  complex_tasks_9plus_operations:
-    structure: planning_router → multiple_domain_leads → multiple_specialists
-    agents: 8-20_total
-    coordination: full_hierarchical_with_work_stealing
-    
-  ultra_large_tasks_context_overflow_risk:
-    structure: planning_router → domain_leads → multi_instance_specialists
-    agents: 10-30_total_instances
-    multi_instance_patterns: 3-5_instances_per_specialist_type
-    context_management: proactive_instance_spawning_before_overflow
-    coordination: instance_lifecycle_management_with_seamless_handoffs
+  configuration_driven_limits:
+    max_agents: Determined by max_parallel_agents setting in instructions.md
+    spawning_strategy: Spawn optimal number of agents within configuration constraints
+    coordination_scaling: Adapt coordination complexity to actual agent count used
 ```
 
 **Domain Lead Spawning Patterns**:
@@ -673,6 +672,7 @@ configurable_aspects:
 planning_router_settings:
   enable_planning_router: true/false - use centralized orchestration
   router_thinking_mode: ultrathink/think-harder based on complexity
+  router_model: opus - MANDATORY use of Opus model for all planning router operations
   domain_lead_spawning: auto/manual - automatic domain agent creation
   sub_agent_spawning: enable/disable - allow domain leads to spawn specialists
   work_stealing: enable/disable - dynamic task redistribution

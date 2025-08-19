@@ -332,9 +332,9 @@ executor: planning_router (dedicated orchestration agent - INVOKED AFTER CONFIRM
 invocation_trigger: receives validated understanding from main thread reasoning phase
 input_context: confirmed user requirements, identified issues, and approved interpretation
 thinking_mode:
-  - ultrathink: for massive parallel coordination (10+ agents, complex architecture)
-  - think-harder: for complex multi-agent coordination (3-8 agents)
-  - think: for simple coordination (1-2 agents)
+  - ultrathink: for complex architectural decisions and cross-domain integration
+  - think-harder: for strategic planning and complex multi-agent coordination  
+  - think: for simple coordination and routine planning
 duration: 30-120 seconds (adaptive based on coordination complexity)
 research_agent_spawning: 2-5 research agents in parallel for comprehensive intelligence gathering
 agent_spawning: 1-5 domain leads based on pattern analysis enhanced by research findings
@@ -429,31 +429,27 @@ planning_constraints:
 </orchestration_template>
 </planning_router_orchestration>
 
-<hierarchical_spawning_strategy>
+<configuration_driven_spawning_strategy>
 ```yaml
-simple_coordination_1_2_agents:
-  structure: planning_router → single_domain_lead
-  thinking_mode: think for domain lead
-  coordination: minimal through router
+adaptive_coordination:
+  structure: planning_router → domain_leads → execution_specialists (as needed)
+  agent_limits: Respects max_parallel_agents setting from instructions.md configuration
+  thinking_mode: think for all execution agents, router uses complexity-based thinking modes
+  coordination: Scales coordination complexity based on actual spawned agent count
   
-moderate_coordination_3_8_agents:
-  structure: planning_router → multiple_domain_leads → sub_agents
-  thinking_mode: think for all agents
-  coordination: hierarchical through domain leads
+dynamic_architecture:
+  structure: Hierarchical structure adapts to task needs within configuration limits
+  spawning_strategy: Spawn optimal agents for task requirements up to configured maximum
+  coordination_scaling: Coordination complexity scales with actual agent count used
+  multi_instance_support: Context overflow prevention through fresh instance spawning
   
-complex_coordination_9_20_agents:
-  structure: planning_router → all_domains → multiple_sub_agents
-  thinking_mode: think for execution, think-harder/ultrathink for router only
-  coordination: full hierarchical with work stealing
-  
-ultra_aggressive_coordination_20plus_agents:
-  structure: planning_router → research_agents + domain_leads → multi_instance_specialists
-  agent_count: 20-30 total agents with 3-8 instances per specialist type
-  thinking_mode: ultrathink for router, think for all execution agents
-  multi_instance_patterns: context_overflow_prevention with seamless handoffs
-  coordination: advanced hierarchical with instance lifecycle management
+configuration_constraints:
+  max_agents: Determined by max_parallel_agents in instructions.md
+  thinking_distribution: Router uses complexity-based modes, execution agents use think mode
+  coordination_overhead: Scales coordination protocols to actual agent count deployed
+  performance_optimization: Balance agent count against coordination overhead within limits
 ```
-</hierarchical_spawning_strategy>
+</configuration_driven_spawning_strategy>
 
 <planning_router_output>
 ```yaml

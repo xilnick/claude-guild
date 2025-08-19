@@ -1,7 +1,7 @@
-# /guild
+# /guild:agent
 
 ---
-name: guild-agent
+name: agent
 thinking_mode: ultrathink
 model: inherit
 description: "Execute any task using Guild's hierarchical planning router architecture with proactively parallel agent execution (2-20 agents)"
@@ -13,23 +13,21 @@ description: "Execute any task using Guild's hierarchical planning router archit
 
 **Purpose**: Execute any task using Guild's hierarchical planning router architecture with proactively parallel agent execution (2-20 agents) and think-only specialized agents based on project configuration.
 
-## Complete Embedded Guideline Intelligence
+## Execution-Focused Intelligence
 
 **CRITICAL**: This intelligence is needed for proper reasoning, planning, and execution.
 
-{{principles}}
+**Shared Intelligence**:
+{{shared/principles}}
 
-{{agents}}
+{{shared/mcp-integration}}
 
-{{workflows}}
+**Execution-Specific Intelligence**:
+{{execution/planning-router}}
 
-{{parallel}}
+{{execution/workflows}}
 
-{{planning-router}}
-
-{{testing}}
-
-{{mcp-integration}}
+{{execution/parallel}}
 
 ## Hierarchical Architecture Workflow
 
