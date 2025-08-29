@@ -8,7 +8,7 @@ description: "Execute tasks through ultrathink reasoning and parallel agent invo
 
 ## Purpose
 
-Intelligence-first three-phase task execution: analyze user prompt (`$ARGUMENTS`) via ultrathink reasoning → comprehensive MCP research → intelligent cognitive agent execution (1-20 agents) with optimal parallel/sequential/hybrid strategy.
+Intelligence-first task execution: analyze user prompt (`$ARGUMENTS`) via ultrathink reasoning → comprehensive MCP research → maximum parallel cognitive agent execution.
 
 ## User Input Processing
 
@@ -44,24 +44,22 @@ Intelligence-first three-phase task execution: analyze user prompt (`$ARGUMENTS`
 
 **Analyze User Input**: The task description in `$ARGUMENTS` must be thoroughly analyzed using ultrathink reasoning.
 
-1. **Deep Task Analysis** (30-90 seconds minimum - REQUIRED):
+1. **Ultrathink Everything** (30-90 seconds minimum - REQUIRED):
    - Break down exactly what the user wants accomplished (from `$ARGUMENTS`)
-   - Identify cognitive requirements (what types of thinking are needed)
-   - **Analyze task dependencies (blocking vs non-blocking relationships)**
-   - **Determine execution strategy (parallel/sequential/hybrid)**
-   - Analyze task complexity and decomposition potential
-   - Determine optimal cognitive agent scaling (1-20 agents)
+   - **Discover ALL parallelization opportunities** 
+   - **Determine which cognitive personas are needed**
+   - **Plan maximum parallel execution (default strategy)**
+   - **Only sequence when dependencies absolutely require it**
    - **Use ultrathink/sequential thinking mode - MANDATORY**
 
-2. **Cognitive Agent Planning**:
-   - Determine which cognitive personas are needed for this specific task
-   - **Analyze dependencies between cognitive tasks to determine execution order**
-   - Plan optimal agent count based on parallelization potential and dependencies
-   - Consider multiple instances of same cognitive persona for different areas
-   - Identify research requirements for discovered technologies
-   - **Plan intelligent execution strategy (parallel/sequential/hybrid) for optimal balance of speed and correctness**
+2. **Intelligence-Driven Agent Planning**:
+   - Let intelligence determine how many agents to create
+   - Let intelligence assign exclusive file ownership to prevent conflicts
+   - Let intelligence decide when sequencing is necessary
+   - Default to maximum parallelization for speed
+   - Trust Claude's intelligence completely - no hardcoded rules
 
-3. **Execution Plan Creation**:
+3. **Simple Execution Plan**:
    ```
    ## 🛑 EXECUTION PLAN - APPROVAL REQUIRED
    
@@ -71,33 +69,20 @@ Intelligence-first three-phase task execution: analyze user prompt (`$ARGUMENTS`
    **Task Understanding:**
    [Clear summary of what will be accomplished]
    
-   **Execution Strategy:**
-   [✅ Parallel | ➩ Sequential | 🔄 Hybrid] - [Rationale for chosen strategy]
+   **Parallelization Strategy:**
+   ⚡ MAXIMUM PARALLEL EXECUTION (Default)
+   - Intelligence determines agent count and distribution
+   - All agents run simultaneously unless dependencies block
+   - Intelligence prevents conflicts through file ownership
    
-   **Dependency Analysis:**
-   - Independent tasks: [List of tasks that can run in parallel]
-   - Blocking chains: [A → B → C sequences that must be sequential]
-   - Hybrid groups: [Parallel groups of sequential chains]
-   
-   **Cognitive Agent Scaling:**
-   [Determined agent count: X agents based on complexity and dependency analysis]
-   
-   **Cognitive Assignments:**
-   - UX Expert (X instances): Will focus on [user experience aspects]
-   - Systems Architect (X instances): Will handle [architectural concerns]
-   - Analytical Thinker (X instances): Will optimize [performance/data aspects]
-   - Quality Guardian (X instances): Will ensure [quality/testing aspects]
-   - Security Specialist (X instances): Will secure [security aspects]
-   - Domain Expert (X instances): Will handle [business logic aspects]
-   
-   **Execution Orchestration:**
-   [How agents will be coordinated - simultaneous, sequential chains, or hybrid approach]
+   **Cognitive Agent Assignments:**
+   [Intelligence-determined agent assignments with file ownership]
    
    **Research Scope:**
-   [Technologies to research via MCP tools before execution]
+   [Technologies to research via MCP tools]
    
    **Expected Outcomes:**
-   [What will be delivered through cognitive collaboration]
+   [What will be delivered]
    
    🛑 **CRITICAL**: Proceed with this plan? (Must answer "yes" to continue)
    ```
@@ -128,64 +113,92 @@ Intelligence-first three-phase task execution: analyze user prompt (`$ARGUMENTS`
 - **Cognitive Context**: Research includes cognitive approaches for each technology
 - **Cache Management**: Persistent storage for future workflow sessions
 
-### Phase 3: Intelligent Cognitive Agent Execution
+### Phase 3: Maximum Parallel Execution
 
 🛑 **ONLY execute after receiving explicit user approval.**
 
-1. **Research-Aware Cognitive Agent Invocation**:
-   - All cognitive agents access research cache from Phase 2 before implementation
-   - Call cognitive agents created by `/guild:setup` with research context
-   - **Execute 1-20 cognitive agents using determined strategy (parallel/sequential/hybrid)**
-   - Launch multiple instances of same cognitive persona when beneficial
-   - Each cognitive agent applies specialized thinking approach to assigned areas
-   - **Coordinate execution order for sequential dependencies while maximizing parallelism**
+**Intelligence-Driven Execution:**
+1. **Launch All Agents**: Intelligence determines how many agents to create and start them simultaneously
+2. **Prevent Conflicts**: Intelligence assigns exclusive file ownership to each agent
+3. **Coordinate Dependencies**: Only sequence when dependencies absolutely require it
+4. **Trust Intelligence**: No hardcoded coordination rules - pure Claude reasoning
 
-2. **Multiple Instances & Cognitive Specialization**:
-   - Same cognitive persona can be called multiple times for different areas
-   - Same cognitive persona can have multiple instances running in parallel
-   - Each instance maintains cognitive consistency while working on different files/components
-   - Clear separation prevents conflicts between instances
-   - Cognitive coordination through shared research knowledge
+**Cognitive Agent Execution:**
+- All agents access shared research cache from Phase 2
+- Intelligence determines which cognitive personas are needed
+- Intelligence assigns file ownership to prevent conflicts
+- Default to maximum parallelization for speed
+- Each agent applies specialized thinking to assigned areas
 
-3. **Cognitive Parallel Execution Examples**:
-   ```yaml
-   UX Expert Cognitive Persona - 3 Instances:
-     instance_1: "User authentication flow optimization (src/auth/)"
-     instance_2: "Dashboard user experience design (src/dashboard/)"
-     instance_3: "Form interaction and feedback design (src/forms/)"
-   
-   Systems Architect Cognitive Persona - 2 Instances:
-     instance_1: "API architecture and endpoints (routes/api/)"
-     instance_2: "Database layer and service integration (services/data/)"
-     
-   Analytical Thinker Cognitive Persona - 2 Instances:
-     instance_1: "Performance optimization and caching (utils/performance/)"
-     instance_2: "Data processing and analytics (services/analytics/)"
+**Result Integration:**
+- Combine outputs from all cognitive approaches
+- Validate compatibility between different cognitive perspectives
+- Ensure coherent final solution
+
+### Phase 4: Verification & Quality Assurance
+
+**🔍 CRITICAL**: Validate all cognitive agent outputs through comprehensive verification protocols.
+
+1. **XML-Structured Verification Process**:
+   ```xml
+   <verification_phase>
+     <quote_grounding>Extract and verify all factual claims against research documentation</quote_grounding>
+     <uncertainty_assessment>Identify and express areas of low confidence</uncertainty_assessment>
+     <consistency_validation>Verify cognitive agent outputs are compatible and coherent</consistency_validation>
+     <quality_compliance>Validate against discovered project quality standards</quality_compliance>
+   </verification_phase>
    ```
 
-4. **Cognitive Result Integration**:
-   - Combine outputs from all cognitive approaches into coherent solution
-   - Validate that different cognitive perspectives work together harmoniously
-   - Ensure implementations follow researched best practices for each cognitive domain
-   - Verify compliance with latest documentation standards
-   - Present final integrated results showcasing cognitive collaboration
+2. **Grounding & Fact Verification**:
+   - Extract direct quotes from research documentation for all factual claims
+   - Validate implementation decisions against latest library documentation
+   - Ensure all technical details have source backing from Phase 2 research
+   - Flag any claims that cannot be grounded in documentation
 
-## Cognitive Agent Selection Logic
+3. **Uncertainty Expression & Confidence Assessment**:
+   - Express confidence levels for major technical decisions
+   - Explicitly state "I don't know" when information is uncertain
+   - List assumptions made during cognitive agent execution
+   - Identify knowledge gaps that require additional research
 
-**Intelligence-First Selection Based on Cognitive Requirements**:
+4. **Cross-Cognitive Validation**:
+   ```xml
+   <cross_validation>
+     <ux_systems_compatibility>Verify UI designs work with proposed architecture</ux_systems_compatibility>
+     <security_quality_alignment>Ensure security measures don't compromise testing strategies</security_quality_alignment>
+     <performance_architecture_coherence>Validate optimization approaches match system design</performance_architecture_coherence>
+     <domain_technical_consistency>Confirm business logic aligns with technical implementation</domain_technical_consistency>
+   </cross_validation>
+   ```
 
-- **User Experience Requirements** → UX Expert cognitive personas for ANY UI technology
-- **System Architecture Requirements** → Systems Architect cognitive personas for ANY technology stack
-- **Performance/Optimization Requirements** → Analytical Thinker cognitive personas for ANY performance context
-- **Quality/Reliability Requirements** → Quality Guardian cognitive personas for ANY testing context
-- **Security/Protection Requirements** → Security Specialist cognitive personas for ANY security context
-- **Business Logic Requirements** → Domain Expert cognitive personas for ANY business context
+5. **Integration Quality Assurance**:
+   - Verify final solution addresses original user request from `$ARGUMENTS`
+   - Ensure all cognitive perspectives combine into coherent implementation
+   - Validate solution follows discovered project patterns and conventions
+   - Confirm implementation meets quality standards identified in Phase 1
 
-**Multiple Cognitive Instance Examples**:
-- **UX Expert persona**: Multiple user flows, different interaction areas, various experience aspects
-- **Systems Architect persona**: Different service boundaries, separate integration layers, various architectural concerns
-- **Analytical Thinker persona**: Performance optimization, data analysis, algorithm efficiency across different areas
-- **Quality Guardian persona**: Unit testing, integration testing, E2E testing, validation across different components
+**Verification Success Criteria**:
+- ✅ **Grounded Accuracy**: All technical claims backed by research documentation
+- ✅ **Expressed Uncertainty**: Clear confidence levels and knowledge gap identification
+- ✅ **Cognitive Coherence**: Compatible outputs from different thinking approaches
+- ✅ **Quality Compliance**: Implementation meets discovered project standards
+- ✅ **User Requirement Fulfillment**: Solution addresses original task in `$ARGUMENTS`
+
+## Cognitive Agent Selection
+
+**Intelligence-Driven Selection:**
+- Intelligence analyzes task requirements and selects appropriate cognitive personas
+- Intelligence determines how many agents are needed
+- Intelligence assigns file ownership to prevent conflicts
+- No hardcoded patterns - pure Claude reasoning drives all decisions
+
+**Available Cognitive Personas:**
+- **UX Expert**: User experience and interface design
+- **Systems Architect**: System design and integration
+- **Analytical Thinker**: Performance and data optimization
+- **Quality Guardian**: Testing and validation
+- **Security Specialist**: Security and protection
+- **Domain Expert**: Business logic and requirements
 
 ## Command Usage
 
@@ -201,83 +214,52 @@ Intelligence-first three-phase task execution: analyze user prompt (`$ARGUMENTS`
 /guild:workflow "Implement real-time notifications using WebSockets"
 ```
 
-## Configuration Integration
+## Configuration
 
-Behavior adapts to project settings (if `.guild/instructions.md` exists):
+Simple configuration (if `.guild/instructions.md` exists):
 
 ```yaml
 reasoning:
   mandatory: true                    # Always use ultrathink reasoning
-  min_duration: 30                   # Minimum reasoning time
-  thinking_mode: ultrathink          # Use comprehensive reasoning
   approval_required: true            # Always require user approval
-  cognitive_analysis: true           # Analyze cognitive requirements
-  scaling_analysis: true             # Determine optimal agent count (1-20)
   
 research:
-  intelligence_discovery: true       # Use Claude intelligence to discover technologies
-  mcp_integration: true              # Full MCP research integration
-  shared_knowledge: true             # Create shared knowledge base
+  mcp_integration: true              # Use MCP tools for research
+  shared_knowledge: true             # Share research across agents
   
 execution:
-  intelligent_strategy: true         # Automatically choose optimal execution strategy
-  execution_modes:                   # Support for all execution patterns
-    parallel: true                   # Default for independent tasks
-    sequential: true                 # For blocking dependencies
-    hybrid: true                     # Parallel groups of sequential chains
-  max_agents: 20                     # Maximum cognitive agents (1-20 scaling)
-  cognitive_specialization: true     # Use cognitive personas not technology templates
-  parallel_instances: true           # Enable multiple instances of same cognitive persona
-  multiple_invocations: true         # Allow multiple calls to same cognitive persona
-  dependency_management: true        # Handle blocking relationships intelligently
-  research_integration: true         # All agents use shared research knowledge
+  max_parallelization: true          # Default to maximum parallel execution
+  intelligence_driven: true          # Let Claude decide everything
+  conflict_prevention: true          # Intelligence prevents file conflicts
 ```
 
 ## Coordination Strategy
 
-**Non-Blocking Tasks**:
-- Each agent owns specific files or components
-- Multiple instances work on different file sets
-- Clear boundaries prevent simultaneous modifications  
-- Agents can work on different parts of the same feature
-- Results integrated after all agents/instances complete
+**Intelligence-Only Coordination:**
+- Intelligence assigns exclusive file ownership to each agent
+- Intelligence determines when agents can work in parallel
+- Intelligence prevents conflicts through smart file assignment
+- Intelligence integrates results into coherent solution
 
-**Cognitive File Ownership**:
-- UX Expert agents: UI components, user interaction files, experience-related code
-- Systems Architect agents: Architecture files, integration code, service boundaries
-- Analytical Thinker agents: Performance code, optimization files, data processing
-- Quality Guardian agents: Test files, validation code, quality assurance
-- Security Specialist agents: Security code, authentication, authorization
-- Domain Expert agents: Business logic, domain models, workflow code
-- **Instances**: Each instance owns exclusive subset of cognitive persona's files
-
-**Cognitive Integration Points**:
-- UX ↔ Systems Architect: User interface contracts and API design
-- Systems Architect ↔ Analytical Thinker: Performance requirements and architecture
-- Quality Guardian ↔ All Personas: Testing strategies for each cognitive approach
-- Security Specialist ↔ All Personas: Security requirements across all domains
-- Domain Expert ↔ All Personas: Business requirement validation
+**No Hardcoded Rules:**
+- No complex coordination protocols
+- No predefined file ownership patterns
+- No XML coordination structures
+- Pure Claude reasoning manages everything
 
 ## Success Criteria
 
-- ✅ **User Input Analysis**: Thorough analysis of task in `$ARGUMENTS`
-- ✅ **Intelligence-First Reasoning**: Every execution starts with comprehensive ultrathink and cognitive analysis
-- ✅ **Cognitive Scaling**: Optimal agent count (1-20) determined through intelligent analysis
-- ✅ **Comprehensive Research**: Complete MCP documentation research before execution  
+- ✅ **Intelligence-First**: Pure Claude intelligence drives all decisions
+- ✅ **Maximum Parallelization**: Default to maximum parallel execution for speed
 - ✅ **User Approval**: No execution without explicit "yes" confirmation
-- ✅ **Cognitive Specialization**: Agents use appropriate thinking approaches, not technology templates
-- ✅ **Intelligent Execution**: Optimal execution strategy (parallel/sequential/hybrid) based on task dependencies
-- ✅ **Multiple Instances**: Same cognitive persona can run multiple parallel instances
-- ✅ **Multiple Invocations**: Cognitive personas handle different project areas effectively
-- ✅ **Cognitive Integration**: All thinking approaches combine into comprehensive, high-quality solution
+- ✅ **Comprehensive Research**: Complete MCP documentation research before execution
+- ✅ **Conflict-Free**: Intelligence prevents conflicts through smart file assignment
+- ✅ **Simple Execution**: Clean workflow without complex rules or algorithms
 
 ## Error Handling
 
-**Missing Cognitive Agents**: If required cognitive personas not available, inform user to run `/guild:setup`
-**Cognitive Conflicts**: Clear file ownership prevents conflicts; escalate if needed
-**Integration Issues**: Validate cognitive compatibility; retry with coordination
+**Missing Agents**: If agents not available, inform user to run `/guild:setup`
 **🛑 Approval Bypass**: **NEVER PROCEED** - Always halt until user explicitly approves
-**Instance Conflicts**: Atomic file locking prevents simultaneous modifications
 **Invalid Input**: If `$ARGUMENTS` unclear, ask user for clarification during reasoning phase
 
-⚠️ **CRITICAL REMINDER**: This workflow analyzes user input through mandatory intelligence-first ultrathink reasoning with dependency analysis, conducts comprehensive MCP research, then executes 1-20 cognitive agents using optimal strategy (parallel/sequential/hybrid) for maximum efficiency while respecting task dependencies.
+⚠️ **CRITICAL**: This workflow uses ultrathink reasoning → comprehensive MCP research → maximum parallel cognitive agent execution for speed.

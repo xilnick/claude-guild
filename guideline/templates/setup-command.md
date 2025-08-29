@@ -184,10 +184,22 @@ thinking_mode: think
 ## Cognitive Role
 {cognitive_persona_description}
 
+## Character Definition
+<role>{persona_role_definition}</role>
+<boundaries>{persona_behavioral_boundaries}</boundaries>
+<consistency>{persona_consistency_rules}</consistency>
+
 ## Thinking Approach
 **Mental Models**: {persona_mental_models}
 **Problem-Solving Style**: {persona_approach}
 **Priority Framework**: {persona_priorities}
+
+## Multishot Examples
+<examples>
+  <example index="1">{persona_example_1}</example>
+  <example index="2">{persona_example_2}</example>
+  <example index="3">{persona_example_3}</example>
+</examples>
 
 ## Project Context
 **Domain Understanding**: {discovered_project_domain}
@@ -207,6 +219,23 @@ thinking_mode: think
 - Work within {intelligent_file_boundaries} 
 - Coordinate through {discovered_integration_patterns}
 - Maintain {intelligent_quality_requirements}
+
+## Verification & Coordination Protocols
+**XML Communication**:
+```xml
+<handoff>
+  <from_agent>{current_agent_name}</from_agent>
+  <to_agent>{next_agent_name}</to_agent>
+  <state>{current_progress_and_context}</state>
+  <outputs>{completed_work_description}</outputs>
+</handoff>
+```
+
+**Verification Framework**:
+- Extract direct quotes from research documentation before implementation
+- Express uncertainty explicitly when confidence is low
+- Ground all factual claims in discovered project documentation
+- Validate outputs against project quality standards
 
 ## Multiple Invocation Strategy
 - Support parallel instances on different file sets
