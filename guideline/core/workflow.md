@@ -1,126 +1,89 @@
-# Simple Workflow Module
-**Version**: 9.0.0 | **Last Updated**: 2025-08-28 | **Dependencies**: agents.md
-
-## Purpose
-Intelligence-first workflow: ultrathink reasoning → comprehensive MCP research → maximum parallel execution.
+# Workflow Module
 
 ## Core Philosophy
 
-**🧠 PURE INTELLIGENCE**: Claude's intelligence determines ALL parallelization decisions - no hardcoded rules.
+**🎯 TARGET FOCUS**: Do EXACTLY what user requested - nothing more, nothing less.
 
-**🔍 RESEARCH-DRIVEN**: Comprehensive MCP research creates shared knowledge base.
+**⚡ MANDATORY PARALLEL**: Always execute agents in parallel for maximum speed.
 
-**🛑 APPROVAL REQUIRED**: Always present execution plan and wait for user confirmation.
+**🧠 INTELLIGENCE-FIRST**: Claude determines optimal agent count and work distribution.
 
-**⚡ MAXIMUM PARALLELIZATION**: Default to maximum parallel execution for speed.
+## OPTIMAL PARALLEL EXECUTION
 
-**🧬 COGNITIVE SPECIALIZATION**: Agents use specialized thinking approaches.
-
-**🧠 INTELLIGENT COORDINATION**: Intelligence prevents conflicts and manages dependencies.
-
-## Three-Phase Intelligence-Driven Execution
-
-### Phase 1: Ultrathink Everything (MANDATORY)
-
-⚠️ **CRITICAL**: Ultrathink reasoning is **NON-NEGOTIABLE** - Never skip this phase.
-
-**Intelligence Discovers:**
-- **Task Understanding**: What exactly needs to be accomplished
-- **Parallelization Opportunities**: Every possible parallel execution unit
-- **Agent Distribution**: How many agents and where they work
-- **Dependency Analysis**: What must be sequential vs parallel
-- **Conflict Prevention**: How to prevent file/resource conflicts
-
-**Ultrathink Process:**
-1. **Analyze Task**: Understand user requirements completely
-2. **Discover Parallelization**: Find every possible parallel execution unit
-3. **Assign Agents**: Intelligence determines optimal agent distribution
-4. **Plan Execution**: Default parallel unless dependencies block
-5. **Present Plan**: Get user approval before execution
-
-**Intelligence-Only Decision Making:**
-- No hardcoded rules or limits
-- Pure Claude reasoning determines everything
-- Maximum parallelization by default
-- Trust intelligence to prevent conflicts
-
-## Simplified Execution Strategy
-
-**Default Strategy: Maximum Parallelization**
-
-Intelligence determines:
-- How many agents to create
-- Which files/areas each agent owns  
-- How to prevent conflicts between agents
-- When sequencing is absolutely necessary
-
-No rules, algorithms, or limits - pure Claude intelligence decides everything.
-
-### Phase 2: Research Everything Once (MANDATORY)
-
-**Intelligence-Driven Research:**
-1. **Discover Technologies**: Intelligence identifies ALL project technologies
-2. **Research Comprehensively**: Use MCP tools (context7, WebSearch, WebFetch)
-3. **Share Knowledge**: All agents access same research cache
-4. **No Redundancy**: Research once, use everywhere
-
-**Shared Research Cache:**
-- All agents access same knowledge base
-- No duplicate research across agents
-- Intelligence ensures complete coverage
-
-### Phase 3: Maximum Parallel Execution
-
-**Intelligence-Only Execution:**
-1. **Launch All Agents**: Start maximum parallel agents based on intelligence analysis
-2. **Prevent Conflicts**: Intelligence assigns exclusive file ownership
-3. **Coordinate Dependencies**: Only sequence when absolutely necessary
-4. **Trust Intelligence**: No hardcoded coordination rules
-  parallel_coordination: all_chains_run_simultaneously
-  agents_per_chain: 3-7 agents
+### Unified Strategy
+```
+1. EXACT REQUIREMENTS: Extract precisely what user wants
+2. OPTIMAL AGENTS: Determine minimum agents for perfect solution
+3. MANDATORY PARALLEL: Execute all agents simultaneously
+4. NO DUPLICATE WORK: Each agent owns exclusive work domain
 ```
 
-## Intelligence-Based Research
+### Execution Rules
+- **1 agent task** → Single agent execution
+- **2+ agent task** → MANDATORY parallel execution  
+- **Optimal count** → Use EXACT agents needed (not maximum possible)
+- **Speed focus** → Parallel execution for all multi-agent tasks
 
-**MCP Research Tools:**
-- **context7**: Library documentation and code examples
-- **WebSearch**: Community patterns and best practices  
-- **WebFetch**: Official API documentation
+## Three-Phase Workflow
 
-**Intelligence Manages:**
-- Which technologies to research
-- How comprehensive research needs to be
-- Which agents need which research
-- When research is complete
+### Phase 1: Ultrathink Reasoning (MANDATORY)
 
-## Cognitive Agent Coordination
+**Intelligence Discovers:**
+- Task requirements from user prompt
+- Optimal agent count for the task
+- Work decomposition into distinct units
+- Exclusive agent assignments
 
-**Pure Intelligence Coordination:**
-- Intelligence determines agent count and assignment
-- Intelligence prevents conflicts through file ownership
-- Intelligence decides parallel vs sequential execution
-- Intelligence integrates results into coherent solution
+**Target Focus Analysis:**
+```yaml
+Exact Request: What user asked for specifically
+Optimal Solution: Minimal approach to solve perfectly  
+Required Research: Only necessary knowledge
+Optimal Agents: Exact number needed
+```
 
-**No Hardcoded Rules:**
-- No agent count limits
-- No scaling algorithms
-- No execution mode formulas
-- Pure Claude reasoning drives everything
+**Work Decomposition:**
+- Break into DISTINCT, non-overlapping units
+- Assign EXCLUSIVE work domains to each agent
+- Prevent duplicate work through clear boundaries
+- Present plan for user approval
+
+### Phase 2: Parallel Research (When Needed)
+
+**Main Thread Control:**
+- Main thread spawns ALL research agents
+- Each agent researches different aspects
+- All agents run simultaneously
+- Shared knowledge cache for findings
+
+**Research Tools:**
+- context7 for library documentation
+- WebSearch for patterns and practices
+- WebFetch for official documentation
+
+### Phase 3: Parallel Implementation (After Approval)
+
+**Execution Strategy:**
+1. Main thread creates implementation agents
+2. Spawn ALL agents simultaneously  
+3. Each agent owns exclusive work area
+4. Integrate results after completion
+
+**Coordination:**
+- Intelligence prevents conflicts
+- Clear file ownership boundaries
+- No agent spawns other agents
+- Main thread manages everything
 
 ## Success Criteria
 
-- ✅ **Intelligence-First**: Pure Claude intelligence drives all decisions
-- ✅ **Maximum Parallelization**: Default to maximum parallel execution for speed
-- ✅ **Simple Execution**: Clean three-phase workflow without complex rules
-- ✅ **Conflict-Free**: Intelligence prevents conflicts through smart file assignment
-- ✅ **Research Integration**: Comprehensive MCP research shared across all agents
-- ✅ **User Approval**: No execution without explicit user confirmation
+✅ **Target Precision**: Do exactly what was requested  
+✅ **Optimal Speed**: Mandatory parallel for multi-agent tasks
+✅ **Intelligent Scaling**: Right number of agents for the task
+✅ **Conflict-Free**: Clear boundaries prevent overlap
+✅ **User Approval**: Always get confirmation before execution
 
-## Integration Points
+## Integration
 
-### Module Dependencies
-- agents.md (cognitive personas for agent creation)
-
-### Module Consumers
-- Workflow command template (implements this simplified execution pattern)
-- Setup command (creates agents that workflow will coordinate)
+- **Depends on**: agents.md (cognitive personas)
+- **Used by**: workflow-command.md, setup-command.md

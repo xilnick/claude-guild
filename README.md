@@ -9,21 +9,21 @@
 
 ## 🎯 What is Claude Guild?
 
-Claude Guild is a **lightweight command set** for [Claude Code](https://claude.ai/code) that creates specialized agents with customizable workflows. Instead of complex configuration, Guild provides **simple setup** with `instructions.md` customization and `ignore.md` tolerance, enabling systematic multi-stage execution tailored to your project.
+Claude Guild is a **lightweight command set** for [Claude Code](https://claude.ai/code) that creates specialized agents with optimal parallel execution. Instead of complex configuration, Guild provides **simple setup** with `instructions.md` customization, enabling systematic multi-stage execution tailored to your project.
 
 ### Core Purpose
 
-**Simple Workflow Automation**: Transform any task into systematic execution:
-- **🧠 Analysis**: Smart requirement understanding and approach verification
-- **🔍 Research**: Codebase context gathering and pattern analysis  
-- **📋 Planning**: Coordinated task breakdown with parallel execution
-- **🔨 Implementation**: Specialized agents for your technology stack
+**Target-Focused Workflow**: Do EXACTLY what's requested with optimal speed:
+- **🎯 Target Analysis**: Extract precise requirements - nothing more, nothing less
+- **⚡ Parallel Research**: Simultaneous knowledge gathering when needed
+- **📋 Optimal Planning**: Right number of agents for the task
+- **🚀 Mandatory Parallel**: All multi-agent tasks execute simultaneously
 - **✅ Validation**: Quality checks and testing integration
 
-**Highly Customizable**: Adapt workflows to your needs:
-- **📝 instructions.md**: Define project-specific requirements and preferences
+**Optimized Execution**: Maximum speed with minimal complexity:
+- **📝 instructions.md**: Optional project-specific preferences
 - **🚫 ignore.md**: Exclude files and patterns from analysis
-- **⚡ Parallel Execution**: Automatic task distribution for 3x speedup
+- **⚡ Mandatory Parallel**: All multi-agent tasks run simultaneously for speed
 
 **Universal Compatibility**: Works with any technology stack - from frontend frameworks to backend APIs to systems programming. Guild analyzes your project and creates appropriate specialists automatically.
 
@@ -62,15 +62,15 @@ docs/
 
 ### Why Use Guild?
 
-**Before Guild**: Ad-hoc conversations, missed requirements, manual coordination
-**With Guild**: Systematic workflow with specialized agents
+**Before Guild**: Ad-hoc conversations, scope creep, inefficient execution
+**With Guild**: Target-focused workflow with optimal parallel execution
 
 **Key Benefits**:
-- ✅ **Automatic Task Breakdown**: Smart analysis and parallel execution
-- ✅ **Technology-Aware**: Agents specialized for your stack  
-- ✅ **Customizable Workflow**: Adapt to your project needs via instructions.md
-- ✅ **Quality Built-in**: Testing and validation integrated by default
-- ✅ **3x Faster**: Parallel agent coordination for complex tasks
+- ✅ **Target Precision**: Do EXACTLY what's requested - no scope creep
+- ✅ **Mandatory Parallel**: All multi-agent tasks run simultaneously  
+- ✅ **Optimal Agents**: Right number of specialists for the task
+- ✅ **Intelligence-Driven**: Claude discovers your stack automatically
+- ✅ **3x Faster**: Parallel execution for maximum speed
 
 ## 🚀 Simple Setup Examples
 
@@ -193,15 +193,15 @@ preferences:
 
 ### How It Works
 
-**Simple 4-Stage Process**:
-1. **Analyze** - Understand requirements and constraints
-2. **Research** - Gather codebase context and patterns  
-3. **Plan** - Break down into coordinated tasks
-4. **Implement** - Execute with specialized agents
+**Target-Focused Process**:
+1. **🎯 Target Analysis** - Extract EXACT requirements from user request
+2. **⚡ Parallel Research** - Simultaneous knowledge gathering (when needed)
+3. **📋 Optimal Planning** - Determine minimum agents for perfect solution
+4. **🚀 Parallel Implementation** - Execute ALL agents simultaneously
 
-**Parallel Execution**: Multiple agents work simultaneously on different parts while maintaining coordination and preventing conflicts.
+**Mandatory Parallel Execution**: Multi-agent tasks ALWAYS run in parallel for maximum speed.
 
-**Technology Detection**: Automatically creates specialists for your tech stack (React, Node.js, Python, etc.)
+**Intelligence-Driven**: Claude discovers your stack and creates optimal agents automatically.
 
 ## 🛠️ Installation & Getting Started
 
@@ -246,7 +246,7 @@ project:
 
 ---
 
-**Claude Guild: Simple command set → Specialized agents → Systematic workflows → 3x faster development** 🏛️
+**Claude Guild: Target Focus → Optimal Agents → Mandatory Parallel → 3x Faster Development** 🏛️
 
 ## 🔧 Main Approaches & When to Use Them
 
@@ -518,32 +518,25 @@ Guild uses a **sophisticated dual-agent architecture** with clear separation of 
 
 ### Workflow Execution Engine
 
-**Multi-Stage Process Orchestration**:
+**Optimized Three-Phase Process**:
 
-1. **🧠 Analysis Stage** (Main thread with advanced thinking)
-   - Deep requirement analysis and edge case identification
-   - Technical constraint evaluation and dependency mapping
-   - Risk assessment and implementation complexity analysis
+1. **🎯 Target Analysis** (Ultrathink reasoning - MANDATORY)
+   - Extract EXACT requirements from user request
+   - Determine OPTIMAL agent count (not maximum)
+   - Identify work units for parallel execution
+   - Present plan for user approval
 
-2. **🔍 Research Stage** (`guild-project-research-agent` + `guild-global-research-agent`)
-   - Comprehensive codebase analysis with pattern recognition
-   - External documentation integration and best practices research
-   - Technology-specific constraint identification and API analysis
+2. **⚡ Parallel Research** (When needed)
+   - Main thread spawns ALL research agents
+   - Simultaneous documentation gathering
+   - Shared knowledge cache for all agents
+   - No agent hierarchies - main thread control only
 
-3. **📋 Planning Stage** (`guild-planning-agent` with advanced thinking)
-   - Strategic implementation approach with dependency-aware parallel execution and real-time coordination
-   - Agent selection and intelligent task distribution with affinity grouping and work estimation
-   - Context handoff protocol establishment and validation checkpoints
-
-4. **🔨 Implementation Stage** (Technology-specific engineers)
-   - Specialized implementation by domain experts
-   - Pattern-consistent code generation with framework best practices
-   - Parallel execution with synchronized context sharing
-
-5. **✅ Validation Stage** (`guild-verification-agent`)
-   - Systematic testing and quality assurance validation
-   - Security, performance, and accessibility compliance checking
-   - Integration testing and cross-component validation
+3. **🚀 Parallel Implementation** (After approval)
+   - Main thread spawns OPTIMAL number of agents
+   - ALL agents execute simultaneously
+   - Each agent owns exclusive work domain
+   - Results integrated by main thread
 
 ## 📊 Standalone Agents - Instant Expertise
 
@@ -880,39 +873,43 @@ your-project/
 
 ## 🏗️ Agent Classification System
 
-Guild uses a **sophisticated dual-agent architecture** with clear separation of concerns:
+Guild uses **Four Core Cognitive Personas** with clear thinking approaches:
 
-### Context-Only Agents (Analysis & Planning)
-**Never modify code** - focused on understanding and strategy:
+### Cognitive Personas (How Agents Think)
 
-- **Main thread reasoning**: Deep requirement analysis with advanced thinking (integrated)
-- **`guild-planning-agent`**: Strategic workflow coordination (advanced thinking)  
-- **`guild-research-agents`**: Context gathering and information synthesis
+**4 Core Thinking Approaches**:
 
-### Implementation Agents (Code & Changes)
-**Make actual modifications** - focused on execution:
+- **Systems Architect**: Structural thinking, integration, big-picture design
+- **Analytical Thinker**: Data-driven optimization, performance, algorithms
+- **Quality Guardian**: Risk-aware validation, testing, reliability
+- **Domain Expert**: Business logic, requirements, practical solutions
 
-- **`guild-verification-agent`**: Quality validation and testing execution
-- **Technology Engineers**: Domain-specific implementation specialists (frontend frameworks, backend APIs, databases, etc.)
+### Agent Organization
+
+**Main Thread Control**:
+- Main thread performs target analysis with ultrathink
+- Main thread spawns ALL agents (research and implementation)
+- No agent spawns other agents - flat hierarchy
+- All agents use `model: sonnet` for consistency
 
 **Communication Protocol**: All agents use structured XML handoff templates for seamless context transfer and quality assurance.
 
 ## ⚙️ Key Differentiators
 
-- **Self-contained architecture** with zero-dependency global installation
-- **Complete template embedding** ensuring 100% reliable setup across environments
-- **Advanced context engineering** with XML-structured packages
-- **Integrated thinking modes** for appropriate cognitive resource allocation
-- **Technology-agnostic design** with universal workflow patterns
-- **Structured agent communication** with quality gates and validation checkpoints
+- **Target Focus Philosophy** - Do EXACTLY what's requested, nothing more
+- **Mandatory Parallel Execution** - All multi-agent tasks run simultaneously
+- **Optimal Agent Count** - Use precise number needed, not maximum
+- **4 Cognitive Personas** - Simple, clear thinking approaches
+- **Intelligence-Driven** - Claude discovers everything through analysis
+- **All Sonnet Models** - Consistent model usage across all agents
 
 ## 📊 Success Metrics
 
-- **100% installation reliability** through self-contained setup architecture
-- **Zero-failure setup process** eliminating missing file errors
-- **50-70% performance improvement** through context optimization
-- **Advanced thinking quality** with appropriate thinking mode selection
-- **Global distribution compatibility** ensuring identical system creation
+- **3x Speed Improvement** through mandatory parallel execution
+- **Zero Scope Creep** with target-focused approach
+- **Optimal Resource Usage** with right-sized agent teams
+- **100% Installation Reliability** through self-contained architecture
+- **Simple Configuration** with minimal setup complexity
 
 ## 🔗 Resources & Documentation
 
@@ -983,4 +980,4 @@ npx claude-guild@latest --standalone
 
 ---
 
-**Claude Guild: Where every development task becomes a systematic, multi-stage workflow powered by intelligent agents and advanced reasoning capabilities.** 🏛️
+**Claude Guild: Where every task gets TARGET FOCUS, OPTIMAL AGENTS, and MANDATORY PARALLEL execution for maximum speed.** 🏛️

@@ -27,7 +27,7 @@ guideline/
 
 ### /guild
 - **Purpose**: Execute tasks through reasoning and parallel agent invocation
-- **Process**: Ultrathink reasoning → Present plan → Get approval → Execute in parallel
+- **Process**: Ultrathink reasoning → Present plan → Get approval → FORCE parallel execution
 - **Intelligence**: Uses workflow.md for two-phase execution
 
 ## Core Principles
@@ -42,10 +42,12 @@ guideline/
 - Present execution plan for user approval
 - Clear understanding before execution
 
-### Parallel Execution
-- 2-10 agents working simultaneously
-- Minimal coordination overhead
-- Agents can be invoked multiple times for different tasks
+### Optimal Execution Strategy
+- **TARGET FOCUS**: Do EXACTLY what was requested - nothing more, nothing less
+- Use OPTIMAL agent count for the task (1 agent for simple, 10+ for complex)
+- Smart parallelization when beneficial, not forced everywhere
+- Targeted research on specific needs, not comprehensive exploration
+- Efficiency over raw parallelization
 
 ### Embedded Intelligence
 - All logic embedded in command prompts during generation
