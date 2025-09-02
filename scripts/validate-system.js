@@ -16,9 +16,7 @@ async function validateSystem() {
   // Validate directory structure
   console.log('📁 Checking directory structure...');
   const requiredDirs = [
-    'guideline/shared',
-    'guideline/setup', 
-    'guideline/execution',
+    'guideline/core',
     'guideline/templates',
     'scripts'
   ];
@@ -32,53 +30,36 @@ async function validateSystem() {
     }
   }
   
-  // Validate intelligence modules in new structure
-  console.log('\n📚 Checking intelligence modules...');
-  const moduleCategories = {
-    'shared': ['principles.md', 'mcp-integration.md'],
-    'setup': ['agents.md', 'testing.md'], 
-    'execution': ['planning-router.md', 'workflows.md', 'parallel.md']
-  };
+  // Validate core modules in current structure
+  console.log('\n📚 Checking core modules...');
+  const coreModules = ['workflow.md', 'agents.md'];
   
-  for (const [category, modules] of Object.entries(moduleCategories)) {
-    const categoryDir = path.join(__dirname, '..', 'guideline', category);
-    for (const module of modules) {
-      const modulePath = path.join(categoryDir, module);
-      if (await fs.pathExists(modulePath)) {
-        const content = await fs.readFile(modulePath, 'utf-8');
-        if (content.length > 100) {
-          successes.push(`✅ ${category} module valid: ${module}`);
-        } else {
-          warnings.push(`⚠️  ${category} module too small: ${module}`);
-        }
+  for (const module of coreModules) {
+    const modulePath = path.join(__dirname, '..', 'guideline', 'core', module);
+    if (await fs.pathExists(modulePath)) {
+      const content = await fs.readFile(modulePath, 'utf-8');
+      if (content.length > 100) {
+        successes.push(`✅ Core module valid: ${module}`);
       } else {
-        errors.push(`❌ Missing ${category} module: ${module}`);
+        warnings.push(`⚠️  Core module too small: ${module}`);
       }
+    } else {
+      errors.push(`❌ Missing core module: ${module}`);
     }
   }
   
-  // Validate reference documents
-  console.log('\n📖 Checking reference documents...');
-  const referenceDir = path.join(__dirname, '..', 'guideline', 'reference');
-  if (await fs.pathExists(referenceDir)) {
-    const files = await fs.readdir(referenceDir);
-    const masterFiles = files.filter(f => f.startsWith('master-') && f.endsWith('.md'));
-    
-    for (const file of masterFiles) {
-      const filePath = path.join(referenceDir, file);
-      const content = await fs.readFile(filePath, 'utf-8');
-      
-      // Check for CORE sections
-      if (content.includes('<!-- CORE-START -->') && content.includes('<!-- CORE-END -->')) {
-        successes.push(`✅ Reference has CORE sections: ${file}`);
-      } else {
-        warnings.push(`⚠️  Reference missing CORE sections: ${file}`);
-      }
+  // Check README.md in guideline directory
+  console.log('\n📖 Checking guideline documentation...');
+  const guidelineReadme = path.join(__dirname, '..', 'guideline', 'README.md');
+  if (await fs.pathExists(guidelineReadme)) {
+    const content = await fs.readFile(guidelineReadme, 'utf-8');
+    if (content.length > 100) {
+      successes.push(`✅ Guideline README exists and has content`);
+    } else {
+      warnings.push(`⚠️  Guideline README seems too small`);
     }
-    
-    if (masterFiles.length === 0) {
-      warnings.push('⚠️  No master reference documents found');
-    }
+  } else {
+    warnings.push('⚠️  No guideline README found');
   }
   
   // Templates no longer needed - using pure guideline-driven generation
@@ -90,11 +71,7 @@ async function validateSystem() {
   const templatesDir = path.join(__dirname, '..', 'guideline', 'templates');
   const requiredTemplates = [
     'setup-command.md',
-    'agent-command.md', 
-    'instructions-command.md',
-    'ignore-command.md',
-    'instructions-template.md',
-    'agent-templates.md'
+    'workflow-command.md'
   ];
   
   for (const template of requiredTemplates) {
@@ -120,9 +97,8 @@ async function validateSystem() {
     // Check for key functions
     const requiredFunctions = [
       'loadCoreModules',
-      'generateSetupCommand',
-      'installCommands',
-      'generateComposedSetupCommand'
+      'generateSetupCommand', 
+      'installCommands'
     ];
     
     for (const func of requiredFunctions) {
@@ -143,7 +119,7 @@ async function validateSystem() {
     const packageJson = await fs.readJson(packagePath);
     
     // Check scripts
-    const requiredScripts = ['generate-core', 'test-install', 'validate-setup'];
+    const requiredScripts = ['test-install', 'validate-setup'];
     for (const script of requiredScripts) {
       if (packageJson.scripts && packageJson.scripts[script]) {
         successes.push(`✅ Script exists: npm run ${script}`);
@@ -154,7 +130,7 @@ async function validateSystem() {
     
     // Check files list for NPM
     if (packageJson.files) {
-      const requiredFiles = ['install.js', 'commands/', 'guideline/'];
+      const requiredFiles = ['install.js', 'guideline/', 'templates/'];
       for (const file of requiredFiles) {
         if (packageJson.files.some(f => f.includes(file.replace('/', '')))) {
           successes.push(`✅ NPM files includes: ${file}`);

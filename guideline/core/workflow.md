@@ -1,89 +1,136 @@
-# Workflow Module
+# Team Orchestration Module
 
 ## Core Philosophy
 
-**🎯 TARGET FOCUS**: Do EXACTLY what user requested - nothing more, nothing less.
+**🎯 TEAM COORDINATION**: Main thread orchestrates specialist teams, never implements.
 
-**⚡ MANDATORY PARALLEL**: Always execute agents in parallel for maximum speed.
+**🏢 DYNAMIC LEADERSHIP**: Intelligent team activation and coordination for each unique project.
 
-**🧠 INTELLIGENCE-FIRST**: Claude determines optimal agent count and work distribution.
+**⚡ COLLABORATIVE EXECUTION**: Specialists work together toward project-specific goals.
 
-## OPTIMAL PARALLEL EXECUTION
+**🚀 RESULTS-FOCUSED**: Teams organized around delivering specific project outcomes.
 
-### Unified Strategy
-```
-1. EXACT REQUIREMENTS: Extract precisely what user wants
-2. OPTIMAL AGENTS: Determine minimum agents for perfect solution
-3. MANDATORY PARALLEL: Execute all agents simultaneously
-4. NO DUPLICATE WORK: Each agent owns exclusive work domain
-```
+## Team Orchestration Principles
 
-### Execution Rules
-- **1 agent task** → Single agent execution
-- **2+ agent task** → MANDATORY parallel execution  
-- **Optimal count** → Use EXACT agents needed (not maximum possible)
-- **Speed focus** → Parallel execution for all multi-agent tasks
+### H&G Team Leadership
+**Main thread acts as intelligent project manager:**
+- **Understands**: Project context, requirements, and challenges
+- **Hires**: Assembles the right specialist team for this project
+- **Coordinates**: Manages team collaboration and communication
+- **Integrates**: Combines specialist outputs into project solutions
+- **NEVER Implements**: All work delegated to appropriate specialists
 
-## Three-Phase Workflow
+### Dynamic Team Activation
+**For each task, intelligently:**
+- Analyze what kinds of specialists this specific work needs
+- Activate relevant team members from the project's specialist pool
+- Coordinate their collaboration for maximum effectiveness
+- Ensure clear communication and shared context
+- Integrate their results into coherent solutions
 
-### Phase 1: Ultrathink Reasoning (MANDATORY)
+### Collaborative Excellence
+**Teams work together through:**
+- **Shared Context**: All specialists understand the project's goals and constraints
+- **Clear Roles**: Each specialist knows their responsibilities and success criteria
+- **Effective Communication**: Coordination through main thread management
+- **Complementary Skills**: Specialists chosen for how they work together
+- **Unified Purpose**: All work directed toward project success
 
-**Intelligence Discovers:**
-- Task requirements from user prompt
-- Optimal agent count for the task
-- Work decomposition into distinct units
-- Exclusive agent assignments
+## Team Orchestration Patterns
 
-**Target Focus Analysis:**
-```yaml
-Exact Request: What user asked for specifically
-Optimal Solution: Minimal approach to solve perfectly  
-Required Research: Only necessary knowledge
-Optimal Agents: Exact number needed
-```
+### Project Context Distribution
+**Ensure all specialists understand:**
+- What kind of project they're supporting
+- What business goals drive decisions
+- What technical constraints exist
+- What success looks like for this project
+- How their work contributes to overall objectives
 
-**Work Decomposition:**
-- Break into DISTINCT, non-overlapping units
-- Assign EXCLUSIVE work domains to each agent
-- Prevent duplicate work through clear boundaries
-- Present plan for user approval
+### Task-Based Team Assembly
+**For each task, determine:**
+- Which specialists from the project team can contribute
+- What coordination they need to work effectively
+- How to sequence their work for optimal results
+- What communication channels they need
+- How to integrate their outputs
 
-### Phase 2: Parallel Research (When Needed)
+### Collaborative Work Flows
+**Orchestrate specialist collaboration:**
+- **Parallel Execution**: Multiple specialists working simultaneously
+- **Sequential Coordination**: Specialists building on each other's work
+- **Cross-Consultation**: Specialists advising each other
+- **Integration Points**: Bringing specialist outputs together
+- **Quality Coordination**: Ensuring consistent standards
 
-**Main Thread Control:**
-- Main thread spawns ALL research agents
-- Each agent researches different aspects
-- All agents run simultaneously
-- Shared knowledge cache for findings
+### Results Integration
+**Combine specialist outputs:**
+- Synthesize insights from research specialists
+- Coordinate implementation from technical specialists
+- Integrate feedback from advisory specialists
+- Validate results with quality specialists
+- Present unified solutions to stakeholders
 
-**Research Tools:**
-- context7 for library documentation
-- WebSearch for patterns and practices
-- WebFetch for official documentation
+## Orchestration Execution Framework
 
-### Phase 3: Parallel Implementation (After Approval)
+### Phase 1: Context Understanding
+**Main thread analyzes the request:**
+- What does this task require?
+- Which specialists from our project team can contribute?
+- What coordination do they need?
+- What context must be shared?
+- What success criteria apply?
 
-**Execution Strategy:**
-1. Main thread creates implementation agents
-2. Spawn ALL agents simultaneously  
-3. Each agent owns exclusive work area
-4. Integrate results after completion
+### Phase 2: Team Activation
+**Activate relevant specialists:**
+- Brief specialists on task context and objectives
+- Coordinate initial work assignments
+- Establish communication protocols
+- Set expectations for collaboration
+- Define integration points
 
-**Coordination:**
-- Intelligence prevents conflicts
-- Clear file ownership boundaries
-- No agent spawns other agents
-- Main thread manages everything
+### Phase 3: Collaborative Execution
+**Coordinate specialist work:**
+- Monitor progress and collaboration
+- Facilitate communication between specialists
+- Resolve conflicts and dependencies
+- Adjust coordination as work evolves
+- Maintain alignment with project goals
+
+### Phase 4: Results Integration
+**Synthesize specialist outputs:**
+- Combine technical implementations
+- Integrate advisory recommendations
+- Incorporate quality feedback
+- Present coherent solutions
+- Measure against success criteria
+
+## Team Communication Framework
+
+### Coordination Protocols
+**Main thread manages:**
+- Specialist briefings and context sharing
+- Work assignment and progress tracking
+- Inter-specialist communication facilitation
+- Conflict resolution and dependency management
+- Results collection and integration
+
+### Collaborative Standards
+**Teams operate with:**
+- **Shared Context**: Common understanding of project goals
+- **Clear Expectations**: Well-defined roles and responsibilities
+- **Regular Coordination**: Ongoing communication and alignment
+- **Quality Standards**: Consistent excellence across all work
+- **Results Focus**: All activity directed toward project success
 
 ## Success Criteria
 
-✅ **Target Precision**: Do exactly what was requested  
-✅ **Optimal Speed**: Mandatory parallel for multi-agent tasks
-✅ **Intelligent Scaling**: Right number of agents for the task
-✅ **Conflict-Free**: Clear boundaries prevent overlap
-✅ **User Approval**: Always get confirmation before execution
+✅ **Effective Coordination**: Teams work together smoothly toward shared goals  
+✅ **Context Alignment**: All specialists understand and support project objectives
+✅ **Collaborative Excellence**: Specialists enhance each other's contributions
+✅ **Results Integration**: Specialist outputs combine into coherent solutions
+✅ **Zero Implementation**: Main thread coordinates but never implements
 
 ## Integration
 
-- **Depends on**: agents.md (cognitive personas)
+- **Depends on**: agents.md (team building patterns)
 - **Used by**: workflow-command.md, setup-command.md

@@ -422,7 +422,7 @@ async function install(cliOptions = null) {
 🚀 Next Steps:
    1. Run: /guild:setup  (to configure project agents)
    2. Use: /guild "your task"  (convenient alias for Guild workflow)
-   3. Use: /guild:agent "your task"  (direct agent execution)
+   3. Use: /guild:workflow "your task"  (alternative workflow invocation)
 
 💡 Quick tip: Use /guild:setup to analyze your project and create specialized agents with research capabilities!`);
     

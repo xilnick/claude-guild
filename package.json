@@ -1,7 +1,7 @@
 {
   "name": "claude-guild",
   "version": "2.3.1",
-  "description": "Comprehensive workflow integration for Claude Code via custom commands with intelligent parallel agent execution and dependency analysis",
+  "description": "Intelligence-driven team building system for Claude Code that discovers project requirements and creates custom specialist teams optimized for your specific technology stack and domain needs",
   "main": "install.js",
   "bin": {
     "claude-guild": "./install.js"
@@ -11,9 +11,9 @@
     "publish-non-interactive": "node publish.js --no-interaction",
     "publish-direct": "npm publish --access public",
     "publish-legacy": "./publish.sh",
-    "prepublishOnly": "npm run validate && npm run generate-core",
+    "prepublishOnly": "npm run validate",
     "test-install": "node install.js --test-mode",
-    "generate-core": "node scripts/generate-core.js",
+
     "validate": "node scripts/validate-system.js",
     "validate-setup": "node -e \"console.log('✅ Validation passed')\"",
     "lint": "echo 'No linting configured yet'",
@@ -35,13 +35,18 @@
     "claude",
     "claude-code",
     "ai",
+    "intelligence-driven",
+    "team-building",
+    "project-discovery",
+    "specialist",
+    "custom-teams",
+    "adaptive",
     "agents",
-    "parallel-execution",
+    "specialization",
     "workflow",
     "development",
     "automation",
-    "architect",
-    "engineer"
+    "discovery"
   ],
   "author": "Claude Guild Team",
   "license": "MIT",

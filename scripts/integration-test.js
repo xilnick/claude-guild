@@ -47,10 +47,7 @@ async function runIntegrationTest() {
       { path: '.claude/commands', type: 'directory' },
       { path: '.claude/commands/guild.md', type: 'file' },
       { path: '.claude/commands/guild', type: 'directory' },
-      { path: '.claude/commands/guild/setup.md', type: 'file' },
-      { path: '.claude/commands/guild/instructions.md', type: 'file' },
-      { path: '.claude/commands/guild/ignore.md', type: 'file' },
-      { path: '.guild', type: 'directory' }
+      { path: '.claude/commands/guild/setup.md', type: 'file' }
     ];
     
     let allPassed = true;
@@ -81,11 +78,11 @@ async function runIntegrationTest() {
     
     // Check for embedded intelligence (should have core modules injected)
     const requiredSections = [
-      'Dynamic Agent Composition Philosophy',
-      'Hierarchical Workflow with Planning Router',
-      'Planning Router Orchestration',
-      'Proactively Parallel',
-      'Planning Router with Think-Only Agents Philosophy'
+      'INTELLIGENT HIRING',
+      'PROJECT-SPECIFIC TEAMS', 
+      'TEAM COORDINATION',
+      'DYNAMIC LEADERSHIP',
+      'COLLABORATIVE EXECUTION'
     ];
     
     for (const section of requiredSections) {

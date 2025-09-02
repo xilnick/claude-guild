@@ -3,176 +3,202 @@
 [![npm version](https://img.shields.io/npm/v/claude-guild.svg)](https://www.npmjs.com/package/claude-guild)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**This project is a tiny command set for creating specialized agents with parallel execution. Highly customizable with instructions.md and tolerant to ignore.md.**
+**Intelligence-driven team building system for Claude Code that discovers your project's needs and creates optimal specialist teams.**
 
-> Simple, powerful workflow automation for Claude Code - transform any task into systematic multi-stage execution with intelligent agents.
+> Transform any development task into systematic execution with custom-built specialist teams that adapt to your exact project requirements.
 
 ## 🎯 What is Claude Guild?
 
-Claude Guild is a **lightweight command set** for [Claude Code](https://claude.ai/code) that creates specialized agents with optimal parallel execution. Instead of complex configuration, Guild provides **simple setup** with `instructions.md` customization, enabling systematic multi-stage execution tailored to your project.
+Claude Guild is an **intelligent team builder** for [Claude Code](https://claude.ai/code) that analyzes your project and creates custom specialist teams. Instead of generic workflows, Guild **discovers your unique requirements** and builds the perfect team of experts for your specific needs.
 
-### Core Purpose
+### Core Philosophy
 
-**Target-Focused Workflow**: Do EXACTLY what's requested with optimal speed:
-- **🎯 Target Analysis**: Extract precise requirements - nothing more, nothing less
-- **⚡ Parallel Research**: Simultaneous knowledge gathering when needed
-- **📋 Optimal Planning**: Right number of agents for the task
-- **🚀 Mandatory Parallel**: All multi-agent tasks execute simultaneously
-- **✅ Validation**: Quality checks and testing integration
+**Intelligence-First Team Building**: Claude discovers optimal solutions through analysis:
+- **🧠 Project Discovery**: Deep analysis of your codebase, patterns, and requirements
+- **👥 Custom Team Assembly**: Build specialist teams tailored to your project's unique needs
+- **🎯 Task-Specific Optimization**: Each task gets the perfect combination of specialists
+- **⚡ Parallel Coordination**: All specialists work simultaneously with intelligent coordination
+- **✅ Quality Integration**: Built-in validation and testing workflows
 
-**Optimized Execution**: Maximum speed with minimal complexity:
-- **📝 instructions.md**: Optional project-specific preferences
-- **🚫 ignore.md**: Exclude files and patterns from analysis
-- **⚡ Mandatory Parallel**: All multi-agent tasks run simultaneously for speed
+**Adaptive Team Architecture**: Every project gets a custom-built team:
+- **📊 Project Analysis**: Claude examines your entire codebase and development patterns
+- **🏗️ Specialist Creation**: Generate experts perfectly matched to your technology stack
+- **🎭 Role Engineering**: Create specialists for your specific domain requirements
+- **⚙️ Workflow Adaptation**: Customize execution patterns for your team's needs
 
-**Universal Compatibility**: Works with any technology stack - from frontend frameworks to backend APIs to systems programming. Guild analyzes your project and creates appropriate specialists automatically.
+**Universal Intelligence**: Works with any project through pure discovery:
+- Discovers frameworks, libraries, and patterns through analysis
+- Creates domain experts based on your specific business logic
+- Adapts to any programming language or technology stack
+- Builds specialists for your unique architectural patterns
 
 ### Main Usage Patterns
 
-**1. Quick Setup & Go**:
+**1. Intelligent Discovery & Team Building**:
 ```bash
 # Install anywhere, works everywhere
 npx claude-guild@latest
 
-# Start using immediately  
+# Claude analyzes your project and builds custom specialist teams
 /guild "implement user authentication"
+# → Creates security specialist, backend architect, frontend engineer, etc.
 ```
 
-**2. Customize with instructions.md**:
+**2. Project-Specific Team Optimization**:
 ```yaml
-# .guild/instructions.md
+# .guild/instructions.md (optional customization)
 project:
-  stack: [react, typescript, postgresql]
-  testing: [jest, playwright]
+  focus_areas: ["performance", "security", "accessibility"]
+  complexity_level: "enterprise"
   
-preferences:
-  always_include_tests: true
-  code_style: prettier
-  deployment: vercel
+team_preferences:
+  specialist_depth: "maximum"
+  coordination_style: "collaborative"
+  quality_standards: "production-ready"
 ```
 
-**3. Control scope with ignore.md**:
+**3. Intelligent Scope Management**:
 ```
 # .guild/ignore.md
 node_modules/
-*.test.js
-legacy/
-docs/
+*.log
+build/
+temp/
 ```
 
 ### Why Use Guild?
 
-**Before Guild**: Ad-hoc conversations, scope creep, inefficient execution
-**With Guild**: Target-focused workflow with optimal parallel execution
+**Before Guild**: Generic assistance, one-size-fits-all solutions, missed requirements
+**With Guild**: Custom specialist teams built for your exact project needs
 
 **Key Benefits**:
-- ✅ **Target Precision**: Do EXACTLY what's requested - no scope creep
-- ✅ **Mandatory Parallel**: All multi-agent tasks run simultaneously  
-- ✅ **Optimal Agents**: Right number of specialists for the task
-- ✅ **Intelligence-Driven**: Claude discovers your stack automatically
-- ✅ **3x Faster**: Parallel execution for maximum speed
+- ✅ **Perfect Team Match**: Every specialist designed for your specific requirements
+- ✅ **Intelligence-Driven Discovery**: Claude analyzes your entire project to understand needs
+- ✅ **Maximum Specialization**: Deep domain expertise for every aspect of your project
+- ✅ **Adaptive Architecture**: Teams evolve with your project's changing requirements
+- ✅ **3x More Effective**: Custom specialists vs generic assistance
 
-## 🚀 Simple Setup Examples
+## 🚀 Intelligence-Driven Setup Examples
 
-### Basic Installation & Usage
+### Basic Installation & Discovery
 ```bash
 # One command setup - works anywhere
 npx claude-guild@latest
 
-# Start using immediately with simple commands
+# Claude analyzes your project and creates optimal specialist teams
 /guild "add user login feature"
-/guild --fix "payment form validation issues"  
-/guild --plan "migrate to TypeScript"
+# → Discovers security requirements, creates auth specialist, UI specialist, etc.
+
+/guild "optimize application performance"  
+# → Discovers bottlenecks, creates performance engineer, database specialist, etc.
+
+/guild "implement real-time collaboration"
+# → Discovers architecture needs, creates websocket specialist, state management expert, etc.
 ```
 
-### Setup Customization Examples
+### Discovery-Driven Team Building Examples
 
-**Example 1: Frontend React Project**
+**Example 1: Project Analysis & Team Creation**
+```yaml
+# Claude discovers your project characteristics and creates optimal teams
+# (No hardcoded technologies - pure intelligence-driven discovery)
+
+project_discovery:
+  architecture_analysis: "Claude examines your codebase patterns"
+  technology_detection: "Identifies frameworks, libraries, and tools in use"
+  complexity_assessment: "Determines project scale and requirements"
+  
+team_creation:
+  specialist_matching: "Creates experts perfectly suited to your stack"
+  domain_expertise: "Builds specialists for your specific business logic"
+  workflow_optimization: "Designs coordination patterns for your team size"
+```
+
+**Example 2: Adaptive Intelligence Configuration**
+```yaml
+# .guild/instructions.md (optional preferences)
+intelligence_focus:
+  discovery_depth: "comprehensive"  # How thoroughly to analyze project
+  specialist_breadth: "maximum"     # How many different experts to create
+  adaptation_speed: "continuous"    # How quickly to evolve with project changes
+  
+team_preferences:
+  coordination_style: "collaborative"  # How specialists work together  
+  quality_standards: "production"     # Target quality level for all work
+  communication_format: "detailed"    # How much context specialists share
+```
+
+**Example 3: Universal Project Adaptation**
 ```yaml
 # .guild/instructions.md
-project:
-  type: frontend
-  stack: [react, typescript, vite]
-  styling: tailwindcss
-  testing: [jest, react-testing-library]
+# Works with ANY technology stack through pure discovery
+
+universal_intelligence:
+  framework_agnostic: true      # Discovers and adapts to any framework
+  language_independent: true    # Works with any programming language
+  domain_adaptive: true         # Creates specialists for any business domain
   
-preferences:
-  component_style: functional
-  state_management: zustand
-  always_include_tests: true
+discovery_priorities:
+  - "security and compliance requirements"
+  - "performance and scalability patterns" 
+  - "user experience and accessibility needs"
+  - "testing and quality assurance approaches"
 ```
 
-**Example 2: Full-Stack Node.js API**  
-```yaml
-# .guild/instructions.md
-project:
-  type: fullstack
-  backend: [node, express, postgresql]
-  frontend: [react, nextjs]
-  deployment: vercel
-  
-workflow:
-  always_verify_security: true
-  include_api_docs: true
-  parallel_execution: true
-```
-
-**Example 3: Mobile Development**
-```yaml
-# .guild/instructions.md
-project:
-  type: mobile
-  framework: react-native
-  platforms: [ios, android]
-  backend_integration: rest_api
-  
-preferences:
-  navigation: react-navigation
-  testing: detox
-  state: redux-toolkit
-```
-
-## ⚡ Core Commands & Usage
+## ⚡ Core Commands & Intelligent Team Coordination
 
 ### Essential Commands
 ```bash
-# Main workflow command - handles any development task
+# Main workflow command - builds optimal specialist teams for any task
 /guild "task description"
 
 # Setup and configuration  
-/guild:setup                    # Install agents for your project
-/guild:setup --standalone       # Install specialist agents only
+/guild:setup                    # Analyze project and create custom specialist teams
+/guild:setup --standalone       # Install domain-specific expert agents only
 
-# Workflow flags for specific approaches
-/guild --fix "bug description"     # Focus on debugging
-/guild --plan "large changes"      # Planning only
-/guild --full "critical feature"   # Complete lifecycle including tests
+# Workflow flags for specialized team approaches
+/guild --fix "issue description"    # Assemble debugging and analysis specialists
+/guild --plan "major changes"       # Create strategic planning and architecture team
+/guild --full "critical feature"    # Build complete development lifecycle team
 ```
 
-### Real-World Usage Examples
+### Intelligence-Driven Usage Examples
 
-**Feature Development**:
+**Adaptive Team Building**:
 ```bash
-/guild "add shopping cart with local storage persistence"
-# → Analysis → Research → Planning → Implementation → Validation
+/guild "implement user authentication system"
+# → Claude analyzes your project and builds optimal specialist team:
+#   - Security architect (discovers your security requirements)
+#   - Backend specialist (adapts to your server architecture)  
+#   - Frontend specialist (matches your UI patterns)
+#   - Database designer (optimizes for your data patterns)
+#   - Testing strategist (creates validation approaches)
 ```
 
-**Bug Fixing**:
+**Problem-Solving Team Assembly**:
 ```bash
-/guild --fix "checkout form not submitting on mobile devices"
-# → Focused debugging workflow with systematic root cause analysis
+/guild --fix "application performance issues under load"
+# → Intelligent diagnosis team creation:
+#   - Performance analyst (discovers bottlenecks in your specific stack)
+#   - Database optimizer (analyzes your query patterns)
+#   - Infrastructure specialist (examines your deployment architecture)
+#   - Monitoring engineer (designs observability for your environment)
 ```
 
-**Architecture Planning**:
+**Strategic Planning Teams**:
 ```bash
-/guild --plan "migrate from REST to GraphQL across all endpoints"
-# → Comprehensive planning with dependency analysis and migration strategy
+/guild --plan "modernize legacy system architecture"
+# → Strategic analysis team formation:
+#   - System architect (maps your current architecture patterns)
+#   - Migration strategist (plans transition for your specific constraints)
+#   - Risk analyst (identifies challenges in your environment)
+#   - Timeline coordinator (optimizes implementation for your team)
 ```
 
-**Performance Gains**: 3x speedup through intelligent parallel execution
-- Multiple agents work simultaneously on different parts
-- Smart coordination prevents conflicts
-- Automatic dependency management
+**Effectiveness Gains**: 3x more effective through intelligent specialization
+- Each specialist perfectly matched to your project requirements
+- Smart coordination prevents overlapping efforts and conflicts
+- Adaptive team composition evolves with project needs
 
 ## 📋 Quick Reference
 
@@ -186,22 +212,22 @@ preferences:
 ```
 
 ### Customization Files
-- **`.guild/instructions.md`** - Project preferences, tech stack, workflow settings
+- **`.guild/instructions.md`** - Optional project preferences and team building guidance
 - **`.guild/ignore.md`** - Files/patterns to exclude from analysis
 - **`.claude/commands/`** - Generated workflow commands
-- **`.claude/agents/`** - Technology-specific specialist agents
+- **`.claude/agents/`** - Custom-built specialist teams created through project analysis
 
 ### How It Works
 
-**Target-Focused Process**:
-1. **🎯 Target Analysis** - Extract EXACT requirements from user request
-2. **⚡ Parallel Research** - Simultaneous knowledge gathering (when needed)
-3. **📋 Optimal Planning** - Determine minimum agents for perfect solution
-4. **🚀 Parallel Implementation** - Execute ALL agents simultaneously
+**Intelligence-First Team Building Process**:
+1. **🧠 Project Discovery** - Claude analyzes your entire codebase, patterns, and architecture
+2. **👥 Specialist Creation** - Builds custom experts perfectly matched to your project needs
+3. **🎯 Task Analysis** - Understands requirements within context of your specific environment
+4. **⚡ Team Coordination** - All specialists work simultaneously with intelligent coordination
 
-**Mandatory Parallel Execution**: Multi-agent tasks ALWAYS run in parallel for maximum speed.
+**Adaptive Intelligence**: Teams continuously evolve to match your project's changing needs.
 
-**Intelligence-Driven**: Claude discovers your stack and creates optimal agents automatically.
+**Universal Discovery**: Claude discovers everything through analysis - no hardcoded assumptions about your technology stack.
 
 ## 🛠️ Installation & Getting Started
 
@@ -250,7 +276,7 @@ project:
 
 ## 🔧 Main Approaches & When to Use Them
 
-### 1. Standard Development Workflow
+### 1. Adaptive Development Workflow
 **Use For**: Most feature development, bug fixes, and improvements
 
 ```bash
@@ -258,11 +284,11 @@ project:
 ```
 
 **Process**: 
-- Deep requirement analysis with edge case identification
-- Comprehensive codebase research and pattern analysis  
-- Strategic implementation planning with component coordination
-- Technology-aware implementation by specialized engineers
-- Quality validation with testing and integration verification
+- Deep requirement analysis with discovery of your specific constraints and patterns
+- Comprehensive analysis of your existing architecture and code patterns  
+- Strategic implementation planning adapted to your project's structure
+- Implementation by specialists custom-built for your technology environment
+- Quality validation using testing approaches that match your project standards
 
 **Best For**: New features, enhancements, routine development tasks
 
@@ -270,30 +296,30 @@ project:
 **Use For**: Critical features, major changes, production deployments
 
 ```bash
-/guild --full "implement payment processing with Stripe"
+/guild --full "implement secure payment processing system"
 ```
 
 **Extended Process**:
 - All standard workflow stages PLUS:
-- Comprehensive test suite creation and execution
-- Security and performance verification  
-- Code quality optimization and refactoring
-- Documentation generation and compliance checking
+- Comprehensive test suite creation adapted to your testing infrastructure
+- Security and performance verification using your project's standards  
+- Code quality optimization following your established patterns
+- Documentation generation matching your project's documentation style
 
-**Best For**: Payment systems, authentication, data handling, public APIs
+**Best For**: Critical business logic, security-sensitive features, data handling systems, customer-facing functionality
 
-### 3. Documentation-First Development (`--spec`)
+### 3. Specification-Driven Development (`--spec`)
 **Use For**: Complex features, API design, architectural changes
 
 ```bash
-/guild --spec "design GraphQL API for content management"
+/guild --spec "design comprehensive API for content management"
 ```
 
 **Documentation-Driven Process**:
-- Specification analysis and requirements documentation
-- API contract definition and validation rules
-- Implementation with specification compliance checking
-- Automated documentation generation and synchronization
+- Specification analysis adapted to your existing API patterns and standards
+- Contract definition following your established conventions and compliance requirements
+- Implementation with specification compliance checking using your validation approaches
+- Documentation generation that integrates with your existing documentation infrastructure
 
 **Best For**: APIs, complex integrations, team coordination, compliance requirements
 
@@ -301,27 +327,27 @@ project:
 **Use For**: Migrations, refactoring, systematic improvements
 
 ```bash
-/guild --refactor --project "modernize styling system with Tailwind CSS"
+/guild --refactor --project "modernize styling architecture throughout application"
 ```
 
 **Systematic Process**:
-- Project-wide analysis and impact assessment
-- Coordinated changes across multiple files and components
-- Consistency validation and pattern enforcement
-- Migration guides and team coordination documentation
+- Project-wide analysis and impact assessment based on your current architecture
+- Coordinated changes across multiple files following your established patterns
+- Consistency validation using your project's style guides and conventions
+- Migration guides and documentation tailored to your team's workflows
 
 **Best For**: Technology migrations, code modernization, architecture changes
 
-### 5. Standalone Specialists Approach
-**Use For**: Specific expertise needs, simple projects, quick assessments
+### 5. Specialist-Driven Approach
+**Use For**: Specific expertise needs, targeted analysis, deep domain focus
 
 ```bash
-# Task automatically routes to appropriate specialist
+# Task automatically routes to project-specific specialists
 "Audit accessibility compliance across the application"
-# → accessibility-auditor-agent provides WCAG 2.1 analysis
+# → Claude creates accessibility specialist with deep knowledge of your UI patterns
 
-"Review API security implementation"  
-# → security-analyst-agent provides OWASP assessment
+"Review security implementation in authentication system"  
+# → Claude builds security analyst with expertise in your specific tech stack
 ```
 
 **When to Use Each Approach**:

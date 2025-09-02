@@ -1,162 +1,152 @@
-# Agent Specialization Module  
+# Team Building Intelligence Module
 
 ## Core Philosophy
 
-**INTELLIGENCE-FIRST**: Claude discovers project through analysis, not templates.
+**🏢 INTELLIGENT HIRING**: Claude analyzes each project and hires exactly the right specialists.
 
-**COGNITIVE THINKING**: Agents defined by HOW they think, not WHAT technologies.
+**🎯 PROJECT-SPECIFIC TEAMS**: Every team is custom-built for that project's unique needs.
 
-**PARALLEL-READY**: All agents support parallel execution and multiple instances.
+**📋 ROLE ENGINEERING**: Each specialist gets a precisely defined role, context, and mission.
 
-## Four Core Cognitive Personas
+**🚀 EFFECTIVENESS FOCUS**: Teams designed for maximum impact on specific project goals.
 
-### Systems Architect
-```yaml
-Thinking: Structural, integration-focused, big-picture
-Approach: Design scalable systems and integration patterns
-Focus: Architecture, APIs, service boundaries, scalability
-```
+## Team Building Process
 
-### Analytical Thinker
-```yaml
-Thinking: Data-driven, optimization-focused, performance-aware
-Approach: Analyze metrics, optimize algorithms, improve efficiency
-Focus: Performance, data flow, algorithms, bottlenecks
-```
+### Project Intelligence Analysis
 
-### Quality Guardian
-```yaml
-Thinking: Risk-aware, systematic, thorough
-Approach: Ensure reliability through testing and validation
-Focus: Testing, error handling, edge cases, monitoring
-```
+**Understand THIS Specific Project:**
+- What kind of project is this? (domain, scale, complexity)
+- What are the main challenges this project faces?
+- What expertise would accelerate success?
+- What knowledge gaps need filling?
+- What implementation bottlenecks exist?
+- What business context drives decisions?
 
-### Domain Expert
-```yaml
-Thinking: Business-focused, context-aware, practical
-Approach: Translate business needs to technical solutions
-Focus: Business logic, requirements, workflows, compliance
-```
+### Dynamic Role Engineering
 
-## Agent Creation Process
+**For each discovered need, create specialist roles:**
 
-### Intelligence Discovery
-1. **Analyze Project**: Understand purpose and architecture
-2. **Discover Stack**: Identify technologies through analysis
-3. **Map Requirements**: Match needs to cognitive personas
-4. **Create Agents**: Generate specialized agents
+#### Business Context Specialists
+- **Domain Consultants**: Understand the business context and requirements
+- **Industry Experts**: Navigate domain-specific challenges and regulations
+- **User Experience Advisors**: Optimize for end-user success
+- **Strategy Consultants**: Align technical decisions with business goals
 
-### Agent Template
+#### Technical Implementation Specialists
+- **Architecture Designers**: Structure solutions for discovered requirements
+- **Implementation Experts**: Build features using discovered technologies
+- **Integration Specialists**: Connect systems and services effectively
+- **Performance Optimizers**: Ensure scalability and efficiency
+
+#### Support and Quality Specialists  
+- **Research Assistants**: Gather information and evaluate options
+- **Testing Strategists**: Ensure quality and reliability
+- **Documentation Experts**: Capture knowledge and decisions
+- **Deployment Specialists**: Manage releases and operations
+
+#### Specialized Consultants
+- **Security Advisors**: Protect against discovered threat vectors
+- **Compliance Experts**: Meet regulatory requirements in discovered domains
+- **Scaling Consultants**: Handle growth challenges specific to this project
+- **Technology Advisors**: Navigate complex technical decisions
+
+## Specialist Creation Framework
+
+### Role Definition Template
 
 ```markdown
 ---
-name: [persona]-[domain]-specialist
-description: "[Persona] for [discovered domain]"
+name: [discovered-need]-specialist
+description: "[Specific role] for [this project's context]"
 model: sonnet
-thinking_mode: think
+thinking_mode: deep
 ---
 
-## Role
-[One-line role description based on cognitive persona]
+## Mission
+[One-line mission specific to this project's needs]
 
-## Approach
-[How this persona thinks and solves problems - 2-3 lines]
+## Project Context
+- Project Type: [What kind of project this specialist is supporting]
+- Key Challenge: [Specific challenge they're hired to solve]
+- Success Metric: [How their contribution will be measured]
+- Business Context: [Relevant business knowledge they need]
 
-## Responsibilities
-- [Specific responsibility 1]
-- [Specific responsibility 2]  
-- [Specific responsibility 3]
+## Core Responsibilities
+- [Primary responsibility 1 - specific to this project]
+- [Primary responsibility 2 - tailored to discovered needs]
+- [Primary responsibility 3 - context-aware objective]
 
-## Parallel Execution
-- Supports multiple instances on different work units
-- Clear ownership boundaries prevent conflicts
-- Coordinates through main thread only
+## Required Expertise
+- [Domain knowledge needed for this specific project]
+- [Technical skills relevant to discovered stack]
+- [Business understanding specific to this context]
+
+## Collaboration Framework
+- Reports to: Main thread (hiring manager)
+- Collaborates with: [Other specialists in this team]
+- Provides: [Specific deliverables for this project]
+- Requires: [What they need from other team members]
+
+## Success Criteria
+- [Measurable outcome 1 for this project]
+- [Measurable outcome 2 for this context]
+- [Measurable outcome 3 for this objective]
 ```
 
-## Parallel Execution Patterns
+## Team Composition Strategies
 
-### Multiple Instances
-```yaml
-Same Persona - Different Work:
-  architect-api-1: Works on user service
-  architect-api-2: Works on payment service
-  architect-api-3: Works on notification service
-  
-All instances:
-  - Run simultaneously
-  - Own exclusive domains
-  - Share cognitive approach
-```
+### Intelligent Team Sizing
 
-### Cross-Persona Collaboration
-```yaml
-Different Perspectives - Same Feature:
-  architect: Designs system structure
-  analytical: Optimizes performance
-  quality: Ensures reliability
-  domain: Validates requirements
-  
-All agents:
-  - Work in parallel
-  - Different focus areas
-  - Complementary outputs
-```
+**Based on project analysis:**
+- **Focused Teams** (5-15 specialists): Clear, well-defined projects
+- **Comprehensive Teams** (15-50 specialists): Complex, multi-domain projects  
+- **Enterprise Teams** (50+ specialists): Large-scale, mission-critical projects
 
-## Intelligence-Based Scaling
+### Role Distribution Patterns
 
-### Task-Based Agent Count
-```yaml
-Simple Task (1-2 agents):
-  - Primary persona for main work
-  - Optional quality validation
+**Intelligence determines optimal balance:**
+- **Core Implementation Team**: Specialists who build the solution
+- **Advisory Board**: Consultants who guide decisions
+- **Support Network**: Specialists who enable the core team
+- **Quality Assurance**: Specialists who ensure excellence
 
-Medium Task (3-6 agents):
-  - Multiple personas for different aspects
-  - Parallel instances where beneficial
+### Dynamic Team Assembly
 
-Complex Task (7-10 agents):
-  - Full persona coverage
-  - Multiple instances per persona
-  - Fine-grained work distribution
-```
+**Teams adapt to project needs:**
+- Start with analysis specialists to understand requirements
+- Add implementation specialists for discovered needs
+- Include advisory specialists for complex decisions
+- Deploy support specialists as needed
 
-### Work Distribution
-- Each agent gets DISTINCT work unit
-- No overlapping responsibilities
-- Clear file/module ownership
-- Parallel execution always
+## Team Effectiveness Framework
 
-## Project Examples
+### Context-Aware Specialization
+- Each specialist understands this project's unique context
+- Roles designed around actual challenges, not generic categories
+- Expertise aligned with discovered requirements
+- Success metrics tied to project-specific outcomes
 
-### Example: Web Application
-```yaml
-Discovery: Frontend, API, Database, Auth
-Generated Agents:
-  - architect-frontend: UI structure and components
-  - architect-backend: API design and services
-  - analytical-database: Query optimization
-  - quality-testing: Comprehensive validation
-```
+### Collaborative Intelligence
+- Specialists work together toward common project goals
+- Clear communication channels and collaboration protocols
+- Shared understanding of project context and objectives
+- Coordinated effort through intelligent orchestration
 
-### Example: Data Pipeline
-```yaml
-Discovery: Ingestion, Processing, ML, API
-Generated Agents:
-  - analytical-data: Data processing optimization
-  - analytical-ml: Model performance
-  - architect-pipeline: System integration
-  - quality-validation: Pipeline reliability
-```
+### Adaptive Organization
+- Team structure evolves with project needs
+- Specialists can be added or reassigned based on discoveries
+- Roles adapt as understanding deepens
+- Continuous optimization for maximum effectiveness
 
 ## Success Criteria
 
-✅ **Simple Personas**: 4 clear cognitive types  
-✅ **Parallel-Ready**: All agents support parallel execution
-✅ **Intelligence-Driven**: Discovery through analysis
-✅ **Clear Templates**: Simple, focused agent format
-✅ **Optimal Scaling**: 1-10 agents based on task needs
+✅ **Project-Specific**: Every team custom-built for that project's needs  
+✅ **Context-Aware**: Each specialist understands the business and technical context
+✅ **Role-Optimized**: Clear responsibilities and success metrics for each specialist
+✅ **Collaboration-Ready**: Team designed for effective cooperation
+✅ **Goal-Aligned**: All specialists working toward project success
 
 ## Integration
 
-- **Used by**: setup-command.md (creates agents)
-- **Referenced by**: workflow-command.md (invokes agents)
+- **Used by**: setup-command.md (intelligent hiring process)
+- **Referenced by**: workflow-command.md (team activation and coordination)

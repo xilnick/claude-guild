@@ -35,17 +35,12 @@ The Guild system uses **simple agent-based architecture**:
 ### **Current Structure**
 ```
 guideline/
-├── core/                    # Simple core modules  
-│   ├── workflow.md         ← Simple reasoning + parallel execution
-│   └── agents.md           ← Agent specialization patterns
+├── core/                    # Core intelligence modules  
+│   ├── workflow.md         ← Team orchestration and coordination patterns
+│   └── agents.md           ← Intelligent specialist creation patterns
 └── templates/               # Command templates
-    ├── setup-command.md    ← Agent creation and project analysis
-    ├── workflow-command.md ← Simple reasoning + agent invocation
-    ├── agent-command.md    ← Alternative workflow template
-    ├── agent-templates.md  ← Agent template patterns
-    ├── instructions-template.md ← Configuration template
-    ├── instructions-command.md ← Configuration management
-    └── ignore-command.md   ← Ignore pattern management
+    ├── setup-command.md    ← Project analysis and team building
+    └── workflow-command.md ← Team coordination and task execution
 ```
 
 ### **Simple Development Workflow**
@@ -81,27 +76,24 @@ guideline/
 ## System Responsibilities
 
 ### **install.js** (installation only):
-- Creates `.claude/commands/guild/` directory
-- Loads core modules and embeds them in command templates
-- Generates commands with embedded intelligence
-- **No configuration files** - commands are self-contained
+- Creates `.claude/commands/` directory structure
+- Loads core modules and embeds intelligence in command templates
+- Generates self-contained commands with embedded domain knowledge
+- **Pure intelligence-driven** - commands adapt through analysis, not configuration
 
 ### **Setup Command** (`/guild:setup`):
-- **Project Analysis**: Detect technologies, frameworks, and patterns
-- **Agent Creation**: Generate specialized agents in `.claude/agents/guild/`  
-- **Configuration**: Create `.guild/instructions.md` with project settings
-- **Intelligence**: Uses core agents module for specialization patterns
+- **Project Discovery**: Deep analysis of codebase, architecture, and technology patterns
+- **Intelligent Team Building**: Create custom specialists perfectly matched to project requirements  
+- **Configuration**: Generate optional `.guild/instructions.md` for team preferences
+- **Intelligence**: Uses core modules to build teams through pure project analysis
 
 ### **Workflow Command** (`/guild`):
-- **Reasoning Phase**: Understand task requirements (ultrathink/sequential)
-- **Agent Invocation**: Call appropriate specialized agents in parallel
-- **Result Integration**: Combine agent outputs into final solution
-- **Intelligence**: Uses core workflow module for execution patterns
+- **Task Analysis**: Deep understanding of requirements within project context (ultrathink/sequential)
+- **Team Coordination**: Intelligent selection and coordination of custom specialists
+- **Parallel Execution**: All specialists work simultaneously with intelligent coordination
+- **Intelligence**: Uses core workflow module for adaptive team orchestration patterns
 
-### **Management Commands** (`/guild:instructions`, `/guild:ignore`):
-- **Configuration Management**: Modify `.guild/instructions.md` settings
-- **Ignore Patterns**: Manage `.guild/ignore.md` file patterns
-- **Intelligence**: Simple configuration and pattern management
+
 
 ## Simple Execution Flow
 
@@ -109,34 +101,34 @@ guideline/
 ```
 User runs: /guild:setup
 ↓
-Setup analyzes project (technologies, patterns, structure)
+Deep project discovery (codebase patterns, architecture, domain requirements)
 ↓  
-Setup creates specialized agents based on detected patterns
+Build custom specialist teams perfectly matched to project characteristics
 ↓
-Setup creates .guild/instructions.md configuration
+Generate optional .guild/instructions.md for team preferences
 ```
 
 ### 2. Execution Phase  
 ```
 User runs: /guild "task description"
 ↓
-Workflow reasons about task (ultrathink/sequential)
+Task analysis within project context (ultrathink/sequential reasoning)
 ↓
-Workflow identifies which agents are needed
+Intelligent team selection based on task requirements and project characteristics
 ↓
-Workflow invokes agents in parallel
+Coordinated parallel execution with custom specialists
 ↓
-Agents execute with their specialized knowledge
+Specialists execute with project-specific domain expertise
 ↓
-Results are integrated and returned
+Results integrated and delivered with quality assurance
 ```
 
 ### 3. Benefits
-- **Clear Separation**: Setup creates, workflow executes
-- **Specialized Intelligence**: Agents contain domain expertise  
-- **Simple Coordination**: Minimal overhead, clear boundaries
-- **Fast Execution**: Direct agent invocation without orchestration
-- **Easy Maintenance**: Simple architecture is easy to understand and modify
+- **Intelligence-First Design**: Setup discovers and builds, workflow coordinates and executes
+- **Perfect Specialist Matching**: Every team member designed for your specific project needs  
+- **Adaptive Coordination**: Intelligent team coordination based on project characteristics
+- **Maximum Effectiveness**: Custom specialists vs generic assistance
+- **Effortless Evolution**: Teams adapt automatically as project requirements change
 
 ## Language & Technology Verification
 
