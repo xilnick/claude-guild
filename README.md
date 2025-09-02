@@ -390,15 +390,15 @@ Design Philosophy: "Optionality First"
 # .guild/instructions.md
 thinking_modes:
   guild-planning-agent:
-    thinking_mode: think  # Standard reasoning for strategic planning
+    thinking_mode: ultrathink  # Standard reasoning for strategic planning
     model: opus               # Premium model for complex planning
     
   main-thread-reasoning:
-    thinking_mode: think    # Enhanced analysis integrated in guild command
+    thinking_mode: ultrathink    # Enhanced analysis integrated in guild command
     model: sonnet               # Main thread uses selected model
     
   implementation_agents:
-    thinking_mode: think      # Standard efficiency for implementation
+    thinking_mode: ultrathink      # Standard efficiency for implementation
     model: sonnet            # Balanced model for execution
 ```
 

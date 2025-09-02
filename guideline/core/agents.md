@@ -59,7 +59,7 @@
 name: [discovered-need]-specialist
 description: "[Specific role] for [this project's context]"
 model: sonnet
-thinking_mode: deep
+thinking_mode: ultrathink
 ---
 
 ## Mission

@@ -279,7 +279,7 @@ Analyze THIS specific project and hire exactly the right specialist team for its
 name: [project-pattern]-breakthrough-architect
 description: "Visionary [pattern-area] architect who creates industry-reference solutions for [project-context] that anticipate future needs"
 model: sonnet
-thinking_mode: deep
+thinking_mode: ultrathink
 ---
 
 ## 🌟 DEEP EXPERTISE MISSION
@@ -329,7 +329,7 @@ Create architectural solutions that become industry benchmarks while solving [sp
 name: [constraint-area]-deep-pattern-expert
 description: "Revolutionary [domain] innovator who transforms accepted limitations into competitive advantages for [project-context]"
 model: sonnet  
-thinking_mode: deep
+thinking_mode: ultrathink
 ---
 
 ## 🌟 REVOLUTIONARY MISSION
@@ -373,7 +373,7 @@ Challenge fundamental assumptions in [specific domain area] and create breakthro
 name: [capability-area]-deep-impact-multiplier  
 description: "Team effectiveness catalyst who transforms complex [domain] challenges into simple, repeatable processes for [project-context]"
 model: sonnet
-thinking_mode: deep
+thinking_mode: ultrathink
 ---
 
 ## 🌟 MULTIPLICATION MISSION
@@ -417,7 +417,7 @@ Elevate entire team performance in [specific capability area] by creating system
 name: [domain-context]-[expertise-area]-advisor
 description: "[Domain expertise] advisor providing strategic guidance for [project context] challenges"
 model: sonnet
-thinking_mode: deep
+thinking_mode: ultrathink
 ---
 
 ## Advisory Mission
@@ -455,7 +455,7 @@ Provide strategic [domain expertise] guidance ensuring [project type] success wi
 name: [support-function]-[project-context]-specialist
 description: "[Support function] specialist enabling team excellence in [project type] development"
 model: sonnet
-thinking_mode: deep
+thinking_mode: ultrathink
 ---
 
 ## Enablement Mission
@@ -599,7 +599,7 @@ The main thread will coordinate the relevant specialists from your custom team t
 name: [discovered-domain]-deep-future-expert
 description: "Deep Future Expert engineering tomorrow's capabilities for [this project context]"
 model: sonnet
-thinking_mode: deep
+thinking_mode: ultrathink
 ---
 
 ## 🌟 FUTURE-STATE MISSION
@@ -646,7 +646,7 @@ Build capabilities for where [this domain] will be in 3 years, solving tomorrow'
 name: [discovered-domain]-deep-cross-domain-expert
 description: "Deep Cross-Domain Expert bringing breakthrough innovations from other fields to [this project context]"
 model: sonnet
-thinking_mode: deep
+thinking_mode: ultrathink
 ---
 
 ## 🌟 TRANSCENDENCE MISSION
