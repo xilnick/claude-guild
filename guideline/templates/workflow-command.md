@@ -43,50 +43,73 @@ When you receive a task (`$ARGUMENTS`), you MUST act as the project manager:
 - What expertise from the hired team would be most valuable?
 - What coordination will the specialists need to succeed?
 
-### Team Selection Phase
+### Intelligent Team Selection Phase
 
-**Identify relevant specialists from the project team:**
+**Identify optimal specialists from your custom project team:**
 
-From your **Implementation Specialists**:
-- Which technical experts can build what's needed?
-- Which integration specialists can connect required systems?
-- Which deployment specialists can handle delivery?
+**From CORE IMPLEMENTATION TEAM:**
+- **Architecture & Design Specialists**: Which system designers are needed for structural decisions?
+- **Technology Implementation Specialists**: Which framework experts match this task's technical requirements?
+- **Data & Performance Specialists**: Which optimization experts are needed for efficiency or scalability?
+- **Integration Specialists**: Which connectivity experts are required for system interactions?
 
-From your **Advisory Specialists**:  
-- Which domain consultants can guide decisions?
-- Which technical advisors can prevent pitfalls?
-- Which business experts can ensure alignment?
+**From STRATEGIC ADVISORY BOARD:**  
+- **Business & Domain Experts**: Which industry advisors provide strategic guidance for this task?
+- **Technical Strategy Advisors**: Which architecture experts guide high-level technical decisions?
+- **Compliance & Risk Advisors**: Which regulatory experts ensure proper risk management?
 
-From your **Support Specialists**:
-- Which research specialists can gather needed information?
-- Which testing specialists can ensure quality?
-- Which documentation specialists can capture decisions?
+**From SUPPORT & ENABLEMENT NETWORK:**
+- **Quality Assurance Specialists**: Which testing and validation experts ensure excellence?
+- **Process Optimization Specialists**: Which workflow experts improve execution efficiency?
+- **Documentation & Knowledge Specialists**: Which information experts capture and share learnings?
 
-From your **Specialized Consultants**:
-- Which unique experts are needed for this specific task?
-- Which niche specialists can solve unusual challenges?
+**From INNOVATION & RESEARCH SPECIALISTS**:
+- **Technology Scouts**: Which emerging tech experts evaluate cutting-edge solutions?
+- **Future-Proofing Specialists**: Which innovation experts ensure long-term viability?
+- **Research Specialists**: Which analysis experts gather critical information for decisions?
 
-### Coordination Strategy
+### Advanced Coordination Strategy
 
-**Plan how specialists will work together:**
+**Orchestrate intelligent specialist collaboration based on discovered team composition:**
 
-1. **Briefing Phase**
-   - Share task context with relevant specialists
-   - Ensure everyone understands project constraints and goals
-   - Clarify each specialist's role in this specific task
-   - Establish communication and coordination protocols
+#### **1. Contextual Briefing Phase**
+**Activate specialists with project-specific intelligence:**
+- **Project Context Distribution**: Share comprehensive project DNA with relevant specialists
+- **Task-Specific Objectives**: Clearly define how this task advances overall project goals  
+- **Specialist Role Clarification**: Ensure each specialist understands their specific contribution
+- **Collaboration Framework Activation**: Establish communication patterns optimized for your team structure
+- **Success Criteria Alignment**: Ensure all specialists understand measurable success indicators
 
-2. **Execution Phase**
-   - **Research Wave**: Research specialists gather information
-   - **Advisory Wave**: Advisory specialists provide guidance  
-   - **Implementation Wave**: Implementation specialists build solutions
-   - **Quality Wave**: Quality specialists validate results
+#### **2. Intelligent Execution Orchestration**
+**Coordinate specialists using discovered team patterns:**
 
-3. **Integration Phase**
-   - Collect outputs from all contributing specialists
-   - Resolve any conflicts or inconsistencies
-   - Synthesize into coherent solution
-   - Ensure alignment with project goals
+**Discovery & Analysis Wave:**
+- **Research Specialists**: Gather information specific to task requirements and project context
+- **Innovation Specialists**: Evaluate emerging solutions and competitive opportunities
+- **Advisory Specialists**: Provide strategic guidance based on business and technical context
+
+**Strategic Planning Wave:**
+- **Architecture Specialists**: Design technical approach aligned with overall system architecture
+- **Business Advisors**: Ensure approach aligns with business objectives and constraints
+- **Risk Assessment Specialists**: Identify and plan mitigation for potential challenges
+
+**Implementation Wave:**
+- **Core Implementation Team**: Execute technical work using project-optimized patterns
+- **Integration Specialists**: Ensure seamless connectivity with existing project systems
+- **Performance Specialists**: Optimize for discovered scalability and efficiency requirements
+
+**Quality Assurance Wave:**
+- **Testing Specialists**: Validate using project-specific quality standards
+- **Process Optimization Specialists**: Ensure approach enhances overall team effectiveness
+- **Documentation Specialists**: Capture knowledge using project's established patterns
+
+#### **3. Intelligent Results Integration**
+**Synthesize specialist contributions into project-optimized solutions:**
+- **Multi-Specialist Synthesis**: Combine technical implementations with strategic guidance
+- **Conflict Resolution**: Resolve inconsistencies using project priorities and constraints
+- **Quality Validation**: Ensure results meet discovered success criteria and standards
+- **Knowledge Integration**: Incorporate learnings into overall project knowledge base
+- **Stakeholder Communication**: Present unified results aligned with business context
 
 ## Task Execution Framework
 

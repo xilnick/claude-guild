@@ -43,7 +43,7 @@ function parseArgs() {
       case '--help':
       case '-h':
         console.log(`
-🏛️ Claude Guild - Research-Driven Workflow Enhancement for Claude Code
+🏛️ Claude Guild - Research & Intelligence-Driven Team Building System for Claude Code
 
 🚀 Quick Start:
   npx claude-guild                    # Interactive setup (recommended)
@@ -78,7 +78,7 @@ function parseArgs() {
 }
 
 async function askScope() {
-  intro('🏛️ Claude Guild Research-Enhanced Installation');
+  intro('🏛️ Claude Guild Research & Intelligence-Driven Installation');
   
   const scopeChoice = await select({
     message: 'Where would you like to install Claude Guild?',
@@ -373,7 +373,7 @@ async function install(cliOptions = null) {
       cleanInstall: options.clean
     };
     
-    console.log(`🏛️ Claude Guild - Research-Enhanced Automated Installation`);
+    console.log(`🏛️ Claude Guild - Research & Intelligence-Driven Automated Installation`);
     console.log(`🎯 Mode: Non-interactive (using defaults)`);
     console.log(`📍 Scope: ${options.scope === 'project' ? 'This Project Only' : options.scope === 'user' ? 'Global (Home Directory)' : options.scope}`);
     console.log(`📂 Location: ${targetDir}`);

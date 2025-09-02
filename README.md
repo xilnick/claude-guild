@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/claude-guild.svg)](https://www.npmjs.com/package/claude-guild)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Intelligence-driven team building system for Claude Code that discovers your project's needs and creates optimal specialist teams.**
+**Research & Intelligence-driven team building system for Claude Code that discovers your project's needs through deep analysis and creates optimal specialist teams.**
 
 > Transform any development task into systematic execution with custom-built specialist teams that adapt to your exact project requirements.
 
@@ -13,7 +13,7 @@ Claude Guild is an **intelligent team builder** for [Claude Code](https://claude
 
 ### Core Philosophy
 
-**Intelligence-First Team Building**: Claude discovers optimal solutions through analysis:
+**Research & Intelligence-First Team Building**: Claude discovers optimal solutions through deep analysis:
 - **🧠 Project Discovery**: Deep analysis of your codebase, patterns, and requirements
 - **👥 Custom Team Assembly**: Build specialist teams tailored to your project's unique needs
 - **🎯 Task-Specific Optimization**: Each task gets the perfect combination of specialists
@@ -154,7 +154,6 @@ discovery_priorities:
 
 # Setup and configuration  
 /guild:setup                    # Analyze project and create custom specialist teams
-/guild:setup --standalone       # Install domain-specific expert agents only
 
 # Workflow flags for specialized team approaches
 /guild --fix "issue description"    # Assemble debugging and analysis specialists
@@ -219,7 +218,7 @@ discovery_priorities:
 
 ### How It Works
 
-**Intelligence-First Team Building Process**:
+**Research & Intelligence-First Team Building Process**:
 1. **🧠 Project Discovery** - Claude analyzes your entire codebase, patterns, and architecture
 2. **👥 Specialist Creation** - Builds custom experts perfectly matched to your project needs
 3. **🎯 Task Analysis** - Understands requirements within context of your specific environment
@@ -362,8 +361,8 @@ project:
 | **API Design** | Specification Mode | `/guild --spec "design payment webhooks API"` |
 | **Major Refactoring** | Project-Wide Refactoring | `/guild --refactor --project "migrate to TypeScript"` |
 | **Complex API Development** | Spec-Driven Full Workflow | `/guild --spec --full "implement user management API"` |
-| **Security Assessment** | Standalone Specialist | `"Security audit of authentication system"` |
-| **Performance Optimization** | Standalone Specialist | `"Analyze and optimize API response times"` |
+| **Security Assessment** | Intelligence-Driven Analysis | `"Security audit of authentication system"` |
+| **Performance Optimization** | Intelligence-Driven Analysis | `"Analyze and optimize API response times"` |
 
 ## ⚙️ Advanced Customization
 
@@ -410,34 +409,33 @@ thinking_modes:
 
 ### Project-Specific Specialization
 
-**Technology Stack Configuration**:
+**Intelligence-Driven Discovery**:
 ```yaml
 # .guild/instructions.md
 project:
-  primary_stack: [react, typescript, node, postgresql]
-  frameworks: [next.js, tailwindcss, prisma]
-  testing: [jest, cypress, playwright]
-  deployment: [vercel, railway]
+  # Claude automatically discovers your technology stack through analysis
+  discovered_technologies: [dynamically identified]
+  patterns: [automatically detected]
+  integrations: [intelligently mapped]
   
 standards:
-  code_style: [prettier, eslint]
-  documentation: [jsdoc, storybook]
-  security: [owasp, snyk]
+  # Standards are discovered from your existing codebase
+  detected_conventions: [analyzed from code]
+  quality_patterns: [extracted from project]
+  best_practices: [inferred from usage]
 ```
 
-**Custom Agent Specialization**:
+**Dynamic Specialist Creation**:
 ```yaml
 # .guild/instructions.md  
-custom_agents:
-  - name: guild-analytics-engineer
-    role: "Analytics and tracking implementation"
-    specialization: "Google Analytics, Mixpanel, custom event tracking"
-    activation_keywords: [analytics, tracking, events, metrics]
-    
-  - name: guild-mobile-engineer  
-    role: "Mobile application development"
-    specialization: "Cross-platform mobile frameworks and native UI/UX patterns"
-    activation_keywords: [mobile, react-native, expo, ios, android]
+# Specialists are created based on discovered project needs
+discovered_specialists:
+  # Claude analyzes your project and creates custom specialists
+  # Each specialist is tailored to your specific requirements
+  # No hardcoded roles - everything is intelligence-driven
+  - created_based_on: "project analysis"
+  - specialized_for: "discovered patterns"
+  - optimized_for: "your specific needs"
 ```
 
 **Workflow Customization**:
@@ -564,174 +562,130 @@ Guild uses a **sophisticated dual-agent architecture** with clear separation of 
    - Each agent owns exclusive work domain
    - Results integrated by main thread
 
-## 📊 Standalone Agents - Instant Expertise
+## 🎯 Intelligence-Driven Team Building
 
-### Overview
+Guild creates **custom specialist teams** for every project through systematic analysis and discovery. No predefined agents - every specialist is engineered specifically for your project's unique requirements.
 
-**Self-Contained Specialists** that operate independently without the full Guild system while providing focused expertise in specific domains. Perfect for projects that need specific expert capabilities without workflow orchestration complexity.
+### How Intelligence-Driven Teams Work
 
-### Key Benefits
+**🧠 Project Discovery Process**:
+- **Technology Stack Analysis**: Identifies frameworks, libraries, and patterns in use
+- **Domain Requirements Discovery**: Understands your specific business logic and constraints  
+- **Architecture Pattern Recognition**: Maps your existing code structure and design patterns
+- **Challenge Identification**: Discovers bottlenecks, complexity areas, and optimization opportunities
 
-- **🚀 Zero Setup Complexity**: Single command installation with automatic activation
-- **🎯 Focused Expertise**: Deep domain knowledge in security, performance, accessibility, etc.
-- **🔄 Seamless Integration**: Works naturally with all standard Claude Code workflows
-- **⚡ Automatic Selection**: Right specialist chosen based on task keywords and context
-- **📋 Lightweight**: No configuration files or system overhead
+**👥 Custom Specialist Creation**: Research & Intelligence-driven team building creates specialists perfectly tailored to your project's unique needs.
 
-### Available Specialist Agents
+### Universal Project Intelligence Examples
 
-#### Security & Compliance
+**Example 1: E-commerce Project Discovery**
 ```bash
-# Automatically activates for security-related tasks
-"Review authentication implementation for vulnerabilities"
-# → security-analyst-agent provides:
-#   - OWASP Top 10 vulnerability assessment
-#   - Authentication/authorization security analysis  
-#   - Input validation and sanitization review
-#   - Security hardening recommendations with code examples
+/guild "implement product recommendation system"
+
+# Guild discovers through analysis:
+# - React/TypeScript frontend with Redux state management
+# - Node.js/Express backend with PostgreSQL database
+# - Existing user behavior tracking infrastructure
+# - Payment processing and inventory management systems
+
+# Creates custom specialist team:
+# - React+Redux specialist (optimized for your existing patterns)
+# - Node.js API specialist (familiar with your backend architecture)
+# - PostgreSQL performance engineer (tuned to your database patterns)
+# - E-commerce domain expert (understands recommendation algorithms)
+# - Integration specialist (connects with your existing payment/inventory)
 ```
 
-- **`security-analyst-agent`**: OWASP compliance, vulnerability assessment, penetration testing analysis
-- **`accessibility-auditor-agent`**: WCAG 2.1 AA compliance, ARIA implementation, screen reader compatibility
-
-#### Performance & Quality
+**Example 2: Healthcare Application Discovery**
 ```bash
-# Automatically activates for performance tasks  
-"Optimize slow database queries in user service"
-# → performance-engineer-agent provides:
-#   - Query execution plan analysis and optimization
-#   - Database indexing strategy recommendations
-#   - Caching layer implementation guidance
-#   - Performance monitoring setup with specific metrics
+/guild "add patient data export feature with HIPAA compliance"
+
+# Guild discovers through analysis:
+# - Vue.js frontend with HIPAA-compliant UI patterns
+# - Python/Django backend with medical data models
+# - Existing encryption and audit logging infrastructure
+# - Healthcare-specific regulatory requirements
+
+# Creates custom specialist team:
+# - Vue.js medical UI specialist (familiar with healthcare UX patterns)
+# - Django HIPAA compliance expert (knows your specific regulatory setup)
+# - Medical data architect (understands your patient data models)
+# - Security compliance auditor (validates against your HIPAA requirements)
+# - Export format engineer (creates secure, compliant data export workflows)
 ```
 
-- **`performance-engineer-agent`**: Performance profiling, database optimization, caching strategies, monitoring setup
-- **`code-reviewer-agent`**: Code quality analysis, refactoring recommendations, technical debt identification
-
-#### Documentation & Architecture  
+**Example 3: Financial Services Discovery**
 ```bash
-# Automatically activates for documentation tasks
-"Create comprehensive API documentation for payment endpoints"
-# → documentation-writer-agent provides:
-#   - OpenAPI/Swagger specification generation
-#   - Interactive API documentation with examples
-#   - Authentication and error handling documentation
-#   - SDK and integration guide creation
+/guild "optimize high-frequency trading algorithm performance"
+
+# Guild discovers through analysis:
+# - C++/Python hybrid architecture for performance-critical paths
+# - Real-time market data streaming infrastructure
+# - Existing risk management and compliance systems
+# - Low-latency networking and hardware optimizations
+
+# Creates custom specialist team:
+# - C++ performance engineer (expert in your algorithmic trading patterns)
+# - Python data scientist (familiar with your market analysis models)
+# - Low-latency systems architect (optimized for your hardware setup)
+# - Risk management specialist (integrates with your existing risk systems)
+# - Market data engineer (optimizes your specific data feeds and processing)
 ```
 
-- **`documentation-writer-agent`**: Technical documentation, API docs, user guides, README generation
-- **`api-architect-agent`**: REST/GraphQL API design, integration patterns, API security best practices
+### Intelligence vs. Hardcoded Approach
 
-#### Deployment & Operations
-```bash
-# Automatically activates for deployment tasks
-"Set up CI/CD pipeline for automated testing and deployment" 
-# → deployment-engineer-agent provides:
-#   - GitHub Actions/GitLab CI configuration
-#   - Multi-environment deployment strategy
-#   - Infrastructure as code setup (Terraform, CloudFormation)
-#   - Security scanning and quality gates integration
-```
+**Traditional Approach (Static)**:
+- Generic "security agent", "performance agent", "frontend agent"
+- Same specialists regardless of project needs
+- One-size-fits-all solutions that miss project-specific requirements
 
-- **`deployment-engineer-agent`**: CI/CD optimization, deployment strategies, infrastructure as code
-- **`monitoring-engineer-agent`**: Observability setup, logging strategies, alerting systems, metrics collection
+**Guild Intelligence Approach (Adaptive)**:
+- **Project Analysis**: "Your React app uses Context API, not Redux - specialist optimized for Context patterns"
+- **Domain Discovery**: "Your healthcare app needs HIPAA compliance - specialist includes medical regulatory expertise"  
+- **Architecture Matching**: "Your microservices use GraphQL federation - specialist understands your specific service mesh"
+- **Quality Alignment**: "Your team uses Playwright for testing - specialist creates tests in your established patterns"
 
-#### Specialized Engineering
-```bash
-# Automatically activates for database tasks
-"Design optimal database schema for e-commerce product catalog"
-# → database-optimizer-agent provides:
-#   - Normalized schema design with performance considerations
-#   - Indexing strategy for complex queries
-#   - Partitioning recommendations for scalability  
-#   - Query optimization with specific database engine tuning
-```
+### Benefits of Intelligence-Driven Teams
 
-- **`database-optimizer-agent`**: Query optimization, indexing strategies, schema design, performance monitoring
-- **`testing-strategist-agent`**: Test strategy development, automation frameworks, quality assurance processes
+✅ **Perfect Specialist Match**: Every expert built for your exact technology stack and business domain  
+✅ **Context-Aware Solutions**: Solutions that work with your existing architecture and constraints  
+✅ **Domain Expertise**: Specialists understand your business logic, not just generic programming  
+✅ **Evolutionary Adaptation**: Teams evolve as your project grows and requirements change  
+✅ **Maximum Efficiency**: No generic overhead - every specialist directly addresses your needs
 
-### Usage Patterns & Examples
+### Intelligence Scales to Your Project
 
-#### Automatic Activation Examples
+Guild's intelligence automatically adapts team composition and coordination to match your project's size and complexity.
 
-**Security Analysis**:
-```bash
-# Input: "Audit our user authentication system for security issues"
-# 
-# Automatic Processing:
-# 1. security-analyst-agent detects security keywords
-# 2. Performs OWASP-based vulnerability assessment
-# 3. Analyzes authentication flow for common security flaws
-# 4. Provides specific remediation steps with code examples
-# 5. Suggests security monitoring and incident response improvements
-```
+**🔍 Automatic Project Scaling**:
 
-**Performance Optimization**:
-```bash
-# Input: "API responses are slow, especially the user dashboard endpoint"
-#
-# Automatic Processing:  
-# 1. performance-engineer-agent detects performance keywords
-# 2. Analyzes API endpoint implementation and database queries
-# 3. Identifies bottlenecks in data fetching and processing
-# 4. Provides specific optimization strategies (caching, indexing, query optimization)
-# 5. Suggests performance monitoring and alerting setup
-```
+| Project Scale | Guild's Intelligence Response | Example Team Composition |
+|---------------|--|--------------------------|
+| **Simple Projects** | Creates focused, efficient teams | 2-3 specialists: Core developer + Quality assurance + Documentation |
+| **Medium Applications** | Balances breadth with depth | 5-8 specialists: Frontend + Backend + Database + Security + Testing |
+| **Complex Systems** | Full enterprise-grade teams | 10-15 specialists: Multiple domain experts + Architecture + DevOps + Compliance |
+| **Enterprise Platforms** | Comprehensive specialist ecosystems | 15+ specialists: Full technology stack coverage + Business domain experts |
 
-**Accessibility Compliance**:
-```bash
-# Input: "Ensure our checkout flow meets WCAG AA accessibility standards"
-#
-# Automatic Processing:
-# 1. accessibility-auditor-agent detects accessibility keywords  
-# 2. Reviews checkout flow components for WCAG 2.1 AA compliance
-# 3. Tests keyboard navigation and screen reader compatibility
-# 4. Provides specific ARIA implementation recommendations
-# 5. Suggests automated accessibility testing integration
-```
+**🎯 Task-Based Intelligence**:
 
-#### Integration with Standard Claude Code Commands
+| Task Complexity | Automatic Team Response | Specialist Selection |
+|-----------------|------------------------|---------------------|
+| **Single Feature** | Minimal, targeted team | Specialists directly relevant to the specific technology and business domain |
+| **System Integration** | Cross-domain coordination | Integration specialists + API experts + Data flow architects |
+| **Architecture Changes** | Strategic + Implementation | System architects + Technology specialists + Migration experts |
+| **Full Product Development** | Complete development lifecycle | Full-stack teams + Business analysts + Quality assurance + DevOps |
 
-Standalone agents enhance **any** Claude Code interaction:
+**🚀 Universal Benefit**: No configuration needed - Guild discovers your needs and creates the optimal team automatically.
 
-```bash
-# Standard development task with automatic security review
-"Implement user registration with email verification"
-# → Automatically engages security-analyst-agent for:
-#   - Input validation best practices
-#   - Password hashing and storage security
-#   - Email verification security patterns  
-#   - Rate limiting and abuse prevention
-
-# Standard refactoring with automatic performance analysis
-"Refactor the product search functionality for better maintainability"
-# → Automatically engages performance-engineer-agent for:
-#   - Search algorithm optimization analysis
-#   - Database query efficiency review
-#   - Caching strategy recommendations
-#   - Search result pagination optimization
-```
-
-### When to Choose Standalone vs Full Guild
-
-| Use Standalone Agents When | Use Full Guild System When |
-|----------------------------|----------------------------|
-| **Simple Projects**: Basic websites, prototypes, learning projects | **Complex Applications**: Multi-service architectures, enterprise applications |
-| **Specific Expertise Needed**: Security audit, performance optimization, accessibility compliance | **Comprehensive Development**: Full feature development with systematic workflows |
-| **Minimal Setup**: Want expert help without configuration overhead | **Team Coordination**: Multiple developers with consistent workflow needs |
-| **Focused Tasks**: Single-domain problems with clear specialist requirements | **Multi-Domain Projects**: Full-stack development requiring orchestrated specialists |
-| **Quick Assessments**: One-time audits, reviews, or optimizations | **Ongoing Development**: Continuous feature development with quality assurance |
+||
 
 ## 📦 Installation & Setup
 
 ### Quick Start (Recommended)
 
 ```bash
-# Full Guild System (comprehensive workflows)
+# Research & Intelligence-Driven Team Building System
 npx claude-guild@latest
-
-# Standalone Specialists (focused expertise) 
-npx claude-guild@latest --standalone
 ```
 
 ### Installation Process
@@ -742,11 +696,11 @@ npx claude-guild@latest --standalone
 3. **Configuration Setup**: Generates `.guild/` configuration with project-specific settings
 4. **Command Integration**: Installs workflow commands in `.claude/commands/` directory
 
-**Standalone Agents Installation**:
-1. **Specialist Selection**: Creates domain-specific agents (security, performance, accessibility, etc.)
-2. **Automatic Integration**: Integrates with existing Claude Code workflow seamlessly  
-3. **Zero Configuration**: No setup files or configuration required
-4. **Immediate Activation**: Ready to use with any standard Claude Code interaction
+**Intelligence-Driven Installation**:
+1. **Project Discovery**: Analyzes your codebase to understand technologies, patterns, and requirements
+2. **Custom Team Creation**: Builds specialists specifically tailored to your project's unique needs  
+3. **Smart Integration**: Integrates seamlessly with your existing development workflow
+4. **Immediate Intelligence**: Ready to create optimal teams for any task from day one
 
 ### Post-Installation Structure
 
@@ -776,19 +730,19 @@ your-project/
 └── CLAUDE.md              # Project instructions updated with Guild integration
 ```
 
-#### Standalone Agents System  
+#### Intelligence-Driven Specialist Creation
 ```
 your-project/
 ├── .claude/
-│   └── agents/
-│       ├── security-analyst-agent.md      # Security expertise
-│       ├── performance-engineer-agent.md  # Performance optimization  
-│       ├── accessibility-auditor-agent.md # Accessibility compliance
-│       ├── code-reviewer-agent.md         # Code quality analysis
-│       ├── documentation-writer-agent.md  # Technical documentation
-│       └── [other domain specialists]
+│   └── agents/guild/      # Custom specialists created through project discovery
+│       ├── react-typescript-architect.md     # Created for React+TS projects
+│       ├── nodejs-api-specialist.md          # Created for Node.js backends  
+│       ├── postgresql-performance-engineer.md # Created for PostgreSQL databases
+│       ├── healthcare-compliance-expert.md   # Created for HIPAA projects
+│       ├── ecommerce-integration-specialist.md # Created for payment systems
+│       └── [project-specific specialists discovered through analysis]
 │
-└── CLAUDE.md              # Project instructions updated for specialist integration
+└── CLAUDE.md              # Project instructions updated with discovered context
 ```
 
 ## 🛠️ Development & Contributing
@@ -998,11 +952,11 @@ npx claude-guild@latest
 ```
 *Complete workflow orchestration with specialized agents for your tech stack*
 
-### Standalone Specialists (Focused Expertise)  
+### Intelligence-Driven Project Discovery
 ```bash
-npx claude-guild@latest --standalone
+npx claude-guild@latest
 ```
-*Instant domain experts for security, performance, accessibility, and more*
+*Discovers your project's unique needs and creates the perfect specialist team*
 
 ---
 

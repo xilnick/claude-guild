@@ -124,7 +124,7 @@ Results integrated and delivered with quality assurance
 ```
 
 ### 3. Benefits
-- **Intelligence-First Design**: Setup discovers and builds, workflow coordinates and executes
+- **Research & Intelligence-First Design**: Setup discovers and builds, workflow coordinates and executes
 - **Perfect Specialist Matching**: Every team member designed for your specific project needs  
 - **Adaptive Coordination**: Intelligent team coordination based on project characteristics
 - **Maximum Effectiveness**: Custom specialists vs generic assistance
