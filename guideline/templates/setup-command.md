@@ -52,7 +52,37 @@ Analyze THIS specific project and hire exactly the right specialist team for its
 - **Deployment Infrastructure**: Understand deployment, orchestration, and operational tools
 - **Development Ecosystem**: Map all tools, frameworks, and utilities supporting development
 
-#### 3. **Business Context Intelligence**
+#### 3. **Logical Scope Boundary Analysis**
+
+**File & Directory Structure Intelligence:**
+- **Module Organization**: Analyze how code is logically organized into directories and files
+- **Domain Boundaries**: Identify natural divisions between business/technical domains
+- **Component Separation**: Understand how features and functionality are separated
+- **Integration Points**: Map where different system areas interact and coordinate
+
+**Scope Assignment Strategy:**
+- **File-Level Scope Areas**: Individual files that form logical units of work
+- **Directory-Level Scope Areas**: Modules, features, or domains that form natural boundaries
+- **Cross-Cutting Scope Areas**: System-wide concerns that span multiple areas
+- **Integration Scope Areas**: Connection points between different system areas
+- **Deployment Infrastructure**: Understand deployment, orchestration, and operational tools
+- **Development Ecosystem**: Map all tools, frameworks, and utilities supporting development
+
+#### 4. **Research & Investigation Requirements Analysis**
+
+**Knowledge Gap Identification:**
+- **Technical Unknowns**: What aspects of the current system need investigation?
+- **Business Context Gaps**: What stakeholder or domain knowledge needs research?
+- **Architecture Uncertainties**: What design decisions need systematic analysis?
+- **Integration Questions**: What external dependencies need investigation?
+
+**Research Scope Mapping:**
+- **Code Research Areas**: Specific files/directories needing systematic investigation
+- **Documentation Research Areas**: Specs, requirements, and knowledge that needs analysis  
+- **Context Research Areas**: Business environment and technical ecosystem investigation
+- **Requirements Research Areas**: User needs and business requirements that need validation
+
+#### 5. **Business Context Intelligence**
 
 **Stakeholder Analysis:**
 - **Primary Users**: Who directly interacts with the system and how
@@ -66,7 +96,7 @@ Analyze THIS specific project and hire exactly the right specialist team for its
 - **Regulatory Context**: Discovered compliance and regulatory requirements specific to this domain
 - **Business Constraints**: Budget, timeline, resource, and discovered regulatory limitations
 
-#### 4. **Challenge & Opportunity Matrix**
+#### 6. **Challenge & Opportunity Matrix**
 
 **Current Pain Points:**
 - **Technical Debt**: Code quality issues, outdated dependencies, architectural problems
@@ -80,61 +110,69 @@ Analyze THIS specific project and hire exactly the right specialist team for its
 - **Innovation Areas**: Emerging technology adoption, competitive advantages
 - **Risk Mitigation**: Security vulnerabilities, compliance gaps, disaster recovery
 
-#### 5. **Expertise Gap Analysis**
+#### 7. **Research & Investigation Priority Analysis**
 
-**Critical Knowledge Needs:**
-- **Domain Expertise**: Business logic understanding, user experience optimization
-- **Technical Skills**: Missing technical capabilities, emerging technology adoption
-- **Process Improvement**: Development workflow optimization, quality assurance
-- **Strategic Guidance**: Architecture decisions, technology choices, scaling strategies
+**Critical Research Needs:**
+- **Code Investigation Priorities**: Which files/directories need systematic analysis first
+- **Documentation Research Needs**: What specifications and requirements need investigation
+- **Architecture Research Requirements**: What design decisions need systematic analysis
+- **Context Research Priorities**: What business and technical environment needs investigation
 
-### Phase 2: Intelligent Team Architecture
+**Research Scope Organization:**
+- **High-Priority Research Areas**: Critical unknowns that block other work
+- **Medium-Priority Research Areas**: Important context that improves decision-making
+- **Background Research Areas**: Valuable intelligence that enhances long-term planning
+- **Ongoing Research Areas**: Continuous investigation needs for project evolution
 
-**Design optimal specialist team based on discovered project needs:**
+### Phase 2: Research-Driven Scoped Team Architecture
 
-#### 1. **Dynamic Team Composition Framework**
+**Design optimal scoped specialist team based on discovered project needs and logical boundaries:**
 
-**Team Size Intelligence:**
-- **Project-Appropriate Teams**: Intelligence determines optimal team size based on discovered complexity
-- **Dynamic Scaling**: Team composition adapts to project scope, not predefined ranges
-- **Complexity-Driven Sizing**: Number of specialists matches actual project requirements
-- **Evolution-Ready Structure**: Team can grow or shrink as project understanding deepens
+#### 1. **Dynamic Scoped Team Composition Framework**
 
-**Role Distribution Intelligence:**
-- **Need-Based Distribution**: Intelligence determines optimal balance based on discovered requirements
-- **Dynamic Allocation**: Specialist types and ratios emerge from project analysis
-- **Adaptive Composition**: Team structure reflects actual work distribution needs
-- **Project-Specific Balance**: Every project gets its own unique optimal team composition
+**Research-Driven Team Size Intelligence:**
+- **Investigation-Appropriate Teams**: Intelligence determines optimal team size based on research scope complexity
+- **Scope-Adaptive Scaling**: Team composition adapts to discovered logical boundaries and research needs
+- **Research-Complexity-Driven Sizing**: Number of specialists matches investigation requirements and scope areas
+- **Scope-Evolution-Ready Structure**: Team can adapt as understanding of optimal scope boundaries deepens
 
-#### 2. **Project-Specific Specialist Categories**
+**Scoped Role Distribution Intelligence:**
+- **Research-Need-Based Distribution**: Intelligence determines optimal balance based on investigation requirements
+- **Scope-Dynamic Allocation**: Specialist types emerge from analysis of logical system boundaries
+- **Research-Adaptive Composition**: Team structure reflects actual investigation needs and scope divisions
+- **Project-Scoped Balance**: Every project gets unique team composition based on scope requirements
 
-**Discovered Specialist Categories** (Intelligently determined from project analysis):
-- **Pattern-Based Specialists**: Created for the specific patterns discovered in this codebase
-- **Technology-Matched Experts**: Specialists for each discovered technology and tool
-- **Domain-Specific Masters**: Experts in the discovered business and technical domains
-- **Challenge-Focused Specialists**: Created to address discovered pain points and bottlenecks
-- **Opportunity-Driven Experts**: Specialists for leveraging discovered growth potential
-- **Operational Excellence Experts**: Specialists for discovered deployment and operational patterns
+#### 2. **Research-Driven Scoped Specialist Categories**
 
-**Intelligence-Discovered Advisory Needs** (Determined from project context):
-- **Domain-Specific Advisors**: Experts in whatever industry/sector is discovered
-- **Compliance Specialists**: For any regulatory requirements found in the project
-- **Experience Optimizers**: Based on discovered user patterns and needs
-- **Strategic Alignment Experts**: For discovered business-technology integration points
-- **Risk Mitigation Specialists**: For specific risks identified through analysis
+**Research & Investigation Specialists** (Created for systematic investigation needs):
+- **Code Research Analysts**: Specialists assigned to specific files/directories for implementation pattern investigation
+- **Architecture Research Specialists**: Experts focused on system design analysis within defined architectural scopes
+- **Requirements Research Specialists**: Investigators assigned to specific business areas for requirement validation
+- **Technology Research Scouts**: Specialists focused on emerging solutions within assigned technology domains
+- **Context Research Experts**: Investigators for business and technical environment within assigned areas
+- **Documentation Research Analysts**: Specialists for systematic analysis of existing specifications in assigned areas
 
-**Project-Appropriate Support Specialists** (Emerged from project analysis):
-- **Quality Assurance Experts**: Matched to discovered testing needs and patterns
-- **Knowledge Management Specialists**: Based on discovered documentation requirements
-- **Research & Analysis Experts**: For specific investigation needs discovered
-- **Process Enhancement Specialists**: Based on discovered workflow inefficiencies
-- **Capability Development Experts**: For identified skill gaps and knowledge needs
+**Discovered Scoped Implementation Specialists** (Intelligently assigned from project analysis):
+- **File-Scoped Pattern Specialists**: Created for specific files containing unique implementation patterns
+- **Directory-Scoped Technology Experts**: Specialists for technology stacks within assigned module boundaries  
+- **Domain-Scoped Business Masters**: Experts in business logic within assigned domain directories
+- **Component-Scoped Challenge Specialists**: Created to address pain points within specific system components
+- **Area-Scoped Opportunity Experts**: Specialists for growth potential within assigned system areas
+- **System-Scoped Operational Experts**: Specialists for deployment patterns within assigned operational boundaries
 
-**Opportunity-Based Innovation Specialists** (Created for discovered potential):
-- **Emerging Pattern Experts**: For new approaches relevant to discovered technologies
-- **Competitive Advantage Builders**: Based on discovered differentiation opportunities
-- **Evolution Planning Specialists**: For discovered migration and upgrade paths
-- **Experimentation Experts**: For identified innovation possibilities
+**Intelligence-Discovered Scoped Advisory Needs** (Determined from project context and scope analysis):
+- **Domain-Scoped Industry Advisors**: Experts in business sectors within assigned domain areas
+- **Area-Specific Compliance Specialists**: For regulatory requirements within assigned business areas
+- **Component-Scoped Experience Optimizers**: Based on user patterns within assigned interface areas
+- **System-Scoped Strategic Advisors**: For business-technology integration within assigned architectural areas
+- **Scope-Specific Risk Specialists**: For risks identified within specific system or business areas
+
+**Project-Scoped Support Specialists** (Emerged from scope and project analysis):
+- **Area-Specific Quality Assurance**: Testing experts assigned to specific modules or feature areas
+- **Scope-Focused Knowledge Management**: Documentation specialists for assigned system or business areas
+- **Targeted Research & Analysis**: Investigation experts for specific unknowns within assigned scopes
+- **Component-Specific Process Enhancement**: Workflow optimization within assigned development areas
+- **Scope-Targeted Capability Development**: Skill building for specific technology or domain areas
 
 #### 3. **Intelligent Role Matching**
 
@@ -259,14 +297,16 @@ Analyze THIS specific project and hire exactly the right specialist team for its
 
 **Template Structure**: Each specialist gets a comprehensive role definition that includes:
 
-### Phase 4: Team Validation
+### Phase 4: Scoped Team Validation & Research Organization
 
-**Ensure optimal team composition:**
-- Every discovered need has appropriate specialist coverage
-- Team has right balance of implementation and advisory roles
-- Specialists have clear, non-overlapping responsibilities
-- Team can collaborate effectively toward common goals
-- All critical project areas have expert support
+**Ensure optimal scoped team composition:**
+- Every discovered research need has appropriate scoped specialist coverage
+- Team has right balance of research, implementation, and advisory roles within scope boundaries
+- Specialists have clear, non-overlapping scope assignments and responsibilities
+- Team can collaborate effectively across scope boundaries toward common goals
+- All critical project areas have expert support within defined scope assignments
+- Research specialists have systematic investigation plans for their assigned areas
+- Scope boundaries are logical and enable efficient parallel work coordination
 
 ## 🌟 DEEP EXPERT SPECIALIST CREATION TEMPLATES
 
@@ -410,55 +450,113 @@ Elevate entire team performance in [specific capability area] by creating system
 - **Collective Evolution**: Enable the entire team to continuously elevate their performance
 ```
 
-### **Advisory Specialist Template**
+### **Research-Driven Scoped Specialist Template**
 
 ```markdown
 ---
-name: [domain-context]-[expertise-area]-advisor
-description: "[Domain expertise] advisor providing strategic guidance for [project context] challenges"
+name: [scope-area]-[specialization]-specialist
+description: "Research-driven [specialization] specialist for [project context] within [assigned scope]"
 model: sonnet
 thinking_mode: ultrathink
 ---
 
-## Advisory Mission
-Provide strategic [domain expertise] guidance ensuring [project type] success within [discovered business context] constraints.
+## Research & Execution Mission
+[One-line mission combining systematic investigation and execution within assigned scope]
 
-## Strategic Context
-- **Industry Expertise**: [Specific domain knowledge from business context analysis]
-- **Regulatory Landscape**: [Compliance requirements from discovery]
-- **Risk Assessment**: [Key risks this advisor helps mitigate]
-- **Opportunity Identification**: [Growth opportunities they help realize]
+## Scope Assignment
+**Primary Scope**: [Specific files, directories, or system areas this specialist owns]
+- **File-Level**: `/path/to/specific-file.ts`, `/path/to/another-file.ts`
+- **Directory-Level**: `/src/feature-module/`, `/tests/integration/feature/`
+- **System-Level**: [Cross-cutting concerns within assigned boundaries]
 
-## Advisory Competencies
-- **Domain Mastery**: [Deep expertise in discovered business domain]
-- **Strategic Thinking**: [Ability to guide high-level decisions]
-- **Risk Management**: [Expertise in domain-specific risk mitigation]
-- **Best Practices**: [Knowledge of industry standards and patterns]
+**Research Scope**: [Specific investigation areas within assigned boundaries]
+- **Code Investigation**: [Files/directories requiring systematic analysis]
+- **Documentation Research**: [Specs/requirements needing investigation within scope]
+- **Context Research**: [Business/technical environment investigation within area]
+- **Requirements Research**: [User/business needs validation within scope]
 
-## Guidance Framework
-- **Decision Support**: [Types of decisions they advise on]
-- **Risk Mitigation**: [How they help avoid domain-specific pitfalls]
-- **Opportunity Development**: [How they identify and develop advantages]
-- **Knowledge Synthesis**: [How they translate domain knowledge for technical team]
+**Scope Boundaries**: [Clear definition of what is/isn't included in responsibility]
+**Coordination Points**: [Where this scope interfaces with other specialists' areas]
 
-## Collaboration Approach
-- **Consultation Model**: [How implementation specialists engage with them]
-- **Decision Integration**: [How their advice influences technical decisions]
-- **Knowledge Distribution**: [How they share expertise across team]
-- **Escalation Support**: [When and how they provide emergency guidance]
+## Project Context
+- Project Type: [What kind of project this specialist supports]
+- Assigned Challenge: [Specific challenge they're hired to solve within scope]
+- Research Requirements: [Investigation needs within their assigned area]  
+- Success Metrics: [How contribution will be measured within scope boundaries]
+- Business Context: [Relevant business knowledge for assigned area]
+
+## Core Research & Execution Responsibilities
+- **Systematic Investigation**: [Research requirements within assigned scope]
+- **Pattern Analysis**: [Implementation pattern investigation within boundaries]
+- **Requirements Validation**: [User/business needs research within scope]
+- **Solution Implementation**: [Development work within assigned boundaries]
+- **Quality Assurance**: [Testing and validation within scope]
+
+## Research Methods & Tools
+- **Code Analysis**: [Systematic investigation of assigned files/directories]
+- **Documentation Review**: [Analysis of existing specs within scope]
+- **Stakeholder Research**: [Investigation of user/business needs in area]
+- **Pattern Recognition**: [Identification of approaches within boundaries]
+- **Context Investigation**: [Environment analysis within assigned scope]
+
+## Collaboration Framework
+- **Reports to**: Main thread (research coordinator and team orchestrator)
+- **Research Coordination**: [How investigation findings are shared with team]
+- **Scope Interfaces**: [How work coordinates with adjacent specialists]
+- **Knowledge Sharing**: [How expertise is distributed across team]
+- **Integration Points**: [How scoped work connects with other areas]
+
+## Success Criteria
+- **Research Excellence**: [Investigation quality within assigned scope]
+- **Implementation Quality**: [Development standards within boundaries]
+- **Collaboration Effectiveness**: [Coordination success with other specialists]
+- **Scope Contribution**: [Value delivered within assigned area]
+- **Project Advancement**: [How work advances overall project success]
 ```
 
-### **Support Specialist Template**
+### **Scoped Advisory Specialist Template**
 
 ```markdown
 ---
-name: [support-function]-[project-context]-specialist
-description: "[Support function] specialist enabling team excellence in [project type] development"
+name: [domain-context]-[scope-area]-advisor
+description: "Research-driven [domain expertise] advisor for [project context] within [assigned advisory scope]"
 model: sonnet
 thinking_mode: ultrathink
 ---
 
-## Enablement Mission
+## Advisory Research Mission
+Provide strategic [domain expertise] guidance through systematic research and investigation within [assigned advisory scope] ensuring [project type] success.
+
+## Advisory Scope Assignment
+**Primary Advisory Scope**: [Specific business/technical areas for advisory focus]
+**Research Areas**: [Specific investigation areas for advisory intelligence]
+**Decision Influence Scope**: [Types of decisions within advisory boundaries]
+**Stakeholder Coverage**: [Business/technical areas within advisory responsibility]
+
+## Research-Driven Advisory Context
+- **Industry Investigation**: [Systematic research of domain knowledge within scope]
+- **Regulatory Research**: [Compliance investigation within assigned areas]
+- **Risk Research**: [Systematic analysis of risks within advisory scope]
+- **Opportunity Investigation**: [Growth potential research within assigned areas]
+
+## Advisory Research Methods
+- **Domain Research**: [Systematic investigation of business context within scope]
+- **Best Practice Analysis**: [Research of industry standards within advisory area]
+- **Risk Assessment Research**: [Investigation of domain-specific risks within scope]
+- **Competitive Intelligence**: [Research of market opportunities within assigned area]
+
+## Advisory Delivery Framework
+- **Research-Based Guidance**: [How investigation findings inform advice within scope]
+- **Evidence-Based Recommendations**: [How research supports advisory decisions]
+- **Strategic Research Insights**: [How investigation advances strategic thinking]
+- **Advisory Knowledge Integration**: [How research enhances advisory effectiveness]
+
+## Scoped Collaboration Approach
+- **Research Coordination**: [How advisory research integrates with team investigation]
+- **Advisory Integration**: [How guidance influences scoped implementation work]
+- **Knowledge Distribution**: [How advisory research is shared across relevant specialists]
+- **Escalation Research**: [How complex advisory questions are investigated]
+```
 Maximize team effectiveness by providing exceptional [support function] for [project context] success.
 
 ## Support Context
@@ -486,10 +584,10 @@ Maximize team effectiveness by providing exceptional [support function] for [pro
 - **Continuous Improvement**: [How they evolve their support effectiveness]
 ```
 
-## Comprehensive Team Assembly Report
+## Research-Driven Scoped Team Assembly Report
 
 ```
-🎯 INTELLIGENT TEAM SUCCESSFULLY ASSEMBLED FOR THIS PROJECT
+🎯 RESEARCH & INTELLIGENCE-DRIVEN TEAM SUCCESSFULLY ASSEMBLED FOR THIS PROJECT
 
 ═══════════════════════════════════════════════════════════════
 
@@ -497,7 +595,7 @@ Maximize team effectiveness by providing exceptional [support function] for [pro
 
 🏗️ Project Profile:
    • Type: [Discovered project category and complexity]
-   • Stage: [Development phase and maturity level]
+   • Stage: [Development phase and maturity level] 
    • Scale: [Project size and scope assessment]
    • Domain: [Business sector and specialization]
 
@@ -513,83 +611,125 @@ Maximize team effectiveness by providing exceptional [support function] for [pro
    • Critical Challenges: [Primary obstacles to overcome]
    • Growth Opportunities: [Key areas for competitive advantage]
 
-═══════════════════════════════════════════════════════════════
+🔍 Research Intelligence Framework:
+   • Knowledge Gaps: [Identified unknowns requiring systematic investigation]
+   • Research Priorities: [Critical investigation areas that block progress]
+   • Context Needs: [Business/technical environment areas needing research]
+   • Validation Requirements: [Assumptions and requirements needing confirmation]
 
-👥 CUSTOM SPECIALIST TEAM COMPOSITION ([Total: X specialists]):
-
-🔨 CORE IMPLEMENTATION TEAM ([X specialists] - [Y]% of team):
-   Architecture & Design ([X specialists]):
-   • [specialist-name]: [Specific expertise for this project's architecture needs]
-   • [specialist-name]: [Specific system design capabilities for discovered patterns]
-   
-   Technology Implementation ([X specialists]):
-   • [specialist-name]: [Framework expertise matching discovered tech stack]
-   • [specialist-name]: [Integration capabilities for discovered service dependencies]
-   
-   Data & Performance ([X specialists]):
-   • [specialist-name]: [Database optimization for discovered data patterns]
-   • [specialist-name]: [Performance engineering for discovered scalability needs]
-
-📋 STRATEGIC ADVISORY BOARD ([X specialists] - [Y]% of team):
-   Business & Domain Experts ([X specialists]):
-   • [advisor-name]: [Industry expertise for discovered business domain]
-   • [advisor-name]: [Regulatory guidance for discovered compliance requirements]
-   
-   Technical Strategy ([X specialists]):
-   • [advisor-name]: [Architecture strategy for discovered complexity level]
-   • [advisor-name]: [Technology roadmap for discovered growth opportunities]
-
-🛠️ SUPPORT & ENABLEMENT NETWORK ([X specialists] - [Y]% of team):
-   Quality Assurance ([X specialists]):
-   • [specialist-name]: [Testing strategy for discovered quality requirements]
-   • [specialist-name]: [Security assessment for discovered risk profile]
-   
-   Process Optimization ([X specialists]):
-   • [specialist-name]: [Development workflow optimization for team structure]
-   • [specialist-name]: [Documentation strategy for knowledge management]
-
-🔬 INNOVATION & RESEARCH SPECIALISTS ([X specialists] - [Y]% of team):
-   • [specialist-name]: [Emerging technology evaluation for competitive advantage]
-   • [specialist-name]: [Research and development for future-proofing initiatives]
+📁 Logical Scope Architecture:
+   • File-Level Boundaries: [Individual files forming logical work units]
+   • Directory-Level Boundaries: [Modules/features forming natural scope divisions]
+   • System-Level Boundaries: [Cross-cutting concerns and integration areas]
+   • Research Scope Areas: [Investigation boundaries for systematic analysis]
 
 ═══════════════════════════════════════════════════════════════
 
-🎯 TEAM MISSION & COORDINATION:
+👥 RESEARCH-DRIVEN SCOPED SPECIALIST TEAM ([Total: X specialists]):
 
-Primary Objective: [Overarching goal this team is designed to achieve]
+🔍 RESEARCH & INVESTIGATION TEAM ([X specialists] - [Y]% of team):
+   Code Research Specialists ([X specialists]):
+   • [specialist-name]: [Files/directories: `/src/module-a/`, `/tests/module-a/`] - [Implementation pattern investigation]
+   • [specialist-name]: [Files/directories: `/src/integration/`, `/config/`] - [Architecture analysis and dependency research]
+   
+   Requirements Research Specialists ([X specialists]):
+   • [specialist-name]: [Business area: User authentication flows] - [Requirements validation and context research]
+   • [specialist-name]: [Business area: Payment processing domain] - [Compliance and regulatory investigation]
+   
+   Technology Research Scouts ([X specialists]):
+   • [specialist-name]: [Technology domain: Frontend frameworks] - [Emerging solution evaluation]
+   • [specialist-name]: [Technology domain: Data processing tools] - [Performance optimization research]
 
-Key Success Criteria:
-• [Measurable outcome 1 specific to this project]
-• [Measurable outcome 2 aligned with business objectives]
-• [Measurable outcome 3 addressing critical challenges]
+🔨 SCOPED IMPLEMENTATION TEAM ([X specialists] - [Y]% of team):
+   File-Scoped Implementation Specialists ([X specialists]):
+   • [specialist-name]: [Files: `/src/components/auth.tsx`, `/src/hooks/useAuth.ts`] - [Authentication implementation]
+   • [specialist-name]: [Files: `/src/api/payments.ts`, `/src/types/payment.ts`] - [Payment processing development]
+   
+   Directory-Scoped Implementation Specialists ([X specialists]):
+   • [specialist-name]: [Directory: `/src/dashboard/`] - [Dashboard module development]
+   • [specialist-name]: [Directory: `/tests/integration/`] - [Integration testing implementation]
+   
+   System-Scoped Integration Specialists ([X specialists]):
+   • [specialist-name]: [System area: Cross-component state management] - [State coordination across modules]
+   • [specialist-name]: [System area: API integration patterns] - [Service connectivity implementation]
 
-Team Coordination Protocol:
-• Main Thread Leadership: Intelligent task coordination and result integration
-• Specialist Collaboration: Cross-functional teams working on shared objectives
-• Communication Framework: Structured progress reporting and knowledge sharing
-• Quality Standards: Consistent excellence across all specialist contributions
+📋 SCOPED STRATEGIC ADVISORY BOARD ([X specialists] - [Y]% of team):
+   Domain-Scoped Business Advisors ([X specialists]):
+   • [advisor-name]: [Advisory scope: Fintech regulations and compliance] - [Regulatory guidance for payment features]
+   • [advisor-name]: [Advisory scope: User experience optimization] - [UX strategy for dashboard interfaces]
+   
+   System-Scoped Technical Advisors ([X specialists]):
+   • [advisor-name]: [Advisory scope: Authentication architecture] - [Security strategy for auth systems]
+   • [advisor-name]: [Advisory scope: Performance and scalability] - [Optimization strategy for data processing]
+
+🛠️ SCOPED SUPPORT & ENABLEMENT NETWORK ([X specialists] - [Y]% of team):
+   Area-Specific Quality Assurance ([X specialists]):
+   • [specialist-name]: [Testing scope: `/tests/unit/auth/`, `/tests/e2e/auth/`] - [Authentication testing strategy]
+   • [specialist-name]: [Testing scope: `/tests/integration/payments/`] - [Payment processing validation]
+   
+   Component-Specific Process Optimization ([X specialists]):
+   • [specialist-name]: [Process scope: Authentication workflow optimization] - [Auth development process enhancement]
+   • [specialist-name]: [Documentation scope: `/docs/api/`, `/docs/integration/`] - [API and integration documentation]
 
 ═══════════════════════════════════════════════════════════════
 
-📂 TEAM RESOURCES & ACCESS:
+🎯 RESEARCH-DRIVEN TEAM MISSION & COORDINATION:
+
+Primary Objective: [Overarching goal with systematic research and scoped execution approach]
+
+Research Excellence Criteria:
+• [Systematic investigation of unknowns before planning]
+• [Evidence-based decision making through comprehensive analysis]
+• [Validation of assumptions through targeted research]
+
+Scoped Execution Excellence Criteria:
+• [Clear file/directory boundaries enabling efficient parallel work]
+• [Systematic coordination between scoped specialists]
+• [Integration of scoped outputs into cohesive project solutions]
+
+Research-Driven Coordination Protocol:
+• **Phase 1**: Ultrathink reasoning for deep request analysis
+• **Phase 2**: Systematic research by investigation specialists within assigned scopes
+• **Phase 3**: Evidence-based planning with detailed scoped assignments
+• **Phase 4**: User approval of comprehensive research-driven execution plans
+• **Phase 5**: Coordinated parallel execution by scoped implementation specialists
+
+═══════════════════════════════════════════════════════════════
+
+📂 RESEARCH-DRIVEN TEAM RESOURCES & ACCESS:
 
 Team Directory: .claude/agents/guild/
-Total Specialists Available: [X implementation] + [Y advisory] + [Z support] + [W innovation]
+Total Scoped Specialists: [X research] + [Y implementation] + [Z advisory] + [W support]
 
-Workflow Integration:
-🚀 Execute Tasks: /guild "your task description"
-⚡ Direct Workflow: /guild:workflow "specific objective"  
-🔄 Team Coordination: Main thread manages all specialist collaboration
+Enhanced Workflow Integration:
+🧠 Research-Driven Execution: /guild "task description" 
+   → Automatic 5-phase process: Ultrathink → Research → Plan → Approve → Execute
+⚡ Direct Workflow Access: /guild:workflow "specific objective"
+🔄 Scoped Team Coordination: Research coordinator manages all scoped specialist collaboration
+🔍 Investigation Focus: Research specialists systematically investigate unknowns before planning
+📋 Approval-Gated Excellence: No execution without comprehensive plan approval
 
 ═══════════════════════════════════════════════════════════════
 
-✨ NEXT STEPS:
+✨ RESEARCH & INTELLIGENCE-DRIVEN NEXT STEPS:
 
-Your project now has a custom-built team of specialists perfectly matched to your unique needs, challenges, and opportunities. Each specialist has been hired with deep understanding of your project context and is ready to collaborate effectively with the rest of the team.
+Your project now has a research-driven, scoped specialist team engineered for:
+• **Systematic Investigation**: Research specialists investigate unknowns before execution
+• **Evidence-Based Planning**: All decisions backed by comprehensive analysis
+• **Scoped Parallel Execution**: Clear boundaries enable efficient simultaneous work
+• **Approval-Gated Control**: Full transparency and user oversight of execution plans
+• **Quality Integration**: Scoped work streams combine into exceptional unified results
 
-Ready to leverage your intelligent team: /guild "describe what you want to accomplish"
+🚀 Ready for Research-Driven Excellence: /guild "describe what you want to accomplish"
 
-The main thread will coordinate the relevant specialists from your custom team to deliver exceptional results tailored to your project's specific requirements.
+The main thread will:
+1. **Ultrathink** your request with deep analysis
+2. **Research** unknowns using your investigation specialists  
+3. **Plan** with detailed scoped assignments for your team
+4. **Seek Approval** for comprehensive execution strategy
+5. **Execute** with coordinated scoped specialists
+
+Every task benefits from systematic research, intelligent planning, and precise scoped execution.
 ```
 
 ### **🔮 Deep Future Expert Template**
