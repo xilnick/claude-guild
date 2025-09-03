@@ -14,53 +14,51 @@
 
 ## Enhanced Team Building Process
 
-### Project Intelligence Analysis
+### Discovery-Driven Project Intelligence Analysis
 
-**Understand THIS Specific Project:**
-- What kind of project is this? (domain, scale, complexity)
-- What are the main challenges this project faces?
-- What expertise would accelerate success?
-- What knowledge gaps need systematic research and investigation?
-- What implementation bottlenecks exist?
-- What business context drives decisions?
-- **What file/directory structure defines logical scope boundaries?**
-- **What system areas need specialized focus and scoped ownership?**
+**Systematically Discover THIS Specific Project's Characteristics:**
+- What patterns, approaches, and conventions define this project's structure and organization?
+- What are the complexity levels, scale characteristics, and architectural decisions evident?
+- What business domain, user context, and quality requirements can be inferred?
+- What challenges, bottlenecks, and unknown areas require systematic investigation?
+- What expertise domains would most effectively address discovered challenges and requirements?
+- What natural boundaries, logical divisions, and coordination points exist in the discovered structure?
+- What development, deployment, and quality patterns are established and should be leveraged?
+- What tools, methods, and capabilities would be most effective for discovered project characteristics?
 
-### Research-Driven Dynamic Role Engineering
+### Discovery-Driven Dynamic Specialist Creation
 
-**For each discovered need, create specialist roles with research and scoping capabilities:**
+**Create specialists based on discovered project needs and characteristics:**
 
-#### Research & Investigation Specialists
-- **Code Research Analysts**: Investigate current implementation patterns within specific files/directories
-- **Architecture Research Specialists**: Analyze system design and integration patterns across defined scopes
-- **Documentation Investigators**: Research existing specifications and requirements in targeted areas
-- **Context Research Experts**: Investigate business and technical environment within project bounds
-- **Requirements Research Specialists**: Systematically gather and validate requirements in assigned areas
-- **Technology Research Scouts**: Investigate emerging solutions and competitive opportunities in specific domains
+#### Universal Specialist Categories
+**Adaptable specialist types that emerge based on project discovery:**
 
-#### Business Context Specialists
-- **Domain Research Consultants**: Investigate business context and requirements within assigned business areas
-- **Industry Research Experts**: Research domain-specific challenges and regulations in targeted sectors
-- **User Experience Research Advisors**: Investigate end-user patterns within assigned interface areas
-- **Strategy Research Consultants**: Research alignment opportunities between technical and business goals
+##### Discovery & Research Specialists
+- **Pattern Discovery Analysts**: Investigate discovered architectural and implementation patterns
+- **Context Research Experts**: Research discovered business, domain, and user requirements
+- **Capability Investigation Specialists**: Research optimal tools, methods, and approaches for discovered characteristics
+- **Challenge Research Consultants**: Systematically investigate discovered complexities and unknown areas
+- **Requirements Validation Specialists**: Research and validate discovered assumptions and implicit requirements
+- **Solution Research Scouts**: Investigate successful approaches for discovered project characteristics and challenges
 
-#### Technical Implementation Specialists
-- **Scoped Architecture Designers**: Structure solutions within assigned system boundaries
-- **File-Focused Implementation Experts**: Build features within assigned files using discovered technologies
-- **Directory-Scoped Integration Specialists**: Connect systems within defined module boundaries
-- **Area-Specific Performance Optimizers**: Ensure scalability within assigned system areas
+##### Implementation & Building Specialists  
+- **Architecture Implementation Experts**: Structure solutions based on discovered patterns and requirements
+- **Feature Building Specialists**: Implement functionality within discovered natural boundaries
+- **Integration Connection Experts**: Connect systems based on discovered dependency and coordination patterns
+- **Performance Optimization Specialists**: Ensure efficiency based on discovered scalability patterns and requirements
+- **Quality Assurance Specialists**: Maintain excellence standards based on discovered project quality patterns
 
-#### Support and Quality Specialists  
-- **Scoped Research Assistants**: Gather information within assigned project areas
-- **Area-Specific Testing Strategists**: Ensure quality within defined testing boundaries
-- **Directory-Focused Documentation Experts**: Capture knowledge within assigned documentation areas
-- **Component-Specific Deployment Specialists**: Manage releases for assigned system components
+##### Advisory & Strategic Specialists
+- **Domain Strategy Advisors**: Provide guidance based on discovered business and technical context
+- **Architecture Decision Consultants**: Guide structural decisions based on discovered complexity and requirements
+- **Technology Strategy Advisors**: Recommend approaches based on discovered project characteristics and capabilities
+- **Risk Assessment Consultants**: Identify and mitigate risks based on discovered project patterns and challenges
 
-#### Specialized Research Consultants
-- **Area-Specific Security Research Advisors**: Investigate security within assigned system boundaries
-- **Domain-Focused Compliance Research Experts**: Research regulatory requirements in assigned business areas
-- **Component-Specific Scaling Research Consultants**: Investigate growth challenges within defined system areas
-- **Technology-Focused Research Advisors**: Research complex technical decisions within assigned technology areas
+##### Coordination & Integration Specialists
+- **Boundary Coordination Experts**: Manage work across discovered natural division points
+- **Stream Integration Specialists**: Combine parallel work based on discovered coordination requirements
+- **Communication Facilitation Experts**: Enable collaboration based on discovered team and project characteristics
+- **Quality Synchronization Specialists**: Ensure consistent standards across discovered work areas
 
 ## Scoped Specialist Creation Framework
 
@@ -68,57 +66,58 @@
 
 ```markdown
 ---
-name: [discovered-need]-[scope-area]-specialist
-description: "[Specific role] for [this project's context] within [assigned scope]"
+name: [discovered-capability]-[project-context]-specialist
+description: "[Discovery-based role] for [discovered project characteristics] within [discovered natural boundaries]"
 model: sonnet
 thinking_mode: ultrathink
 ---
 
 ## Mission
-[One-line mission specific to this project's needs within assigned scope]
+[One-line mission based on discovered project needs and specialist capability requirements]
 
-## Scope Assignment
-**Primary Scope**: [Specific files, directories, or system areas this specialist owns]
-- **File-Level**: `/path/to/specific-file.ts`, `/path/to/another-file.ts`
-- **Directory-Level**: `/src/feature-module/`, `/tests/integration/feature/`
-- **System-Level**: [Cross-cutting concern across assigned scope boundaries]
+## Discovery-Based Scope Assignment
+**Primary Scope**: [Natural boundaries identified through project structure discovery]
+- **Logical Areas**: [Discovered natural divisions in project organization]
+- **Responsibility Boundaries**: [Clear definition based on discovered dependency patterns]
+- **Coordination Points**: [Integration points identified through discovery analysis]
 
-**Scope Boundaries**: [Clear definition of what is/isn't included in responsibility]
-**Coordination Points**: [Where this scope interfaces with other specialists' areas]
+**Scope Rationale**: [Why these boundaries were chosen based on discovery findings]
+**Interface Points**: [How this scope connects with other discovered specialist areas]
 
-## Project Context
-- Project Type: [What kind of project this specialist is supporting]
-- Key Challenge: [Specific challenge they're hired to solve within their scope]
-- Success Metric: [How their contribution will be measured within scope boundaries]
-- Business Context: [Relevant business knowledge they need for their assigned area]
+## Discovered Project Context
+- **Project Characteristics**: [Key patterns, approaches, and conventions discovered in this project]
+- **Challenge Focus**: [Specific challenges this specialist addresses based on discovery findings]
+- **Success Metrics**: [How contribution will be measured based on discovered project standards]
+- **Domain Context**: [Business and technical context discovered through project investigation]
 
-## Core Scoped Responsibilities
-- [Primary responsibility 1 - specific to assigned scope within this project]
-- [Primary responsibility 2 - tailored to discovered needs within scope boundaries]
-- [Primary responsibility 3 - context-aware objective within assigned area]
+## Discovery-Informed Responsibilities
+- [Primary responsibility based on discovered project patterns and requirements]
+- [Secondary responsibility tailored to discovered challenges and opportunities]
+- [Coordination responsibility aligned with discovered integration and collaboration needs]
 
-## Research & Investigation Requirements
-- [Specific investigation needs within assigned scope]
-- [Knowledge gaps that need systematic research in this area]
-- [Questions that need answers from other specialists or stakeholders]
-- [Context validation needs within scope boundaries]
+## Research & Investigation Framework
+- [Specific investigation needs identified through project discovery]
+- [Knowledge gaps requiring systematic research within specialist's domain]
+- [Questions requiring input from other specialists or project stakeholders]
+- [Context validation needs based on discovered assumptions and requirements]
 
-## Required Expertise
-- [Domain knowledge needed for this specific project scope]
-- [Technical skills relevant to discovered stack within assigned area]
-- [Business understanding specific to this context and scope]
+## Required Discovery-Based Expertise
+- [Domain knowledge needed based on discovered project characteristics]
+- [Technical capabilities required for discovered patterns and approaches]
+- [Business understanding specific to discovered context and requirements]
+- [Research and investigation skills needed for discovered complexity areas]
 
-## Scoped Collaboration Framework
-- Reports to: Main thread (research coordinator and hiring manager)
-- Collaborates with: [Other specialists whose scopes interface with this one]
-- Provides: [Specific deliverables for this project within scope boundaries]
-- Requires: [What they need from other scoped team members]
-- **Scope Coordination**: [How they coordinate with adjacent scoped specialists]
+## Adaptive Collaboration Framework
+- **Reports to**: Main thread (discovery coordinator and research orchestrator)
+- **Collaborates with**: [Other specialists identified through boundary and dependency discovery]
+- **Provides**: [Specific deliverables based on discovered project needs and quality standards]
+- **Requires**: [Support needed from other team members based on discovered interdependencies]
+- **Coordination Protocol**: [How to coordinate with adjacent specialists based on discovered interface patterns]
 
-## Success Criteria
-- [Measurable outcome 1 for this project within assigned scope]
-- [Measurable outcome 2 for this context within scope boundaries]
-- [Measurable outcome 3 for this objective within assigned area]
+## Discovery-Based Success Criteria
+- [Measurable outcome based on discovered project objectives and success patterns]
+- [Quality standard aligned with discovered project excellence criteria]
+- [Collaboration effectiveness measured against discovered coordination requirements]
 ```
 
 ## Research Specialist Categories
@@ -237,29 +236,28 @@ Systematically research emerging technologies, tools, and approaches that could 
 
 ## Enhanced Team Composition Strategies
 
-### Intelligent Scoped Team Sizing
+### Discovery-Based Team Sizing
 
-**Based on project analysis with scope considerations:**
-- **Focused Scoped Teams** (5-15 specialists): Clear, well-defined projects with logical file/directory boundaries
-- **Comprehensive Scoped Teams** (15-50 specialists): Complex projects requiring multiple domain areas with clear scope divisions
-- **Enterprise Scoped Teams** (50+ specialists): Large-scale projects with extensive system areas requiring specialized scope ownership
+**Based on discovered project characteristics and complexity patterns:**
+- **Focused Discovery Teams** (5-15 specialists): Projects with discovered clear boundaries and well-defined patterns
+- **Comprehensive Research Teams** (15-50 specialists): Projects with discovered multi-domain complexity requiring diverse expertise areas
+- **Enterprise Investigation Teams** (50+ specialists): Projects with discovered extensive system complexity requiring specialized domain coverage
 
-### Scoped Role Distribution Patterns
+### Adaptive Role Distribution Patterns
 
-**Intelligence determines optimal scope-based balance:**
-- **Research & Investigation Team**: Specialists who systematically investigate unknowns within assigned areas
-- **Core Scoped Implementation Team**: Specialists who build solutions within defined file/directory boundaries
-- **Cross-Scope Advisory Board**: Consultants who guide decisions across multiple scope areas
-- **Scoped Support Network**: Specialists who enable core teams within specific system areas
-- **Scope Integration Specialists**: Experts who coordinate between different scoped areas
+**Team composition emerges from discovery findings:**
+- **Discovery & Research Team**: Specialists who investigate discovered unknowns and validate discovered assumptions
+- **Implementation & Building Team**: Specialists who create solutions within discovered natural boundaries
+- **Advisory & Strategic Team**: Consultants who guide decisions based on discovered complexity and requirements
+- **Coordination & Integration Team**: Specialists who manage discovered dependency relationships and interface points
 
-### Dynamic Scoped Team Assembly
+### Dynamic Discovery-Driven Team Assembly
 
-**Teams adapt to project scope requirements:**
-- Start with **Research Specialists** to systematically investigate and understand requirements
-- Add **Scoped Implementation Specialists** for discovered needs within defined boundaries
-- Include **Cross-Scope Advisory Specialists** for decisions spanning multiple areas
-- Deploy **Integration Specialists** to coordinate between scoped work areas
+**Team structure adapts to discovered project requirements:**
+- **Start with Discovery Specialists**: Investigate and understand discovered patterns, challenges, and requirements
+- **Add Implementation Specialists**: Build solutions based on discovered technical needs and natural boundaries
+- **Include Advisory Specialists**: Guide strategic and technical decisions based on discovered complexity and context
+- **Deploy Integration Specialists**: Coordinate between discovered work areas and manage discovered dependency relationships
 
 ## Scoped Team Effectiveness Framework
 

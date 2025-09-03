@@ -61,134 +61,128 @@ ULTRATHINK ANALYSIS FRAMEWORK
 
 ---
 
-### 🔍 **PHASE 2: RESEARCH & QUESTION FRAMEWORK** 
+### 🔍 **PHASE 2: DISCOVERY & RESEARCH INTELLIGENCE FRAMEWORK** 
 
-**Systematic investigation of unknowns BEFORE any planning:**
+**Systematic project discovery and evidence-based research BEFORE any planning:**
 
-#### Knowledge Gap Analysis
+#### Phase 2A: Systematic Project Discovery
 ```markdown
-## Investigation Requirements
+## Discovery Intelligence Requirements
 
-### Technical Unknowns
-- **Code Analysis Needed**: What current implementation patterns need understanding?
-- **Architecture Questions**: What system design decisions need investigation?
-- **Integration Concerns**: What service dependencies need analysis?
-- **Performance Implications**: What scalability factors need research?
+### Architecture & Pattern Discovery
+- **Structure Investigation**: What patterns exist in this project's organization and architecture?
+- **Convention Analysis**: What approaches and standards are already established?
+- **Complexity Assessment**: What complexity levels and relationship patterns are present?
+- **Dependency Mapping**: What integration points and dependencies are evident?
 
-### Business Context Gaps
-- **Stakeholder Impact**: What business implications need understanding?
-- **Regulatory Considerations**: What compliance factors need investigation?
-- **User Experience Effects**: What end-user implications need analysis?
-- **Timeline Constraints**: What scheduling factors need clarification?
+### Context & Domain Discovery
+- **Business Context Investigation**: What domain and business requirements can be inferred?
+- **Quality Pattern Analysis**: What standards and performance characteristics are established?
+- **User Context Research**: What user and stakeholder implications can be discovered?
+- **Constraint Identification**: What limitations and requirements are implicit in the project?
 
-### Project State Uncertainties
-- **Current System Behavior**: What existing functionality needs analysis?
-- **Resource Availability**: What team capacity limitations need validation?
-- **Technical Debt Factors**: What legacy concerns need investigation?
-- **Quality Standards**: What excellence criteria need clarification?
+### Capability & Method Discovery
+- **Tool Availability Research**: What investigation and development capabilities are available?
+- **Method Optimization Analysis**: What approaches would be most effective for discovered patterns?
+- **Knowledge Gap Identification**: What areas require systematic investigation and research?
+- **Expertise Requirements Discovery**: What specialist capabilities would address discovered challenges?
 ```
 
-#### Research Orchestration
-**Deploy research specialists to investigate specific unknowns:**
-- **Code Research Specialists**: Analyze current implementation patterns
-- **Documentation Analysts**: Review existing specifications and requirements  
-- **Context Investigators**: Understand business and technical environment
-- **Architecture Analysts**: Examine system design and integration patterns
+#### Phase 2B: Intelligence-Driven Research Strategy
+**Deploy discovery specialists to systematically investigate unknowns:**
+- **Pattern Research Analysts**: Study discovered approaches for effectiveness and optimization opportunities
+- **Context Research Experts**: Investigate business, domain, and stakeholder considerations for discovered patterns
+- **Method Research Specialists**: Research optimal tools, approaches, and strategies for discovered characteristics  
+- **Challenge Research Consultants**: Systematically investigate discovered complexities and unknown areas
 
-#### User Clarification Protocol
-**When uncertainties require user input, ask strategic questions:**
+#### Phase 2C: Intelligent Question Generation Protocol
+**Generate context-aware questions based on discovery findings:**
 ```markdown
-## Clarification Question Framework
+## Discovery-Based Question Framework
 
-### Context Questions
-"Given your project's [discovered context], I want to ensure optimal approach..."
+### Pattern-Based Questions
+"Investigation reveals [discovered pattern X]. Should the approach emphasize [discovered aspect A] or [discovered aspect B] for optimal results?"
 
-### Constraint Questions  
-"Are there any limitations on [specific area] that should influence our strategy?"
+### Context-Driven Questions  
+"Based on discovered [project characteristic Y], what priority should be placed on [discovered consideration A] vs [discovered consideration B]?"
 
-### Priority Questions
-"How important is [specific aspect] compared to [alternative consideration]?"
+### Capability-Focused Questions
+"Discovery shows [available capability Z]. How should this influence the approach to [discovered challenge/opportunity]?"
 
-### Success Questions
-"What would you consider exceptional success for this particular task?"
+### Strategic Questions
+"Research indicates [discovered complexity/context]. What would you consider exceptional success given [discovered constraints/requirements]?"
 ```
 
-**🚨 MANDATORY OUTPUT**: Present research findings and any user clarification questions.
+**🚨 MANDATORY OUTPUT**: Present comprehensive discovery findings and any intelligent user clarification questions.
 
 ---
 
-### 📋 **PHASE 3: SCOPED PLANNING & AGENT ASSIGNMENT**
+### 📋 **PHASE 3: DISCOVERY-DRIVEN PLANNING & SPECIALIST ASSIGNMENT**
 
-**Design comprehensive execution strategy with specific scope assignments:**
+**Design execution strategy based on discovery findings and research intelligence:**
 
-#### Intelligent Agent Selection
-**From your project's custom specialist team, identify optimal participants:**
+#### Discovery-Based Specialist Selection
+**From discovered project requirements, identify optimal specialist capabilities:**
 ```markdown
-## Agent Selection Framework
+## Discovery-Informed Specialist Framework
 
-### Core Implementation Specialists
-- **Architecture & Design**: [Specific specialists for structural decisions]
-- **Technology Implementation**: [Framework experts matching technical requirements]
-- **Data & Performance**: [Optimization specialists for efficiency needs]
-- **Integration**: [Connectivity experts for system interactions]
+### Core Capability Categories (Adapt based on discovery findings)
+- **Discovery & Research Specialists**: [Capabilities needed for investigating discovered unknowns]
+- **Implementation & Building Specialists**: [Expertise needed for discovered technical requirements]
+- **Advisory & Strategic Specialists**: [Guidance capabilities needed for discovered complexity]
+- **Integration & Coordination Specialists**: [Coordination expertise needed for discovered dependency patterns]
 
-### Strategic Advisory Board
-- **Business & Domain**: [Industry advisors for strategic guidance]
-- **Technical Strategy**: [Architecture experts for high-level decisions]
-- **Compliance & Risk**: [Regulatory experts for risk management]
-
-### Support & Enablement Network
-- **Quality Assurance**: [Testing and validation experts]
-- **Process Optimization**: [Workflow efficiency experts]
-- **Documentation**: [Knowledge capture specialists]
-
-### Innovation & Research Specialists
-- **Technology Scouts**: [Emerging tech evaluation experts]
-- **Research Analysts**: [Information gathering specialists]
+### Discovery-Based Specialist Selection Process
+1. **Analyze Discovered Requirements**: What specialist capabilities do discovered project characteristics require?
+2. **Match Expertise to Findings**: Which specialist types would most effectively address discovered challenges?
+3. **Consider Discovery Complexity**: What level and diversity of expertise is needed for discovered scope?
+4. **Plan Specialist Coordination**: How should specialists collaborate based on discovered integration patterns?
 ```
 
-#### Scoped Assignment Strategy
-**Assign specific files, directories, or system areas to each agent:**
+#### Natural Boundary Assignment Strategy
+**Assign responsibilities based on discovered project structure and dependencies:**
 ```markdown
-## Scope Assignment Framework
+## Discovery-Based Scope Framework
 
-### File-Level Assignments
-- **Agent A**: `/src/specific-module/file1.ts`, `/src/specific-module/file2.ts`
-- **Agent B**: `/tests/integration/specific-test.ts`
-- **Agent C**: `/docs/specific-section/`
+### Natural Boundary Identification
+- **Logical Divisions**: [Areas identified through project structure discovery]
+- **Dependency Boundaries**: [Natural separation points identified through dependency analysis]
+- **Functional Groupings**: [Related capability areas identified through pattern discovery]
 
-### Directory-Level Assignments  
-- **Agent D**: `/src/feature-area/` (entire module ownership)
-- **Agent E**: `/config/deployment/` (configuration management)
-- **Agent F**: `/scripts/automation/` (tooling and automation)
+### Discovery-Informed Assignment Process
+1. **Map Discovered Boundaries**: Identify natural scope divisions based on project structure discovery
+2. **Analyze Discovered Dependencies**: Understand coordination requirements based on dependency discovery
+3. **Assign Based on Natural Fit**: Match specialist capabilities to discovered boundary characteristics
+4. **Plan Boundary Coordination**: Design collaboration protocols based on discovered interface patterns
 
-### System-Level Assignments
-- **Agent G**: Cross-cutting security concerns across all modified files
-- **Agent H**: Performance optimization across all affected components
-- **Agent I**: Documentation updates for all changes
+### Adaptive Scope Examples (Emerge from discovery)
+- **Specialist A**: [Natural boundary area A based on discovery findings]
+- **Specialist B**: [Natural boundary area B based on discovery findings]
+- **Specialist C**: [Cross-cutting concern C based on discovered integration patterns]
 ```
 
-#### Parallel Coordination Design
+#### Discovery-Based Parallel Coordination Design
 ```markdown
-## Coordination Strategy
+## Intelligence-Driven Coordination Strategy
 
-### Independent Work Streams
-- **Stream 1**: Frontend components (Agents A, B, C)
-- **Stream 2**: Backend services (Agents D, E, F)  
-- **Stream 3**: Infrastructure & tooling (Agents G, H, I)
+### Discovery-Based Work Stream Organization
+- **Independent Streams**: [Areas that can work in parallel based on discovered dependencies]
+- **Sequential Requirements**: [Dependencies requiring coordination based on discovery analysis]
+- **Integration Points**: [Critical coordination areas based on discovered interface patterns]
 
-### Dependency Management
-- **Sequential Dependencies**: Backend schema changes before frontend updates
-- **Parallel Opportunities**: UI and API can proceed simultaneously after schema
-- **Integration Points**: Where streams must coordinate (shared interfaces)
+### Adaptive Coordination Protocol
+1. **Leverage Discovery Findings**: Use discovered dependency patterns to optimize parallel execution
+2. **Design Natural Coordination**: Create protocols that align with discovered project characteristics
+3. **Plan Integration Strategy**: Coordinate based on discovered interface and dependency requirements
+4. **Optimize Communication**: Design collaboration approaches suited to discovered team and project patterns
 
-### Communication Protocols
-- **Inter-Agent Consultation**: How agents coordinate overlapping concerns
-- **Progress Synchronization**: Regular alignment on shared interfaces
-- **Conflict Resolution**: Protocols for handling scope boundary issues
+### Discovery-Informed Communication Framework
+- **Coordination Approach**: [Protocol designed for discovered complexity and team characteristics]
+- **Progress Tracking**: [Monitoring strategy optimized for discovered work stream patterns]  
+- **Integration Management**: [Coordination approach based on discovered dependency relationships]
 ```
 
-**🚨 MANDATORY OUTPUT**: Comprehensive execution plan with detailed scope assignments.
+**🚨 MANDATORY OUTPUT**: Comprehensive execution plan with discovery-based specialist assignments and natural boundary coordination.
 
 ---
 
@@ -201,26 +195,26 @@ ULTRATHINK ANALYSIS FRAMEWORK
 # 🎯 EXECUTION PLAN PRESENTATION
 
 ## Executive Summary
-**Primary Objective**: [Clear statement of what will be accomplished]
-**Approach**: [High-level strategy and methodology]
-**Timeline**: [Expected duration and major milestones]
-**Success Criteria**: [How success will be measured]
+**Primary Objective**: [Clear statement based on discovery analysis and research findings]
+**Discovery-Informed Approach**: [Strategy based on discovered project patterns and characteristics]
+**Timeline**: [Duration and milestones based on discovered complexity and requirements]
+**Success Criteria**: [Measurement approach aligned with discovered project standards and objectives]
 
-## 👥 Scoped Team Assignment
+## 👥 Discovery-Based Team Assignment
 
-### Core Implementation Team
-- **[Agent Name]**: [Specific files/directories] - [Primary responsibility]
-- **[Agent Name]**: [Specific files/directories] - [Primary responsibility]
-- **[Agent Name]**: [Specific files/directories] - [Primary responsibility]
+### Discovery-Driven Specialist Team
+- **[Specialist Role]**: [Natural boundary area based on discovery] - [Capability responsibility based on findings]
+- **[Specialist Role]**: [Natural boundary area based on discovery] - [Capability responsibility based on findings]
+- **[Specialist Role]**: [Natural boundary area based on discovery] - [Capability responsibility based on findings]
 
-### Advisory & Support Team
-- **[Agent Name]**: [System area/concern] - [Advisory responsibility]
-- **[Agent Name]**: [Quality/process area] - [Support responsibility]
+### Advisory & Research Support Team
+- **[Advisory Specialist]**: [Strategic area based on discovered complexity] - [Guidance responsibility]
+- **[Research Specialist]**: [Investigation area based on discovered unknowns] - [Research responsibility]
 
-### Coordination Framework
-- **Parallel Streams**: [How simultaneous work will be managed]
-- **Integration Points**: [Where coordination is critical]
-- **Quality Assurance**: [How excellence will be maintained]
+### Discovery-Based Coordination Framework
+- **Parallel Execution**: [Simultaneous work strategy based on discovered dependency patterns]
+- **Integration Strategy**: [Coordination approach based on discovered interface requirements]
+- **Quality Framework**: [Excellence approach aligned with discovered project standards]
 
 ## 🚀 Execution Strategy
 

@@ -46,66 +46,130 @@
 - **Stakeholder Value**: How this advances overall project objectives
 ```
 
-### Phase 2: Research & Question Framework 🔍
+### Phase 2: Discovery & Research Intelligence 🔍
 
-**Systematic Investigation** (Before any planning):
-- **Knowledge Gap Identification**: What do we need to know that we don't?
-- **Assumption Validation**: Are our current understanding accurate?
-- **Context Research**: What additional project context is needed?
-- **User Clarification**: What questions need answers from the user?
+**Discovery-Driven Investigation** (Before any planning):
+- **Project Pattern Discovery**: What approaches and conventions exist in this project?
+- **Context Discovery**: What business, technical, and quality factors apply?
+- **Capability Discovery**: What tools and methods are available/optimal?
+- **Challenge Discovery**: What complexities and unknowns need systematic research?
 
-**Research Orchestration Patterns**:
+**Discovery & Research Framework**:
 ```markdown
-## Research & Investigation Framework
+## Enhanced Discovery & Research Intelligence Framework
 
-### Knowledge Gap Analysis
-- **Technical Unknowns**: What technical details need investigation?
-- **Business Context Gaps**: What stakeholder or domain knowledge is missing?
-- **Project State Uncertainties**: What current system behavior is unclear?
-- **Resource Availability Questions**: What team capacity or capability limitations exist?
+### Phase 2A: Systematic Project Discovery
+**Investigate project characteristics before making assumptions:**
 
-### Investigation Strategy
-- **Code Research Specialists**: Investigate current implementation patterns
-- **Documentation Analysts**: Review existing specifications and requirements
-- **Context Investigators**: Understand business and technical environment
-- **User Engagement**: Prepare clarifying questions for stakeholder input
+1. **Architecture Discovery**
+   - What patterns exist in this project's structure and organization?
+   - What conventions and approaches are already established?
+   - What complexity levels and relationships are present?
+   - What dependencies and integrations are evident?
 
-### Question Formulation
-- **Clarification Questions**: "To ensure I understand correctly..."
-- **Context Questions**: "Given your project's..."
-- **Constraint Questions**: "Are there any limitations on..."
-- **Priority Questions**: "How important is... compared to..."
+2. **Context Discovery** 
+   - What domain and business context can be inferred from the project?
+   - What constraints and requirements are implicit in the codebase?
+   - What quality and performance patterns are established?
+   - What development and deployment approaches are currently used?
+
+3. **Capability Discovery**
+   - What investigation tools and methods are available for this project type?
+   - What research approaches would be most effective for discovered patterns?
+   - What knowledge gaps require systematic investigation?
+   - What expertise areas would be most valuable to research?
+
+### Phase 2B: Intelligence-Driven Research Strategy
+**Research methodology that adapts to discovered project characteristics:**
+
+1. **Pattern Research**
+   - Study discovered approaches for effectiveness and best practices
+   - Research similar projects and successful implementation strategies
+   - Investigate domain-specific considerations for discovered patterns
+   - Research optimal methods for discovered architectural characteristics
+
+2. **Context Research** 
+   - Investigate business domain implications and requirements
+   - Research user and stakeholder considerations for discovered context
+   - Study regulatory and compliance factors for discovered domain
+   - Research timeline and resource considerations for discovered complexity
+
+3. **Method Research**
+   - Research optimal investigation and implementation approaches for discovered patterns
+   - Study available tools and capabilities for discovered project characteristics
+   - Research best practices for discovered technology and domain combinations
+   - Investigate successful coordination strategies for discovered complexity levels
+
+### Phase 2C: Intelligent Question Generation
+**Questions emerge from discoveries, not generic templates:**
+
+Instead of template questions, generate intelligent inquiries:
+- "Based on discovered patterns [X, Y, Z], should the approach focus on [discovered priority A] or [discovered priority B]?"
+- "Investigation shows [discovered constraint/characteristic]. How should this influence [discovered opportunity/trade-off]?"
+- "Research reveals [discovered complexity/pattern]. What's the priority between [discovered option A] and [discovered option B]?"
+- "Discovery indicates [discovered context]. Should [discovered approach A] or [discovered approach B] be emphasized for this task?"
 ```
 
-### Phase 3: Scoped Planning & Agent Assignment 📋
+### Phase 3: Discovery-Driven Planning & Specialist Assignment 📋
 
-**Intelligent Execution Design** (After research completion):
-- **Agent Selection**: Which specialists from the project team should participate?
-- **Scope Assignment**: Specific files, directories, or system areas for each agent
-- **Parallel Optimization**: How to maximize efficiency through intelligent coordination
-- **Integration Planning**: How scoped work will combine into cohesive solutions
+**Intelligence-Based Execution Design** (After discovery and research completion):
+- **Capability-Based Team Design**: What specialists does this project's discovered characteristics require?
+- **Evidence-Based Scope Assignment**: Natural boundaries based on discovered project structure
+- **Research-Informed Coordination**: Parallel strategy based on discovered dependencies and patterns
+- **Intelligence-Optimized Integration**: How discovered work streams will combine into cohesive solutions
 
-**Scoped Coordination Patterns**:
+**Discovery-Driven Coordination Framework**:
 ```markdown
-## Scoped Parallel Planning Framework
+## Discovery-Based Parallel Planning Framework
 
-### Agent Scoping Strategy
-- **File-Level Assignments**: Specific files for focused specialist work
-- **Directory-Level Assignments**: Logical module or feature areas
-- **System-Level Assignments**: Cross-cutting concerns and integrations
-- **Responsibility Boundaries**: Clear ownership and coordination protocols
+### Phase 3A: Capability Needs Discovery
+**Discover what kinds of expertise this specific project+task combination requires:**
 
-### Parallel Efficiency Design
-- **Independent Work Streams**: Tasks that can proceed simultaneously
-- **Dependency Coordination**: Work that requires sequential execution
-- **Integration Points**: Where parallel work streams must coordinate
-- **Quality Synchronization**: Consistent standards across parallel efforts
+1. **Skill Discovery**
+   - What capabilities do discovered project patterns suggest are needed?
+   - What expertise areas would accelerate success for discovered challenges?
+   - What knowledge domains are most critical for discovered complexity?
+   - What research and investigation skills are needed for discovered unknowns?
 
-### Coordination Protocol
-- **Communication Framework**: How agents stay aligned during execution
-- **Progress Tracking**: Monitoring and adjustment mechanisms
-- **Conflict Resolution**: Protocols for handling overlapping concerns
-- **Quality Assurance**: Ensuring consistent excellence across scoped work
+2. **Scope Discovery**
+   - What natural boundaries exist in the discovered project structure?
+   - What areas can work independently based on discovered dependencies?
+   - What coordination points are critical based on discovered integrations?
+   - What work streams would be most efficient for discovered patterns?
+
+3. **Specialist Creation Pattern**
+   - **Discovery Specialists**: For investigating discovered unknowns and research needs
+   - **Implementation Specialists**: For building within discovered natural boundaries  
+   - **Advisory Specialists**: For guiding discovered strategic and technical decisions
+   - **Integration Specialists**: For coordinating discovered connection points and dependencies
+
+### Phase 3B: Adaptive Parallel Coordination Strategy
+**Coordination emerges from discovered project characteristics:**
+
+1. **Natural Boundary Coordination**
+   - Scope assignments based on discovered logical divisions in project structure
+   - Responsibility boundaries that align with discovered architectural patterns
+   - Work stream organization that follows discovered dependency relationships
+
+2. **Discovery-Based Efficiency Design**
+   - Independent work streams identified through discovered dependency analysis
+   - Sequential coordination requirements based on discovered integration points
+   - Parallel opportunities maximized through discovered natural boundaries
+   - Quality synchronization aligned with discovered project standards and patterns
+
+3. **Intelligence-Driven Team Assembly**
+   - **Start with Discovery Team**: Specialists who research and understand discovered unknowns
+   - **Add Implementation Team**: Specialists for discovered technical and building needs
+   - **Include Advisory Team**: Specialists for discovered strategic and guidance needs  
+   - **Deploy Integration Team**: Specialists for discovered coordination and connection needs
+
+### Phase 3C: Evidence-Based Coordination Protocol
+**All coordination strategies grounded in discovery findings:**
+
+- **Communication Framework**: Protocols designed for discovered team size and complexity patterns
+- **Progress Tracking**: Monitoring approaches optimized for discovered work stream characteristics
+- **Conflict Resolution**: Protocols tailored to discovered potential overlap and boundary issues
+- **Quality Assurance**: Standards and validation aligned with discovered project excellence criteria
 ```
 
 ### Phase 4: Plan Approval Gate 🚪
@@ -180,21 +244,22 @@
 
 ## Team Leadership Excellence Principles
 
-### Research-Driven Decision Making
-**Main thread acts as intelligent research coordinator:**
-- **Investigates First**: Always research before planning
-- **Questions Systematically**: Ask the right questions at the right time
-- **Validates Assumptions**: Ensure understanding accuracy before execution
-- **Plans Comprehensively**: Design thorough execution strategies
-- **NEVER Implements**: All work delegated to appropriate scoped specialists
+### Discovery-Driven Decision Making
+**Main thread acts as intelligent discovery and research coordinator:**
+- **Discovers First**: Always investigate project patterns before making assumptions
+- **Researches Systematically**: Study discovered characteristics to understand optimal approaches
+- **Questions Intelligently**: Generate context-aware questions based on discovery findings
+- **Validates Through Evidence**: Ensure understanding accuracy through systematic investigation
+- **Plans Based on Intelligence**: Design strategies grounded in discovery and research findings
+- **NEVER Implements**: All work delegated to specialists matched to discovered requirements
 
-### Scoped Team Activation
-**For each task, intelligently:**
-- Analyze what kinds of specialists this specific work needs
-- Assign specific files/directories/systems to each agent
-- Coordinate their scoped collaboration for maximum efficiency
-- Ensure clear boundaries and communication protocols
-- Integrate their scoped results into coherent project solutions
+### Adaptive Team Activation
+**For each task, intelligently discover and design:**
+- Investigate what specialist capabilities discovered project characteristics require
+- Identify natural scope boundaries based on discovered project structure and dependencies
+- Design coordination strategies optimized for discovered complexity and integration patterns
+- Create communication protocols tailored to discovered team and project characteristics
+- Plan integration approaches that leverage discovered architectural and quality patterns
 
 ### Approval-Gated Excellence
 **Teams work through structured approval process:**
@@ -214,21 +279,21 @@
 - What context and constraints need consideration?
 - What success criteria should guide our approach?
 
-### Phase 2: Systematic Research
-**Investigate unknowns and validate assumptions:**
-- What knowledge gaps exist that need investigation?
-- What project context needs deeper understanding?
-- What questions should be asked of the user for clarity?
-- What current system behavior needs analysis?
-- What resources and constraints need validation?
+### Phase 2: Discovery & Research Intelligence
+**Systematic project discovery and evidence-based research:**
+- What patterns, conventions, and characteristics define this project?
+- What business, technical, and quality context factors apply?
+- What tools, methods, and capabilities are available/optimal for discovered patterns?
+- What complexities, unknowns, and challenges need systematic investigation?
+- What questions emerge from discovery findings that need user clarification?
 
-### Phase 3: Intelligent Planning
-**Design optimal scoped execution strategy:**
-- Which specialists from the project team should participate?
-- What specific files/directories should each agent focus on?
-- How can parallel execution be optimized for efficiency?
-- What coordination protocols will ensure quality integration?
-- What timeline and dependencies need management?
+### Phase 3: Intelligence-Driven Planning
+**Design execution strategy based on discovery and research findings:**
+- What specialist capabilities do discovered project characteristics require?
+- What natural scope boundaries exist based on discovered project structure?
+- How can parallel execution be optimized based on discovered dependencies?
+- What coordination protocols will work best for discovered complexity patterns?
+- What timeline and integration requirements emerge from discovered characteristics?
 
 ### Phase 4: Plan Approval
 **Present comprehensive strategy for user approval:**
