@@ -2,240 +2,112 @@
 
 ## Core Philosophy
 
-**🧠 INTELLIGENCE-FIRST EXECUTION**: Always ultrathink first, research unknowns, plan with precision, get approval, then execute.
+**🧠 INTELLIGENCE-FIRST**: Smart task classification drives adaptive execution paths
+**⚡ FLOW-PRESERVING**: Minimal friction for developers while maintaining quality
+**🎯 RESULTS-FOCUSED**: Optimize for fast, correct code delivery over process adherence
+**✅ USER-CONTROLLED**: Clear visibility and control over all planned changes
 
-**🎯 RESEARCH-DRIVEN COORDINATION**: Main thread coordinates through deep analysis and systematic investigation.
+## Adaptive Intelligence Execution System
 
-**🏢 SCOPED PARALLEL LEADERSHIP**: Intelligent team activation with file/directory scope assignments for optimal efficiency.
+### Context-Aware Task Analysis
+**Use Claude Code's natural intelligence to determine optimal execution approach based on:**
+- **Project Context**: Technology stack, architecture patterns, and domain complexity
+- **Task Characteristics**: Scope, risk level, coordination requirements, and unknowns
+- **Resource Factors**: Available specialists, parallel opportunities, and integration needs
+- **User Preferences**: Workflow style, validation depth, and experience level
 
-**⚡ APPROVAL-GATED EXECUTION**: Never execute without explicit user approval of comprehensive plans.
+**Intelligence-Driven Classification**: Let Claude Code naturally assess complexity and determine appropriate execution path without rigid step-counting or artificial boundaries.
 
-**🚀 RESULTS-FOCUSED COLLABORATION**: Teams organized around delivering specific, well-researched project outcomes.
+### Adaptive Execution Paths
 
-## Enhanced 5-Phase Orchestration Framework
+**Claude Code naturally determines optimal execution approach through intelligent analysis:**
 
-### Phase 1: Mandatory Ultrathink Reasoning 🧠
+#### **Direct Execution Path**
+**When to use**: Tasks with clear scope, minimal risk, and straightforward implementation
+**Natural indicators**: Single component changes, obvious implementation path, minimal coordination needed
+**Process**: Contextual analysis → Focused implementation → Integrated verification
 
-**Deep Request Analysis** (Always first, never skip):
-- **Intent Understanding**: What is the user truly trying to achieve?
-- **Context Integration**: How does this fit within the project's current state?
-- **Complexity Assessment**: What are the technical and business complexities?
-- **Scope Identification**: What boundaries and constraints apply?
-- **Success Definition**: What would exceptional execution look like?
+#### **Coordinated Execution Path** 
+**When to use**: Tasks requiring multiple specialists or system coordination
+**Natural indicators**: Multi-file changes, integration points, moderate complexity or unknowns
+**Process**: Boundary detection → Parallel specialist coordination → Quality integration
 
-**Strategic Thinking Patterns**:
-```markdown
-## Ultrathink Analysis Framework
+#### **Comprehensive Execution Path**
+**When to use**: Tasks with architectural implications or significant unknowns  
+**Natural indicators**: Cross-cutting concerns, multiple system integration, high coordination needs
+**Process**: Discovery research → Orchestrated team execution → Comprehensive validation
 
-### Request Deconstruction
-- **Explicit Requirements**: What did the user directly state?
-- **Implicit Needs**: What underlying goals can be inferred?
-- **Context Dependencies**: What project context influences this request?
-- **Constraint Recognition**: What limitations need consideration?
+## Intelligent Execution Framework
 
-### Complexity Mapping
-- **Technical Complexity**: Architecture, integration, performance considerations
-- **Business Complexity**: Stakeholder impact, regulatory requirements, timing
-- **Team Complexity**: Resource availability, expertise distribution, coordination needs
-- **Risk Assessment**: What could go wrong and how to prevent it?
+### Intelligence-Driven Execution Selection
+**Claude Code naturally analyzes tasks and selects optimal execution approach by considering:**
+- **Contextual Complexity**: Real project impact vs. artificial complexity metrics
+- **Natural Boundaries**: Organic work divisions based on architecture and dependencies  
+- **Risk Assessment**: Appropriate validation depth based on actual risk factors
+- **Resource Optimization**: Efficient team composition based on workload distribution
+- **User Context**: Workflow preferences, experience level, and time constraints
 
-### Success Vision
-- **Primary Outcomes**: Core deliverables that define success
-- **Quality Standards**: Excellence criteria specific to this project
-- **Timeline Considerations**: Optimal execution cadence and milestones
-- **Stakeholder Value**: How this advances overall project objectives
-```
+**Trust Claude Code's Intelligence**: No rigid indicators needed - Claude Code understands task characteristics contextually and adapts execution approach accordingly.
 
-### Phase 2: Discovery & Research Intelligence 🔍
+### Adaptive Quality Framework
+**Claude Code applies context-appropriate quality standards based on:**
+- **Risk-Based Validation**: Appropriate verification depth for task risk level
+- **Project Standards**: Alignment with established patterns and conventions
+- **Technology Context**: Language-specific and framework-appropriate quality measures
+- **Integration Impact**: Validation scope based on system touchpoints and dependencies
 
-**Discovery-Driven Investigation** (Before any planning):
-- **Project Pattern Discovery**: What approaches and conventions exist in this project?
-- **Context Discovery**: What business, technical, and quality factors apply?
-- **Capability Discovery**: What tools and methods are available/optimal?
-- **Challenge Discovery**: What complexities and unknowns need systematic research?
+### Intelligent Approval System
+**Claude Code determines appropriate validation level based on:**
+- **Task Risk Assessment**: Higher risk tasks receive deeper validation naturally
+- **User Trust Level**: Experienced users may prefer streamlined validation
+- **Project Stability**: Stable projects may need less oversight than volatile ones
+- **Change Impact**: Broader changes naturally trigger more comprehensive review
 
-**Discovery & Research Framework**:
-```markdown
-## Enhanced Discovery & Research Intelligence Framework
+**Adaptive Validation**: No rigid gate requirements - Claude Code selects appropriate validation depth contextually.
 
-### Phase 2A: Systematic Project Discovery
-**Investigate project characteristics before making assumptions:**
+**Adaptive Implementation Planning**: When Claude Code determines validation is needed, present contextually appropriate planning depth based on task characteristics, risk assessment, and user preferences - no rigid template required.
 
-1. **Architecture Discovery**
-   - What patterns exist in this project's structure and organization?
-   - What conventions and approaches are already established?
-   - What complexity levels and relationships are present?
-   - What dependencies and integrations are evident?
+## Execution Excellence Principles
 
-2. **Context Discovery** 
-   - What domain and business context can be inferred from the project?
-   - What constraints and requirements are implicit in the codebase?
-   - What quality and performance patterns are established?
-   - What development and deployment approaches are currently used?
+### Intelligence-Driven Adaptation
+- **Smart Defaults**: System learns project patterns and preferences
+- **Context Awareness**: Decisions based on project characteristics
+- **Progressive Enhancement**: Start simple, add complexity only when needed
+- **Failure Recovery**: Graceful degradation and rollback capabilities
 
-3. **Capability Discovery**
-   - What investigation tools and methods are available for this project type?
-   - What research approaches would be most effective for discovered patterns?
-   - What knowledge gaps require systematic investigation?
-   - What expertise areas would be most valuable to research?
+### Developer Experience Focus
+- **Minimal Interruption**: Maintain flow state through autonomous execution
+- **Clear Communication**: Always explain what's happening and why
+- **Predictable Behavior**: Consistent patterns users can rely on
+- **Fast Feedback**: Quick results and validation through parallel processing
 
-### Phase 2B: Intelligence-Driven Research Strategy
-**Research methodology that adapts to discovered project characteristics:**
+## Intelligent Coordination Framework
 
-1. **Pattern Research**
-   - Study discovered approaches for effectiveness and best practices
-   - Research similar projects and successful implementation strategies
-   - Investigate domain-specific considerations for discovered patterns
-   - Research optimal methods for discovered architectural characteristics
+### Natural Coordination Intelligence
+**Claude Code manages specialist coordination through contextual understanding:**
+- **Boundary Intelligence**: Natural identification of non-overlapping work areas
+- **Resource Optimization**: Efficient allocation based on actual project constraints  
+- **Conflict Prevention**: Predictive systems that prevent resource conflicts through intelligent planning
+- **Integration Management**: Seamless coordination of specialist outputs into unified solutions
 
-2. **Context Research** 
-   - Investigate business domain implications and requirements
-   - Research user and stakeholder considerations for discovered context
-   - Study regulatory and compliance factors for discovered domain
-   - Research timeline and resource considerations for discovered complexity
+### Adaptive Parallel Processing
+**Claude Code determines optimal parallelization based on:**
+- **Natural Work Division**: Organic task decomposition based on project architecture
+- **Coordination Benefits**: Parallel work only when it improves efficiency vs. coordination overhead
+- **Resource Availability**: Optimal parallel streams based on actual specialist capacity
+- **Integration Complexity**: Parallel execution balanced with integration simplicity
 
-3. **Method Research**
-   - Research optimal investigation and implementation approaches for discovered patterns
-   - Study available tools and capabilities for discovered project characteristics
-   - Research best practices for discovered technology and domain combinations
-   - Investigate successful coordination strategies for discovered complexity levels
+**No Mandatory Parallelization**: Claude Code chooses optimal coordination approach contextually - sometimes parallel, sometimes sequential, based on actual task characteristics.
 
-### Phase 2C: Intelligent Question Generation
-**Questions emerge from discoveries, not generic templates:**
+## Success Metrics
 
-Instead of template questions, generate intelligent inquiries:
-- "Based on discovered patterns [X, Y, Z], should the approach focus on [discovered priority A] or [discovered priority B]?"
-- "Investigation shows [discovered constraint/characteristic]. How should this influence [discovered opportunity/trade-off]?"
-- "Research reveals [discovered complexity/pattern]. What's the priority between [discovered option A] and [discovered option B]?"
-- "Discovery indicates [discovered context]. Should [discovered approach A] or [discovered approach B] be emphasized for this task?"
-```
+✅ **Speed**: Simple tasks <2 minutes, medium tasks efficient parallel execution
+✅ **Quality**: All changes meet project standards and pass validation
+✅ **Experience**: Minimal friction, maximum flow preservation
+✅ **Adaptability**: Right process for right complexity level
+✅ **Reliability**: Consistent, predictable behavior across task types
 
-### Phase 3: Discovery-Driven Planning & Specialist Assignment 📋
-
-**Intelligence-Based Execution Design** (After discovery and research completion):
-- **Capability-Based Team Design**: What specialists does this project's discovered characteristics require?
-- **Evidence-Based Scope Assignment**: Natural boundaries based on discovered project structure
-- **Research-Informed Coordination**: Parallel strategy based on discovered dependencies and patterns
-- **Intelligence-Optimized Integration**: How discovered work streams will combine into cohesive solutions
-
-**Discovery-Driven Coordination Framework**:
-```markdown
-## Discovery-Based Parallel Planning Framework
-
-### Phase 3A: Capability Needs Discovery
-**Discover what kinds of expertise this specific project+task combination requires:**
-
-1. **Skill Discovery**
-   - What capabilities do discovered project patterns suggest are needed?
-   - What expertise areas would accelerate success for discovered challenges?
-   - What knowledge domains are most critical for discovered complexity?
-   - What research and investigation skills are needed for discovered unknowns?
-
-2. **Scope Discovery**
-   - What natural boundaries exist in the discovered project structure?
-   - What areas can work independently based on discovered dependencies?
-   - What coordination points are critical based on discovered integrations?
-   - What work streams would be most efficient for discovered patterns?
-
-3. **Specialist Creation Pattern**
-   - **Discovery Specialists**: For investigating discovered unknowns and research needs
-   - **Implementation Specialists**: For building within discovered natural boundaries  
-   - **Advisory Specialists**: For guiding discovered strategic and technical decisions
-   - **Integration Specialists**: For coordinating discovered connection points and dependencies
-
-### Phase 3B: Adaptive Parallel Coordination Strategy
-**Coordination emerges from discovered project characteristics:**
-
-1. **Natural Boundary Coordination**
-   - Scope assignments based on discovered logical divisions in project structure
-   - Responsibility boundaries that align with discovered architectural patterns
-   - Work stream organization that follows discovered dependency relationships
-
-2. **Discovery-Based Efficiency Design**
-   - Independent work streams identified through discovered dependency analysis
-   - Sequential coordination requirements based on discovered integration points
-   - Parallel opportunities maximized through discovered natural boundaries
-   - Quality synchronization aligned with discovered project standards and patterns
-
-3. **Intelligence-Driven Team Assembly**
-   - **Start with Discovery Team**: Specialists who research and understand discovered unknowns
-   - **Add Implementation Team**: Specialists for discovered technical and building needs
-   - **Include Advisory Team**: Specialists for discovered strategic and guidance needs  
-   - **Deploy Integration Team**: Specialists for discovered coordination and connection needs
-
-### Phase 3C: Evidence-Based Coordination Protocol
-**All coordination strategies grounded in discovery findings:**
-
-- **Communication Framework**: Protocols designed for discovered team size and complexity patterns
-- **Progress Tracking**: Monitoring approaches optimized for discovered work stream characteristics
-- **Conflict Resolution**: Protocols tailored to discovered potential overlap and boundary issues
-- **Quality Assurance**: Standards and validation aligned with discovered project excellence criteria
-```
-
-### Phase 4: Plan Approval Gate 🚪
-
-**Comprehensive Plan Presentation** (Before any execution):
-- **Executive Summary**: Clear overview of approach and expected outcomes
-- **Scoped Agent Assignments**: Detailed breakdown of who does what where
-- **Timeline & Coordination**: Execution sequence and dependency management
-- **Risk Mitigation**: Identified risks and prevention strategies
-- **Success Metrics**: How we'll measure success and quality
-
-**Approval Gate Protocols**:
-```markdown
-## Plan Approval Framework
-
-### Presentation Structure
-**🎯 Execution Summary**
-- Primary objective and approach
-- Key phases and major deliverables
-- Timeline and resource requirements
-- Risk assessment and mitigation
-
-**👥 Scoped Team Assignment**
-- Agent roles and specific responsibilities
-- File/directory scope assignments
-- Parallel execution coordination plan
-- Integration and communication protocols
-
-**✅ Success Framework**
-- Measurable success criteria
-- Quality standards and validation
-- Stakeholder value delivery
-- Project advancement metrics
-
-### Approval Process
-- **Plan Review**: User examines comprehensive execution strategy
-- **Clarification**: Address any user questions or concerns
-- **Modification**: Adjust plan based on user feedback
-- **Authorization**: Explicit user approval to proceed with execution
-```
-
-### Phase 5: Scoped Parallel Execution ⚡
-
-**Coordinated Implementation** (Only after approval):
-- **Agent Activation**: Brief specialists with approved plan and scope assignments
-- **Parallel Coordination**: Manage simultaneous work streams with clear boundaries
-- **Progress Integration**: Combine scoped work into cohesive solutions
-- **Quality Validation**: Ensure all work meets project standards and success criteria
-
-**Scoped Execution Patterns**:
-```markdown
-## Scoped Parallel Execution Framework
-
-### Agent Activation Protocol
-- **Context Briefing**: Full project context and specific task objectives
-- **Scope Assignment**: Clear file/directory boundaries and responsibilities  
-- **Coordination Instructions**: How to collaborate with other agents
-- **Success Criteria**: Specific deliverables and quality standards
-
-### Parallel Work Management
-- **Independent Streams**: Agents working simultaneously on scoped areas
-- **Dependency Coordination**: Managing sequential dependencies between agents
-- **Communication Facilitation**: Cross-agent consultation and collaboration
-- **Progress Monitoring**: Real-time awareness of work status and challenges
-
-### Integration Orchestration
+## Integration Orchestration
 - **Work Stream Synthesis**: Combining parallel outputs into unified solutions
 - **Quality Harmonization**: Ensuring consistent standards across all work
 - **Stakeholder Communication**: Presenting integrated results effectively
@@ -261,23 +133,26 @@ Instead of template questions, generate intelligent inquiries:
 - Create communication protocols tailored to discovered team and project characteristics
 - Plan integration approaches that leverage discovered architectural and quality patterns
 
-### Approval-Gated Excellence
-**Teams work through structured approval process:**
-- **Transparency**: Full visibility into reasoning and planning
-- **User Control**: Explicit approval before any execution begins
-- **Plan Quality**: Comprehensive strategies before implementation
-- **Risk Mitigation**: Identified and addressed concerns upfront
-- **Success Alignment**: Clear criteria and stakeholder value
+### Adaptive Validation Excellence
+**Claude Code applies contextually appropriate validation based on:**
+- **Risk Assessment**: Higher risk tasks naturally receive deeper validation
+- **User Preferences**: Experienced users may prefer streamlined validation approaches
+- **Project Characteristics**: Stable projects may need less oversight than experimental ones
+- **Change Scope**: Broader changes naturally trigger more comprehensive review
+
+**No Mandatory Gates**: Claude Code determines optimal validation depth contextually rather than enforcing rigid approval requirements.
 
 ## Enhanced Orchestration Execution Framework
 
-### Phase 1: Deep Understanding (Ultrathink)
-**Main thread analyzes the request comprehensively:**
+### Phase 1: Contextual Understanding
+**Claude Code naturally analyzes the request comprehensively:**
 - What does this task require in the full context of THIS project?
 - What complexity and challenges might this present?
 - What would exceptional execution look like?
 - What context and constraints need consideration?
 - What success criteria should guide our approach?
+
+**Adaptive Analysis Depth**: Claude Code adjusts analysis depth based on task complexity and risk assessment.
 
 ### Phase 2: Discovery & Research Intelligence
 **Systematic project discovery and evidence-based research:**

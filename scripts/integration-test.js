@@ -78,11 +78,11 @@ async function runIntegrationTest() {
     
     // Check for embedded intelligence (should have core modules injected)
     const requiredSections = [
-      'INTELLIGENT HIRING',
-      'PROJECT-SPECIFIC TEAMS', 
-      'TEAM COORDINATION',
-      'DYNAMIC LEADERSHIP',
-      'COLLABORATIVE EXECUTION'
+      'INTELLIGENT SPECIALIZATION',
+      'Adaptive Specialist Framework', 
+      'Smart Team Creation Strategy',
+      'Universal Specialist Template',
+      'MANDATORY EXECUTION REQUIREMENTS'
     ];
     
     for (const section of requiredSections) {
