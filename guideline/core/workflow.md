@@ -90,14 +90,40 @@
 - **Conflict Prevention**: Predictive systems that prevent resource conflicts through intelligent planning
 - **Integration Management**: Seamless coordination of specialist outputs into unified solutions
 
-### Adaptive Parallel Processing
-**Claude Code determines optimal parallelization based on:**
-- **Natural Work Division**: Organic task decomposition based on project architecture
-- **Coordination Benefits**: Parallel work only when it improves efficiency vs. coordination overhead
-- **Resource Availability**: Optimal parallel streams based on actual specialist capacity
-- **Integration Complexity**: Parallel execution balanced with integration simplicity
+### Intelligent Parallel Task Analysis
+**Claude Code automatically evaluates parallel execution potential through:**
+- **Task Decomposition Intelligence**: Identify independent work streams within complex tasks
+- **Parallelization ROI Analysis**: Calculate time savings vs coordination overhead for parallel execution
+- **Dependency Mapping**: Analyze task dependencies to determine optimal parallel vs sequential execution
+- **Resource Efficiency Assessment**: Evaluate if multiple agents provide meaningful speedup benefits
+- **Integration Cost Analysis**: Balance parallel speedup against integration complexity
 
-**No Mandatory Parallelization**: Claude Code chooses optimal coordination approach contextually - sometimes parallel, sometimes sequential, based on actual task characteristics.
+### Automatic Parallel Execution Decision Framework
+**Claude Code makes intelligent parallel execution decisions by analyzing:**
+
+#### **Parallel-Beneficial Task Patterns**
+- **Multi-Component Tasks**: Frontend + Backend + Database changes → Automatic parallel execution
+- **Cross-System Integration**: Multiple services/APIs → Parallel specialist coordination
+- **Research + Implementation**: Investigation + development → Parallel research and implementation streams
+- **Quality + Development**: Testing + feature development → Parallel quality assurance and implementation
+
+#### **Sequential-Optimal Task Patterns**
+- **Dependent Workflow Steps**: Each step requires previous step completion → Sequential execution
+- **Shared Resource Conflicts**: Multiple agents modifying same files → Sequential to prevent conflicts
+- **Discovery-Dependent Tasks**: Implementation depends on research findings → Sequential research then parallel implementation
+- **Integration-Heavy Tasks**: More coordination than implementation → Sequential with focused specialist consultation
+
+#### **Hybrid Execution Patterns**
+- **Research-Then-Parallel**: Sequential discovery phase → Parallel implementation phase
+- **Parallel-Then-Integration**: Parallel specialist work → Sequential integration and validation
+- **Progressive Parallelization**: Start sequential, expand to parallel as understanding develops
+
+### Dynamic Parallel Execution Optimization
+**Claude Code continuously optimizes parallel execution through:**
+- **Real-Time Speedup Analysis**: Monitor actual time savings from parallel execution
+- **Coordination Efficiency Tracking**: Measure coordination overhead vs implementation benefits
+- **Task Pattern Learning**: Improve parallel vs sequential decisions based on execution history
+- **Resource Utilization Optimization**: Adapt parallel agent count based on actual task requirements
 
 ## Success Metrics
 
