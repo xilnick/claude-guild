@@ -138,12 +138,17 @@ async function generateCommand(type, coreModules) {
   if (Object.keys(coreModules).length > 0) {
     let embedded = '\n\n## 📚 EMBEDDED CORE INTELLIGENCE\n\n';
     
+    // Embed in specific order for logical flow
     if (coreModules.workflow) {
       embedded += '### Workflow Intelligence\n' + coreModules.workflow + '\n\n';
     }
     
     if (coreModules.agents) {
       embedded += '### Agent Intelligence\n' + coreModules.agents + '\n\n';
+    }
+    
+    if (coreModules.verification) {
+      embedded += '### Verification Intelligence\n' + coreModules.verification + '\n\n';
     }
     
     template += embedded;
