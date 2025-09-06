@@ -1,140 +1,169 @@
-# Agent Creation & Character Framework
+# Dynamic Agent Creation
 
-## 🔒 MANDATORY Agent Creation Requirements
+## Purpose
+Create specialists dynamically based on actual task requirements using Claude's native intelligence.
 
-### Dynamic Agent Creation (CRITICAL)
-**ALL workflows MUST support dynamic agent creation:**
-- **CREATE** agents dynamically during workflow execution
-- **NO** pre-existing setup required for task execution  
-- **SPECIALIZE** based on discovered task requirements
-- **EMBED** project-specific knowledge and patterns
-- **INTEGRATE** verification capabilities in all agents
+## Core Principle
 
-### Optional Persistent Agent Setup
-**Setup command creates persistent agents when desired:**
-- **OPTIONAL** - not required for workflow execution
-- **OPTIMIZE** repeated similar tasks through reuse
-- **STORE** in `.claude/agents/guild/` directory  
-- **MAINTAIN** project-specific specialization
-- **PRESERVE** verification integration
+<principle>
+  Don't use templates or pre-defined agents.
+  Create specialists based on what you discover in the project and task.
+</principle>
 
-### Intelligence-Driven Creation (MANDATORY)
-**NO predetermined templates allowed:**
-- **RESEARCH** project characteristics thoroughly
-- **ANALYZE** technology stack and architecture  
-- **DISCOVER** natural specialist boundaries
-- **EMBED** actual project patterns and conventions
-- **VALIDATE** agent contains appropriate expertise
+## Agent Creation (Natural)
 
-## Agent Creation Intelligence
+<creation>
+  <analyze>
+    Look at the actual task requirements
+    Consider the project's technology
+    Understand the specific needs
+  </analyze>
+  
+  <create>
+    Design specialists with clear, specific roles
+    Give them detailed context about the project
+    Use Task tool with comprehensive prompts
+  </create>
+</creation>
 
-**Create specialists dynamically based on actual project needs:**
-- **Analyze** project to identify natural specialist boundaries
-- **Build** agents with clear roles, embedded project knowledge  
-- **Establish** coordination protocols and quality standards
-- **Optimize** team composition for task complexity
+## Specialist Types (Dynamic)
 
-## Character Consistency (Anthropic Guidelines)
+<specialists>
+  Create based on what you find:
+  - Technology specialists (based on project stack)
+  - Domain specialists (based on task area)
+  - Integration specialists (when coordination needed)
+  - Quality specialists (when validation needed)
+  
+  No pre-defined types - create what's actually needed
+</specialists>
 
-**Simple character definitions with consistent traits:**
-- **Define** clear role and expertise area for each agent
-- **Establish** communication style and decision-making approach  
-- **Set** boundaries for responsibilities vs escalations
-- **Embed** project-specific patterns and knowledge
-- **Trust** Claude's native character consistency abilities
+## Task Tool Integration
 
-**Character Pattern:**
-```
-Role: {project-specific expertise}
-Traits: {key characteristics}  
-Style: {communication approach}
-Scope: {responsibilities vs escalations}
-Knowledge: {embedded project context}
-```
+<task_usage>
+  <parameters>
+    subagent_type: "general-purpose"
+    description: Specific, clear task description
+    prompt: Full context and detailed requirements
+  </parameters>
+  
+  <prompt_content>
+    - Project context and technology
+    - Specific task requirements
+    - Expected outcomes
+    - Any constraints or patterns to follow
+  </prompt_content>
+</task_usage>
 
-**Maintain character through:**
-- Clear role definition in system prompt
-- Consistent communication style and vocabulary  
-- Natural trait demonstration in problem-solving
-- Boundary adherence with graceful handoffs
+## Natural Boundaries
 
-## Agent Selection Patterns
+<boundaries>
+  Specialists naturally work within:
+  - File boundaries (who works on what files)
+  - Technical boundaries (frontend vs backend)
+  - Feature boundaries (distinct features)
+  - Let Claude identify these naturally
+</boundaries>
 
-**Match agents to actual task requirements:**
-- **Simple tasks**: Single specialist with project knowledge
-- **Multi-component**: Coordinated specialists with clear boundaries  
-- **Complex architecture**: Research + implementation + integration specialists
-- **Quality-critical**: Additional verification and testing specialists
+## Coordination (Simple)
 
-## Character Definition Commands
+<coordination>
+  - Independent work runs in parallel
+  - Dependent work runs sequentially
+  - Integration points are explicit
+  - No complex orchestration needed
+</coordination>
 
-**Create agents with consistent personas:**
-- **Define** clear role and expertise area
-- **Establish** communication style and decision-making approach  
-- **Set** boundaries for responsibilities vs escalations
-- **Embed** project-specific patterns and knowledge
+## Best Practices
 
-## Verification Framework Integration
+<practices>
+  - Create specialists for actual needs, not hypothetical ones
+  - Give clear, explicit instructions
+  - Include project context in prompts
+  - Let specialists work independently where possible
+  - Trust Claude's coordination abilities
+</practices># Dynamic Agent Creation
 
-**🔒 MANDATORY: ALL agents MUST embed verification capabilities**
-- **INTEGRATE** coverage tracking in agent workflows
-- **EMBED** gap detection intelligence in specialists  
-- **ESTABLISH** quality validation approaches
-- **DEFINE** clear satisfaction criteria
-- **ENABLE** progressive validation throughout execution
+## Purpose
+Create specialists dynamically based on actual task requirements using Claude's native intelligence.
 
-**Required verification capabilities:**
-- **Coverage awareness**: Track area completion status
-- **Gap detection**: Identify missing or incomplete work
-- **Quality standards**: Project-specific validation criteria  
-- **Satisfaction metrics**: Multi-dimensional completion assessment
-- **Integration testing**: Cross-component validation
+## Core Principle
 
-## Quality Integration Commands
+<principle>
+  Don't use templates or pre-defined agents.
+  Create specialists based on what you discover in the project and task.
+</principle>
 
-**Embed verification into all specialists:**
-- **BUILD** validation into each specialist's workflow
-- **ESTABLISH** quality standards specific to domain expertise
-- **CREATE** coordination protocols for cross-agent validation  
-- **ENSURE** comprehensive coverage across all specialist work
-- **VALIDATE** gap-free delivery before completion
+## Agent Creation (Natural)
 
-## Success Criteria
+<creation>
+  <analyze>
+    Look at the actual task requirements
+    Consider the project's technology
+    Understand the specific needs
+  </analyze>
+  
+  <create>
+    Design specialists with clear, specific roles
+    Give them detailed context about the project
+    Use Task tool with comprehensive prompts
+  </create>
+</creation>
 
-**Agents must achieve:**
-- ✅ Perfect match to project requirements
-- ✅ Clear boundaries preventing conflicts
-- ✅ Embedded project knowledge and quality standards  
-- ✅ Natural coordination through specialist expertise
-- ✅ Comprehensive verification capabilities integrated
-- ✅ Dynamic creation without setup dependencies
+## Specialist Types (Dynamic)
 
-## Compliance with Framework.md Mandatory Requirements
+<specialists>
+  Create based on what you find:
+  - Technology specialists (based on project stack)
+  - Domain specialists (based on task area)
+  - Integration specialists (when coordination needed)
+  - Quality specialists (when validation needed)
+  
+  No pre-defined types - create what's actually needed
+</specialists>
 
-**This module MUST comply with ALL mandatory requirements:**
+## Task Tool Integration
 
-### ✅ Requirement 1: Dynamic Agent Creation (CRITICAL)
-- Dynamic agent creation patterns provided
-- No setup required for workflow execution
-- Project-specific specialization embedded
+<task_usage>
+  <parameters>
+    subagent_type: "general-purpose"
+    description: Specific, clear task description
+    prompt: Full context and detailed requirements
+  </parameters>
+  
+  <prompt_content>
+    - Project context and technology
+    - Specific task requirements
+    - Expected outcomes
+    - Any constraints or patterns to follow
+  </prompt_content>
+</task_usage>
 
-### ✅ Requirement 2: Optional Persistent Setup (OPTIONAL)  
-- Persistent agents supported but not required
-- Workflow operates independently of setup
-- Optimization through reuse when beneficial
+## Natural Boundaries
 
-### ✅ Requirement 3: Intelligence-Driven Creation (CRITICAL)
-- No predetermined templates allowed
-- Research-based specialization required
-- Project knowledge embedding mandatory
+<boundaries>
+  Specialists naturally work within:
+  - File boundaries (who works on what files)
+  - Technical boundaries (frontend vs backend)
+  - Feature boundaries (distinct features)
+  - Let Claude identify these naturally
+</boundaries>
 
-### ✅ Requirement 4: Verification Integration (CRITICAL)
-- All agents include verification capabilities
-- Coverage tracking and gap detection embedded
-- Quality standards integrated in specialists
+## Coordination (Simple)
 
-**Success Criteria:**
-- Agents perfectly matched to project requirements
-- Clear boundaries preventing conflicts
-- Embedded project knowledge and quality standards  
-- Natural coordination through specialist expertise
+<coordination>
+  - Independent work runs in parallel
+  - Dependent work runs sequentially
+  - Integration points are explicit
+  - No complex orchestration needed
+</coordination>
+
+## Best Practices
+
+<practices>
+  - Create specialists for actual needs, not hypothetical ones
+  - Give clear, explicit instructions
+  - Include project context in prompts
+  - Let specialists work independently where possible
+  - Trust Claude's coordination abilities
+</practices>
