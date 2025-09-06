@@ -31,5 +31,3 @@ description: "Intelligent execution using project agents"
 **Core Intelligence**: Adapt everything to actual task needs, not predetermined patterns.
 
 ---
-
-**Core Philosophy**: Combine **human-in-the-middle approval** with workflow intelligence and persistent, project-specialized agents. **NEVER execute without explicit user approval** of requirements understanding and approach. This ensures perfect alignment with user intent while delivering maximum efficiency, quality, and user experience through persistent agents with deep project expertise.

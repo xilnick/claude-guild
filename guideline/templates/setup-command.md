@@ -4,191 +4,378 @@
 name: guild-setup  
 model: sonnet
 thinking_mode: ultrathink
-description: "Intelligence-driven persistent agent creation through adaptive research"
+description: "Intelligent project analysis and dynamic agent creation"
 ---
 
-## Purpose
+## 🧠 Phase 1: Deep Project Intelligence Gathering
 
-Analyze projects intelligently and create exactly the research agents and persistent specialists needed with embedded coverage verification capabilities. No predetermined categories, no hardcoded structures - pure adaptive intelligence that discovers optimal agent architecture through deep project research with comprehensive coverage verification integration.
+### **Automated Project Analysis** (2-3 min)
+🔍 **Project Ecosystem Discovery**:
+- **Scan** project configuration files for ecosystem understanding
+- **Detect** architectural patterns and design paradigms
+- **Identify** data storage, processing, and communication patterns
+- **Map** deployment strategies and operational requirements
 
-## 🔬 **INTELLIGENCE-DRIVEN RESEARCH & AGENT CREATION**
+📊 **Architecture Pattern Recognition**:
+- **Analyze** directory structure for architecture style (MVC, microservices, serverless, etc.)
+- **Detect** design patterns (Repository, Factory, Observer, etc.) 
+- **Map** service boundaries and integration points
+- **Identify** shared libraries, utilities, and cross-cutting concerns
 
-### **Execute Adaptive Research Intelligence with Persona Discovery**
-**Determine what research is needed and create appropriate research agents with persona characteristics:**
+🎯 **Domain Complexity Assessment**:
+- **Analyze** business logic concentration and complexity hotspots
+- **Identify** core domain entities and their relationships
+- **Map** user journeys and critical workflows
+- **Assess** data flows and transformation requirements
 
+🔬 **Quality Standards Discovery**:
+- **Detect** testing frameworks and coverage requirements
+- **Analyze** linting rules, formatting standards, commit conventions
+- **Identify** documentation patterns and standards
+- **Map** error handling and logging approaches
+
+## 🤖 Phase 2: Intelligent Agent Discovery
+
+### **Natural Boundary Detection** (1-2 min)
+🗂️ **Component-Based Boundaries**:
+- **Frontend**: UI components, state management, routing, styling
+- **Backend**: APIs, business logic, data processing, integrations
+- **Data Layer**: Database schemas, queries, migrations, caching
+- **Infrastructure**: Deployment, monitoring, scaling, security
+
+🔗 **Integration Point Mapping**:
+- **API Contracts**: REST/GraphQL/gRPC interfaces and schemas
+- **Event Systems**: Message queues, event buses, webhooks
+- **Data Flows**: ETL pipelines, streaming, batch processing
+- **External Services**: Third-party APIs, cloud services, CDNs
+
+### **Adaptive Team Composition Intelligence**
+```yaml
+Dynamic Specialist Discovery:
+  Sufficient Coverage (Minimum viable team):
+    - Core implementation specialists for primary domains
+    - Essential integration and quality specialists
+    - Covers critical paths and main workflows
+    
+  Optimal Coverage (Balanced comprehensive team):
+    - Specialized agents for each major domain area
+    - Dedicated coordination and architecture specialists
+    - Research and analysis specialists for unknowns
+    - Performance and optimization specialists
+    
+  Extended Coverage (Maximum problem-solving capability):
+    - Deep specialization across all discovered domains
+    - Multiple research and investigation specialists
+    - Dedicated specialists for edge cases and complex scenarios
+    - Experimental and innovation specialists
+    - Documentation and knowledge management specialists
+
+Team Size: Determined by project needs, not arbitrary limits
+  - Small focused teams for simple domains
+  - Large specialized teams for complex ecosystems
+  - Expandable teams that grow with discovered complexity
 ```
-🧠 Analyze project to determine optimal research approach with coverage verification and persona discovery framework initialization
-🔍 Create research agents based on project characteristics with embedded gap detection intelligence and persona archetypes
-🤖 Deploy research agents to investigate project-specific patterns, requirements, and natural persona roles with systematic coverage mapping
-📊 Synthesize research findings to design optimal persistent agent architecture with verification capabilities and persona specializations
-🎭 Execute comprehensive persona archetype discovery during research to identify natural character roles that match project domain
-🔍 Execute comprehensive gap detection during research to identify potential missing areas and quality concerns with persona-driven perspectives
-📊 Initialize coverage verification algorithm and progress tracking matrix for ongoing project execution with persona coordination protocols
-✅ Create persistent agents perfectly matched to discovered project needs with embedded verification intelligence and XML-defined personas
+
+### **Coverage Gap Analysis**
+🔍 **Identify Missing Expertise**:
+- **Uncovered Technologies**: Languages/frameworks without specialists
+- **Orphaned Components**: Code areas without clear ownership
+- **Integration Gaps**: Unmanaged boundaries between systems
+- **Quality Blind Spots**: Areas lacking validation coverage
+
+## 🎭 Phase 3: Intelligent Specialist Creation
+
+### **Problem-Solving Specialist Generation**
+For each discovered problem domain:
+
+```yaml
+Specialist Creation Intelligence:
+  1. Analyze Problem Space:
+     - Core challenges and complexity areas
+     - Knowledge domains requiring expertise
+     - Integration and coordination needs
+     - Quality and validation requirements
+     
+  2. Generate Specialization:
+     Role: [Problem-solving expertise area]
+     Focus: [Specific aspect of problem domain]
+     Approach: [Problem-solving methodology]
+     Perspective: [Unique viewpoint for solutions]
+     
+  3. Embed Problem-Solving Context:
+     - Domain patterns and best practices
+     - Common challenges and solutions
+     - Edge cases and complexity handlers
+     - Quality criteria and validation approaches
+     
+  4. Define Collaboration Model:
+     Leads: [Primary problem areas]
+     Supports: [Secondary assistance areas]
+     Consults: [Advisory capabilities]
+     Delegates: [Areas for other specialists]
 ```
 
-**Determine everything based on intelligent project analysis - no predetermined phases, categories, or agent types. Include persona discovery to match character roles to project requirements.**
+### **Core Problem-Solving Specialists**
 
-### **Execute Research-First Approach with Persona Intelligence** 
-**Create exactly the research agents needed to understand THIS project's domain and natural persona requirements:**
-
-- **Build Adaptive Research Team with Verification and Persona Intelligence**: Determine optimal research specializations based on project complexity, technology stack, domain characteristics, and natural persona archetypes with embedded coverage verification capabilities
-- **Conduct Project-Specific Investigation with Gap Detection and Persona Discovery**: Deploy research agents to investigate exactly what THIS project needs with systematic gap detection intelligence and identification of natural character roles that match project domain - no generic templates or predetermined research areas  
-- **Apply Intelligent Synthesis with Coverage Framework and Persona Integration**: Drive creation of perfectly matched persistent agents with embedded project knowledge, verification intelligence, and XML-defined personas through research findings
-- **Execute Quality-Driven Discovery with Verification Integration and Character Consistency**: Identify quality patterns, testing approaches, validation requirements, and persona consistency needs specific to THIS project with embedded coverage verification algorithms and character maintenance patterns
-
-### **Execute Dynamic Agent Architecture Discovery with Persona Framework**
-**Design optimal persistent agent team based on research findings and discovered persona archetypes:**
-
-#### **Agent Creation Process Commands with Persona Integration**
+**Research & Discovery Specialist**:
 ```
-🔬 Research Agent Deployment with Verification Intelligence and Persona Discovery: 
-  ├─ Create research agents based on project analysis with embedded coverage verification capabilities and persona intelligence
-  ├─ Deploy research agents to investigate project-specific patterns, requirements, and natural character archetypes with systematic gap detection intelligence
-  ├─ Execute comprehensive coverage mapping during research phase with technical, quality, user experience, integration area identification, and persona role discovery
-  ├─ Apply gap detection patterns during research to identify potential missing elements, quality concerns, and persona consistency requirements
-  ├─ Discover natural persona archetypes that match project domain, technology stack, and team dynamics through intelligent project analysis
-  ├─ Synthesize findings to identify optimal specialization boundaries with verification-aware boundary detection and persona-driven coordination protocols
-  └─ Design persistent agent architecture based on discoveries with embedded verification framework integration and XML-defined persona specifications
-
-🤖 Persistent Agent Creation with Coverage Framework and Persona Definitions:
-  ├─ Create agents perfectly matched to discovered project characteristics with comprehensive verification intelligence and XML-defined personas
-  ├─ Embed research findings and project-specific patterns with coverage verification algorithms, gap detection capabilities, and persona character traits
-  ├─ Generate XML persona definitions for each agent using persona.md framework templates populated with project-specific context
-  ├─ Integrate systematic gap detection intelligence with pattern recognition for technical, quality, user experience, and integration gaps enhanced by persona expertise
-  ├─ Establish coordination protocols based on discovered dependencies with progressive validation checkpoints and persona-driven communication patterns
-  ├─ Configure quality frameworks based on discovered project standards with multi-dimensional satisfaction verification and persona-consistent validation approaches
-  ├─ Embed character consistency maintenance patterns using persona identity reinforcement and communication style preservation
-  └─ Embed iterative enhancement capabilities with continuous improvement loop integration and persona-driven learning patterns
-
-✅ Team Optimization with Verification Validation and Persona Coordination:
-  ├─ Validate agent coverage matches project requirements using coverage verification algorithm with 100% area mapping verification and persona role completeness
-  ├─ Verify comprehensive gap detection capability across all created agents using systematic gap detection intelligence validation enhanced by persona expertise perspectives
-  ├─ Optimize coordination based on discovered integration patterns with embedded verification coordination protocols and persona interaction frameworks
-  ├─ Test workflows against discovered project characteristics with progressive validation, quality gate management, and persona consistency validation
-  ├─ Validate multi-dimensional satisfaction verification capabilities across all agents with technical, user experience, integration, quality completeness, and persona character consistency validation
-  ├─ Confirm iterative capability integration with gap resolution, continuous improvement loop functionality, and persona-driven adaptation
-  ├─ Verify XML persona definitions are complete, consistent, and properly integrated with agent specializations and coordination protocols
-  └─ Finalize persistent team perfectly matched to THIS project with comprehensive verification intelligence and character-consistent personas embedded throughout
+Role: Investigation expert for unknown territories and complex analysis
+Knowledge:
+  - Pattern recognition and anomaly detection
+  - Root cause analysis methodologies
+  - Exploratory investigation techniques
+  - Knowledge synthesis and insight generation
+Problem-Solving Focus:
+  - Uncover hidden dependencies and relationships
+  - Identify optimization opportunities
+  - Discover architectural improvements
+  - Research best practices and solutions
 ```
 
-## 🧠 **RESEARCH AGENT CREATION COMMANDS**
+**Architecture & Design Specialist**:
+```
+Role: System design and structural problem-solving expert
+Knowledge:
+  - Design pattern application and selection
+  - System decomposition and modularization
+  - Scalability and performance architectures
+  - Integration and communication patterns
+Problem-Solving Focus:
+  - Resolve architectural bottlenecks
+  - Design extensible solutions
+  - Optimize system structures
+  - Plan migration strategies
+```
 
-### **Execute Research Agent Intelligence with Persona Integration**
-**Create research agents dynamically based on project analysis with persona discovery:**
+**Data & Analytics Specialist**:
+```
+Role: Information processing and insight extraction expert
+Knowledge:
+  - Data modeling and structure optimization
+  - Query optimization and performance tuning
+  - Data flow and transformation patterns
+  - Analytics and reporting architectures
+Problem-Solving Focus:
+  - Optimize data access patterns
+  - Design efficient data pipelines
+  - Solve performance bottlenecks
+  - Extract actionable insights
+```
 
-- **Apply Adaptive Specialization with Verification Intelligence and Persona Discovery**: Create research agents perfectly matched to what THIS project needs investigation on with embedded coverage verification capabilities and natural persona archetype identification
-- **Define Project-Driven Scope with Gap Detection and Character Analysis**: Determine research boundaries by actual project characteristics discovered using systematic gap detection intelligence and persona role discovery patterns
-- **Execute Intelligent Coordination with Coverage Framework and Persona Interaction**: Coordinate research agents based on discovered project dependencies and integration patterns with embedded verification coordination protocols and natural character dynamics
-- **Apply Quality-Focused Discovery with Verification Integration and Character Consistency**: Identify quality frameworks, testing patterns, validation approaches, and persona consistency requirements specific to THIS project with multi-dimensional satisfaction verification and progressive validation checkpoints
+**Integration & Coordination Specialist**:
+```
+Role: System boundary and communication expert
+Knowledge:
+  - API design and versioning strategies
+  - Event-driven architectures
+  - Service orchestration patterns
+  - Protocol and format transformations
+Problem-Solving Focus:
+  - Resolve integration conflicts
+  - Design robust communication protocols
+  - Handle distributed system challenges
+  - Coordinate complex workflows
+```
 
-### **Execute Research-to-Persistent Agent Pipeline with Persona Creation**
-**Drive persistent agent creation through research findings and persona specifications:**
+**Quality & Reliability Specialist**:
+```
+Role: System robustness and excellence expert
+Knowledge:
+  - Testing strategies and coverage optimization
+  - Error handling and recovery patterns
+  - Performance profiling and optimization
+  - Monitoring and observability approaches
+Problem-Solving Focus:
+  - Identify quality gaps
+  - Design comprehensive test strategies
+  - Improve system reliability
+  - Optimize performance bottlenecks
+```
 
-- **Apply Discovery-Driven Design with Coverage Verification and Persona Integration**: Design persistent agents based on research agent discoveries about THIS project with comprehensive verification intelligence integration and XML-defined persona specifications
-- **Execute Embedded Intelligence with Gap Detection and Character Traits**: Embed research findings directly into persistent agent capabilities and knowledge with systematic gap detection patterns, coverage verification algorithms, and persona character definitions
-- **Build Adaptive Architecture with Verification Framework and Persona Coordination**: Determine agent team structure by research findings with embedded verification capabilities, XML-defined personas, and character-driven coordination protocols, not predetermined templates
-- **Enable Continuous Learning with Improvement Loop and Persona Evolution**: Improve both research process and persistent agents through project-specific experience with continuous improvement loop integration, feedback-based learning, and persona refinement based on execution effectiveness
+**Security & Compliance Specialist**:
+```
+Role: Risk mitigation and protection expert
+Knowledge:
+  - Security patterns and threat modeling
+  - Authentication and authorization strategies
+  - Data protection and privacy approaches
+  - Compliance and audit requirements
+Problem-Solving Focus:
+  - Identify security vulnerabilities
+  - Design secure architectures
+  - Implement protection strategies
+  - Ensure compliance requirements
+```
 
-### **Execute Persona-Enhanced Agent Creation Commands**
-**Generate XML persona definitions for each persistent agent:**
+### **Extended Problem-Solving Specialists**
 
-- **CREATE XML persona definitions** using persona.md framework templates for each discovered agent specialization
-- **POPULATE persona templates** with project-specific context, technology stack, and discovered patterns
-- **DEFINE character traits** that align with domain expertise and project communication patterns
-- **ESTABLISH coordination protocols** between personas using discovered team dynamics and interaction patterns
-- **INTEGRATE verification standards** into persona quality gates and validation approaches
-- **VALIDATE persona completeness** ensuring all XML elements properly defined and consistent with specializations
+**User Interface Specialist**:
+```
+Role: Interface architecture specialist for visual and interaction systems
+Knowledge: 
+  - Component composition and reusability patterns
+  - State management and data flow architectures
+  - User interaction and experience optimization
+  - Visual consistency and design system implementation
+Boundaries:
+  - Owns: User-facing components and interaction logic
+  - Never touches: Server-side logic, data persistence layers
+```
 
-## 🔬 **ADAPTIVE AGENT ARCHITECTURE COMMANDS**
+**Business Logic Specialist**:
+```
+Role: Core logic and data processing expert for complex operations
+Knowledge:
+  - Service orchestration and workflow management
+  - Data transformation and validation patterns
+  - Authentication and authorization strategies
+  - Integration patterns and API design
+Boundaries:
+  - Owns: Business rules, data processing, service coordination
+  - Never touches: Presentation layer, user interface logic
+```
 
-### **Execute Intelligence-Determined Structure with Persona Integration**
-**Determine optimal agent architecture based on research findings and persona specifications:**
+**Performance Optimization Specialist**:
+```
+Role: Efficiency and speed optimization expert
+Knowledge:
+  - Profiling and bottleneck analysis
+  - Caching strategies and implementations
+  - Algorithm optimization techniques
+  - Resource utilization patterns
+Problem-Solving Focus:
+  - Eliminate performance bottlenecks
+  - Optimize resource usage
+  - Improve response times
+  - Scale system capabilities
+```
 
-- **Apply Research-Driven File Organization with Verification Structure and Persona Framework**: Determine agent file structure by research discoveries about project patterns with embedded verification intelligence organization, XML persona definitions, and character-consistent file organization, not predetermined templates
-- **Define Project-Specific Boundaries with Coverage Mapping and Persona Coordination**: Determine agent scopes and responsibilities by discovered project architecture and natural boundaries using coverage verification algorithm with comprehensive area mapping and persona-driven boundary definitions
-- **Build Adaptive Coordination with Progressive Validation and Character Consistency**: Design agent coordination protocols based on discovered project dependencies and integration requirements with embedded verification coordination, progressive validation checkpoints, and persona interaction frameworks
-- **Align Quality-Aligned Standards with Verification Framework and Persona Excellence**: Align agent quality frameworks with discovered project quality patterns and validation approaches using multi-dimensional satisfaction verification, comprehensive quality validation standards, and persona-consistent excellence criteria
+**User Experience Specialist**:
+```
+Role: Human-system interaction optimization expert
+Knowledge:
+  - Usability patterns and best practices
+  - Accessibility and inclusivity approaches
+  - Interaction flow optimization
+  - Feedback and error communication
+Problem-Solving Focus:
+  - Improve user workflows
+  - Reduce cognitive load
+  - Enhance accessibility
+  - Optimize user journeys
+```
 
-### **Execute Dynamic Intelligence Embedding with Persona Context**
-**Provide each agent exactly the intelligence needed for THIS project with character definitions:**
+**Documentation & Knowledge Specialist**:
+```
+Role: Information organization and communication expert
+Knowledge:
+  - Documentation architectures
+  - Knowledge management systems
+  - Communication patterns
+  - Learning and onboarding strategies
+Problem-Solving Focus:
+  - Improve knowledge accessibility
+  - Design learning paths
+  - Create comprehensive guides
+  - Establish documentation standards
+```
 
-- **Integrate Discovered Pattern Integration with Verification Intelligence and Persona Character**: Embed research findings about project patterns directly into agent capabilities with coverage verification algorithms, gap detection intelligence, and XML-defined persona character traits
-- **Apply Context-Specific Knowledge with Gap Detection and Domain Persona**: Base project architecture, technology stack, and domain understanding on actual project analysis with systematic gap detection patterns, technical debt identification, and persona-specific expertise integration
-- **Execute Adaptive Workflow Integration with Coverage Framework and Character Coordination**: Tailor coordination and execution capabilities to discovered project characteristics with embedded verification coordination protocols, progressive validation, and persona-driven communication patterns
-- **Align Quality Framework with Comprehensive Verification and Persona Standards**: Align validation and quality assurance with discovered project standards and requirements using multi-dimensional satisfaction verification with technical, user experience, integration, quality completeness validation, and persona-consistent excellence standards
+**Innovation & Experimentation Specialist**:
+```
+Role: Creative problem-solving and future-thinking expert
+Knowledge:
+  - Emerging patterns and technologies
+  - Experimental approaches
+  - Proof-of-concept methodologies
+  - Risk assessment for new solutions
+Problem-Solving Focus:
+  - Explore alternative solutions
+  - Prototype new approaches
+  - Evaluate emerging patterns
+  - Drive innovation initiatives
+```
 
-### **Execute Persona File Generation Commands**
-**Create persistent agent files with embedded XML persona definitions:**
+## ✅ Phase 4: Validation & Optimization
 
-- **GENERATE agent files** in `.claude/agents/guild/` directory with persona-enhanced specializations
-- **EMBED XML persona definitions** at the beginning of each agent file using project-specific populated templates
-- **INTEGRATE persona traits** throughout agent capabilities and coordination protocols
-- **ESTABLISH character consistency** maintenance patterns for sustained persona adherence
-- **CONFIGURE persona-driven** quality standards and validation approaches
-- **VALIDATE agent-persona integration** ensuring seamless character and capability alignment
+### **Agent Capability Testing**
+🧪 **Knowledge Verification**:
+- Test each agent's understanding of project patterns
+- Verify boundary recognition and respect
+- Validate coordination protocol understanding
+- Confirm quality standard awareness
 
-## 🚀 **INTELLIGENCE EXECUTION COMMANDS**
+### **Conflict Detection & Resolution**
+⚡ **Boundary Conflicts**:
+- Identify overlapping ownership claims
+- Resolve shared file responsibilities  
+- Establish clear handoff protocols
+- Define integration testing ownership
 
-### **Execute Adaptive Process Flow with Persona Integration**
-**Determine optimal setup process based on project analysis with persona discovery:**
+### **Performance Benchmarking**
+📊 **Team Efficiency Metrics**:
+- Measure coordination overhead
+- Assess parallel execution potential
+- Identify bottleneck specialists
+- Optimize team composition
 
-- **Apply Dynamic Analysis Depth with Persona Discovery**: Adapt setup process to project complexity - simple projects get streamlined setup with basic personas, complex projects get comprehensive research with detailed character archetypes
-- **Deploy Intelligent Research with Character Investigation**: Create and deploy research agents based on what THIS project needs investigation on with embedded persona role discovery and natural character archetype identification
-- **Execute Adaptive Agent Creation with Persona Definitions**: Create persistent agents based on research findings with XML persona specifications, not predetermined categories
-- **Apply Project-Optimized Validation with Character Consistency**: Determine validation and testing approaches by discovered project characteristics, quality requirements, and persona-consistent excellence standards
+## 🚀 Phase 5: Continuous Learning Setup
 
-### **Execute Research-Driven Intelligence with Persona Framework** 
-**Guide setup process through research agent discoveries and character development:**
+### **Pattern Learning Framework**
+📝 **Initialize Learning Systems**:
+```yaml
+Learning Configuration:
+  Pattern Recognition:
+    - Track successful implementations
+    - Identify recurring issues
+    - Map effective solutions
+    
+  Performance Tracking:
+    - Execution time per specialist
+    - Coordination efficiency
+    - Quality metrics
+    
+  Knowledge Evolution:
+    - New patterns discovered
+    - Anti-patterns identified
+    - Best practices validated
+```
 
-- **Apply Discovery-Driven Flow with Persona Evolution**: Determine each step by previous research findings, project analysis results, and evolving persona character requirements
-- **Build Adaptive Coordination Setup with Character Dynamics**: Design team coordination protocols based on discovered project dependencies, integration patterns, and natural persona interaction frameworks
-- **Align Quality Framework with Persona Standards**: Align validation approaches with discovered project quality standards, testing patterns, and persona-consistent excellence criteria
-- **Enable Continuous Intelligence Enhancement with Character Learning**: Improve setup process based on research effectiveness, project-specific learning, and persona refinement through execution feedback
+### **Adaptive Improvement Protocol**
+🔄 **Enable Continuous Enhancement**:
+- Monitor agent effectiveness over time
+- Refine boundaries based on actual usage
+- Enhance coordination based on friction points
+- Update knowledge with project evolution
 
-## 🧠 **RESEARCH AGENT EXCELLENCE COMMANDS** 
+## 📋 Final Output Structure
 
-### **Apply Intelligence-First Research Philosophy**
-**Drive all setup decisions through adaptive intelligence:**
+### **Generated Agent Directory**
+```
+.claude/agents/guild/
+├── project-analysis.md      # Comprehensive project intelligence
+├── team-composition.md      # Agent team structure and rationale
+├── frontend-specialist.md   # Persona with embedded project knowledge
+├── backend-specialist.md    # Persona with embedded project knowledge
+├── data-specialist.md       # Persona with embedded project knowledge
+├── integration-specialist.md # Persona with embedded project knowledge
+├── quality-specialist.md    # Persona with embedded project knowledge
+├── coordination-protocols.md # Inter-agent communication patterns
+└── learning-framework.md    # Continuous improvement configuration
+```
 
-- **Execute Project-Specific Investigation**: Investigate exactly what THIS project needs, not generic categories
-- **Apply Discovery-Driven Architecture**: Design persistent agent team based on research discoveries about actual project requirements
-- **Execute Quality-Aligned Validation**: Discover quality frameworks through research rather than predetermined standards
-- **Build Adaptive Coordination Design**: Design team coordination protocols based on discovered project dependencies and integration patterns
-
-### **Execute Continuous Intelligence Enhancement**
-**Improve both research and persistent agents through project-specific learning:**
-
-- **Evolve Research Process**: Improve research approaches based on effectiveness in discovering project-specific patterns
-- **Grow Agent Intelligence**: Enhance persistent agent capabilities based on project experience and execution outcomes  
-- **Refine Quality Framework**: Evolve quality standards based on discovered project requirements and validation effectiveness
-- **Optimize Coordination Protocol**: Improve team coordination through experience with actual project characteristics and dependencies
-
-## Core Module Integration
-
-### **Agent Intelligence Integration**
-**CREATE using agents.md specialization patterns:**
-- **APPLY** adaptive specialist creation intelligence from agents.md
-- **USE** natural boundary detection patterns from agents.md
-- **IMPLEMENT** dynamic template generation from agents.md
-- **ESTABLISH** quality integration protocols from agents.md
-
-### **Workflow Intelligence Integration with Verification Framework**
-**PREPARE using workflow.md orchestration patterns with embedded verification:**
-- **DESIGN** coordination protocols using workflow.md intelligence with comprehensive coverage verification integration
-- **ESTABLISH** parallel execution capabilities from workflow.md with embedded gap detection and progressive validation
-- **CONFIGURE** validation frameworks using workflow.md directives with multi-dimensional satisfaction verification and iterative enhancement capabilities
-- **OPTIMIZE** integration patterns using workflow.md coordination intelligence with verification framework coordination protocols
-
-### **Unified Setup Execution with Verification Integration**
-**MAINTAIN consistency with core module directives and verification framework:**
-- **ALL agent creation** follows agents.md specialization intelligence with embedded coverage verification capabilities and gap detection integration
-- **ALL coordination setup** aligns with workflow.md orchestration patterns with comprehensive verification framework coordination protocols
-- **ALL research phases** implement both agent and workflow integration directives with systematic gap detection and progressive validation throughout
-- **ALL communication** maintains imperative command language from core modules with verification intelligence terminology integration
-- **ALL verification capabilities** integrate seamlessly across agents.md specialization patterns and workflow.md orchestration intelligence
-- **ALL quality assurance** embeds verification.md comprehensive validation framework throughout agent creation and coordination setup
+### **Success Metrics**
+✅ All project technologies covered by specialists  
+✅ Clear, non-overlapping agent boundaries established  
+✅ Project-specific patterns embedded in each agent  
+✅ Coordination protocols tested and validated  
+✅ Quality standards integrated throughout  
+✅ Learning framework initialized for continuous improvement
 
 ---
 
-**Core Philosophy**: Research projects deeply through adaptive research agents with embedded coverage verification, then create exactly the persistent agents needed based on discoveries with comprehensive verification intelligence integration. No predetermined categories, no hardcoded structures, no generic templates - pure intelligence-driven research and agent creation perfectly matched to THIS project's unique characteristics, patterns, and requirements with systematic gap detection, progressive validation, and complete satisfaction assurance embedded throughout the entire setup process.
+**Intelligence Principles**: 
+- **Discover** don't prescribe - let project characteristics drive agent creation
+- **Adapt** to project's actual needs vs generic templates  
+- **Embed** real project knowledge vs abstract capabilities
+- **Validate** agent effectiveness before activation
+- **Learn** continuously from execution experience

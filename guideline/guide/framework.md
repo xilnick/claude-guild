@@ -179,13 +179,13 @@ The Guild System represents a comprehensive framework for intelligent task execu
 ```xml
 <mandatory_core_integration>
   <requirement>ALL Guild system usage MUST follow core module patterns and integration directives</requirement>
-  <enforcement>Verify alignment with agents.md, workflow.md, and verification.md patterns</enforcement>
+  <enforcement>Verify alignment with agents.md and workflow.md patterns (verification integrated in workflow.md)</enforcement>
   <validation>Command language, coordination protocols, and quality standards MUST be consistent</validation>
   <violation_consequence>Non-compliant implementations MUST be corrected to align with core modules</violation_consequence>
   <compliance_check>
     <agents_alignment>Verify agent creation follows agents.md specialization intelligence</agents_alignment>
     <workflow_alignment>Confirm workflow execution follows workflow.md orchestration patterns</workflow_alignment>
-    <verification_alignment>Validate comprehensive verification follows verification.md framework</verification_alignment>
+    <verification_alignment>Validate comprehensive verification follows workflow.md embedded verification framework</verification_alignment>
     <command_language>Ensure consistent imperative command language throughout</command_language>
     <integration_protocols>Verify proper integration between all core modules</integration_protocols>
   </compliance_check>
@@ -230,7 +230,7 @@ The Guild System represents a comprehensive framework for intelligent task execu
     </workflow_validation>
     
     <integration_validation>
-      <core_module_alignment>Verify alignment with agents.md, workflow.md, verification.md patterns</core_module_alignment>
+      <core_module_alignment>Verify alignment with agents.md and workflow.md patterns</core_module_alignment>
       <anthropic_compliance>Confirm adherence to Anthropic best practices and patterns</anthropic_compliance>
       <quality_standards>Validate comprehensive quality assurance and excellence criteria</quality_standards>
       <continuous_improvement>Ensure learning and adaptation capabilities are integrated</continuous_improvement>
@@ -322,7 +322,7 @@ The Guild System represents a comprehensive framework for intelligent task execu
 - [ ] **CRITICAL**: Document gap-free delivery validation and stakeholder acceptance
 
 #### **Continuous Compliance**
-- [ ] **CRITICAL**: Maintain alignment with core module patterns (agents.md, workflow.md, verification.md)
+- [ ] **CRITICAL**: Maintain alignment with core module patterns (agents.md, workflow.md)
 - [ ] **CRITICAL**: Follow Anthropic best practices for structured prompting and reasoning
 - [ ] **CRITICAL**: Apply empirical testing and clear success criteria to all enhancements
 - [ ] **CRITICAL**: Enable continuous learning and improvement based on execution experience
