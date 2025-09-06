@@ -248,6 +248,53 @@ Establish operations boundaries: containerization, automation, deployment
 ✅ **Confirm learning integration**: Validate agents incorporate continuous improvement through feedback integration and pattern learning for enhanced effectiveness over time
 ✅ **Ensure verification framework integrity**: Confirm all agents maintain verification intelligence throughout their work with embedded quality standards and progressive validation checkpoints
 
+## Persona Framework Integration Commands
+
+### **XML-Based Character Definition Commands**
+**CREATE agents with structured persona definitions using persona.md framework:**
+- **GENERATE** XML persona definitions for each specialized agent using project-specific context discovered during setup research
+- **EMBED** character consistency patterns in agent creation through structured identity definitions with role, specialization, character traits, and professional background
+- **APPLY** domain expertise specifications through comprehensive expertise sections with domain knowledge, tools/methods, quality standards, and best practices
+- **ESTABLISH** clear boundaries and coordination protocols through structured boundary definitions with scope, limitations, handoff triggers, and conflict prevention
+- **IMPLEMENT** verification intelligence through embedded validation and quality standards with validation approaches, coverage frameworks, testing protocols, and quality gates
+- **ENSURE** integration compatibility through defined coordination and communication protocols with interface definitions, communication channels, and conflict resolution
+
+### **Character Consistency Maintenance Commands**
+**MAINTAIN agent personas throughout task execution using XML structure:**
+- **APPLY** identity reinforcement patterns to keep agents in character during complex interactions using periodic role reminders and trait maintenance
+- **MAINTAIN** communication style consistency through defined behavior patterns with vocabulary consistency, tone maintenance, and explanation style alignment
+- **REINFORCE** domain boundaries through established scope and limitation definitions preventing work overlap and maintaining expertise focus
+- **DEMONSTRATE** expertise consistency through embedded knowledge and best practices with natural exhibition of domain knowledge in problem-solving
+- **FOLLOW** verification standards embedded in persona quality gates and validation approaches ensuring character-consistent excellence criteria
+- **HONOR** integration protocols defined in persona coordination and interface definitions maintaining seamless character-driven collaboration
+
+### **Dynamic Persona Population Commands**
+**CUSTOMIZE persona templates based on project analysis and research findings:**
+- **REPLACE** placeholder variables with project-specific technology, architecture, and domain contexts discovered through research agent investigation
+- **INJECT** discovered project patterns and architectural characteristics into persona definitions using research findings about actual project requirements
+- **CONFIGURE** integration points based on actual project dependencies and coordination requirements identified during project analysis
+- **ALIGN** quality standards with project requirements and validation approaches discovered during setup research and quality framework investigation
+- **ESTABLISH** team dynamics through persona-based coordination protocols matched to project characteristics and discovered natural interaction patterns
+- **POPULATE** all XML sections with project-specific content ensuring complete character definition without placeholder variables remaining
+
+### **Persona Validation Integration Commands**
+**ENSURE persona completeness and consistency using validation framework:**
+- **VALIDATE** XML structure completeness and proper nesting of all persona elements following persona.md framework requirements
+- **VERIFY** content population with all placeholder variables replaced by project-specific information discovered through research
+- **CHECK** character consistency alignment across identity, behavior, and integration sections ensuring logical character development
+- **ASSESS** integration compatibility between multiple agent personas in the same team preventing character conflicts and ensuring natural coordination
+- **TEST** scenario coverage for common situations and edge cases relevant to project context ensuring persona robustness
+- **CONFIRM** quality standards integration ensuring persona validation approaches align with project quality frameworks and verification requirements
+
+### **Persona-Enhanced Agent Creation Integration**
+**INTEGRATE persona framework with existing agent creation patterns:**
+- **COMBINE** adaptive specialist creation intelligence from agents.md with XML persona definition framework for enhanced character-driven specialization
+- **ENHANCE** natural boundary detection patterns with persona-driven boundary definitions preventing character conflicts and role confusion
+- **INTEGRATE** quality integration protocols with persona-consistent validation approaches ensuring character-aligned excellence standards
+- **COORDINATE** verification intelligence embedding with persona quality gates creating comprehensive validation that maintains character consistency
+- **ALIGN** team composition optimization with persona interaction frameworks ensuring natural team dynamics and character-driven coordination
+- **EMBED** continuous improvement capabilities with persona evolution patterns allowing character refinement based on execution effectiveness
+
 ## Integration Commands
 
 ### **Workflow Module Coordination**
@@ -279,7 +326,9 @@ Establish operations boundaries: containerization, automation, deployment
 - **VERIFICATION VALIDATES** agent work through specialization-aware quality assurance
 - **SETUP CREATES** agents using this module's intelligence patterns with verification capabilities
 - **EXECUTION ACTIVATES** agents using workflow coordination protocols with continuous validation
+- **PERSONA FRAMEWORK** defines consistent character through XML-based specialization templates
 
 - **Execute in**: setup-command.md (intelligent scoped hiring process with verification)
 - **Apply through**: workflow-command.md (scoped team activation and coordination with validation)
 - **Integrates with**: verification.md (quality assurance and gap detection)
+- **Persona Framework**: persona.md (XML-based character consistency and specialization definitions)
