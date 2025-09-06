@@ -9,78 +9,78 @@ description: "Intelligent task execution using persistent project-specific agent
 
 ## Purpose
 
-Execute tasks efficiently using persistent, project-specialized agents with **mandatory human-in-the-middle approval**. Always reasons about user requirements first, presents comprehensive understanding and approach for approval, then executes with persistent agents. No execution begins without explicit user confirmation.
+Execute tasks efficiently using persistent, project-specialized agents with **mandatory human-in-the-middle approval**. Always reason about user requirements first, present comprehensive understanding and approach for approval, then execute with persistent agents. No execution begins without explicit user confirmation.
 
 ## 🚀 **HUMAN-IN-THE-MIDDLE EXECUTION FRAMEWORK**
 
 ### **Phase 0: MANDATORY REQUIREMENT REASONING & APPROVAL**
-**Claude Code MUST reason about user prompt and get approval before ANY execution:**
-🧠 **Requirement Analysis** (30-60s):
-- Deep analysis of user prompt to understand true intent and goals
+**Reason about user prompt and get approval before ANY execution:**
+🧠 **Execute Requirement Analysis** (30-60s):
+- Analyze user prompt deeply to understand true intent and goals
 - Identify potential ambiguities, missing context, or unclear requirements  
 - Reason about optimal approach and expected outcomes
 - Present comprehensive understanding for user validation
 
-📋 **Approval Gate** (USER DECISION REQUIRED):
-- **Requirements Understanding**: "Here's what I understand you want..."
-- **Proposed Approach**: "Here's how I plan to accomplish this..."
-- **Expected Outcomes**: "Here's what you can expect as results..."
+📋 **Execute Approval Gate** (USER DECISION REQUIRED):
+- **Present Requirements Understanding**: "Here's what I understand you want..."
+- **Present Proposed Approach**: "Here's how I plan to accomplish this..."
+- **Present Expected Outcomes**: "Here's what you can expect as results..."
 - **🚨 MANDATORY USER APPROVAL**: No execution begins until user confirms understanding is correct
 
 ### **Phase 1: Agent Availability Check & Auto-Setup**
-**Only after user approval, Claude Code checks for persistent agents:**
-⚡ **Agent Discovery** (5-10s): 
+**Only after user approval, check for persistent agents:**
+⚡ **Execute Agent Discovery** (5-10s): 
 - Check for existing persistent agents in `.claude/agents/guild/`
-- If no agents exist, automatically trigger setup using workflow intelligence
+- If no agents exist, TRIGGER setup using workflow intelligence
 - Load project context and agent specializations
 - Plan optimal agent coordination for approved task
 
 ### **Phase 2: Intelligent Agent Selection & Coordination**
-**Claude Code activates relevant persistent agents for approved parallel execution:**
+**Activate relevant persistent agents for approved parallel execution:**
 
 #### **Direct Execution** (Simple tasks - single persistent agent)
 ```
-🧠 Requirement Analysis: [detailed understanding of user intent] (30s)
-📋 APPROVAL REQUIRED: "I understand you want [X]. I'll approach this by [Y]. Expected outcome: [Z]. Proceed?"
+🧠 Execute Requirement Analysis: [detailed understanding of user intent] (30s)
+📋 REQUIRE APPROVAL: "I understand you want [X]. I'll approach this by [Y]. Expected outcome: [Z]. Proceed?"
 👤 USER APPROVES ✅
 
-⚡ Task Analysis: Simple - Using single specialist (5s)
-🤖 Activating: [ProjectSpecific]-Specialist
-🔧 Executing with embedded project knowledge (1-2min)
+⚡ Execute Task Analysis: Simple - Using single specialist (5s)
+🤖 Activate: [ProjectSpecific]-Specialist
+🔧 Execute with embedded project knowledge (1-2min)
 ✅ Complete - [summary of changes made]
 ```
 
 #### **Coordinated Execution** (Multi-component tasks - multiple persistent agents)
 ```  
-🧠 Requirement Analysis: [comprehensive understanding with scope breakdown] (45s)
-📋 APPROVAL REQUIRED: "I understand you need [multi-component analysis]. My approach: [coordination strategy]. Expected: [integrated outcome]. Proceed?"
+🧠 Execute Requirement Analysis: [comprehensive understanding with scope breakdown] (45s)
+📋 REQUIRE APPROVAL: "I understand you need [multi-component analysis]. My approach: [coordination strategy]. Expected: [integrated outcome]. Proceed?"
 👤 USER APPROVES ✅
 
-⚡ Task Analysis: Multi-component - Coordinating specialists (10s)
-🤖 Activating Persistent Agents:
+⚡ Execute Task Analysis: Multi-component - Coordinating specialists (10s)
+🤖 Activate Persistent Agents:
   ├─ 🤖 [Backend-Specialist]: [specific backend scope]
   ├─ 🤖 [Frontend-Specialist]: [specific frontend scope]  
   └─ 🤖 [Integration-Specialist]: [specific integration scope]
-🔧 Parallel Implementation (2-5min) - All specialists working simultaneously
-🔗 Coordinating Results (30s) - Integrating work streams
+🔧 Execute Parallel Implementation (2-5min) - All specialists working simultaneously
+🔗 Execute Coordinating Results (30s) - Integrating work streams
 ✅ Complete - [comprehensive summary]
 ```
 
 #### **Comprehensive Execution** (Complex architectural tasks - full persistent team)
 ```
-🧠 Requirement Analysis: [deep architectural understanding with risk assessment] (60s)
-📋 APPROVAL REQUIRED: "I understand this complex request: [architectural analysis]. Strategy: [orchestration plan]. Deliverables: [comprehensive outcomes]. This is a significant change - proceed?"
+🧠 Execute Requirement Analysis: [deep architectural understanding with risk assessment] (60s)
+📋 REQUIRE APPROVAL: "I understand this complex request: [architectural analysis]. Strategy: [orchestration plan]. Deliverables: [comprehensive outcomes]. This is a significant change - proceed?"
 👤 USER APPROVES ✅
 
-⚡ Task Analysis: Architectural - Orchestrating full specialist team (15s)
-🤖 Activating Full Persistent Team:
+⚡ Execute Task Analysis: Architectural - Orchestrating full specialist team (15s)
+🤖 Activate Full Persistent Team:
   ├─ 🤖 [Research-Specialist]: [investigation & discovery]
   ├─ 🤖 [Architecture-Specialist]: [design & patterns]
   ├─ 🤖 [Implementation-Specialists]: [parallel development work]
   ├─ 🤖 [Integration-Specialists]: [system connections]
   └─ 🤖 [Quality-Specialist]: [validation & testing]
-🔧 Orchestrated Implementation (5-12min) - Coordinated parallel execution
-🔗 Results Integration (1-2min) - Unifying all specialist outputs
+🔧 Execute Orchestrated Implementation (5-12min) - Coordinated parallel execution
+🔗 Execute Results Integration (1-2min) - Unifying all specialist outputs
 ✅ Complete - [architectural delivery summary]
 ```
 
@@ -93,8 +93,8 @@ Execute tasks efficiently using persistent, project-specialized agents with **ma
 
 ## 🧠 **INTELLIGENT PARALLEL EXECUTION ANALYSIS**
 
-### **Automatic Parallel vs Sequential Decision Making**
-**Claude Code automatically analyzes each task for optimal execution approach:**
+### **Execute Automatic Parallel vs Sequential Decision Making**
+**ANALYZE each task for optimal execution approach:**
 
 #### **Parallel Execution Analysis Framework**
 ```markdown
@@ -119,8 +119,8 @@ Execute tasks efficiently using persistent, project-specialized agents with **ma
 🔀 **Progressive Parallelization**: Start sequential, expand to parallel as understanding develops
 ```
 
-#### **Automatic Speedup Calculation**
-**Claude Code evaluates parallel execution ROI:**
+#### **Execute Automatic Speedup Calculation**
+**Evaluate parallel execution ROI:**
 ```yaml
 Parallel Execution Decision Matrix:
   
@@ -142,35 +142,35 @@ Parallel Execution Decision Matrix:
 
 ## 🚀 **MANDATORY REQUIREMENT REASONING PROCESS**
 
-### **Critical Requirement: ALWAYS REASON FIRST WITH PARALLEL ANALYSIS**
-**Before any execution, Claude Code MUST:**
+### **Execute Critical Requirement: ALWAYS REASON FIRST WITH PARALLEL ANALYSIS**
+**Before any execution, execute these steps:**
 
-#### **Step 1: Deep User Intent Analysis With Parallel Execution Planning**
+#### **Step 1: Natural Parallel Opportunity Discovery & User Intent Analysis**
 ```markdown
-## Requirement Understanding Process
+## Intelligent Requirement Understanding Process
 
 ### What I Understand:
 - [Detailed breakdown of user's actual request]
 - [Identified goals and success criteria]
 - [Context and constraints considered]
 
-### Parallel Execution Analysis:
-- [Task decomposition: Independent work streams identified]
-- [Parallelization ROI: Time savings vs coordination overhead calculation]
-- [Dependency mapping: Sequential requirements vs parallel opportunities]
-- [Optimal team size: Specialist count for maximum efficiency]
+### 🚀 Parallel Execution Opportunity Discovery:
+- [Natural boundary identification: "I notice this task involves [X, Y, Z] components that could work simultaneously"]
+- [Efficiency potential recognition: "This presents excellent parallel execution potential - significant time savings available"]
+- [Quality enhancement opportunity: "Multiple specialists working in parallel would provide more comprehensive coverage"]
+- [Speedup calculation: "Parallel approach: [X] minutes vs Sequential approach: [Y] minutes - [Z]x efficiency gain"]
 
-### Proposed Execution Strategy:
-- [Parallel vs Sequential decision with reasoning]
-- [Specific parallel agent coordination strategy]
-- [Expected speedup and time savings analysis]
-- [Integration approach for parallel work streams]
+### 💡 Intelligent Execution Strategy (Naturally Discovered):
+- [Parallel opportunity excitement: "This is perfect for coordinated parallel execution!"]
+- [Specialist deployment strategy: "Deploy [N] specialists simultaneously for maximum efficiency"]
+- [Integration excellence approach: "Seamless integration using established coordination protocols"]
+- [Quality assurance integration: "Built-in quality validation through specialist expertise"]
 
-### Expected Outcomes:
-- [Concrete results user can expect]
-- [Files that will be modified/created]
-- [Parallel execution timeline and efficiency gains]
-- [Quality standards that will be applied]
+### 🎯 Compelling Expected Outcomes:
+- [Dramatic efficiency results: "Complete in [X] minutes instead of [Y] minutes"]
+- [Superior quality promise: "More thorough coverage through specialist focus"]
+- [Comprehensive deliverables: "All aspects handled by domain experts simultaneously"]
+- [Professional excellence demonstration: "Sophisticated coordination for exceptional results"]
 ```
 
 #### **Step 2: MANDATORY APPROVAL GATE**
@@ -191,31 +191,39 @@ Parallel Execution Decision Matrix:
 
 ### **Example Reasoning Templates**
 
-#### **For Simple Tasks (Single Agent Execution):**
+#### **For Simple Tasks (Optimized Single Agent Execution):**
 ```
 🧠 I understand you want me to: [specific task]
-⚡ Parallel Analysis: Single-component task → One specialist execution (most efficient)
-📋 My approach: [methodology] using [specific specialist]
-⏱️ Expected timeline: [realistic time estimate] (optimized single-agent execution)
-🎯 You'll get: [specific deliverables]
-❓ Any questions or adjustments before I proceed?
+💡 Efficiency Analysis: This is perfectly suited for focused specialist execution
+🎯 Smart Approach: Deploy [Specialist-Type] with deep project knowledge for optimal results
+⚡ Efficiency Advantage: Single specialist focus delivers superior quality + speed
+⏱️ Timeline: [X] minutes (streamlined execution with embedded expertise)
+✨ You'll get: [specific deliverables with quality emphasis]
+🚀 Ready to proceed with this efficient approach?
 ```
 
-#### **For Complex Tasks (Parallel Execution Opportunity):**
+#### **For Complex Tasks (Exciting Parallel Execution Opportunity!):**
 ```
-🧠 I understand this complex request involves: [detailed breakdown]
-📊 Scope analysis: [components, dependencies, risks]
-⚡ Parallel Analysis: Multi-component task → [X] specialists in parallel
-   • Parallel Benefit: [X]x speedup ([Y] minutes vs [Z] minutes sequential)
-   • Coordination Strategy: [specific parallel coordination approach]
-   • Integration Plan: [how parallel work streams will be unified]
-📋 My approach: [detailed parallel execution methodology]
-👥 Parallel Team Plan: [specific agents working simultaneously]
-⏱️ Expected timeline: [optimized parallel execution timeline] 
-🎯 Deliverables: [comprehensive outcome list]
-⚠️ Potential challenges: [coordination complexity assessment]
-✅ Quality measures: [parallel validation and integration approach]
-❓ Does this parallel execution strategy align with your needs? Any adjustments?
+🧠 I understand this sophisticated request involves: [detailed breakdown]
+🔍 Discovery: I can see [X] distinct components that would benefit tremendously from parallel execution!
+💫 Parallel Execution Opportunity: This is PERFECT for coordinated specialist deployment!
+   
+🚀 Efficiency Breakthrough: [X] specialists working simultaneously
+   • Dramatic Speedup: [Y] minutes parallel vs [Z] minutes sequential = [A]x faster!
+   • Quality Enhancement: Each specialist focuses deeply on their domain expertise
+   • Comprehensive Coverage: All aspects handled by dedicated experts simultaneously
+   • Professional Excellence: Sophisticated coordination demonstrates advanced capabilities
+
+🎯 Parallel Deployment Strategy:
+👥 Specialist Team: [specific agents working simultaneously with excitement]
+🔗 Coordination Excellence: [seamless integration approach]
+⏱️ Timeline: [optimized parallel timeline with enthusiasm] 
+✨ Superior Deliverables: [comprehensive outcomes with quality emphasis]
+🛡️ Risk Mitigation: [parallel execution reduces risks through comprehensive coverage]
+🏆 Quality Assurance: [built-in validation through specialist expertise]
+
+🚀 This parallel execution approach will deliver exceptional results with maximum efficiency!
+❓ Excited to proceed with this coordinated specialist deployment?
 ```
 
 #### **For Ambiguous Requests:**
@@ -236,7 +244,7 @@ Parallel Execution Decision Matrix:
 
 ## 🤖 **PERSISTENT AGENT ACTIVATION**
 
-**Claude Code intelligently selects relevant persistent agents based on:**
+**Select relevant persistent agents intelligently based on:**
 
 ### **Task-Agent Matching Indicators**
 - **File Scope**: Multiple files/directories = activate relevant domain specialists
@@ -282,8 +290,8 @@ Architectural Change:
 
 ## 🚀 **OPTIMIZED PERSISTENT AGENT COORDINATION**
 
-### **Agent Activation Strategy**
-**Using Task tool with pre-configured persistent agents:**
+### **Execute Agent Activation Strategy**
+**Use Task tool with pre-configured persistent agents:**
 
 ```markdown
 ## Persistent Agent Coordination Pattern
@@ -304,8 +312,8 @@ Architectural Change:
 - **Optimized Integration**: Established protocols for seamless result coordination
 ```
 
-### **Pre-Configured Conflict Prevention**
-**Persistent agents have established, optimized coordination:**
+### **Execute Pre-Configured Conflict Prevention**
+**Use persistent agents with established, optimized coordination:**
 
 #### **Embedded Boundary Intelligence**
 - **Pre-Allocated Files**: Each persistent agent owns specific file/directory domains
@@ -351,8 +359,8 @@ Pre-Configured Persistent Agent Boundaries:
 
 ## 🧠 **INTELLIGENT SUB-AGENT COORDINATION**
 
-### **Dynamic Sub-Agent Selection**
-**Claude Code intelligently chooses optimal sub-agent combinations:**
+### **Execute Dynamic Sub-Agent Selection**
+**Choose optimal sub-agent combinations intelligently:**
 
 #### **Task Pattern Recognition**
 ```yaml
@@ -372,8 +380,8 @@ Pre-Configured Persistent Agent Boundaries:
   - Integration: Feature delivery with architecture alignment
 ```
 
-### **Sub-Agent Communication Protocol**
-**Non-blocking coordination between parallel sub-agents:**
+### **Execute Sub-Agent Communication Protocol**
+**Coordinate non-blocking communication between parallel sub-agents:**
 
 #### **Shared Context System**
 - **Project Context**: All sub-agents access .guild/context.md
@@ -401,10 +409,51 @@ Pre-Configured Persistent Agent Boundaries:
 - Quality assurance embedded in each sub-agent's work
 ```
 
-## 🛠️ **TASK TOOL USAGE PATTERNS**
+## 🛠️ **PERSONA-ENHANCED TASK TOOL USAGE PATTERNS**
 
-### **Proactive Sub-Agent Spawning with Task Tool**
-**Claude Code uses Task tool for true parallel execution:**
+### **Execute Persona-Driven Parallel Execution with Task Tool**
+**Leverage agent personas to enhance Task tool effectiveness through specialized contexts:**
+
+#### **Persona-Context Integration Pattern**
+```markdown
+## Persona-Enhanced Task Coordination
+
+### Specialization-Driven Task Generation:
+- Agent personas provide specialized context and domain expertise to Task descriptions
+- Each Task includes persona's embedded project knowledge and specialized perspective
+- Task coordination leverages persona expertise for natural boundary definition
+- Integration happens through persona-specific coordination protocols
+
+### Context-Rich Task Execution:
+- Backend-Persona Tasks include embedded API patterns and project-specific backend knowledge
+- Frontend-Persona Tasks include component patterns and project-specific UI conventions  
+- Integration-Persona Tasks include interface definitions and project-specific coordination patterns
+- Quality-Persona Tasks include validation approaches and project-specific quality standards
+```
+
+### **Persona-Enhanced vs Generic Task Patterns**
+
+#### **Enhanced Persona-Driven Approach:**
+```markdown
+Task 1 - [Project]-Backend-Persona:
+- subagent_type: "general-purpose"
+- description: "Backend authentication using embedded project patterns"
+- prompt: "As [Project]-Backend-Persona with embedded knowledge of this project's API patterns, authentication flows, and error handling conventions, implement JWT authentication endpoints. Apply project-specific backend patterns for user login/signup/logout. Use established middleware patterns and follow project's security conventions."
+
+Task 2 - [Project]-Frontend-Persona:  
+- subagent_type: "general-purpose"
+- description: "Frontend authentication using project UI patterns"
+- prompt: "As [Project]-Frontend-Persona with embedded knowledge of this project's component architecture, state management, and styling patterns, create authentication UI components. Follow established component patterns, use project's authentication state management approach, and apply project-specific styling conventions."
+```
+
+#### **Enhanced Benefits:**
+- **Immediate Context**: No ramp-up time - personas start with full project knowledge
+- **Pattern Consistency**: FOLLOW established project patterns in all work
+- **Natural Integration**: Personas understand interface requirements with other project components
+- **Quality Alignment**: Built-in validation using project-specific quality standards
+
+### **Execute Traditional Sub-Agent Spawning with Task Tool**
+**Use Task tool for parallel execution:**
 
 #### **Basic Parallel Pattern**
 ```markdown
@@ -472,7 +521,7 @@ Task 6 - Integration Specialist:
 - prompt: "Integrate all chat components ensuring proper WebSocket connection lifecycle, message synchronization, and error handling across the system."
 ```
 
-### **Sub-Agent Coordination Strategies**
+### **Execute Sub-Agent Coordination Strategies**
 
 #### **Scope Isolation Pattern**
 ```yaml
@@ -506,7 +555,7 @@ File-Based Boundaries:
 3. **Validation Specialist** ensures type consistency across system
 ```
 
-### **Result Integration Framework**
+### **Execute Result Integration Framework**
 
 #### **Sequential Integration Pattern**
 ```markdown
@@ -547,7 +596,7 @@ File-Based Boundaries:
 
 ## 🚀 **NON-BLOCKING EXECUTION EXCELLENCE**
 
-### **Persistent Agent Performance Optimization**
+### **Execute Persistent Agent Performance Optimization**
 ```yaml
 Execution Timing:
   Sequential Approach: 15-30 minutes for complex tasks
@@ -555,7 +604,7 @@ Execution Timing:
   Performance Gain: 5-10x faster through pre-configured coordination + project knowledge
 ```
 
-### **Persistent Agent Effectiveness Metrics**
+### **Execute Persistent Agent Effectiveness Metrics**
 ```yaml
 Simple Tasks (1-2 components):
   - Persistent Agents: 1 specialist (instant activation with project context)
@@ -572,7 +621,7 @@ Complex Tasks (6+ components):
   - Coordination: Pre-established protocols eliminate coordination overhead
 ```
 
-### **Persistent Agent Learning & Enhancement**
+### **Execute Persistent Agent Learning & Enhancement**
 ```markdown
 ## Continuous Agent Intelligence Enhancement
 
@@ -591,31 +640,54 @@ Complex Tasks (6+ components):
 
 ## 🔗 **HUMAN-IN-THE-MIDDLE EXCELLENCE PRINCIPLES**
 
-### **Mandatory Approval Intelligence**
-- **Always Reason First**: Deep requirement analysis before any execution begins
-- **Complete Understanding**: Demonstrate comprehensive grasp of user intent and goals
-- **Clear Communication**: Present approach, timeline, and expected outcomes transparently  
-- **Explicit Approval**: No execution without confirmed user authorization
+### **Execute Mandatory Approval Intelligence**
+- **Always Reason First**: Execute deep requirement analysis before any execution begins
+- **Demonstrate Complete Understanding**: Show comprehensive grasp of user intent and goals
+- **Present Clear Communication**: Present approach, timeline, and expected outcomes transparently  
+- **Require Explicit Approval**: No execution without confirmed user authorization
 
-### **Project-Optimized Intelligence** 
-- **Instant Post-Approval Activation**: Persistent agents activate immediately after user approval
-- **Optimal Team Composition**: Pre-configured teams perfectly sized for approved task complexity
-- **Zero Setup Coordination**: Pre-established protocols enable immediate parallel execution after approval
-- **Intelligent Integration**: Embedded integration patterns ensure seamless coordination of approved work
+### **Execute Project-Optimized Intelligence** 
+- **Activate Instant Post-Approval**: Activate persistent agents immediately after user approval
+- **Apply Optimal Team Composition**: Use pre-configured teams perfectly sized for approved task complexity
+- **Execute Zero Setup Coordination**: Use pre-established protocols for immediate parallel execution after approval
+- **Apply Intelligent Integration**: Use embedded integration patterns for seamless coordination of approved work
 
-### **Persistent Agent Advantages**
-- **Superior Speed**: 5-12x faster execution through embedded project knowledge + pre-configured coordination
-- **Enhanced Quality**: Project-specific expertise ensures comprehensive domain coverage
-- **Maximum Reliability**: Pre-established boundaries eliminate conflicts and errors
-- **Perfect Scalability**: Handles any approved complexity through optimized persistent specialist orchestration
+### **Apply Persistent Agent Advantages**
+- **Deliver Superior Speed**: Execute 5-12x faster through embedded project knowledge + pre-configured coordination
+- **Provide Enhanced Quality**: Use project-specific expertise for comprehensive domain coverage
+- **Ensure Maximum Reliability**: Use pre-established boundaries to eliminate conflicts and errors
+- **Enable Perfect Scalability**: Handle any approved complexity through optimized persistent specialist orchestration
 
-### **Exceptional User Experience**
-- **Perfect Alignment**: Mandatory reasoning ensures 100% alignment with user intent
-- **Transparent Process**: Complete visibility into understanding, approach, and expected outcomes
-- **User Control**: Explicit approval gates give users full control over execution
-- **Predictable Performance**: Consistent, exceptional speedup through persistent optimization after approval
-- **Quality Assurance**: Project-specific specialists ensure comprehensive validation of approved work
-- **Continuous Enhancement**: Both reasoning and persistent agents improve through experience over time
+### **Deliver Exceptional User Experience**
+- **Ensure Perfect Alignment**: Use mandatory reasoning to ensure 100% alignment with user intent
+- **Provide Transparent Process**: Give complete visibility into understanding, approach, and expected outcomes
+- **Maintain User Control**: Use explicit approval gates to give users full control over execution
+- **Deliver Predictable Performance**: Provide consistent, exceptional speedup through persistent optimization after approval
+- **Execute Quality Assurance**: Use project-specific specialists for comprehensive validation of approved work
+- **Enable Continuous Enhancement**: Improve both reasoning and persistent agents through experience over time
+
+## Core Module Integration
+
+### **Execute Workflow Intelligence Integration**
+**Execute using workflow.md intelligence patterns:**
+- **Apply** adaptive intelligence execution system from workflow.md
+- **Use** context-aware task analysis from workflow.md
+- **Implement** persona-driven parallel coordination from workflow.md
+- **Coordinate** using intelligent execution framework from workflow.md
+
+### **Execute Agent Intelligence Integration**
+**Activate using agents.md specialization patterns:**
+- **Create** specialists using adaptive specialist framework from agents.md
+- **Deploy** agents using natural boundary detection from agents.md
+- **Coordinate** using persona-enhanced parallel execution from agents.md
+- **Integrate** using quality integration protocols from agents.md
+
+### **Execute Unified Command Execution**
+**Maintain consistency with core module directives:**
+- **Align all coordination commands** with workflow.md orchestration patterns
+- **Follow agents.md specialization intelligence** for all agent activation
+- **Implement both workflow and agent integration directives** for all execution paths
+- **Maintain imperative command language** from core modules for all communication
 
 ---
 

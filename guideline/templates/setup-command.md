@@ -4,132 +4,155 @@
 name: guild-setup  
 model: sonnet
 thinking_mode: ultrathink
-description: "Pure Claude Code intelligence-driven persistent agent creation through adaptive research"
+description: "Intelligence-driven persistent agent creation through adaptive research"
 ---
 
 ## Purpose
 
-Let Claude Code intelligently analyze your project and create exactly the research agents and persistent specialists needed. No predetermined categories, no hardcoded structures - pure adaptive intelligence that discovers optimal agent architecture through deep project research.
+Analyze projects intelligently and create exactly the research agents and persistent specialists needed. No predetermined categories, no hardcoded structures - pure adaptive intelligence that discovers optimal agent architecture through deep project research.
 
-## 🔬 **PURE INTELLIGENCE-DRIVEN RESEARCH & AGENT CREATION**
+## 🔬 **INTELLIGENCE-DRIVEN RESEARCH & AGENT CREATION**
 
-### **Adaptive Research Intelligence**
-**Claude Code intelligently determines what research is needed and creates appropriate research agents:**
+### **Execute Adaptive Research Intelligence**
+**Determine what research is needed and create appropriate research agents:**
 
 ```
-🧠 "Analyzing project to determine optimal research approach..." 
-🔍 "Creating research agents based on project characteristics discovered..."
-🤖 "Research agents investigating project-specific patterns and requirements..."
-📊 "Synthesizing research findings to design optimal persistent agent architecture..."
-✅ "Creating persistent agents perfectly matched to discovered project needs..."
+🧠 Analyze project to determine optimal research approach
+🔍 Create research agents based on project characteristics discovered
+🤖 Deploy research agents to investigate project-specific patterns and requirements
+📊 Synthesize research findings to design optimal persistent agent architecture
+✅ Create persistent agents perfectly matched to discovered project needs
 ```
 
-**No predetermined phases, categories, or agent types - Claude Code determines everything based on intelligent project analysis.**
+**Determine everything based on intelligent project analysis - no predetermined phases, categories, or agent types.**
 
-### **Research-First Approach** 
-**Claude Code creates exactly the research agents needed to understand THIS project:**
+### **Execute Research-First Approach** 
+**Create exactly the research agents needed to understand THIS project:**
 
-- **Adaptive Research Team**: Claude Code determines optimal research specializations based on project complexity, technology stack, domain characteristics, and architectural patterns discovered
-- **Project-Specific Investigation**: Research agents investigate exactly what THIS project needs - no generic templates or predetermined research areas  
-- **Intelligent Synthesis**: Research findings drive creation of perfectly matched persistent agents with embedded project knowledge
-- **Quality-Driven Discovery**: Research agents identify quality patterns, testing approaches, and validation requirements specific to THIS project
+- **Build Adaptive Research Team**: Determine optimal research specializations based on project complexity, technology stack, domain characteristics, and architectural patterns discovered
+- **Conduct Project-Specific Investigation**: Deploy research agents to investigate exactly what THIS project needs - no generic templates or predetermined research areas  
+- **Apply Intelligent Synthesis**: Drive creation of perfectly matched persistent agents with embedded project knowledge through research findings
+- **Execute Quality-Driven Discovery**: Identify quality patterns, testing approaches, and validation requirements specific to THIS project
 
-### **Dynamic Agent Architecture Discovery**
-**Based on research findings, Claude Code intelligently designs optimal persistent agent team:**
+### **Execute Dynamic Agent Architecture Discovery**
+**Design optimal persistent agent team based on research findings:**
 
-#### **Intelligent Agent Creation Process**
+#### **Agent Creation Process Commands**
 ```
 🔬 Research Agent Deployment: 
-  ├─ Claude Code creates research agents based on project analysis
-  ├─ Research agents investigate project-specific patterns and requirements
-  ├─ Findings synthesized to identify optimal specialization boundaries
-  └─ Persistent agent architecture designed based on discoveries
+  ├─ Create research agents based on project analysis
+  ├─ Deploy research agents to investigate project-specific patterns and requirements
+  ├─ Synthesize findings to identify optimal specialization boundaries
+  └─ Design persistent agent architecture based on discoveries
 
 🤖 Persistent Agent Creation:
-  ├─ Creating agents perfectly matched to discovered project characteristics
-  ├─ Embedding research findings and project-specific patterns
-  ├─ Establishing coordination protocols based on discovered dependencies
-  └─ Configuring quality frameworks based on discovered project standards
+  ├─ Create agents perfectly matched to discovered project characteristics
+  ├─ Embed research findings and project-specific patterns
+  ├─ Establish coordination protocols based on discovered dependencies
+  └─ Configure quality frameworks based on discovered project standards
 
 ✅ Team Optimization:
-  ├─ Validating agent coverage matches project requirements
-  ├─ Optimizing coordination based on discovered integration patterns  
-  ├─ Testing workflows against discovered project characteristics
-  └─ Finalizing persistent team perfectly matched to THIS project
+  ├─ Validate agent coverage matches project requirements
+  ├─ Optimize coordination based on discovered integration patterns  
+  ├─ Test workflows against discovered project characteristics
+  └─ Finalize persistent team perfectly matched to THIS project
 ```
 
-## 🧠 **INTELLIGENT RESEARCH AGENT CREATION**
+## 🧠 **RESEARCH AGENT CREATION COMMANDS**
 
-### **Research Agent Intelligence**
-**Claude Code creates research agents dynamically based on project analysis:**
+### **Execute Research Agent Intelligence**
+**Create research agents dynamically based on project analysis:**
 
-- **Adaptive Specialization**: Research agents perfectly matched to what THIS project needs investigation on
-- **Project-Driven Scope**: Research boundaries determined by actual project characteristics discovered
-- **Intelligent Coordination**: Research agents coordinate based on discovered project dependencies and integration patterns
-- **Quality-Focused Discovery**: Research agents identify quality frameworks, testing patterns, and validation approaches specific to THIS project
+- **Apply Adaptive Specialization**: Create research agents perfectly matched to what THIS project needs investigation on
+- **Define Project-Driven Scope**: Determine research boundaries by actual project characteristics discovered
+- **Execute Intelligent Coordination**: Coordinate research agents based on discovered project dependencies and integration patterns
+- **Apply Quality-Focused Discovery**: Identify quality frameworks, testing patterns, and validation approaches specific to THIS project
 
-### **Research-to-Persistent Agent Pipeline**
-**Research findings drive persistent agent creation:**
+### **Execute Research-to-Persistent Agent Pipeline**
+**Drive persistent agent creation through research findings:**
 
-- **Discovery-Driven Design**: Persistent agents designed based on research agent discoveries about THIS project
-- **Embedded Intelligence**: Research findings embedded directly into persistent agent capabilities and knowledge
-- **Adaptive Architecture**: Agent team structure determined by research findings, not predetermined templates
-- **Continuous Learning**: Both research process and persistent agents improve through project-specific experience
+- **Apply Discovery-Driven Design**: Design persistent agents based on research agent discoveries about THIS project
+- **Execute Embedded Intelligence**: Embed research findings directly into persistent agent capabilities and knowledge
+- **Build Adaptive Architecture**: Determine agent team structure by research findings, not predetermined templates
+- **Enable Continuous Learning**: Improve both research process and persistent agents through project-specific experience
 
-## 🔬 **ADAPTIVE AGENT ARCHITECTURE**
+## 🔬 **ADAPTIVE AGENT ARCHITECTURE COMMANDS**
 
-### **Intelligence-Determined Structure**
-**Claude Code determines optimal agent architecture based on research findings:**
+### **Execute Intelligence-Determined Structure**
+**Determine optimal agent architecture based on research findings:**
 
-- **Research-Driven File Organization**: Agent file structure determined by research discoveries about project patterns, not predetermined templates
-- **Project-Specific Boundaries**: Agent scopes and responsibilities determined by discovered project architecture and natural boundaries  
-- **Adaptive Coordination**: Agent coordination protocols designed based on discovered project dependencies and integration requirements
-- **Quality-Aligned Standards**: Agent quality frameworks aligned with discovered project quality patterns and validation approaches
+- **Apply Research-Driven File Organization**: Determine agent file structure by research discoveries about project patterns, not predetermined templates
+- **Define Project-Specific Boundaries**: Determine agent scopes and responsibilities by discovered project architecture and natural boundaries  
+- **Build Adaptive Coordination**: Design agent coordination protocols based on discovered project dependencies and integration requirements
+- **Align Quality-Aligned Standards**: Align agent quality frameworks with discovered project quality patterns and validation approaches
 
-### **Dynamic Intelligence Embedding**
-**Each agent receives exactly the intelligence needed for THIS project:**
+### **Execute Dynamic Intelligence Embedding**
+**Provide each agent exactly the intelligence needed for THIS project:**
 
-- **Discovered Pattern Integration**: Research findings about project patterns embedded directly into agent capabilities
-- **Context-Specific Knowledge**: Project architecture, technology stack, and domain understanding based on actual project analysis
-- **Adaptive Workflow Integration**: Coordination and execution capabilities tailored to discovered project characteristics
-- **Quality Framework Alignment**: Validation and quality assurance aligned with discovered project standards and requirements
+- **Integrate Discovered Pattern Integration**: Embed research findings about project patterns directly into agent capabilities
+- **Apply Context-Specific Knowledge**: Base project architecture, technology stack, and domain understanding on actual project analysis
+- **Execute Adaptive Workflow Integration**: Tailor coordination and execution capabilities to discovered project characteristics
+- **Align Quality Framework**: Align validation and quality assurance with discovered project standards and requirements
 
-## 🚀 **PURE INTELLIGENCE EXECUTION**
+## 🚀 **INTELLIGENCE EXECUTION COMMANDS**
 
-### **Adaptive Process Flow**
-**Claude Code determines optimal setup process based on project analysis:**
+### **Execute Adaptive Process Flow**
+**Determine optimal setup process based on project analysis:**
 
-- **Dynamic Analysis Depth**: Setup process adapts to project complexity - simple projects get streamlined setup, complex projects get comprehensive research
-- **Intelligent Research Deployment**: Research agents created and deployed based on what THIS project needs investigation on
-- **Adaptive Agent Creation**: Persistent agents created based on research findings, not predetermined categories
-- **Project-Optimized Validation**: Validation and testing approaches determined by discovered project characteristics and quality requirements
+- **Apply Dynamic Analysis Depth**: Adapt setup process to project complexity - simple projects get streamlined setup, complex projects get comprehensive research
+- **Deploy Intelligent Research**: Create and deploy research agents based on what THIS project needs investigation on
+- **Execute Adaptive Agent Creation**: Create persistent agents based on research findings, not predetermined categories
+- **Apply Project-Optimized Validation**: Determine validation and testing approaches by discovered project characteristics and quality requirements
 
-### **Research-Driven Intelligence** 
-**Setup process guided by research agent discoveries:**
+### **Execute Research-Driven Intelligence** 
+**Guide setup process through research agent discoveries:**
 
-- **Discovery-Driven Flow**: Each step determined by previous research findings and project analysis results
-- **Adaptive Coordination Setup**: Team coordination protocols designed based on discovered project dependencies and integration patterns
-- **Quality Framework Alignment**: Validation approaches aligned with discovered project quality standards and testing patterns
-- **Continuous Intelligence Enhancement**: Setup process improves based on research effectiveness and project-specific learning
+- **Apply Discovery-Driven Flow**: Determine each step by previous research findings and project analysis results
+- **Build Adaptive Coordination Setup**: Design team coordination protocols based on discovered project dependencies and integration patterns
+- **Align Quality Framework**: Align validation approaches with discovered project quality standards and testing patterns
+- **Enable Continuous Intelligence Enhancement**: Improve setup process based on research effectiveness and project-specific learning
 
-## 🧠 **RESEARCH AGENT EXCELLENCE** 
+## 🧠 **RESEARCH AGENT EXCELLENCE COMMANDS** 
 
-### **Intelligence-First Research Philosophy**
-**Research agents drive all setup decisions through adaptive intelligence:**
+### **Apply Intelligence-First Research Philosophy**
+**Drive all setup decisions through adaptive intelligence:**
 
-- **Project-Specific Investigation**: Research agents investigate exactly what THIS project needs, not generic categories
-- **Discovery-Driven Architecture**: Persistent agent team designed based on research discoveries about actual project requirements
-- **Quality-Aligned Validation**: Quality frameworks discovered through research rather than predetermined standards
-- **Adaptive Coordination Design**: Team coordination protocols designed based on discovered project dependencies and integration patterns
+- **Execute Project-Specific Investigation**: Investigate exactly what THIS project needs, not generic categories
+- **Apply Discovery-Driven Architecture**: Design persistent agent team based on research discoveries about actual project requirements
+- **Execute Quality-Aligned Validation**: Discover quality frameworks through research rather than predetermined standards
+- **Build Adaptive Coordination Design**: Design team coordination protocols based on discovered project dependencies and integration patterns
 
-### **Continuous Intelligence Enhancement**
-**Both research and persistent agents improve through project-specific learning:**
+### **Execute Continuous Intelligence Enhancement**
+**Improve both research and persistent agents through project-specific learning:**
 
-- **Research Process Evolution**: Research approaches improve based on effectiveness in discovering project-specific patterns
-- **Agent Intelligence Growth**: Persistent agents enhance capabilities based on project experience and execution outcomes  
-- **Quality Framework Refinement**: Quality standards evolve based on discovered project requirements and validation effectiveness
-- **Coordination Protocol Optimization**: Team coordination improves through experience with actual project characteristics and dependencies
+- **Evolve Research Process**: Improve research approaches based on effectiveness in discovering project-specific patterns
+- **Grow Agent Intelligence**: Enhance persistent agent capabilities based on project experience and execution outcomes  
+- **Refine Quality Framework**: Evolve quality standards based on discovered project requirements and validation effectiveness
+- **Optimize Coordination Protocol**: Improve team coordination through experience with actual project characteristics and dependencies
+
+## Core Module Integration
+
+### **Agent Intelligence Integration**
+**CREATE using agents.md specialization patterns:**
+- **APPLY** adaptive specialist creation intelligence from agents.md
+- **USE** natural boundary detection patterns from agents.md
+- **IMPLEMENT** dynamic template generation from agents.md
+- **ESTABLISH** quality integration protocols from agents.md
+
+### **Workflow Intelligence Integration**
+**PREPARE using workflow.md orchestration patterns:**
+- **DESIGN** coordination protocols using workflow.md intelligence
+- **ESTABLISH** parallel execution capabilities from workflow.md
+- **CONFIGURE** validation frameworks using workflow.md directives
+- **OPTIMIZE** integration patterns using workflow.md coordination intelligence
+
+### **Unified Setup Execution**
+**MAINTAIN consistency with core module directives:**
+- **ALL agent creation** follows agents.md specialization intelligence
+- **ALL coordination setup** aligns with workflow.md orchestration patterns
+- **ALL research phases** implement both agent and workflow integration directives
+- **ALL communication** maintains imperative command language from core modules
 
 ---
 
-**Core Philosophy**: Trust Claude Code's pure intelligence to research your project deeply through adaptive research agents, then create exactly the persistent agents needed based on discoveries. No predetermined categories, no hardcoded structures, no generic templates - pure intelligence-driven research and agent creation perfectly matched to THIS project's unique characteristics, patterns, and requirements.
+**Core Philosophy**: Research projects deeply through adaptive research agents, then create exactly the persistent agents needed based on discoveries. No predetermined categories, no hardcoded structures, no generic templates - pure intelligence-driven research and agent creation perfectly matched to THIS project's unique characteristics, patterns, and requirements.
