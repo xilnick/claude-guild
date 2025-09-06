@@ -14,16 +14,40 @@
 2. **Present** complete understanding for validation  
 3. **Describe** execution approach and coordination plan
 4. **Define** expected outcomes and deliverables
-5. **REQUIRE** explicit user authorization before proceeding
+5. **CONFIRM** all execution will use agents (NO direct execution)
+6. **REQUIRE** explicit user authorization before proceeding
+
+## 🔒 MANDATORY: Agent-Only Execution (ABSOLUTELY CRITICAL)
+
+**CRITICAL REQUIREMENT: ALL task execution MUST use agents - NO EXCEPTIONS**
+- **BLOCK** any execution that attempts to bypass agent coordination
+- **VERIFY** ALL work flows through either dynamic or persistent agents
+- **HALT** immediately if direct execution is attempted
+- **ENFORCE** Task tool usage for all agent coordination
+- **DOCUMENT** all agent activations and coordination patterns
+
+**❌ CRITICAL VIOLATIONS - IMMEDIATE HALT REQUIRED:**
+- ANY direct tool usage without agents
+- ANY execution outside agent framework
+- ANY attempt to bypass agent coordination
+- ANY task completion without agent verification
+
+**✅ REQUIRED AGENT USAGE PATTERNS:**
+- ALL file operations through agents
+- ALL code modifications through agents  
+- ALL analysis and research through agents
+- ALL testing and validation through agents
+- ALL integration work through agents
 
 ## Core Execution Intelligence
 
-**Adapt workflow based on task characteristics:**
+**Adapt workflow based on task characteristics (ALWAYS through agents):**
 - **Analyze** requirements comprehensively before execution
-- **Select** appropriate execution path (direct/coordinated/comprehensive)  
+- **Select** appropriate agent-based execution path (single/coordinated/comprehensive)  
 - **Deploy** optimal agent team based on actual complexity
-- **Coordinate** parallel execution when beneficial
-- **Verify** complete satisfaction before completion
+- **Coordinate** parallel agent execution when beneficial
+- **Verify** complete satisfaction through agent validation
+- **ENFORCE** all work flows through agents - NO direct execution
 
 ## Comprehensive Coverage Analysis
 
@@ -72,12 +96,14 @@ Satisfaction: Multi-dimensional validation of quality
 - **CONFIRM** integration testing and quality assurance
 - **DOCUMENT** gap-free delivery validation
 
-## Execution Path Selection
+## Execution Path Selection (All Using Agents)
 
-**Choose execution approach intelligently:**
-- **Direct execution**: Simple, clear tasks with single specialist
-- **Coordinated execution**: Multi-component tasks requiring specialist coordination
-- **Comprehensive execution**: Complex architecture requiring research + implementation teams
+**Choose agent-based execution approach intelligently:**
+- **Single-agent execution**: Simple, clear tasks with one specialist agent
+- **Coordinated agent execution**: Multi-component tasks requiring multiple specialist agents
+- **Comprehensive agent execution**: Complex architecture requiring full agent team orchestration
+
+**🚨 CRITICAL: ALL paths MUST use agents - NO direct execution allowed**
 
 ## Dynamic Agent Creation Capability
 
@@ -156,6 +182,39 @@ Satisfaction: Multi-dimensional validation of quality
 - Intelligence-driven specialization supported
 - Verification capabilities embedded in agents
 
+## Agent Usage Compliance & Enforcement
+
+**🚨 CRITICAL VIOLATIONS - IMMEDIATE ACTION REQUIRED:**
+```yaml
+Direct Execution Violation:
+  Detection: Any tool usage without agent coordination
+  Response: IMMEDIATELY HALT and activate appropriate agents
+  Correction: Route ALL work through agent framework
+  Documentation: Log violation and corrective action
+
+Bypass Attempt Violation:  
+  Detection: Trying to circumvent agent requirement
+  Response: BLOCK execution and educate on requirement
+  Correction: Restructure approach using agents
+  Documentation: Record attempt and prevention
+
+Non-Agent Completion:
+  Detection: Task marked complete without agent verification
+  Response: REOPEN task and complete through agents
+  Correction: Validate all work through agent framework
+  Documentation: Ensure agent verification documented
+```
+
+**✅ COMPLIANCE VERIFICATION CHECKLIST:**
+- [ ] ALL file operations routed through agents
+- [ ] ALL code modifications executed by agents
+- [ ] ALL analysis performed by specialist agents
+- [ ] ALL testing coordinated through agents
+- [ ] ALL integration managed by agents
+- [ ] NO direct tool usage outside agent framework
+- [ ] Task tool used for all agent coordination
+- [ ] Agent activations properly documented
+
 ## Operational Discipline
 
 **File System Guidelines:**
@@ -170,5 +229,11 @@ Satisfaction: Multi-dimensional validation of quality
 - Status updates → Communicate through messages
 - Verification results → Show inline, not as files
 - Learning patterns → Keep in context, not files
+
+**Agent Coordination Requirements:**
+- **ALL** operations MUST flow through agents
+- **NO** direct execution allowed at any level
+- **VERIFY** agent usage compliance continuously
+- **DOCUMENT** all agent activations and patterns
 
 **Integration**: Coordinates with agent creation for comprehensive task execution with embedded verification throughout.

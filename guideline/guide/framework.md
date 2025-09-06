@@ -209,6 +209,23 @@ The Guild System represents a comprehensive framework for intelligent task execu
 </mandatory_anthropic_compliance>
 ```
 
+##### **Requirement 10: Mandatory Agent Usage (ABSOLUTELY CRITICAL)**
+```xml
+<mandatory_agent_usage>
+  <requirement>ALL task execution MUST use agents - NO direct execution allowed</requirement>
+  <enforcement>BLOCK any task execution that attempts to bypass agent coordination</enforcement>
+  <validation>Verify ALL work is performed through either dynamic or persistent agents</validation>
+  <violation_consequence>ANY direct execution without agents constitutes CRITICAL violation requiring immediate halt and correction</violation_consequence>
+  <compliance_check>
+    <agent_activation>Verify agents (dynamic or persistent) are activated for ALL tasks</agent_activation>
+    <no_direct_execution>Confirm NO direct tool usage or execution outside agent framework</no_direct_execution>
+    <specialist_coordination>Validate all work flows through specialized agents with embedded intelligence</specialist_coordination>
+    <task_tool_usage>Ensure Task tool is used for all agent coordination and execution</task_tool_usage>
+    <execution_tracking>Document all agent activations and coordination patterns</execution_tracking>
+  </compliance_check>
+</mandatory_agent_usage>
+```
+
 ### **🛡️ ENFORCEMENT MECHANISMS**
 
 #### **Compliance Validation System**
@@ -245,6 +262,7 @@ The Guild System represents a comprehensive framework for intelligent task execu
   <critical_violations>
     <execution_without_dynamic_capability>IMMEDIATELY ENSURE workflow can create agents dynamically</execution_without_dynamic_capability>
     <execution_without_approval>IMMEDIATELY HALT and obtain proper user authorization</execution_without_approval>
+    <execution_without_agents>IMMEDIATELY HALT all direct execution and activate appropriate agents</execution_without_agents>
     <completion_without_verification>IMMEDIATELY REOPEN task and complete proper verification</completion_without_verification>
     <non_compliance_with_core_modules>IMMEDIATELY CORRECT to align with established patterns</non_compliance_with_core_modules>
   </critical_violations>
@@ -304,11 +322,13 @@ The Guild System represents a comprehensive framework for intelligent task execu
 #### **Before ANY Workflow Execution**
 - [ ] **ABSOLUTELY CRITICAL**: Perform comprehensive requirement analysis and present to user
 - [ ] **ABSOLUTELY CRITICAL**: Obtain explicit user approval before beginning ANY work
+- [ ] **ABSOLUTELY CRITICAL**: Ensure all execution will use agents (dynamic or persistent) - NO direct execution
 - [ ] **CRITICAL**: Execute complete area identification and coverage verification
 - [ ] **CRITICAL**: Initialize gap detection patterns and progress tracking matrix
 - [ ] **CRITICAL**: Establish clear satisfaction criteria for all identified areas
 
 #### **During Workflow Execution**
+- [ ] **ABSOLUTELY CRITICAL**: Verify ALL work is being performed through agents - no direct execution
 - [ ] **CRITICAL**: Monitor coverage verification and gap detection throughout execution
 - [ ] **CRITICAL**: Apply systematic validation at all coordination checkpoints
 - [ ] **CRITICAL**: Ensure proper agent coordination following established boundaries
@@ -339,6 +359,7 @@ The Guild System represents a comprehensive framework for intelligent task execu
 6. **Integration Compliance**: Following all core module patterns and integration directives
 7. **Anthropic Compliance**: Adhering to all Anthropic best practices and structured patterns
 8. **Continuous Improvement**: Contributing to Guild system enhancement through proper compliance
+9. **Agent Usage Compliance**: Using agents for ALL task execution - never bypassing agent framework
 
 **Violation of these requirements undermines Guild system integrity and MUST be corrected immediately.**
 
