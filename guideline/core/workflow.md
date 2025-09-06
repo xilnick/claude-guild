@@ -156,4 +156,19 @@ Satisfaction: Multi-dimensional validation of quality
 - Intelligence-driven specialization supported
 - Verification capabilities embedded in agents
 
+## Operational Discipline
+
+**File System Guidelines:**
+- **AVOID** creating reports, analysis documents, or status files
+- **AVOID** persisting temporary information or session data
+- **ONLY** create files that belong in the project codebase
+- **PRESENT** verification and analysis results in conversation
+- **MAINTAIN** clean project structure without operational artifacts
+
+**Information Management:**
+- Reports → Present in conversation response
+- Status updates → Communicate through messages
+- Verification results → Show inline, not as files
+- Learning patterns → Keep in context, not files
+
 **Integration**: Coordinates with agent creation for comprehensive task execution with embedded verification throughout.

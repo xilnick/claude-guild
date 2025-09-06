@@ -834,6 +834,47 @@ The Guild System maintains intelligence through a hierarchical architecture that
 </compliance_framework>
 ```
 
+## Operational Guidelines
+
+### **File System Best Practices**
+
+#### **Avoid Non-Codebase File Creation**
+```xml
+<file_system_discipline>
+  <principle>Only create files that belong in the project codebase</principle>
+  <avoid_creating>
+    <reports>Status reports, verification reports, analysis documents</reports>
+    <temporary_files>Working files, cache files, intermediate outputs</temporary_files>
+    <personal_notes>Agent notes, learning logs, session records</personal_notes>
+    <documentation>Unless explicitly part of project documentation structure</documentation>
+  </avoid_creating>
+  <acceptable_files>
+    <code_files>Source code, configurations, build scripts</code_files>
+    <project_docs>README, API docs, architecture docs when requested</project_docs>
+    <tests>Test files, test data, test configurations</tests>
+    <configs>Project configuration files, environment settings</configs>
+  </acceptable_files>
+  <rationale>Maintain clean project structure without cluttering with operational artifacts</rationale>
+</file_system_discipline>
+```
+
+#### **Information Management**
+```xml
+<information_handling>
+  <principle>Keep operational information in conversation context, not files</principle>
+  <strategies>
+    <reports>Present analysis and verification in conversation responses</reports>
+    <status_updates>Communicate progress through messages, not files</status_updates>
+    <verification>Show compliance and consistency inline, not as documents</verification>
+    <learning>Maintain patterns in agent memory, not external files</learning>
+  </strategies>
+  <exceptions>
+    <user_request>Only create reports/documents when explicitly requested</user_request>
+    <project_requirement>When documentation is part of project deliverables</project_requirement>
+  </exceptions>
+</information_handling>
+```
+
 ## Conclusion
 
 The Guild System Framework represents a comprehensive approach to intelligent task execution that combines Anthropic's best practices with innovative agent coordination patterns. By maintaining intelligence-first decision making, human-controlled execution, verification-assured quality, and continuous learning, the Guild system provides a robust foundation for efficient, high-quality software development assistance.
