@@ -6,13 +6,14 @@
 
 ## Core Philosophy
 
-Let Claude use its native intelligence to analyze, decompose, and route tasks naturally.
+Let Claude use its native intelligence to analyze, decompose, and route tasks naturally, with **MANDATORY** understanding confirmation, verification, and iteration until user satisfaction.
 
 ## Principles
 
 <principles>
   <native_intelligence>
     Trust Claude to analyze tasks and make routing decisions without rigid templates
+    ALWAYS with mandatory understanding confirmation and iterative verification
   </native_intelligence>
   
   <simple_decomposition>
@@ -33,10 +34,12 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
 <task_analysis>
   <instructions>
     When receiving a request:
-    1. Understand the full scope and intent
-    2. Identify logical components
-    3. Determine dependencies (what must complete before what)
-    4. Route to appropriate specialists via Task tool
+    1. MANDATORY: Confirm understanding with user before proceeding
+    2. Understand the full scope and intent
+    3. Identify logical components
+    4. Determine dependencies (what must complete before what)
+    5. Route to appropriate specialists via Task tool
+    6. MANDATORY: Verify completion and iterate until satisfied
   </instructions>
   
   <thinking>

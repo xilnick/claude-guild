@@ -115,140 +115,49 @@ async function install() {
 // Create default project agents
 async function createProjectAgents(targetDir) {
   const agentsDir = path.join(targetDir, '.claude', 'agents', 'guild');
+  const templatesDir = path.join(__dirname, 'guideline', 'templates', 'agents');
   
   // Ensure directory exists
   await fs.ensureDir(agentsDir);
   
-  // Define default agents for Claude Guild projects
-  const agents = [
-    {
-      name: 'cli-specialist',
-      content: `---
-name: cli-specialist
-description: Handles Node.js CLI development, command creation, and installation scripts
-tools: Read, Edit, Write, Grep, Glob, Bash
----
-
-You are a CLI development specialist focusing on Node.js command-line tools.
-
-## Core Expertise
-- Node.js CLI development with @clack/prompts
-- Installation script management
-- NPM package configuration
-- Command-line argument parsing
-- File system operations with fs-extra
-
-## Key Responsibilities
-- Maintain and enhance install.js
-- Generate CLI commands
-- Handle NPM publishing workflows
-- Implement interactive prompts
-- Ensure cross-platform compatibility`
-    },
-    {
-      name: 'template-specialist',
-      content: `---
-name: template-specialist
-description: Manages markdown templates, intelligence embedding, and command generation
-tools: Read, Edit, Write, Grep, Glob
----
-
-You are a template engine specialist for markdown-based template systems.
-
-## Core Expertise
-- Markdown template processing
-- YAML frontmatter handling
-- Intelligence module embedding
-- Dynamic content replacement
-- Template validation
-
-## Key Responsibilities
-- Maintain templates in guideline/templates/
-- Embed core modules into commands
-- Transform templates into executable commands
-- Ensure template consistency
-- Propagate framework changes`
-    },
-    {
-      name: 'testing-specialist',
-      content: `---
-name: testing-specialist
-description: Manages validation scripts, integration tests, and quality assurance
-tools: Read, Edit, Write, Grep, Glob, Bash
----
-
-You are a testing specialist ensuring system reliability.
-
-## Core Expertise
-- Node.js testing patterns
-- Integration test design
-- Validation script development
-- Test automation
-- Error scenario testing
-
-## Key Responsibilities
-- Maintain scripts/validate-system.js
-- Develop integration tests
-- Verify installation flows
-- Test command execution
-- Add regression tests`
-    },
-    {
-      name: 'code-reviewer',
-      content: `---
-name: code-reviewer
-description: Reviews code for quality, security, and adherence to standards
-tools: Read, Grep, Glob
----
-
-You are a senior code reviewer ensuring high standards.
-
-## Review Criteria
-- Code quality and maintainability
-- Security vulnerability detection
-- Performance optimization
-- Pattern consistency
-- Best practices validation
-
-## Key Areas
-- Error handling completeness
-- Cross-platform compatibility
-- Dependency management
-- Documentation accuracy
-- Test coverage`
-    }
-  ];
+  // Load agent templates if they exist
+  let agentCount = 0;
   
-  // Create each agent file
-  for (const agent of agents) {
-    const agentPath = path.join(agentsDir, `${agent.name}.md`);
-    await fs.writeFile(agentPath, agent.content);
+  if (await fs.pathExists(templatesDir)) {
+    const templates = await fs.readdir(templatesDir);
+    
+    for (const template of templates) {
+      if (template.endsWith('.md')) {
+        const content = await fs.readFile(path.join(templatesDir, template), 'utf-8');
+        const agentName = template.replace('.md', '');
+        
+        // Write agent to project
+        await fs.writeFile(path.join(agentsDir, `${agentName}.md`), content);
+        agentCount++;
+      }
+    }
+  } else {
+    // Fallback: Create default agents if templates don't exist
+    console.log('⚠️ Agent templates not found, creating minimal defaults...');
+    
+    const defaultAgent = `---
+name: general-purpose
+description: General purpose assistant for various tasks
+tools: Read, Edit, Write, Grep, Glob, Bash
+---
+
+You are a general purpose assistant ready to help with various development tasks.
+
+## Verification Requirements
+- Always verify task completion
+- Check for implementation gaps
+- Report any issues found`;
+    
+    await fs.writeFile(path.join(agentsDir, 'general-purpose.md'), defaultAgent);
+    agentCount = 1;
   }
   
-  // Create AGENTS.md reference
-  const referencePath = path.join(agentsDir, 'AGENTS.md');
-  const referenceContent = '# Claude Guild Project Sub-Agents\n\n' +
-    '## Created Specialists\n\n' +
-    agents.map(a => {
-      const desc = a.content.match(/description: (.+)/)[1];
-      return `### ${a.name}\n${desc}\n\n` +
-        '**Usage:**\n\`\`\`yaml\n' +
-        `subagent_type: "${a.name}"\n` +
-        'description: "Your specific task"\n' +
-        'prompt: "Detailed requirements"\n' +
-        '\`\`\`\n';
-    }).join('\n') +
-    '\n## Usage Patterns\n' +
-    '- Use cli-specialist for installation and CLI work\n' +
-    '- Use template-specialist for template modifications\n' +
-    '- Use testing-specialist for test creation\n' +
-    '- Use code-reviewer for quality checks\n\n' +
-    '## Integration\n' +
-    'These agents work together to maintain the Claude Guild system.\n';
-  
-  await fs.writeFile(referencePath, referenceContent);
-  
-  return agents.length;
+  return agentCount;
 }
 
 // Load core modules for embedding
@@ -264,10 +173,10 @@ async function loadCoreModules() {
         const content = await fs.readFile(path.join(coreDir, file), 'utf-8');
         const name = file.replace('.md', '');
         
-        // Remove headers and clean content
+        // Clean content while preserving important context
+        // Only remove the main title (single #) and keep everything else
         modules[name] = content
-          .replace(/^#.*\n/gm, '')
-          .replace(/^## Purpose.*?\n(?=##|\n)/ms, '')
+          .replace(/^# .*\n+/m, '')  // Remove only the main title
           .trim();
       }
     }
