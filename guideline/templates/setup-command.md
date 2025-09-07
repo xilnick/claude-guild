@@ -4,70 +4,117 @@
 name: guild-setup  
 model: sonnet
 thinking_mode: ultrathink
-description: "Intelligent project analysis and agent creation"
+description: "Create specialized sub-agents following Claude Code best practices"
 ---
 
 ## Command Purpose
-Create persistent, project-specialized agents through deep analysis and intelligent discovery.
+Analyze the project and create focused, single-purpose sub-agents using the official `/agents` command.
 
-## 🔬 **SETUP-SPECIFIC INTELLIGENCE**
+## 🎯 **SUB-AGENT CREATION PROCESS**
 
-### **Phase 1: Project Intelligence Gathering**
+### **Phase 1: Project Analysis**
 
-🔍 **Project Discovery** (2-3 min):
+🔍 **Discovery** (1-2 min):
 - Scan configuration files for technology stack
-- Detect architectural patterns and paradigms
-- Identify data flows and integration points
-- Map quality standards and conventions
+- Identify major components and boundaries
+- Detect patterns and conventions
+- Map critical workflows
 
-📊 **Complexity Assessment**:
-- Analyze business logic concentration
-- Identify core domain entities
-- Map critical user workflows
-- Assess system boundaries
+📊 **Specialization Identification**:
+- Determine needed expertise areas
+- Define clear boundaries between agents
+- Identify tool requirements per specialist
 
-### **Phase 2: Agent Creation Strategy**
+### **Phase 2: Sub-Agent Creation**
 
-🎯 **Boundary Detection**:
-- Natural component boundaries
-- Technology layer separation
-- Integration point mapping
-- Conflict-free work areas
-
-🤖 **Agent Generation**:
+🤖 **Following Official Documentation**:
 ```yaml
-Agent Creation Pattern:
-  For Each Domain:
-    1. Analyze problem space
-    2. Generate specialization
-    3. Embed project context
-    4. Define boundaries
-    5. Establish protocols
+For Each Identified Specialization:
+  1. Design focused, single-purpose agent
+  2. Define clear activation description
+  3. Specify minimal required tools
+  4. Write detailed system prompt
+  5. Create using /agents command
 ```
 
-### **Phase 3: Persistent Agent Output**
+### **Example Sub-Agents to Create**:
 
-📁 **Generated Structure**:
+**Frontend Specialist**:
+```markdown
+---
+name: frontend-specialist
+description: Handles React/Vue/Angular components, styling, and UI logic
+tools: Read, Edit, Write, Grep, Glob, Bash
+---
+You are a frontend development specialist focusing on [project's framework].
+Key responsibilities:
+- Component development and optimization
+- State management
+- UI/UX implementation
+- Frontend testing
+Follow project patterns found in [specific directories].
 ```
-.claude/agents/guild/
-├── project-analysis.md      # Project intelligence report
-├── team-composition.md      # Agent team structure
-├── [domain]-specialist.md   # Each specialist with:
-│                            #   - XML persona definition
-│                            #   - Project knowledge
-│                            #   - Verification capabilities
-├── coordination-protocols.md # Inter-agent communication
-└── learning-framework.md    # Continuous improvement
+
+**Backend Specialist**:
+```markdown
+---
+name: backend-specialist  
+description: Manages API endpoints, database operations, and server logic
+tools: Read, Edit, Write, Grep, Glob, Bash
+---
+You are a backend development specialist working with [project's backend tech].
+Focus areas:
+- API design and implementation
+- Database operations
+- Authentication/authorization
+- Performance optimization
+Maintain patterns from [project conventions].
 ```
 
-### **Setup Success Criteria**
-✅ All technologies covered by specialists  
-✅ Clear non-overlapping boundaries  
-✅ Project patterns embedded  
-✅ Coordination protocols defined  
-✅ Verification integrated  
-✅ Learning framework initialized
+**Code Reviewer**:
+```markdown
+---
+name: code-reviewer
+description: Reviews code for quality, security, and adherence to standards
+tools: Read, Grep, Glob
+---
+You are a senior code reviewer ensuring high standards.
+Review for:
+- Code quality and maintainability
+- Security vulnerabilities
+- Performance issues
+- Pattern consistency
+- Test coverage
+```
 
+### **Phase 3: Documentation**
+
+📁 **Create Reference File**:
+```markdown
+# Project Sub-Agents
+
+## Created Agents
+1. [agent-name]: [purpose and boundaries]
+2. [agent-name]: [purpose and boundaries]
+
+## Usage Patterns
+- When to use each agent
+- How agents complement each other
+- Integration points
+
+## Project Context
+- Technology stack details
+- Key patterns and conventions
+- Critical paths
+```
+
+### **Best Practices** (Per Official Docs)
+✅ Start with Claude-generated suggestions  
+✅ Create focused, single-purpose agents  
+✅ Write detailed, specific prompts  
+✅ Limit tool access to necessary tools only  
+✅ Version control project agents  
+✅ Use clear naming (lowercase, hyphen-separated)
 ---
 
 **Note**: Core intelligence modules (workflow orchestration, agent specialization, verification framework) are embedded below during installation from `@guideline/core/`

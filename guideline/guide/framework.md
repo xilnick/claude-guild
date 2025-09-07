@@ -1,5 +1,9 @@
 # Guild System - Native Intelligence Framework
 
+## MANDATORY REQUIREMENTS
+
+**This framework MUST follow all Anthropic best practices documented in `guideline/guide/recommendations.md`**
+
 ## Core Philosophy
 
 Let Claude use its native intelligence to analyze, decompose, and route tasks naturally.
@@ -63,24 +67,50 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
   </parallel_patterns>
 </dependencies>
 
-## Specialist Creation (Dynamic)
+## Specialist Management (Intelligent)
 
-<specialist_creation>
-  <approach>
-    Create specialists based on what you discover, not templates:
-    - Analyze the technology in the project
-    - Understand the specific task requirements
-    - Create appropriate specialists with clear descriptions
-  </approach>
+<specialist_management>
+  <hybrid_approach>
+    Claude's intelligence determines the best approach:
+    
+    Option 1: Dynamic Specialists (Task-specific)
+    - Create on-demand for specific tasks
+    - Use Task tool with subagent_type: "general-purpose"
+    - Provide detailed context and requirements
+    - No persistence needed
+    
+    Option 2: Persistent Agents (Reusable)
+    - Created with /agents command during setup
+    - Reused across multiple tasks
+    - Specialized knowledge and context
+    - Launch with specific agent names
+  </hybrid_approach>
+  
+  <intelligent_decision>
+    Claude decides based on:
+    - Is this a one-time need?
+    - Does a suitable agent already exist?
+    - Would persistence add value?
+    - What's most efficient for this task?
+  </intelligent_decision>
   
   <task_tool_usage>
+    For dynamic specialists (following recommendations.md):
     - subagent_type: "general-purpose"
     - description: Clear, specific task description
-    - prompt: Detailed requirements and context
+    - prompt: MUST include:
+      * Project context and technology stack
+      * Detailed requirements with XML structure
+      * Success criteria (measurable)
+      * Examples when appropriate
+      * Grounding in actual files
+    
+    For persistent agents:
+    - subagent_type: "[agent-name]"
+    - description: Specific task
+    - prompt: Task details following recommendations.md structure
   </task_tool_usage>
-</specialist_creation>
-
-## Execution Flow (Natural)
+</specialist_management>## Execution Flow (Natural)
 
 <execution>
   <phase_1_understanding>
@@ -123,24 +153,22 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
   </quality>
 </success>
 
-## Best Practices (From Anthropic)
+## Best Practices (MANDATORY)
 
 <best_practices>
-  <be_clear>
-    Give specialists clear, explicit instructions
-  </be_clear>
+  <mandatory_compliance>
+    ALL task execution MUST follow Anthropic best practices from guideline/guide/recommendations.md
+  </mandatory_compliance>
   
-  <use_xml_for_structure>
-    Use XML tags for clarity, not bureaucracy
-  </use_xml_for_structure>
-  
-  <chain_of_thought>
-    Think through the approach before executing
-  </chain_of_thought>
-  
-  <avoid_hallucination>
-    Work with actual project files and patterns
-  </avoid_hallucination>
+  <required_principles>
+    - MUST use XML tags for structure (per recommendations.md)
+    - MUST provide clear, explicit instructions (per recommendations.md)
+    - MUST apply chain of thought for reasoning (per recommendations.md)
+    - MUST ground in actual project files (per recommendations.md)
+    - MUST allow uncertainty expression (per recommendations.md)
+    - MUST include examples for complex tasks (per recommendations.md)
+    - MUST verify work iteratively (per recommendations.md)
+  </required_principles>
 </best_practices>
 
 ## What NOT to Do
@@ -153,19 +181,27 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
   - Don't constrain Claude's natural intelligence
 </avoid>
 
-## Example Usage
+## Example Usage (Following recommendations.md)
 
 <example>
 User: "Add authentication to my app"
 
-Claude's Natural Analysis:
-1. This needs backend API endpoints
-2. This needs frontend UI components  
-3. This needs security validation
-4. Backend and frontend can work in parallel
-5. Security review happens after implementation
+Claude's Natural Analysis (using chain of thought per recommendations.md):
+<thinking>
+  1. Backend API endpoints needed (login, signup, logout)
+  2. Frontend UI components needed (forms, state management)
+  3. Security validation required (after implementation)
+  4. Backend and frontend are independent (can parallelize)
+  5. Security review depends on both completing
+</thinking>
 
-Task Tool Usage:
-- Create backend specialist for API endpoints
-- Create frontend specialist for UI (parallel)
-- Create security specialist for review (after)
+Task Tool Usage (with XML structure per recommendations.md):
+<task_execution>
+  <parallel_tasks>
+    - Backend specialist: API endpoints with JWT
+    - Frontend specialist: Login/signup forms
+  </parallel_tasks>
+  <sequential_task>
+    - Security specialist: Review after both complete
+  </sequential_task>
+</task_execution>

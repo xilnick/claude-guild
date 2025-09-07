@@ -115,17 +115,17 @@ Commands use Claude's configuration format:
 name: guild
 model: sonnet
 thinking_mode: ultrathink
-description: "Intelligent execution using adaptive agent coordination"
+description: "Natural task execution following @guideline/guide/framework.md"
 ```
 
 ### Core Modules
-- **workflow.md** - Orchestration and execution patterns
 - **agents.md** - Specialist creation and coordination
 - **verification.md** - Coverage tracking and validation
 
 ## 📚 Documentation
 
 - [Framework Documentation](guideline/guide/framework.md) - Complete philosophy and requirements
+- [Best Practices & Recommendations](guideline/guide/recommendations.md) - Anthropic's official guidance
 - [Core Modules](guideline/core/README.md) - Intelligence module documentation
 - [Compliance Verification](guideline/verify-compliance.md) - System validation guide
 

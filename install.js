@@ -83,10 +83,14 @@ async function install() {
     const setupContent = await generateCommand('setup', coreModules);
     await fs.writeFile(path.join(guildDir, 'setup.md'), setupContent);
     
-    // Create guild.md symlink to workflow
+    // Create guild.md symlink to workflow (remove existing first)
+    const symlinkPath = path.join(commandsDir, 'guild.md');
+    if (await fs.pathExists(symlinkPath)) {
+      await fs.remove(symlinkPath);
+    }
     await fs.symlink(
       path.join('guild', 'workflow.md'),
-      path.join(commandsDir, 'guild.md')
+      symlinkPath
     );
     
     outro(`✅ Guild installed successfully!

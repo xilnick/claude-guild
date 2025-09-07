@@ -1,169 +1,136 @@
-# Dynamic Agent Creation
+# Intelligent Agent Management
 
 ## Purpose
-Create specialists dynamically based on actual task requirements using Claude's native intelligence.
+Use Claude's native intelligence to determine when to create dynamic specialists or use persistent agents.
 
-## Core Principle
+## Hybrid Approach
 
-<principle>
-  Don't use templates or pre-defined agents.
-  Create specialists based on what you discover in the project and task.
-</principle>
-
-## Agent Creation (Natural)
-
-<creation>
-  <analyze>
-    Look at the actual task requirements
-    Consider the project's technology
-    Understand the specific needs
-  </analyze>
+<approach>
+  <intelligence_driven>
+    Claude analyzes each task and decides:
+    - Should I create a specialist for this specific task?
+    - Does a suitable persistent agent already exist?
+    - What approach is most efficient?
+  </intelligence_driven>
   
-  <create>
-    Design specialists with clear, specific roles
-    Give them detailed context about the project
-    Use Task tool with comprehensive prompts
-  </create>
-</creation>
+  <no_rigid_rules>
+    Don't force either approach
+    Let task requirements guide the decision
+    Trust Claude's judgment
+  </no_rigid_rules>
+</approach>
 
-## Specialist Types (Dynamic)
+## Dynamic Specialists (Primary Mode)
 
-<specialists>
-  Create based on what you find:
-  - Technology specialists (based on project stack)
-  - Domain specialists (based on task area)
-  - Integration specialists (when coordination needed)
-  - Quality specialists (when validation needed)
+<dynamic_creation>
+  <when_to_use>
+    - Task-specific requirements
+    - One-time or unique needs
+    - No suitable agent exists
+    - Flexibility is priority
+  </when_to_use>
   
-  No pre-defined types - create what's actually needed
-</specialists>
-
-## Task Tool Integration
-
-<task_usage>
-  <parameters>
+  <how_to_create>
+    Use Task tool directly:
+    ```
     subagent_type: "general-purpose"
-    description: Specific, clear task description
-    prompt: Full context and detailed requirements
-  </parameters>
+    description: Clear, specific task
+    prompt: Detailed context including:
+      - Role and expertise
+      - Project context
+      - Specific requirements
+      - Success criteria
+    ```
+  </how_to_create>
   
-  <prompt_content>
-    - Project context and technology
-    - Specific task requirements
-    - Expected outcomes
-    - Any constraints or patterns to follow
-  </prompt_content>
-</task_usage>
+  <benefits>
+    - No setup required
+    - Perfectly tailored to task
+    - Maximum flexibility
+    - Immediate availability
+  </benefits>
+</dynamic_creation>
 
-## Natural Boundaries
+## Persistent Agents (When Beneficial)
 
-<boundaries>
-  Specialists naturally work within:
-  - File boundaries (who works on what files)
-  - Technical boundaries (frontend vs backend)
-  - Feature boundaries (distinct features)
-  - Let Claude identify these naturally
-</boundaries>
+<persistent_agents>
+  <when_valuable>
+    - Frequently repeated tasks
+    - Specialized domain knowledge
+    - Team consistency needs
+    - Complex project patterns
+  </when_valuable>
+  
+  <creation>
+    Use /agents command to create
+    Store in project for reuse
+    Document for team awareness
+  </creation>
+  
+  <usage>
+    ```
+    subagent_type: "[agent-name]"
+    description: Specific task
+    prompt: Task details
+    ```
+  </usage>
+</persistent_agents>
 
-## Coordination (Simple)
+## Intelligence Guidelines
 
-<coordination>
-  - Independent work runs in parallel
-  - Dependent work runs sequentially
-  - Integration points are explicit
-  - No complex orchestration needed
-</coordination>
+<guidelines>
+  <analysis>
+    For each task component:
+    1. What expertise is needed?
+    2. Is this a recurring need?
+    3. Does an agent exist for this?
+    4. Would dynamic be more appropriate?
+  </analysis>
+  
+  <decision>
+    Default to dynamic unless:
+    - Perfect persistent agent exists
+    - Task explicitly requests specific agent
+    - Consistency with previous work needed
+  </decision>
+  
+  <execution>
+    - Create/use specialists as determined
+    - Provide comprehensive context
+    - Coordinate naturally
+    - Verify results
+  </execution>
+</guidelines>
 
 ## Best Practices
 
 <practices>
-  - Create specialists for actual needs, not hypothetical ones
-  - Give clear, explicit instructions
-  - Include project context in prompts
-  - Let specialists work independently where possible
-  - Trust Claude's coordination abilities
-</practices># Dynamic Agent Creation
-
-## Purpose
-Create specialists dynamically based on actual task requirements using Claude's native intelligence.
-
-## Core Principle
-
-<principle>
-  Don't use templates or pre-defined agents.
-  Create specialists based on what you discover in the project and task.
-</principle>
-
-## Agent Creation (Natural)
-
-<creation>
-  <analyze>
-    Look at the actual task requirements
-    Consider the project's technology
-    Understand the specific needs
-  </analyze>
-  
-  <create>
-    Design specialists with clear, specific roles
-    Give them detailed context about the project
-    Use Task tool with comprehensive prompts
-  </create>
-</creation>
-
-## Specialist Types (Dynamic)
-
-<specialists>
-  Create based on what you find:
-  - Technology specialists (based on project stack)
-  - Domain specialists (based on task area)
-  - Integration specialists (when coordination needed)
-  - Quality specialists (when validation needed)
-  
-  No pre-defined types - create what's actually needed
-</specialists>
-
-## Task Tool Integration
-
-<task_usage>
-  <parameters>
-    subagent_type: "general-purpose"
-    description: Specific, clear task description
-    prompt: Full context and detailed requirements
-  </parameters>
-  
-  <prompt_content>
-    - Project context and technology
-    - Specific task requirements
-    - Expected outcomes
-    - Any constraints or patterns to follow
-  </prompt_content>
-</task_usage>
-
-## Natural Boundaries
-
-<boundaries>
-  Specialists naturally work within:
-  - File boundaries (who works on what files)
-  - Technical boundaries (frontend vs backend)
-  - Feature boundaries (distinct features)
-  - Let Claude identify these naturally
-</boundaries>
-
-## Coordination (Simple)
-
-<coordination>
-  - Independent work runs in parallel
-  - Dependent work runs sequentially
-  - Integration points are explicit
-  - No complex orchestration needed
-</coordination>
-
-## Best Practices
-
-<practices>
-  - Create specialists for actual needs, not hypothetical ones
-  - Give clear, explicit instructions
-  - Include project context in prompts
-  - Let specialists work independently where possible
-  - Trust Claude's coordination abilities
+  - Don't overthink the decision
+  - Prefer dynamic for flexibility
+  - Use persistent for consistency
+  - Always provide detailed context
+  - Trust Claude's natural intelligence
+  - Avoid rigid templates or rules
 </practices>
+
+## Examples
+
+<examples>
+  <dynamic_example>
+    Task: "Add authentication to API"
+    Decision: Create dynamic backend specialist
+    Reason: Specific to current API structure
+  </dynamic_example>
+  
+  <persistent_example>
+    Task: "Review code quality"
+    Decision: Use existing code-reviewer agent
+    Reason: Consistent standards across project
+  </persistent_example>
+  
+  <hybrid_example>
+    Task: "Refactor and test authentication"
+    Decision: Dynamic refactoring specialist + persistent test agent
+    Reason: Unique refactor, standard testing
+  </hybrid_example>
+</examples>
