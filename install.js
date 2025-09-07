@@ -93,9 +93,10 @@ async function install() {
       symlinkPath
     );
     
-    // Create default project agents
-    const agentCount = await createProjectAgents(options.targetDir);
-    console.log(`📦 Created ${agentCount} project agents in .claude/agents/guild/`);
+    // Ensure agent directory exists (but don't create default agents)
+    const agentsDir = path.join(options.targetDir, '.claude', 'agents', 'guild');
+    await fs.ensureDir(agentsDir);
+    console.log(`📂 Agent directory ready at .claude/agents/guild/`);
     
     outro(`✅ Guild installed successfully!
 
@@ -104,7 +105,7 @@ async function install() {
   • /guild "task" - Main workflow command
   • /guild:setup - Create project agents
 
-💡 Start with: /guild:setup to analyze your project`);
+💡 Start with: /guild:setup to analyze your project and create agents if needed`);
     
   } catch (error) {
     console.error('❌ Installation failed:', error.message);
@@ -112,53 +113,7 @@ async function install() {
   }
 }
 
-// Create default project agents
-async function createProjectAgents(targetDir) {
-  const agentsDir = path.join(targetDir, '.claude', 'agents', 'guild');
-  const templatesDir = path.join(__dirname, 'guideline', 'templates', 'agents');
-  
-  // Ensure directory exists
-  await fs.ensureDir(agentsDir);
-  
-  // Load agent templates if they exist
-  let agentCount = 0;
-  
-  if (await fs.pathExists(templatesDir)) {
-    const templates = await fs.readdir(templatesDir);
-    
-    for (const template of templates) {
-      if (template.endsWith('.md')) {
-        const content = await fs.readFile(path.join(templatesDir, template), 'utf-8');
-        const agentName = template.replace('.md', '');
-        
-        // Write agent to project
-        await fs.writeFile(path.join(agentsDir, `${agentName}.md`), content);
-        agentCount++;
-      }
-    }
-  } else {
-    // Fallback: Create default agents if templates don't exist
-    console.log('⚠️ Agent templates not found, creating minimal defaults...');
-    
-    const defaultAgent = `---
-name: general-purpose
-description: General purpose assistant for various tasks
-tools: Read, Edit, Write, Grep, Glob, Bash
----
 
-You are a general purpose assistant ready to help with various development tasks.
-
-## Verification Requirements
-- Always verify task completion
-- Check for implementation gaps
-- Report any issues found`;
-    
-    await fs.writeFile(path.join(agentsDir, 'general-purpose.md'), defaultAgent);
-    agentCount = 1;
-  }
-  
-  return agentCount;
-}
 
 // Load core modules for embedding
 async function loadCoreModules() {
