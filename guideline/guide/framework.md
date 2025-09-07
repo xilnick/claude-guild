@@ -110,19 +110,20 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
     - description: Specific task
     - prompt: Task details following recommendations.md structure
   </task_tool_usage>
-</specialist_management>## Execution Flow (Natural)
+</specialist_management>## Execution Flow (ITERATIVE & MANDATORY)
 
 <execution>
-  <phase_1_understanding>
-    <!-- Analyze and understand the request fully -->
-    Use chain of thought to understand:
-    - User intent
-    - Task components
-    - Success criteria
-  </phase_1_understanding>
+  <phase_1_understanding_confirmation>
+    <!-- MANDATORY: Confirm understanding before ANY work -->
+    Use chain of thought to understand, then:
+    - Present interpretation back to user
+    - Ask clarifying questions if needed
+    - Wait for explicit user approval
+    - NEVER proceed without confirmation
+  </phase_1_understanding_confirmation>
   
   <phase_2_decomposition>
-    <!-- Break down naturally -->
+    <!-- Break down ONLY after understanding confirmed -->
     Decompose based on:
     - Logical boundaries
     - Technical dependencies
@@ -130,27 +131,54 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
   </phase_2_decomposition>
   
   <phase_3_execution>
-    <!-- Execute using Task tool -->
-    Create and coordinate specialists naturally
-    Let Claude handle the orchestration
+    <!-- Execute with verification built-in -->
+    Create and coordinate specialists
+    Include gap detection in all tasks
+    Monitor for issues during execution
   </phase_3_execution>
+  
+  <phase_4_verification>
+    <!-- MANDATORY: Verify completeness -->
+    Check for:
+    - Implementation gaps
+    - Missing functionality
+    - Integration issues
+    - Quality problems
+    Report ALL findings to user
+  </phase_4_verification>
+  
+  <phase_5_iteration>
+    <!-- MANDATORY: Iterate until satisfied -->
+    If gaps found or user not satisfied:
+    - Fix identified issues
+    - Re-verify changes
+    - Get user confirmation
+    - Continue until fully satisfied
+  </phase_5_iteration>
 </execution>
 
-## Success Criteria
+## Success Criteria (WITH MANDATORY VERIFICATION)
 
 <success>
-  <measurable>
-    - Task completed as requested
-    - All components integrated properly
-    - Tests pass (if applicable)
-    - User requirements met
-  </measurable>
+  <understanding_confirmed>
+    - User explicitly approves understanding
+    - All clarifications addressed
+    - Scope clearly defined
+  </understanding_confirmed>
   
-  <quality>
-    - Code follows project patterns
-    - Solution is maintainable
-    - Performance is acceptable
-  </quality>
+  <implementation_complete>
+    - All requested functionality implemented
+    - Components integrated properly
+    - Tests pass (if applicable)
+    - No known gaps remain
+  </implementation_complete>
+  
+  <user_satisfaction>
+    - User confirms satisfaction
+    - All adjustments completed
+    - Quality standards met
+    - Explicit approval received
+  </user_satisfaction>
 </success>
 
 ## Best Practices (MANDATORY)
@@ -159,6 +187,14 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
   <mandatory_compliance>
     ALL task execution MUST follow Anthropic best practices from guideline/guide/recommendations.md
   </mandatory_compliance>
+  
+  <required_iteration>
+    - MUST confirm understanding before execution
+    - MUST verify after implementation
+    - MUST check for gaps systematically
+    - MUST iterate until user satisfied
+    - MUST get explicit user confirmation
+  </required_iteration>
   
   <required_principles>
     - MUST use XML tags for structure (per recommendations.md)

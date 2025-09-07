@@ -1,13 +1,16 @@
 # Natural Verification
 
 ## Purpose
-Ensure tasks are completed correctly using Claude's natural verification abilities.
+Ensure tasks are completed correctly using Claude's natural verification abilities with **MANDATORY** iteration until user satisfaction.
 
 ## Core Principle
 
 <principle>
-  Trust Claude to naturally verify work quality without rigid frameworks.
-  Use simple success criteria based on the actual task.
+  Trust Claude to naturally verify work quality while ALWAYS:
+  - Confirming understanding before execution
+  - Checking for implementation gaps  
+  - Iterating until user is fully satisfied
+  - Never considering work complete without explicit user confirmation
 </principle>
 
 ## Verification Approach
