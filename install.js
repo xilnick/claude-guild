@@ -70,7 +70,7 @@ async function install() {
     // Ensure directories exist
     await fs.ensureDir(guildDir);
     
-    console.log('🏗️ Installing Guild commands...');
+    console.log('🏗️ Installing Guild commands with Tool Use Implementation...');
     
     // Load and embed core modules
     const coreModules = await loadCoreModules();
@@ -79,8 +79,8 @@ async function install() {
     const workflowContent = await generateCommand('workflow', coreModules);
     await fs.writeFile(path.join(guildDir, 'workflow.md'), workflowContent);
     
-    // Generate and install setup command
-    const setupContent = await generateCommand('setup', coreModules);
+    // Generate and install setup command (with abstract-only agent creation)
+    const setupContent = await generateCommand('setup', coreModules, { abstractOnly: true });
     await fs.writeFile(path.join(guildDir, 'setup.md'), setupContent);
     
     // Create guild.md symlink to workflow (remove existing first)
@@ -93,19 +93,30 @@ async function install() {
       symlinkPath
     );
     
-    // Ensure agent directory exists (but don't create default agents)
+    // Ensure base agent directory exists (setup command will create category subdirs)
     const agentsDir = path.join(options.targetDir, '.claude', 'agents', 'guild');
     await fs.ensureDir(agentsDir);
     console.log(`📂 Agent directory ready at .claude/agents/guild/`);
+    console.log(`   Abstract-only agents will be created by /guild:setup`);
+    console.log(`   Role descriptions and expertise areas without implementation details`);
+    console.log(`   Following Tool Use Implementation best practices`);
     
     outro(`✅ Guild installed successfully!
 
 📂 Location: ${commandsDir}
 🎯 Commands:
-  • /guild "task" - Main workflow command
-  • /guild:setup - Create project agents
+  • /guild "task" - Main workflow command with parallel execution
+  • /guild:setup - Create comprehensive agent team
 
-💡 Start with: /guild:setup to analyze your project and create agents if needed`);
+🚀 Features:
+  • Abstract-only agent creation (no code samples or file structures)
+  • Role descriptions and expertise areas focus
+  • 3-4 sentence descriptions for all specialists (Tool Use Implementation)
+  • Parallel execution for independent tasks (Claude 4 optimization)
+  • Robust error handling at abstract level
+  • Comprehensive verification with gap detection
+
+💡 Start with: /guild:setup to create your comprehensive agent team`);
     
   } catch (error) {
     console.error('❌ Installation failed:', error.message);
@@ -141,13 +152,21 @@ async function loadCoreModules() {
 }
 
 // Generate command with embedded intelligence
-async function generateCommand(type, coreModules) {
+async function generateCommand(type, coreModules, options = {}) {
   const templatePath = path.join(__dirname, 'guideline', 'templates', `${type}-command.md`);
   let template = await fs.readFile(templatePath, 'utf8');
   
   // Embed core module intelligence if available
   if (Object.keys(coreModules).length > 0) {
     let embedded = '\n\n## 📚 EMBEDDED CORE INTELLIGENCE\n\n';
+    
+    // Add Tool Use Implementation notice
+    embedded += '### 🔧 Tool Use Implementation\n';
+    embedded += 'This command follows Anthropic\'s Tool Use Implementation best practices:\n';
+    embedded += '- **3-4 sentence descriptions** for all specialists\n';
+    embedded += '- **Parallel execution** for independent tasks\n';
+    embedded += '- **Robust error handling** at every level\n';
+    embedded += '- **Comprehensive verification** with gap detection\n\n';
     
     // Embed in specific order for logical flow
     if (coreModules.workflow) {
@@ -161,6 +180,22 @@ async function generateCommand(type, coreModules) {
     if (coreModules.verification) {
       embedded += '### Verification Intelligence\n' + coreModules.verification + '\n\n';
     }
+    
+    // Add parallel execution patterns
+    embedded += '### Parallel Execution Patterns\n';
+    embedded += '**Claude 4 Optimization:**\n';
+    embedded += '- Launch independent specialists simultaneously\n';
+    embedded += '- Batch tool calls for efficiency\n';
+    embedded += '- Coordinate integration points explicitly\n';
+    embedded += '- Send all results in single response\n\n';
+    
+    // Add error handling patterns
+    embedded += '### Error Handling Framework\n';
+    embedded += '**All specialists include:**\n';
+    embedded += '- Structured error responses\n';
+    embedded += '- Recovery strategies\n';
+    embedded += '- Fallback approaches\n';
+    embedded += '- Clear escalation paths\n\n';
     
     template += embedded;
   }

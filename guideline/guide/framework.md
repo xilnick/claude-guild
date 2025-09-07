@@ -98,22 +98,74 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
   </intelligent_decision>
   
   <task_tool_usage>
-    For dynamic specialists (following recommendations.md):
+    For dynamic specialists (following Tool Use Implementation from recommendations.md):
     - subagent_type: "general-purpose"
-    - description: Clear, specific task description
+    - description: **3-4 sentences minimum** explaining:
+      * What the specialist will do and primary purpose
+      * When this specialist should be used vs others
+      * Important limitations or constraints
+      * Expected outcomes and deliverables
     - prompt: MUST include:
       * Project context and technology stack
       * Detailed requirements with XML structure
       * Success criteria (measurable)
       * Examples when appropriate
       * Grounding in actual files
+      * Error handling expectations
+      * Integration verification requirements
     
     For persistent agents:
     - subagent_type: "[agent-name]"
-    - description: Specific task
+    - description: **3-4 sentences minimum** per tool definition guidelines
     - prompt: Task details following recommendations.md structure
   </task_tool_usage>
-</specialist_management>## Execution Flow (ITERATIVE & MANDATORY)
+  
+  <parallel_execution>
+    **Claude 4 Optimization (per recommendations.md):**
+    - Launch multiple specialists simultaneously for independent tasks
+    - Batch tool calls together for optimal performance
+    - Identify truly independent operations
+    - Coordinate integration points explicitly
+    - Send all results in single response when possible
+  </parallel_execution>
+  
+  <error_handling>
+    **All specialists must handle errors gracefully:**
+    - Provide actionable error messages
+    - Include suggestions for resolution
+    - Allow retry with modified parameters
+    - Fallback to alternative approaches
+    - Report errors clearly for iteration
+  </error_handling>
+</specialist_management>## Tool Definition Requirements (From recommendations.md)
+
+<tool_definitions>
+  <comprehensive_descriptions>
+    **MANDATORY: All tool/specialist descriptions must be 3-4 sentences minimum:**
+    1. Primary purpose and what the tool/specialist does
+    2. When it should vs shouldn't be used
+    3. Important limitations and caveats
+    4. Expected outcomes and side effects
+  </comprehensive_descriptions>
+  
+  <parameter_documentation>
+    **Every parameter must include:**
+    - Clear purpose and format explanation
+    - Valid values and constraints
+    - Required vs optional designation
+    - Examples of valid inputs
+  </parameter_documentation>
+  
+  <error_handling_requirements>
+    **All specialists must include error handling:**
+    - Structured error responses
+    - Actionable error messages
+    - Recovery strategies
+    - Fallback approaches
+  </error_handling_requirements>
+</tool_definitions>
+
+## Execution Flow (ITERATIVE & MANDATORY)
 
 <execution>
   <phase_1_understanding_confirmation>
@@ -134,10 +186,14 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
   </phase_2_decomposition>
   
   <phase_3_execution>
-    <!-- Execute with verification built-in -->
-    Create and coordinate specialists
-    Include gap detection in all tasks
-    Monitor for issues during execution
+    <!-- Execute with verification built-in and parallel optimization -->
+    Create and coordinate specialists following Tool Use Implementation:
+    - Launch independent tasks in parallel (Claude 4 optimization)
+    - Provide 3-4 sentence descriptions for each specialist
+    - Include comprehensive error handling requirements
+    - Include gap detection in all tasks
+    - Monitor for issues during execution
+    - Batch tool calls for efficiency
   </phase_3_execution>
   
   <phase_4_verification>

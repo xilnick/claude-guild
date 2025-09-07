@@ -295,6 +295,175 @@ This document provides recommendations based on Anthropic's official best practi
   ❌ Not allowing uncertainty expression
 </avoid>
 
+## Tool Use Implementation
+
+### Tool Definition Best Practices
+<tool_definition_guidelines>
+  **Essential Components:**
+  1. **Comprehensive Descriptions (3-4 sentences minimum)**
+     - What the tool does and its primary purpose
+     - When it should and shouldn't be used
+     - Important limitations and caveats
+     - Expected outcomes and side effects
+  
+  2. **Clear Parameter Documentation**
+     - Explain each parameter's purpose and format
+     - Specify valid values and constraints
+     - Indicate which parameters are required vs optional
+     - Provide examples of valid inputs
+  
+  3. **Structured Schema Definition**
+     ```json
+     {
+       "name": "tool_name",
+       "description": "Detailed 3-4 sentence description...",
+       "input_schema": {
+         "type": "object",
+         "properties": {
+           "param": {
+             "type": "string",
+             "description": "Clear parameter description"
+           }
+         },
+         "required": ["param"]
+       }
+     }
+     ```
+</tool_definition_guidelines>
+
+### Model Selection for Tools
+<tool_model_selection>
+  **Complex Tool Scenarios:**
+  - Claude Opus 4.1 or Opus 4
+  - Claude Sonnet 4 or Sonnet 3.7
+  - Best for: Multiple tools, ambiguous requests, clarification needs
+  
+  **Simple Tool Scenarios:**
+  - Claude Haiku
+  - Best for: Straightforward, single-tool operations
+  
+  **Selection Criteria:**
+  - Tool complexity and interdependencies
+  - Need for contextual understanding
+  - Error recovery requirements
+  - Performance vs accuracy tradeoffs
+</tool_model_selection>
+
+### Tool Usage Control
+<tool_control_strategies>
+  **Tool Choice Options:**
+  ```xml
+  <tool_choice>
+    auto: Let Claude decide whether to use tools
+    any: Force at least one tool usage
+    tool: Force specific tool usage
+    none: Prevent all tool usage
+  </tool_choice>
+  ```
+  
+  **Strategic Application:**
+  - Use `auto` for flexible, context-aware decisions
+  - Use `any` when tool use is mandatory for task
+  - Use `tool` for deterministic workflows
+  - Use `none` for pure reasoning/analysis tasks
+</tool_control_strategies>
+
+### Parallel Tool Execution
+<parallel_execution>
+  **Claude 4 Optimization:**
+  - Enable simultaneous tool calls for efficiency
+  - Batch independent operations together
+  - Reduce round-trip latency
+  
+  **Implementation:**
+  ```xml
+  <system_prompt>
+    You have the capability to call multiple tools in a single response.
+    When multiple independent pieces of information are requested,
+    batch your tool calls together for optimal performance.
+  </system_prompt>
+  ```
+  
+  **Best Practices:**
+  - Send all tool results in single user message
+  - Avoid splitting results across messages
+  - Identify truly independent operations
+  - Coordinate integration points explicitly
+</parallel_execution>
+
+### Error Handling for Tools
+<tool_error_handling>
+  **Error Response Structure:**
+  ```json
+  {
+    "type": "error",
+    "error": {
+      "type": "tool_error",
+      "message": "Detailed error description",
+      "details": "Additional context for debugging"
+    }
+  }
+  ```
+  
+  **Recovery Strategies:**
+  - Provide actionable error messages
+  - Include suggestions for resolution
+  - Allow retry with modified parameters
+  - Fallback to alternative approaches
+  
+  **Common Error Patterns:**
+  - Invalid parameters → Suggest corrections
+  - Network failures → Implement retries
+  - Timeout errors → Increase limits or chunk work
+  - Permission errors → Check access and suggest alternatives
+</tool_error_handling>
+
+### Tool Implementation Checklist
+<tool_implementation_checklist>
+  **For Every Tool:**
+  ☐ Write 3-4 sentence comprehensive description
+  ☐ Document all parameters thoroughly
+  ☐ Define complete JSON schema
+  ☐ Specify required vs optional parameters
+  ☐ Include usage examples in description
+  ☐ Document error conditions
+  
+  **For Complex Tools:**
+  ☐ Consider parallel execution opportunities
+  ☐ Plan error recovery strategies
+  ☐ Test with appropriate Claude model
+  ☐ Implement detailed logging
+  ☐ Design for idempotency where possible
+  
+  **For Tool Sets:**
+  ☐ Ensure clear differentiation between tools
+  ☐ Avoid overlapping functionality
+  ☐ Design complementary tool workflows
+  ☐ Test tool combinations
+  ☐ Document integration patterns
+</tool_implementation_checklist>
+
+### Guild System Tool Integration
+<guild_tool_integration>
+  **Task Tool Enhancement:**
+  - Apply 3-4 sentence description rule to all specialists
+  - Include clear success criteria in prompts
+  - Document specialist capabilities comprehensively
+  - Specify when to use each specialist type
+  
+  **Parallel Specialist Execution:**
+  - Identify independent task components
+  - Launch specialists simultaneously when safe
+  - Coordinate integration points explicitly
+  - Batch results for efficient processing
+  
+  **Error Recovery in Specialists:**
+  - Create fix specialists for issues
+  - Provide detailed error context
+  - Allow iterative refinement
+  - Verify fixes before proceeding
+</guild_tool_integration>
+
 ## References
 
 These recommendations are based on Anthropic's official documentation:
