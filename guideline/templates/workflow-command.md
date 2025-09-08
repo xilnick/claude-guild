@@ -4,39 +4,45 @@
 name: guild
 model: inherit
 thinking_mode: ultrathink
-description: "Natural task execution with mandatory understanding confirmation and iterative verification"
+description: "Natural task execution with autonomous intelligent analysis and iterative verification"
 ---
 
 ## Purpose
-Execute tasks using Claude's native intelligence with **MANDATORY** understanding confirmation and iterative verification until full user satisfaction per `@guideline/guide/framework.md`.
+Execute tasks using Claude's native intelligence with **AUTONOMOUS** intelligent analysis and iterative verification achieving technical excellence per `@guideline/guide/framework.md`.
 
 ## 🔄 ITERATIVE WORKFLOW (MANDATORY)
 
 <iterative_workflow>
-  <phase_1_understanding_confirmation>
-    **MANDATORY: Always confirm understanding first**
+  <phase_1_autonomous_analysis>
+    **AUTONOMOUS: Intelligent analysis with systematic execution**
     
-    1. Analyze the request using chain of thought
-    2. **PROACTIVE DECOMPOSITION PREVIEW**: While analyzing, identify potential specialist opportunities
-    3. Present understanding with decomposition preview:
-       "I understand you want me to [detailed interpretation]. 
+    1. Analyze the request using chain of thought with comprehensive understanding
+    2. **ENHANCED PERSISTENT AGENT DISCOVERY** (per `@guideline/core/subagent-invocation.md`): Execute systematic discovery with metadata extraction, capability scoring, and adaptation assessment
+    3. **INTELLIGENT AGENT SELECTION LOGIC**: Apply domain matching algorithms, context adaptation evaluation, and parallel compatibility analysis to determine optimal agent mix
+    4. **HYBRID COORDINATION ARCHITECTURE DESIGN**: Create optimal persistent + dynamic coordination patterns based on capability assessment and performance prediction  
+    5. **PROACTIVE DECOMPOSITION EXECUTION**: While analyzing, identify and prepare specialist opportunities across all agent types
+    6. Execute with intelligent understanding and systematic approach:
+       "I'll [detailed interpretation approach] through systematic parallel execution. 
         This involves:
-        - [Component 1] (can run in parallel with Component 2)
-        - [Component 2] (independent from Component 1)
-        - [Component 3] (depends on Components 1&2)
+        - [Component 1] (executing in parallel with Component 2)
+        - [Component 2] (independent execution from Component 1)
+        - [Component 3] (coordinated execution after Components 1&2)
         
-        Success criteria: [criteria]
+        Success achievement: [autonomous criteria]
         
-        **SPECIALIST OPPORTUNITIES**: I can proactively launch [X] specialists simultaneously for:
-        - [Specialist type 1] for [Component 1]
-        - [Specialist type 2] for [Component 2]
-        - [Coordinator specialist] for integration
+        **ENHANCED HYBRID SPECIALIST DEPLOYMENT**: Based on comprehensive agent discovery and intelligence assessment:
+        - PERSISTENT AGENTS: [High-match specialists (score 85-100) for Components X, Y with established expertise]
+        - ADAPTED PERSISTENT: [Medium-match specialists (score 70-84) for Components M, N with context adaptation]  
+        - HYBRID COORDINATION: [Partial-match specialists (score 55-69) combined with dynamic specialists for optimal coverage]
+        - DYNAMIC CREATION: [Pure dynamic specialists for novel Components A, B requiring maximum flexibility]
+        - COORDINATION ARCHITECTURE: [Mixed agent type integration approach with intelligent bridging protocols]
+        - PARALLEL HYBRID LAUNCH: [Total specialist count across all agent types] launching simultaneously with coordinated integration
         
-        Is this understanding and parallel approach correct?"
-    4. Wait for user confirmation
-    5. If not correct, ask clarifying questions about both requirements AND decomposition approach
-    6. Iterate until user approves understanding AND parallel execution plan
-  </phase_1_understanding_confirmation>
+        Proceeding with systematic parallel execution."
+    4. Execute with autonomous intelligence and systematic coordination
+    5. Adapt approach dynamically through intelligent analysis and reasoning
+    6. Optimize execution through continuous parallel specialist deployment
+  </phase_1_autonomous_analysis>
   
   <phase_2_systematic_decomposition>
     **PROACTIVE DECOMPOSITION METHODOLOGY (MANDATORY):**
@@ -83,98 +89,155 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
     - **CONTINUOUS PARALLEL OPTIMIZATION** throughout execution
   </phase_3_proactive_execution>
   
-  <phase_4_parallel_verification>
-    **MANDATORY: Parallel-Aware Verification After Execution**
+  <phase_4_unified_parallel_verification>
+    **MANDATORY: Framework-Aligned Parallel Verification Architecture**
     
-    **Parallel Verification Strategy:**
-    1. **SPECIALIST-SPECIFIC VERIFICATION**: Each specialist verifies their domain
-    2. **INTEGRATION POINT VERIFICATION**: Verify coordination between specialists
-    3. **CROSS-SPECIALIST GAP DETECTION**: Look for gaps across specialist boundaries
-    4. **PARALLEL WORK COHERENCE CHECK**: Ensure all parallel work integrates properly
+    **UNIFIED SUCCESS METRICS HIERARCHY (FROM FRAMEWORK):**
+    1. User satisfaction confirmation (ultimate authority)
+    2. Technical verification completion (functional requirements)
+    3. Integration validation success (system coherence) 
+    4. Quality standard compliance (maintainability requirements)
     
-    **Verification Coordination Patterns:**
-    - **SIMULTANEOUS SPECIALIST VERIFICATION**: All specialists verify in parallel
-    - **INTEGRATION CHECKPOINT TESTING**: Test all coordination points
-    - **CROSS-BOUNDARY VALIDATION**: Verify work handoffs between specialists
-    - **HOLISTIC SYSTEM VERIFICATION**: Ensure parallel work creates cohesive result
+    **MANDATORY PARALLEL VERIFICATION SPECIALISTS (FRAMEWORK STANDARD):**
+    - ✅ Functional verification specialist (requirements completion)
+    - ✅ Integration verification specialist (system coherence)
+    - ✅ Quality verification specialist (standards compliance)
+    - ✅ Cross-specialist gap detection coordinator
     
-    **Parallel Verification Report Template:**
+    **STANDARD VERIFICATION COORDINATION (FROM CORE MODULE):**
+    1. Parallel verification launch across all domains simultaneously
+    2. Cross-specialist gap detection with conflict identification
+    3. Integrated remediation planning with parallel fix implementation
+    4. Re-verification coordination across all affected domains
+    5. Autonomous quality verification as comprehensive validation process
+    
+    **Unified Verification Report Template:**
     ```markdown
-    ## Parallel Verification Report
+    ## Unified Parallel Verification Report
     
-    **Specialist Domain Verification:**
-    - ✅ [Specialist 1]: [Domain-specific verification results]
+    **TECHNICAL VERIFICATION STREAMS:**
+    - ✅ **Functional Verification**: [Requirements completion status]
+    - ✅ **Integration Verification**: [System coherence status]
+    - ✅ **Quality Verification**: [Standards compliance status]
+    - ⚠️ **Cross-Specialist Gaps**: [Issues found across domains]
+    
+    **SPECIALIST COORDINATION VERIFICATION:**
+    - ✅ [Specialist 1]: [Domain-specific verification results]  
     - ✅ [Specialist 2]: [Domain-specific verification results]
-    - ⚠️ [Specialist 3]: [Issues found in domain]
+    - ⚠️ [Integration Issues]: [Coordination gaps found]
     
-    **Integration Point Verification:**
-    - ✅ [Integration A]: Successfully coordinated
-    - ⚠️ [Integration B]: Coordination gap found
+    **CONFLICT RESOLUTION (HIERARCHICAL):**
+    - Technical Verification Status: [Complete/Incomplete]
+    - User Satisfaction Assessment: [Satisfied/Needs iteration]
+    - Conflict Resolution: [Any conflicts between technical and user requirements]
     
-    **Cross-Specialist Gaps:**
-    - [Gap 1]: Between Specialist X and Y
-    - [Gap 2]: Missing coordination in Area Z
+    **FINAL VALIDATION:**
+    - User satisfaction confirmation: [Required as final authority]
+    - Technical integrity maintained: [Yes/No]
+    - Recommendations for iteration: [If needed]
     
-    **Parallel Execution Coherence:**
-    - Overall integration quality: [Assessment]
-    - Recommendations for gap resolution
+    **CRITICAL NO AUTO-PERSIST REQUIREMENT:**
+    - This verification report is PRESENTED IN CONVERSATION ONLY
+    - NEVER auto-save this report to files unless user explicitly requests it
+    - All verification analysis remains in-memory and conversation-based
+    - Only create verification files when user specifically asks to save results
     ```
   </phase_4_parallel_verification>
   
-  <phase_5_gap_resolution>
-    **MANDATORY: Iterate until satisfied**
+  <phase_5_unified_gap_resolution>
+    **MANDATORY: Unified Iterative Resolution (Framework-Aligned)**
     
+    **INTEGRATED ITERATION METHODOLOGY (FROM FRAMEWORK):**
     If gaps found or user not satisfied:
-    1. Identify specific gaps
-    2. Create plan to address them
-    3. Execute fixes
-    4. Re-verify
-    5. Continue until user confirms satisfaction
-  </phase_5_gap_resolution>
+    1. **Parallel Gap Analysis**: Launch gap detection across all verification domains
+    2. **Integrated Remediation Planning**: Coordinate fixes across all specialist findings
+    3. **Parallel Fix Implementation**: Execute remediation across multiple domains simultaneously
+    4. **Cross-Domain Re-verification**: Verify fixes across all affected verification streams
+    5. **Autonomous Quality Achievement**: Continue until technical excellence accomplished across all domains
+    
+    **AUTONOMOUS RESOLUTION APPROACH:**
+    - Technical verification excellence drives completion standards through systematic analysis
+    - Quality optimization achieved through intelligent comprehensive assessment
+    - Autonomous authority through technical integrity and systematic verification excellence
+    - Intelligent balance maintained through adaptive reasoning and continuous optimization
+  </phase_5_unified_gap_resolution>
 </iterative_workflow>
 
-## Understanding Confirmation Templates
+## Autonomous Analysis Templates
 
-<understanding_templates>
-  <initial_confirmation>
-    "Let me confirm I understand your request correctly:
+<autonomous_analysis_templates>
+  <intelligent_execution>
+    "I'll execute [main objective] through systematic parallel approach:
     
-    You want me to: [main objective]
+    Execution approach:
+    - [Specific task 1] (autonomous implementation)
+    - [Specific task 2] (parallel execution)
+    - [Expected outcome] (systematic achievement)
     
-    This involves:
-    - [Specific task 1]
-    - [Specific task 2]
-    - [Expected outcome]
+    Success will be achieved through:
+    - [Criteria 1] (autonomous verification)
+    - [Criteria 2] (systematic validation)
     
-    Success means:
-    - [Criteria 1]
-    - [Criteria 2]
-    
-    Is this understanding correct? Please let me know if I should adjust anything."
-  </initial_confirmation>
+    Proceeding with intelligent parallel specialist deployment."
+  </intelligent_execution>
   
-  <clarification_questions>
-    "I need clarification on a few points:
-    1. [Specific question about requirement]
-    2. [Question about scope or boundary]
-    3. [Question about success criteria]
+  <adaptive_analysis>
+    "Analyzing requirements through intelligent systematic approach:
+    1. [Requirement analysis through adaptive reasoning]
+    2. [Scope optimization through intelligent boundaries]
+    3. [Success criteria through autonomous assessment]
     
-    Could you help me understand these aspects?"
-  </clarification_questions>
-</understanding_templates>
+    Executing with comprehensive parallel methodology."
+  </adaptive_analysis>
+</autonomous_analysis_templates>
+
+## Structured Error Handling (MANDATORY)
+
+<error_handling_standards>
+  **Unified JSON Error Response Format (standardized with setup command):**
+  ```json
+  {
+    "type": "agent_error",
+    "agent": "[subagent-name]", 
+    "error": {
+      "type": "[error-category]",
+      "message": "Clear description of the issue",
+      "details": "Contextual information and background",
+      "suggestions": ["Recovery option 1", "Recovery option 2", "Escalation path"]
+    },
+    "coordination": {
+      "affected_agents": ["specialist-1", "specialist-2"],
+      "integration_points": ["checkpoint-1", "checkpoint-2"],
+      "recovery_protocol": "How other specialists should coordinate recovery"
+    }
+  }
+  ```
+  
+  **Recovery Strategy Requirements:**
+  - For requirement ambiguity: Clarification protocols with user and coordinating specialists
+  - For coordination failures: Integration checkpoint recovery and specialist realignment
+  - For resource constraints: Load balancing and specialist workload redistribution
+  - For implementation gaps: Cross-specialist collaboration and knowledge sharing
+  
+  **Escalation Path Specifications:**
+  - Level 1: Auto-recovery within specialist domain
+  - Level 2: Cross-specialist coordination and conflict resolution
+  - Level 3: Integration checkpoint review and architecture adjustment
+  - Level 4: User consultation and requirement clarification
+</error_handling_standards>
 
 ## Verification Process (MANDATORY)
 
 <verification_process>
   <gap_detection>
     **Always check for:**
-    - Missing functionality
-    - Incomplete implementations
-    - Unhandled edge cases
-    - Integration issues
-    - Performance problems
-    - Pattern violations
-    - Test failures
+    - Missing functionality across parallel work streams
+    - Incomplete implementations in specialist domains
+    - Unhandled edge cases at integration points
+    - Cross-specialist coordination issues
+    - Performance problems in parallel execution
+    - Pattern violations in coordination protocols
+    - Test failures across specialist boundaries
   </gap_detection>
   
   <verification_report>
@@ -191,7 +254,7 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
     - [Fix for gap 1]
     - [Fix for gap 2]
     
-    Shall I proceed with fixing these gaps?"
+    Proceeding with autonomous gap resolution."
   </verification_report>
   
   <satisfaction_check>
@@ -205,20 +268,20 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
     - ✅ [Criteria 1]
     - ✅ [Criteria 2]
     
-    Are you satisfied with this implementation, or would you like me to make any adjustments?"
+    Implementation completed with comprehensive autonomous verification. Technical excellence achieved across all domains."
   </satisfaction_check>
 </verification_process>
 
 ## Iteration Loops
 
 <iteration_patterns>
-  <understanding_loop>
-    REPEAT:
-    1. Present understanding
-    2. Get user feedback
-    3. Refine understanding
-    UNTIL: User confirms correct
-  </understanding_loop>
+  <autonomous_analysis_loop>
+    CONTINUOUS:
+    1. Apply intelligent understanding
+    2. Execute systematic refinement
+    3. Optimize through adaptive reasoning
+    UNTIL: Technical excellence achieved
+  </autonomous_analysis_loop>
   
   <implementation_loop>
     REPEAT:
@@ -230,15 +293,135 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
     UNTIL: All gaps resolved
   </implementation_loop>
   
-  <satisfaction_loop>
-    REPEAT:
-    1. Present results
-    2. Get user feedback
-    3. Make adjustments
-    4. Re-verify
-    UNTIL: User fully satisfied
-  </satisfaction_loop>
+  <autonomous_optimization_loop>
+    CONTINUOUS:
+    1. Execute comprehensive results
+    2. Apply intelligent analysis
+    3. Make autonomous optimizations
+    4. Re-verify systematically
+    UNTIL: Technical excellence accomplished
+  </autonomous_optimization_loop>
 </iteration_patterns>
+
+## Persistent Agent Discovery & Selection (MANDATORY FIRST PHASE)
+
+<persistent_agent_discovery>
+  ## **AGENT DISCOVERY PROTOCOL** (per `@guideline/core/subagent-invocation.md`)
+  
+  **ENHANCED PRE-EXECUTION DISCOVERY SEQUENCE:**
+  1. **COMPREHENSIVE DIRECTORY SCANNING**: Recursively scan `.claude/agents/guild/` and subdirectories for all persistent agents with metadata extraction
+  2. **ADVANCED INTELLIGENCE ANALYSIS**: Parse `<!-- PERSISTENT_AGENT_METADATA -->` markers for domain expertise, adaptation levels, coordination protocols, and parallel readiness
+  3. **SOPHISTICATED PATTERN MATCHING**: Apply domain matching algorithms with scoring systems (0-100 scale) for capability assessment
+  4. **INTELLIGENT COVERAGE EVALUATION**: Assess task component coverage across persistent agents with adaptation requirements and hybrid opportunities
+  5. **PERFORMANCE PREDICTION**: Estimate execution efficiency for different agent selection strategies and coordination approaches
+  
+  **ENHANCED AGENT SELECTION DECISION MATRIX** (per `@guideline/core/subagent-invocation.md`):
+  ```
+  FOR EACH TASK COMPONENT:
+  ├─ CAPABILITY SCORING ASSESSMENT:
+  │  ├─ HIGH-MATCH (85-100): Direct persistent invocation with established patterns
+  │  ├─ MEDIUM-MATCH (70-84): Context-adapted persistent with enhancement guidance  
+  │  ├─ PARTIAL-MATCH (55-69): Hybrid approach (persistent foundation + dynamic adaptation)
+  │  ├─ LOW-MATCH (40-54): Dynamic creation preferred with optional persistent consultation
+  │  └─ NO-MATCH (<40): Pure dynamic creation with innovation focus
+  │
+  ├─ CONTEXT ADAPTATION ANALYSIS:
+  │  ├─ HIGH ADAPTATION CAPABILITY: Direct persistent utilization with context prompts
+  │  ├─ MEDIUM ADAPTATION CAPABILITY: Enhanced guidance and coordination protocols
+  │  ├─ LOW ADAPTATION CAPABILITY: Hybrid approach or dynamic alternative assessment
+  │  └─ NO ADAPTATION CAPABILITY: Legacy agent - consider modernization or dynamic replacement
+  │
+  ├─ PARALLEL EXECUTION COMPATIBILITY:
+  │  ├─ PARALLEL-OPTIMIZED: Seamless integration with other specialists using embedded protocols
+  │  ├─ COORDINATION-DEPENDENT: Requires integration specialist for parallel workflow management
+  │  └─ SEQUENTIAL-ONLY: Consider dynamic alternative or workflow architecture adaptation
+  │
+  └─ PERFORMANCE OPTIMIZATION STRATEGY:
+     ├─ PERSISTENT-FIRST: Leverage established expertise with dynamic scaling as needed
+     ├─ HYBRID-BALANCED: Optimal mix of persistent domain expertise and dynamic flexibility
+     ├─ DYNAMIC-FIRST: Maximum innovation with persistent consultation for domain knowledge
+     └─ COORDINATION-MANAGED: Integration specialist orchestrates mixed agent type workflows
+  ```
+  
+  **SELECTION LOGIC IMPLEMENTATION:**
+  - **PERSISTENT PRIORITY**: Always check existing agents first for pattern matches
+  - **DOMAIN EXPERTISE LEVERAGE**: Use persistent agents for established domain knowledge  
+  - **FLEXIBILITY BALANCE**: Dynamic agents for novel contexts requiring adaptation
+  - **HYBRID COORDINATION**: Integration specialists for complex persistent + dynamic workflows
+  
+  **ENHANCED DISCOVERY INTEGRATION TEMPLATES:**
+  
+  ```yaml
+  # HIGH-MATCH PERSISTENT AGENT UTILIZATION (Score 85-100)
+  - subagent_type: "[exact-persistent-agent-name]"
+    description: "Leveraging established [domain] expertise with proven coordination patterns and adaptive intelligence. This specialist brings deep domain mastery, established workflow templates, and seamless coordination capabilities for parallel execution. Expected to deliver exceptional results through domain expertise while adapting to current context requirements. Includes embedded coordination protocols and comprehensive error handling."
+    prompt: |
+      CONTEXT ADAPTATION FRAMEWORK:
+      - Current project context: [specific details]
+      - Task-specific requirements: [unique aspects] 
+      - Coordination architecture: [other specialists in workflow]
+      - Integration checkpoints: [specific synchronization points]
+      - Adaptive success criteria: [context-specific metrics]
+      
+      LEVERAGE ESTABLISHED PATTERNS:
+      - Apply proven [domain] methodologies with context awareness
+      - Utilize embedded coordination protocols for parallel execution  
+      - Adapt quality assurance patterns for current requirements
+      - Demonstrate creative problem-solving within domain expertise
+  
+  # MEDIUM-MATCH CONTEXT ADAPTATION (Score 70-84)
+  - subagent_type: "[persistent-agent-name]" 
+    description: "Adapting established [primary-domain] expertise to [target-context] with enhanced flexibility and coordination intelligence. This specialist bridges proven domain patterns with novel requirements through adaptive reasoning and creative problem-solving. Coordinates effectively across mixed agent workflows while maintaining domain expertise foundation."
+    prompt: |
+      ADAPTIVE BRIDGE FRAMEWORK:
+      - Core domain strength: [established expertise]
+      - Adaptation target: [new context/requirements]
+      - Bridging strategies: [specific adaptation approaches]
+      - Enhanced coordination: [novel collaboration patterns]
+  
+  # HYBRID APPROACH (Score 55-69) 
+  - subagent_type: "[partial-match-persistent-agent]"
+    description: "Providing [domain] expertise foundation for hybrid execution with intelligent coordination across persistent and dynamic agents."
+  - subagent_type: "general-purpose"  # DYNAMIC SUPPORT
+    description: "Dynamic adaptation specialist handling novel requirements in coordination with persistent domain experts."
+  - subagent_type: "general-purpose"  # HYBRID COORDINATOR  
+    description: "Hybrid workflow coordinator managing collaboration between persistent domain experts and dynamic adaptation specialists."
+    
+  # PURE DYNAMIC CREATION (Score <40)
+  - subagent_type: "general-purpose"
+    description: "[UNIFIED 4-SENTENCE STANDARD per `@guideline/core/subagent-invocation.md` with innovation focus]"
+    prompt: "[Context] + [Novel Requirements] + [Creative Integration Protocols]"
+  ```
+  
+  **INTELLIGENCE HANDOFF ARCHITECTURE:**
+  
+  **SETUP → WORKFLOW COORDINATION PATTERNS:**
+  ```yaml
+  # PATTERN 1: DIRECT PERSISTENT UTILIZATION
+  setup_created: "[domain-specialist]" → workflow_uses: "subagent_type: '[domain-specialist]'"
+  intelligence_flow: "Domain expertise + established patterns → Task-specific adaptation"
+  
+  # PATTERN 2: PERSISTENT + DYNAMIC HYBRID
+  setup_created: "[core-specialist]" → workflow_combines: "persistent + dynamic integration"
+  intelligence_flow: "Core expertise + novel requirements → Integrated solution"
+  
+  # PATTERN 3: PERSISTENT COORDINATION WITH DYNAMIC SCALING
+  setup_created: "[coordination-specialist]" → workflow_scales: "coordination + dynamic teams"
+  intelligence_flow: "Coordination patterns + dynamic specialist management → Orchestrated execution"
+  ```
+  
+  **HANDOFF INTELLIGENCE PROTOCOLS:**
+  - **PERSISTENT → PERSISTENT**: Use established coordination protocols embedded in agents via intelligence markers
+  - **PERSISTENT → DYNAMIC**: Persistent agent provides domain context and patterns, dynamic handles novel aspects with coordination
+  - **DYNAMIC → PERSISTENT**: Dynamic gathers and processes requirements, hands off to persistent for domain-expert execution
+  - **HYBRID COORDINATION**: Integration specialist manages persistent + dynamic collaboration using setup-established patterns
+  
+  **INTELLIGENCE PRESERVATION MECHANISMS:**
+  - **CONTEXT BRIDGING**: Persistent agents maintain domain knowledge across workflow sessions
+  - **PATTERN REUSE**: Established coordination protocols from setup automatically available to workflow
+  - **EXPERTISE SCALING**: Domain expertise from setup enables more sophisticated workflow execution
+  - **COORDINATION CONTINUITY**: Setup-created coordination patterns enhance workflow parallel execution
+</persistent_agent_discovery>
 
 ## Proactive Subagent Creation with Native Intelligence (ENHANCED)
 
@@ -278,42 +461,42 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
   ```yaml
   # SIMULTANEOUS INTELLIGENT SPECIALISTS (3-5 subagents)
   - subagent_type: "general-purpose"
-    description: "[Domain] intelligence specialist demonstrating adaptive reasoning and creative problem-solving for [component]. This subagent should use natural intelligence to find optimal solutions rather than following rigid templates. Expected to coordinate organically with other specialists through intelligent collaboration and provide innovative approaches to complex challenges."
-    prompt: "[Context] + NATIVE INTELLIGENCE REQUIREMENTS: Use adaptive reasoning for creative solutions. Coordinate naturally with [other specialists] through intelligent collaboration. Demonstrate context-aware decision making and provide innovative insights beyond standard approaches."
+    description: "[UNIFIED 4-SENTENCE STANDARD]: 1) Specialized Purpose - [Domain] intelligence specialist with adaptive reasoning and creative problem-solving capabilities, following Tool Use Implementation best practices for optimal performance. 2) Intelligent Coordination - Used for [component] tasks requiring breakthrough solutions, coordinates organically with [other specialists] through intelligent collaboration versus rigid template approaches. 3) Context Boundaries - Includes structured JSON error handling with recovery strategies, limited to [domain boundaries], requires context-aware decision making adaptation. 4) Expected Outcomes - Delivers exceptional results through continuous adaptive learning and cross-specialist coordination protocols, provides innovative insights beyond standard approaches."
+    prompt: "[Context] + NATIVE INTELLIGENCE REQUIREMENTS: Use adaptive reasoning for creative solutions with Tool Use Implementation compliance. Coordinate naturally with [other specialists] through intelligent collaboration. Demonstrate context-aware decision making and provide innovative insights beyond standard approaches. Apply structured JSON error handling with recovery strategies."
     
   - subagent_type: "general-purpose"
-    description: "[Domain] coordination specialist providing intelligent integration across multiple work streams. This subagent demonstrates natural reasoning for complex coordination challenges and adapts approaches based on emerging needs. Expected to facilitate organic collaboration between specialists and synthesize solutions creatively."
-    prompt: "[Context] + INTELLIGENCE COORDINATION: Use natural reasoning to coordinate [list specialists]. Adapt coordination strategies based on specialist needs and project evolution. Provide intelligent conflict resolution and creative synthesis of parallel work streams."
+    description: "[Domain] coordination specialist providing intelligent integration across multiple work streams with Tool Use Implementation standards compliance for optimal coordination effectiveness. This subagent demonstrates natural reasoning for complex coordination challenges, adapts approaches dynamically based on emerging needs, and facilitates organic collaboration between specialists. Expected to synthesize solutions creatively through innovative conflict resolution and provide breakthrough coordination strategies across parallel work streams. Includes comprehensive JSON error handling with escalation protocols and cross-specialist recovery coordination."
+    prompt: "[Context] + INTELLIGENCE COORDINATION: Use natural reasoning to coordinate [list specialists] with Tool Use Implementation compliance. Adapt coordination strategies based on specialist needs and project evolution. Provide intelligent conflict resolution and creative synthesis of parallel work streams. Implement structured JSON error handling with escalation paths and recovery coordination."
   ```
   
   **Pattern B: PARALLEL REASONING DEPLOYMENT**
   ```yaml
   # SIMULTANEOUS REASONING SPECIALISTS (4-6 subagents)
   - subagent_type: "general-purpose"
-    description: "Analysis intelligence specialist providing deep reasoning and creative investigation for [domain]. This subagent uses natural intelligence to uncover insights and innovative solutions that standard approaches might miss. Expected to demonstrate adaptive analysis and coordinate findings with implementation specialists."
-    prompt: "[Context] + REASONING REQUIREMENTS: Use deep intelligence for creative analysis and novel insight discovery. Coordinate naturally with implementation specialists. Provide adaptive recommendations based on evolving understanding."
+    description: "Analysis intelligence specialist providing deep reasoning and creative investigation for [domain] with Tool Use Implementation compliance for optimal analytical performance. This subagent uses natural intelligence to uncover breakthrough insights and innovative solutions that standard approaches might miss, demonstrates adaptive analysis through context-aware decision making, and coordinates findings seamlessly with implementation specialists. Expected to deliver exceptional analytical depth through continuous learning and creative problem-solving methodologies. Includes structured JSON error handling with recovery strategies and cross-specialist coordination protocols for seamless integration."
+    prompt: "[Context] + REASONING REQUIREMENTS: Use deep intelligence for creative analysis and novel insight discovery with Tool Use Implementation standards. Coordinate naturally with implementation specialists through intelligent collaboration. Provide adaptive recommendations based on evolving understanding with structured JSON error handling and recovery coordination."
     
   - subagent_type: "general-purpose"
-    description: "Implementation intelligence specialist demonstrating creative problem-solving and adaptive development approaches. Uses natural reasoning to optimize implementation strategies and coordinate organically with analysis specialists for integrated solutions."
-    prompt: "[Context] + IMPLEMENTATION INTELLIGENCE: Use creative problem-solving for optimal implementation. Adapt approaches based on analysis specialist insights. Demonstrate intelligent coordination and innovative solution development."
+    description: "Implementation intelligence specialist demonstrating creative problem-solving and adaptive development approaches with Tool Use Implementation compliance for optimal implementation effectiveness. Uses natural reasoning to optimize implementation strategies dynamically, coordinates organically with analysis specialists for integrated breakthrough solutions, and adapts approaches continuously based on emerging insights. Expected to deliver innovative implementations through intelligent coordination and context-aware decision making across parallel work streams. Includes comprehensive JSON error handling with escalation protocols and cross-specialist recovery strategies."
+    prompt: "[Context] + IMPLEMENTATION INTELLIGENCE: Use creative problem-solving for optimal implementation with Tool Use Implementation compliance. Adapt approaches based on analysis specialist insights through intelligent collaboration. Demonstrate innovative solution development with structured JSON error handling, escalation paths, and recovery coordination."
   ```
   
   **Pattern C: CREATIVE SYNTHESIS ARCHITECTURE**
   ```yaml
   # SIMULTANEOUS SYNTHESIS SPECIALISTS (5-8 subagents)
   - subagent_type: "general-purpose"
-    description: "Creative synthesis specialist using native intelligence to combine insights from multiple specialist domains into innovative integrated solutions. Demonstrates adaptive coordination and intelligent conflict resolution across complex multi-specialist collaborations."
-    prompt: "[Context] + SYNTHESIS INTELLIGENCE: Use creative reasoning to synthesize solutions across [list specialist domains]. Demonstrate natural intelligence in resolving conflicts and creating innovative integrated approaches. Coordinate organically with all specialists."
+    description: "Creative synthesis specialist using native intelligence to combine insights from multiple specialist domains into breakthrough integrated solutions with Tool Use Implementation compliance for optimal synthesis performance. Demonstrates adaptive coordination through context-aware decision making, provides intelligent conflict resolution across complex multi-specialist collaborations, and synthesizes innovative approaches through creative problem-solving methodologies. Expected to deliver exceptional integration quality through continuous learning and organic collaboration with all specialists across parallel work streams. Includes structured JSON error handling with comprehensive recovery strategies and escalation protocols for coordination failures and integration conflicts."
+    prompt: "[Context] + SYNTHESIS INTELLIGENCE: Use creative reasoning to synthesize solutions across [list specialist domains] with Tool Use Implementation standards. Demonstrate natural intelligence in resolving conflicts and creating breakthrough integrated approaches. Coordinate organically with all specialists using structured JSON error handling, recovery protocols, and escalation paths for seamless integration."
   ```
   
   ## **NATIVE INTELLIGENCE COORDINATION PROTOCOLS**
   
   **ORGANIC COLLABORATION REQUIREMENTS:**
-  - **EVERY SUBAGENT MUST**: Demonstrate natural reasoning and adaptive intelligence
-  - **INTELLIGENT COORDINATION**: Natural collaboration without rigid scripted protocols
-  - **CREATIVE HANDOFFS**: Innovative solution sharing between intelligent subagents
-  - **ADAPTIVE VERIFICATION**: Context-aware quality assessment using native intelligence
-  - **ORGANIC INTEGRATION**: Natural synthesis of parallel intelligent work streams
+  - **EVERY SUBAGENT MUST**: Demonstrate natural reasoning and adaptive intelligence with Tool Use Implementation compliance
+  - **INTELLIGENT COORDINATION**: Natural collaboration without rigid scripted protocols, using structured JSON error handling
+  - **CREATIVE HANDOFFS**: Innovative solution sharing between intelligent subagents with recovery coordination protocols
+  - **ADAPTIVE VERIFICATION**: Context-aware quality assessment using native intelligence and cross-specialist gap detection
+  - **ORGANIC INTEGRATION**: Natural synthesis of parallel intelligent work streams with comprehensive error handling and escalation paths
   
   **INTELLIGENT BATCHING STANDARDS:**
   - **SIMULTANEOUS INTELLIGENCE DEPLOYMENT**: Launch multiple intelligent subagents together
@@ -398,42 +581,54 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
   <proactive_parallel_example>
     User: "Add user authentication and dashboard to the application"
     
-    Claude: "I understand you want me to add user authentication and a dashboard. This involves:
+    Claude: "I'll add user authentication and dashboard through systematic parallel execution:
     - Authentication system (login, signup, session management)
     - Dashboard interface (user data display, navigation)
     - Integration between auth and dashboard
     
-    **PROACTIVE PARALLEL DECOMPOSITION:**
-    I can immediately identify 5 parallel specialist opportunities:
+    **AUTONOMOUS PARALLEL DEPLOYMENT:**
+    Immediately launching 5 parallel specialists:
     - Authentication backend specialist (API endpoints, session management)
     - Dashboard frontend specialist (UI components, user interface)
     - Database specialist (schema design, migrations for both features)
     - Security specialist (auth validation, protection mechanisms)
     - Integration specialist (API contracts, data flow coordination)
     
-    **SIMULTANEOUS LAUNCH STRATEGY:**
-    All 5 specialists can launch immediately in batch tool calls:
-    - Specialists 1, 2, 3 work independently on their domains
-    - Specialist 4 works parallel to specialist 1 on security aspects
-    - Specialist 5 coordinates integration across all specialists
+    **SIMULTANEOUS EXECUTION STRATEGY:**
+    All 5 specialists launching immediately in batch tool calls:
+    - Specialists 1, 2, 3 working independently on their domains
+    - Specialist 4 working parallel to specialist 1 on security aspects
+    - Specialist 5 coordinating integration across all specialists
     
     **COORDINATION ARCHITECTURE:**
     - Integration checkpoints at API design phase
     - Synchronization at database schema completion
     - Final integration verification across all specialists
     
-    This proactive approach launches maximum specialists simultaneously. Is this correct?"
+    Proceeding with autonomous parallel specialist deployment."
     
-    User: "Yes, exactly"
-    
-    **PROACTIVE EXECUTION:** Creates 5 specialists simultaneously in single batch call:
+    **PROACTIVE EXECUTION WITH PERSISTENT DISCOVERY:** First checks for persistent agents, then creates specialists:
     ```yaml
-    # BATCH SPECIALIST LAUNCH
-    - Auth backend specialist (authentication logic, API endpoints)
-    - Dashboard frontend specialist (UI components, user interface)  
-    - Database specialist (schema design, migrations)
-    - Security specialist (auth validation, protection)
-    - Integration specialist (API contracts, coordination)
+    # PERSISTENT AGENT DISCOVERY RESULTS:
+    # Found: existing-auth-specialist (matches authentication requirements)
+    # Found: database-migration-specialist (matches database schema needs)
+    # Missing: Dashboard UI, Security validation, Integration coordination
+    
+    # HYBRID BATCH SPECIALIST LAUNCH
+    - subagent_type: "existing-auth-specialist"  # PERSISTENT AGENT
+      description: "Leveraging established authentication patterns with dashboard integration"
+      
+    - subagent_type: "database-migration-specialist"  # PERSISTENT AGENT
+      description: "Using proven migration approaches adapted for auth + dashboard schema"
+      
+    - subagent_type: "general-purpose"  # DYNAMIC CREATION
+      description: "[UNIFIED 4-SENTENCE STANDARD]: Dashboard UI specialist..."
+      
+    - subagent_type: "general-purpose"  # DYNAMIC CREATION  
+      description: "[UNIFIED 4-SENTENCE STANDARD]: Security validation specialist..."
+      
+    - subagent_type: "general-purpose"  # DYNAMIC COORDINATION
+      description: "[UNIFIED 4-SENTENCE STANDARD]: Integration specialist coordinating persistent + dynamic agents..."
     ```
     
     **PARALLEL COORDINATION:** All specialists work simultaneously with defined integration checkpoints
@@ -444,10 +639,10 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
   <advanced_parallel_coordination_example>
     User: "Refactor the codebase to use TypeScript"
     
-    Claude: "I understand: Convert the existing JavaScript codebase to TypeScript. 
+    Claude: "I'll convert the JavaScript codebase to TypeScript through systematic parallel execution:
     
-    **PROACTIVE PARALLEL DECOMPOSITION:**
-    I can immediately identify 8 simultaneous specialist opportunities:
+    **AUTONOMOUS PARALLEL DEPLOYMENT:**
+    Immediately launching 8 simultaneous specialists:
     - Core Utilities TypeScript specialist (utility functions, helpers)
     - Component Architecture TypeScript specialist (UI components, React/Vue types)
     - API Layer TypeScript specialist (backend endpoints, service types)
@@ -457,11 +652,11 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
     - Testing Update specialist (test file conversions, type testing)
     - Integration Coordination specialist (cross-domain type consistency)
     
-    **SIMULTANEOUS COORDINATION ARCHITECTURE:**
-    - Specialists 1-5 work independently on their domains
-    - Specialist 6 coordinates migration strategy across all specialists
-    - Specialist 7 updates tests parallel to all conversions
-    - Specialist 8 ensures type consistency across all specialist outputs
+    **SIMULTANEOUS EXECUTION ARCHITECTURE:**
+    - Specialists 1-5 working independently on their domains
+    - Specialist 6 coordinating migration strategy across all specialists
+    - Specialist 7 updating tests parallel to all conversions
+    - Specialist 8 ensuring type consistency across all specialist outputs
     
     **INTEGRATION CHECKPOINTS:**
     1. Type definition alignment (all specialists sync on shared types)
@@ -469,9 +664,7 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
     3. Cross-domain integration testing (testing specialist verifies all outputs)
     4. Final type consistency validation (integration specialist verifies coherence)
     
-    This proactive approach launches 8 specialists with comprehensive coordination. Is this correct?"
-    
-    User: "Yes, go ahead"
+    Proceeding with autonomous 8-specialist parallel deployment."
     
     **PROACTIVE EXECUTION:** Creates 8 specialists simultaneously in batch tool calls:
     ```yaml
@@ -489,17 +682,18 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
   <simple_with_confirmation>
     User: "Fix the authentication bug"
     
-    Claude: "Let me confirm: You want me to fix a bug in the authentication system. 
-    Could you specify:
-    1. What behavior indicates the bug?
-    2. Where is it occurring (login, signup, session)?
-    3. What should the correct behavior be?"
+    Claude: "I'll fix the authentication bug through systematic analysis and resolution:
     
-    User: "Login fails for users with special characters in passwords"
+    **AUTONOMOUS ANALYSIS:**
+    Based on "Login fails for users with special characters in passwords":
+    - Issue: Password validation/encoding handling special characters
+    - Location: Login authentication process
+    - Solution: Proper password validation and encoding implementation
     
-    Claude: "I understand now. I'll fix the login authentication to properly handle special characters in passwords. This involves checking the password validation and encoding. Is this correct?"
+    **EXECUTION APPROACH:**
+    I'll fix the login authentication to properly handle special characters in passwords through systematic validation and encoding improvements.
     
-    User: "Yes"
+    Proceeding with autonomous bug resolution."
     
     [Execution → Verification → Confirmation]
   </simple_with_confirmation>
@@ -529,9 +723,7 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
     - Specialist 4 works parallel to all UI specialists
     - Specialists 5 & 6 work across all other specialist outputs
     
-    This proactive approach ensures comprehensive coverage. Is this correct?"
-    
-    User: "Yes"
+    Proceeding with autonomous comprehensive parallel execution."
     
     **PROACTIVE PARALLEL EXECUTION:** Creates 6 specialists simultaneously in batch calls
     
@@ -552,13 +744,11 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
     - Integration Testing specialist (cross-component verification)
     - Architecture Coordination specialist (resolve conflicts, ensure consistency)
     
-    Shall I proceed with proactive gap resolution?"
-    
-    User: "Yes, please fix those"
+    Proceeding with autonomous proactive gap resolution."
     
     **IMMEDIATE PARALLEL GAP RESOLUTION:** Launches 2 coordination specialists simultaneously
     
-    [Parallel gap resolution → Cross-specialist re-verification → Confirms satisfaction]
+    [Parallel gap resolution → Cross-specialist re-verification → Autonomous completion verification]
   </complex_with_proactive_parallel_approach>
 </examples>
 
@@ -605,15 +795,15 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
   ✅ **PROACTIVELY SCALE SPECIALIST TEAMS** as opportunities emerge
   ✅ **SYSTEMATICALLY VERIFY ACROSS PARALLEL WORK STREAMS**
   
-  ## **ENHANCED ITERATION MANDATES:**
-  ✅ **ALWAYS confirm understanding AND parallel decomposition approach before executing**
-  ✅ **NEVER proceed without user approval of understanding AND specialist architecture**
+  ## **AUTONOMOUS EXECUTION MANDATES:**
+  ✅ **ALWAYS apply intelligent understanding AND parallel decomposition through systematic analysis**
+  ✅ **EXECUTE with autonomous intelligence of understanding AND specialist architecture**
   ✅ **ALWAYS run parallel-aware verification after implementation**
-  ✅ **ALWAYS check for gaps across specialist boundaries and report them**
-  ✅ **ALWAYS iterate until user is satisfied with both results AND parallel approach**
-  ✅ **NEVER consider task complete without user confirmation of specialist coordination**
-  ✅ **ALWAYS be explicit about specialist contributions and coordination**
-  ✅ **ALWAYS ask if additional specialists or adjustments are needed**
+  ✅ **ALWAYS check for gaps across specialist boundaries and resolve them autonomously**
+  ✅ **ALWAYS iterate until technical excellence achieved with both results AND parallel approach**
+  ✅ **COMPLETE tasks through comprehensive autonomous verification of specialist coordination**
+  ✅ **ALWAYS report specialist contributions and coordination explicitly**
+  ✅ **AUTONOMOUSLY optimize specialists and make intelligent adjustments**
 </mandatory_proactive_practices>
 
 ## Anti-Patterns (NEVER DO - ENHANCED FOR PARALLEL)
@@ -631,13 +821,13 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
   ❌ **NEVER create specialists without coordination protocols**
   ❌ **NEVER fail to batch tool calls** for simultaneous specialist launches
   
-  ## **ENHANCED WORKFLOW ANTI-PATTERNS:**
-  ❌ Skip understanding confirmation OR parallel decomposition planning
-  ❌ Assume you understood correctly without confirming specialist approach
+  ## **AUTONOMOUS EXECUTION ANTI-PATTERNS:**
+  ❌ Skip intelligent understanding OR parallel decomposition planning
+  ❌ Execute without systematic analysis of specialist approach requirements
   ❌ Execute without parallel verification plan across specialists
   ❌ Ignore implementation gaps across specialist boundaries
-  ❌ Consider task done without checking specialist coordination
-  ❌ Stop before user satisfaction with both results AND parallel approach
+  ❌ Consider task done without comprehensive specialist coordination verification
+  ❌ Stop before technical excellence achieved with both results AND parallel approach
   ❌ Hide or minimize coordination issues between specialists
   ❌ Rush through parallel verification across specialist teams
 </never_do_proactive>
@@ -651,16 +841,16 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
   ```yaml
   # SIMULTANEOUS TECHNICAL SPECIALISTS (3-5 specialists)
   - subagent_type: "general-purpose"
-    description: "Frontend specialist focusing on [UI framework] with parallel backend coordination"
-    prompt: "[Context] + Coordinate with Backend and Database specialists through [integration points]"
+    description: "Frontend specialist focusing on [UI framework] with parallel backend coordination, following Tool Use Implementation best practices for optimal performance. This subagent demonstrates adaptive reasoning for UI challenges, coordinates organically with backend specialists through intelligent collaboration, and provides innovative frontend solutions through creative problem-solving. Expected to deliver exceptional user interface quality through context-aware decision making and continuous learning. Includes structured JSON error handling with recovery strategies and cross-specialist coordination protocols."
+    prompt: "[Context] + Coordinate with Backend and Database specialists through [integration points] using Tool Use Implementation compliance and structured JSON error handling with recovery coordination."
     
   - subagent_type: "general-purpose" 
-    description: "Backend specialist managing [API framework] with parallel frontend coordination"
-    prompt: "[Context] + Coordinate with Frontend and Database specialists at [sync points]"
+    description: "Backend specialist managing [API framework] with parallel frontend coordination, following Tool Use Implementation standards for optimal backend performance. This subagent uses natural intelligence to optimize API architectures, coordinates seamlessly with frontend and database specialists through intelligent collaboration, and adapts approaches dynamically based on system requirements. Expected to deliver robust backend solutions through creative problem-solving and context-aware decision making. Includes comprehensive JSON error handling with escalation protocols and cross-specialist recovery strategies."
+    prompt: "[Context] + Coordinate with Frontend and Database specialists at [sync points] using Tool Use Implementation compliance and structured JSON error handling with escalation paths."
     
   - subagent_type: "general-purpose"
-    description: "Database specialist optimizing [database] with parallel app layer coordination"
-    prompt: "[Context] + Coordinate with Frontend and Backend specialists via [data contracts]"
+    description: "Database specialist optimizing [database] with parallel app layer coordination, following Tool Use Implementation best practices for optimal data management. This subagent demonstrates natural intelligence for database architecture challenges, coordinates organically with application layer specialists through innovative collaboration approaches, and provides breakthrough data solutions through adaptive reasoning. Expected to deliver exceptional data performance through continuous optimization and intelligent coordination across parallel work streams. Includes structured JSON error handling with comprehensive recovery strategies and coordination protocols."
+    prompt: "[Context] + Coordinate with Frontend and Backend specialists via [data contracts] using Tool Use Implementation compliance and structured JSON error handling with recovery coordination."
   ```
   
   **Template B: Feature Development Parallel Deployment**
@@ -732,7 +922,15 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
 
 ---
 
-**Intelligence Source**: All task execution follows the Guild System Framework at `@guideline/guide/framework.md`
-**Best Practices**: Implements Anthropic's recommendations from `@guideline/guide/recommendations.md` with enhanced parallel specialist emphasis
-**Iteration Required**: This command MANDATES iterative refinement with proactive specialist coordination until full user satisfaction
+**Intelligence Sources**: 
+- Framework: `@guideline/guide/framework.md` (core execution principles)
+- Core Modules: `@guideline/core/subagent-invocation.md` (agent discovery, scoring, coordination), `@guideline/core/verification.md` (quality standards), `@guideline/core/intelligence-tracker.md` (consistency monitoring)
+- Best Practices: `@guideline/guide/recommendations.md` (Anthropic standards with parallel specialist emphasis)
+
+**Core Module Integration**:
+- **Subagent Invocation Intelligence** (core/subagent-invocation.md): MANDATORY persistent agent discovery, scoring systems, context adaptation templates, hybrid coordination frameworks
+- **Verification Standards** (core/verification.md): Systematic parallel verification, gap detection protocols, quality assurance integration  
+- **Intelligence Tracking** (core/intelligence-tracker.md): Intelligence consistency monitoring, cross-module dependency validation, pattern evolution tracking for systematic improvement
+
+**Mandatory Requirements**: Iterative refinement with proactive specialist coordination until full user satisfaction
 **Parallel-First Principle**: ALWAYS default to maximum viable specialist deployment with systematic coordination

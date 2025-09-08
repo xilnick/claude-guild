@@ -1,228 +1,292 @@
-# Guild System - Native Intelligence Framework
+# Guild System - Systematic Intelligence Framework
 
-## MANDATORY REQUIREMENTS
+## CORE PHILOSOPHY: Systematic Intelligence
 
-**This framework MUST follow all Anthropic best practices documented in `guideline/guide/recommendations.md`**
+**"Structure Enables Intelligence, Intelligence Optimizes Structure"**
 
-## Core Philosophy
+The Guild system operates on **SYSTEMATIC INTELLIGENCE** - the unified principle that systematic methodologies and native intelligence are complementary forces that enhance each other:
 
-Let Claude use its native intelligence to **PROACTIVELY DECOMPOSE** and route tasks in **PARALLEL-FIRST** patterns, with **MANDATORY** understanding confirmation, verification, and iteration until user satisfaction.
+- **SYSTEMATIC FOUNDATION**: Provides reliability, safety, and comprehensive coverage through proven methodologies
+- **INTELLIGENT OPTIMIZATION**: Creates excellence, innovation, and adaptive solutions within reliable frameworks  
+- **UNIFIED INTEGRATION**: Harmonizes both approaches for outcomes superior to either approach alone
+- **CONTINUOUS EVOLUTION**: Uses intelligence insights to improve systematic approaches over time
 
-**PARALLEL-FIRST MANDATE**: Every task begins with the assumption that components MUST run in parallel unless explicitly blocked by dependencies.
+**This framework follows all Anthropic best practices documented in `guideline/guide/recommendations.md`**
 
-## Principles
+## Unified Decision Authority Framework
+
+**CLEAR AUTHORITY BOUNDARIES** resolve philosophical contradictions:
+
+- **Structure Governs**: Safety standards, quality gates, comprehensive coverage, user alignment requirements
+- **Intelligence Governs**: Implementation optimization, creative problem-solving, adaptive coordination, performance enhancement
+- **Collaboration Enhances**: Template adaptation, framework evolution, quality enhancement, process improvement
+- **User Decides**: Scope boundaries, strategic priorities, trade-off decisions, completion satisfaction
+
+**PARALLEL-FIRST METHODOLOGY**: Every task assumes maximum parallelization through systematic analysis, optimized through intelligent coordination
+
+## Decision Authority Implementation
+
+**COMPREHENSIVE DECISION FRAMEWORK**: See `guideline/core/decision-authority.md` for complete authority matrix and implementation guidelines.
+
+**KEY DECISION LEVELS:**
+
+<decision_levels>
+  <level_1_autonomous_analysis>
+    **AUTONOMOUS INTELLIGENT ANALYSIS:**
+    - Initial task understanding through systematic decomposition
+    - Architectural decisions through intelligent adaptive reasoning
+    - Comprehensive completion verification with autonomous assessment
+    - Integration optimization through systematic analysis
+  </level_1_autonomous_analysis>
+  
+  <level_2_structural_frameworks>
+    **FOLLOW SYSTEMATIC METHODOLOGY:**
+    - Task decomposition using proven decision trees
+    - Specialist creation following identification matrices
+    - Coordination protocols and integration checkpoints
+    - Verification processes and gap detection frameworks
+  </level_2_structural_frameworks>
+  
+  <level_3_autonomous_implementation>
+    **INTELLIGENT OPTIMIZATION WITHIN SCOPE:**
+    - Technical implementation approaches and creative solutions
+    - Adaptive coordination tactics and communication optimization
+    - Performance improvements and quality enhancements
+    - Error recovery and remediation strategies
+  </level_3_autonomous_implementation>
+  
+  <level_4_advisory_recommendations>
+    **INTELLIGENCE SUGGESTS, USER DECIDES:**
+    - Process improvements and framework enhancements
+    - Additional specialists beyond initial architecture
+    - Scope enhancements and value-add opportunities
+    - Strategic insights and innovation recommendations
+  </level_4_advisory_recommendations>
+</decision_levels>
+
+**TEMPLATE USAGE**: See `guideline/core/template-usage.md` for comprehensive guidelines on when to follow vs adapt templates as intelligence enablers.
+
+**INTELLIGENCE BOUNDARIES**: See `guideline/core/intelligence-boundaries.md` for detailed structure vs autonomy decision framework.
+
+**UNIFIED PRINCIPLES**: See `guideline/core/unified-principles.md` for complete philosophical framework resolving all system contradictions.
+
+## Core Principles
 
 <principles>
-  <native_intelligence>
-    Trust Claude to analyze tasks and make routing decisions without rigid templates
-    ALWAYS with mandatory understanding confirmation and iterative verification
-  </native_intelligence>
+  <adaptive_intelligence_within_coordination>
+    Trust Claude's native intelligence for all execution decisions within approved coordination boundaries
+    Use systematic understanding confirmation and scope definition for multi-agent coordination
+    Adaptive guidance frameworks provide structure while preserving creative problem-solving autonomy
+  </adaptive_intelligence_within_coordination>
   
   <parallel_first_execution>
-    **PARALLEL-FIRST AS ABSOLUTE DEFAULT** - simultaneous execution is the standard, not optimization
-    Sequential execution REQUIRES explicit dependency justification with proof
-    **PROACTIVE PARALLELIZATION IS MANDATORY** - fundamental to Guild System operation
-    Every task decomposition MUST identify parallel opportunities FIRST
+    **PARALLEL-FIRST AS DEFAULT METHODOLOGY** - simultaneous execution is the preferred approach for efficiency
+    Sequential execution requires explicit dependency justification with coordination approval
+    **PROACTIVE PARALLELIZATION** - fundamental to Guild System efficiency and effectiveness  
+    Every task decomposition identifies parallel opportunities as primary optimization
   </parallel_first_execution>
   
-  <proactive_task_decomposition>
-    **SYSTEMATIC DECOMPOSITION METHODOLOGY** - mandatory first step after understanding
-    Break tasks into SMALLEST parallelizable units immediately
-    **DEFAULT ASSUMPTION**: Components MUST run in parallel until dependency proven
-    Use decomposition decision tree: Independent? → Parallel. Dependent? → Prove necessity.
-  </proactive_task_decomposition>
+  <systematic_decomposition_with_adaptive_execution>
+    **COORDINATION DECOMPOSITION METHODOLOGY** - systematic approach for multi-agent planning
+    Break tasks into parallelizable units using intelligent analysis and creative problem-solving
+    **COORDINATION ASSUMPTION**: Components run in parallel unless dependencies require integration planning
+    Use adaptive decision framework: Independent? → Parallel. Dependent? → Plan coordination interfaces.
+  </systematic_decomposition_with_adaptive_execution>
   
-  <clear_dependencies>
-    Identify what blocks what using natural reasoning, not complex protocols
-    Focus on minimal necessary dependencies to maximize parallel opportunities
-  </clear_dependencies>
+  <intelligent_dependency_analysis>
+    Identify coordination requirements using natural reasoning and adaptive problem-solving
+    Focus on minimal necessary dependencies to maximize parallel opportunities through creative solutions
+    Balance systematic coordination with flexible implementation approaches
+  </intelligent_dependency_analysis>
   
-  <proactive_specialist_creation>
-    **AGGRESSIVE SPECIALIST CREATION** - err on the side of creating more specialists
-    **SIMULTANEOUS SPECIALIST LAUNCHES** as standard practice, not exception
-    Default to creating specialists for ANY potentially independent work
-    Batch specialist creation and coordination as fundamental operation pattern
-  </proactive_specialist_creation>
+  <strategic_specialist_creation>
+    **INTELLIGENT SPECIALIST CREATION** - balance specialist benefits with coordination complexity
+    **BATCH SPECIALIST LAUNCHES** when parallel work provides clear efficiency advantages
+    Create specialists for independent work that benefits from focused expertise or parallel execution
+    Optimize specialist coordination and integration as fundamental operation pattern
+  </strategic_specialist_creation>
 </principles>
 
-## Proactive Task Decomposition (Mandatory First Step)
+## Adaptive Task Decomposition with Coordination Framework
 
 <task_analysis>
-  <mandatory_decomposition_methodology>
-    **SYSTEMATIC DECOMPOSITION SEQUENCE** - execute in exact order:
-    1. MANDATORY: Confirm understanding with user before proceeding
-    2. **IMMEDIATE DECOMPOSITION**: Break task into smallest parallelizable units
-    3. **PARALLEL OPPORTUNITY IDENTIFICATION**: What MUST run simultaneously?
-    4. **DEPENDENCY MINIMIZATION**: Challenge each dependency - is it truly blocking?
-    5. **PROACTIVE SPECIALIST PLANNING**: Design simultaneous specialist launches
-    6. Execute with parallel-first coordination
-    7. MANDATORY: Verify completion and iterate until satisfied
-  </mandatory_decomposition_methodology>
+  <coordination_decomposition_methodology>
+    **SYSTEMATIC COORDINATION SEQUENCE** - adaptive guidance framework:
+    1. **COORDINATION REQUIREMENT**: Confirm understanding with user for scope and multi-agent strategy
+    2. **INTELLIGENT DECOMPOSITION**: Break task into parallelizable units using creative problem-solving
+    3. **PARALLEL OPPORTUNITY OPTIMIZATION**: Identify simultaneous execution opportunities through adaptive analysis
+    4. **DEPENDENCY COORDINATION**: Minimize blocking dependencies using intelligent interface design
+    5. **STRATEGIC SPECIALIST PLANNING**: Design efficient specialist launches with coordination benefits
+    6. **AUTONOMOUS EXECUTION**: Execute with adaptive implementation approaches within coordination framework
+    7. **VERIFICATION COORDINATION**: Verify completion and iterate with user confirmation for satisfaction
+  </coordination_decomposition_methodology>
   
-  <parallel_first_thinking_framework>
-    **MANDATORY PARALLEL-FIRST ANALYSIS** - think in this EXACT sequence:
-    1. **What MUST run in parallel?** (Default assumption: everything unless proven otherwise)
-    2. **What are the atomic independent pieces?** (Identify ALL concurrent opportunities)
-    3. **What truly blocks other work?** (Challenge and minimize ALL dependencies)
-    4. **What specialists needed simultaneously?** (Plan aggressive parallel specialist creation)
-    5. **How do specialists coordinate?** (Design integration points upfront)
+  <adaptive_parallel_first_framework>
+    **PARALLEL-FIRST ANALYSIS GUIDANCE** - adaptive thinking sequence:
+    1. **What benefits from parallel execution?** (Default assumption: parallel when efficient)
+    2. **What are the independent components?** (Identify concurrent opportunities through analysis)
+    3. **What requires coordination interfaces?** (Minimize dependencies through intelligent design)
+    4. **What specialists provide efficiency gains?** (Balance specialist benefits with coordination complexity)  
+    5. **How do specialists integrate effectively?** (Design coordination points for seamless integration)
     
-    **DECOMPOSITION DECISION TREE**:
-    - Can this be split? → YES (default) → Split immediately → Plan parallel execution
-    - Seems dependent? → CHALLENGE → Prove blocking necessity → Minimize serial work
-    - Creates specialist work? → CREATE SPECIALISTS → Launch simultaneously → Coordinate explicitly
-  </parallel_first_thinking_framework>
+    **ADAPTIVE DECOMPOSITION FRAMEWORK**:
+    - Can this be split efficiently? → Analyze benefits → Split when advantageous → Plan coordination
+    - Requires coordination? → Design interfaces → Enable parallel development → Plan integration points
+    - Benefits from specialization? → Assess efficiency gains → Create when beneficial → Coordinate intelligently
+  </adaptive_parallel_first_framework>
   
-  <specialist_creation_decision_matrix>
-    **WHEN TO CREATE SPECIALISTS** (Default: CREATE):
-    - ✅ **ALWAYS CREATE** for independent file operations
-    - ✅ **ALWAYS CREATE** for separate technology domains (frontend/backend/database)
-    - ✅ **ALWAYS CREATE** for different skill areas (implementation/testing/documentation)
-    - ✅ **ALWAYS CREATE** for parallel research tasks
-    - ✅ **ALWAYS CREATE** when task can be split into 30+ minute chunks
-    - ❌ **DON'T CREATE** only for simple single-file edits under 10 minutes
-    - ❌ **DON'T CREATE** when coordination overhead exceeds work complexity
-  </specialist_creation_decision_matrix>
+  <intelligent_specialist_creation_guidance>
+    **SPECIALIST CREATION DECISION GUIDANCE** (Adaptive Assessment):
+    - ✅ **BENEFICIAL FOR** independent file operations with complexity
+    - ✅ **BENEFICIAL FOR** separate technology domains (frontend/backend/database) with integration planning
+    - ✅ **BENEFICIAL FOR** different skill areas (implementation/testing/documentation) when parallel work provides efficiency  
+    - ✅ **BENEFICIAL FOR** parallel research tasks that benefit from focused expertise
+    - ✅ **BENEFICIAL FOR** substantial work chunks that justify coordination overhead
+    - 🤔 **ASSESS CAREFULLY** for simple tasks where coordination may exceed implementation complexity
+    - 🤔 **ASSESS CAREFULLY** when integration requirements may complicate parallel execution benefits
+  </intelligent_specialist_creation_guidance>
 </task_analysis>
 
-## Dependency Analysis (Minimize Sequential Work)
+## Intelligent Dependency Coordination
 
 <dependencies>
-  <dependency_challenge_protocol>
-    **CHALLENGE EVERY DEPENDENCY** - Default assumption: tasks are independent
-    For each potential dependency, ask:
-    - Is this TRULY blocking, or just traditionally done sequentially?
-    - Can we create interfaces/contracts to enable parallel work?
-    - Can we use mocks, stubs, or parallel integration approaches?
-    - Would splitting this create MORE parallel opportunities?
-  </dependency_challenge_protocol>
+  <adaptive_dependency_analysis>
+    **INTELLIGENT DEPENDENCY ASSESSMENT** - Use analytical reasoning to optimize coordination:
+    For each potential dependency, apply adaptive problem-solving:
+    - Is this truly blocking, or can intelligent interface design enable parallel work?
+    - Can we create contracts/abstractions to enable efficient parallel development?
+    - Can we use mocks, stubs, or parallel integration strategies?
+    - Would intelligent splitting create beneficial parallel opportunities?
+  </adaptive_dependency_analysis>
   
-  <proven_blocking_patterns>
-    **ONLY THESE ARE TRUE BLOCKERS** (challenge all others):
-    - Shared data structure definition blocks consumers
-    - Authentication implementation blocks protected feature testing
-    - API contract definition blocks API consumption (unless mocked)
-    - Build/compilation dependencies in same artifact
-    - File system conflicts in exact same files
-  </proven_blocking_patterns>
+  <coordination_requiring_patterns>
+    **PATTERNS REQUIRING COORDINATION PLANNING** (assess intelligently):
+    - Shared data structure definition requiring consumer coordination
+    - Authentication implementation affecting protected feature development
+    - API contract definition affecting consumer implementation (plan interfaces/mocks)
+    - Build/compilation dependencies affecting same artifact
+    - File system operations affecting exact same files
+  </coordination_requiring_patterns>
   
-  <maximize_parallel_patterns>
-    **DEFAULT TO PARALLEL EXECUTION** for:
-    - Independent files MUST run in parallel
-    - Different layers (frontend/backend/database) MUST run in parallel
-    - Separate features MUST run in parallel
-    - Documentation MUST run alongside implementation
-    - Testing MUST run alongside implementation
-    - Research MUST run alongside initial implementation
-    - UI and API development MUST run in parallel with contracts/interfaces
-    - Different modules/packages MUST run in parallel
-    - Infrastructure and application code MUST run in parallel
-  </maximize_parallel_patterns>
+  <parallel_opportunity_patterns>
+    **PARALLEL EXECUTION OPPORTUNITIES** (optimize through intelligent design):
+    - Independent files benefit from parallel development with coordination checkpoints
+    - Different layers (frontend/backend/database) work efficiently in parallel with interface planning
+    - Separate features execute parallel with integration coordination
+    - Documentation develops alongside implementation with content coordination
+    - Testing executes alongside implementation with test interface planning
+    - Research runs alongside initial implementation with knowledge sharing coordination
+    - UI and API development work in parallel through contract/interface coordination
+    - Different modules/packages develop in parallel with integration checkpoints
+    - Infrastructure and application code work in parallel with deployment coordination
+  </parallel_opportunity_patterns>
   
-  <coordination_templates>
-    **PARALLEL COORDINATION PATTERNS**:
-    - **Interface-First**: Define contracts early, implement in parallel
-    - **Mock-Driven**: Create mocks for dependencies, develop in parallel
-    - **Event-Driven**: Use events/messages for loose coupling
-    - **Layer Contracts**: API contracts enable UI/backend parallel work
-    - **Integration Points**: Define explicit integration verification steps
-  </coordination_templates>
+  <adaptive_coordination_frameworks>
+    **INTELLIGENT COORDINATION PATTERNS**:
+    - **Interface-First**: Define contracts early, enable parallel development with coordination points
+    - **Mock-Driven**: Create intelligent mocks for dependencies, develop in parallel with integration planning
+    - **Event-Driven**: Use events/messages for loose coupling with coordination interfaces
+    - **Layer Contracts**: API contracts enable UI/backend parallel work with integration checkpoints
+    - **Integration Points**: Define intelligent integration verification with adaptive approaches
+  </adaptive_coordination_frameworks>
 </dependencies>
 
-## Proactive Subagent Creation with Native Intelligence
+## Strategic Specialist Creation with Adaptive Intelligence
 
-<proactive_subagent_intelligence>
-  <native_intelligence_principles>
-    **Claude Code MUST proactively create subagents that demonstrate natural intelligence:**
-    - **ADAPTIVE REASONING**: Subagents adapt approaches based on context, don't follow rigid templates
-    - **INTELLIGENT COORDINATION**: Natural collaboration between subagents without scripted protocols  
-    - **CREATIVE PROBLEM-SOLVING**: Subagents find novel solutions, not just execute predefined steps
-    - **CONTEXT-AWARE DECISIONS**: Subagents make intelligent decisions based on full project context
-    - **ORGANIC VERIFICATION**: Natural quality assessment and gap detection using Claude's reasoning
-  </native_intelligence_principles>
+<strategic_specialist_intelligence>
+  <adaptive_intelligence_principles>
+    **Claude Code creates specialists that demonstrate adaptive intelligence within coordination boundaries:**
+    - **ADAPTIVE REASONING**: Specialists adapt approaches based on context using flexible guidance frameworks
+    - **INTELLIGENT COORDINATION**: Natural collaboration between specialists with defined integration interfaces  
+    - **CREATIVE PROBLEM-SOLVING**: Specialists find novel solutions within their scope and escalate coordination needs
+    - **CONTEXT-AWARE DECISIONS**: Specialists make intelligent autonomous decisions within approved boundaries
+    - **INTELLIGENT VERIFICATION**: Adaptive quality assessment and gap detection with coordination escalation
+  </adaptive_intelligence_principles>
   
-  <proactive_identification_methodology>
-    **SYSTEMATIC SUBAGENT OPPORTUNITY IDENTIFICATION:**
+  <intelligent_specialist_opportunity_assessment>
+    **ADAPTIVE SPECIALIST OPPORTUNITY IDENTIFICATION:**
     ```xml
-    <identification_framework>
-      MANDATORY TRIGGERS FOR SUBAGENT CREATION:
-      1. EXPERTISE DOMAINS: Multiple skill areas needed (backend, frontend, security, etc.)
-      2. PARALLEL WORK STREAMS: Independent work that can run simultaneously
-      3. COMPLEX ANALYSIS: Deep investigation or research required
-      4. SPECIALIZED KNOWLEDGE: Domain-specific expertise would accelerate work
-      5. COORDINATION BENEFIT: Multiple intelligent agents > single agent approach
+    <assessment_framework>
+      SPECIALIST CREATION ASSESSMENT CRITERIA:
+      1. EXPERTISE DOMAINS: Multiple skill areas benefit from focused intelligence (backend, frontend, security, etc.)
+      2. PARALLEL WORK EFFICIENCY: Independent work provides clear parallel execution benefits
+      3. COMPLEX ANALYSIS: Deep investigation or research benefits from dedicated intelligence
+      4. SPECIALIZED KNOWLEDGE: Domain-specific expertise accelerates work beyond coordination overhead
+      5. COORDINATION EFFICIENCY: Multiple intelligent specialists provide net efficiency gains
       
-      NATIVE INTELLIGENCE ASSESSMENT QUESTIONS:
-      - What specialized intelligence would benefit this task?
-      - Where can parallel reasoning create efficiency gains?
-      - Which aspects need adaptive problem-solving vs standard execution?
-      - How can agents coordinate organically without rigid scripting?
-      - What creative approaches might emerge from distributed intelligence?
-    </identification_framework>
+      ADAPTIVE INTELLIGENCE ASSESSMENT QUESTIONS:
+      - What specialized intelligence would provide beneficial focus for this work?
+      - Where can parallel reasoning create efficiency gains that justify coordination complexity?
+      - Which aspects benefit from adaptive problem-solving vs integrated execution?
+      - How can specialists coordinate efficiently through intelligent interfaces?
+      - What creative approaches might emerge from distributed intelligence within coordination frameworks?
+    </assessment_framework>
     ```
-  </proactive_identification_methodology>
+  </intelligent_specialist_opportunity_assessment>
   
-  <intelligent_subagent_architecture>
-    **NATIVE INTELLIGENCE SUBAGENT PATTERNS:**
+  <adaptive_specialist_architecture>
+    **INTELLIGENT SPECIALIST COORDINATION PATTERNS:**
     
-    **Pattern 1: ADAPTIVE EXPERTISE DISTRIBUTION**
+    **Pattern 1: STRATEGIC EXPERTISE DISTRIBUTION**
     ```xml
     <expertise_distribution>
-      - Create subagents with complementary intelligence areas
-      - Enable natural knowledge sharing and cross-pollination
-      - Allow agents to adapt expertise based on emerging needs
-      - Foster organic coordination through shared understanding
+      - Create specialists with complementary intelligence areas within coordination framework
+      - Enable knowledge sharing and cross-pollination through defined integration points
+      - Allow specialists to adapt expertise based on emerging needs with coordination escalation
+      - Foster efficient coordination through intelligent interfaces and shared understanding
     </expertise_distribution>
     ```
     
-    **Pattern 2: PARALLEL REASONING COORDINATION**
+    **Pattern 2: COORDINATED PARALLEL REASONING**
     ```xml
     <parallel_reasoning>
-      - Launch reasoning agents for independent analysis streams
-      - Enable natural consensus building between intelligent agents
-      - Allow creative synthesis of parallel reasoning results
-      - Foster emergent solutions through distributed intelligence
+      - Launch reasoning specialists for independent analysis streams with integration planning
+      - Enable intelligent consensus building between specialists through coordination interfaces
+      - Allow creative synthesis of parallel reasoning results with coordination verification
+      - Foster adaptive solutions through distributed intelligence within coordination boundaries
     </parallel_reasoning>
     ```
     
-    **Pattern 3: ITERATIVE INTELLIGENCE SCALING**
+    **Pattern 3: ADAPTIVE INTELLIGENCE SCALING**
     ```xml
-    <iterative_scaling>
-      - Start with core intelligent capability assessment
-      - Create additional specialized agents as complexity emerges
-      - Allow agents to recommend further intelligent specialization
-      - Enable natural evolution of agent architecture based on needs
-    </iterative_scaling>
+    <adaptive_scaling>
+      - Start with core intelligent capability assessment and coordination planning
+      - Create additional specialists as complexity emerges and benefits justify coordination overhead
+      - Allow specialists to recommend further intelligent specialization through coordination channels
+      - Enable adaptive evolution of specialist architecture based on needs and efficiency assessment
+    </adaptive_scaling>
     ```
-  </intelligent_subagent_architecture>
+  </adaptive_specialist_architecture>
   
-  <hybrid_creation_approach>
-    **INTELLIGENT SUBAGENT CREATION DECISIONS:**
+  <adaptive_specialist_creation_approach>
+    **INTELLIGENT SPECIALIST CREATION DECISIONS:**
     
-    **Dynamic Subagents (Task-Specific Intelligence):**
-    - Use Task tool with subagent_type: "general-purpose" for maximum reasoning flexibility
-    - Embed native intelligence expectations in comprehensive prompts
-    - Enable adaptive problem-solving and creative approaches
-    - Focus on intelligent coordination and natural collaboration
+    **Dynamic Specialists (Task-Specific Adaptive Intelligence):**
+    - Use Task tool with specialist_type: "general-purpose" for maximum adaptive reasoning within coordination boundaries
+    - Embed intelligence expectations in comprehensive prompts with clear coordination interfaces
+    - Enable creative problem-solving and adaptive approaches within approved scope
+    - Focus on intelligent coordination through defined escalation and integration points
     
-    **Specialized Persistent Agents (Domain Intelligence):**
-    - Created with /agents command for recurring intelligent patterns
-    - Embeds domain expertise with adaptive reasoning capabilities
-    - Reusable intelligent frameworks for consistent quality
-    - Natural evolution of agent capabilities over time
+    **Specialized Persistent Agents (Domain Intelligence with Coordination):**
+    - Created with /agents command for recurring intelligent patterns with consistent coordination approaches
+    - Embeds domain expertise with adaptive reasoning capabilities and clear coordination boundaries
+    - Reusable intelligent frameworks for consistent quality and efficient coordination
+    - Adaptive evolution of agent capabilities within coordination framework over time
     
-    **DECISION FRAMEWORK:**
-    Claude's native intelligence determines optimal approach based on:
-    - Complexity requiring adaptive vs standardized intelligence
-    - Frequency of similar intelligent reasoning needs
-    - Value of persistent vs dynamic intelligent specialization
-    - Coordination benefits of distributed vs centralized intelligence
-  </hybrid_creation_approach>
-</proactive_subagent_intelligence>## Tool Definition Requirements (From recommendations.md)
+    **ADAPTIVE DECISION FRAMEWORK:**
+    Claude's intelligent assessment determines optimal approach based on:
+    - Complexity requiring adaptive specialization vs integrated execution efficiency
+    - Frequency of similar intelligent reasoning needs and coordination overhead
+    - Value of persistent vs dynamic intelligent specialization for coordination efficiency
+    - Net efficiency benefits of distributed vs centralized intelligence with coordination costs
+  </adaptive_specialist_creation_approach>
+</strategic_specialist_intelligence>
+
+## Tool Definition Requirements (From recommendations.md)
 
 <tool_definitions>
   <comprehensive_descriptions>
-    **MANDATORY: All tool/specialist descriptions must be 3-4 sentences minimum:**
+    **COORDINATION REQUIREMENT: All tool/specialist descriptions must be 3-4 sentences minimum:**
     1. Primary purpose and what the tool/specialist does
     2. When it should vs shouldn't be used
     3. Important limitations and caveats
@@ -246,133 +310,185 @@ Let Claude use its native intelligence to **PROACTIVELY DECOMPOSE** and route ta
   </error_handling_requirements>
 </tool_definitions>
 
-## Execution Flow (ITERATIVE & MANDATORY)
+## Adaptive Execution Flow with Coordination Framework
 
 <execution>
-  <phase_1_understanding_confirmation>
-    <!-- MANDATORY: Confirm understanding before ANY work -->
-    Use chain of thought to understand, then:
-    - Present interpretation back to user
-    - Ask clarifying questions if needed
-    - Wait for explicit user approval
-    - NEVER proceed without confirmation
-  </phase_1_understanding_confirmation>
+  <phase_1_autonomous_understanding>
+    <!-- AUTONOMOUS EXECUTION: Intelligent understanding with systematic coordination -->
+    Use chain of thought analysis for comprehensive understanding:
+    - Apply systematic interpretation and coordination strategy through intelligent analysis
+    - Resolve scope and coordination requirements through adaptive reasoning
+    - Execute with autonomous intelligence within systematic coordination boundaries
+    - Report understanding and approach through execution methodology
+  </phase_1_autonomous_understanding>
   
-  <phase_2_mandatory_decomposition>
-    <!-- SYSTEMATIC DECOMPOSITION METHODOLOGY - MANDATORY after understanding -->
-    **IMMEDIATE PROACTIVE DECOMPOSITION PROCESS:**
-    1. **IDENTIFY PARALLEL OPPORTUNITIES** (FIRST and PRIMARY step)
-    2. **BREAK INTO SMALLEST UNITS** (atomic parallelizable components)
-    3. **CHALLENGE ALL DEPENDENCIES** (minimize sequential work)
-    4. **DESIGN SPECIALIST LAUNCHES** (plan simultaneous creation)
-    5. **DEFINE COORDINATION POINTS** (integration interfaces upfront)
+  <phase_2_intelligent_decomposition>
+    <!-- ADAPTIVE DECOMPOSITION METHODOLOGY - Systematic coordination with intelligent execution -->
+    **INTELLIGENT PARALLEL DECOMPOSITION PROCESS:**
+    1. **ASSESS PARALLEL OPPORTUNITIES** (Primary efficiency optimization through intelligent analysis)
+    2. **DECOMPOSE INTO EFFICIENT UNITS** (Balanced parallelizable components with coordination assessment)
+    3. **ANALYZE COORDINATION REQUIREMENTS** (Minimize dependencies through intelligent interface design)
+    4. **PLAN STRATEGIC SPECIALIST LAUNCHES** (Balance specialization benefits with coordination efficiency)
+    5. **DESIGN COORDINATION INTERFACES** (Integration points planned for adaptive execution)
     
-    **DECOMPOSITION EXAMPLES BY TASK TYPE:**
-    - **Feature Addition**: UI + API + Database + Tests + Docs (5 parallel specialists)
-    - **Bug Fix**: Research + Reproduce + Fix + Test + Document (3-5 parallel streams)
-    - **Refactor**: Analysis + Plan + Implementation + Testing + Migration (parallel where possible)
-    - **Research**: Multiple domain experts investigating simultaneously
-  </phase_2_mandatory_decomposition>
+    **ADAPTIVE DECOMPOSITION EXAMPLES BY TASK TYPE:**
+    - **Feature Addition**: UI + API + Database + Tests + Docs (parallel when coordination efficient)
+    - **Bug Fix**: Research + Reproduce + Fix + Test + Document (parallel streams with intelligent coordination)
+    - **Refactor**: Analysis + Plan + Implementation + Testing + Migration (parallel where coordination beneficial)
+    - **Research**: Multiple domain experts with intelligent coordination and synthesis
+  </phase_2_intelligent_decomposition>
   
-  <phase_3_aggressive_execution>
-    <!-- AGGRESSIVE PARALLEL EXECUTION with proactive specialist management -->
-    **SIMULTANEOUS SPECIALIST CREATION AND COORDINATION:**
-    - **LAUNCH ALL INDEPENDENT SPECIALISTS** simultaneously (mandatory default)
-    - **BATCH SPECIALIST CREATION** as fundamental practice (3-5 specialists standard)
-    - Sequential execution ONLY when explicit blocking dependency proven
-    - **PROVIDE 3-4 SENTENCE DESCRIPTIONS** following Tool Use Implementation
-    - **INCLUDE COMPREHENSIVE ERROR HANDLING** in all specialist requirements
-    - **BUILD IN GAP DETECTION** and continuous verification for all tasks
-    - **MONITOR AND COORDINATE** execution across all specialists actively
-    - **DESIGN INTEGRATION POINTS** before specialist launch
+  <phase_3_strategic_execution>
+    <!-- STRATEGIC PARALLEL EXECUTION with intelligent specialist coordination -->
+    **COORDINATED SPECIALIST CREATION AND EXECUTION:**
+    - **LAUNCH EFFICIENT PARALLEL SPECIALISTS** when coordination benefits exceed overhead
+    - **BATCH SPECIALIST CREATION** when parallel execution provides clear efficiency gains
+    - Sequential execution for tasks where coordination complexity exceeds parallel benefits
+    - **PROVIDE COMPREHENSIVE DESCRIPTIONS** following Tool Use Implementation (3-4 sentences)
+    - **INCLUDE INTELLIGENT ERROR HANDLING** with coordination escalation in all specialist requirements
+    - **BUILD IN ADAPTIVE GAP DETECTION** and continuous verification with coordination interfaces
+    - **MONITOR AND COORDINATE** execution across specialists with intelligent integration
+    - **IMPLEMENT COORDINATION INTERFACES** before specialist launch with adaptive integration
     
-    **COORDINATION EXECUTION PATTERN:**
-    1. Launch specialists in parallel batches
-    2. Monitor progress across all specialists
-    3. Coordinate integration points explicitly
-    4. Verify parallel work integration continuously
-    5. Adjust coordination as needed during execution
-  </phase_3_aggressive_execution>
+    **INTELLIGENT COORDINATION EXECUTION PATTERN:**
+    1. Launch specialists when parallel efficiency benefits exceed coordination costs
+    2. Monitor progress with intelligent coordination interfaces
+    3. Execute integration points with adaptive verification
+    4. Verify parallel work integration through intelligent assessment
+    5. Adjust coordination adaptively based on execution feedback
+  </phase_3_strategic_execution>
   
-  <phase_4_verification>
-    <!-- MANDATORY: Verify completeness -->
-    Check for:
-    - Implementation gaps
-    - Missing functionality
-    - Integration issues
-    - Quality problems
-    Report ALL findings to user
-  </phase_4_verification>
+  <phase_4_adaptive_verification>
+    <!-- COORDINATION REQUIREMENT: Verify completeness with intelligent assessment -->
+    **INTELLIGENT VERIFICATION METHODOLOGY:**
+    
+    **ADAPTIVE SUCCESS EVALUATION FRAMEWORK:**
+    1. User satisfaction confirmation (ultimate authority for scope completion)
+    2. Technical verification completion (functional requirements through intelligent analysis)
+    3. Integration validation success (system coherence through adaptive assessment)
+    4. Quality standard compliance (maintainability requirements through intelligent evaluation)
+    
+    **PRINCIPLE**: All verification streams achieve completion through adaptive assessment, with user satisfaction as final authority for scope and quality acceptance
+    
+    **STRATEGIC VERIFICATION APPROACH:**
+    - 🎯 Functional verification through intelligent analysis (requirements completion assessment)
+    - 🎯 Integration verification through adaptive coordination (system coherence evaluation)
+    - 🎯 Quality verification through intelligent assessment (standards compliance analysis)
+    - 🎯 Cross-domain gap detection through coordination analysis
+    - 🎯 Adaptive remediation coordination with intelligent integration
+    
+    **CRITICAL NO AUTO-PERSIST REQUIREMENT:**
+    - **ANALYSIS IN-MEMORY ONLY**: All verification analysis performed in memory and presented in conversation
+    - **NO AUTOMATIC FILE CREATION**: Analysis and reports never auto-persisted unless explicitly requested by user
+    - **USER-REQUESTED PERSISTENCE ONLY**: Files only created when user explicitly asks to save specific outputs
+    - **CLEAN EXECUTION**: Workflows run without creating unwanted filesystem artifacts
+    
+    **INTELLIGENT VERIFICATION COORDINATION:**
+    1. Launch verification when parallel efficiency benefits exceed coordination costs
+    2. Execute cross-domain gap detection with intelligent conflict identification
+    3. Plan adaptive remediation with efficient coordination interfaces
+    4. Implement re-verification coordination across affected domains with intelligent assessment
+    5. Confirm user satisfaction as final validation gate with adaptive recommendations
+  </phase_4_adaptive_verification>
   
-  <phase_5_iteration>
-    <!-- MANDATORY: Iterate until satisfied -->
+  <phase_5_intelligent_iteration>
+    <!-- COORDINATION REQUIREMENT: Iterate until satisfied with adaptive improvements -->
+    **ADAPTIVE ITERATION METHODOLOGY:**
     If gaps found or user not satisfied:
-    - Fix identified issues
-    - Re-verify changes
-    - Get user confirmation
-    - Continue until fully satisfied
-  </phase_5_iteration>
+    1. **Intelligent Gap Analysis**: Adaptive assessment across verification domains with coordination interfaces
+    2. **Strategic Remediation Planning**: Coordinate fixes across specialist findings with intelligent integration
+    3. **Efficient Fix Implementation**: Execute remediation using optimal parallel/sequential approach based on coordination analysis
+    4. **Adaptive Re-verification**: Verify fixes across affected domains with intelligent coordination assessment
+    5. **User Satisfaction Confirmation**: Continue until explicit user approval with adaptive iteration and intelligent recommendations
+  </phase_5_intelligent_iteration>
 </execution>
 
-## Success Criteria (WITH MANDATORY VERIFICATION)
+## Adaptive Success Criteria with Coordination Framework
 
-<success>
-  <understanding_confirmed>
-    - User explicitly approves understanding
-    - All clarifications addressed
-    - Scope clearly defined
-  </understanding_confirmed>
+<adaptive_success>
+  <coordination_understanding_confirmed>
+    - User explicitly approves understanding and coordination approach
+    - All clarifications addressed through adaptive analysis
+    - Scope clearly defined with coordination boundaries established
+    - Execution approach confirmed with intelligent parallel optimization
+  </coordination_understanding_confirmed>
   
-  <implementation_complete>
-    - All requested functionality implemented
-    - Components integrated properly
-    - Tests pass (if applicable)
-    - No known gaps remain
-  </implementation_complete>
+  <technical_verification_complete>
+    **FUNCTIONAL SUCCESS (Verification Stream 1):**
+    - All requested functionality implemented and operational
+    - User requirements fully satisfied and validated
+    - Core workflows completing successfully end-to-end
+    
+    **INTEGRATION SUCCESS (Verification Stream 2):**
+    - All components integrated and communicating properly
+    - Data flows working correctly across system boundaries
+    - Integration points tested and validated
+    
+    **QUALITY SUCCESS (Verification Stream 3):**
+    - Code follows existing project patterns and conventions
+    - Solution is maintainable, readable, and well-structured
+    - Appropriate error handling and edge case coverage
+  </technical_verification_complete>
   
-  <user_satisfaction>
-    - User confirms satisfaction
-    - All adjustments completed
-    - Quality standards met
-    - Explicit approval received
-  </user_satisfaction>
-</success>
+  <user_satisfaction_authority>
+    **FINAL SUCCESS AUTHORITY:**
+    - User confirms satisfaction across all verification domains
+    - All technical verification streams completed successfully
+    - User satisfaction maintained even after technical compliance
+    - Explicit approval received with quality standards met
+    
+    **CONFLICT RESOLUTION HIERARCHY:**
+    - If technical verification passes but user unsatisfied → iterate until user satisfied
+    - If user satisfied but technical issues exist → resolve technical issues while maintaining user satisfaction
+    - User satisfaction has final authority, but technical integrity must be maintained
+  </user_satisfaction_authority>
+</unified_success>
 
-## Best Practices (MANDATORY)
+## Adaptive Best Practices with Coordination Framework
 
-<best_practices>
-  <mandatory_compliance>
-    ALL task execution MUST follow Anthropic best practices from guideline/guide/recommendations.md
-  </mandatory_compliance>
+<adaptive_practices>
+  <anthropic_compliance>
+    All task execution follows Anthropic best practices from guideline/guide/recommendations.md through intelligent application
+  </anthropic_compliance>
   
-  <required_iteration>
-    - MUST confirm understanding before execution
-    - MUST verify after implementation
-    - MUST check for gaps systematically
-    - MUST iterate until user satisfied
-    - MUST get explicit user confirmation
-  </required_iteration>
+  <coordination_verification_standards>
+    **COORDINATION FRAMEWORK VERIFICATION STANDARDS:**
+    - Confirm understanding and coordination approach before multi-agent execution
+    - Implement intelligent verification methodology across coordination domains
+    - Launch appropriate verification specialists when coordination efficiency benefits exceed overhead
+    - Coordinate verification results across parallel streams with intelligent integration
+    - Resolve conflicts using adaptive success evaluation (user satisfaction as final authority)
+    - Check for gaps systematically across verification domains through intelligent analysis
+    - Iterate until user satisfied through adaptive improvements and technical verification completion
+    - Get explicit user confirmation as final validation gate with intelligent recommendations
+    
+    **INTELLIGENT VERIFICATION COORDINATION:**
+    - Create verification specialists when independent verification domains provide efficiency gains
+    - Coordinate remediation across parallel verification streams with adaptive integration
+    - Maintain user satisfaction while ensuring technical integrity through intelligent balance
+    - Use cross-specialist gap detection through coordination analysis as beneficial practice
+  </coordination_verification_standards>
   
-  <required_principles>
-    - MUST use XML tags for structure (per recommendations.md)
-    - MUST provide clear, explicit instructions (per recommendations.md)
-    - MUST apply chain of thought for reasoning (per recommendations.md)
-    - MUST ground in actual project files (per recommendations.md)
-    - MUST allow uncertainty expression (per recommendations.md)
-    - MUST include examples for complex tasks (per recommendations.md)
-    - MUST verify work iteratively (per recommendations.md)
-  </required_principles>
-</best_practices>
+  <adaptive_implementation_principles>
+    - Use XML tags for structure (per recommendations.md) with adaptive application
+    - Provide clear, explicit instructions (per recommendations.md) with intelligent context adaptation
+    - Apply chain of thought for reasoning (per recommendations.md) with creative problem-solving
+    - Ground in actual project files (per recommendations.md) with intelligent analysis
+    - Allow uncertainty expression (per recommendations.md) with coordination escalation when needed
+    - Include examples for complex tasks (per recommendations.md) with adaptive guidance application
+    - Verify work iteratively (per recommendations.md) with intelligent assessment and coordination
+  </adaptive_implementation_principles>
+</adaptive_practices>
 
-## What NOT to Do
+## Adaptive Intelligence Balance Principles
 
-<avoid>
-  - Don't create rigid compliance frameworks
-  - Don't use pre-defined agent templates
-  - Don't over-engineer coordination protocols
-  - Don't add unnecessary complexity
-  - Don't constrain Claude's natural intelligence
-</avoid>
+<balance_principles>
+  - **Avoid rigid compliance frameworks** → Use adaptive guidance frameworks that balance structure with intelligence
+  - **Use templates as guidance, not constraints** → Apply framework patterns intelligently based on context and coordination needs
+  - **Balance coordination protocols with simplicity** → Implement coordination interfaces that enhance rather than constrain intelligent execution
+  - **Optimize complexity for value** → Comprehensive guidance serves thorough understanding, not mandatory procedural compliance
+  - **Structure coordination, preserve execution intelligence** → Coordination requirements enable multi-agent work while preserving Claude's adaptive problem-solving autonomy
+</balance_principles>
 
 ## Example Usage (Following recommendations.md)
 
@@ -410,7 +526,7 @@ Claude's **PROACTIVE PARALLEL-FIRST** Analysis (mandatory methodology per recomm
 **AGGRESSIVE PARALLEL TASK EXECUTION** (Tool Use Implementation with XML structure):
 <task_execution>
   <simultaneous_specialist_batch_launch>
-    <!-- MANDATORY: All independent work runs in parallel -->
+    <!-- COORDINATION GUIDELINE: Independent work runs in parallel when coordination efficient -->
     - **Backend specialist**: JWT API endpoints with authentication contracts
     - **Frontend specialist**: Login/signup forms using authentication mocks  
     - **Database specialist**: User schema and authentication data models

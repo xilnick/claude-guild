@@ -1,14 +1,14 @@
 # Natural Verification
 
 ## Purpose
-Ensure tasks are completed correctly using Claude's natural verification abilities with **MANDATORY** iteration until user satisfaction, following Tool Use Implementation standards.
+Ensure tasks are completed correctly using Claude's natural verification abilities with **MANDATORY** iteration until user satisfaction, following Tool Use Implementation standards. Integrates with consolidated intelligence patterns for agent verification and quality assurance across all agent types.
 
 ## Core Parallel Verification Principle
 
 <principle>
   **SYSTEMATIC PARALLEL VERIFICATION APPROACH:**
   Trust Claude to naturally verify work quality with MANDATORY parallel verification:
-  - CONFIRM understanding before ANY execution
+  - CONFIRM understanding before ANY execution (see workflow.md)
   - DECOMPOSE verification into parallel verification specialists
   - CHECK for implementation gaps through parallel validation streams
   - COORDINATE verification results across all parallel work
@@ -17,347 +17,166 @@ Ensure tasks are completed correctly using Claude's natural verification abiliti
   - DEFAULT: Parallel verification as standard practice, not optimization
 </principle>
 
-## Systematic Parallel Verification Methodology
+## Parallel Verification Methodology
 
 <parallel_verification_methodology>
-  **MANDATORY PARALLEL VERIFICATION DECOMPOSITION:**
-  ```xml
-  <verification_decomposition>
-    STEP 1: Identify All Verification Domains
-    - Functional verification (does it work?)
-    - Integration verification (do components connect?)
-    - Quality verification (does it meet standards?)
-    - Performance verification (is it acceptable?)
-    - Security verification (is it safe?)
-    
-    STEP 2: Create Parallel Verification Strategy
-    - Batch A: [Functional verification specialist, Integration verification specialist]
-    - Batch B: [Quality verification specialist, Performance verification specialist]
-    - Batch C: [Security verification specialist, User acceptance verification specialist]
-    
-    STEP 3: Coordinate Verification Results
-    - Aggregate all parallel verification findings
-    - Identify conflicts or gaps between verification domains
-    - Create integrated remediation plan from all verification streams
-  </verification_decomposition>
-  ```
+  **CONSOLIDATED VERIFICATION INTELLIGENCE:** `@guideline/core/subagent-invocation.md` + `@guideline/core/intelligence-tracker.md`
   
-  **PARALLEL VERIFICATION EXECUTION:**
-  <parallel_verification_execution>
-    <completion_verification>
-      **FUNCTIONAL VERIFICATION (Parallel Stream 1):**
-      - All requirements implemented and working?
-      - Core functionality operating as specified?
-      - User workflows completing successfully?
-      - Tests passing for all implemented features?
-    </completion_verification>
-    
-    <integration_verification>
-      **INTEGRATION VERIFICATION (Parallel Stream 2):**
-      - Components connecting and communicating properly?
-      - Data flowing correctly between system layers?
-      - APIs responding and integrating as expected?
-      - End-to-end scenarios working across all components?
-    </integration_verification>
-    
-    <quality_verification>
-      **QUALITY VERIFICATION (Parallel Stream 3):**
-      - Code following project patterns and standards?
-      - Solution maintainable and extensible?
-      - Documentation complete and accurate?
-      - Error handling robust and appropriate?
-    </quality_verification>
-    
-    <performance_verification>
-      **PERFORMANCE VERIFICATION (Parallel Stream 4):**
-      - Response times within acceptable limits?
-      - Resource usage optimized and reasonable?
-      - Scalability considerations addressed?
-      - Performance benchmarks met or exceeded?
-    </performance_verification>
-  </parallel_verification_execution>
+  **MANDATORY PARALLEL DECOMPOSITION ACROSS AGENT TYPES:**
+  Identify verification domains with agent type considerations:
+  - **Functional**: Requirements implemented across persistent and dynamic agents
+  - **Integration**: Components connecting between mixed agent types (persistent + dynamic)
+  - **Quality**: Standards met across all agent types using unified description standards
+  - **Performance**: Acceptable performance across agent coordination and parallel execution
+  - **Security**: Safety maintained across agent interactions and coordination patterns
+  
+  **ENHANCED PARALLEL EXECUTION STRATEGY:**
+  - **Batch A**: Functional + Integration verification specialists (cross-agent coordination validation)
+  - **Batch B**: Quality + Performance specialists (agent-specific quality and coordination efficiency)
+  - **Batch C**: Security + User acceptance specialists (agent interaction safety and satisfaction)
+  
+  **AGENT-INTEGRATED VERIFICATION STREAMS:**
+  - **Functional**: Persistent agent capabilities + dynamic agent innovations + hybrid coordination effectiveness
+  - **Integration**: Agent coordination protocols + mixed agent type handoffs + intelligence handoff validation
+  - **Quality**: 4-sentence description compliance + Tool Use Implementation + coordination protocol quality
+  - **Performance**: Agent reuse optimization + coordination efficiency + parallel execution effectiveness
+  - **Security**: Agent interaction safety + coordination protocol security + intelligence preservation integrity
 </parallel_verification_methodology>
 
-## Comprehensive Parallel Success Criteria
+## Parallel Success Criteria
 
 <parallel_success_criteria>
-  **SYSTEMATIC SUCCESS VALIDATION ACROSS PARALLEL VERIFICATION STREAMS:**
+  **SUCCESS VALIDATION ACROSS STREAMS:**
+  Functional: All functionality implemented, user requirements satisfied, workflows complete, features working | Integration: Components integrated, data flows correct, no breaking changes, integration points tested | Quality: Code follows patterns, maintainable solution, proper error handling, complete documentation | Performance: Benchmarks met, resource usage optimized, scalability addressed, no regressions
   
-  <functional_success>
-    **FUNCTIONAL SUCCESS CRITERIA (Verification Stream 1):**
-    - All requested functionality implemented and operational
-    - User requirements fully satisfied and validated
-    - Core workflows completing successfully end-to-end
-    - All specified features working as intended
-  </functional_success>
-  
-  <integration_success>
-    **INTEGRATION SUCCESS CRITERIA (Verification Stream 2):**
-    - All components integrated and communicating properly
-    - Data flows working correctly across system boundaries
-    - No breaking changes introduced to existing functionality
-    - Integration points tested and validated
-  </integration_success>
-  
-  <quality_success>
-    **QUALITY SUCCESS CRITERIA (Verification Stream 3):**
-    - Code follows existing project patterns and conventions
-    - Solution is maintainable, readable, and well-structured
-    - Appropriate error handling and edge case coverage
-    - Documentation complete and up-to-date
-  </quality_success>
-  
-  <performance_success>
-    **PERFORMANCE SUCCESS CRITERIA (Verification Stream 4):**
-    - Performance meets or exceeds acceptable benchmarks
-    - Resource usage optimized and within reasonable limits
-    - Scalability considerations properly addressed
-    - No performance regressions introduced
-  </performance_success>
-  
-  **PARALLEL SUCCESS COORDINATION:**
-  ```xml
-  <success_coordination>
-    VALIDATION APPROACH:
-    1. Run all verification streams simultaneously
-    2. Aggregate success criteria results from all streams
-    3. Identify conflicts or gaps between verification domains
-    4. Resolve conflicts through integrated remediation
-    5. Achieve success across ALL verification streams before completion
-  </success_coordination>
-  ```
+  **COORDINATION APPROACH:** Run all streams simultaneously, aggregate results, identify conflicts/gaps, resolve through integrated remediation, achieve success across ALL streams before completion
 </parallel_success_criteria>
 
-## Systematic Parallel Gap Detection
+## Parallel Gap Detection
 
 <parallel_gap_detection>
-  **COMPREHENSIVE GAP DETECTION METHODOLOGY:**
-  ```xml
-  <gap_detection_framework>
-    SYSTEMATIC GAP IDENTIFICATION:
-    1. DECOMPOSE verification into parallel gap detection streams
-    2. CREATE gap detection specialists for each verification domain
-    3. RUN parallel gap analysis across all verification streams simultaneously
-    4. AGGREGATE gap findings from all parallel detection efforts
-    5. PRIORITIZE gaps based on impact and coordination requirements
-    6. CREATE parallel remediation specialists for independent gaps
-    7. COORDINATE remediation efforts across all gap correction streams
-  </gap_detection_framework>
-  ```
+  **AGENT-AWARE GAP DETECTION METHODOLOGY:**
+  Decompose verification into parallel gap detection streams with agent type awareness:
+  1. Apply discovery protocol from `@guideline/core/subagent-invocation.md` for verification specialists
+  2. Create verification specialists using scoring system and appropriate templates
+  3. Execute simultaneous gap analysis across all agent types and coordination points
+  4. Aggregate findings with agent coordination context and intelligence integration
+  5. Create parallel remediation specialists using consolidated intelligence patterns
+  6. Coordinate correction efforts across mixed agent type workflows
   
-  **PARALLEL GAP DETECTION PATTERNS:**
-  <parallel_gap_patterns>
-    <functional_gaps>
-      **FUNCTIONAL GAP DETECTION (Stream 1):**
-      - Missing features or incomplete implementations
-      - Workflow breaks or process failures
-      - Unmet user requirements or acceptance criteria
-      - Test failures or validation problems
-    </functional_gaps>
-    
-    <integration_gaps>
-      **INTEGRATION GAP DETECTION (Stream 2):**
-      - Component connection failures or missing interfaces
-      - Data flow interruptions or transformation issues
-      - API compatibility problems or contract violations
-      - System boundary integration failures
-    </integration_gaps>
-    
-    <quality_gaps>
-      **QUALITY GAP DETECTION (Stream 3):**
-      - Code standard violations or pattern inconsistencies
-      - Maintainability issues or technical debt creation
-      - Documentation gaps or inaccuracies
-      - Error handling omissions or inadequate coverage
-    </quality_gaps>
-    
-    <performance_gaps>
-      **PERFORMANCE GAP DETECTION (Stream 4):**
-      - Performance benchmark failures or regressions
-      - Resource usage inefficiencies or optimization opportunities
-      - Scalability limitations or bottleneck identification
-      - Load handling inadequacies or capacity issues
-    </performance_gaps>
-  </parallel_gap_patterns>
+  **ENHANCED GAP PATTERNS:**
+  - **Functional**: Missing features across agent capabilities, workflow breaks in agent coordination, unmet requirements in persistent/dynamic integration
+  - **Integration**: Agent coordination failures, intelligence handoff issues, persistent-dynamic coordination problems, hybrid workflow integration gaps
+  - **Quality**: 4-sentence description standard violations, Tool Use Implementation non-compliance, coordination protocol quality issues
+  - **Performance**: Agent coordination inefficiencies, intelligence handoff bottlenecks, parallel execution optimization gaps, agent reuse suboptimization
+  - **Agent-Specific**: Persistent agent context adaptation failures, dynamic agent coordination gaps, hybrid workflow integration issues
   
-  **PARALLEL GAP REMEDIATION:**
-  ```xml
-  <parallel_remediation>
-    SYSTEMATIC GAP CORRECTION:
-    1. Group gaps by independence and coordination requirements
-    2. Create parallel remediation specialists for independent gaps
-    3. Coordinate remediation efforts for interdependent gaps
-    4. Execute parallel gap correction across all streams
-    5. Verify remediation success across all verification domains
-    6. Continue parallel remediation until all gaps resolved
-  </parallel_remediation>
-  ```
+  **INTELLIGENT REMEDIATION:** 
+  - Group gaps by independence and agent type compatibility
+  - Apply agent selection scoring for remediation specialists
+  - Use hybrid coordination when remediation spans multiple agent types
+  - Coordinate interdependent fixes across persistent and dynamic agents
+  - Execute remediation across all streams with agent-appropriate approaches
+  - Verify success using agent-integrated verification methodology
 </parallel_gap_detection>
 
-## Comprehensive Parallel Integration Validation
+## Integration Validation
 
-<parallel_integration_validation>
-  **SYSTEMATIC INTEGRATION VERIFICATION ACROSS PARALLEL STREAMS:**
+<integration_validation>
+  **AGENT-COORDINATION INTEGRATION STRATEGY:**
+  Decompose integration verification into parallel streams with agent coordination awareness:
+  1. Create integration verification specialists using `@guideline/core/subagent-invocation.md` patterns
+  2. Apply scoring system to determine optimal verification specialist mix (persistent + dynamic as needed)
+  3. Execute parallel testing across agent coordination points and intelligence handoff interfaces
+  4. Coordinate results across mixed agent type workflows and integration checkpoints
+  5. Identify conflicts in agent coordination and intelligence transfer patterns
+  6. Resolve through parallel remediation using hybrid coordination when needed
   
-  **PARALLEL INTEGRATION VERIFICATION STRATEGY:**
-  ```xml
-  <integration_verification_strategy>
-    COMPREHENSIVE INTEGRATION VALIDATION:
-    1. DECOMPOSE integration verification into parallel validation streams
-    2. CREATE integration verification specialists for each interface domain
-    3. EXECUTE parallel integration testing across all connection points
-    4. COORDINATE integration validation results across all streams
-    5. IDENTIFY integration conflicts or failures across parallel verification
-    6. RESOLVE integration issues through parallel remediation specialists
-  </integration_verification_strategy>
-  ```
+  **ENHANCED VALIDATION STREAMS:**
+  - **Agent Interface**: Persistent-persistent coordination, persistent-dynamic integration, dynamic-dynamic collaboration, hybrid workflow coordination
+  - **Intelligence Flow**: Context bridging validation, pattern reuse verification, expertise scaling confirmation, coordination continuity assessment
+  - **Workflow Integration**: Agent handoff protocols, mixed agent synchronization, intelligence transfer integrity, coordination protocol effectiveness
+  - **System Coordination**: Agent team performance, parallel execution effectiveness, coordination overhead optimization, agent reuse efficiency validation
   
-  <parallel_integration_streams>
-    <interface_validation>
-      **INTERFACE VALIDATION (Stream 1):**
-      - API contracts functioning correctly across all endpoints
-      - Component interfaces connecting and communicating properly
-      - Data exchange protocols working as specified
-      - Service boundaries maintained and respected
-    </interface_validation>
-    
-    <data_flow_validation>
-      **DATA FLOW VALIDATION (Stream 2):**
-      - Data transformations occurring correctly between components
-      - Information integrity maintained across system boundaries
-      - Data persistence and retrieval working across all layers
-      - State management consistent across all application components
-    </data_flow_validation>
-    
-    <workflow_validation>
-      **END-TO-END WORKFLOW VALIDATION (Stream 3):**
-      - Complete user workflows functioning across all system components
-      - Business process scenarios executing successfully end-to-end
-      - Cross-system functionality integrated and operational
-      - User experience consistent across all integrated components
-    </workflow_validation>
-    
-    <system_validation>
-      **SYSTEM INTEGRATION VALIDATION (Stream 4):**
-      - External system integrations functioning correctly
-      - Third-party service connections working as expected
-      - Infrastructure components integrated and operational
-      - Deployment and runtime integrations validated and stable
-    </system_validation>
-  </parallel_integration_streams>
-  
-  **INTEGRATION ISSUE REMEDIATION:**
-  ```xml
-  <integration_remediation>
-    PARALLEL INTEGRATION FIX STRATEGY:
-    1. Identify integration issues across all parallel validation streams
-    2. Group integration fixes by independence and coordination needs
-    3. Create parallel integration fix specialists for independent issues
-    4. Coordinate integration fixes for interdependent system components
-    5. Execute parallel integration remediation across all affected streams
-    6. Verify integration fixes across all validation domains simultaneously
-  </integration_remediation>
-  ```
-</parallel_integration_validation>
-
-## Enhanced Best Practices (Systematically Parallel)
-
-<enhanced_practices>
-  **SYSTEMATIC PARALLEL VERIFICATION:**
-  - MANDATORY: Apply parallel verification methodology to ALL task components
-  - CONTINUOUS: Verify through parallel streams as work progresses, not just at completion
-  - COMPREHENSIVE: Test integration points explicitly across ALL parallel verification domains
-  - COORDINATION: Coordinate verification results across all parallel verification streams
-  - SYSTEMATIC: Use decomposition approach for verification just like task execution
-  
-  **PROACTIVE VERIFICATION EXECUTION:**
-  - PARALLEL STREAMS: Create verification specialists for each independent verification domain
-  - BATCHING: Group verification activities for parallel execution efficiency
-  - INTEGRATION: Design verification coordination architecture upfront
-  - AUTOMATION: Leverage project's existing test suites across all parallel verification streams
-  - INTELLIGENCE: Trust Claude's judgment while applying systematic verification frameworks
-  
-  **AGGRESSIVE VERIFICATION STANDARDS:**
-  - DECOMPOSITION: Break verification into smallest parallelizable verification units
-  - SPECIALIZATION: Create verification specialists for each verification domain
-  - COORDINATION: Coordinate verification results across all parallel verification efforts
-  - REMEDIATION: Design parallel remediation for verification failures and gaps
-  - ITERATION: Continue parallel verification until ALL verification streams satisfied
-  
-  **VERIFICATION OPTIMIZATION PRINCIPLES:**
-  - EFFICIENCY: Keep verification systematic and practical while maximizing parallel execution
-  - COMPREHENSIVENESS: Ensure verification covers ALL aspects through parallel verification streams
-  - INTEGRATION: Coordinate verification results and remediation across all parallel efforts
-  - QUALITY: Maintain verification quality while optimizing for parallel execution efficiency
-  - USER SATISFACTION: Continue verification iteration until explicit user confirmation across all domains
-</enhanced_practices>
+  **INTELLIGENT REMEDIATION INTEGRATION:**
+  - Identify integration issues across agent types and coordination patterns
+  - Group fixes by agent type compatibility and coordination requirements  
+  - Create parallel fix specialists using consolidated intelligence selection patterns
+  - Apply hybrid coordination for fixes spanning multiple agent types
+  - Execute remediation across integration streams with agent-appropriate coordination
+  - Verify integration success using agent-aware validation methodology
+</integration_validation>
 
 ## Tool Use Implementation Requirements
 
 <tool_use_requirements>
-  <specialist_descriptions>
-    **All verification specialists must include 3-4 sentence descriptions:**
-    - Primary purpose and verification capabilities
-    - When to use this specialist vs others for verification
-    - Important limitations and constraints
-    - Expected verification outcomes and deliverables
-  </specialist_descriptions>
+  **CONSOLIDATED TOOL USE INTELLIGENCE:** `@guideline/core/subagent-invocation.md`
   
-  <error_handling>
-    **Structured error response format:**
-    ```json
-    {
-      "type": "verification_error",
-      "message": "Clear description of verification failure",
-      "details": "Context and debugging information",
-      "suggestions": "Recommended fixes or next steps"
+  **UNIFIED SPECIALIST DESCRIPTIONS (4 sentences MANDATORY):**
+  All verification specialists must follow the 4-sentence description standard:
+  1. **Specialized Purpose**: Primary verification function with Tool Use Implementation compliance
+  2. **Intelligent Coordination**: When to use vs other verification agents, coordination through adaptive reasoning
+  3. **Context Boundaries**: Important verification limitations, structured JSON error handling, domain boundaries
+  4. **Expected Outcomes**: Verification deliverables through context-aware decision making and integration with parallel verification specialists
+  
+  **ENHANCED ERROR FORMAT:**
+  ```json
+  {
+    "type": "verification_error",
+    "agent": "[verification-specialist-name]",
+    "error": {
+      "type": "[verification-category]",
+      "message": "Clear verification failure description",
+      "details": "Verification context and debugging info",
+      "suggestions": ["Recommended verification fixes", "Alternative verification approaches"]
+    },
+    "coordination": {
+      "affected_agents": ["agent-1", "agent-2"],
+      "verification_scope": ["verification-domain-1", "verification-domain-2"],
+      "recovery_protocol": "Coordination recovery steps for mixed agent verification workflows"
     }
-    ```
-  </error_handling>
+  }
+  ```
   
-  <aggressive_parallel_verification>
-    **Claude 4 Maximum Parallelization for Verification:**
-    
-    **MANDATORY PARALLEL VERIFICATION EXECUTION:**
-    ```xml
-    <verification_parallelization_framework>
-      STANDARD VERIFICATION PARALLELIZATION:
-      1. DECOMPOSE verification into independent parallel verification streams
-      2. CREATE verification specialists for each independent verification domain
-      3. BATCH all verification specialists for simultaneous execution
-      4. COORDINATE verification results across all parallel streams explicitly
-      5. AGGREGATE all verification findings in comprehensive integrated response
-      6. REMEDIATE issues through parallel specialist creation when possible
-    </verification_parallelization_framework>
-    ```
-    
-    **PARALLEL VERIFICATION SPECIALIST COORDINATION:**
-    ```xml
-    <verification_specialist_coordination>
-      VERIFICATION COORDINATION ARCHITECTURE:
-      - Functional verification specialist + Integration verification specialist
-      - Quality verification specialist + Performance verification specialist
-      - Security verification specialist + User acceptance verification specialist
-      
-      COORDINATION PROTOCOL:
-      1. Launch all verification specialists simultaneously in batches
-      2. Define integration points and handoff requirements upfront
-      3. Aggregate verification results across all parallel streams
-      4. Coordinate remediation through parallel fix specialists
-      5. Re-verify fixes across all parallel verification domains
-    </verification_specialist_coordination>
-    ```
-    
-    **VERIFICATION BATCHING OPTIMIZATION:**
-    ```xml
-    <verification_batching>
-      SYSTEMATIC VERIFICATION BATCHING:
-      - Batch A: Core verification specialists (functional, integration)
-      - Batch B: Quality verification specialists (standards, performance)
-      - Batch C: Validation verification specialists (security, acceptance)
-      
-      BATCHING PRINCIPLE: Maximum parallel verification execution with coordinated integration
-    </verification_batching>
-    ```
-  </aggressive_parallel_verification>
+  **INTELLIGENT PARALLEL EXECUTION:**
+  - Apply discovery protocol from subagent-invocation.md for verification specialist selection
+  - Use scoring system to determine optimal verification specialist mix (persistent + dynamic as appropriate)
+  - Implement hybrid coordination for verification across mixed agent type workflows
+  - Batch verification specialists for simultaneous execution with agent-aware coordination
+  - Aggregate findings across agent types with coordination context integration
+  - Apply remediation using consolidated intelligence patterns for specialist selection
 </tool_use_requirements>
+
+## Best Practices
+
+<best_practices>
+  **CONSOLIDATED VERIFICATION EXCELLENCE:**
+  
+  **SYSTEMATIC AGENT-AWARE PARALLEL VERIFICATION:**
+  - Apply parallel methodology to ALL components across all agent types
+  - Execute discovery protocol from `@guideline/core/subagent-invocation.md` for verification specialist selection
+  - Verify through streams as work progresses with agent coordination awareness
+  - Test integration points across ALL domains including agent coordination checkpoints
+  - Use systematic decomposition approach integrating agent intelligence patterns
+  
+  **INTELLIGENT EXECUTION OPTIMIZATION:**
+  - Apply agent scoring system for verification specialist selection (persistent vs dynamic vs hybrid)
+  - Create verification specialists using consolidated intelligence templates and adaptation patterns
+  - Batch verification activities for parallel efficiency with agent-appropriate coordination
+  - Design coordination architecture upfront considering mixed agent type workflows
+  - Leverage existing verification patterns from persistent agents while enabling dynamic innovation
+  - Continue iteration until explicit user confirmation with comprehensive agent coordination validation
+  
+  **ENHANCED QUALITY INTEGRATION:** `@guideline/core/intelligence-tracker.md`
+  - Monitor verification consistency across all agent types and coordination patterns
+  - Track verification pattern evolution and integration effectiveness
+  - Ensure verification intelligence aligns with consolidated intelligence patterns
+  - Validate cross-module verification dependencies and reference integrity
+  
+  **MANDATORY NO AUTO-PERSIST REQUIREMENT:**
+  - **VERIFICATION RESULTS IN-MEMORY ONLY**: All gap detection, analysis, and verification results kept in conversation
+  - **NO AUTOMATIC VERIFICATION REPORTS**: Never auto-create files for verification outputs unless explicitly requested
+  - **USER CONTROLS ALL FILE CREATION**: Only persist verification data when user specifically asks for it
+  - **CLEAN VERIFICATION EXECUTION**: Run all verification processes without creating unwanted filesystem artifacts
+  - **AGENT COORDINATION VERIFICATION**: Verify agent interactions and coordination without creating coordination artifacts
+</best_practices>

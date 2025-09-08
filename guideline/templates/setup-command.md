@@ -4,11 +4,11 @@
 name: guild-setup  
 model: inherit
 thinking_mode: ultrathink
-description: "Intelligent project analysis and dynamic agent creation using native intelligence with mandatory understanding confirmation, verification, and iterative refinement until user satisfaction"
+description: "Intelligent project analysis and dynamic subagent creation using native intelligence with mandatory understanding confirmation, verification, and iterative refinement until user satisfaction"
 ---
 
 ## Command Purpose
-Use Claude's native intelligence to analyze project needs and create a **comprehensive team of specialized agents** covering all major aspects of the project, following Anthropic's Tool Use Implementation best practices for optimal performance and reliability.
+Use Claude's native intelligence to analyze project needs and create a **comprehensive team of specialized subagents** covering all major aspects of the project, following Anthropic's Tool Use Implementation best practices for optimal performance and reliability.
 
 ## 🔄 ITERATIVE WORKFLOW (MANDATORY)
 
@@ -18,11 +18,11 @@ Use Claude's native intelligence to analyze project needs and create a **compreh
     
     1. Analyze the project structure and technology stack
     2. Present understanding of agent team needs:
-       "I understand you want me to create a comprehensive agent team for your project.
+       "I understand you want me to create a comprehensive subagent team for your project.
         This involves:
         - Analyzing your project architecture and technology stack
-        - Identifying specialized domains requiring dedicated agents
-        - Creating agents with proper Tool Use Implementation standards
+        - Identifying specialized domains requiring dedicated subagents
+        - Creating subagents with proper Tool Use Implementation standards
         - Ensuring complete coverage of all project aspects
         Is this understanding correct?"
     3. Wait for user confirmation
@@ -70,28 +70,48 @@ Use Claude's native intelligence to analyze project needs and create a **compreh
     - **PARALLEL COORDINATION BUILT-IN** to every agent from creation
     - **SIMULTANEOUS OPERATION CAPABILITIES** in all agent designs
     - **DYNAMIC SCALING READINESS** for future agent additions
-    - **TOOL USE IMPLEMENTATION COMPLIANCE** with 3-4 sentence descriptions
+    - **TOOL USE IMPLEMENTATION COMPLIANCE** with 4-5 sentence descriptions emphasizing native intelligence and adaptive reasoning
   </phase_3_proactive_agent_creation>
   
-  <phase_4_verification>
-    **MANDATORY: Run verification after agent creation**
+  <phase_4_unified_agent_verification>
+    **MANDATORY: Framework-Aligned Agent Team Verification**
     
-    1. Check all project aspects are covered
-    2. Verify each agent follows Tool Use Implementation standards
-    3. Look for gaps in team capabilities
-    4. Present findings to user
-  </phase_4_verification>
+    **UNIFIED SUCCESS METRICS HIERARCHY (FROM FRAMEWORK):**
+    1. User satisfaction with agent team (ultimate authority)
+    2. Technical verification of agent capabilities (functional requirements)
+    3. Integration validation of agent coordination (system coherence)
+    4. Quality standard compliance of agent implementation (maintainability)
+    
+    **MANDATORY VERIFICATION STREAMS:**
+    - ✅ **Functional Verification**: All project aspects covered by appropriate agents
+    - ✅ **Integration Verification**: Agents equipped for parallel coordination 
+    - ✅ **Quality Verification**: All agents follow Tool Use Implementation standards
+    - ✅ **Coverage Verification**: No capability gaps in team architecture
+    
+    **AGENT TEAM VERIFICATION PROCESS:**
+    1. Launch parallel verification across all agent domains simultaneously
+    2. Cross-agent gap detection with coordination capability analysis
+    3. Integrated remediation planning for missing agents or capabilities
+    4. Re-verification of agent team completeness across all domains
+    5. User satisfaction confirmation as final validation gate
+  </phase_4_unified_agent_verification>
   
-  <phase_5_gap_resolution>
-    **MANDATORY: Iterate until satisfied**
+  <phase_5_unified_agent_gap_resolution>
+    **MANDATORY: Unified Agent Team Iteration (Framework-Aligned)**
     
+    **INTEGRATED AGENT IMPROVEMENT METHODOLOGY (FROM FRAMEWORK):**
     If gaps found or user not satisfied:
-    1. Identify missing capabilities or coverage areas
-    2. Create additional agents to fill gaps
-    3. Refine existing agents based on feedback
-    4. Re-verify team completeness
-    5. Continue until user confirms satisfaction
-  </phase_5_gap_resolution>
+    1. **Parallel Agent Gap Analysis**: Launch gap detection across all agent domains
+    2. **Integrated Agent Planning**: Coordinate agent additions/refinements across all findings
+    3. **Parallel Agent Implementation**: Create/refine agents across multiple domains simultaneously
+    4. **Cross-Domain Agent Re-verification**: Verify agent team completeness across all streams
+    5. **User Satisfaction Confirmation**: Continue until explicit user approval of complete agent team
+    
+    **AGENT TEAM CONFLICT RESOLUTION:**
+    - If agent capabilities complete but user unsatisfied → iterate agent team until user satisfied
+    - If user satisfied but agent coverage incomplete → fill gaps while maintaining satisfaction
+    - User satisfaction has final authority over agent team, but comprehensive coverage required
+  </phase_5_unified_agent_gap_resolution>
 </iterative_workflow>
 
 ## 🧠 **NATIVE INTELLIGENCE APPROACH**
@@ -208,15 +228,21 @@ Use Claude's native intelligence to analyze project needs and create a **compreh
   - Enable user customization of proactive agent architectures
   - Support continuous proactive agent expansion as projects evolve
   
-  **Each agent MUST include (per Proactive Parallel Implementation):**
-  - **3-4 sentence comprehensive description** with parallel coordination emphasis
-  - **Clear success criteria and domain boundaries** enabling simultaneous operation
-  - **Error handling capabilities** that coordinate with other agents
-  - **Multiple integration points** with other domain agents for parallel work
-  - **MANDATORY parallel execution readiness** with explicit team coordination protocols
-  - **PROACTIVE SPECIALIST IDENTIFICATION capabilities** to suggest additional agents
-  - **SYSTEMATIC DECOMPOSITION SKILLS** to break down complex domain tasks
-  - **COORDINATION LEADERSHIP POTENTIAL** to manage parallel agent workflows
+  **Each agent MUST include (per Tool Use Implementation Standards):**
+  - **UNIFIED AGENT DESCRIPTION STANDARD (4 sentences mandatory):**
+    1. **Specialized Purpose**: Primary function and unique capabilities with Tool Use Implementation compliance
+    2. **Intelligent Coordination**: When to use vs other agents, coordination through adaptive reasoning and creative problem-solving
+    3. **Context Boundaries**: Important limitations, structured JSON error handling, and domain boundaries
+    4. **Expected Outcomes**: Deliverables through context-aware decision making and integration with parallel specialists
+  - **INTELLIGENCE EMBEDDING MARKERS** (per `@guideline/core/subagent-invocation.md`, core/verification.md):
+    - `<!-- PERSISTENT_AGENT: [domain-type] -->` for workflow discovery
+    - `<!-- INTELLIGENCE_SOURCE: core/[module].md -->` for core module integration
+    - `<!-- COORDINATION_READY: parallel-enabled -->` for parallel execution capability
+    - `<!-- VERIFICATION_COMPLIANT: systematic-parallel -->` for verification integration
+  - **UNIFIED ERROR HANDLING** (standardized across setup/workflow commands):
+    ```json
+    {"type": "agent_error", "agent": "[agent-name]", "error": {"type": "[category]", "message": "description", "details": "context", "suggestions": ["option1", "option2"]}, "coordination": {"affected_agents": [], "recovery_protocol": "steps"}}
+    ```
   
   **Examples of Proactive Agent Creation Recommendations:**
   - **PROACTIVE FRONTEND ANALYSIS**: "Based on your React/TypeScript project, I recommend 7 parallel frontend specialists: Component Architecture, State Management, UI/UX Design, Performance Optimization, Testing Automation, Accessibility, and Build System specialists"
@@ -271,11 +297,15 @@ Use Claude's native intelligence to analyze project needs and create a **compreh
   
   **Agent Template Structure (Embedded in Setup Command):**
   ```markdown
+  <!-- PERSISTENT_AGENT: [domain-type] -->
+  <!-- INTELLIGENCE_SOURCE: core/subagent-invocation.md,core/verification.md -->
+  <!-- COORDINATION_READY: parallel-enabled -->
+  <!-- VERIFICATION_COMPLIANT: systematic-parallel -->
   ---
   name: [descriptive-agent-name]
   model: inherit
   thinking_mode: ultrathink
-  description: "[3-4 SENTENCES MANDATORY: Primary purpose and what this agent does. When it should be used vs other agents in the team. Important limitations or constraints. Expected outcomes and deliverables from this agent.]"
+  description: "[UNIFIED 4-SENTENCE STANDARD: 1) Specialized Purpose - Primary function and unique capabilities with Tool Use Implementation compliance. 2) Intelligent Coordination - When to use vs other agents, coordination through adaptive reasoning and creative problem-solving. 3) Context Boundaries - Important limitations, structured JSON error handling, and domain boundaries. 4) Expected Outcomes - Deliverables through context-aware decision making and integration with parallel specialists.]"
   ---
   
   ## Purpose
@@ -337,16 +367,20 @@ Use Claude's native intelligence to analyze project needs and create a **compreh
   
   ## Error Handling
   <error_handling>
-    **Error Response Structure:**
+    **Unified Error Response Structure (per setup/workflow command standards):**
     \`\`\`json
     {
-      "type": "error",
+      "type": "agent_error",
       "agent": "[agent-name]",
       "error": {
         "type": "[abstract-error-category]",
         "message": "Clear description",
         "details": "Context without specific implementations",
         "suggestions": ["Abstract recovery option 1", "Abstract recovery option 2"]
+      },
+      "coordination": {
+        "affected_agents": ["agent-1", "agent-2"],
+        "recovery_protocol": "Coordination steps for affected agents"
       }
     }
     \`\`\`
@@ -430,10 +464,15 @@ Use Claude's native intelligence to analyze project needs and create a **compreh
   
   **Agent Generation Process:**
   1. Analyze project to identify needed expertise domains (abstract)
-  2. Create agent using above template structure (abstract only)
-  3. Customize based on abstract capability requirements
-  4. Place in appropriate category directory
-  5. Document abstract integration points with other agents
+  2. Create agent using above template structure with MANDATORY intelligence markers
+  3. Embed intelligence markers that survive template generation:
+     - `<!-- PERSISTENT_AGENT: [domain-type] -->` (for workflow discovery)
+     - `<!-- INTELLIGENCE_SOURCE: core/subagent-invocation.md,core/verification.md -->` (consolidated intelligence integration)
+     - `<!-- COORDINATION_READY: parallel-enabled -->` (parallel execution capability)
+     - `<!-- VERIFICATION_COMPLIANT: systematic-parallel -->` (verification integration)
+  4. Customize based on abstract capability requirements with unified 4-sentence descriptions
+  5. Place in appropriate category directory with discovery metadata
+  6. Document abstract integration points and coordination protocols with other agents
   
   **Each agent focuses on abstract concepts, roles, and patterns**
   **All agents avoid specific code samples, file structures, or implementation details**
@@ -703,10 +742,10 @@ Use Claude's native intelligence to analyze project needs and create a **compreh
   ✅ **PROACTIVE INTELLIGENCE APPLICATION** - Use Claude's native intelligence to maximize agent recommendations
 </proactive_best_practices>
 
-### **Proactive Parallel Verification Process**
+### **Parallel Verification Process**
 
-<proactive_verification>
-  ## **MANDATORY: Systematic Parallel-Aware Verification After Agent Creation**
+<parallel_verification>
+  ## **MANDATORY: Systematic Parallel-Aware Verification After Subagent Creation**
   
   **Phase 1: Proactive Coverage Verification**
   - **SYSTEMATIC DOMAIN COVERAGE ANALYSIS**: Every discovered domain has optimal agent team
@@ -732,9 +771,9 @@ Use Claude's native intelligence to analyze project needs and create a **compreh
   - **PARALLEL WORKFLOW OPTIMIZATION**: Agent teams optimized for maximum simultaneous efficiency
   - **DYNAMIC SCALING VERIFICATION**: Team supports continuous proactive agent addition
   
-  **Proactive Verification Report Template:**
+  **Parallel Verification Report Template:**
   ```markdown
-  ## Proactive Agent Team Verification Report
+  ## Parallel Subagent Team Verification Report
   
   **Systematic Coverage Analysis:**
   ✅ [Domain 1]: [X] parallel agents created, comprehensive coverage achieved
@@ -858,23 +897,23 @@ Use Claude's native intelligence to analyze project needs and create a **compreh
   **SIMULTANEOUS OPERATION DESIGN:**
   All 32 agents equipped with parallel coordination protocols and integration checkpoints."
   
-  ### **Agent Coordination Protocol Templates**
+  ### **Subagent Coordination Protocol Templates**
   
   **Template A: Domain-Internal Coordination**
   ```markdown
-  ## Frontend Domain Agent Coordination
+  ## Frontend Domain Subagent Coordination
   
-  **Primary Coordination Agent:** React Component Architecture specialist
+  **Primary Coordination Subagent:** React Component Architecture specialist with Tool Use Implementation compliance
   **Coordination Protocol:**
-  - Daily sync with State Management specialist on component interfaces
-  - Integration checkpoints with UI/UX specialist on design implementation
-  - Performance coordination with Performance Optimization specialist
-  - Testing handoffs with Frontend Testing specialist
+  - Daily sync with State Management specialist on component interfaces using structured JSON error handling
+  - Integration checkpoints with UI/UX specialist on design implementation with recovery strategies
+  - Performance coordination with Performance Optimization specialist through intelligent collaboration
+  - Testing handoffs with Frontend Testing specialist using adaptive reasoning approaches
   
   **Parallel Work Streams:**
-  - All 8 frontend agents work simultaneously
-  - Coordination through shared component contracts
-  - Integration verification at domain boundaries
+  - All 8 frontend subagents work simultaneously with native intelligence coordination
+  - Coordination through shared component contracts and structured error handling
+  - Integration verification at domain boundaries with cross-specialist gap detection
   ```
   
   **Template B: Cross-Domain Coordination**
@@ -917,6 +956,16 @@ Use Claude's native intelligence to analyze project needs and create a **compreh
 </proactive_examples>
 
 ---
+
+**Intelligence Sources**: 
+- Framework: `@guideline/guide/framework.md` (core execution principles)
+- Core Modules: `@guideline/core/subagent-invocation.md` (agent discovery, scoring, coordination), `@guideline/core/verification.md` (quality standards), `@guideline/core/intelligence-tracker.md` (consistency monitoring)
+- Best Practices: `@guideline/guide/recommendations.md` (Anthropic standards with parallel specialist emphasis)
+
+**Core Module Integration**:
+- **Subagent Invocation Intelligence** (core/subagent-invocation.md): Agent discovery protocols, scoring systems, context adaptation templates, hybrid coordination patterns for workflow integration
+- **Verification Standards** (core/verification.md): Agent team verification protocols, quality assurance integration, gap detection in agent coverage
+- **Intelligence Tracking** (core/intelligence-tracker.md): Intelligence consistency monitoring, cross-module dependency validation, pattern evolution tracking for systematic improvement
 
 **Philosophy**: Maximum intelligence through proactive parallel agent deployment, systematic decomposition
 **Approach**: Aggressively recommend comprehensive agent teams based on systematic project analysis

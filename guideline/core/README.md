@@ -1,26 +1,62 @@
 # Core Intelligence Modules
 
-Simple modules that guide Claude's native intelligence for task execution.
+Streamlined modules that guide Claude's native intelligence for task execution without redundancy.
 
-## Modules
+## Module Hierarchy
 
-### workflow.md
-Natural task orchestration using Claude's native abilities to decompose and coordinate work.
+### Primary Execution Modules
 
-### agents.md  
-Dynamic specialist creation based on actual task needs, not templates.
+**workflow.md** - Core execution patterns
+- Native intelligence routing and parallel execution
+- Systematic decomposition with autonomous iteration
+- Integration with specialist creation and verification
 
-### verification.md
-Simple verification using natural success criteria and quality checks.
+**agents.md** - Subagent creation and management
+- Enhanced persistent vs dynamic decision framework  
+- Intelligent pattern matching for existing agents
+- Proactive parallel specialist creation strategies
 
-## Philosophy
+**verification.md** - Quality assurance patterns
+- Parallel verification methodology
+- Autonomous gap detection and remediation
+- Integration testing and quality standards
 
-These modules provide light guidance while trusting Claude's native intelligence to:
-- Analyze tasks naturally
-- Create appropriate specialists dynamically
-- Coordinate execution based on dependencies
-- Verify work quality
+### Authority and Adaptation Modules
 
-**Tool Use Implementation**: All modules follow Anthropic's Tool Use Implementation standards, requiring 3-4 sentence descriptions for specialists, comprehensive error handling, and parallel execution optimization for Claude 4.
+**decision-authority.md** - Authority boundaries
+- 4-level decision hierarchy (Autonomous → Structural → Implementation → Advisory)
+- Clear confirmation vs autonomous execution boundaries
+- Conflict resolution and escalation protocols
 
-No rigid frameworks, templates, or complex orchestration needed.
+**template-usage.md** - Template adaptation guidelines
+- Templates as intelligence enablers, not constraints
+- Progressive enhancement methodology
+- Creative adaptation within structural safety
+
+**intelligence-boundaries.md** - Structure vs autonomy framework
+- Complementary intelligence layer operation
+- Collaborative decision zones and boundary management
+- Structure-intelligence integration protocols
+
+## Consolidation Benefits
+
+**ELIMINATED REDUNDANCY:**
+- Removed unified-principles.md (85% overlap with other modules)
+- Removed user-adoption-analytics.md (excessive complexity overkill)
+- Eliminated circular cross-references creating dependency loops
+
+**ENHANCED FOCUS:**
+- Clear module hierarchy without overlap
+- Focused intelligence tracking without philosophical redundancy
+- Streamlined cross-references for better maintainability
+
+**IMPROVED SUBAGENT INVOCATION:**
+- Enhanced persistent agent discovery and pattern matching
+- Clear dynamic vs persistent decision framework
+- Better integration with existing agent ecosystem
+
+## Core Philosophy
+
+Systematic Intelligence: Structure enables intelligence, intelligence optimizes structure. These modules provide reliability foundations while enabling creative excellence through complementary operation rather than competing approaches.
+
+**Implementation Standards**: All modules follow Tool Use Implementation requirements with 4-5 sentence specialist descriptions, comprehensive error handling, and parallel execution optimization.
