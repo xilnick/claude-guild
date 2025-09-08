@@ -240,77 +240,95 @@ Execute tasks using Claude's native intelligence with **MANDATORY** understandin
   </satisfaction_loop>
 </iteration_patterns>
 
-## Specialist Management (Parallel-First)
+## Proactive Subagent Creation with Native Intelligence (ENHANCED)
 
-<specialist_management>
-  ## **PROACTIVE SPECIALIST CREATION (MANDATORY FIRST PRINCIPLE)**
+<proactive_subagent_creation>
+  ## **NATIVE INTELLIGENCE SUBAGENT CREATION (MANDATORY FIRST PRINCIPLE)**
   
-  **AGGRESSIVE PARALLEL SPECIALIST DEPLOYMENT:**
-  - **PROACTIVELY create maximum viable specialists immediately**
-  - **BATCH LAUNCH specialists in single tool calls by default**
-  - **SIMULTANEOUS DEPLOYMENT** of entire specialist workforce
-  - **ASSUME PARALLELIZABLE** until dependencies explicitly prevent
+  **CLAUDE CODE PROACTIVE SUBAGENT METHODOLOGY:**
+  - **NATIVE INTELLIGENCE FIRST**: Subagents must demonstrate adaptive reasoning, not template following
+  - **PROACTIVE IDENTIFICATION**: Automatically identify subagent opportunities using intelligent analysis
+  - **PARALLEL INTELLIGENCE DEPLOYMENT**: Launch multiple intelligent subagents simultaneously
+  - **ORGANIC COORDINATION**: Enable natural collaboration between intelligent subagents
+  - **CREATIVE PROBLEM-SOLVING**: Subagents find novel solutions through native reasoning
   
-  ## **Systematic Specialist Creation Decision Matrix**
+  ## **PROACTIVE SUBAGENT IDENTIFICATION TRIGGERS**
   
-  **Automatic Specialist Identification:**
-  - **PROACTIVELY scan for specialist opportunities**: What work can be delegated?
-  - **AGGRESSIVE DECOMPOSITION**: How many independent specialists are viable?
-  - **PARALLEL CAPABILITY MAPPING**: Which specialists can work simultaneously?
-  - **BATCH CREATION PLANNING**: How to launch maximum specialists in minimum tool calls?
+  **AUTOMATIC NATIVE INTELLIGENCE SUBAGENT CREATION WHEN:**
+  ```xml
+  <intelligence_triggers>
+    ✅ EXPERTISE DOMAINS IDENTIFIED: Multiple skill areas needing specialized intelligence
+    ✅ COMPLEX REASONING REQUIRED: Deep analysis or creative problem-solving needed
+    ✅ PARALLEL INTELLIGENCE OPPORTUNITIES: Independent reasoning streams possible
+    ✅ ADAPTIVE COORDINATION BENEFICIAL: Intelligent collaboration > rigid workflow
+    ✅ CREATIVE SYNTHESIS NEEDED: Novel solutions requiring distributed intelligence
+    ✅ CONTEXT-AWARE DECISIONS: Situations requiring intelligent adaptation
+    
+    NATIVE INTELLIGENCE ASSESSMENT QUESTIONS:
+    - What specialized reasoning would accelerate this task?
+    - Where can parallel intelligence create breakthrough solutions?
+    - Which aspects need creative adaptation vs standard execution?
+    - How can subagents collaborate organically for optimal results?
+  </intelligence_triggers>
+  ```
   
-  **Specialist Creation Templates:**
+  ## **INTELLIGENT SUBAGENT CREATION PATTERNS**
   
-  **Template A: Parallel Technical Specialists**
+  **Pattern A: ADAPTIVE EXPERTISE COORDINATION**
   ```yaml
-  # BATCH LAUNCH PATTERN - Create 3-5 specialists simultaneously
-  - subagent_type: "general-purpose" 
-    description: "[Domain] specialist for [parallel component]"
-    prompt: "[Full context] + parallel coordination requirements"
+  # SIMULTANEOUS INTELLIGENT SPECIALISTS (3-5 subagents)
   - subagent_type: "general-purpose"
-    description: "[Domain] specialist for [parallel component]" 
-    prompt: "[Full context] + integration checkpoints"
+    description: "[Domain] intelligence specialist demonstrating adaptive reasoning and creative problem-solving for [component]. This subagent should use natural intelligence to find optimal solutions rather than following rigid templates. Expected to coordinate organically with other specialists through intelligent collaboration and provide innovative approaches to complex challenges."
+    prompt: "[Context] + NATIVE INTELLIGENCE REQUIREMENTS: Use adaptive reasoning for creative solutions. Coordinate naturally with [other specialists] through intelligent collaboration. Demonstrate context-aware decision making and provide innovative insights beyond standard approaches."
+    
+  - subagent_type: "general-purpose"
+    description: "[Domain] coordination specialist providing intelligent integration across multiple work streams. This subagent demonstrates natural reasoning for complex coordination challenges and adapts approaches based on emerging needs. Expected to facilitate organic collaboration between specialists and synthesize solutions creatively."
+    prompt: "[Context] + INTELLIGENCE COORDINATION: Use natural reasoning to coordinate [list specialists]. Adapt coordination strategies based on specialist needs and project evolution. Provide intelligent conflict resolution and creative synthesis of parallel work streams."
   ```
   
-  **Template B: Proactive Domain Specialists**
+  **Pattern B: PARALLEL REASONING DEPLOYMENT**
   ```yaml
-  # SIMULTANEOUS DOMAIN COVERAGE
-  - subagent_type: "[existing-agent]" (if available)
-    description: "[Specialized domain] parallel execution"
-    prompt: "[Context] + coordinate with [list other specialists]"
+  # SIMULTANEOUS REASONING SPECIALISTS (4-6 subagents)
+  - subagent_type: "general-purpose"
+    description: "Analysis intelligence specialist providing deep reasoning and creative investigation for [domain]. This subagent uses natural intelligence to uncover insights and innovative solutions that standard approaches might miss. Expected to demonstrate adaptive analysis and coordinate findings with implementation specialists."
+    prompt: "[Context] + REASONING REQUIREMENTS: Use deep intelligence for creative analysis and novel insight discovery. Coordinate naturally with implementation specialists. Provide adaptive recommendations based on evolving understanding."
+    
+  - subagent_type: "general-purpose"
+    description: "Implementation intelligence specialist demonstrating creative problem-solving and adaptive development approaches. Uses natural reasoning to optimize implementation strategies and coordinate organically with analysis specialists for integrated solutions."
+    prompt: "[Context] + IMPLEMENTATION INTELLIGENCE: Use creative problem-solving for optimal implementation. Adapt approaches based on analysis specialist insights. Demonstrate intelligent coordination and innovative solution development."
   ```
   
-  **Template C: Coordination + Execution Hybrid**
+  **Pattern C: CREATIVE SYNTHESIS ARCHITECTURE**
   ```yaml
-  # COORDINATOR + WORKERS PATTERN
-  - subagent_type: "general-purpose" (Coordination specialist)
-    description: "Coordinate parallel execution across specialists"
-    prompt: "[Context] + specialist management + integration oversight"
-  - [Multiple execution specialists launched simultaneously]
+  # SIMULTANEOUS SYNTHESIS SPECIALISTS (5-8 subagents)
+  - subagent_type: "general-purpose"
+    description: "Creative synthesis specialist using native intelligence to combine insights from multiple specialist domains into innovative integrated solutions. Demonstrates adaptive coordination and intelligent conflict resolution across complex multi-specialist collaborations."
+    prompt: "[Context] + SYNTHESIS INTELLIGENCE: Use creative reasoning to synthesize solutions across [list specialist domains]. Demonstrate natural intelligence in resolving conflicts and creating innovative integrated approaches. Coordinate organically with all specialists."
   ```
   
-  ## **Mandatory Specialist Coordination Protocols**
+  ## **NATIVE INTELLIGENCE COORDINATION PROTOCOLS**
   
-  **Parallel Integration Requirements:**
-  - **EVERY specialist must include**: Integration checkpoints with other specialists
-  - **MANDATORY coordination points**: Where and how specialists synchronize
-  - **EXPLICIT HANDOFF PROTOCOLS**: How work passes between specialists
-  - **PARALLEL-AWARE VERIFICATION**: Each specialist verifies in context of others
+  **ORGANIC COLLABORATION REQUIREMENTS:**
+  - **EVERY SUBAGENT MUST**: Demonstrate natural reasoning and adaptive intelligence
+  - **INTELLIGENT COORDINATION**: Natural collaboration without rigid scripted protocols
+  - **CREATIVE HANDOFFS**: Innovative solution sharing between intelligent subagents
+  - **ADAPTIVE VERIFICATION**: Context-aware quality assessment using native intelligence
+  - **ORGANIC INTEGRATION**: Natural synthesis of parallel intelligent work streams
   
-  **Batch Tool Calling Standards:**
-  - **NEVER create specialists sequentially** when parallel creation possible
-  - **AGGRESSIVE BATCHING**: Maximum specialists per tool call
-  - **SIMULTANEOUS LAUNCHES**: All parallel-ready specialists launch together
-  - **PROACTIVE SCALING**: Create additional specialists as opportunities emerge
+  **INTELLIGENT BATCHING STANDARDS:**
+  - **SIMULTANEOUS INTELLIGENCE DEPLOYMENT**: Launch multiple intelligent subagents together
+  - **CREATIVE BATCH COORDINATION**: Natural collaboration across simultaneous launches
+  - **ADAPTIVE SCALING**: Intelligent subagent creation as opportunities emerge
+  - **ORGANIC INTEGRATION PLANNING**: Natural coordination architecture design
   
-  **Specialist Instructions Must Include:**
-  - **PARALLEL COORDINATION REQUIREMENTS**: How to work with other specialists
-  - **INTEGRATION SYNCHRONIZATION POINTS**: When and how to coordinate
-  - **DEPENDENCY AWARENESS**: What this specialist provides/needs from others
-  - **VERIFICATION COORDINATION**: How to verify work in parallel context
-  - **GAP DETECTION WITH PARALLEL CONTEXT**: Find gaps across specialist boundaries
-  - **REPORTING STANDARDS**: Format for parallel specialist reporting
-</specialist_management>
+  **SUBAGENT INTELLIGENCE REQUIREMENTS:**
+  - **ADAPTIVE REASONING**: Context-aware decision making and approach adaptation
+  - **CREATIVE PROBLEM-SOLVING**: Novel solution finding beyond standard approaches  
+  - **NATURAL COORDINATION**: Organic collaboration with other intelligent subagents
+  - **INTELLIGENT VERIFICATION**: Native reasoning for quality and gap assessment
+  - **INNOVATIVE REPORTING**: Insight-driven communication with creative recommendations
+  - **CONTEXT-AWARE ADAPTATION**: Intelligent response to changing requirements and findings
+</proactive_subagent_creation>
 
 ## Natural Task Analysis
 

@@ -181,44 +181,116 @@ Enable Claude to naturally analyze, decompose, and execute tasks using native in
   7. Get user confirmation
 </verification>
 
-## Task Tool Usage (Following Tool Use Implementation)
+## Proactive Subagent Creation with Native Intelligence
 
-<task_tool>
-  **Comprehensive Description Requirements (3-4 sentences minimum):**
-  - What the specialist will do and primary purpose
-  - When this specialist should be used vs others
-  - Important limitations or constraints
-  - Expected outcomes and deliverables
+<proactive_subagent_workflow>
+  **NATIVE INTELLIGENCE INTEGRATION:**
+  Claude Code must leverage Claude's natural reasoning for subagent creation and coordination, avoiding rigid scripted patterns.
   
-  **Parameters:**
-  - subagent_type: "general-purpose" or "[agent-name]"
-  - description: **MANDATORY 3-4 sentences** per guidelines
-  - prompt: Must include:
-    * Detailed requirements with XML structure
-    * Success criteria (measurable)
-    * Error handling requirements
-    * Gap detection requirements
-    * Integration verification needs
-    * Reporting format expectations
-  
-  **MANDATORY Parallel Execution (Default Approach):**
-  - REQUIRED: Identify ALL independent operations in every task
-  - DEFAULT: Launch multiple tasks simultaneously 
-  - MANDATORY: Batch tool calls for maximum efficiency
-  - PROACTIVE: Assume parallelization, prove dependencies to go sequential
-  - AUTOMATIC: Coordinate integration points explicitly
-  - STANDARD: Avoid splitting results across messages
-  
-  **Example of Parallel Launch:**
+  **PROACTIVE IDENTIFICATION METHODOLOGY:**
   ```xml
-  <parallel_tasks>
-    Task 1: Frontend implementation
-    Task 2: Backend API development  
-    Task 3: Database schema setup
-    (All launched simultaneously)
-  </parallel_tasks>
+  <subagent_identification>
+    AUTOMATIC SUBAGENT TRIGGERS:
+    1. COMPLEXITY THRESHOLD: Tasks requiring >3 distinct expertise areas
+    2. PARALLEL OPPORTUNITY: Independent work streams identified
+    3. SPECIALIZATION BENEFIT: Domain expertise would accelerate completion
+    4. COORDINATION ADVANTAGE: Multiple agents working > single agent effort
+    5. VERIFICATION REQUIREMENTS: Complex validation needing specialized focus
+    
+    NATIVE INTELLIGENCE ASSESSMENT:
+    - What specialized knowledge would benefit this task?
+    - Where can parallel execution create efficiency gains?
+    - Which aspects require deep domain focus vs general capability?
+    - How can agents coordinate naturally without rigid scripting?
+  </subagent_identification>
   ```
-</task_tool>
+  
+  **SUBAGENT CREATION PATTERNS:**
+  ```xml
+  <creation_patterns>
+    Pattern 1: EXPERTISE-DRIVEN CREATION
+    - Identify domain expertise gaps in current capability
+    - Create specialists with complementary knowledge areas
+    - Enable natural knowledge sharing between agents
+    
+    Pattern 2: PARALLEL WORK DISTRIBUTION
+    - Decompose into independent work streams
+    - Create agents for each stream with coordination awareness
+    - Design natural handoff and integration points
+    
+    Pattern 3: ITERATIVE SPECIALIZATION
+    - Start with general capability assessment
+    - Create specialized agents as complexity emerges
+    - Allow agents to recommend further specialization
+    
+    NATIVE INTELLIGENCE PRINCIPLE: Let Claude's reasoning determine optimal agent architecture
+  </creation_patterns>
+  ```
+</proactive_subagent_workflow>
+
+## Enhanced Task Tool Usage (Native Intelligence Focus)
+
+<enhanced_task_tool>
+  **PROACTIVE SUBAGENT CREATION REQUIREMENTS:**
+  
+  **Native Intelligence Description (4-5 sentences minimum):**
+  - What specialized intelligence this subagent brings to the task
+  - How this agent's natural reasoning complements the main workflow  
+  - When this agent should adapt vs follow structured approaches
+  - What creative problem-solving capabilities this agent should demonstrate
+  - Expected intelligent coordination with other agents and main workflow
+  
+  **Parameters for Native Intelligence:**
+  - subagent_type: "general-purpose" (for maximum reasoning flexibility) or specialized agent
+  - description: **MANDATORY 4-5 sentences** emphasizing intelligence and adaptability
+  - prompt: Must embed native intelligence expectations:
+    * Adaptive reasoning requirements with flexibility for creative approaches
+    * Intelligent coordination protocols with other agents
+    * Natural problem-solving methodology vs rigid step-following
+    * Context-aware decision making and approach adaptation
+    * Organic verification and gap detection using Claude's natural capabilities
+    * Intelligent reporting that provides insights, not just status updates
+  
+  **PROACTIVE CREATION TRIGGERS:**
+  ```xml
+  <creation_triggers>
+    AUTOMATIC SUBAGENT CREATION WHEN:
+    ✓ Multiple expertise domains identified (create domain specialists)
+    ✓ Parallel work streams possible (create work stream agents)
+    ✓ Complex coordination needed (create coordination specialist)
+    ✓ Deep analysis required (create analysis specialist)
+    ✓ Integration challenges anticipated (create integration specialist)
+    ✓ Quality assurance needs identified (create verification specialist)
+    
+    NATIVE INTELLIGENCE EXPECTATION: Agents should demonstrate reasoning, not just execution
+  </creation_triggers>
+  ```
+  
+  **Example of Intelligent Parallel Creation:**
+  ```xml
+  <intelligent_parallel_creation>
+    Scenario: "Implement user authentication with security audit"
+    
+    PROACTIVE SUBAGENT CREATION:
+    1. Authentication Implementation Specialist
+       - Native intelligence: Adapt auth patterns to specific app architecture
+       - Reasoning capability: Choose optimal security vs usability balance
+       - Coordination: Naturally integrate with security audit findings
+    
+    2. Security Analysis Specialist  
+       - Native intelligence: Identify security vectors specific to this implementation
+       - Reasoning capability: Prioritize security measures by actual risk assessment
+       - Coordination: Provide intelligent guidance to implementation specialist
+    
+    3. Integration Coordination Specialist
+       - Native intelligence: Resolve conflicts between security and implementation
+       - Reasoning capability: Optimize overall solution vs individual component perfection  
+       - Coordination: Facilitate natural collaboration between other specialists
+    
+    ALL AGENTS: Demonstrate adaptive intelligence, not template following
+  </intelligent_parallel_creation>
+  ```
+</enhanced_task_tool>
 
 ## AGGRESSIVE Parallel Execution Strategy (MANDATORY DEFAULT)
 

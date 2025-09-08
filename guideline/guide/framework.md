@@ -129,83 +129,96 @@ Let Claude use its native intelligence to **PROACTIVELY DECOMPOSE** and route ta
   </coordination_templates>
 </dependencies>
 
-## Specialist Management (Intelligent)
+## Proactive Subagent Creation with Native Intelligence
 
-<specialist_management>
-  <hybrid_approach>
-    Claude's intelligence determines the best approach:
-    
-    Option 1: Dynamic Specialists (Task-specific)
-    - Create on-demand for specific tasks
-    - Use Task tool with subagent_type: "general-purpose"
-    - Provide detailed context and requirements
-    - No persistence needed
-    
-    Option 2: Persistent Agents (Reusable)
-    - Created with /agents command during setup
-    - Reused across multiple tasks
-    - Specialized knowledge and context
-    - Launch with specific agent names
-  </hybrid_approach>
+<proactive_subagent_intelligence>
+  <native_intelligence_principles>
+    **Claude Code MUST proactively create subagents that demonstrate natural intelligence:**
+    - **ADAPTIVE REASONING**: Subagents adapt approaches based on context, don't follow rigid templates
+    - **INTELLIGENT COORDINATION**: Natural collaboration between subagents without scripted protocols  
+    - **CREATIVE PROBLEM-SOLVING**: Subagents find novel solutions, not just execute predefined steps
+    - **CONTEXT-AWARE DECISIONS**: Subagents make intelligent decisions based on full project context
+    - **ORGANIC VERIFICATION**: Natural quality assessment and gap detection using Claude's reasoning
+  </native_intelligence_principles>
   
-  <intelligent_decision>
-    Claude decides based on:
-    - Is this a one-time need?
-    - Does a suitable agent already exist?
-    - Would persistence add value?
-    - What's most efficient for this task?
-  </intelligent_decision>
+  <proactive_identification_methodology>
+    **SYSTEMATIC SUBAGENT OPPORTUNITY IDENTIFICATION:**
+    ```xml
+    <identification_framework>
+      MANDATORY TRIGGERS FOR SUBAGENT CREATION:
+      1. EXPERTISE DOMAINS: Multiple skill areas needed (backend, frontend, security, etc.)
+      2. PARALLEL WORK STREAMS: Independent work that can run simultaneously
+      3. COMPLEX ANALYSIS: Deep investigation or research required
+      4. SPECIALIZED KNOWLEDGE: Domain-specific expertise would accelerate work
+      5. COORDINATION BENEFIT: Multiple intelligent agents > single agent approach
+      
+      NATIVE INTELLIGENCE ASSESSMENT QUESTIONS:
+      - What specialized intelligence would benefit this task?
+      - Where can parallel reasoning create efficiency gains?
+      - Which aspects need adaptive problem-solving vs standard execution?
+      - How can agents coordinate organically without rigid scripting?
+      - What creative approaches might emerge from distributed intelligence?
+    </identification_framework>
+    ```
+  </proactive_identification_methodology>
   
-  <task_tool_usage>
-    For dynamic specialists (following Tool Use Implementation from recommendations.md):
-    - subagent_type: "general-purpose"
-    - description: **3-4 sentences minimum** explaining:
-      * What the specialist will do and primary purpose
-      * When this specialist should be used vs others
-      * Important limitations or constraints
-      * Expected outcomes and deliverables
-    - prompt: MUST include:
-      * Project context and technology stack
-      * Detailed requirements with XML structure
-      * Success criteria (measurable)
-      * Examples when appropriate
-      * Grounding in actual files
-      * Error handling expectations
-      * Integration verification requirements
+  <intelligent_subagent_architecture>
+    **NATIVE INTELLIGENCE SUBAGENT PATTERNS:**
     
-    For persistent agents:
-    - subagent_type: "[agent-name]"
-    - description: **3-4 sentences minimum** per tool definition guidelines
-    - prompt: Task details following recommendations.md structure
-  </task_tool_usage>
-  
-  <aggressive_parallel_execution>
-    **PARALLEL-FIRST MANDATORY STANDARD (per recommendations.md):**
-    - **SIMULTANEOUS SPECIALIST LAUNCHES** for all independent work (not optional)
-    - Sequential execution REQUIRES explicit blocking dependency proof
-    - **BATCH TOOL CALLS** as fundamental operating procedure (not optimization)
-    - **PROACTIVELY IDENTIFY** ALL concurrent execution opportunities (mandatory scanning)
-    - **COORDINATE INTEGRATION POINTS** explicitly with upfront planning
-    - **SEND ALL RESULTS** in single response to maximize coordination efficiency
-    - **PARALLEL EXECUTION IS THE NORM** - sequential work is the rare exception
+    **Pattern 1: ADAPTIVE EXPERTISE DISTRIBUTION**
+    ```xml
+    <expertise_distribution>
+      - Create subagents with complementary intelligence areas
+      - Enable natural knowledge sharing and cross-pollination
+      - Allow agents to adapt expertise based on emerging needs
+      - Foster organic coordination through shared understanding
+    </expertise_distribution>
+    ```
     
-    **SPECIALIST BATCHING PATTERNS**:
-    - Launch 3-5 specialists simultaneously as standard practice
-    - Coordinate through shared interfaces and contracts
-    - Use parallel integration verification as default approach
-    - Plan coordination points explicitly before execution
-    - Design for maximum concurrency from start
-  </aggressive_parallel_execution>
+    **Pattern 2: PARALLEL REASONING COORDINATION**
+    ```xml
+    <parallel_reasoning>
+      - Launch reasoning agents for independent analysis streams
+      - Enable natural consensus building between intelligent agents
+      - Allow creative synthesis of parallel reasoning results
+      - Foster emergent solutions through distributed intelligence
+    </parallel_reasoning>
+    ```
+    
+    **Pattern 3: ITERATIVE INTELLIGENCE SCALING**
+    ```xml
+    <iterative_scaling>
+      - Start with core intelligent capability assessment
+      - Create additional specialized agents as complexity emerges
+      - Allow agents to recommend further intelligent specialization
+      - Enable natural evolution of agent architecture based on needs
+    </iterative_scaling>
+    ```
+  </intelligent_subagent_architecture>
   
-  <error_handling>
-    **All specialists must handle errors gracefully:**
-    - Provide actionable error messages
-    - Include suggestions for resolution
-    - Allow retry with modified parameters
-    - Fallback to alternative approaches
-    - Report errors clearly for iteration
-  </error_handling>
-</specialist_management>## Tool Definition Requirements (From recommendations.md)
+  <hybrid_creation_approach>
+    **INTELLIGENT SUBAGENT CREATION DECISIONS:**
+    
+    **Dynamic Subagents (Task-Specific Intelligence):**
+    - Use Task tool with subagent_type: "general-purpose" for maximum reasoning flexibility
+    - Embed native intelligence expectations in comprehensive prompts
+    - Enable adaptive problem-solving and creative approaches
+    - Focus on intelligent coordination and natural collaboration
+    
+    **Specialized Persistent Agents (Domain Intelligence):**
+    - Created with /agents command for recurring intelligent patterns
+    - Embeds domain expertise with adaptive reasoning capabilities
+    - Reusable intelligent frameworks for consistent quality
+    - Natural evolution of agent capabilities over time
+    
+    **DECISION FRAMEWORK:**
+    Claude's native intelligence determines optimal approach based on:
+    - Complexity requiring adaptive vs standardized intelligence
+    - Frequency of similar intelligent reasoning needs
+    - Value of persistent vs dynamic intelligent specialization
+    - Coordination benefits of distributed vs centralized intelligence
+  </hybrid_creation_approach>
+</proactive_subagent_intelligence>## Tool Definition Requirements (From recommendations.md)
 
 <tool_definitions>
   <comprehensive_descriptions>
