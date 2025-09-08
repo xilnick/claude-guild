@@ -6,7 +6,9 @@
 
 ## Core Philosophy
 
-Let Claude use its native intelligence to analyze, decompose, and route tasks naturally, with **MANDATORY** understanding confirmation, verification, and iteration until user satisfaction.
+Let Claude use its native intelligence to **PROACTIVELY DECOMPOSE** and route tasks in **PARALLEL-FIRST** patterns, with **MANDATORY** understanding confirmation, verification, and iteration until user satisfaction.
+
+**PARALLEL-FIRST MANDATE**: Every task begins with the assumption that components MUST run in parallel unless explicitly blocked by dependencies.
 
 ## Principles
 
@@ -17,68 +19,114 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
   </native_intelligence>
   
   <parallel_first_execution>
-    Default to simultaneous execution - launch multiple specialists concurrently by default
-    Sequential execution requires explicit dependency justification
-    Proactive parallelization is fundamental to Guild System efficiency
+    **PARALLEL-FIRST AS ABSOLUTE DEFAULT** - simultaneous execution is the standard, not optimization
+    Sequential execution REQUIRES explicit dependency justification with proof
+    **PROACTIVE PARALLELIZATION IS MANDATORY** - fundamental to Guild System operation
+    Every task decomposition MUST identify parallel opportunities FIRST
   </parallel_first_execution>
   
-  <simple_decomposition>
-    Break complex tasks into logical components based on the specific request
-    PROACTIVE: Assume components can be parallelized until proven otherwise
-  </simple_decomposition>
+  <proactive_task_decomposition>
+    **SYSTEMATIC DECOMPOSITION METHODOLOGY** - mandatory first step after understanding
+    Break tasks into SMALLEST parallelizable units immediately
+    **DEFAULT ASSUMPTION**: Components MUST run in parallel until dependency proven
+    Use decomposition decision tree: Independent? → Parallel. Dependent? → Prove necessity.
+  </proactive_task_decomposition>
   
   <clear_dependencies>
     Identify what blocks what using natural reasoning, not complex protocols
     Focus on minimal necessary dependencies to maximize parallel opportunities
   </clear_dependencies>
   
-  <dynamic_routing>
-    Create specialists on-demand based on actual needs, not pre-defined types
-    Default to launching multiple specialists simultaneously for independent work
-  </dynamic_routing>
+  <proactive_specialist_creation>
+    **AGGRESSIVE SPECIALIST CREATION** - err on the side of creating more specialists
+    **SIMULTANEOUS SPECIALIST LAUNCHES** as standard practice, not exception
+    Default to creating specialists for ANY potentially independent work
+    Batch specialist creation and coordination as fundamental operation pattern
+  </proactive_specialist_creation>
 </principles>
 
-## Task Analysis (Natural)
+## Proactive Task Decomposition (Mandatory First Step)
 
 <task_analysis>
-  <instructions>
-    When receiving a request:
+  <mandatory_decomposition_methodology>
+    **SYSTEMATIC DECOMPOSITION SEQUENCE** - execute in exact order:
     1. MANDATORY: Confirm understanding with user before proceeding
-    2. Understand the full scope and intent
-    3. Identify logical components
-    4. Determine dependencies (what must complete before what)
-    5. Route to appropriate specialists via Task tool
-    6. MANDATORY: Verify completion and iterate until satisfied
-  </instructions>
+    2. **IMMEDIATE DECOMPOSITION**: Break task into smallest parallelizable units
+    3. **PARALLEL OPPORTUNITY IDENTIFICATION**: What MUST run simultaneously?
+    4. **DEPENDENCY MINIMIZATION**: Challenge each dependency - is it truly blocking?
+    5. **PROACTIVE SPECIALIST PLANNING**: Design simultaneous specialist launches
+    6. Execute with parallel-first coordination
+    7. MANDATORY: Verify completion and iterate until satisfied
+  </mandatory_decomposition_methodology>
   
-  <thinking>
-    PARALLEL-FIRST ANALYSIS - Ask yourself in this order:
-    - What can run in parallel? (FIRST QUESTION - default assumption)
-    - What are the independent pieces? (identify concurrent opportunities)
-    - What blocks other work? (minimize dependencies)
-    - What specialists would handle this best? (parallel-capable specialists)
+  <parallel_first_thinking_framework>
+    **MANDATORY PARALLEL-FIRST ANALYSIS** - think in this EXACT sequence:
+    1. **What MUST run in parallel?** (Default assumption: everything unless proven otherwise)
+    2. **What are the atomic independent pieces?** (Identify ALL concurrent opportunities)
+    3. **What truly blocks other work?** (Challenge and minimize ALL dependencies)
+    4. **What specialists needed simultaneously?** (Plan aggressive parallel specialist creation)
+    5. **How do specialists coordinate?** (Design integration points upfront)
     
-    PROACTIVE PARALLELIZATION: Default to assuming tasks can be parallelized until proven otherwise
-  </thinking>
+    **DECOMPOSITION DECISION TREE**:
+    - Can this be split? → YES (default) → Split immediately → Plan parallel execution
+    - Seems dependent? → CHALLENGE → Prove blocking necessity → Minimize serial work
+    - Creates specialist work? → CREATE SPECIALISTS → Launch simultaneously → Coordinate explicitly
+  </parallel_first_thinking_framework>
+  
+  <specialist_creation_decision_matrix>
+    **WHEN TO CREATE SPECIALISTS** (Default: CREATE):
+    - ✅ **ALWAYS CREATE** for independent file operations
+    - ✅ **ALWAYS CREATE** for separate technology domains (frontend/backend/database)
+    - ✅ **ALWAYS CREATE** for different skill areas (implementation/testing/documentation)
+    - ✅ **ALWAYS CREATE** for parallel research tasks
+    - ✅ **ALWAYS CREATE** when task can be split into 30+ minute chunks
+    - ❌ **DON'T CREATE** only for simple single-file edits under 10 minutes
+    - ❌ **DON'T CREATE** when coordination overhead exceeds work complexity
+  </specialist_creation_decision_matrix>
 </task_analysis>
 
-## Blocking Relationships (Simple)
+## Dependency Analysis (Minimize Sequential Work)
 
 <dependencies>
-  <blocking_patterns>
-    - Research blocks implementation
-    - API design blocks API consumption
-    - Database schema blocks data layer
-    - Authentication blocks protected features
-    - Design blocks frontend implementation
-  </blocking_patterns>
+  <dependency_challenge_protocol>
+    **CHALLENGE EVERY DEPENDENCY** - Default assumption: tasks are independent
+    For each potential dependency, ask:
+    - Is this TRULY blocking, or just traditionally done sequentially?
+    - Can we create interfaces/contracts to enable parallel work?
+    - Can we use mocks, stubs, or parallel integration approaches?
+    - Would splitting this create MORE parallel opportunities?
+  </dependency_challenge_protocol>
   
-  <parallel_patterns>
-    - Independent files can run in parallel
-    - Different layers (frontend/backend) can run in parallel
-    - Separate features can run in parallel
-    - Documentation can run alongside implementation
-  </parallel_patterns>
+  <proven_blocking_patterns>
+    **ONLY THESE ARE TRUE BLOCKERS** (challenge all others):
+    - Shared data structure definition blocks consumers
+    - Authentication implementation blocks protected feature testing
+    - API contract definition blocks API consumption (unless mocked)
+    - Build/compilation dependencies in same artifact
+    - File system conflicts in exact same files
+  </proven_blocking_patterns>
+  
+  <maximize_parallel_patterns>
+    **DEFAULT TO PARALLEL EXECUTION** for:
+    - Independent files MUST run in parallel
+    - Different layers (frontend/backend/database) MUST run in parallel
+    - Separate features MUST run in parallel
+    - Documentation MUST run alongside implementation
+    - Testing MUST run alongside implementation
+    - Research MUST run alongside initial implementation
+    - UI and API development MUST run in parallel with contracts/interfaces
+    - Different modules/packages MUST run in parallel
+    - Infrastructure and application code MUST run in parallel
+  </maximize_parallel_patterns>
+  
+  <coordination_templates>
+    **PARALLEL COORDINATION PATTERNS**:
+    - **Interface-First**: Define contracts early, implement in parallel
+    - **Mock-Driven**: Create mocks for dependencies, develop in parallel
+    - **Event-Driven**: Use events/messages for loose coupling
+    - **Layer Contracts**: API contracts enable UI/backend parallel work
+    - **Integration Points**: Define explicit integration verification steps
+  </coordination_templates>
 </dependencies>
 
 ## Specialist Management (Intelligent)
@@ -131,16 +179,23 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
     - prompt: Task details following recommendations.md structure
   </task_tool_usage>
   
-  <parallel_execution>
-    **PARALLEL-FIRST STANDARD PRACTICE (per recommendations.md):**
-    - Default to simultaneous specialist launches for all tasks
-    - Sequential execution requires explicit dependency justification
-    - Batch tool calls together as standard operating procedure
-    - Proactively identify concurrent execution opportunities
-    - Coordinate integration points explicitly
-    - Send all results in single response when possible
-    - Make parallel execution the norm, not the optimization
-  </parallel_execution>
+  <aggressive_parallel_execution>
+    **PARALLEL-FIRST MANDATORY STANDARD (per recommendations.md):**
+    - **SIMULTANEOUS SPECIALIST LAUNCHES** for all independent work (not optional)
+    - Sequential execution REQUIRES explicit blocking dependency proof
+    - **BATCH TOOL CALLS** as fundamental operating procedure (not optimization)
+    - **PROACTIVELY IDENTIFY** ALL concurrent execution opportunities (mandatory scanning)
+    - **COORDINATE INTEGRATION POINTS** explicitly with upfront planning
+    - **SEND ALL RESULTS** in single response to maximize coordination efficiency
+    - **PARALLEL EXECUTION IS THE NORM** - sequential work is the rare exception
+    
+    **SPECIALIST BATCHING PATTERNS**:
+    - Launch 3-5 specialists simultaneously as standard practice
+    - Coordinate through shared interfaces and contracts
+    - Use parallel integration verification as default approach
+    - Plan coordination points explicitly before execution
+    - Design for maximum concurrency from start
+  </aggressive_parallel_execution>
   
   <error_handling>
     **All specialists must handle errors gracefully:**
@@ -190,25 +245,41 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
     - NEVER proceed without confirmation
   </phase_1_understanding_confirmation>
   
-  <phase_2_decomposition>
-    <!-- Break down ONLY after understanding confirmed - PARALLEL-FIRST approach -->
-    Decompose based on:
-    - Parallel opportunities (FIRST consideration)
-    - Logical boundaries (optimized for concurrency)
-    - Technical dependencies (minimized for maximum parallelization)
-  </phase_2_decomposition>
+  <phase_2_mandatory_decomposition>
+    <!-- SYSTEMATIC DECOMPOSITION METHODOLOGY - MANDATORY after understanding -->
+    **IMMEDIATE PROACTIVE DECOMPOSITION PROCESS:**
+    1. **IDENTIFY PARALLEL OPPORTUNITIES** (FIRST and PRIMARY step)
+    2. **BREAK INTO SMALLEST UNITS** (atomic parallelizable components)
+    3. **CHALLENGE ALL DEPENDENCIES** (minimize sequential work)
+    4. **DESIGN SPECIALIST LAUNCHES** (plan simultaneous creation)
+    5. **DEFINE COORDINATION POINTS** (integration interfaces upfront)
+    
+    **DECOMPOSITION EXAMPLES BY TASK TYPE:**
+    - **Feature Addition**: UI + API + Database + Tests + Docs (5 parallel specialists)
+    - **Bug Fix**: Research + Reproduce + Fix + Test + Document (3-5 parallel streams)
+    - **Refactor**: Analysis + Plan + Implementation + Testing + Migration (parallel where possible)
+    - **Research**: Multiple domain experts investigating simultaneously
+  </phase_2_mandatory_decomposition>
   
-  <phase_3_execution>
-    <!-- Execute with verification built-in and PARALLEL-FIRST approach -->
-    Create and coordinate specialists following Tool Use Implementation:
-    - Default to simultaneous specialist launches (parallel-first standard)
-    - Sequential execution only when dependencies explicitly require it
-    - Provide 3-4 sentence descriptions for each specialist
-    - Include comprehensive error handling requirements
-    - Include gap detection in all tasks
-    - Monitor for issues during execution
-    - Batch tool calls for efficiency as standard practice
-  </phase_3_execution>
+  <phase_3_aggressive_execution>
+    <!-- AGGRESSIVE PARALLEL EXECUTION with proactive specialist management -->
+    **SIMULTANEOUS SPECIALIST CREATION AND COORDINATION:**
+    - **LAUNCH ALL INDEPENDENT SPECIALISTS** simultaneously (mandatory default)
+    - **BATCH SPECIALIST CREATION** as fundamental practice (3-5 specialists standard)
+    - Sequential execution ONLY when explicit blocking dependency proven
+    - **PROVIDE 3-4 SENTENCE DESCRIPTIONS** following Tool Use Implementation
+    - **INCLUDE COMPREHENSIVE ERROR HANDLING** in all specialist requirements
+    - **BUILD IN GAP DETECTION** and continuous verification for all tasks
+    - **MONITOR AND COORDINATE** execution across all specialists actively
+    - **DESIGN INTEGRATION POINTS** before specialist launch
+    
+    **COORDINATION EXECUTION PATTERN:**
+    1. Launch specialists in parallel batches
+    2. Monitor progress across all specialists
+    3. Coordinate integration points explicitly
+    4. Verify parallel work integration continuously
+    5. Adjust coordination as needed during execution
+  </phase_3_aggressive_execution>
   
   <phase_4_verification>
     <!-- MANDATORY: Verify completeness -->
@@ -295,24 +366,56 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
 <example>
 User: "Add authentication to my app"
 
-Claude's Natural Analysis (using PARALLEL-FIRST chain of thought per recommendations.md):
+Claude's **PROACTIVE PARALLEL-FIRST** Analysis (mandatory methodology per recommendations.md):
+
 <thinking>
-  PARALLEL-FIRST ANALYSIS:
-  1. What can run in parallel? Backend API + Frontend UI + Documentation
-  2. What are independent pieces? API endpoints, UI forms, setup docs
-  3. What blocks other work? Only final security review needs both complete
-  4. Specialists needed: Backend, Frontend, Documentation (all launched simultaneously)
-  5. Sequential dependency: Security review after all complete
+  **SYSTEMATIC DECOMPOSITION WITH AGGRESSIVE PARALLELIZATION:**
+  
+  1. **IMMEDIATE PARALLEL IDENTIFICATION**: Backend API + Frontend UI + Database Schema + Tests + Documentation + Security Planning
+  
+  2. **ATOMIC INDEPENDENT PIECES**: 
+     - JWT implementation (API)
+     - Login/signup forms (UI)  
+     - User schema design (Database)
+     - Authentication tests (Testing)
+     - Setup documentation (Docs)
+     - Security architecture planning (Security)
+  
+  3. **DEPENDENCY CHALLENGE**: 
+     - Database schema → Can use interface contracts for parallel development
+     - JWT implementation → Can use mocks for frontend development
+     - Security review → Can run alongside implementation with iterative feedback
+  
+  4. **SPECIALIST BATCH DESIGN**:
+     - **SIMULTANEOUS LAUNCH**: 6 specialists working in parallel
+     - **COORDINATION**: Shared authentication contracts and interfaces
+     - **INTEGRATION POINTS**: Explicit verification steps planned upfront
+  
+  5. **MAXIMIZED CONCURRENCY**: Only final integration testing requires coordination
 </thinking>
 
-Task Tool Usage (with XML structure per recommendations.md - PARALLEL-FIRST approach):
+**AGGRESSIVE PARALLEL TASK EXECUTION** (Tool Use Implementation with XML structure):
 <task_execution>
-  <simultaneous_tasks_default>
-    - Backend specialist: API endpoints with JWT
-    - Frontend specialist: Login/signup forms  
-    - Documentation specialist: Setup and usage guides
-  </simultaneous_tasks_default>
-  <dependency_justified_sequential>
-    - Security specialist: Review after all three complete (explicit dependency)
-  </dependency_justified_sequential>
+  <simultaneous_specialist_batch_launch>
+    <!-- MANDATORY: All independent work runs in parallel -->
+    - **Backend specialist**: JWT API endpoints with authentication contracts
+    - **Frontend specialist**: Login/signup forms using authentication mocks  
+    - **Database specialist**: User schema and authentication data models
+    - **Testing specialist**: Authentication test suite with mocking strategies
+    - **Documentation specialist**: Setup, usage, and security documentation
+    - **Security specialist**: Architecture review and iterative security feedback
+  </simultaneous_specialist_batch_launch>
+  
+  <minimal_sequential_coordination>
+    <!-- ONLY when dependencies explicitly proven -->
+    - **Integration specialist**: Final end-to-end verification after all parallel work complete
+  </minimal_sequential_coordination>
+  
+  <coordination_framework>
+    <!-- EXPLICIT COORDINATION DESIGN -->
+    - **Shared Contracts**: Authentication API contracts defined first
+    - **Mock Strategy**: Frontend uses authentication mocks during development  
+    - **Integration Points**: Defined verification checkpoints for parallel work alignment
+    - **Iterative Security**: Security specialist provides ongoing feedback, not blocking review
+  </coordination_framework>
 </task_execution>

@@ -54,40 +54,118 @@ Enable Claude to naturally analyze, decompose, and execute tasks using native in
   Wait for user confirmation before proceeding.
 </understanding>
 
-## Task Analysis (Natural)
+## Systematic Decomposition Methodology (MANDATORY)
+
+<systematic_decomposition>
+  **STEP 1: Decomposition Decision Tree**
+  ```xml
+  <decomposition_process>
+    1. Parse request into atomic work units
+    2. Identify smallest parallelizable components
+    3. Map dependencies between components
+    4. Group independent components into parallel batches
+    5. Sequence batches by dependency chains
+    6. Default assumption: EVERYTHING parallelizes until proven otherwise
+  </decomposition_process>
+  ```
+  
+  **STEP 2: Parallel Opportunity Identification Templates**
+  ```xml
+  <parallel_templates>
+    ALWAYS CHECK THESE PATTERNS:
+    ✓ File operations → Independent files = AUTOMATIC parallel creation
+    ✓ Layer separation → Frontend/Backend/Database = SIMULTANEOUS development
+    ✓ Feature modules → Separate features = CONCURRENT implementation
+    ✓ Documentation → PARALLEL with all implementation work
+    ✓ Testing → SIMULTANEOUS with development
+    ✓ Configuration → CONCURRENT with code creation
+    ✓ Validation → PARALLEL verification of independent components
+  </parallel_templates>
+  ```
+  
+  **STEP 3: Decomposition Examples**
+  ```xml
+  <decomposition_examples>
+    Example: "Build user authentication system"
+    BREAKDOWN:
+    - Parallel Batch 1: [Database schema, API endpoints, Frontend components]
+    - Parallel Batch 2: [Tests, Documentation, Configuration] (depends on Batch 1)
+    - Parallel Batch 3: [Integration verification, Security validation] (depends on Batch 2)
+    
+    JUSTIFICATION: Each batch has no internal dependencies but depends on previous batch
+  </decomposition_examples>
+  ```
+</systematic_decomposition>
+
+## Task Analysis (Enhanced Parallel-First)
 
 <analysis>
-  For each request, MANDATORY parallel-first analysis:
+  For each request, MANDATORY systematic decomposition:
   1. Have I confirmed understanding with user?
-  2. PRIORITY: What can run in parallel? (identify ALL opportunities)
-  3. PROACTIVE: Assume parallelization is possible until proven otherwise
-  4. What are the independent components? (parallel candidates)
-  5. What blocks other work? (explicit dependency justification required)
-  6. How will I verify completeness?
-  7. What gaps might occur?
-  8. MANDATORY: Default to simultaneous execution of independent tasks
+  2. DECOMPOSITION: Break into smallest parallelizable units
+  3. PARALLEL MAPPING: Identify ALL simultaneous execution opportunities
+  4. DEPENDENCY CHALLENGE: Prove dependencies exist, don't assume them
+  5. BATCH IDENTIFICATION: Group independent work into parallel execution batches
+  6. SPECIALIST PLANNING: Plan proactive specialist creation for each batch
+  7. VERIFICATION STRATEGY: Design parallel verification approach
+  8. INTEGRATION COORDINATION: Define explicit handoff and merge points
+  9. MANDATORY DEFAULT: Assume maximum parallelization, justify any sequential execution
 </analysis>
 
-## Dependency Management
+## Systematic Dependency Management
 
 <dependencies>
+  <dependency_analysis_framework>
+    **MANDATORY DEPENDENCY CHALLENGE PROCESS:**
+    ```xml
+    <dependency_validation>
+      For each potential dependency, PROVE:
+      1. Technical necessity (not convenience)
+      2. Cannot be mocked/stubbed for parallel development
+      3. No workaround exists for simultaneous execution
+      4. Explicit blocking relationship exists
+      
+      DEFAULT ASSUMPTION: Dependencies don't exist until proven
+    </dependency_validation>
+    ```
+  </dependency_analysis_framework>
+  
   <blocking>
+    **TRUE BLOCKING DEPENDENCIES (Proven Required):**
     - Understanding confirmation blocks ALL work
-    - Research blocks implementation
-    - API design blocks API consumption
-    - Schema blocks data layer
-    - Verification blocks completion
+    - Core schema blocks dependent data operations
+    - Authentication mechanism blocks auth-dependent features
+    - Base API contracts block API consumption
+    - VERIFICATION PRINCIPLE: Each dependency must be explicitly justified
   </blocking>
   
-  <parallel>
-    DEFAULT ASSUMPTION: Everything runs in parallel unless explicitly blocked
-    - Independent files: AUTOMATIC parallel execution
-    - Different layers: AUTOMATIC parallel execution
-    - Separate features: AUTOMATIC parallel execution
-    - Documentation: SIMULTANEOUS with implementation
-    - Testing: CONCURRENT with development
-    - Configuration: PARALLEL with code creation
-  </parallel>
+  <parallel_patterns>
+    **MANDATORY PARALLEL EXECUTION PATTERNS:**
+    - Independent files → AUTOMATIC simultaneous creation
+    - Different technology layers → AUTOMATIC parallel development
+    - Separate feature domains → AUTOMATIC concurrent implementation
+    - Documentation → SIMULTANEOUS with implementation (never sequential)
+    - Testing → CONCURRENT development with all code creation
+    - Configuration → PARALLEL implementation with code
+    - UI components → SIMULTANEOUS creation when independent
+    - Database operations → CONCURRENT when on different tables
+    - API endpoints → PARALLEL development when different resources
+    - Validation logic → SIMULTANEOUS implementation with features
+  </parallel_patterns>
+  
+  <coordination_templates>
+    **EXPLICIT COORDINATION PATTERNS:**
+    ```xml
+    <coordination_framework>
+      DEFINE UPFRONT:
+      1. Interface contracts between parallel work
+      2. Integration checkpoints and handoff procedures
+      3. Shared data structure agreements
+      4. Communication protocols between specialists
+      5. Merge and integration sequences
+    </coordination_framework>
+    ```
+  </coordination_templates>
 </dependencies>
 
 ## Verification Process (MANDATORY)
@@ -142,43 +220,88 @@ Enable Claude to naturally analyze, decompose, and execute tasks using native in
   ```
 </task_tool>
 
-## PROACTIVE Parallel Execution Strategy (MANDATORY DEFAULT)
+## AGGRESSIVE Parallel Execution Strategy (MANDATORY DEFAULT)
 
-<parallel_execution>
-  **Claude 4 MANDATORY Parallelization (per recommendations.md):**
+<aggressive_parallel_execution>
+  **Claude 4 MANDATORY Maximum Parallelization:**
   
-  **REQUIRED Parallel Discovery (Every Task):**
-  - MANDATORY: Identify parallel opportunities before ANY execution
-  - DEFAULT ASSUMPTION: All work parallelizes until proven otherwise
-  - PROACTIVE PATTERNS: Look for these parallel opportunities:
-    * Independent features → AUTOMATIC simultaneous execution
-    * Different tech layers → AUTOMATIC parallel development
-    * Separate microservices → AUTOMATIC concurrent creation
-    * Documentation → SIMULTANEOUS with implementation
-    * Testing → CONCURRENT with all development
-    * Configuration → PARALLEL with code implementation
-  
-  **MANDATORY Batch Tool Calls (Standard Operating Procedure):**
+  **SYSTEMATIC Parallel Discovery (Every Task):**
   ```xml
-  <mandatory_batch_execution>
-    DEFAULT: Launch ALL independent tasks in single response:
-    - Task A: Component development
-    - Task B: API endpoints  
-    - Task C: Test creation
-    - Task D: Documentation
-    - Task E: Configuration
-    STANDARD: Send all results together for processing
-    EXCEPTION: Sequential only when explicit dependency blocks parallelization
-  </mandatory_batch_execution>
+  <parallel_discovery_framework>
+    MANDATORY PRE-EXECUTION CHECKLIST:
+    ✓ Applied decomposition decision tree
+    ✓ Identified ALL possible parallel work batches
+    ✓ Challenged every assumed dependency
+    ✓ Planned proactive specialist creation strategy
+    ✓ Designed parallel coordination approach
+    ✓ Prepared batch tool call execution plan
+    
+    DEFAULT ASSUMPTION: MAXIMUM parallelization until proven impossible
+  </parallel_discovery_framework>
   ```
   
-  **PROACTIVE Coordination Points:**
-  - AUTOMATIC: Define clear integration boundaries
-  - MANDATORY: Specify handoff requirements upfront
-  - DEFAULT: Document shared interfaces before execution
-  - REQUIRED: Plan synchronization at merge points
-  - ASSUMPTION: Coordination happens in parallel with development
-</parallel_execution>
+  **PROACTIVE SPECIALIST CREATION PATTERNS:**
+  ```xml
+  <specialist_creation_templates>
+    STANDARD APPROACH: Create specialists in parallel batches
+    
+    Pattern 1: Layer-Based Batching
+    - Batch A: [Frontend specialist, Backend specialist, Database specialist]
+    - Batch B: [Test specialist, Documentation specialist, Config specialist]
+    
+    Pattern 2: Feature-Based Batching  
+    - Batch A: [Feature-1 specialist, Feature-2 specialist, Feature-3 specialist]
+    - Batch B: [Integration specialist, Validation specialist]
+    
+    Pattern 3: Domain-Based Batching
+    - Batch A: [Auth specialist, Data specialist, UI specialist]
+    - Batch B: [Security specialist, Performance specialist]
+    
+    RULE: Default to simultaneous specialist launches unless explicit coordination needed
+  </specialist_creation_templates>
+  ```
+  
+  **MANDATORY Batch Tool Calls (Aggressive Standard):**
+  ```xml
+  <aggressive_batch_execution>
+    PRINCIPLE: Maximum tool call batching for optimal Claude 4 performance
+    
+    STANDARD EXECUTION:
+    1. Launch ALL independent specialists simultaneously
+    2. Batch ALL parallel tool calls in single response
+    3. Coordinate integration points explicitly
+    4. Process ALL results together
+    5. Sequential execution ONLY for proven dependencies
+    
+    EXAMPLE BATCH:
+    ```
+    Launch simultaneously:
+    - Task A: Frontend component development
+    - Task B: Backend API implementation  
+    - Task C: Database schema creation
+    - Task D: Test suite development
+    - Task E: Documentation creation
+    - Task F: Configuration setup
+    Send ALL results together for integrated processing
+    ```
+  </aggressive_batch_execution>
+  ```
+  
+  **PROACTIVE Coordination Architecture:**
+  ```xml
+  <coordination_architecture>
+    DEFINE BEFORE EXECUTION:
+    1. Interface contracts for all parallel components
+    2. Integration checkpoints with explicit success criteria
+    3. Handoff procedures between parallel work streams
+    4. Shared resource access patterns and protocols
+    5. Merge strategies for parallel development streams
+    6. Conflict resolution procedures for integration points
+    
+    COORDINATION PRINCIPLE: Design coordination to happen in parallel with development
+  </coordination_architecture>
+  ```
+</aggressive_parallel_execution>
 
 ## Error Handling Framework
 
@@ -262,38 +385,40 @@ Enable Claude to naturally analyze, decompose, and execute tasks using native in
      ```
 </verification_enhanced>
 
-## Best Practices (Enhanced)
+## Enhanced Best Practices (Aggressively Parallel-First)
 
-<practices>
-  **Understanding & Planning:**
-  - ALWAYS confirm understanding first
-  - MANDATORY: Identify parallel opportunities FIRST in every task
-  - PROACTIVE: Default to parallelization, justify sequential execution
-  - Plan error handling upfront
-  - Define clear success criteria
+<enhanced_practices>
+  **MANDATORY Understanding & Systematic Planning:**
+  - ALWAYS confirm understanding before ANY execution
+  - MANDATORY: Apply systematic decomposition methodology to EVERY task
+  - MANDATORY: Identify ALL parallel opportunities FIRST using decomposition templates
+  - PROACTIVE: Default to maximum parallelization, explicitly justify any sequential execution
+  - SYSTEMATIC: Plan comprehensive error handling and recovery across all parallel streams
+  - EXPLICIT: Define measurable success criteria for each parallel work stream
   
-  **Execution Excellence:**
-  - Use 3-4 sentence descriptions always
-  - Be explicit in specialist instructions
-  - Include verification requirements
-  - Build in error recovery
+  **AGGRESSIVE Execution Excellence:**
+  - MANDATORY: Use 3-4 sentence descriptions for ALL specialists created
+  - EXPLICIT: Provide comprehensive specialist instructions with integration requirements
+  - SYSTEMATIC: Include verification requirements and gap detection capabilities
+  - PROACTIVE: Build error recovery and remediation into all specialist creation
+  - COORDINATION: Plan integration and handoff procedures upfront
   
-  **Optimization (MANDATORY PARALLEL-FIRST):**
-  - DEFAULT: Maximum parallelism unless explicitly blocked
-  - MANDATORY: Batch tool calls for maximum efficiency
-  - PROACTIVE: Challenge dependencies, minimize sequential execution
-  - AUTOMATIC: Launch simultaneous specialists as standard practice
-  - Avoid redundant operations
+  **MANDATORY Parallel-First Optimization:**
+  - DEFAULT RULE: Maximum parallelization unless explicitly blocked by proven dependencies
+  - MANDATORY STANDARD: Batch ALL tool calls for optimal Claude 4 performance
+  - AGGRESSIVE APPROACH: Challenge ALL assumed dependencies, minimize sequential execution
+  - AUTOMATIC PRACTICE: Launch simultaneous specialists as standard operating procedure
+  - SYSTEMATIC EFFICIENCY: Eliminate redundant operations through parallel coordination
   
-  **Quality Assurance:**
-  - Verify integration points explicitly
-  - Handle errors gracefully
-  - Document all decisions
-  - Iterate until user satisfied
+  **COMPREHENSIVE Quality Assurance:**
+  - PARALLEL VERIFICATION: Verify integration points across all parallel streams explicitly
+  - SYSTEMATIC RECOVERY: Handle errors gracefully with parallel remediation approaches
+  - COMPREHENSIVE DOCUMENTATION: Document all decisions and coordination requirements
+  - MANDATORY ITERATION: Continue until user fully satisfied across all parallel work
   
-  **Team Coordination:**
-  - Clear handoffs between specialists
-  - Shared understanding of interfaces
-  - Consistent error reporting
-  - Collaborative problem solving
-</practices>
+  **PROACTIVE Team Coordination:**
+  - EXPLICIT HANDOFFS: Define clear handoff procedures between all parallel specialists
+  - SHARED UNDERSTANDING: Establish shared interfaces and communication protocols upfront
+  - CONSISTENT REPORTING: Standardize error reporting across all parallel work streams
+  - COLLABORATIVE INTEGRATION: Design collaborative problem-solving across specialist coordination
+</enhanced_practices>
