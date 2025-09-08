@@ -15,16 +15,19 @@ Enable Claude to naturally analyze, decompose, and execute tasks using native in
   </understand_and_confirm>
   
   <decompose>
-    Break down naturally based on:
-    - Logical boundaries
-    - Technical dependencies  
-    - Parallel opportunities
+    MANDATORY: Identify parallel opportunities FIRST, then dependencies:
+    - REQUIRED: What can run simultaneously?
+    - Technical dependencies (blocks parallelization)  
+    - Logical boundaries (enables parallelization)
+    - PROACTIVE: Assume parallelization until proven otherwise
   </decompose>
   
   <execute>
-    Create specialists dynamically with Task tool
-    Include verification requirements in prompts
-    Coordinate based on natural dependencies
+    DEFAULT: Launch independent tasks simultaneously
+    - Create specialists in parallel batches by default
+    - Sequential execution ONLY when dependencies prevent parallelization
+    - Include verification requirements in prompts
+    - MANDATORY: Batch tool calls for maximum efficiency
   </execute>
   
   <verify_and_iterate>
@@ -54,13 +57,15 @@ Enable Claude to naturally analyze, decompose, and execute tasks using native in
 ## Task Analysis (Natural)
 
 <analysis>
-  For each request, naturally determine:
+  For each request, MANDATORY parallel-first analysis:
   1. Have I confirmed understanding with user?
-  2. What are the independent components?
-  3. What blocks other work?
-  4. What can run in parallel?
-  5. How will I verify completeness?
-  6. What gaps might occur?
+  2. PRIORITY: What can run in parallel? (identify ALL opportunities)
+  3. PROACTIVE: Assume parallelization is possible until proven otherwise
+  4. What are the independent components? (parallel candidates)
+  5. What blocks other work? (explicit dependency justification required)
+  6. How will I verify completeness?
+  7. What gaps might occur?
+  8. MANDATORY: Default to simultaneous execution of independent tasks
 </analysis>
 
 ## Dependency Management
@@ -75,9 +80,13 @@ Enable Claude to naturally analyze, decompose, and execute tasks using native in
   </blocking>
   
   <parallel>
-    - Independent files can run in parallel
-    - Different layers can run in parallel
-    - Separate features can run in parallel
+    DEFAULT ASSUMPTION: Everything runs in parallel unless explicitly blocked
+    - Independent files: AUTOMATIC parallel execution
+    - Different layers: AUTOMATIC parallel execution
+    - Separate features: AUTOMATIC parallel execution
+    - Documentation: SIMULTANEOUS with implementation
+    - Testing: CONCURRENT with development
+    - Configuration: PARALLEL with code creation
   </parallel>
 </dependencies>
 
@@ -114,12 +123,13 @@ Enable Claude to naturally analyze, decompose, and execute tasks using native in
     * Integration verification needs
     * Reporting format expectations
   
-  **Parallel Execution Optimization:**
-  - Identify truly independent operations
-  - Launch multiple tasks simultaneously
-  - Batch tool calls for efficiency
-  - Avoid splitting results across messages
-  - Coordinate integration points explicitly
+  **MANDATORY Parallel Execution (Default Approach):**
+  - REQUIRED: Identify ALL independent operations in every task
+  - DEFAULT: Launch multiple tasks simultaneously 
+  - MANDATORY: Batch tool calls for maximum efficiency
+  - PROACTIVE: Assume parallelization, prove dependencies to go sequential
+  - AUTOMATIC: Coordinate integration points explicitly
+  - STANDARD: Avoid splitting results across messages
   
   **Example of Parallel Launch:**
   ```xml
@@ -132,34 +142,42 @@ Enable Claude to naturally analyze, decompose, and execute tasks using native in
   ```
 </task_tool>
 
-## Parallel Execution Strategy
+## PROACTIVE Parallel Execution Strategy (MANDATORY DEFAULT)
 
 <parallel_execution>
-  **Claude 4 Optimization (per recommendations.md):**
+  **Claude 4 MANDATORY Parallelization (per recommendations.md):**
   
-  **Identify Parallel Opportunities:**
-  - Independent features can run simultaneously
-  - Different tech layers (frontend/backend/database)
-  - Separate microservices or modules
-  - Documentation alongside implementation
-  - Testing while developing
+  **REQUIRED Parallel Discovery (Every Task):**
+  - MANDATORY: Identify parallel opportunities before ANY execution
+  - DEFAULT ASSUMPTION: All work parallelizes until proven otherwise
+  - PROACTIVE PATTERNS: Look for these parallel opportunities:
+    * Independent features → AUTOMATIC simultaneous execution
+    * Different tech layers → AUTOMATIC parallel development
+    * Separate microservices → AUTOMATIC concurrent creation
+    * Documentation → SIMULTANEOUS with implementation
+    * Testing → CONCURRENT with all development
+    * Configuration → PARALLEL with code implementation
   
-  **Batch Tool Calls:**
+  **MANDATORY Batch Tool Calls (Standard Operating Procedure):**
   ```xml
-  <batch_execution>
-    Launch all independent tasks in single response:
+  <mandatory_batch_execution>
+    DEFAULT: Launch ALL independent tasks in single response:
     - Task A: Component development
-    - Task B: API endpoints
+    - Task B: API endpoints  
     - Task C: Test creation
-    Send all results together for processing
-  </batch_execution>
+    - Task D: Documentation
+    - Task E: Configuration
+    STANDARD: Send all results together for processing
+    EXCEPTION: Sequential only when explicit dependency blocks parallelization
+  </mandatory_batch_execution>
   ```
   
-  **Coordination Points:**
-  - Define clear integration boundaries
-  - Specify handoff requirements
-  - Document shared interfaces
-  - Synchronize at merge points
+  **PROACTIVE Coordination Points:**
+  - AUTOMATIC: Define clear integration boundaries
+  - MANDATORY: Specify handoff requirements upfront
+  - DEFAULT: Document shared interfaces before execution
+  - REQUIRED: Plan synchronization at merge points
+  - ASSUMPTION: Coordination happens in parallel with development
 </parallel_execution>
 
 ## Error Handling Framework
@@ -249,7 +267,8 @@ Enable Claude to naturally analyze, decompose, and execute tasks using native in
 <practices>
   **Understanding & Planning:**
   - ALWAYS confirm understanding first
-  - Think through parallel opportunities
+  - MANDATORY: Identify parallel opportunities FIRST in every task
+  - PROACTIVE: Default to parallelization, justify sequential execution
   - Plan error handling upfront
   - Define clear success criteria
   
@@ -259,10 +278,11 @@ Enable Claude to naturally analyze, decompose, and execute tasks using native in
   - Include verification requirements
   - Build in error recovery
   
-  **Optimization:**
-  - Maximize parallelism where safe
-  - Batch tool calls for efficiency
-  - Respect natural dependencies
+  **Optimization (MANDATORY PARALLEL-FIRST):**
+  - DEFAULT: Maximum parallelism unless explicitly blocked
+  - MANDATORY: Batch tool calls for maximum efficiency
+  - PROACTIVE: Challenge dependencies, minimize sequential execution
+  - AUTOMATIC: Launch simultaneous specialists as standard practice
   - Avoid redundant operations
   
   **Quality Assurance:**

@@ -16,16 +16,25 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
     ALWAYS with mandatory understanding confirmation and iterative verification
   </native_intelligence>
   
+  <parallel_first_execution>
+    Default to simultaneous execution - launch multiple specialists concurrently by default
+    Sequential execution requires explicit dependency justification
+    Proactive parallelization is fundamental to Guild System efficiency
+  </parallel_first_execution>
+  
   <simple_decomposition>
     Break complex tasks into logical components based on the specific request
+    PROACTIVE: Assume components can be parallelized until proven otherwise
   </simple_decomposition>
   
   <clear_dependencies>
     Identify what blocks what using natural reasoning, not complex protocols
+    Focus on minimal necessary dependencies to maximize parallel opportunities
   </clear_dependencies>
   
   <dynamic_routing>
     Create specialists on-demand based on actual needs, not pre-defined types
+    Default to launching multiple specialists simultaneously for independent work
   </dynamic_routing>
 </principles>
 
@@ -43,11 +52,13 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
   </instructions>
   
   <thinking>
-    Ask yourself:
-    - What are the independent pieces?
-    - What blocks other work?
-    - What can run in parallel?
-    - What specialists would handle this best?
+    PARALLEL-FIRST ANALYSIS - Ask yourself in this order:
+    - What can run in parallel? (FIRST QUESTION - default assumption)
+    - What are the independent pieces? (identify concurrent opportunities)
+    - What blocks other work? (minimize dependencies)
+    - What specialists would handle this best? (parallel-capable specialists)
+    
+    PROACTIVE PARALLELIZATION: Default to assuming tasks can be parallelized until proven otherwise
   </thinking>
 </task_analysis>
 
@@ -121,12 +132,14 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
   </task_tool_usage>
   
   <parallel_execution>
-    **Claude 4 Optimization (per recommendations.md):**
-    - Launch multiple specialists simultaneously for independent tasks
-    - Batch tool calls together for optimal performance
-    - Identify truly independent operations
+    **PARALLEL-FIRST STANDARD PRACTICE (per recommendations.md):**
+    - Default to simultaneous specialist launches for all tasks
+    - Sequential execution requires explicit dependency justification
+    - Batch tool calls together as standard operating procedure
+    - Proactively identify concurrent execution opportunities
     - Coordinate integration points explicitly
     - Send all results in single response when possible
+    - Make parallel execution the norm, not the optimization
   </parallel_execution>
   
   <error_handling>
@@ -178,22 +191,23 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
   </phase_1_understanding_confirmation>
   
   <phase_2_decomposition>
-    <!-- Break down ONLY after understanding confirmed -->
+    <!-- Break down ONLY after understanding confirmed - PARALLEL-FIRST approach -->
     Decompose based on:
-    - Logical boundaries
-    - Technical dependencies
-    - Parallel opportunities
+    - Parallel opportunities (FIRST consideration)
+    - Logical boundaries (optimized for concurrency)
+    - Technical dependencies (minimized for maximum parallelization)
   </phase_2_decomposition>
   
   <phase_3_execution>
-    <!-- Execute with verification built-in and parallel optimization -->
+    <!-- Execute with verification built-in and PARALLEL-FIRST approach -->
     Create and coordinate specialists following Tool Use Implementation:
-    - Launch independent tasks in parallel (Claude 4 optimization)
+    - Default to simultaneous specialist launches (parallel-first standard)
+    - Sequential execution only when dependencies explicitly require it
     - Provide 3-4 sentence descriptions for each specialist
     - Include comprehensive error handling requirements
     - Include gap detection in all tasks
     - Monitor for issues during execution
-    - Batch tool calls for efficiency
+    - Batch tool calls for efficiency as standard practice
   </phase_3_execution>
   
   <phase_4_verification>
@@ -281,22 +295,24 @@ Let Claude use its native intelligence to analyze, decompose, and route tasks na
 <example>
 User: "Add authentication to my app"
 
-Claude's Natural Analysis (using chain of thought per recommendations.md):
+Claude's Natural Analysis (using PARALLEL-FIRST chain of thought per recommendations.md):
 <thinking>
-  1. Backend API endpoints needed (login, signup, logout)
-  2. Frontend UI components needed (forms, state management)
-  3. Security validation required (after implementation)
-  4. Backend and frontend are independent (can parallelize)
-  5. Security review depends on both completing
+  PARALLEL-FIRST ANALYSIS:
+  1. What can run in parallel? Backend API + Frontend UI + Documentation
+  2. What are independent pieces? API endpoints, UI forms, setup docs
+  3. What blocks other work? Only final security review needs both complete
+  4. Specialists needed: Backend, Frontend, Documentation (all launched simultaneously)
+  5. Sequential dependency: Security review after all complete
 </thinking>
 
-Task Tool Usage (with XML structure per recommendations.md):
+Task Tool Usage (with XML structure per recommendations.md - PARALLEL-FIRST approach):
 <task_execution>
-  <parallel_tasks>
+  <simultaneous_tasks_default>
     - Backend specialist: API endpoints with JWT
-    - Frontend specialist: Login/signup forms
-  </parallel_tasks>
-  <sequential_task>
-    - Security specialist: Review after both complete
-  </sequential_task>
+    - Frontend specialist: Login/signup forms  
+    - Documentation specialist: Setup and usage guides
+  </simultaneous_tasks_default>
+  <dependency_justified_sequential>
+    - Security specialist: Review after all three complete (explicit dependency)
+  </dependency_justified_sequential>
 </task_execution>
