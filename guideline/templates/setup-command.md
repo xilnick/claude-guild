@@ -4,11 +4,64 @@
 name: guild-setup  
 model: inherit
 thinking_mode: ultrathink
-description: "Intelligent project analysis and dynamic agent creation using native intelligence"
+description: "Intelligent project analysis and dynamic agent creation using native intelligence with mandatory understanding confirmation, verification, and iterative refinement until user satisfaction"
 ---
 
 ## Command Purpose
 Use Claude's native intelligence to analyze project needs and create a **comprehensive team of specialized agents** covering all major aspects of the project, following Anthropic's Tool Use Implementation best practices for optimal performance and reliability.
+
+## 🔄 ITERATIVE WORKFLOW (MANDATORY)
+
+<iterative_workflow>
+  <phase_1_understanding_confirmation>
+    **MANDATORY: Always confirm understanding first**
+    
+    1. Analyze the project structure and technology stack
+    2. Present understanding of agent team needs:
+       "I understand you want me to create a comprehensive agent team for your project.
+        This involves:
+        - Analyzing your project architecture and technology stack
+        - Identifying specialized domains requiring dedicated agents
+        - Creating agents with proper Tool Use Implementation standards
+        - Ensuring complete coverage of all project aspects
+        Is this understanding correct?"
+    3. Wait for user confirmation
+    4. Ask clarifying questions if needed
+    5. Iterate until user approves understanding
+  </phase_1_understanding_confirmation>
+  
+  <phase_2_project_analysis>
+    After approval, analyze project for:
+    - Technology boundaries and frameworks
+    - Service and component architectures  
+    - Domain-specific requirements
+    - Integration and coordination needs
+  </phase_2_project_analysis>
+  
+  <phase_3_agent_creation>
+    Create comprehensive agent team following Tool Use Implementation
+  </phase_3_agent_creation>
+  
+  <phase_4_verification>
+    **MANDATORY: Run verification after agent creation**
+    
+    1. Check all project aspects are covered
+    2. Verify each agent follows Tool Use Implementation standards
+    3. Look for gaps in team capabilities
+    4. Present findings to user
+  </phase_4_verification>
+  
+  <phase_5_gap_resolution>
+    **MANDATORY: Iterate until satisfied**
+    
+    If gaps found or user not satisfied:
+    1. Identify missing capabilities or coverage areas
+    2. Create additional agents to fill gaps
+    3. Refine existing agents based on feedback
+    4. Re-verify team completeness
+    5. Continue until user confirms satisfaction
+  </phase_5_gap_resolution>
+</iterative_workflow>
 
 ## 🧠 **NATIVE INTELLIGENCE APPROACH**
 
@@ -509,6 +562,8 @@ Use Claude's native intelligence to analyze project needs and create a **compreh
    Which mode would you prefer, and which domains should I start with?"
 </flexible_setup>
 
+
+
 ### **Usage Examples**
 
 <examples>
@@ -544,18 +599,38 @@ Use Claude's native intelligence to analyze project needs and create a **compreh
   ✅ **Always use ultrathink and inherit models** - Consistent performance
   ✅ **Support continuous expansion** - Add agents anytime
   ✅ **Flexible category organization** - User-defined structures
+  ✅ **Trust native intelligence** - Let Claude naturally verify agent creation
 </best_practices>
 
-### **Verification**
+### **Verification Process**
 
-<verification>
-  After setup:
-  - ✓ Only necessary agents created
-  - ✓ Each agent has clear purpose
-  - ✓ No redundant specializations
-  - ✓ Dynamic approach documented
-  - ✓ Team can use both approaches
-</verification>
+<setup_verification>
+  **MANDATORY: Comprehensive verification after agent creation**
+  
+  1. **Coverage Verification:**
+     - All major project aspects have dedicated agents
+     - No gaps in technical domain coverage
+     - Agent capabilities match project requirements
+     - Integration points properly handled
+  
+  2. **Quality Verification:**
+     - Each agent follows Tool Use Implementation standards
+     - All agents have proper 3-4 sentence descriptions
+     - Error handling implemented in every agent
+     - Parallel execution capabilities documented
+  
+  3. **User Satisfaction Check:**
+     - Present complete agent team to user
+     - Explain coverage and capabilities
+     - Ask for feedback on gaps or adjustments needed
+     - Continue refining until user fully satisfied
+  
+  4. **Integration Verification:**
+     - Agents coordinate effectively with each other
+     - No redundant or conflicting specializations
+     - Clear handoff procedures between agents
+     - Team supports both persistent and dynamic workflows
+</setup_verification>
 
 ---
 

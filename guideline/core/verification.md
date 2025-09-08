@@ -1,7 +1,7 @@
 # Natural Verification
 
 ## Purpose
-Ensure tasks are completed correctly using Claude's natural verification abilities with **MANDATORY** iteration until user satisfaction.
+Ensure tasks are completed correctly using Claude's natural verification abilities with **MANDATORY** iteration until user satisfaction, following Tool Use Implementation standards.
 
 ## Core Principle
 
@@ -74,3 +74,35 @@ Ensure tasks are completed correctly using Claude's natural verification abiliti
   - Trust Claude's judgment on completeness
   - Keep verification simple and practical
 </practices>
+
+## Tool Use Implementation Requirements
+
+<tool_use_requirements>
+  <specialist_descriptions>
+    **All verification specialists must include 3-4 sentence descriptions:**
+    - Primary purpose and verification capabilities
+    - When to use this specialist vs others for verification
+    - Important limitations and constraints
+    - Expected verification outcomes and deliverables
+  </specialist_descriptions>
+  
+  <error_handling>
+    **Structured error response format:**
+    ```json
+    {
+      "type": "verification_error",
+      "message": "Clear description of verification failure",
+      "details": "Context and debugging information",
+      "suggestions": "Recommended fixes or next steps"
+    }
+    ```
+  </error_handling>
+  
+  <parallel_verification>
+    **Claude 4 Optimization for verification:**
+    - Run independent verification checks simultaneously
+    - Batch verification tool calls for efficiency
+    - Coordinate verification results explicitly
+    - Send all verification findings in single response
+  </parallel_verification>
+</tool_use_requirements>

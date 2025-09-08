@@ -52,3 +52,5 @@ test-project/
 
 # MCP and agents stuff
 .serena
+
+.claude

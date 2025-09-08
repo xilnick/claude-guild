@@ -36,7 +36,11 @@ Use Claude's native intelligence to determine when to create dynamic specialists
     Use Task tool directly:
     ```
     subagent_type: "general-purpose"
-    description: Clear, specific task
+    description: **3-4 sentences minimum** explaining:
+      * What the specialist will do and primary purpose
+      * When this specialist should be used vs others
+      * Important limitations or constraints
+      * Expected outcomes and deliverables
     prompt: Detailed context including:
       - Role and expertise
       - Project context
@@ -137,17 +141,47 @@ Use Claude's native intelligence to determine when to create dynamic specialists
   - Confirm success criteria met
 </verification_integration>
 
+## Error Handling Framework
+
+<error_handling>
+  **All specialists must handle errors gracefully:**
+  ```json
+  {
+    "type": "specialist_error",
+    "message": "Clear description of what failed",
+    "details": "Context and debugging information",
+    "suggestions": "Recommended fixes or alternative approaches"
+  }
+  ```
+  - Provide actionable error messages with recovery strategies
+  - Include suggestions for resolution and alternative approaches
+  - Allow retry with modified parameters when appropriate
+  - Implement fallback approaches for critical failures
+  - Report errors clearly to enable iteration and improvement
+</error_handling>
+
+## Parallel Execution Guidance
+
+<parallel_execution>
+  **Claude 4 Optimization for agent coordination:**
+  - Launch independent specialists simultaneously when possible
+  - Batch agent creation and deployment for efficiency
+  - Coordinate integration points explicitly between agents
+  - Design agents to work together without conflicts
+  - Enable concurrent execution of non-dependent tasks
+</parallel_execution>
+
 ## Best Practices
 
 <practices>
-  - Don't overthink the decision
-  - Prefer dynamic for flexibility
-  - Use persistent for consistency
-  - ALWAYS provide detailed context
-  - ALWAYS include verification requirements
-  - Trust Claude's natural intelligence
-  - Avoid rigid templates or rules
-  - Ensure gap detection in all agents
+  - Don't overthink the decision between dynamic vs persistent
+  - Prefer dynamic for flexibility, persistent for consistency
+  - ALWAYS provide detailed context and requirements
+  - ALWAYS include verification requirements in agent prompts
+  - Trust Claude's natural intelligence for routing decisions
+  - Avoid rigid templates or rules that constrain flexibility
+  - Ensure gap detection capabilities in all agents
+  - Follow Tool Use Implementation standards consistently
 </practices>
 
 ## Examples

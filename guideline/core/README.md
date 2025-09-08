@@ -21,4 +21,6 @@ These modules provide light guidance while trusting Claude's native intelligence
 - Coordinate execution based on dependencies
 - Verify work quality
 
+**Tool Use Implementation**: All modules follow Anthropic's Tool Use Implementation standards, requiring 3-4 sentence descriptions for specialists, comprehensive error handling, and parallel execution optimization for Claude 4.
+
 No rigid frameworks, templates, or complex orchestration needed.
