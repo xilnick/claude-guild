@@ -1,4 +1,75 @@
-# Workflow Orchestration Framework
+# Task Workflow Framework
+
+## Purpose
+Research, decompose, and route tasks to appropriate specialists through systematic analysis and intelligent coordination.
+
+## Task Research Phase
+
+**UNDERSTANDING REQUIREMENTS:**
+- Clarify user intent and desired outcomes
+- Identify success criteria and constraints  
+- Assess task complexity and scope
+- Determine resource and coordination needs
+
+**RESEARCH STRATEGY:**
+- Ask clarifying questions when requirements are ambiguous
+- Break down vague requests into specific deliverables
+- Identify dependencies and integration requirements
+- Plan execution approach based on complexity assessment
+
+## Task Decomposition
+
+**DECOMPOSITION PRINCIPLES:**
+- Break complex tasks into independent work units
+- Identify opportunities for parallel execution
+- Minimize dependencies between work units
+- Design clear interfaces between components
+
+**WORK UNIT CRITERIA:**
+- Each unit should have clear, measurable outcomes
+- Units should be as independent as possible
+- Dependencies should be explicit and documented
+- Integration points should be planned upfront
+
+**PARALLELIZATION ASSESSMENT:**
+- Challenge assumed dependencies - can work be done simultaneously?
+- Identify true blockers that prevent parallel execution
+- Design coordination for necessary sequential work
+- Default to parallel execution when possible
+
+## Routing Strategy
+
+**SPECIALIST ASSIGNMENT:**
+- Route work units to appropriate specialists based on domain expertise
+- Consider existing specialist capabilities before creating new ones
+- Design collaboration patterns between multiple specialists
+- Plan handoffs and integration points
+
+**ROUTING DECISIONS:**
+- **Single Specialist**: When work unit fits one domain clearly
+- **Multiple Specialists**: When work requires diverse expertise
+- **Sequential Routing**: When dependencies require ordered execution
+- **Parallel Routing**: When work units are independent
+
+**INTEGRATION PLANNING:**
+- Define interfaces between work units handled by different specialists
+- Plan synchronization points for dependent work streams
+- Design coordination mechanisms for complex multi-specialist tasks
+- Establish quality gates and handoff criteria
+
+## Coordination Framework
+
+**EXECUTION COORDINATION:**
+- Launch independent work streams simultaneously when possible
+- Monitor progress across all work units
+- Coordinate dependencies and integration points
+- Adjust routing and coordination based on execution results
+
+**INTEGRATION MANAGEMENT:**
+- Ensure work units integrate properly at planned interfaces
+- Coordinate timing of dependent work streams
+- Handle integration conflicts and compatibility issues
+- Maintain overall task coherence across multiple specialists
 
 ## Purpose
 Systematic approach to analyzing, planning, and executing tasks through intelligent decomposition and coordination.
