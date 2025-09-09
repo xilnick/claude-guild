@@ -1,219 +1,125 @@
-# Natural Workflow Orchestration
+# Workflow Orchestration Framework
 
 ## Purpose
-Enable Claude to naturally analyze, decompose, and execute tasks using native intelligence with autonomous execution and iterative verification.
+Systematic approach to analyzing, planning, and executing tasks through intelligent decomposition and coordination.
 
-## Core Workflow (AUTONOMOUS ITERATION)
+## Core Workflow Process
 
-<workflow>
-  <analyze>
-    AUTONOMOUS: Understand request through chain of thought analysis
-    - Apply systematic decomposition and intelligent understanding
-    - Report approach and proceed with autonomous execution
-  </analyze>
-  
-  <decompose>
-    MANDATORY: Identify parallel opportunities FIRST
-    - What can run simultaneously? (Default: everything)
-    - What requires coordination? (Minimize dependencies)
-    - Assume parallelization until proven otherwise
-  </decompose>
-  
-  <execute>
-    DEFAULT: Launch independent tasks simultaneously
-    - Create specialists in parallel batches (see agents.md)
-    - Sequential ONLY when dependencies block parallelization
-    - Batch tool calls for maximum efficiency
-  </execute>
-  
-  <verify>
-    AUTONOMOUS: Check and iterate with gap resolution
-    - Apply comprehensive verification (see verification.md) 
-    - Fix issues proactively and continue until excellence achieved
-  </verify>
-</workflow>
+**SEQUENTIAL PHASES:**
+1. **Analyze**: Understand requirements and success criteria
+2. **Decompose**: Break down into manageable work units  
+3. **Execute**: Implement solutions through coordinated specialists
+4. **Verify**: Ensure completeness and user satisfaction
 
-## Intelligent Analysis (AUTONOMOUS)
+**EXECUTION PRINCIPLES:**
+- Identify opportunities for parallel work streams
+- Minimize dependencies between work units
+- Coordinate integration points upfront
+- Iterate improvements based on verification results
 
-<intelligent_analysis>
-  Demonstrate understanding through execution approach:
-  "I'll [approach] by: [parallel components]. Proceeding with systematic execution."
-</intelligent_analysis>
+## Task Analysis
 
-## Decomposition & Execution (PARALLEL-FIRST)
+**UNDERSTANDING PHASE:**
+- Clarify requirements and constraints
+- Identify success criteria and deliverables
+- Assess complexity and resource needs
+- Plan execution approach and coordination strategy
 
-<parallel_framework>
-  **EXECUTION PIPELINE:**
-  0. **DISCOVER AGENTS**: Check available specialists BEFORE planning
-  1. **DECOMPOSE**: Break into parallel units, assign to best agents
-  2. **EXECUTE**: Launch specialists simultaneously, coordinate integration
-  
-  **PRINCIPLE:** Maximum parallelization through intelligent specialist routing
-</parallel_framework>
+**DECOMPOSITION STRATEGY:**
+- Break complex tasks into independent work units
+- Identify opportunities for parallel execution
+- Minimize dependencies between work streams  
+- Plan integration points and handoffs
 
-## Proactive Agent Discovery & Assignment (MANDATORY FIRST STEP)
+## Specialist Coordination
 
-<intelligence_routing>
-  **REFERENCE:** `@guideline/core/subagent-invocation.md` for detailed patterns
-  
-  **DISCOVERY & ASSIGNMENT SEQUENCE:**
-  1. **DISCOVER**: Scan available agents before task planning
-  2. **SCORE**: Rate agents 0-100 for task compatibility  
-  3. **ASSIGN**: Use best available agents (85-100 immediate, 70-84 adapted, <40 create new)
-  
-  **ASSIGNMENT PRIORITIES:**
-  - Prioritize reuse over creation
-  - Assign to optimal agents without hesitation  
-  - Document selection rationale
-  - Balance workload across agents
-  
-  **DEFAULT STRATEGY:**
-  Discover first → Assign to best → Create only as last resort
-</intelligence_routing>
+**DISCOVERY AND ASSIGNMENT:**
+1. **Assess Available**: Review existing specialists and capabilities
+2. **Match Requirements**: Score compatibility between needs and available options
+3. **Assign Optimally**: Use existing specialists when suitable, create new when needed
+4. **Coordinate Integration**: Design collaboration patterns and handoffs
 
-## Analysis Framework
-
-<analysis>
-  **AUTONOMOUS SEQUENCE:**
-  1. Understanding through systematic decomposition
-  2. Routing & decomposition simultaneously  
-  3. Parallel specialist creation (see agents.md)
-  4. Coordination & verification (see verification.md)
-</analysis>
+**EXECUTION COORDINATION:**
+- Launch independent work streams simultaneously when possible
+- Coordinate dependencies and integration points
+- Monitor progress and adjust coordination as needed
+- Ensure quality and completeness across all work streams
 
 ## Dependency Management
 
-<dependencies>
-  **CHALLENGE DEPENDENCIES:** Prove necessity - can it be mocked/stubbed? DEFAULT: No dependencies until proven.
-  
-  **TRUE BLOCKERS:** Core schema, authentication, base contracts
-  
-  **PARALLEL PATTERNS:** Files→Simultaneous, Layers→Parallel, Features→Concurrent, Docs/Tests→With implementation
-</dependencies>
+**DEPENDENCY ASSESSMENT:**
+- Challenge assumed dependencies - can work be done independently?
+- Identify true blockers that prevent parallel execution
+- Design coordination for necessary dependencies
+- Minimize sequential constraints where possible
 
-## Verification Integration
+**COMMON PATTERNS:**
+- **Independent Work**: Files, features, and components that can be developed simultaneously  
+- **Logical Dependencies**: Core foundations that must be established first
+- **Integration Points**: Planned synchronization and handoff moments
+- **Coordination Requirements**: Communication and alignment needs
 
-<verification>
-  **REFERENCE:** `@guideline/core/verification.md` for complete methodology
-  
-  **REQUIREMENTS:**
-  - Apply comprehensive verification after execution
-  - Fix issues through parallel remediation
-  - NO automatic report creation - verification stays in-memory
-  - User controls all file persistence
-  
-  **AGENT VERIFICATION:**
-  - Persistent: Use embedded patterns
-  - Dynamic: Apply systematic approaches
-  - Integration: Coordinate across all agents
-</verification>
+## Quality Integration
 
-## Specialist Creation Integration
+**VERIFICATION APPROACH:**
+- Apply systematic verification throughout execution
+- Coordinate verification across multiple work streams
+- Address issues promptly to maintain momentum
+- Ensure user satisfaction before considering work complete
 
-<specialist_integration>
-  **INTELLIGENCE SOURCES:**
-  - `@guideline/core/subagent-invocation.md`: Discovery & coordination patterns
-  - `@guideline/core/agents.md`: Creation methodology  
-  - `@guideline/core/verification.md`: Quality integration
-  
-  **CREATION PROCESS:**
-  1. **DISCOVER**: Check available agents first
-  2. **SCORE**: Apply selection system (85-100 reuse, <40 create)  
-  3. **CREATE**: Launch specialists for gaps only
-  4. **COORDINATE**: Enable organic collaboration
-  5. **VERIFY**: Integrate quality assurance
-</specialist_integration>
+**QUALITY MAINTENANCE:**
+- Follow established standards and best practices
+- Document work and decisions for future reference  
+- Learn from execution patterns to improve approaches
+- Maintain clean execution without unnecessary artifacts
 
-## Execution Framework
+## Error Handling
 
-<execution_framework>
-  **EXECUTION PHASES:**
-  
-  **Phase 0: DISCOVER & ASSIGN (MANDATORY)**
-  - Execute discovery protocol BEFORE task analysis  
-  - Score agents (0-100), assign to best available
-  - Create new agents ONLY when no suitable match (<40)
-  
-  **Phase 1: ANALYZE & PLAN**
-  - Assess remaining complexity and parallel opportunities
-  - Plan coordination between assigned and new specialists
-  
-  **Phase 2: EXECUTE & COORDINATE**
-  - Launch specialists with coordination design
-  - Integrate assigned agents with new specialists
-</execution_framework>
+**STRUCTURED APPROACH:**
+- Identify issues quickly through systematic checking
+- Document problems clearly with context and impact
+- Design targeted solutions that address root causes
+- Implement fixes and verify they resolve issues completely
 
-## Task Tool Standards
+**ERROR RESPONSE FORMAT:**
+```json
+{
+  "type": "workflow_error", 
+  "message": "Clear description of what failed",
+  "context": "Situational details and impact",
+  "suggestions": ["Solution approach 1", "Solution approach 2"],
+  "coordination": "Impact on other work streams"
+}
+```
 
-<task_tool_standards>
-  **DESCRIPTION REQUIREMENT:** 4 sentences mandatory (see `subagent-invocation.md`)
-  1. Specialized purpose and capabilities  
-  2. When to use vs other agents
-  3. Important limitations and boundaries
-  4. Expected outcomes and deliverables
-  
-  **CREATION TRIGGERS:** Domain expertise → Domain specialist, Parallel work → Work stream specialist, Coordination → Integration specialist, Analysis → Research specialist, QA → Verification specialist
-</task_tool_standards>
-
-## Parallel Execution (MANDATORY DEFAULT)
-
-<parallel_execution>
-  **PRE-EXECUTION:** Decompose → Challenge dependencies → Plan specialists → Design coordination
-  
-  **EXECUTION:** Launch simultaneously, batch tool calls, coordinate integration. Sequential ONLY for proven dependencies.
-</parallel_execution>
-
-## Error Handling Framework
-
-<error_handling>
-  **Structured Error Response:**
-  ```json
-  {
-    "type": "workflow_error",
-    "message": "Clear description of what failed",
-    "details": "Context and debugging information",
-    "suggestions": "Potential solutions or workarounds"
-  }
-  ```
-  
-  **Recovery Strategies:**
-  - **Immediate Retry**: Transient failures, network timeouts, resource conflicts
-  - **Modified Approach**: Adjust parameters, reduce scope, try alternative method
-  - **Escalation**: Create fix specialist (see agents.md), request user guidance, document blocker
-  
-  **Error Prevention:**
-  - Validate inputs before execution
-  - Check preconditions
-  - Test integration points early
-  - Include fallback approaches
-</error_handling>
-
-## Intelligence Usage Reporting
-
-<intelligence_usage_reporting>
-  **REFERENCES:** `@guideline/core/intelligence-metrics.md` + `@guideline/core/intelligence-tracker.md`
-  
-  **WORKFLOW REPORTING REQUIREMENTS:**
-  - [track-discovery] Agent discovery results and effectiveness
-  - [track-assignments] Assignment decisions with rationale  
-  - [track-utilization] Intelligence pattern usage and success
-  - [track-optimization] Performance improvements achieved
-  - [track-feedback] Insights for framework evolution
-</intelligence_usage_reporting>
+**RECOVERY STRATEGIES:**
+- **Immediate Retry**: For transient issues
+- **Alternative Approach**: When primary method fails  
+- **Coordination Adjustment**: For integration problems
+- **Specialist Support**: When specialized expertise needed
 
 ## Best Practices
 
-<best_practices>
-  **AGENT ASSIGNMENT:**
-  - Discover first, assign to best available (85-100), create only as last resort (<40)
-  - Document selections and optimize workload balance
-  
-  **EXECUTION:**
-  - Default to maximum parallelization, justify sequential execution
-  - Use 4-5 sentence specialist descriptions (see agents.md)
-  - Batch all tool calls for optimal performance
-  
-  **COORDINATION:**
-  - Challenge assumed dependencies, define integration upfront
-  - Plan error recovery across all parallel streams
-</best_practices>
+**SYSTEMATIC EXECUTION:**
+- Understand requirements thoroughly before beginning implementation
+- Break complex tasks into manageable, independent work units
+- Coordinate integration points and dependencies upfront
+- Monitor progress and adjust approach based on results
+
+**SPECIALIST COORDINATION:**
+- Assess available specialists before creating new ones
+- Document selection rationale and assignments clearly
+- Design coordination patterns that minimize conflicts
+- Enable organic collaboration while maintaining oversight
+
+**QUALITY FOCUS:**
+- Apply verification systematically throughout execution  
+- Address issues promptly to maintain momentum
+- Learn from patterns to improve future implementations
+- Ensure user satisfaction before considering work complete
+
+**EFFICIENT OPERATIONS:**
+- Default to parallel execution when work units are independent
+- Batch operations and tool calls for optimal performance
+- Challenge dependencies to maximize parallelization opportunities
+- Design recovery approaches for different types of failures

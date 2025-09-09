@@ -1,91 +1,83 @@
-# Template Usage Guidelines - Guild System
+# Template Usage Framework
 
 ## Purpose
-Clarifies when and how to use vs adapt templates, resolving the tension between "templates for consistency" and "creative problem-solving" in the Guild framework. Integrates with consolidated intelligence patterns from `@guideline/core/subagent-invocation.md` for agent template adaptation and `@guideline/core/intelligence-tracker.md` for template evolution monitoring.
+Define when to follow templates closely vs when to adapt them creatively, balancing consistency with contextual optimization.
 
-## Core Philosophy: Templates as Intelligence Enablers
+## Core Philosophy
 
-**Fundamental Principle**: Templates are scaffolding for intelligence, not cages for it.
+**Principle**: Templates are foundations for excellence, not limits on capability.
 
-- **Templates provide MINIMUM STANDARDS**, not maximum capabilities
-- **Intelligence EXCEEDS template baselines**, not just follows them
-- **Adaptation ENHANCES templates**, not abandons them
-- **Evolution IMPROVES templates** through intelligent insights
+- **Templates provide baseline standards** and proven approaches
+- **Intelligence optimizes and enhances** template applications
+- **Adaptation improves outcomes** while maintaining core value
+- **Evolution integrates learning** back into template improvements
 
-## Template Usage Decision Framework
+## Usage Decision Framework
 
-**USAGE SCENARIOS:**
-- [scenario-follow-closely] First-time tasks, risk management, team consistency, quality assurance → Templates as comprehensive checklists
-- [scenario-adapt-creatively] Unique contexts, performance optimization, integration challenges, innovation opportunities → Templates as foundation, enhance with adaptations  
-- [scenario-exceed-templates] Intelligence identifies gaps, creative solutions emerge, experience improvements, context enhancements → Templates as starting point, intelligence creates excellence
+**WHEN TO FOLLOW CLOSELY:**
+- First-time implementations of complex processes
+- High-risk situations requiring proven approaches
+- Team coordination needing consistency
+- Quality assurance requiring comprehensive coverage
 
-## Template Adaptation Patterns
+**WHEN TO ADAPT CREATIVELY:**
+- Unique contexts not fully covered by template
+- Performance optimization opportunities identified
+- Integration challenges requiring novel solutions
+- Innovation opportunities that enhance standard approaches
 
-**PROGRESSIVE ENHANCEMENT:**
-1. [enhance-establish-baseline] Complete template coverage and baseline metrics
-2. [enhance-analyze-context] Project requirements, constraints, opportunities
-3. [enhance-design-intelligence] Adaptations, solutions, optimizations, integration
-4. [enhance-validate-integrate] Meet requirements, test standards, document successes
+**WHEN TO EXCEED TEMPLATES:**
+- Intelligence identifies significant gaps in template coverage
+- Creative solutions emerge that improve on template outcomes
+- Context requires approaches beyond template scope
+- Experience suggests better methods than template provides
 
-**ADAPTATION CATEGORIES:**
-- [adapt-structural] Organization, flow, checkpoints, coordination patterns
-- [adapt-content] Domain requirements, quality criteria, verification techniques
-- [adapt-process] Workflows, protocols, resource utilization, error handling
-- [adapt-innovation] Best practices, tools, lessons learned, creative solutions
+## Adaptation Approach
 
-## Specialist Template Usage Guidelines
+**ENHANCEMENT PROCESS:**
+1. **Establish Baseline**: Ensure template requirements are met
+2. **Analyze Context**: Identify unique requirements and constraints  
+3. **Design Enhancements**: Create adaptations that improve outcomes
+4. **Validate Results**: Confirm enhancements meet quality standards
 
-**AGENT SELECTION INTEGRATION:** `@guideline/core/subagent-invocation.md`
-1. [specialist-execute-discovery] Discovery protocol for available persistent agents
-2. [specialist-apply-scoring] Determine optimal agent type (persistent vs dynamic vs hybrid)
-3. [specialist-adapt-context] Appropriate adaptation template based on scores
-4. [specialist-customize] Template customization within selected framework
+## Template Evolution
 
-**AGENT TYPE TEMPLATES:**
-- [template-persistent-85-100] Established templates + context adaptation + proven patterns
-- [template-dynamic-under-55] 4-sentence standard + Tool Use compliance + creative starting points
-- [template-hybrid-55-69] Combined templates + coordination patterns + integration bridges
-- [template-verification] Consolidated verification intelligence + agent-aware templates
+**CONTINUOUS IMPROVEMENT:**
+1. **Document Adaptations**: Record what worked well and what didn't
+2. **Analyze Patterns**: Identify common customization needs and successful approaches
+3. **Design Enhancements**: Create improvements that address frequent adaptation patterns  
+4. **Integrate Learning**: Update templates based on proven enhancements
 
-**CUSTOMIZATION LEVELS:**
-- [customize-level-1] Parameters, thresholds, timelines, formats
-- [customize-level-2] Workflows, specialized steps, coordination protocols
-- [customize-level-3] Organization redesign, hybrid approaches, innovative methodologies
+**INNOVATION CAPTURE:**
+- Systematically capture innovative solutions during implementation
+- Evaluate effectiveness, applicability, and safety of innovations
+- Integrate valuable innovations into template improvements
+- Maintain compatibility while expanding template capabilities
 
-## Template Evolution Framework
+## Quality Assurance
 
-**FEEDBACK INTEGRATION:** `@guideline/core/intelligence-tracker.md`
-1. [evolve-document-adaptations] Record adaptations, outcomes, patterns, stakeholder feedback
-2. [evolve-analyze-patterns] Common patterns, customization needs, effectiveness improvements
-3. [evolve-design-enhancements] Template improvements, intelligence insights, specialized variations
-4. [evolve-integrate-validate] Base template integration, pilot validation, broader adoption
+**MAINTAINING STANDARDS:**
+- Ensure template baseline requirements are always met
+- Validate that adaptations maintain or improve quality
+- Monitor effectiveness of adaptations vs standard approaches
+- Document lessons learned for future template evolution
 
-**INNOVATION INTEGRATION:**
-- [innovate-capture] Systematically capture innovative solutions during implementation
-- [innovate-evaluate] Effectiveness, applicability, safety standards, clear value
-- [innovate-implement] Preserve core value, optional enhancements, usage guidance, compatibility testing
+**BALANCED FLEXIBILITY:**
+- Use templates as foundations while enabling creative enhancement
+- Maintain safety and quality standards during adaptations
+- Preserve core value while allowing contextual optimization
+- Share successful innovations to benefit future implementations
 
-## Quality Assurance for Template Usage
+## Best Practices
 
-**STRUCTURED FLEXIBILITY:**
-- [qa-minimum-standards] Template requirements, safety standards, coordination compatibility, documentation
-- [qa-enhancement-validation] Baseline improvements, quality maintenance, effectiveness testing, pattern integration
-- [qa-continuous-metrics] Effectiveness tracking, quality measurement, coordination monitoring, stakeholder assessment
+**EFFECTIVE TEMPLATE USE:**
+- Start with template requirements as baseline
+- Adapt based on specific context and requirements
+- Document adaptations and their effectiveness  
+- Contribute improvements back to template evolution
 
-## Implementation Guidelines
-
-**PRACTICAL APPLICATION:**
-- [implement-specialist-creation] Template foundation → context analysis → design enhancements → validate → document
-- [implement-coordination] Baseline frameworks → adapt patterns → enhance protocols → optimize efficiency → share innovations
-- [implement-verification] Comprehensive templates → intelligent techniques → adapt criteria → innovative methods → contribute improvements
-
-## Success Criteria
-
-**EFFECTIVENESS METRICS:**
-- [success-baseline] Template requirements, safety standards, coordination compatibility, documentation
-- [success-enhancement] Adaptation improvements, quality enhancements, measurable value, pattern integration
-- [success-evolution] Template improvements, innovation patterns, intelligence integration, framework enhancement
-
----
-
-**Integration Note**: These Template Usage Guidelines resolve the "templates vs creativity" tension by positioning templates as enablers of intelligence rather than constraints on it. Templates provide reliable foundations, intelligence creates excellence beyond those foundations.
+**INNOVATION BALANCE:**
+- Respect proven approaches in templates
+- Enhance intelligently based on context
+- Test adaptations to ensure they improve outcomes
+- Share successful patterns with others

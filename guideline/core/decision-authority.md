@@ -1,111 +1,81 @@
-# Decision Authority Matrix - Guild System
+# Decision Authority Framework
 
 ## Purpose
-Establishes clear boundaries for autonomous implementation with intelligent analysis to enable seamless execution within the Guild framework. Integrates with consolidated intelligence monitoring through `@guideline/core/intelligence-tracker.md` for consistency validation and pattern evolution tracking.
+Define clear boundaries for autonomous execution vs user consultation to enable confident implementation while maintaining appropriate oversight.
 
-## Unified Philosophy: "Systematic Intelligence"
+## Core Philosophy
 
-**Core Principle**: Structure Enables Intelligence, Intelligence Optimizes Structure
+**Principle**: Balance autonomy with accountability
 
-- **Structure (Templates/Procedures)** ensures comprehensive coverage and reliability
-- **Intelligence (Adaptive Reasoning)** optimizes approaches and creates innovative solutions
-- **Decision Boundaries** prevent confusion while preserving both systematic rigor and creative flexibility
+- **Autonomous**: Technical implementation decisions within scope
+- **Collaborative**: Approach and coordination decisions  
+- **Consultative**: Scope changes and strategic directions
 
-## Decision Authority Hierarchy
+## Decision Authority Levels
 
-**AUTHORITY LEVELS:**
+**AUTONOMOUS (No Consultation Needed):**
+- Task understanding and requirements analysis
+- Technical implementation approach selection
+- Code/content creation within defined scope  
+- Quality verification and gap remediation
+- Error handling and recovery procedures
+- Specialist coordination and integration
 
-**LEVEL 1: AUTONOMOUS ANALYSIS (Intelligent Understanding)**
-- [autonomous-task-understanding] Intelligent interpretation, parallel decomposition, success criteria, architectural decisions
-- [autonomous-task-completion] Completion verification, scope adaptations, integration optimization, quality standards
-- [autonomous-critical-decisions] Understanding refinement, conflict resolution, gap remediation, work expansion
+**COLLABORATIVE (Explain Approach):**
+- Decomposition strategy and parallel work identification
+- Specialist creation and assignment decisions
+- Architecture and coordination design
+- Verification methodology selection
+- Timeline and resource management
 
-**LEVEL 2: STRUCTURAL FRAMEWORKS (Templates Provide Guidance)**
-- [structural-decomposition] Systematic decision tree, parallel-first analysis, dependency protocols, specialist identification
-- [structural-creation] Decision matrix patterns, coordination templates, 3-4 sentence descriptions, error handling
-- [structural-coordination] Integration checkpoints, handoff procedures, interface contracts, conflict mechanisms
-- [structural-verification] Verification checklists, parallel methodologies, gap detection, iteration protocols
+**CONSULTATIVE (User Approval Required):**
+- Scope modifications or expansions
+- Significant architectural changes
+- Additional features or integrations not requested
+- Resource-intensive operations
+- Strategic direction changes
 
-**LEVEL 3: AUTONOMOUS IMPLEMENTATION (Native Intelligence Decides)**
-- [autonomous-technical] Approaches within scope, creative solutions, optimizations, implementation choices
-- [autonomous-coordination] Communication tactics, efficiency improvements, conflict resolution, integration techniques
-- [autonomous-quality] Error recovery, quality improvements, testing approaches, documentation enhancement
-- [autonomous-process] Workflow efficiency, resource optimization, timeline management, risk mitigation
+## Decision Guidelines by Context
 
-**LEVEL 4: ADVISORY RECOMMENDATIONS (Intelligence Suggests, User Decides)**
-- [advisory-process] Template enhancements, protocol optimizations, methodology improvements, efficiency recommendations
-- [advisory-architecture] Additional specialists, integration improvements, scalability enhancements, performance recommendations
-- [advisory-scope] Value-add opportunities, quality improvements, feature enhancements, integration possibilities
-- [advisory-strategic] Lessons learned, best practices, risk patterns, innovation opportunities
+**PROJECT INITIATION:**
+- **Autonomous**: Analyze requirements, identify deliverables, plan execution approach
+- **Collaborative**: Explain decomposition strategy and specialist assignment plan  
+- **Consultative**: Confirm scope understanding and success criteria
 
-## Decision Matrix by Project Phase
+**EXECUTION:**
+- **Autonomous**: Implement within scope, coordinate specialists, handle technical issues
+- **Collaborative**: Report progress, explain coordination decisions
+- **Consultative**: Request guidance on scope questions or major blockers
 
-**PHASE AUTHORITY:**
+**COMPLETION:**
+- **Autonomous**: Verify completeness, remediate gaps, optimize quality
+- **Collaborative**: Report results and recommend improvements
+- **Consultative**: Confirm user satisfaction and delivery acceptance
 
-**UNDERSTANDING PHASE (Autonomous Intelligent Analysis)**
-- [phase-understanding-analysis] Task interpretation, scope determination, success criteria, parallel decomposition, architecture planning, integration strategy
-- [phase-understanding-preparation] Requirement analysis, constraint identification, risk assessment, resource optimization
+## Conflict Resolution
 
-**DECOMPOSITION PHASE (Structural Framework + Intelligence)**
-- [phase-decomposition-framework] Systematic methodology, parallel-first patterns, dependency protocols, specialist identification
-- [phase-decomposition-intelligence] Creative approaches, innovative parallelization, adaptive architecture, intelligent assessment
+**RESOLUTION PRIORITIES:**
+1. **Safety and Quality**: Never compromise core requirements
+2. **User Intent**: Honor the original request and objectives  
+3. **Scope Boundaries**: Work within defined parameters
+4. **Efficiency**: Optimize for best outcomes within constraints
 
-**EXECUTION PHASE (Primarily Autonomous)**
-- [phase-execution-implementation] Technical decisions, creative problem-solving, coordination tactics, quality enhancements
-- [phase-execution-resolution] Integration optimization, scope adaptation, resource optimization, quality enhancement
+**RESOLUTION APPROACH:**
+1. **Identify**: Clearly state the conflict and constraints
+2. **Analyze**: Consider alternative approaches and trade-offs
+3. **Recommend**: Propose solution with rationale
+4. **Escalate**: If unable to resolve, present options to user
 
-**VERIFICATION PHASE (Systematic + Adaptive)**
-- [phase-verification-systematic] Comprehensive checklists, cross-specialist detection, integration validation, compliance verification
-- [phase-verification-intelligent] Creative approaches, adaptive assessment, innovative testing, optimization evaluation
-- [phase-verification-autonomous] Gap remediation, quality enhancement, work expansion, completion verification
+## Best Practices
 
-## Template Usage Decision Framework
+**CLEAR COMMUNICATION:**
+- Explain reasoning for autonomous decisions when helpful
+- Report status and progress regularly during execution
+- Ask specific questions when needing user input
+- Document decisions and outcomes for learning
 
-**TEMPLATES AS ENABLERS:** `@guideline/core/template-usage.md`
-- [template-use-closely] First-time tasks, high-risk situations, team coordination, verification thoroughness
-- [template-adapt-creatively] Unique contexts, innovative improvements, integration challenges, performance optimizations
-- [template-exceed] Intelligence identifies opportunities, creative solutions emerge, comprehensive approaches needed, experience reveals limitations
-
-**KEY PRINCIPLE:** Templates are scaffolding for intelligence, not cages for it
-
-## Conflict Resolution Guidelines
-
-**PRIORITY ORDER:**
-1. [priority-safety] Safety and quality standards (never compromise)
-2. [priority-intelligent-analysis] Autonomous understanding and execution of user needs
-3. [priority-systematic-coverage] Comprehensive coverage of critical areas
-4. [priority-intelligence-optimization] Creative improvements through autonomous decision-making
-
-**AUTONOMOUS RESOLUTION PATH:**
-1. [resolve-within-constraints] Apply intelligence within structural constraints
-2. [resolve-adapt-structures] Adapt structures to enable better intelligent solutions
-3. [resolve-optimize-tradeoffs] Optimize trade-offs through intelligent analysis
-4. [resolve-document-evolution] Document lessons learned via `@guideline/core/intelligence-tracker.md`
-
-## Success Metrics
-
-**EFFECTIVENESS INDICATORS:** `@guideline/core/intelligence-tracker.md`
-
-**CLARITY METRICS:**
-- [metric-clarity] Reduced confusion, clear understanding, consistent decision-making, predictable escalation, intelligence pattern consistency
-
-**PERFORMANCE METRICS:**
-- [metric-performance] Systematic reliability, creative innovation, coordination efficiency, reduced delays, integration effectiveness
-
-**QUALITY METRICS:**
-- [metric-quality] Comprehensive coverage, intelligent optimization, consistent standards, continuous improvement, pattern evolution success
-
-**MONITORING INTEGRATION:** Tracked via intelligence-tracker.md dashboards, dependency matrices, and evolution frameworks
-
-## Implementation Guidelines
-
-**PRACTICAL APPLICATION:**
-- [implement-framework-users] Intelligent understanding analysis, systematic methodologies, intelligence optimization, progress reporting
-- [implement-specialists] Scope analysis, structural requirements, creativity within domain, boundary optimization
-- [implement-coordinators] Decision alignment, conflict resolution, adaptation documentation, reliability-innovation balance, consistency monitoring
-
-**INTEGRATION:** Via `@guideline/core/intelligence-tracker.md` for consistency validation and framework evolution
-
----
-
-**Integration Note**: This Decision Authority Matrix resolves the philosophical contradictions in the Guild framework by making structure and intelligence complementary rather than competing forces. Templates and procedures provide reliability foundations, while native intelligence creates excellence and innovation within those reliable boundaries.
+**CONFIDENT EXECUTION:**  
+- Act decisively within autonomous authority
+- Don't over-consult on routine implementation decisions
+- Focus user interaction on strategic and scope questions
+- Take ownership of technical and quality decisions
