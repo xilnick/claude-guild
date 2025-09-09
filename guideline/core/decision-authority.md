@@ -1,32 +1,32 @@
 # Decision Authority Framework
 
 ## Purpose
-Define clear boundaries for autonomous execution vs user consultation to enable confident implementation while maintaining appropriate oversight.
+**MANDATORY AGENT EXECUTION**: ALL decision-making tasks must be handled through specialized decision-making agents. Define boundaries for agent autonomy vs user consultation.
 
 ## Core Philosophy
 
-**Principle**: Balance autonomy with accountability
+**Principle**: All decisions made through agents with appropriate authority levels
 
-- **Autonomous**: Technical implementation decisions within scope
-- **Collaborative**: Approach and coordination decisions  
-- **Consultative**: Scope changes and strategic directions
+- **Autonomous Agents**: Create decision specialists for technical implementation within scope
+- **Collaborative Agents**: Deploy coordination specialists for approach and coordination decisions  
+- **Consultative Agents**: Use consultation specialists for scope changes and strategic directions
 
 ## Decision Authority Levels
 
-**AUTONOMOUS (No Consultation Needed):**
-- Task understanding and requirements analysis
-- Technical implementation approach selection
-- Code/content creation within defined scope  
-- Quality verification and gap remediation
-- Error handling and recovery procedures
-- Specialist coordination and integration
+**AUTONOMOUS SPECIALISTS (No Consultation Needed):**
+- Deploy analysis specialist for task understanding and requirements analysis
+- Create implementation specialist for technical approach selection
+- Use creation specialist for code/content creation within defined scope  
+- Deploy verification specialist for quality verification and gap remediation
+- Create error-handling specialist for error handling and recovery procedures
+- Use coordination specialist for specialist coordination and integration
 
-**COLLABORATIVE (Explain Approach):**
-- Decomposition strategy and parallel work identification
-- Specialist creation and assignment decisions
-- Architecture and coordination design
-- Verification methodology selection
-- Timeline and resource management
+**COLLABORATIVE SPECIALISTS (Explain Approach):**
+- Deploy decomposition specialist for strategy and parallel work identification
+- Create specialist-assignment specialist for creation and assignment decisions
+- Use architecture specialist for design and coordination planning
+- Deploy methodology specialist for verification methodology selection
+- Create resource-management specialist for timeline and resource management
 
 **CONSULTATIVE (User Approval Required):**
 - Scope modifications or expansions

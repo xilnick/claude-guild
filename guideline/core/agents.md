@@ -1,18 +1,18 @@
 # Agent Management Framework
 
 ## Purpose
-Determine when to create new specialists vs reuse existing ones through intelligent analysis and systematic coordination.
+**MANDATORY AGENT EXECUTION**: All tasks must be executed through agents. Determine specialist requirements and create comprehensive agent teams for complete task coverage.
 
 ## Agent Selection Strategy
 
-**CORE PRINCIPLE:** Discover first, create only when needed.
+**CORE PRINCIPLE:** Create agents for ALL tasks - research, implementation, verification, and coordination.
 
-**SELECTION PROCESS:**
-0. **Mandatory Discovery**: Scan `.claude/agents/guild/` for existing specialists first
-1. **Discover Available**: Scan for existing specialists with relevant capabilities
-2. **Score Compatibility**: Rate alignment (0-100) between need and available capabilities  
-3. **Make Decision**: Good+ match (60+) = adapt existing, Low match (<60) = create new, Document why existing can't be adapted
-4. **Coordinate Integration**: Design collaboration patterns between selected specialists
+**MANDATORY AGENT CREATION PROCESS:**
+1. **Task Analysis**: Deploy analysis specialist to break down task requirements
+2. **Agent Requirements**: Create specialist-design specialist to determine needed agent capabilities
+3. **Discovery Process**: Use existing-agent-scanner specialist to identify available specialists
+4. **Creation Decision**: Deploy agent-creation specialist to create new specialists for all task components
+5. **Integration Design**: Create coordination specialist to design collaboration patterns between all specialists
 
 ## Parallel Creation Framework
 
@@ -24,11 +24,13 @@ Determine when to create new specialists vs reuse existing ones through intellig
 
 ## Specialist Creation Standards
 
-**CREATION TRIGGERS:**
-- No existing specialist achieves 60+ compatibility after adaptation assessment
-- Novel requirements that existing specialists cannot be extended to handle
-- Documented analysis shows adaptation would be more complex than creation
-- Critical gaps that cannot be filled by adapting available specialists
+**MANDATORY CREATION REQUIREMENTS:**
+- ALL task components require dedicated specialists - no exceptions
+- Research work requires research specialists
+- Implementation work requires implementation specialists  
+- Verification work requires verification specialists
+- Coordination work requires coordination specialists
+- Analysis work requires analysis specialists
 
 **DESCRIPTION STANDARD (4 sentences):**
 1. **Purpose**: What this specialist does and unique capabilities

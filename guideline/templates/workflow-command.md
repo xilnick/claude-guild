@@ -174,7 +174,7 @@ MUST optimize all tool invocations for efficiency:
 - **Complexity Assessment**: Analyze scope to determine execution approach efficiency
 - **Benefit-Cost Analysis**: Weigh coordination benefits against overhead for each task
 - **Transparency Communication**: Explain decision reasoning to maintain user understanding
-- **Adaptive Execution**: Switch between direct execution and specialist coordination based on context
+- **Mandatory Agent Execution**: ALL tasks must be executed through agents - no direct execution allowed
 
 **Intelligence-Driven Discovery:**
 - Access specialist ecosystem intelligence to understand optimal coordination patterns  
@@ -276,22 +276,22 @@ MUST analyze every task for parallelization opportunities:
 </tool_batching>
 ```
 
-**Decision Examples:**
+**Agent-Mandatory Examples:**
 
-**Direct Execution (Simple Task):**
+**Simple Task (Agent Required):**
 ```
 User: "Fix the authentication bug in line 42"
-Assessment: Single file, single function, no dependencies
-Decision: Direct execution - coordination overhead exceeds benefits
-Action: Read file → Fix bug → Test → Verify → Complete
+Assessment: Single file bug - still requires specialist
+Decision: Create bug-fix specialist for targeted debugging
+Action: Deploy debug-specialist → Analyze issue → Implement fix → Verify → Complete
 ```
 
-**Specialist Creation (Complex Task):**
+**Complex Task (Specialist Team):**
 ```
 User: "Add user dashboard with analytics, notifications, and settings"
 Assessment: Multi-domain (UI, API, database, analytics)
-Decision: Create specialist team - parallel execution provides clear benefits
-Action: Create UI specialist + API specialist + Database specialist → Coordinate → Integrate
+Decision: Create comprehensive specialist team for parallel execution
+Action: Create UI specialist + API specialist + Database specialist + Analytics specialist → Coordinate → Integrate
 ```
 
 **Existing Specialist Usage:**
@@ -299,6 +299,8 @@ Action: Create UI specialist + API specialist + Database specialist → Coordina
 User: "Update authentication system"
 Assessment: Check .claude/agents/guild/ for existing auth specialists
 Found: security-specialist (compatibility: 85%)
+Decision: Adapt existing security-specialist for authentication updates
+Action: Enhance security-specialist → Execute via agent → Verify → Complete
 Decision: Adapt existing specialist - modification more efficient than creation
 Action: Enhance security-specialist → Execute → Verify
 ```

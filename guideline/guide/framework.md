@@ -16,7 +16,7 @@ The Guild system balances systematic methods with adaptive intelligence:
 **Clear boundaries resolve conflicts:**
 
 - **Structure Governs**: Safety standards, quality gates, coverage requirements
-- **Intelligence Governs**: Implementation approaches, problem-solving, optimization
+- **Intelligence Governs**: Agent selection, coordination strategies, specialist creation approaches
 - **User Decides**: Scope, priorities, trade-offs, satisfaction
 
 ## Core Principles
@@ -29,7 +29,7 @@ The Guild system balances systematic methods with adaptive intelligence:
 
 **Strategic Specialist Creation**: Create specialists when parallel benefits exceed coordination costs. Batch launches for efficiency.
 
-**Agent Selection Priority**: Prefer existing available agents over dynamic creation. Use dynamic specialist creation only as a fallback when no suitable existing agents can handle the task.
+**Agent-Mandatory Execution**: ALL tasks must be executed through agents. Direct execution is prohibited. Research, implementation, and verification must all be delegated to appropriate specialists.
 
 **Quality Standards**: Follow all Anthropic best practices from `recommendations.md`. Maintain project conventions and error handling.
 
@@ -39,38 +39,63 @@ The Guild system balances systematic methods with adaptive intelligence:
 
 **Impact Analysis**: Research all project locations where changes may be needed to ensure complete implementation without gaps. Map dependencies and affected areas.
 
+## Mandatory Agent Usage Protocol
+
+**NO DIRECT EXECUTION ALLOWED:**
+- Research tasks → Deploy research specialist
+- Implementation work → Create implementation specialist  
+- Verification tasks → Deploy verification specialist
+- Analysis work → Use analysis specialist
+- Coordination needs → Create coordination specialist
+
+**UNIVERSAL AGENT REQUIREMENT:**
+Every task component, regardless of complexity, must be handled by a dedicated specialist. This includes:
+- File reading and analysis
+- Code writing and modification
+- Testing and validation
+- Documentation creation
+- Error handling and debugging
+
+**AGENT-FIRST DECISION TREE:**
+1. Identify task requirements
+2. Create or select appropriate specialist
+3. Delegate complete responsibility to agent
+4. Coordinate between multiple specialists as needed
+5. Never bypass agent layer for direct execution
+
 ## Execution Flow
 
 ### Understanding Phase
-- Apply systematic analysis to clarify requirements
-- Research current versions, best practices, and security considerations
-- Identify all project areas affected by proposed changes
-- Identify scope and coordination needs
-- Confirm approach with user
+- Create research specialist to analyze requirements and clarify scope
+- Deploy analysis agent to research current versions, best practices, and security
+- Use discovery specialist to identify all affected project areas  
+- Coordinate specialist findings to determine coordination needs
+- Present consolidated analysis to user for confirmation
 
 ### Decomposition Phase  
-- Break tasks into atomic, parallelizable units
-- Map all affected project areas to prevent implementation gaps
-- Identify true dependencies vs assumed dependencies
-- Plan coordination interfaces where needed
-- Design specialist architecture for maximum efficiency
+- Deploy decomposition specialist to break tasks into atomic, parallelizable units
+- Create mapping agent to identify all affected project areas and prevent implementation gaps
+- Use analysis specialist to distinguish true dependencies from assumed dependencies
+- Design coordination specialists to manage interfaces between work streams
+- Architect specialist teams for maximum parallel efficiency
 
 ### Execution Phase
-- Launch specialists in parallel when beneficial
-- Provide comprehensive descriptions (3-4 sentences minimum)
-- Include error handling and gap detection
-- Monitor coordination points
+- Create execution specialists for all implementation work - no direct task execution allowed
+- Deploy coordination agent to manage parallel specialist launches and task routing
+- All specialists must have comprehensive descriptions (3-4 sentences minimum)
+- Create monitoring specialist to track coordination points and detect gaps
 
 ### Verification Phase
-- **Functional**: Requirements met, workflows working
-- **Integration**: Components communicate properly
-- **Quality**: Follows patterns, maintainable, proper error handling
-- **User Satisfaction**: Final authority for completion
+- Create verification specialists for all quality assurance tasks
+- **Functional Specialist**: Verify requirements met and workflows working
+- **Integration Specialist**: Ensure components communicate properly  
+- **Quality Specialist**: Confirm patterns followed, maintainability, error handling
+- **User Satisfaction Coordinator**: Gather feedback and confirm completion
 
 ### Iteration Phase
-- Continue until all verification passes and user satisfied
-- Fix gaps immediately and re-verify
-- Never consider work complete without user confirmation
+- Deploy iteration specialists to continue until all verification passes and user satisfied
+- Create gap-resolution agents to fix issues immediately and coordinate re-verification
+- Use completion specialist to ensure user confirmation before considering work complete
 
 ## Template Principles
 

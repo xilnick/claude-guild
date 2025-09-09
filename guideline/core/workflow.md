@@ -1,29 +1,29 @@
 # Task Workflow Framework
 
 ## Purpose
-Research, decompose, and route tasks to appropriate specialists through systematic analysis and intelligent coordination.
+**MANDATORY AGENT EXECUTION**: All research, decomposition, and task routing must be handled by dedicated specialists. No direct execution allowed.
 
-## Task Research Phase
+## Agent-Mandatory Research Phase
 
-**UNDERSTANDING REQUIREMENTS:**
-- Clarify user intent and desired outcomes
-- Identify success criteria and constraints  
-- Assess task complexity and scope
-- Determine resource and coordination needs
+**UNDERSTANDING REQUIREMENTS (via Research Specialist):**
+- Deploy requirements specialist to clarify user intent and desired outcomes
+- Create criteria specialist to identify success criteria and constraints  
+- Use assessment specialist to evaluate task complexity and scope
+- Coordinate resource specialist to determine coordination needs
 
-**RESEARCH STRATEGY:**
-- Ask clarifying questions when requirements are ambiguous
-- Break down vague requests into specific deliverables
-- Identify dependencies and integration requirements
-- Plan execution approach based on complexity assessment
+**RESEARCH STRATEGY (via Research Specialists):**
+- Deploy clarification specialist to ask clarifying questions when requirements are ambiguous
+- Create breakdown specialist to transform vague requests into specific deliverables
+- Use dependency specialist to identify dependencies and integration requirements
+- Coordinate planning specialist to design execution approach based on complexity assessment
 
-## Task Decomposition
+## Agent-Mandatory Task Decomposition
 
-**DECOMPOSITION PRINCIPLES:**
-- Break complex tasks into independent work units
-- Identify opportunities for parallel execution
-- Minimize dependencies between work units
-- Design clear interfaces between components
+**DECOMPOSITION PRINCIPLES (via Decomposition Specialists):**
+- Deploy task-breaking specialist to break complex tasks into independent work units
+- Create parallelization specialist to identify opportunities for parallel execution
+- Use dependency-minimization specialist to minimize dependencies between work units
+- Coordinate interface-design specialist to design clear interfaces between components
 
 **WORK UNIT CRITERIA:**
 - Each unit should have clear, measurable outcomes

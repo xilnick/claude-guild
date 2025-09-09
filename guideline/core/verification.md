@@ -1,16 +1,16 @@
 # Verification Framework
 
 ## Purpose
-Ensure task completion through systematic verification and iterative improvement until user satisfaction is achieved.
+**MANDATORY AGENT VERIFICATION**: ALL verification tasks must be executed through specialized verification agents. No direct verification allowed.
 
-## Core Verification Approach
+## Agent-Mandatory Verification Approach
 
-**SYSTEMATIC VERIFICATION:**
-- Confirm understanding before execution begins  
-- Check for implementation gaps and missing requirements
-- Validate integration points and coordination effectiveness
-- Iterate improvements until user satisfaction achieved
-- Never consider work complete without user confirmation
+**SYSTEMATIC VERIFICATION (via Verification Specialists):**
+- Deploy understanding-verification specialist to confirm requirements before execution begins  
+- Create gap-detection specialist to check for implementation gaps and missing requirements
+- Use integration-validation specialist to validate integration points and coordination effectiveness
+- Coordinate iteration specialists to improve until user satisfaction achieved
+- Use completion-verification specialist to ensure user confirmation before considering work complete
 
 ## Verification Domains
 
