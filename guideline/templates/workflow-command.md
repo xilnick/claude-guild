@@ -920,6 +920,117 @@ Execute tasks using Claude's native intelligence with **AUTONOMOUS** intelligent
   ```
 </coordination_templates>
 
+## Intelligence Usage Reporting Requirements
+
+<intelligence_usage_reporting_requirements>
+  **MANDATORY WORKFLOW COMMAND INTELLIGENCE DOCUMENTATION:**
+  
+  **Proactive Discovery & Assignment Intelligence Tracking:** `@guideline/core/intelligence-metrics.md` + `@guideline/core/intelligence-tracker.md`
+  ```yaml
+  discovery_execution_documentation:
+    session_intelligence_metadata:
+      session_id: "[unique session identifier for cross-command tracking]"
+      execution_timestamp: "[ISO timestamp when workflow executed]"
+      user_context: "[task context and requirements]"
+      setup_command_correlation: "[reference to setup session if applicable]"
+      
+    persistent_agent_discovery_results:
+      agents_discovered_count: "[total number of persistent agents found]"
+      discovery_execution_time: "[seconds for complete discovery protocol]"
+      metadata_quality_assessment: "[average metadata completeness 1-10 across discovered agents]"
+      domain_coverage_available: "[comprehensive list of domains with available agents]"
+      scoring_algorithm_effectiveness: "[accuracy of score predictions vs actual performance]"
+  ```
+  
+  **Agent Selection and Assignment Intelligence Documentation:**
+  ```yaml
+  proactive_assignment_documentation:
+    agent_selection_decisions:
+      - agent_selected: "[name of assigned agent]"
+        agent_type: "[persistent|dynamic]"
+        score_achieved: "[0-100 using systematic scoring system]"
+        assignment_strategy: "[direct_persistent|adapted_persistent|hybrid|dynamic_preferred|pure_dynamic]"
+        assignment_rationale: "[detailed explanation why this agent assigned]"
+        task_component: "[specific work component assigned]"
+        alternatives_considered: "[other agents evaluated with their scores]"
+        coordination_requirements: "[integration needs with other agents]"
+        
+    assignment_effectiveness_metrics:
+      successful_assignments: "[count and success rate percentage]"
+      immediate_deployment_rate: "[percentage assigned without hesitation to best available]"
+      context_adaptations_required: "[number needed and success rate of adaptations]"
+      coordination_complexity_handled: "[effectiveness of mixed agent type coordination]"
+      assignment_optimization_achieved: "[performance vs baseline or all-dynamic approach]"
+  ```
+  
+  **Intelligence Utilization Assessment:**
+  ```yaml
+  intelligence_consumption_effectiveness:
+    subagent_invocation_utilization:
+      discovery_protocol_effectiveness: "[how accurately discovery patterns executed]"
+      scoring_system_accuracy: "[correlation between predicted scores and actual performance]"
+      coordination_pattern_success: "[effectiveness of coordination templates and patterns]"
+      adaptation_template_utilization: "[success rate of context adaptations applied]"
+      hybrid_coordination_effectiveness: "[quality of persistent + dynamic integration]"
+      
+    workflow_intelligence_integration:
+      proactive_assignment_compliance: "[adherence to proactive assignment mandatory standards]"
+      parallel_execution_optimization: "[effectiveness of parallel coordination patterns]"
+      dependency_management_intelligence: "[smart dependency resolution using intelligence]"
+      verification_integration_quality: "[seamless verification coordination across agent types]"
+      
+    cross_command_intelligence_flow:
+      setup_intelligence_utilization: "[percentage of setup-created intelligence discovered and used]"
+      persistent_agent_discovery_success: "[rate of finding and effectively utilizing setup-created agents]"
+      coordination_continuity_achievement: "[seamless integration with setup-created patterns and templates]"
+      intelligence_handoff_effectiveness: "[quality of setup → workflow intelligence transfer and preservation]"
+  ```
+  
+  **Performance Optimization and Framework Evolution:**
+  ```yaml
+  optimization_achievement_documentation:
+    efficiency_improvements_realized:
+      discovery_vs_creation_time_savings: "[quantified time saved by discovering and using existing agents]"
+      parallel_execution_efficiency_achieved: "[actual vs theoretical parallelization accomplished]"
+      coordination_overhead_minimization: "[coordination efficiency metrics across mixed agent types]"
+      resource_utilization_optimization: "[optimal use of available persistent agents vs creation overhead]"
+      
+    quality_enhancements_achieved:
+      persistent_agent_quality_advantage: "[measurable quality difference vs pure dynamic creation]"
+      coordination_seamlessness_quality: "[integration quality across persistent and dynamic agent types]"
+      adaptation_success_rate_achieved: "[effectiveness of context adaptations across agent types]"
+      overall_workflow_quality_assessment: "[comprehensive quality rating 1-10 with specific metrics]"
+      
+    framework_evolution_contributions:
+      successful_pattern_discoveries: "[new workflow execution patterns that proved effective]"
+      coordination_innovations_developed: "[effective integration techniques discovered during execution]"
+      optimization_techniques_created: "[efficiency improvements developed and validated]"
+      intelligence_enhancement_opportunities: "[specific suggestions for framework improvement based on execution experience]"
+  ```
+  
+  **Feedback Loop and Continuous Improvement:**
+  ```yaml
+  continuous_improvement_feedback:
+    setup_command_optimization_insights:
+      agent_improvement_suggestions: "[specific enhancements needed for setup-created agents]"
+      metadata_enhancement_requirements: "[additional information needs for better discovery effectiveness]"
+      coordination_protocol_refinements: "[integration improvement opportunities for setup-workflow handoff]"
+      missing_capability_identification: "[domains requiring additional persistent agents for future setup]"
+      
+    framework_intelligence_enhancement_recommendations:
+      discovery_protocol_optimizations: "[improvements to discovery effectiveness and accuracy]"
+      scoring_algorithm_refinements: "[better score prediction approaches and correlation improvements]"
+      coordination_pattern_improvements: "[more effective coordination templates and integration patterns]"
+      adaptation_template_enhancements: "[better context adaptation approaches and success rates]"
+      
+    workflow_execution_intelligence_insights:
+      proactive_assignment_strategy_optimizations: "[improvements to assignment decision frameworks]"
+      parallel_execution_methodology_enhancements: "[better parallelization approaches and coordination]"
+      cross_agent_integration_effectiveness_improvements: "[smoother coordination across all agent types]"
+      verification_coordination_optimization_opportunities: "[better verification integration across mixed workflows]"
+  ```
+</intelligence_usage_reporting_requirements>
+
 ---
 
 **Intelligence Sources**: 

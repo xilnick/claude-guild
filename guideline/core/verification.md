@@ -22,89 +22,84 @@ Ensure tasks are completed correctly using Claude's natural verification abiliti
 <parallel_verification_methodology>
   **CONSOLIDATED VERIFICATION INTELLIGENCE:** `@guideline/core/subagent-invocation.md` + `@guideline/core/intelligence-tracker.md`
   
-  **MANDATORY PARALLEL DECOMPOSITION ACROSS AGENT TYPES:**
-  Identify verification domains with agent type considerations:
-  - **Functional**: Requirements implemented across persistent and dynamic agents
-  - **Integration**: Components connecting between mixed agent types (persistent + dynamic)
-  - **Quality**: Standards met across all agent types using unified description standards
-  - **Performance**: Acceptable performance across agent coordination and parallel execution
-  - **Security**: Safety maintained across agent interactions and coordination patterns
+  **VERIFICATION DOMAINS:**
+  - [verify-functional] Requirements across persistent and dynamic agents
+  - [verify-integration] Components connecting between mixed agent types
+  - [verify-quality] Standards across all agent types using unified description standards
+  - [verify-performance] Agent coordination and parallel execution effectiveness
+  - [verify-security] Agent interactions and coordination pattern safety
   
-  **ENHANCED PARALLEL EXECUTION STRATEGY:**
-  - **Batch A**: Functional + Integration verification specialists (cross-agent coordination validation)
-  - **Batch B**: Quality + Performance specialists (agent-specific quality and coordination efficiency)
-  - **Batch C**: Security + User acceptance specialists (agent interaction safety and satisfaction)
+  **PARALLEL EXECUTION BATCHES:**
+  - [batch-primary] Functional + Integration verification specialists
+  - [batch-quality] Quality + Performance specialists
+  - [batch-security] Security + User acceptance specialists
   
-  **AGENT-INTEGRATED VERIFICATION STREAMS:**
-  - **Functional**: Persistent agent capabilities + dynamic agent innovations + hybrid coordination effectiveness
-  - **Integration**: Agent coordination protocols + mixed agent type handoffs + intelligence handoff validation
-  - **Quality**: 4-sentence description compliance + Tool Use Implementation + coordination protocol quality
-  - **Performance**: Agent reuse optimization + coordination efficiency + parallel execution effectiveness
-  - **Security**: Agent interaction safety + coordination protocol security + intelligence preservation integrity
+  **AGENT-INTEGRATED STREAMS:**
+  - [stream-functional] Persistent capabilities + dynamic innovations + hybrid effectiveness
+  - [stream-integration] Coordination protocols + handoffs + intelligence validation
+  - [stream-quality] 4-sentence compliance + Tool Use Implementation + protocol quality
+  - [stream-performance] Agent reuse + coordination efficiency + parallel execution
+  - [stream-security] Interaction safety + protocol security + intelligence integrity
 </parallel_verification_methodology>
 
 ## Parallel Success Criteria
 
 <parallel_success_criteria>
-  **SUCCESS VALIDATION ACROSS STREAMS:**
-  Functional: All functionality implemented, user requirements satisfied, workflows complete, features working | Integration: Components integrated, data flows correct, no breaking changes, integration points tested | Quality: Code follows patterns, maintainable solution, proper error handling, complete documentation | Performance: Benchmarks met, resource usage optimized, scalability addressed, no regressions
+  **SUCCESS VALIDATION:**
+  - [success-functional] Functionality implemented, requirements satisfied, workflows complete
+  - [success-integration] Components integrated, data flows correct, integration points tested
+  - [success-quality] Code follows patterns, proper error handling, complete documentation
+  - [success-performance] Benchmarks met, resource optimized, scalability addressed
   
-  **COORDINATION APPROACH:** Run all streams simultaneously, aggregate results, identify conflicts/gaps, resolve through integrated remediation, achieve success across ALL streams before completion
+  **COORDINATION:** Run streams simultaneously → aggregate results → resolve conflicts → achieve success across ALL streams
 </parallel_success_criteria>
 
 ## Parallel Gap Detection
 
 <parallel_gap_detection>
-  **AGENT-AWARE GAP DETECTION METHODOLOGY:**
-  Decompose verification into parallel gap detection streams with agent type awareness:
-  1. Apply discovery protocol from `@guideline/core/subagent-invocation.md` for verification specialists
-  2. Create verification specialists using scoring system and appropriate templates
-  3. Execute simultaneous gap analysis across all agent types and coordination points
-  4. Aggregate findings with agent coordination context and intelligence integration
-  5. Create parallel remediation specialists using consolidated intelligence patterns
-  6. Coordinate correction efforts across mixed agent type workflows
+  **GAP DETECTION METHODOLOGY:**
+  1. [detect-apply-discovery] Use subagent-invocation.md discovery protocol for verification specialists
+  2. [detect-create-specialists] Apply scoring system and templates for verification agents
+  3. [detect-execute-analysis] Simultaneous gap analysis across agent types
+  4. [detect-aggregate-findings] Coordination context and intelligence integration
+  5. [detect-remediate] Create parallel remediation specialists using intelligence patterns
+  6. [detect-coordinate-corrections] Mixed agent type workflow corrections
   
-  **ENHANCED GAP PATTERNS:**
-  - **Functional**: Missing features across agent capabilities, workflow breaks in agent coordination, unmet requirements in persistent/dynamic integration
-  - **Integration**: Agent coordination failures, intelligence handoff issues, persistent-dynamic coordination problems, hybrid workflow integration gaps
-  - **Quality**: 4-sentence description standard violations, Tool Use Implementation non-compliance, coordination protocol quality issues
-  - **Performance**: Agent coordination inefficiencies, intelligence handoff bottlenecks, parallel execution optimization gaps, agent reuse suboptimization
-  - **Agent-Specific**: Persistent agent context adaptation failures, dynamic agent coordination gaps, hybrid workflow integration issues
+  **GAP PATTERNS:**
+  - [gap-functional] Missing features, workflow breaks, unmet requirements
+  - [gap-integration] Coordination failures, handoff issues, hybrid integration gaps
+  - [gap-quality] Description violations, Tool Use non-compliance, protocol issues
+  - [gap-performance] Coordination inefficiencies, handoff bottlenecks, optimization gaps
+  - [gap-agent-specific] Context adaptation failures, coordination gaps, integration issues
   
-  **INTELLIGENT REMEDIATION:** 
-  - Group gaps by independence and agent type compatibility
-  - Apply agent selection scoring for remediation specialists
-  - Use hybrid coordination when remediation spans multiple agent types
-  - Coordinate interdependent fixes across persistent and dynamic agents
-  - Execute remediation across all streams with agent-appropriate approaches
-  - Verify success using agent-integrated verification methodology
+  **INTELLIGENT REMEDIATION:**
+  - [remediate-group] Group by independence and agent type compatibility
+  - [remediate-score] Apply agent selection scoring for remediation specialists
+  - [remediate-coordinate] Hybrid coordination for multi-agent-type remediation
+  - [remediate-execute] All streams with agent-appropriate approaches
 </parallel_gap_detection>
 
 ## Integration Validation
 
 <integration_validation>
-  **AGENT-COORDINATION INTEGRATION STRATEGY:**
-  Decompose integration verification into parallel streams with agent coordination awareness:
-  1. Create integration verification specialists using `@guideline/core/subagent-invocation.md` patterns
-  2. Apply scoring system to determine optimal verification specialist mix (persistent + dynamic as needed)
-  3. Execute parallel testing across agent coordination points and intelligence handoff interfaces
-  4. Coordinate results across mixed agent type workflows and integration checkpoints
-  5. Identify conflicts in agent coordination and intelligence transfer patterns
-  6. Resolve through parallel remediation using hybrid coordination when needed
+  **INTEGRATION STRATEGY:** `@guideline/core/subagent-invocation.md`
+  1. [validate-create-specialists] Use subagent-invocation patterns for verification specialists
+  2. [validate-apply-scoring] Determine optimal specialist mix (persistent + dynamic)
+  3. [validate-execute-testing] Parallel testing across coordination points and interfaces
+  4. [validate-coordinate-results] Mixed agent workflows and integration checkpoints
+  5. [validate-resolve-conflicts] Hybrid coordination for remediation
   
-  **ENHANCED VALIDATION STREAMS:**
-  - **Agent Interface**: Persistent-persistent coordination, persistent-dynamic integration, dynamic-dynamic collaboration, hybrid workflow coordination
-  - **Intelligence Flow**: Context bridging validation, pattern reuse verification, expertise scaling confirmation, coordination continuity assessment
-  - **Workflow Integration**: Agent handoff protocols, mixed agent synchronization, intelligence transfer integrity, coordination protocol effectiveness
-  - **System Coordination**: Agent team performance, parallel execution effectiveness, coordination overhead optimization, agent reuse efficiency validation
+  **VALIDATION STREAMS:**
+  - [stream-agent-interface] Persistent-persistent, persistent-dynamic, hybrid coordination
+  - [stream-intelligence-flow] Context bridging, pattern reuse, expertise scaling
+  - [stream-workflow-integration] Handoff protocols, synchronization, transfer integrity
+  - [stream-system-coordination] Team performance, parallel effectiveness, optimization
   
-  **INTELLIGENT REMEDIATION INTEGRATION:**
-  - Identify integration issues across agent types and coordination patterns
-  - Group fixes by agent type compatibility and coordination requirements  
-  - Create parallel fix specialists using consolidated intelligence selection patterns
-  - Apply hybrid coordination for fixes spanning multiple agent types
-  - Execute remediation across integration streams with agent-appropriate coordination
-  - Verify integration success using agent-aware validation methodology
+  **REMEDIATION INTEGRATION:**
+  - [remediate-identify] Integration issues across agent types and patterns
+  - [remediate-group-fixes] By agent compatibility and coordination requirements
+  - [remediate-apply-hybrid] Hybrid coordination for multi-agent-type fixes
+  - [remediate-verify-success] Agent-aware validation methodology
 </integration_validation>
 
 ## Tool Use Implementation Requirements
@@ -112,71 +107,52 @@ Ensure tasks are completed correctly using Claude's natural verification abiliti
 <tool_use_requirements>
   **CONSOLIDATED TOOL USE INTELLIGENCE:** `@guideline/core/subagent-invocation.md`
   
-  **UNIFIED SPECIALIST DESCRIPTIONS (4 sentences MANDATORY):**
-  All verification specialists must follow the 4-sentence description standard:
-  1. **Specialized Purpose**: Primary verification function with Tool Use Implementation compliance
-  2. **Intelligent Coordination**: When to use vs other verification agents, coordination through adaptive reasoning
-  3. **Context Boundaries**: Important verification limitations, structured JSON error handling, domain boundaries
-  4. **Expected Outcomes**: Verification deliverables through context-aware decision making and integration with parallel verification specialists
+  **4-SENTENCE DESCRIPTION STANDARD (MANDATORY):**
+  1. [describe-specialized-purpose] Primary verification function with Tool Use Implementation compliance
+  2. [describe-intelligent-coordination] When to use vs other verification agents, adaptive reasoning
+  3. [describe-context-boundaries] Verification limitations, JSON error handling, domain boundaries
+  4. [describe-expected-outcomes] Deliverables through context-aware decision making and parallel integration
   
-  **ENHANCED ERROR FORMAT:**
-  ```json
-  {
-    "type": "verification_error",
-    "agent": "[verification-specialist-name]",
-    "error": {
-      "type": "[verification-category]",
-      "message": "Clear verification failure description",
-      "details": "Verification context and debugging info",
-      "suggestions": ["Recommended verification fixes", "Alternative verification approaches"]
-    },
-    "coordination": {
-      "affected_agents": ["agent-1", "agent-2"],
-      "verification_scope": ["verification-domain-1", "verification-domain-2"],
-      "recovery_protocol": "Coordination recovery steps for mixed agent verification workflows"
-    }
-  }
-  ```
+  **ERROR FORMAT:** `[template-verification-error-json]` with type, agent, error details, coordination context
   
-  **INTELLIGENT PARALLEL EXECUTION:**
-  - Apply discovery protocol from subagent-invocation.md for verification specialist selection
-  - Use scoring system to determine optimal verification specialist mix (persistent + dynamic as appropriate)
-  - Implement hybrid coordination for verification across mixed agent type workflows
-  - Batch verification specialists for simultaneous execution with agent-aware coordination
-  - Aggregate findings across agent types with coordination context integration
-  - Apply remediation using consolidated intelligence patterns for specialist selection
+  **PARALLEL EXECUTION:**
+  - [execute-discovery] Apply subagent-invocation discovery protocol for specialist selection
+  - [execute-scoring] Determine optimal verification specialist mix (persistent + dynamic)
+  - [execute-hybrid] Hybrid coordination for mixed agent type workflows
+  - [execute-batch] Simultaneous execution with agent-aware coordination
+  - [execute-aggregate] Findings across agent types with coordination context
+  - [execute-remediate] Consolidated intelligence patterns for specialist selection
 </tool_use_requirements>
 
 ## Best Practices
 
 <best_practices>
-  **CONSOLIDATED VERIFICATION EXCELLENCE:**
+  **VERIFICATION EXCELLENCE:**
   
-  **SYSTEMATIC AGENT-AWARE PARALLEL VERIFICATION:**
-  - Apply parallel methodology to ALL components across all agent types
-  - Execute discovery protocol from `@guideline/core/subagent-invocation.md` for verification specialist selection
-  - Verify through streams as work progresses with agent coordination awareness
-  - Test integration points across ALL domains including agent coordination checkpoints
-  - Use systematic decomposition approach integrating agent intelligence patterns
+  **SYSTEMATIC PARALLEL VERIFICATION:**
+  - [practice-apply-parallel] Parallel methodology across ALL components and agent types
+  - [practice-execute-discovery] Subagent-invocation discovery protocol for specialist selection
+  - [practice-verify-streams] Through streams with agent coordination awareness
+  - [practice-test-integration] ALL domains including agent coordination checkpoints
+  - [practice-systematic-decomposition] Integrating agent intelligence patterns
   
-  **INTELLIGENT EXECUTION OPTIMIZATION:**
-  - Apply agent scoring system for verification specialist selection (persistent vs dynamic vs hybrid)
-  - Create verification specialists using consolidated intelligence templates and adaptation patterns
-  - Batch verification activities for parallel efficiency with agent-appropriate coordination
-  - Design coordination architecture upfront considering mixed agent type workflows
-  - Leverage existing verification patterns from persistent agents while enabling dynamic innovation
-  - Continue iteration until explicit user confirmation with comprehensive agent coordination validation
+  **EXECUTION OPTIMIZATION:**
+  - [optimize-apply-scoring] Agent scoring system for verification specialist selection
+  - [optimize-create-specialists] Consolidated intelligence templates and adaptation patterns
+  - [optimize-batch-activities] Parallel efficiency with agent-appropriate coordination
+  - [optimize-design-architecture] Upfront coordination for mixed agent workflows
+  - [optimize-iterate] Until explicit user confirmation with coordination validation
   
-  **ENHANCED QUALITY INTEGRATION:** `@guideline/core/intelligence-tracker.md`
-  - Monitor verification consistency across all agent types and coordination patterns
-  - Track verification pattern evolution and integration effectiveness
-  - Ensure verification intelligence aligns with consolidated intelligence patterns
-  - Validate cross-module verification dependencies and reference integrity
+  **QUALITY INTEGRATION:** `@guideline/core/intelligence-tracker.md`
+  - [quality-monitor-consistency] Across agent types and coordination patterns
+  - [quality-track-evolution] Verification pattern evolution and effectiveness
+  - [quality-align-intelligence] With consolidated intelligence patterns
+  - [quality-validate-dependencies] Cross-module verification dependencies
   
-  **MANDATORY NO AUTO-PERSIST REQUIREMENT:**
-  - **VERIFICATION RESULTS IN-MEMORY ONLY**: All gap detection, analysis, and verification results kept in conversation
-  - **NO AUTOMATIC VERIFICATION REPORTS**: Never auto-create files for verification outputs unless explicitly requested
-  - **USER CONTROLS ALL FILE CREATION**: Only persist verification data when user specifically asks for it
-  - **CLEAN VERIFICATION EXECUTION**: Run all verification processes without creating unwanted filesystem artifacts
-  - **AGENT COORDINATION VERIFICATION**: Verify agent interactions and coordination without creating coordination artifacts
+  **NO AUTO-PERSIST (MANDATORY):**
+  - [no-persist-results] Verification results in-memory only
+  - [no-persist-reports] No automatic file creation unless requested
+  - [no-persist-user-control] User controls ALL file creation
+  - [no-persist-clean-execution] No unwanted filesystem artifacts
+  - [no-persist-coordination] Agent coordination verification without artifacts
 </best_practices>

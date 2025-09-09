@@ -955,6 +955,92 @@ Use Claude's native intelligence to analyze project needs and create a **compreh
   ```
 </proactive_examples>
 
+## Intelligence Reporting Requirements
+
+<intelligence_reporting_requirements>
+  **MANDATORY SETUP COMMAND INTELLIGENCE DOCUMENTATION:**
+  
+  **Session Intelligence Tracking:** `@guideline/core/intelligence-metrics.md` + `@guideline/core/intelligence-tracker.md`
+  ```yaml
+  session_documentation_requirements:
+    session_intelligence_metadata:
+      session_id: "[generate unique identifier for tracking]"
+      execution_timestamp: "[ISO timestamp when setup executed]"
+      user_context: "[project type, technology stack, domain focus]"
+      intelligence_sources_utilized: "[list which core modules referenced]"
+      
+    project_analysis_documentation:
+      technology_stack_analysis: "[detailed breakdown of tech components identified]"
+      domain_decomposition_results: "[list of capability domains discovered]"
+      parallel_opportunity_assessment: "[parallel agent deployment opportunities identified]"
+      coordination_complexity_evaluation: "[assessment of integration challenges and solutions]"
+  ```
+  
+  **Agent Creation Intelligence Documentation:**
+  ```yaml
+  per_agent_creation_reporting:
+    agent_intelligence_embedding:
+      agent_name: "[standardized naming: domain-function-version]"
+      domain_specialization: "[primary expertise area with specific focus]"
+      secondary_capabilities: "[additional competencies documented]"
+      scoring_compatibility: "[predicted score range for workflow discovery: 85-100|70-84|55-69|<40]"
+      coordination_protocols: "[embedded coordination patterns and templates]"
+      adaptation_level: "[high|medium|low context adaptation capability]"
+      metadata_completeness: "[percentage of required intelligence markers embedded]"
+      handoff_readiness: "[workflow discovery preparation quality rating 1-10]"
+      
+    quality_assurance_verification:
+      4_sentence_description_compliance: "[verification of standardized description structure]"
+      tool_use_implementation_integration: "[compliance markers and standards verification]"
+      error_handling_completeness: "[structured JSON error handling preparation]"
+      coordination_protocol_completeness: "[integration checkpoint and handoff definition]"
+      parallel_execution_readiness: "[coordination capability for parallel deployment]"
+  ```
+  
+  **Team Architecture Intelligence Documentation:**
+  ```yaml
+  agent_team_architecture_reporting:
+    team_composition_intelligence:
+      total_agents_created: "[number of agents in complete team]"
+      domain_coverage_achieved: "[comprehensive list of domains covered]"
+      coordination_architecture_design: "[team coordination structure and patterns]"
+      parallel_deployment_readiness: "[team readiness for simultaneous operation]"
+      integration_checkpoint_definition: "[defined integration points across team]"
+      
+    intelligence_handoff_preparation:
+      workflow_discovery_preparation_quality: "[team readiness for workflow command discovery 1-10]"
+      agent_metadata_embedding_completeness: "[average completeness across all agents]"
+      coordination_template_integration_depth: "[comprehensiveness of embedded patterns]"
+      context_adaptation_readiness_assessment: "[team flexibility for various contexts 1-10]"
+      
+    framework_evolution_contributions:
+      innovative_coordination_patterns_discovered: "[new team coordination approaches developed]"
+      domain_decomposition_insights: "[project analysis insights for framework improvement]"
+      agent_creation_optimizations: "[efficiency improvements in creation process]"
+      quality_enhancement_methodologies: "[quality improvements developed during creation]"
+  ```
+  
+  **Intelligence Evolution and Feedback:**
+  ```yaml
+  continuous_improvement_documentation:
+    framework_utilization_assessment:
+      subagent_invocation_pattern_utilization: "[how well discovery and scoring patterns used]"
+      verification_standard_integration_quality: "[compliance with verification requirements]"
+      intelligence_tracker_consistency_compliance: "[adherence to consistency monitoring]"
+      
+    workflow_optimization_preparation:
+      workflow_command_readiness: "[preparation for efficient workflow command utilization]"
+      persistent_agent_utilization_optimization: "[setup for maximum workflow reuse]"
+      intelligence_handoff_effectiveness: "[quality of setup → workflow intelligence transfer]"
+      
+    framework_enhancement_contributions:
+      setup_process_optimizations: "[improvements to setup command effectiveness]"
+      agent_creation_methodology_enhancements: "[better approaches to agent creation]"
+      team_coordination_innovations: "[new team coordination patterns discovered]"
+      quality_assurance_improvements: "[enhanced quality validation approaches]"
+  ```
+</intelligence_reporting_requirements>
+
 ---
 
 **Intelligence Sources**: 

@@ -268,6 +268,117 @@ Use Claude's native intelligence to determine when to create dynamic specialists
   - **CLEAN AGENT EXECUTION**: Agents run without creating unwanted filesystem artifacts
 </verification_integration>
 
+## Persistent Agent Creation Tracking
+
+<persistent_agent_creation_tracking>
+  **AGENT CREATION DOCUMENTATION:** `@guideline/core/intelligence-metrics.md` + `@guideline/core/intelligence-tracker.md`
+  
+  **AGENT CREATION REGISTRY:**
+  - [track-agent-identification] Name, ID, timestamp, context, creator session
+  - [track-capability-specification] Primary domain, coordination protocols, adaptation level
+  - [track-intelligence-embedding] Metadata completeness, scoring preparation, compliance verification
+  
+  **INTELLIGENCE HANDOFF PREPARATION:**
+  - [prepare-workflow-discovery] Embedded metadata quality, scoring compatibility, domain documentation
+  - [prepare-context-adaptation] Template preparation, variation handling, integration readiness
+  - [prepare-quality-assurance] Verification integration, error handling, success criteria embedding
+  
+  **CREATION QUALITY METRICS:**
+  - [assess-creation-effectiveness] Time efficiency, specification completeness, intelligence depth
+  - [assess-coordination-architecture] Parallel creation effectiveness, integration planning quality
+  - [assess-proactive-compliance] Parallel opportunity identification, batch coordination
+  
+  **UTILIZATION PREPARATION:**
+  - [optimize-reuse-design] Domain portability, adaptation flexibility, coordination scalability
+  - [ready-intelligence-evolution] Learning capability, pattern adaptation, metadata enhancement
+  - [prepare-cross-session-continuity] State preservation, pattern persistence, handoff optimization
+  
+  **CREATION SUCCESS VALIDATION:**
+  - [validate-immediate] Specification completeness, intelligence embedding, coordination readiness
+  - [validate-handoff-readiness] Discovery preparation, scoring compatibility, adaptation integration
+  - [validate-quality-assurance] Compliance verification, error handling, continuous improvement
+</persistent_agent_creation_tracking>
+
+## Agent Performance Tracking
+
+<agent_performance_tracking>
+  **PERSISTENT AGENT LIFECYCLE MONITORING:**
+  
+  **Performance History Documentation:**
+  ```yaml
+  agent_performance_registry:
+    utilization_tracking:
+      total_utilization_count: "[number of times agent used]"
+      utilization_sessions: "[list of session IDs where agent was used]"
+      utilization_frequency: "[average uses per time period]"
+      utilization_trend: "[increasing|stable|declining usage pattern]"
+      
+    performance_metrics:
+      average_score_achieved: "[typical scoring results when discovered]"
+      success_rate: "[percentage of successful task completions]"
+      quality_consistency: "[variance in quality outcomes 1-10]"
+      adaptation_success_rate: "[effectiveness of context adaptations]"
+      coordination_effectiveness: "[integration quality with other agents 1-10]"
+      
+    evolution_tracking:
+      performance_improvement_trend: "[quality progression over time]"
+      adaptation_capability_evolution: "[improvement in context handling]"
+      coordination_pattern_refinement: "[enhancement of integration patterns]"
+      metadata_optimization_history: "[improvements in embedded intelligence]"
+  ```
+  
+  **Agent Optimization Opportunities:**
+  ```yaml
+  optimization_identification:
+    performance_enhancement_candidates:
+      - agent_name: "[name]"
+        current_performance_baseline: "[current metrics and capabilities]"
+        enhancement_opportunities: "[specific improvement areas identified]"
+        estimated_impact: "[projected performance and quality gains]"
+        implementation_effort: "[complexity and resources required]"
+        optimization_priority: "[high|medium|low based on ROI analysis]"
+        
+    underutilization_analysis:
+      - agent_name: "[name]"
+        utilization_decline_pattern: "[usage trend and frequency analysis]"
+        utilization_barriers: "[factors preventing selection and use]"
+        improvement_recommendations: "[specific enhancements to increase utilization]"
+        retirement_consideration: "[analysis of whether agent should be retired]"
+        
+    coordination_optimization:
+      - coordination_pattern: "[type of coordination needing improvement]"
+        current_effectiveness: "[baseline coordination quality and efficiency]"
+        optimization_potential: "[areas for coordination enhancement]"
+        implementation_approach: "[specific steps for coordination improvement]"
+        expected_benefits: "[projected efficiency and quality gains]"
+  ```
+  
+  **Framework Contribution Tracking:**
+  ```yaml
+  framework_evolution_contributions:
+    successful_pattern_discoveries:
+      - pattern_discovered: "[new coordination or adaptation pattern]"
+        discovery_context: "[situation where pattern was discovered]"
+        effectiveness_validation: "[how pattern success was measured]"
+        replication_potential: "[applicability to other agents or contexts]"
+        framework_integration_opportunity: "[potential for standardization]"
+        
+    coordination_innovations:
+      - innovation_type: "[type of coordination improvement]"
+        innovation_description: "[specific improvement developed]"
+        effectiveness_measurement: "[quantified benefits achieved]"
+        adoption_potential: "[applicability across agent types]"
+        framework_enhancement_contribution: "[how it improves overall system]"
+        
+    quality_improvement_contributions:
+      - improvement_area: "[domain of quality enhancement]"
+        improvement_description: "[specific quality advancement achieved]"
+        measurement_approach: "[how improvement was validated]"
+        scalability_assessment: "[potential for broader application]"
+        framework_impact: "[contribution to overall framework quality]"
+  ```
+</agent_performance_tracking>
+
 ## Best Practices
 
 <best_practices>
@@ -287,98 +398,21 @@ Use Claude's native intelligence to determine when to create dynamic specialists
 ## Enhanced Examples with Persistent Agent Integration
 
 <examples>
-  **Enhanced Hybrid Authentication Example:** "Add authentication to API"
-  ```yaml
-  # AGENT DISCOVERY RESULTS:
-  # Found: existing-auth-specialist (score: 88, high domain match)
-  # Found: security-audit-specialist (score: 76, medium coordination match)
-  # Missing: Frontend integration, Modern framework adaptation
+  **TEMPLATE PATTERNS:**
   
-  # HYBRID BATCH DEPLOYMENT:
-  - subagent_type: "existing-auth-specialist"  # PERSISTENT AGENT
-    description: "Leveraging established authentication expertise with proven JWT implementation patterns and security coordination protocols. This specialist brings deep authentication domain mastery, established API security patterns, and seamless backend coordination for parallel execution. Expected to deliver exceptional authentication functionality through domain expertise while adapting to current tech stack requirements."
-    prompt: |
-      CONTEXT ADAPTATION FRAMEWORK:
-      - Current tech stack: [Node.js/Express/MongoDB]
-      - Integration requirements: [Frontend auth flows, API middleware]
-      - Coordination architecture: [Frontend specialist, Database specialist]
-      - Adaptive success criteria: [Modern auth patterns, mobile-ready implementation]
-      
-  - subagent_type: "security-audit-specialist"  # PERSISTENT AGENT  
-    description: "Adapting established security audit expertise to authentication implementation oversight with enhanced coordination for parallel development workflow. This specialist bridges proven security assessment patterns with novel authentication architecture through intelligent collaboration with implementation specialists."
-    prompt: |
-      ADAPTIVE BRIDGE FRAMEWORK:
-      - Core strength: Security vulnerability assessment and compliance
-      - Adaptation target: Real-time authentication implementation review
-      - Enhanced coordination: Parallel oversight with auth and frontend specialists
-      
-  - subagent_type: "general-purpose"  # DYNAMIC CREATION
-    description: "Frontend authentication integration specialist handling modern React patterns with seamless backend coordination. This specialist provides maximum flexibility for current frontend architecture while leveraging established auth patterns through intelligent collaboration with persistent authentication expert. Expected to deliver modern, user-friendly auth flows through creative adaptation of proven backend patterns."
-    
-  - subagent_type: "general-purpose"  # HYBRID COORDINATION
-    description: "Authentication workflow coordinator managing collaboration between persistent auth expert, security specialist, and dynamic frontend specialist. This coordinator bridges established authentication patterns with modern frontend requirements, facilitates knowledge transfer between agent types, and ensures seamless integration across the authentication system."
-  ```
+  **Authentication Implementation:**
+  - [example-discovery-results] Found persistent agents + missing capabilities
+  - [example-hybrid-deployment] Persistent auth + security specialists + dynamic frontend + hybrid coordination
+  - [example-context-adaptation] Tech stack adaptation framework + integration requirements
   
-  **Enhanced Code Quality Review Example:** "Comprehensive codebase quality assessment"
-  ```yaml  
-  # AGENT DISCOVERY RESULTS:
-  # Found: code-reviewer-agent (score: 92, excellent match for standards)
-  # Found: performance-audit-specialist (score: 81, good technical analysis match)
-  # Found: security-scanner-agent (score: 85, high security review match)
-  # Missing: Modern framework-specific patterns, Accessibility assessment
+  **Code Quality Review:**
+  - [example-persistent-first] Established code reviewer + performance + security specialists
+  - [example-dynamic-complement] Modern accessibility specialist for novel aspects
   
-  # PERSISTENT-FIRST BATCH DEPLOYMENT:
-  - subagent_type: "code-reviewer-agent"  # PERSISTENT AGENT
-    description: "Leveraging established code quality assessment expertise with proven review methodologies and comprehensive standards compliance protocols."
-    prompt: "Apply your established quality patterns to [specific codebase context] with focus on [current priorities]. Coordinate findings with performance and security specialists."
-    
-  - subagent_type: "performance-audit-specialist"  # PERSISTENT AGENT
-    description: "Utilizing proven performance analysis patterns adapted for current codebase architecture and technology stack."
-    
-  - subagent_type: "security-scanner-agent"  # PERSISTENT AGENT  
-    description: "Applying established security scanning methodologies with coordination across quality and performance review streams."
-    
-  - subagent_type: "general-purpose"  # DYNAMIC FOR NOVEL ASPECTS
-    description: "Modern framework accessibility specialist providing cutting-edge a11y assessment not covered by existing agents, with coordination across established quality review patterns."
-  ```
+  **User Management System:**
+  - [example-comprehensive-hybrid] 8 specialists (persistent foundation + dynamic modern features + coordination)
+  - [example-coordination-architecture] Parallel execution with integration checkpoints
   
-  **Advanced User Management Implementation:** "Complete user management system"
-  ```yaml
-  # COMPREHENSIVE AGENT DISCOVERY & HYBRID ARCHITECTURE:
-  # Persistent Agents Found: backend-api-specialist (90), database-schema-expert (87), testing-coordinator (82)
-  # Dynamic Needs: Modern frontend patterns, Advanced permissions, Real-time features
-  
-  # SIMULTANEOUS HYBRID DEPLOYMENT (8 specialists):
-  - subagent_type: "backend-api-specialist"     # PERSISTENT (CRUD operations)
-  - subagent_type: "database-schema-expert"    # PERSISTENT (User data modeling)  
-  - subagent_type: "testing-coordinator"       # PERSISTENT (Test strategy oversight)
-  - subagent_type: "general-purpose"           # DYNAMIC (Modern React UI patterns)
-  - subagent_type: "general-purpose"           # DYNAMIC (Advanced permission system)
-  - subagent_type: "general-purpose"           # DYNAMIC (Real-time user features)
-  - subagent_type: "general-purpose"           # DYNAMIC (Integration testing execution)
-  - subagent_type: "general-purpose"           # HYBRID COORDINATION (Persistent + Dynamic orchestration)
-  
-  # COORDINATION ARCHITECTURE:
-  # - Persistent agents provide domain expertise foundation
-  # - Dynamic agents handle novel/modern requirements  
-  # - Hybrid coordinator manages seamless integration
-  # - All specialists work in parallel with defined integration checkpoints
-  ```
-  
-  **Performance Comparison Example:**
-  ```markdown
-  ## Agent Selection Performance Impact
-  
-  **TRADITIONAL APPROACH (All Dynamic Creation):**
-  - 6 specialists × 30s creation overhead = 3 minutes setup time
-  - No domain expertise foundation = Higher implementation risk  
-  - No established coordination patterns = Higher integration overhead
-  
-  **ENHANCED HYBRID APPROACH (Persistent + Dynamic):**
-  - 3 persistent agents (instant deployment) + 3 dynamic specialists = 1.5 minutes setup time  
-  - Established domain expertise foundation = Lower implementation risk
-  - Proven coordination patterns + novel adaptation = Optimal integration efficiency
-  
-  **PERFORMANCE GAIN:** 50% faster deployment with higher quality and lower risk
-  ```
+  **Performance Impact:**
+  - [example-traditional-vs-hybrid] 50% faster deployment with higher quality through persistent + dynamic combination
 </examples>

@@ -282,6 +282,28 @@ The Guild system operates on **SYSTEMATIC INTELLIGENCE** - the unified principle
   </adaptive_specialist_creation_approach>
 </strategic_specialist_intelligence>
 
+## Framework Quality Standards
+
+<framework_quality>
+  <simplification_requirements>
+    **MANDATORY SIMPLIFICATION PRINCIPLES:**
+    - **Trust Native Intelligence**: Avoid over-specification - let intelligence interpret principles
+    - **Templates Only**: Examples must be simple templates without detailed implementations  
+    - **Essential Only**: Remove verbose YAML, detailed examples, and redundant specifications
+    - **Consistent Principles**: Core modules rely on concise patterns, not exhaustive documentation
+    - **Clean Intelligence**: Remove auto-generated reports and overly detailed frameworks
+  </simplification_requirements>
+  
+  <documentation_standards>
+    **CORE MODULE DOCUMENTATION REQUIREMENTS:**
+    - Keep principles concise and trust native intelligence for implementation
+    - Use simple template markers like `[track-metrics]` instead of verbose YAML examples
+    - Eliminate redundant sections and consolidate related concepts
+    - Focus on essential intelligence patterns, not comprehensive specifications
+    - Maintain cross-references but keep them lightweight and straightforward
+  </documentation_standards>
+</framework_quality>
+
 ## Tool Definition Requirements (From recommendations.md)
 
 <tool_definitions>
