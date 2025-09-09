@@ -253,27 +253,54 @@ MUST analyze every task for parallelization opportunities:
 
 ## Usage Examples
 
-**Intelligent Decision Examples:**
+**Tool Batching Examples:**
+
+**Research Phase:**
+```xml
+<tool_batching>
+  <!-- CORRECT: Batch all research operations -->
+  <invoke name="Read">files/[dependency-manifest]</invoke>
+  <invoke name="Read">files/src/[config-file]</invoke>
+  <invoke name="Glob">pattern="*.[test-pattern]"</invoke>
+  <invoke name="Grep">pattern="import.*from"</invoke>
+</tool_batching>
+```
+
+**Implementation Phase:**
+```xml
+<tool_batching>
+  <!-- CORRECT: Batch related file operations -->
+  <invoke name="Edit">file="src/[module-name].[ext]" changes="..."</invoke>
+  <invoke name="Edit">file="src/[module-name].[test-ext]" changes="..."</invoke>
+  <invoke name="Write">file="docs/auth.md" content="..."</invoke>
+</tool_batching>
+```
+
+**Decision Examples:**
 
 **Direct Execution (Simple Task):**
 ```
-User: "Fix the authentication bug"
-Claude: Analyzes complexity → Determines direct execution efficient → Implements fix → Verifies → Confirms
-Reasoning: Single-domain fix, coordination overhead exceeds benefits
+User: "Fix the authentication bug in line 42"
+Assessment: Single file, single function, no dependencies
+Decision: Direct execution - coordination overhead exceeds benefits
+Action: Read file → Fix bug → Test → Verify → Complete
 ```
 
 **Specialist Creation (Complex Task):**
 ```
-User: "Add user dashboard" 
-Claude: Analyzes scope → Plans parallel approach → Creates UI, API, data specialists → Coordinates parallel work → Integrates → Verifies → Confirms
-Reasoning: Multi-domain work, parallel execution provides clear benefits
+User: "Add user dashboard with analytics, notifications, and settings"
+Assessment: Multi-domain (UI, API, database, analytics)
+Decision: Create specialist team - parallel execution provides clear benefits
+Action: Create UI specialist + API specialist + Database specialist → Coordinate → Integrate
 ```
 
-**Conditional Specialist Usage:**
+**Existing Specialist Usage:**
 ```
-User: "Update user authentication system"
-Claude: Assesses complexity → Creates auth specialist if multi-component → Direct execution if single fix → Verifies → Confirms
-Decision factors: Scope analysis, existing specialist compatibility (60+ threshold), coordination vs execution efficiency
+User: "Update authentication system"
+Assessment: Check .claude/agents/guild/ for existing auth specialists
+Found: security-specialist (compatibility: 85%)
+Decision: Adapt existing specialist - modification more efficient than creation
+Action: Enhance security-specialist → Execute → Verify
 ```
 
 ## Success Criteria

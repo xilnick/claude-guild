@@ -28,21 +28,13 @@ Streamlined modules that guide Claude's native intelligence for task execution w
 - Clear confirmation vs autonomous execution boundaries
 - Conflict resolution and escalation protocols
 
-**template-usage.md** - Template adaptation guidelines
-- Templates as intelligence enablers, not constraints
-- Progressive enhancement methodology
-- Creative adaptation within structural safety
-
-**intelligence-boundaries.md** - Structure vs autonomy framework
-- Complementary intelligence layer operation
-- Collaborative decision zones and boundary management
-- Structure-intelligence integration protocols
-
 ## Consolidation Benefits
 
 **ELIMINATED REDUNDANCY:**
-- Removed unified-principles.md (85% overlap with other modules)
-- Removed user-adoption-analytics.md (excessive complexity overkill)
+- Removed intelligence-metrics.md (not implemented in install.js)
+- Removed intelligence-tracker.md (not implemented in install.js) 
+- Removed intelligence-boundaries.md (redundant with framework.md)
+- Removed template-usage.md (self-referential without practical value)
 - Eliminated circular cross-references creating dependency loops
 
 **ENHANCED FOCUS:**

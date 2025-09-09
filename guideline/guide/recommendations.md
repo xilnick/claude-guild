@@ -1,7 +1,8 @@
 # Guild System - Anthropic Best Practices & Recommendations
 
 ## Overview
-This document provides recommendations based on Anthropic's official best practices for working with Claude, specifically tailored for the Guild System's task execution architecture.
+
+This document provides Anthropic's official best practices for Claude implementation within the Guild System's systematic intelligence framework (see `framework.md`). These recommendations ensure reliable, high-quality task execution through proven techniques.
 
 ## Core Principles
 
@@ -110,15 +111,16 @@ This document provides recommendations based on Anthropic's official best practi
 
 ### 2. Dependency Management
 <dependency_recommendations>
-  **Chain Prompting for Complex Tasks:**
-  - Break into sequential subtasks
-  - Pass context between stages
-  - Verify each stage before proceeding
+  **Parallel-First Approach:**
+  - Identify truly independent components (default assumption)
+  - Launch simultaneously when coordination benefits exceed costs
+  - Plan integration points explicitly
+  - Use sequential execution only when dependencies require it
   
-  **Parallel Execution:**
-  - Identify truly independent components
-  - Launch simultaneously when safe
-  - Coordinate integration points explicitly
+  **Chain Prompting for Dependencies:**
+  - Break complex dependent work into stages
+  - Pass context between sequential stages
+  - Verify each stage before proceeding
 </dependency_recommendations>
 
 ### 3. Long Context Optimization
@@ -132,7 +134,7 @@ This document provides recommendations based on Anthropic's official best practi
   ```xml
   <project_context>
     <files>
-      <file path="src/main.ts">
+      <file path="src/[entrypoint]">
         {{CONTENT}}
       </file>
     </files>
@@ -147,31 +149,31 @@ This document provides recommendations based on Anthropic's official best practi
 
 ### 1. Success Criteria
 <success_definition>
-  **Measurable Criteria:**
-  - Task completed as requested
-  - All tests passing
-  - No breaking changes
-  - Performance acceptable
+  **Framework Alignment (per framework.md):**
+  - **Understanding Confirmed**: User approves scope and approach
+  - **Technical Complete**: All verification streams pass
+  - **User Satisfied**: Explicit approval received (final authority)
+  - **Quality Maintained**: Standards met throughout
   
-  **Quality Indicators:**
-  - Follows existing patterns
-  - Maintainable code
-  - Appropriate error handling
-  - Clear documentation
+  **Verification Streams:**
+  - **Functional**: Requirements met, workflows working
+  - **Integration**: Components communicate properly
+  - **Quality**: Follows patterns, maintainable, proper error handling
 </success_definition>
 
 ### 2. Verification Strategies
 <verification_approaches>
-  **Iterative Verification:**
-  1. Check completion of basic requirements
-  2. Verify integration points
-  3. Test edge cases
-  4. Review for quality and patterns
+  **Systematic Verification (per framework.md):**
+  1. **Functional Verification**: Check requirements completion
+  2. **Integration Verification**: Test component communication
+  3. **Quality Verification**: Review patterns and maintainability
+  4. **User Satisfaction**: Obtain explicit approval (final authority)
   
-  **Self-Correction:**
-  - Allow specialists to identify issues
-  - Create fix specialists when needed
-  - Verify fixes before proceeding
+  **Iterative Improvement:**
+  - Fix gaps immediately and re-verify
+  - Allow specialists to identify and resolve issues
+  - Continue until all verification passes and user satisfied
+  - Never consider work complete without user confirmation
 </verification_approaches>
 
 ### 3. Hallucination Prevention
@@ -268,16 +270,16 @@ This document provides recommendations based on Anthropic's official best practi
 ## Best Practices Summary
 
 <summary>
-  1. **Be Explicit**: Treat Claude like a new team member
-  2. **Use Structure**: XML tags improve accuracy
-  3. **Show Examples**: Multishot prompting enhances consistency
-  4. **Think Step-by-Step**: Chain of thought for complex tasks
-  5. **Break Down Tasks**: Chain prompting for workflows
-  6. **Ground in Reality**: Use actual files to prevent hallucinations
-  7. **Verify Iteratively**: Check work at each stage
-  8. **Optimize for Claude 4**: Leverage enhanced capabilities
+  1. **Be Explicit**: Provide clear context and instructions
+  2. **Use Structure**: XML tags improve accuracy and organization
+  3. **Think Step-by-Step**: Chain of thought for complex analysis
+  4. **Parallel-First**: Default to simultaneous execution when beneficial
+  5. **Ground in Reality**: Use actual project files to prevent hallucinations
+  6. **Verify Iteratively**: Check work systematically at each stage
+  7. **Allow Uncertainty**: Enable "I don't know" responses
+  8. **Show Examples**: Multishot prompting for consistency
   9. **Test Thoroughly**: Automated verification where possible
-  10. **Allow Uncertainty**: Let Claude say "I don't know"
+  10. **Follow Framework**: Align with systematic intelligence principles
 </summary>
 
 ## Anti-Patterns to Avoid
@@ -445,24 +447,28 @@ This document provides recommendations based on Anthropic's official best practi
 
 ### Guild System Tool Integration
 <guild_tool_integration>
-  **Task Tool Enhancement:**
-  - Apply 3-4 sentence description rule to all specialists
-  - Include clear success criteria in prompts
-  - Document specialist capabilities comprehensively
-  - Specify when to use each specialist type
+  **Specialist Creation Standards:**
+  - Use 3-4 sentence comprehensive descriptions
+  - Include clear success criteria and boundaries
+  - Document capabilities and limitations
+  - Specify appropriate usage contexts
   
-  **Parallel Specialist Execution:**
-  - Identify independent task components
-  - Launch specialists simultaneously when safe
-  - Coordinate integration points explicitly
-  - Batch results for efficient processing
+  **Systematic Intelligence Integration:**
+  - Apply parallel-first execution principles
+  - Launch specialists when coordination benefits exceed costs
+  - Plan integration points explicitly
+  - Batch independent operations for efficiency
   
-  **Error Recovery in Specialists:**
-  - Create fix specialists for issues
-  - Provide detailed error context
-  - Allow iterative refinement
-  - Verify fixes before proceeding
+  **Quality and Error Handling:**
+  - Include structured error responses in all specialists
+  - Enable iterative refinement and verification
+  - Verify fixes systematically before proceeding
+  - Maintain user satisfaction as final authority
 </guild_tool_integration>
+
+## Framework Integration
+
+These recommendations implement the systematic intelligence principles defined in `framework.md`. All Guild System implementations should follow both the framework structure and these detailed best practices for optimal results.
 
 ## References
 

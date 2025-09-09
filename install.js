@@ -167,7 +167,7 @@ async function generateCommand(type, coreModules, frameworkModule) {
   }
   
   // Core modules with essential patterns only
-  const essentialModules = ['workflow', 'agents', 'verification'];
+  const essentialModules = ['workflow', 'agents', 'verification', 'decision-authority'];
   essentialModules.forEach(moduleName => {
     if (coreModules[moduleName]) {
       embedded += `### ${moduleName} Module\n`;
