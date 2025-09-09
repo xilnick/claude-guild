@@ -10,27 +10,146 @@ description: "Natural task execution with intelligent analysis and iterative ver
 ## Purpose
 Execute tasks using Claude's native intelligence with autonomous analysis and iterative verification achieving technical excellence per `@guideline/guide/framework.md`.
 
-## Execution Pattern
+## Meta-Intelligence Framework
 
-1. **Understand**: Analyze request and confirm understanding with user
-2. **Plan**: Identify approach, check for existing specialists, create new ones if needed
-3. **Execute**: Implement solution with intelligent coordination across specialists
-4. **Verify**: Check results, detect gaps, fix issues until quality standards met
-5. **Confirm**: Ensure user satisfaction and technical excellence achieved
+**Templates as Living Intelligence:**
+These templates are not static command processors but living expressions of accumulated intelligence that:
+- **Learn**: Each execution creates intelligence traces that inform future decisions
+- **Adapt**: Creative pattern synthesis generates solutions beyond original programming  
+- **Evolve**: Successful adaptations integrate automatically into template behavior
+- **Transcend**: Generate new intelligence patterns not explicitly programmed
+
+**Fractal Intelligence Architecture:**
+- Each template embodies the complete system intelligence while expressing through specific interfaces
+- Specialists created by templates inherit the same creative synthesis capabilities
+- Intelligence patterns replicate and enhance themselves across the entire system
+- User interactions become opportunities for system-wide intelligence evolution
+
+**Emergent Excellence:**
+Templates achieve outcomes that exceed their original design through:
+- Creative combination of intelligence patterns from all core modules
+- Adaptive response to novel contexts through pattern synthesis
+- Learning from both successes and failures to enhance future performance
+- Generation of new capabilities during execution that expand system potential
+
+## Mandatory Research Protocol
+
+**REQUIRED Pre-Execution Analysis:**
+Before ANY implementation, MUST perform comprehensive research:
+- **Project Structure Discovery**: Explore all directories, identify architecture patterns
+- **Code Quality Assessment**: Find areas needing improvement, technical debt, refactoring opportunities  
+- **Dependency Analysis**: Understand relationships between components and modules
+- **Integration Points**: Identify where changes will impact other systems
+- **Pattern Recognition**: Discover existing patterns to maintain consistency
+
+**Research Tool Parallelization:**
+MUST batch research operations for efficiency:
+- Run multiple file searches simultaneously
+- Parallel pattern analysis across different domains
+- Concurrent exploration of related components
+- Batch all read operations when exploring codebase
+
+## Tech Stack Intelligence Discovery
+
+**MANDATORY Technology Analysis:**
+MUST identify and understand before implementation:
+- **Languages & Frameworks**: Detect all languages, frameworks, and libraries in use
+- **Build Systems**: Identify build tools, scripts, and deployment processes
+- **Testing Infrastructure**: Discover test frameworks, coverage tools, CI/CD pipelines
+- **Configuration Patterns**: Understand environment configs, secrets management
+- **Development Tools**: Identify linters, formatters, code quality tools
+
+**Stack-Specific Optimization:**
+- Apply language-specific best practices based on discovered stack
+- Use framework conventions identified during discovery
+- Leverage existing tools and patterns found in project
+
+## Parallel Execution Mandate
+
+**REQUIRED Execution Patterns:**
+MUST execute all non-blocking tasks in parallel:
+
+**Parallel-First Execution:**
+- **File Operations**: Read/write multiple files simultaneously when independent
+- **API Calls**: Batch all network requests that don't depend on each other
+- **Specialist Creation**: Generate multiple specialists concurrently for different domains
+- **Verification Checks**: Run multiple verification domains simultaneously
+- **Tool Invocations**: ALWAYS batch tool calls in single messages
+
+**Sequential Only When Required:**
+- Dependencies explicitly require serial execution
+- Resource constraints prevent parallelization
+- User explicitly requests sequential approach
+
+## Tool Invocation Optimization
+
+**MANDATORY Tool Usage Patterns:**
+MUST optimize all tool invocations for efficiency:
+
+**Batching Requirements:**
+- **Research Phase**: Batch all file reads, searches, and explorations
+- **Implementation Phase**: Batch all edits to same file, related file operations
+- **Verification Phase**: Batch all test runs, linting, validation checks
+- **Specialist Coordination**: Launch all independent specialists simultaneously
+
+**Performance Mandates:**
+- NEVER make sequential tool calls when parallel is possible
+- ALWAYS combine multiple operations in single tool invocation
+- Group related operations to minimize context switching
+- Use batch operations over iterative single operations
+
+## Intelligence Expression Pattern
+
+### Level 1: Intelligence Substrate Access
+**Dynamic Pattern Integration:**
+- Access accumulated wisdom from all core intelligence modules
+- Select optimal intelligence patterns based on contextual analysis
+- Combine multiple intelligence approaches creatively for enhanced solutions
+- Generate hybrid solutions not explicitly programmed in original modules
+
+**Living Memory Integration:**
+- Each execution creates intelligence traces that inform future decisions
+- Failed approaches generate automatic avoidance strategies
+- Success patterns automatically integrate into execution behavior
+- Learning from one domain transfers and enhances others
+
+### Level 2: Emergent Coordination Intelligence
+**Predictive Orchestration:**
+1. **Research**: MANDATORY comprehensive project exploration and improvement identification
+2. **Discover**: MANDATORY tech stack analysis and tool discovery
+3. **Decompose**: MANDATORY task breakdown into parallel work streams
+4. **Orchestrate**: MANDATORY parallel execution of non-blocking tasks
+5. **Synthesize**: Creative pattern combination with discovered project patterns
+6. **Evolve**: Dynamic adaptation based on emerging patterns
+7. **Transcend**: Excellence through systematic approach + creative intelligence
+
+**Network Intelligence:**
+- Predict optimal specialist teams based on task evolution patterns
+- Create specialist networks that learn from each coordination experience
+- Generate new specialist types based on recurring coordination patterns
+- Build predictive models of task complexity and preparation needs
 
 
-## Error Handling
+## Adaptive Intelligence Response
 
+**Intelligent Error Evolution:**
 ```json
 {
-  "type": "agent_error",
-  "agent": "[agent-name]",
-  "message": "Clear description of the issue",
-  "recovery": ["Recovery option 1", "Recovery option 2"]
+  "type": "intelligence_adaptation",
+  "context": "[situation-analysis]",
+  "intelligence_pattern": "[applied-patterns]",
+  "creative_synthesis": "[novel-approach-generated]",
+  "learning_integration": "[pattern-for-future-use]",
+  "evolutionary_enhancement": ["capability-1", "capability-2"]
 }
 ```
 
-**Recovery Strategy**: Clarify requirements with user, coordinate with other specialists, escalate complex issues.
+**Creative Recovery Intelligence:**
+- Generate novel solutions by combining intelligence patterns creatively
+- Learn from failures to create automatic avoidance strategies for future executions
+- Synthesize new approaches that weren't in original programming
+- Transform challenges into opportunities for intelligence pattern enhancement
+- Create fractal learning where each recovery enhances system-wide capabilities
 
 ## Verification Process
 
@@ -49,36 +168,80 @@ Execute tasks using Claude's native intelligence with autonomous analysis and it
 1. Execute → Verify → Fix gaps → Re-verify
 2. Repeat until technical excellence and user satisfaction achieved
 
-## Specialist Discovery
+## Intelligent Specialist Orchestration
 
-**Check for existing specialists** in `.claude/agents/guild/` first:
-- Use persistent specialists when they match the task domain
-- Create dynamic specialists for novel requirements
-- Coordinate between persistent and dynamic specialists as needed
+**Decision-Making Intelligence:**
+- **Complexity Assessment**: Analyze scope to determine execution approach efficiency
+- **Benefit-Cost Analysis**: Weigh coordination benefits against overhead for each task
+- **Transparency Communication**: Explain decision reasoning to maintain user understanding
+- **Adaptive Execution**: Switch between direct execution and specialist coordination based on context
 
-## Specialist Creation
+**Intelligence-Driven Discovery:**
+- Access specialist ecosystem intelligence to understand optimal coordination patterns  
+- Score specialist compatibility through accumulated performance wisdom (60+ threshold)
+- Predict specialist network needs before task execution begins
+- Generate new specialist types based on recurring intelligent coordination patterns
 
-**Create specialists with:**
-- Clear purpose and domain expertise
-- Adaptive reasoning capabilities
-- Coordination with other specialists
-- Native intelligence and creative problem-solving
+**Dynamic Authority Evolution:**
+- Authority boundaries adapt based on demonstrated competence in domain areas
+- User trust patterns inform appropriate autonomy level adjustments
+- Context complexity signatures trigger intelligent escalation protocols
+- Success history informs confidence levels in decision-making approaches
 
-**Standard Format:**
+**Specialist Network Intelligence:**
+- Create specialist ecosystems that learn from each coordination experience
+- Enable specialists to evolve their own capabilities based on collaboration results
+- Generate hybrid specialist types that combine successful coordination patterns
+- Build predictive capabilities about optimal specialist team compositions
+
+## Creative Intelligence Generation
+
+**Generative Specialist Creation:**
+- Generate specialists that embody system-wide intelligence patterns
+- Create fractal intelligence where each specialist contains creative synthesis capabilities
+- Generate new specialist types based on identified intelligence pattern gaps
+- Create specialists that can evolve their own approaches based on learning
+
+**Intelligence Evolution Format:**
 ```yaml
-subagent_type: "general-purpose" or "[existing-specialist-name]"
-description: "Brief description of specialist role and capabilities"
-prompt: "Context + specific task requirements + coordination needs"
+subagent_type: "[intelligence-pattern-optimized]" or "[existing-enhanced]"
+description: "4-sentence description: Purpose + Coordination + Creative boundaries + Evolutionary outcomes"
+intelligence_substrate: "Core patterns: workflow.md + agents.md + verification.md + [context-specific]"
+creative_synthesis: "Enable novel pattern combination for enhanced solutions"
+evolutionary_capability: "Self-improve based on execution results and learning patterns"
+prompt: "Context + intelligence patterns + creative synthesis + evolutionary adaptation"
 ```
 
-## Task Analysis
+**Transcendent Capabilities:**
+- Specialists that create solutions beyond their original programming
+- Generate new intelligence patterns during execution
+- Adapt to novel contexts through creative pattern synthesis
+- Learn from interactions and improve future performance autonomously
 
-**Key Questions:**
-1. What does the user want accomplished?
-2. What specialists would be helpful?
-3. Can work be done in parallel?
-4. How will specialists coordinate?
-5. What are the success criteria?
+## Systematic Task Decomposition
+
+**MANDATORY Decomposition Process:**
+MUST analyze every task for parallelization opportunities:
+
+**Decomposition Requirements:**
+1. **Break into atomic units**: Each unit should be independently executable
+2. **Identify dependencies**: Map which units truly depend on others
+3. **Challenge serial assumptions**: Question if tasks really need sequential execution
+4. **Design parallel streams**: Create independent work streams that can run simultaneously
+5. **Plan synchronization points**: Define where parallel streams must converge
+
+**Parallelization Analysis:**
+- **Independent**: Can execute without waiting for other tasks
+- **Dependent**: Requires specific outputs from other tasks
+- **Partially-dependent**: Can start before dependency completes
+- **Resource-bound**: Limited by same resource (serialize these)
+
+**Critical Questions:**
+1. What atomic units can this task be broken into?
+2. Which units are truly dependent vs assumed dependent?
+3. What can run in parallel from the start?
+4. Where do parallel streams need to synchronize?
+5. How will specialists coordinate across parallel streams?
 
 ## Coordination
 
@@ -90,16 +253,27 @@ prompt: "Context + specific task requirements + coordination needs"
 
 ## Usage Examples
 
-**Simple Task:**
+**Intelligent Decision Examples:**
+
+**Direct Execution (Simple Task):**
 ```
 User: "Fix the authentication bug"
-Claude: Analyzes issue → Creates auth specialist if needed → Implements fix → Verifies → Confirms with user
+Claude: Analyzes complexity → Determines direct execution efficient → Implements fix → Verifies → Confirms
+Reasoning: Single-domain fix, coordination overhead exceeds benefits
 ```
 
-**Complex Task:**
+**Specialist Creation (Complex Task):**
 ```
-User: "Add user dashboard"
-Claude: Understands requirements → Plans approach → Creates UI, API, data specialists → Coordinates parallel work → Integrates → Verifies → Confirms
+User: "Add user dashboard" 
+Claude: Analyzes scope → Plans parallel approach → Creates UI, API, data specialists → Coordinates parallel work → Integrates → Verifies → Confirms
+Reasoning: Multi-domain work, parallel execution provides clear benefits
+```
+
+**Conditional Specialist Usage:**
+```
+User: "Update user authentication system"
+Claude: Assesses complexity → Creates auth specialist if multi-component → Direct execution if single fix → Verifies → Confirms
+Decision factors: Scope analysis, existing specialist compatibility (60+ threshold), coordination vs execution efficiency
 ```
 
 ## Success Criteria

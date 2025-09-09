@@ -290,9 +290,46 @@ If gaps found or user not satisfied:
 - **Optimize complexity for value** → Guidance serves understanding, not procedural compliance
 - **Structure coordination, preserve intelligence** → Enable multi-agent work while preserving autonomy
 
-## Example Usage
+## Intelligent Decision Framework
 
+**Decision Transparency Pattern:**
+When making specialist creation decisions, provide brief reasoning:
+
+**Simple Task Pattern:**
+```
+"Using direct execution - single domain task, coordination overhead exceeds benefits"
+"Implementing directly - straightforward fix without coordination complexity"
+```
+
+**Complex Task Pattern:**
+```  
+"Creating specialists - multi-domain work benefits from parallel execution"
+"Using specialist network - coordination efficiency justifies overhead"
+```
+
+**Conditional Pattern:**
+```
+"Assessing complexity... determined [decision] based on [criteria]"
+"Evaluated scope: [analysis] → [execution approach] most efficient"
+```
+
+**Decision Criteria Communication:**
+- Scope complexity assessment
+- Parallel execution benefits vs coordination overhead
+- Existing specialist compatibility scores
+- Domain expertise acceleration potential
+
+## Decision Transparency Examples
+
+**Decision Process Demonstration:**
+
+**Complex Multi-Domain Task:**
 User: "Add authentication to my app"
+
+**Intelligence Assessment:**
+- Scope: Multi-domain (API + UI + Database + Testing + Documentation)
+- Complexity: High coordination benefits justify specialist approach
+- Decision: Create specialist network for parallel execution
 
 **Existing-First Analysis:**
 

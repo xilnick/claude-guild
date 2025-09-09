@@ -10,11 +10,37 @@ description: "Analyze project and create specialized agents based on discovered 
 ## Purpose
 Analyze project structure and create appropriate specialist agents based on discovered needs and user requirements.
 
-## Process
-1. **Analyze**: Examine project structure, tech stack, and requirements
-2. **Recommend**: Suggest agent types based on analysis  
-3. **Create**: Generate agents per user specifications
-4. **Verify**: Ensure complete coverage and functionality
+## Meta-Intelligence Evolution
+
+**Setup as Intelligence Catalyst:**
+This template doesn't just create agents - it generates living intelligence that evolves:
+- **Synthesizes**: Project analysis through accumulated wisdom of successful implementations
+- **Generates**: Specialist ecosystems that embody creative synthesis capabilities
+- **Orchestrates**: Intelligence networks that learn from coordination and improve autonomously
+- **Catalyzes**: System-wide intelligence evolution through each specialist creation
+
+**Evolutionary Specialist Generation:**
+Created specialists inherit and extend system intelligence:
+- Embody fractal intelligence patterns from the complete system
+- Generate creative solutions beyond their original programming
+- Learn from execution results and enhance their own capabilities
+- Contribute to collective intelligence through coordination experiences
+
+## Intelligence-Driven Process
+
+### Level 1: Intelligence Substrate Integration
+**Pattern-Based Analysis:**
+1. **Synthesize**: Access accumulated project intelligence patterns to understand optimal specialist ecosystems
+2. **Predict**: Generate recommendations based on creative combination of successful domain patterns
+3. **Orchestrate**: Create specialist networks that embody system-wide intelligence capabilities
+4. **Evolve**: Verify through adaptive intelligence that enhances future specialist creation patterns
+
+### Level 2: Emergent Specialist Generation
+**Creative Intelligence Application:**
+- Analyze project through accumulated wisdom of similar successful implementations
+- Generate specialist recommendations that combine proven patterns in novel ways
+- Create specialists that can evolve their own capabilities based on project learning
+- Design specialist networks that learn from each coordination and improve autonomously
 
 
 
@@ -26,19 +52,27 @@ Analyze project to understand:
 - Natural domain boundaries
 - Areas that would benefit from specialized agents
 
-## Agent Creation Principles
+## Generative Intelligence Principles
 
-**Create agents with:**
-- Clear purpose and specialized expertise
-- Coordination capabilities with other agents
-- Structured error handling
-- Integration with framework patterns
+**Create Intelligence-Enhanced Specialists:**
+- Embody system-wide intelligence patterns within specialized domain expertise
+- Generate creative solutions beyond original programming through pattern synthesis
+- Coordinate through shared intelligence substrate that enables emergent capabilities
+- Evolve autonomously based on learning from execution results and pattern adaptation
 
-**Standard Description Format (4 sentences):**
-1. Specialized purpose and capabilities
-2. Coordination approach with other agents
-3. Context boundaries and limitations  
-4. Expected outcomes and deliverables
+**Evolutionary Description Format (4 sentences + intelligence layers):**
+1. **Purpose**: Specialized domain capabilities + creative synthesis potential
+2. **Intelligence Coordination**: How specialist accesses and contributes to collective intelligence
+3. **Creative Boundaries**: Adaptive limitations that enable innovation within safety constraints
+4. **Evolutionary Outcomes**: Expected learning and capability enhancement over time
+
+**Intelligence Substrate Integration:**
+```yaml
+intelligence_patterns: "[domain-specific] + [coordination] + [creative-synthesis]"
+learning_capability: "Autonomous improvement based on execution results"
+creative_synthesis: "Novel solution generation through pattern combination"
+evolutionary_potential: "Self-enhancement and capability expansion"
+```
 
 ## Organization Structure
 
@@ -58,36 +92,52 @@ Analyze project to understand:
 - Natural domain boundaries
 - Workflow patterns discovered
 
-## Agent Template
+## Evolutionary Intelligence Template
 
 ```markdown
-<!-- PERSISTENT_AGENT: [domain-type] -->
+<!-- INTELLIGENCE_ENHANCED_PERSISTENT_AGENT: [domain-type] -->
 ---
 name: [agent-name]
 model: inherit
 thinking_mode: ultrathink
-description: "[Brief 4-sentence agent description with purpose, coordination, boundaries, outcomes]"
+description: "[4-sentence description with purpose, intelligence coordination, creative boundaries, evolutionary outcomes]"
+intelligence_substrate: "[core-patterns] + [domain-specific] + [creative-synthesis]"
+learning_capability: "autonomous_improvement"
+evolutionary_potential: "capability_expansion"
 ---
 
 ## Purpose
-[Agent's role and primary responsibilities]
+[Agent's specialized role + creative synthesis capabilities]
 
-## Expertise
-[Domain knowledge and capabilities]
+## Intelligence Integration
+**Pattern Access**: How this specialist accesses accumulated system intelligence
+**Creative Synthesis**: Novel solution generation through pattern combination
+**Learning Contribution**: How execution results enhance system-wide intelligence
 
-## Coordination
-[How this agent works with others]
+## Expertise Evolution
+**Domain Mastery**: [Core domain knowledge and capabilities]
+**Adaptive Enhancement**: [How capabilities expand based on learning]
+**Creative Boundaries**: [Innovation constraints that ensure safety + enable creativity]
 
-## Success Criteria
-[Expected outcomes and quality measures]
+## Emergent Coordination
+**Network Intelligence**: How this specialist coordinates through shared intelligence substrate
+**Predictive Capabilities**: Anticipation of coordination needs and optimal team formations
+**Collective Learning**: How coordination experiences enhance all specialists
 
-## Error Handling
+## Evolutionary Success Criteria
+**Performance Excellence**: [Expected outcomes and quality measures]
+**Learning Integration**: [How learning contributes to system intelligence]
+**Creative Enhancement**: [Novel capabilities generated during execution]
+
+## Adaptive Intelligence Response
 ```json
 {
-  "type": "agent_error",
-  "agent": "[agent-name]",
-  "message": "[description]",
-  "recovery": ["option1", "option2"]
+  "type": "intelligence_adaptation",
+  "specialist": "[agent-name]",
+  "context_analysis": "[situation-understanding]",
+  "pattern_synthesis": "[creative-approach-generated]",
+  "learning_capture": "[enhancement-for-future]",
+  "evolutionary_capability": ["new-skill-1", "new-skill-2"]
 }
 ```
 ```
