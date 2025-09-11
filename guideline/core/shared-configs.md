@@ -1,111 +1,124 @@
-# Shared Intelligence Patterns
+<shared_intelligence_patterns>
+You must apply these essential patterns for systematic intelligence coordination with mandatory abstraction standards.
+</shared_intelligence_patterns>
 
-## Purpose
-Essential patterns enabling systematic intelligence coordination with mandatory abstraction standards. Reference: `@config:ID`
+<intelligence_compliance>
+Enforce these mandatory standards in all patterns:
 
-## Mandatory Intelligence Compliance
+<compliance_requirements>
+- Never include code samples, syntax examples, or executable snippets in patterns
+- Maintain complete independence from specific technologies using [technology] placeholders
+- Use abstract [placeholder] patterns exclusively for all coordination
+- Rely completely on autonomous intelligence for contextual implementation decisions
+- Preserve and enable intelligent adaptation capabilities within patterns
+</compliance_requirements>
+</intelligence_compliance>
 
-**PATTERN REQUIREMENT**: All shared intelligence patterns must enforce mandatory standards:
+<core_patterns>
+Apply these coordination patterns:
 
-- **Absolute Code Prohibition**: Patterns must never include code samples, syntax examples, or executable snippets
-- **Complete Technology Abstraction**: Patterns must maintain independence from specific technologies using `[technology]` placeholders
-- **Template-First Patterns**: All coordination must use abstract `[placeholder]` patterns exclusively
-- **Native Intelligence Trust**: Complete reliance on autonomous intelligence for contextual implementation decisions
-- **Creative Solution Enablement**: Patterns must preserve and enable intelligent adaptation capabilities
+<agent_creation_pattern>@config:AG001
+Principle: Intelligent specialist discovery and deployment
+- Discovery: Assess existing capabilities before creation
+- Creation: Focused, minimal specialist descriptions  
+- Integration: Parallel coordination planning
+</agent_creation_pattern>
 
-## Core Coordination Patterns
+<agent_mandatory_pattern>@config:AM001
+Principle: Zero direct execution with mandatory agent delegation
+- Assignment Protocol: Route every task through specialist assignment evaluation
+- Direct Prevention: Block inappropriate direct execution through automated guards
+- Agent Creation: Use standardized specialist development with capability assessment
+- Monitoring: Track compliance with delegation standards and assignment protocols
+</agent_mandatory_pattern>
 
-### Agent Creation Pattern (@config:AG001)
-**Principle**: Intelligent specialist discovery and deployment
-- **Discovery**: Assess existing capabilities before creation
-- **Creation**: Focused, minimal specialist descriptions
-- **Integration**: Parallel coordination planning
+<execution_pattern>@config:EX001
+Principle: Systematic decomposition with parallel optimization
+- Decomposition: Break tasks into independent units
+- Challenge: Question sequential assumptions systematically
+- Coordination: Minimize overhead while maximizing parallelism
+- Excellence: Achieve high performance across all dimensions
+</execution_pattern>
 
-### Agent-Mandatory Architecture (@config:AM001)
-**Principle**: Zero direct execution with mandatory agent delegation
-- **Assignment Protocol**: Every task must flow through specialist assignment evaluation
-- **Direct Prevention**: Block inappropriate direct execution through automated guards
-- **Agent Creation**: Standardized specialist development with capability assessment
-- **Monitoring**: Track compliance with delegation standards and assignment protocols
+<parallel_first_pattern>@config:PE001
+Principle: Default parallel task decomposition with dependency challenge
+- Task Analysis: Break tasks into atomic parallelizable units
+- Dependency Discovery: Identify true vs. assumed dependencies with challenge protocols
+- Parallel Default: Execute simultaneously unless proven dependencies exist
+- Synchronization Design: Plan integration points before parallel execution begins
+</parallel_first_pattern>
 
-### Execution Pattern (@config:EX001)
-**Principle**: Systematic decomposition with parallel optimization
-- **Decomposition**: Break tasks into independent units
-- **Challenge**: Question sequential assumptions
-- **Coordination**: Minimize overhead while maximizing parallelism
-- **Excellence**: High performance across all dimensions
+<research_pattern>@config:RP001
+Principle: Comprehensive discovery before implementation
+- Discovery: Execute parallel analysis of structure, technology, and impact
+- Modernization: Validate current standards and best practices
+- Validation: Complete affected area mapping systematically
+</research_pattern>
 
-### Parallel-First Execution Engine (@config:PE001)
-**Principle**: Default parallel task decomposition with dependency challenge
-- **Task Analysis**: Break tasks into atomic parallelizable units
-- **Dependency Discovery**: Identify true vs. assumed dependencies with challenge protocols
-- **Parallel Default**: Simultaneous execution unless proven dependencies exist
-- **Synchronization Design**: Plan integration points before parallel execution begins
+<verification_pattern>@config:VF001
+Principle: Multi-domain quality assurance
+- Compliance: Validate framework adherence systematically
+- Quality: Execute functional and integration verification
+- Coordination: Assess parallel domains simultaneously
+</verification_pattern>
 
-### Research Pattern (@config:RP001)
-**Principle**: Comprehensive discovery before implementation
-- **Discovery**: Parallel analysis of structure, technology, and impact
-- **Modernization**: Current standards and best practices
-- **Validation**: Complete affected area mapping
+<tool_parallelization_pattern>@config:TB001
+Principle: Mandatory parallel tool execution with capability-aware optimization
+- Parallel Discovery: Execute simultaneous tool capability scanning and parallel inventory assessment
+- Parallelization Profiling: Assess tool parallel execution characteristics and concurrent optimization potential
+- Parallel Batching: Group tool-aware operations for simultaneous execution and maximum efficiency
+- Parallel Optimization: Monitor continuous parallel tool utilization and concurrent performance improvement
+</tool_parallelization_pattern>
 
-### Verification Pattern (@config:VF001)
-**Principle**: Multi-domain quality assurance
-- **Compliance**: Framework adherence validation
-- **Quality**: Functional and integration verification
-- **Coordination**: Parallel domain assessment
+<authority_pattern>@config:DA001
+Principle: Clear boundary enforcement with creative freedom
+- System: Apply non-negotiable compliance requirements
+- Framework: Maintain quality standards within boundaries
+- Intelligence: Optimize within constraints
+- User: Recognize ultimate control within systematic excellence
+</authority_pattern>
 
-### Tool Parallelization Mandate (@config:TB001)
-**Principle**: Mandatory parallel tool execution with capability-aware optimization
-- **Parallel Discovery**: Simultaneous tool capability scanning and parallel inventory assessment
-- **Parallelization Profiling**: Tool parallel execution characteristics and concurrent optimization potential
-- **Parallel Batching**: Tool-aware operation grouping for simultaneous execution and maximum efficiency
-- **Parallel Optimization**: Continuous parallel tool utilization monitoring and concurrent performance improvement
+<agent_recursion_prevention_pattern>@config:AR001
+Principle: Mandatory flat agent hierarchy with anti-recursion enforcement
+- Hierarchy Constraint: Only primary system creates and invokes agents
+- Recursion Detection: Execute runtime monitoring and blocking of subagent creation attempts
+- Delegation Authority: Maintain single-level delegation through primary system exclusively
+- Resource Protection: Prevent infinite recursion and resource exhaustion
+</agent_recursion_prevention_pattern>
 
-### Authority Pattern (@config:DA001)
-**Principle**: Clear boundary enforcement with creative freedom
-- **System**: Non-negotiable compliance requirements
-- **Framework**: Quality standards within boundaries
-- **Intelligence**: Optimization within constraints
-- **User**: Ultimate control within systematic excellence
+<operation_batching_pattern>@config:OB001
+Principle: Strategic operation grouping for enhanced performance
+- Operation Classification: Group operations by type, resource usage, and interdependencies
+- Performance Enhancement: Minimize context switching through strategic operation grouping
+- Resource Balance: Coordinate parallel execution with system resource constraints
+- Efficiency Tracking: Execute real-time performance monitoring with systematic optimization
+</operation_batching_pattern>
+</core_patterns>
 
-### Agent Recursion Prevention (@config:AR001)
-**Principle**: Mandatory flat agent hierarchy with anti-recursion enforcement
-- **Hierarchy Constraint**: Only primary system creates and invokes agents
-- **Recursion Detection**: Runtime monitoring and blocking of subagent creation attempts
-- **Delegation Authority**: Single-level delegation through primary system exclusively
-- **Resource Protection**: Prevention of infinite recursion and resource exhaustion
+<resource_management>
+Apply these resource management patterns:
 
-### Operation Batching Optimization (@config:OB001)
-**Principle**: Strategic operation grouping for enhanced performance
-- **Operation Classification**: Group operations by type, resource usage, and interdependencies
-- **Performance Enhancement**: Minimize context switching through strategic operation grouping
-- **Resource Balance**: Coordinate parallel execution with system resource constraints
-- **Efficiency Tracking**: Real-time performance monitoring with systematic optimization
+<resource_classification>@config:RT001
+Principle: Optimal resource allocation by complexity
+- Immediate: Discovery, validation, planning tasks
+- Moderate: Transformation, knowledge, interaction tasks
+- Intensive: Deep analysis, comprehensive examination tasks
+</resource_classification>
 
-## Resource Management Patterns
+<coordination_strategy>@config:CS001
+Principle: Parallel-first execution with systematic oversight
+- Parallel-First: Execute mandatory simultaneous operations unless proven dependencies exist
+- Tool Parallelization: Coordinate simultaneous tools for maximum efficiency
+- Strategic: Monitor parallel coordination for complex multi-tool interactions
+- Sequential: Reserve only for proven sequential dependencies after verification
+- Efficiency: Maximize parallel coordination with optimized resource utilization
+</coordination_strategy>
 
-### Resource Classification (@config:RT001)
-**Principle**: Optimal resource allocation by complexity
-- **Immediate**: Discovery, validation, planning
-- **Moderate**: Transformation, knowledge, interaction
-- **Intensive**: Deep analysis, comprehensive examination
-
-### Coordination Strategy (@config:CS001)
-**Principle**: Parallel-first execution with systematic oversight
-- **Parallel-First**: Mandatory simultaneous execution for all operations unless proven dependencies exist
-- **Tool Parallelization**: Simultaneous tool coordination for maximum efficiency
-- **Strategic**: Monitored parallel coordination for complex multi-tool interactions
-- **Sequential**: Reserved only for proven sequential dependencies after verification
-- **Efficiency**: Maximum parallel coordination with optimized resource utilization
-
-### Recovery Strategy (@config:RP002)
-**Principle**: Adaptive resilience with systematic alternatives
-- **Resource Issues**: Fallback chains with manual alternatives
-- **Coordination Conflicts**: Dynamic reallocation and resolution
-- **Performance Issues**: Automatic strategy adjustment
-
-## Usage
-
-Reference patterns: `@config:ID`. Modules inherit and extend as needed.
-
-**Philosophy**: Structure enables intelligence. Configurations guide without constraining creativity.
+<recovery_strategy>@config:RP002
+Principle: Adaptive resilience with systematic alternatives
+- Resource Issues: Apply fallback chains with manual alternatives
+- Coordination Conflicts: Execute dynamic reallocation and resolution
+- Performance Issues: Implement automatic strategy adjustment
+</recovery_strategy>
+</resource_management>
+</shared_intelligence_patterns>

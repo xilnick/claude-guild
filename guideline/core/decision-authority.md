@@ -1,119 +1,131 @@
-# Decision Authority
+<decision_authority_instructions>
+You must respect clear authority boundaries while enabling intelligent decision-making within systematic compliance and mandatory intelligence standards.
+</decision_authority_instructions>
 
-## Purpose
-Clear authority boundaries enabling intelligent decision-making within systematic compliance and mandatory intelligence standards.
+<authority_compliance>
+Enforce these mandatory intelligence standards in all decision-making:
 
-## Mandatory Intelligence Compliance
+<compliance_requirements>
+- Prohibit any code implementations, syntax examples, or executable snippets
+- Maintain complete abstraction from specific technologies using [placeholder] patterns only
+- Use abstract placeholder patterns exclusively for all guidance
+- Delegate completely to autonomous intelligence for implementation choices  
+- Preserve intelligent solution space within authority structures
+</compliance_requirements>
+</authority_compliance>
 
-**AUTHORITY REQUIREMENT**: All decision-making must enforce mandatory intelligence standards:
+<authority_framework>
+Follow this authority structure for decision-making:
 
-- **Code Sample Prevention**: Authority frameworks must prohibit any code implementations or executable examples
-- **Technology Independence**: Decision protocols must maintain complete abstraction from specific technologies
-- **Template-First Authority**: All guidance must use abstract `[placeholder]` patterns exclusively
-- **Native Intelligence Supremacy**: Complete delegation to autonomous intelligence for implementation choices
-- **Creative Freedom Protection**: Authority structures must preserve intelligent solution space
+<system_authority>
+Automated compliance with absolute precedence across all 6 framework dimensions.
 
-## Authority Framework
+<scope>Framework compliance requirements and systematic excellence standards</scope>
+<nature>Cannot be overridden - maintains systematic excellence across all dimensions</nature>
+</system_authority>
 
-### 1. System Enforcement Authority
-**Automated compliance with absolute precedence across all 6 dimensions.**
+<dimensional_governance>
+Apply authority levels within each framework dimension:
 
-**Scope:** Framework compliance requirements and systematic excellence standards
-**Nature:** Cannot be overridden - maintains systematic excellence across all dimensions
+<tool_parallelization_authority>
+<system_level>Mandatory parallel tool execution cannot be overridden</system_level>
+<framework_level>Tool capability assessment standards within parallel execution requirements</framework_level>
+<intelligence_level>Strategic tool coordination optimization within parallelization mandates</intelligence_level>
+<user_level>Tool selection preferences within mandatory parallelization constraints</user_level>
+</tool_parallelization_authority>
 
-### 2. Dimensional Governance Authority
+<agent_mandatory_authority>
+<system_level>Zero direct execution absolute enforcement cannot be overridden</system_level>
+<framework_level>Agent assignment protocol standards and specialist creation requirements</framework_level>
+<intelligence_level>Agent selection optimization and coordination strategies within delegation mandates</intelligence_level>
+<user_level>Specialist preferences and focus areas within mandatory agent delegation</user_level>
+</agent_mandatory_authority>
 
-#### Tool Parallelization Governance
-Reference: `@config:TB001` (Tool Parallelization Mandate)
-- **System Authority**: Mandatory parallel tool execution cannot be overridden
-- **Framework Authority**: Tool capability assessment standards within parallel execution requirements
-- **Intelligence Authority**: Strategic tool coordination optimization within parallelization mandates
-- **User Authority**: Tool selection preferences within mandatory parallelization constraints
+<parallel_first_authority>
+<system_level>Default parallel execution cannot be overridden unless dependencies proven</system_level>
+<framework_level>Task decomposition standards and dependency challenge protocols</framework_level>
+<intelligence_level>Parallel coordination optimization and synchronization strategies</intelligence_level>
+<user_level>Priority setting and trade-off decisions within parallel execution requirements</user_level>
+</parallel_first_authority>
 
-#### Agent-Mandatory Governance  
-Reference: `@config:AM001` (Agent-Mandatory Architecture)
-- **System Authority**: Zero direct execution absolute enforcement cannot be overridden
-- **Framework Authority**: Agent assignment protocol standards and specialist creation requirements
-- **Intelligence Authority**: Agent selection optimization and coordination strategies within delegation mandates
-- **User Authority**: Specialist preferences and focus areas within mandatory agent delegation
+<research_protocol_authority>
+<system_level>Comprehensive discovery before implementation cannot be overridden</system_level>
+<framework_level>Discovery completeness standards and modernization validation requirements</framework_level>
+<intelligence_level>Research strategy optimization and analysis approaches within discovery mandates</intelligence_level>
+<user_level>Research scope and depth preferences within mandatory discovery requirements</user_level>
+</research_protocol_authority>
 
-#### Parallel-First Governance
-Reference: `@config:PE001` (Parallel-First Execution Engine)
-- **System Authority**: Default parallel execution cannot be overridden unless dependencies proven
-- **Framework Authority**: Task decomposition standards and dependency challenge protocols
-- **Intelligence Authority**: Parallel coordination optimization and synchronization strategies
-- **User Authority**: Priority setting and trade-off decisions within parallel execution requirements
+<agent_recursion_prevention_authority>
+<system_level>Flat agent hierarchy absolute enforcement cannot be overridden</system_level>
+<framework_level>Single-level delegation standards and recursion detection protocols</framework_level>
+<intelligence_level>Agent coordination optimization within flat hierarchy constraints</intelligence_level>
+<user_level>Agent focus preferences within mandatory anti-recursion constraints</user_level>
+</agent_recursion_prevention_authority>
 
-#### Research Protocol Governance
-Reference: `@config:RP001` (Research Pattern)
-- **System Authority**: Comprehensive discovery before implementation cannot be overridden
-- **Framework Authority**: Discovery completeness standards and modernization validation requirements
-- **Intelligence Authority**: Research strategy optimization and analysis approaches within discovery mandates
-- **User Authority**: Research scope and depth preferences within mandatory discovery requirements
+<operation_batching_authority>
+<system_level>Strategic operation grouping requirements cannot be overridden</system_level>
+<framework_level>Batching efficiency standards and resource balance protocols</framework_level>
+<intelligence_level>Batching optimization strategies and performance enhancement approaches</intelligence_level>
+<user_level>Operation priorities and resource preferences within batching requirements</user_level>
+</operation_batching_authority>
+</dimensional_governance>
 
-#### Agent Recursion Prevention Governance
-Reference: `@config:AR001` (Agent Recursion Prevention)
-- **System Authority**: Flat agent hierarchy absolute enforcement cannot be overridden
-- **Framework Authority**: Single-level delegation standards and recursion detection protocols
-- **Intelligence Authority**: Agent coordination optimization within flat hierarchy constraints
-- **User Authority**: Agent focus preferences within mandatory anti-recursion constraints
+<user_authority>
+Recognize ultimate user control over scope, priorities, and satisfaction within dimensional compliance.
 
-#### Operation Batching Governance
-Reference: `@config:OB001` (Operation Batching Optimization)
-- **System Authority**: Strategic operation grouping requirements cannot be overridden
-- **Framework Authority**: Batching efficiency standards and resource balance protocols
-- **Intelligence Authority**: Batching optimization strategies and performance enhancement approaches
-- **User Authority**: Operation priorities and resource preferences within batching requirements
+<user_scope>Task definition, priority setting, trade-off decisions within all 6 dimensional constraints</user_scope>
+<framework_support>Provide analysis and recommendations across all dimensions to support user decisions</framework_support>
+</user_authority>
+</authority_framework>
 
-### 3. User Decision Authority
-**Ultimate control over scope, priorities, and satisfaction within dimensional compliance.**
+<conflict_resolution>
+Apply this 6-dimensional resolution framework for conflicts:
 
-**Scope:** Task definition, priority setting, trade-off decisions within all 6 dimensional constraints
-**Support:** Framework provides analysis and recommendations across all dimensions
+<resolution_hierarchy>
+1. System > Framework: System enforcement has absolute precedence across all 6 dimensions
+2. Framework > Intelligence: Dimensional governance boundaries constrain decisions  
+3. Intelligence > User: User authority operates within all dimensional compliance boundaries
+4. Compliance boundaries establish minimums across all dimensions, user decides within those boundaries
+</resolution_hierarchy>
 
-## Conflict Resolution
+<dimensional_conflict_resolution>
+- Inter-Dimensional Conflicts: System authority resolves conflicts between dimensional requirements
+- Intra-Dimensional Conflicts: Framework governance resolves conflicts within single dimensions  
+- Authority Level Conflicts: Resolution hierarchy applies within each dimensional context
+- User-Dimension Conflicts: User authority respected within dimensional compliance boundaries
+</dimensional_conflict_resolution>
 
-### 6-Dimensional Resolution Framework
-Reference: `@config:DA001` (Authority Pattern)
+<decision_support>
+Provide these decision support capabilities:
+- Automatic impact assessment across all 6 dimensions for multi-dimensional compliance analysis
+- Efficiency optimization within all dimensional boundaries for cross-dimensional performance
+- Creative solution alternatives achieving objectives within all 6 dimensional constraints
+- Clear escalation paths for dimensional conflict resolution
+</decision_support>
+</conflict_resolution>
 
-**Resolution Hierarchy:**
-1. **System > Framework**: System enforcement absolute precedence across all 6 dimensions
-2. **Framework > Intelligence**: Dimensional governance boundaries constrain decisions  
-3. **Intelligence > User**: User authority within all dimensional compliance boundaries
-4. **Compliance boundaries establish minimums across all dimensions, user decides within**
+<authority_integration>
+Integrate authority across all dimensions for collaborative excellence:
 
-**Dimensional Conflict Resolution:**
-- **Inter-Dimensional Conflicts**: System authority resolves conflicts between dimensional requirements
-- **Intra-Dimensional Conflicts**: Framework governance resolves conflicts within single dimensions
-- **Authority Level Conflicts**: Resolution hierarchy applies within each dimensional context
-- **User-Dimension Conflicts**: User authority respected within dimensional compliance boundaries
+<collaborative_excellence>
+- System: Non-negotiable compliance foundation across all 6 dimensions
+- Framework: Quality standards within all dimensional boundaries  
+- Intelligence: Optimization within all dimensional constraints
+- User: Ultimate control within complete 6-dimensional framework
+</collaborative_excellence>
 
-**Decision Support:**
-- **Multi-Dimensional Compliance Analysis**: Automatic impact assessment across all 6 dimensions
-- **Cross-Dimensional Performance Optimization**: Efficiency within all dimensional boundaries
-- **Dimensional Creative Alternatives**: Solutions achieving objectives within all 6 dimensional constraints
-- **Authority Escalation**: Clear escalation paths for dimensional conflict resolution
+<integration_patterns>
+- Cross-dimensional coordination with authority patterns working together across all dimensions
+- Integrated decision support with user decisions supported by all dimensional analysis
+- Unified compliance through single framework covering all 6 dimensions
+- Coordinated optimization with intelligence optimization across all dimensional boundaries
+</integration_patterns>
 
-## Authority Integration
-
-**6-Dimensional Collaborative Excellence:**
-- **System**: Non-negotiable compliance foundation across all 6 dimensions
-- **Framework**: Quality standards within all dimensional boundaries
-- **Intelligence**: Optimization within all dimensional constraints
-- **User**: Ultimate control within complete 6-dimensional framework
-
-**Dimensional Integration Patterns:**
-- **Cross-Dimensional Coordination**: Authority patterns work together across all dimensions
-- **Integrated Decision Support**: User decisions supported by all dimensional analysis
-- **Unified Compliance**: Single compliance framework covering all 6 dimensions
-- **Coordinated Optimization**: Intelligence optimization across all dimensional boundaries
-
-**Success Metrics:**
-- **100% Dimensional Boundary Compliance**: Clear authority respect across all 6 dimensions
-- **Cross-Dimensional User Satisfaction**: Quality decision support experience across all dimensions
-- **Multi-Dimensional Creative Innovation**: Solutions within all 6 dimensional constraints
-- **Authority Integration Effectiveness**: Seamless operation across all dimensional contexts
-
-## Philosophy
-
-**Authority enables intelligence. Clear boundaries optimize decision-making while maintaining systematic excellence.**
+<success_targets>
+☐ 100% dimensional boundary compliance with clear authority respect across all 6 dimensions
+☐ Cross-dimensional user satisfaction through quality decision support experience
+☐ Multi-dimensional creative innovation delivering solutions within all 6 dimensional constraints
+☐ Authority integration effectiveness ensuring seamless operation across all dimensional contexts
+</success_targets>
+</authority_integration>
+</decision_authority_instructions>

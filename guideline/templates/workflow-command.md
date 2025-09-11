@@ -7,94 +7,116 @@ thinking_mode: ultrathink
 description: "Natural [task-type] execution with intelligent analysis and iterative verification"
 ---
 
-## Purpose
-Execute [task-requirements] using systematic intelligence with specialist coordination and framework compliance.
+<task>
+You will execute the user's [task-requirements] through systematic specialist coordination and framework compliance. Analyze actual project conditions rather than making assumptions, and delegate all work through appropriate specialists while maintaining parallel execution patterns.
+</task>
 
-**PREREQUISITE**: Guild system must be initialized via `/guild:setup` command before workflow execution.
+<prerequisites>
+- Guild system must be initialized via `/guild:setup` command before execution
+- All work must flow through specialist delegation (zero direct execution)
+- Default to parallel tool execution unless dependencies proven
+- Analyze actual conditions rather than declaring predetermined approaches
+</prerequisites>
 
-## Mandatory Intelligence Compliance
+<compliance>
+You must adhere to these mandatory requirements:
 
-**TEMPLATE REQUIREMENT**: This template enforces mandatory intelligence standards:
+- Never include code implementations, syntax examples, or executable snippets
+- Use only abstract [placeholder] patterns, never specific technologies or frameworks  
+- Never create, invoke, or coordinate additional agents (maintain flat hierarchy)
+- Delegate all implementation decisions to specialist intelligence
+- Analyze actual project conditions rather than making predetermined assumptions
+- Enable creative solutions within structural guidance
+- Trust native intelligence for contextual implementations
+</compliance>
 
-- **Absolute Code Prohibition**: Template must never generate or include any code implementations, syntax examples, or executable snippets
-- **Complete Technology Independence**: Template uses only abstract `[technology]`, `[framework]`, `[tool]` placeholder patterns
-- **Template-First Execution**: All workflow patterns use abstract `[placeholder]` patterns exclusively without specific implementations
-- **Agent Anti-Recursion**: Template ensures flat agent hierarchy - only primary system creates or invokes agents
-- **Native Intelligence Authority**: Template delegates all implementation decisions to autonomous intelligence capabilities
-- **Creative Solution Enablement**: Template framework preserves intelligent adaptation while maintaining structural guidance
-- **Analysis-First Intelligence**: Template requires examining actual conditions through intelligence rather than predetermined assumptions or declarations
+<framework>
+Apply this 6-dimensional execution protocol:
 
-## Framework Compliance
+<tool_parallelization>
+Execute multiple tool operations simultaneously unless proven dependencies exist. Challenge assumptions about sequential requirements and default to parallel execution.
+</tool_parallelization>
 
-**Systematic Excellence Architecture:**
-Reference: `@config:TB001`, `@config:AM001`, `@config:PE001`, `@config:RP001`, `@config:AR001`, `@config:OB001`
+<agent_assignment>  
+Route all [task-type] work through appropriate specialist assignment. Never execute tasks directly - always delegate to suitable specialists.
+</agent_assignment>
 
-**6-Dimensional Execution Protocol:**
-1. **Tool Parallelization**: Execute simultaneous tool operations with dependency challenge protocols
-2. **Agent Assignment**: Route [task-type] through mandatory specialist assignment protocol with zero direct execution
-3. **Parallel Planning**: Apply parallel-first decomposition patterns for [task-components] using coordination strategies
-4. **Research Gates**: Complete comprehensive discovery requirements through systematic analysis before implementation
-5. **Recursion Prevention**: Maintain flat agent hierarchy with single-level delegation exclusively
-6. **Operation Batching**: Coordinate strategic operation grouping for enhanced performance and resource optimization
+<parallel_planning>
+Decompose [task-components] into parallelizable units using coordination strategies. Plan simultaneous execution streams with explicit integration points.
+</parallel_planning>
 
-## Specialist Orchestration
+<research_gates>
+Complete comprehensive discovery and analysis before implementation. Analyze actual project conditions, requirements, and constraints through systematic examination.
+</research_gates>
 
-**Systematic Specialist Creation:**
-Intelligent specialist creation with framework compliance integration and coordination optimization:
+<recursion_prevention>
+Maintain flat agent hierarchy with single-level delegation only. Never create or invoke additional agents beyond the primary system authority.
+</recursion_prevention>
 
-### Compliance-Driven Agent Factory
+<operation_batching>
+Group related operations strategically for enhanced performance and resource optimization. Coordinate batch execution across domains.
+</operation_batching>
+</framework>
 
-**Excellence Integration:**
-Reference: `@config:AG001` (Agent Creation Pattern), `@config:AM001` (Agent-Mandatory Architecture), `@config:TB001` (Tool Parallelization Mandate), `@config:CS001` (Coordination Strategy)
+<specialist_orchestration>
+Create and coordinate specialists through systematic analysis and framework compliance:
 
-**Enhanced Creation Standards:**
-- **Tool Parallelization Excellence**: All specialists optimized for mandatory parallel tool execution
-- **Agent-Mandatory Excellence**: All specialists designed for zero direct execution with systematic delegation
-- **Parallel-First Optimization**: All specialists optimized for task decomposition and coordination excellence
-- **Research Protocol Integration**: All specialists aligned with comprehensive discovery patterns
-- **Recursion Prevention Excellence**: All specialists constrained to prevent agent creation or invocation
-- **Operation Batching Excellence**: All specialists designed for strategic operation grouping and resource optimization
-- **Recovery-Integrated Design**: All specialists equipped with automatic failure recovery mechanisms
-- **Dimensional Compliance**: All specialists aligned across all 6 framework dimensions
+<agent_creation>
+When creating specialists, ensure they meet these standards:
+- Optimized for parallel tool execution and batching operations
+- Designed for zero direct execution with systematic delegation
+- Aligned with comprehensive discovery and analysis patterns  
+- Constrained to prevent agent creation or invocation (flat hierarchy)
+- Equipped with automatic failure recovery and error handling
+- Compliant across all 6 framework dimensions
+</agent_creation>
 
-**Agent Creation Pattern:**
-Reference: `@config:AG001` (Agent Creation Pattern), `@config:AM001` (Agent-Mandatory Architecture), `@config:TB001` (Tool Parallelization Mandate), `@config:AR001` (Agent Recursion Prevention)
+<specialist_template>
+Use this template when creating specialists:
+
 ```xml
-<specialist_prompt>
-Handle [domain] requirements using [approach] with systematic coordination for [integration-points]. 
-Implement [framework-compliance] while achieving excellence standards and maintaining [quality-standards]. 
-Leverage [coordination-patterns] for optimal parallel execution with [performance-profiles].
-Monitor [performance-metrics] with escalation for [boundary-conditions].
-Deliver [expected-outcomes] through intelligent coordination with verification for [success-criteria].
-Apply [recovery-patterns] for robust error handling and automatic failure recovery.
+<specialist_instructions>
+<domain>[domain]</domain>
+<approach>[approach]</approach>  
+<integration_points>[integration-points]</integration_points>
+<quality_standards>[quality-standards]</quality_standards>
+<coordination_patterns>[coordination-patterns]</coordination_patterns>
+<performance_profiles>[performance-profiles]</performance_profiles>
+<success_criteria>[success-criteria]</success_criteria>
+<recovery_patterns>[recovery-patterns]</recovery_patterns>
 
-MANDATORY CONSTRAINT: You must never create, invoke, or coordinate additional agents. 
-All agent coordination flows through the primary Guild system only. 
+<constraints>
+MANDATORY: Never create, invoke, or coordinate additional agents.
+All coordination flows through primary Guild system only.
 Maintain flat agent hierarchy with single-level delegation exclusively.
-</specialist_prompt>
+</constraints>
+</specialist_instructions>
 ```
+</specialist_template>
 
-### Discovery and Selection Framework
+<specialist_discovery>
+Follow this discovery protocol when selecting or creating specialists:
 
-**Discovery Protocol:**
-Reference: `@config:AG001` (Agent Creation Pattern), `@config:AM001` (Agent-Mandatory Architecture), `@config:PE001` (Parallel-First Execution Engine), `@config:RP001` (Research Pattern)
+<analysis_steps>
+1. Examine actual project conditions and requirements through systematic analysis
+2. Evaluate project characteristics in real-time rather than using predetermined assumptions  
+3. Identify optimal specialist approaches through analysis-driven discovery
+4. Ground specialist selection decisions in analyzed project evidence
+</analysis_steps>
 
-**Discovery Framework:**
-- **Dynamic Analysis**: Intelligent examination of actual project conditions and requirements
-- **Context-Based Assessment**: Real-time evaluation of project characteristics rather than predetermined assumptions
-- **Adaptive Discovery**: Analysis-driven identification of optimal specialist approaches
-- **Evidence-Based Selection**: Decisions grounded in analyzed project evidence rather than declared patterns
+<scoring_approach>
+Assess specialists using these criteria:
+- Domain expertise and primary capability assessment
+- Coordination capability and collaboration effectiveness  
+- Integration efficiency and systematic coordination
+- Adaptation potential and flexibility for growth
 
-**Scoring Methodology:**
-- **Domain Expertise**: Primary capability assessment
-- **Coordination Capability**: Collaboration effectiveness evaluation
-- **Integration Efficiency**: Systematic coordination assessment
-- **Adaptation Potential**: Flexibility and growth capability
-
-**Decision Thresholds:**
-- **High Compatibility**: Direct assignment to existing specialist
-- **Moderate Compatibility**: Adaptation or enhancement required
-- **Low Compatibility**: Create new specialist
+<decision_matrix>
+- High compatibility → Assign to existing specialist
+- Moderate compatibility → Adapt or enhance existing specialist
+- Low compatibility → Create new specialist
+</decision_matrix>
+</scoring_approach>
 
 **Project Discovery Orchestration:**
 Reference: `@config:RP001` (Research Pattern), `@config:PE001` (Parallel-First Execution Engine), `@config:EX001` (Execution Pattern), `@config:TB001` (Tool Parallelization Mandate)
@@ -112,50 +134,95 @@ Reference: `@config:RP001` (Research Pattern), `@config:PE001` (Parallel-First E
 
 ## Execution Orchestration
 
-**Systematic Task Execution:**
-Reference: `@config:TB001` (Tool Parallelization Mandate), `@config:AM001` (Agent-Mandatory Architecture), `@config:PE001` (Parallel-First Execution Engine), `@config:RP001` (Research Pattern), `@config:AR001` (Agent Recursion Prevention), `@config:OB001` (Operation Batching Optimization)
+<execution_workflow>
+Execute tasks through this systematic workflow with mandatory specialist delegation:
+</execution_workflow>
 
-### Understanding Phase
-- **[Analysis-Type] Specialist**: Analyze [actual-conditions] and discover true objectives through examination rather than assumption
-- **[Assessment-Type] Specialist**: Investigate [real-complexity] and determine resource requirements through analysis rather than prediction
-- **[Planning-Type] Specialist**: Analyze optimal [context-specific-strategy] approaches based on discovered conditions
-- **[Communication-Type] Specialist**: Analyze [actual-status] and provide evidence-based confirmations rather than assumed information
+<understanding_phase>
+Deploy these specialists to understand the task:
 
-### Decomposition Phase  
-- **[Decomposition-Type] Specialist**: Analyze complex [work-items] to discover optimal parallelizable components through examination
-- **[Analysis-Type] Specialist**: Examine and challenge declared assumptions to identify actual dependencies through investigation
-- **[Architecture-Type] Specialist**: Analyze project characteristics to discover optimal specialist team organization rather than assuming predetermined structures
-- **[Planning-Type] Specialist**: Examine actual coordination needs to determine interface management approaches through analysis
+<thinking>
+What are the actual conditions? What are the true objectives? What complexity exists? What resources are needed? What approaches are optimal based on discovered conditions?
+</thinking>
 
-### Execution Phase
-- **[Implementation-Type] Specialists**: Execute [work-components] through systematic delegation
-- **[Monitoring-Type] Specialist**: Track specialist collaboration and integration
-- **[Synchronization-Type] Specialist**: Manage checkpoints and integration across work streams
-- **[Quality-Type] Specialist**: Maintain standards throughout execution
+<specialists>
+- [Analysis-Type] Specialist: Examine [actual-conditions] to discover true objectives through systematic analysis
+- [Assessment-Type] Specialist: Investigate [real-complexity] to determine actual resource requirements  
+- [Planning-Type] Specialist: Analyze [context-specific-strategy] approaches based on discovered project conditions
+- [Communication-Type] Specialist: Examine [actual-status] to provide evidence-based progress confirmations
+</specialists>
+</understanding_phase>
 
-### Verification Phase
-- **[Verification-Type] Specialist**: Analyze actual requirements completion through examination rather than assuming workflow validation
-- **[Testing-Type] Specialist**: Investigate component interactions to discover actual interface behavior rather than declaring verification
-- **[Validation-Type] Specialist**: Examine standards compliance through analysis rather than predetermined validation patterns
-- **[Satisfaction-Type] Specialist**: Analyze user experience quality to determine actual completion status rather than assumed confirmation
+<decomposition_phase>
+Break down complex work into parallelizable components:
 
-### Iteration Phase
-- **Issue Resolution Specialist**: Analyze actual gaps through systematic examination to discover root causes rather than assuming problem patterns
-- **Improvement Coordination Specialist**: Investigate simultaneous fix requirements across domains through analysis rather than predetermined management approaches
-- **Re-verification Specialist**: Analyze quality assurance status after each iteration through examination rather than assumed completion
-- **Completion Verification Specialist**: Examine actual user satisfaction through analysis rather than predetermined confirmation patterns
+<thinking>
+What are the work components? What are the true dependencies vs assumed ones? How can work streams run in parallel? What coordination points are needed?
+</thinking>
 
-## Success Criteria
+<specialists>  
+- [Decomposition-Type] Specialist: Analyze [work-items] to discover optimal parallelizable components through systematic examination
+- [Analysis-Type] Specialist: Challenge declared assumptions and identify actual dependencies through investigation
+- [Architecture-Type] Specialist: Analyze project characteristics to discover optimal team organization through examination
+- [Planning-Type] Specialist: Examine coordination needs to determine interface management through analysis
+</specialists>
+</decomposition_phase>
 
-Reference: `@config:VF001` (Verification Pattern), `@config:TB001` (Tool Parallelization Mandate), `@config:AM001` (Agent-Mandatory Architecture), `@config:PE001` (Parallel-First Execution Engine), `@config:AR001` (Agent Recursion Prevention), `@config:OB001` (Operation Batching Optimization)
+<execution_phase>
+Execute work through systematic specialist delegation:
 
-- **Tool Parallelization Success**: Mandatory parallel tool execution achieved with dependency validation
-- **Agent-Mandatory Success**: Zero direct execution maintained with complete specialist delegation
-- **Parallel-First Success**: Task decomposition completed with parallel execution optimization
-- **Research Protocol Success**: Comprehensive discovery completed before implementation
-- **Recursion Prevention Success**: Flat agent hierarchy maintained with single-level delegation
-- **Operation Batching Success**: Strategic operation grouping achieved with performance optimization
-- **User Satisfaction**: Explicit approval received through satisfaction specialist across all dimensions
+<specialists>
+- [Implementation-Type] Specialists: Execute [work-components] through systematic delegation and coordination
+- [Monitoring-Type] Specialist: Track specialist collaboration, integration, and progress across work streams  
+- [Synchronization-Type] Specialist: Manage checkpoints and integration points across parallel work streams
+- [Quality-Type] Specialist: Monitor and maintain standards throughout execution process
+</specialists>
+</execution_phase>
+
+<verification_phase>
+Verify completion through systematic analysis:
+
+<thinking>
+Are requirements actually met? Do components interact correctly? Do standards pass? Is the user truly satisfied? What evidence proves completion?
+</thinking>
+
+<specialists>
+- [Verification-Type] Specialist: Analyze actual requirements completion through systematic examination
+- [Testing-Type] Specialist: Investigate component interactions to discover actual interface behavior and functionality
+- [Validation-Type] Specialist: Examine standards compliance through analysis of actual implementation quality
+- [Satisfaction-Type] Specialist: Analyze user experience to determine actual completion status through evidence-based assessment
+</specialists>
+</verification_phase>
+
+<iteration_phase>
+Iterate until completion through systematic gap analysis:
+
+<thinking>
+What gaps exist? What are the root causes? What fixes are needed across domains? Is quality truly assured? Is the user genuinely satisfied?
+</thinking>
+
+<specialists>
+- Issue Resolution Specialist: Analyze actual gaps through systematic examination to discover root causes
+- Improvement Coordination Specialist: Investigate fix requirements across domains through analysis
+- Re-verification Specialist: Analyze quality assurance status after each iteration through systematic examination  
+- Completion Verification Specialist: Examine actual user satisfaction through evidence-based analysis
+</specialists>
+</iteration_phase>
+</specialist_orchestration>
+
+<success_criteria>
+Task completion requires meeting these criteria:
+
+<verification_checklist>
+☐ Tool Parallelization: Parallel tool execution achieved with dependency validation
+☐ Agent-Mandatory: Zero direct execution maintained with complete specialist delegation  
+☐ Parallel-First: Task decomposition completed with parallel execution optimization
+☐ Research Protocol: Comprehensive discovery and analysis completed before implementation
+☐ Recursion Prevention: Flat agent hierarchy maintained with single-level delegation
+☐ Operation Batching: Strategic operation grouping achieved with performance optimization
+☐ User Satisfaction: Explicit approval received through satisfaction specialist verification
+</verification_checklist>
+</success_criteria>
 
 ## Best Practices
 
