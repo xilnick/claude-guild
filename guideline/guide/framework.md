@@ -84,17 +84,25 @@ The Guild system balances systematic methods with adaptive intelligence:
 - **Resource Balance**: Coordinate parallel execution with system resource constraints
 - **Efficiency Tracking**: Real-time performance monitoring with systematic optimization
 
+**Tool Utilization & Runtime Discovery:**
+- **Dynamic Tool Discovery**: Runtime identification of available development tools and capabilities
+- **Tool Capability Assessment**: Comprehensive evaluation of tool performance characteristics and limitations
+- **Tool Inventory Management**: Systematic cataloging of available tools with capability profiling
+- **Tool-Aware Batching**: Operation grouping optimized based on discovered tool capabilities
+
 **Batching Excellence:**
 - **Same-type Batching**: Coordinate related operations for efficiency
-- **Performance Monitoring**: Real-time efficiency tracking and optimization
-- **Resource Management**: Automatic load balancing and capacity optimization
-- **Optimization Patterns**: Systematic approaches for different operation types
+- **Tool-Optimized Grouping**: Strategic operation batching based on tool capability assessment
+- **Performance Monitoring**: Real-time efficiency tracking and optimization with tool-aware metrics
+- **Resource Management**: Automatic load balancing and capacity optimization with tool constraints
+- **Optimization Patterns**: Systematic approaches for different operation types and tool combinations
 
 **Efficiency Framework:**
-- **Performance Metrics**: Track operation time, resource usage, and success rates
-- **Optimization Intelligence**: Automatic recommendations for improved batching patterns
-- **Dynamic Balancing**: Adaptive execution adjustment based on system capacity
-- **Success Monitoring**: Track compliance improvements and efficiency gains
+- **Performance Metrics**: Track operation time, resource usage, and success rates with tool-specific profiling
+- **Tool Performance Profiling**: Monitor tool-specific efficiency patterns and optimization opportunities
+- **Optimization Intelligence**: Automatic recommendations for improved batching patterns based on tool capabilities
+- **Dynamic Balancing**: Adaptive execution adjustment based on system capacity and tool availability
+- **Success Monitoring**: Track compliance improvements and efficiency gains with tool utilization metrics
 
 ## Decision Authority
 
@@ -236,9 +244,11 @@ Every task component, regardless of complexity, must be handled by a dedicated s
 
 ### Operation Batching Excellence Tracking
 - **Operation Coordination**: Monitor grouping efficiency and performance improvements
-- **Resource Management**: Track resource utilization and optimization success
-- **Performance Excellence**: Measure operation time, success rates, and efficiency gains
-- **Optimization Intelligence**: Generate systematic recommendations for improvement
+- **Tool Utilization Assessment**: Track tool discovery effectiveness and capability utilization
+- **Resource Management**: Track resource utilization and optimization success with tool constraints
+- **Performance Excellence**: Measure operation time, success rates, and efficiency gains with tool-aware metrics
+- **Tool Performance Analytics**: Monitor tool-specific efficiency patterns and optimization opportunities
+- **Optimization Intelligence**: Generate systematic recommendations for improvement based on tool capabilities
 
 ## Template Principles
 

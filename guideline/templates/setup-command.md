@@ -25,17 +25,25 @@ Reference: `@config:AG001` (Agent Creation Pattern), `@config:RP001` (Research P
 - Assess complexity areas requiring specialized assistance
 - Document findings for intelligent agent creation specifications
 
+**Runtime Tool Discovery:**
+Reference: `@config:TB001` (Tool Batching Optimization)
+- Dynamic scanning of available development tools and capabilities
+- Tool capability assessment for performance optimization
+- Tool inventory compilation with capability profiling
+- Tool-aware batching strategy preparation
+
 **Discovery Coordination:**
-Reference: `@config:EX001` (Execution Pattern)
+Reference: `@config:EX001` (Execution Pattern), `@config:TB001` (Tool Batching Optimization)
 - Parallel execution of project configuration and dependency analysis
+- Simultaneous tool capability scanning and inventory assessment
 - Simultaneous codebase structure scanning
 - Coordinated testing framework and build tool identification
-- Parallel architectural pattern mapping
+- Parallel architectural pattern mapping with tool-aware optimization
 
 ## Comprehensive Project Discovery
 
 **Initialization Analysis:**
-Reference: `@config:RP001` (Research Pattern)
+Reference: `@config:RP001` (Research Pattern), `@config:TB001` (Tool Batching Optimization)
 
 Gather information through systematic exploration to prepare agent specifications:
 - **Technology Stack Analysis**: Comprehensive framework and dependency discovery
@@ -43,6 +51,7 @@ Gather information through systematic exploration to prepare agent specification
 - **Domain Boundaries**: Identify natural specialist focus areas
 - **Complexity Assessment**: Determine areas requiring specialized agent assistance
 - **Performance Profiling**: Categorize project components by complexity requirements
+- **Tool Capability Profiling**: Assess available tools for optimal batching and performance optimization
 
 ## Specialist Creation Standards
 
@@ -129,13 +138,18 @@ Reference: `@config:RP001` (Research Pattern), `@config:EX001` (Execution Patter
   <map_dependencies>relationships and requirements</map_dependencies>
   <assess_complexity>areas requiring specialized attention</assess_complexity>
   
-  <!-- Phase 2: Domain and Pattern Analysis -->
+  <!-- Phase 2: Runtime Tool Discovery -->
+  <scan_tool_capabilities>available development tools and performance characteristics</scan_tool_capabilities>
+  <assess_tool_inventory>comprehensive capability profiling and optimization potential</assess_tool_inventory>
+  <analyze_batching_opportunities>tool-aware operation grouping strategies</analyze_batching_opportunities>
+  
+  <!-- Phase 3: Domain and Pattern Analysis -->
   <analyze_architecture>structural organization</analyze_architecture>
   <identify_patterns>conventions and practices</identify_patterns>
   <map_domains>natural specialist boundaries</map_domains>
   
   <!-- Document findings for agent specification -->
-  <!-- Prepare recommendations with coordination analysis -->
+  <!-- Prepare recommendations with coordination analysis and tool-aware optimization -->
 </analysis_phase>
 ```
 
@@ -144,9 +158,10 @@ Reference: `@config:RP001` (Research Pattern), `@config:EX001` (Execution Patter
 **Analysis Template:**
 ```
 Discovered Stack: [frameworks] + [languages] + [build-tools] + [testing-setup]
+Tool Capabilities: [available-tools] + [performance-profiles] + [batching-potential] + [optimization-opportunities]
 Project Structure: [directories] + [patterns] + [conventions] + [complexity]
-Agent Recommendations: [specialist-types] + [focus-areas] + [domain-boundaries] 
-Integration Patterns: [coordination-strategies] + [collaboration-points] + [excellence-targets]
+Agent Recommendations: [specialist-types] + [focus-areas] + [domain-boundaries] + [tool-aware-optimization]
+Integration Patterns: [coordination-strategies] + [collaboration-points] + [excellence-targets] + [tool-utilization-strategies]
 ```
 
 **Preparation Philosophy:**
@@ -172,17 +187,18 @@ Reference: `@config:AG001` (Agent Creation Pattern), `@config:CS001` (Coordinati
 
 **After analysis, verify:**
 - All project domains identified using systematic discovery
-- Recommended agent types match discovered complexity
-- Specifications include necessary domain coverage with excellence targets
-- User approves recommended agent configuration
-- Analysis complete with coordination mapping to enable effective agent creation
-- Clear hand-off prepared for workflow command execution with recovery patterns
-- Excellence targets integrated into all agent specifications
-- Coordination patterns documented for optimal agent collaboration
+- Tool capabilities comprehensively assessed with performance profiling
+- Recommended agent types match discovered complexity and tool optimization potential
+- Specifications include necessary domain coverage with excellence targets and tool-aware strategies
+- User approves recommended agent configuration including tool utilization approach
+- Analysis complete with coordination mapping and tool-aware batching strategies
+- Clear hand-off prepared for workflow command execution with recovery patterns and tool optimization
+- Excellence targets integrated into all agent specifications with tool performance metrics
+- Coordination patterns documented for optimal agent collaboration and tool utilization
 
 ---
 
-**Intelligence Sources**: Project analysis patterns, domain identification protocols, specification preparation standards, systematic coordination frameworks
-**Core Integration**: Systematic analysis framework, preparation protocols with excellence targets, user interaction patterns with intelligent coordination
-**Approach**: Execute discovery workflows to analyze project characteristics and prepare specifications with systematic excellence
-**Scope Limitation**: PREPARATION ONLY - No agent creation, orchestration, or execution (handled by workflow command with coordination patterns and recovery integration)
+**Intelligence Sources**: Project analysis patterns, runtime tool discovery protocols, domain identification procedures, specification preparation standards, tool-aware coordination frameworks
+**Core Integration**: Systematic analysis framework with tool discovery, preparation protocols with excellence targets and tool optimization, user interaction patterns with intelligent coordination and tool utilization strategies
+**Approach**: Execute discovery workflows including tool capability assessment to analyze project characteristics and prepare specifications with systematic excellence and tool-aware optimization
+**Scope Limitation**: PREPARATION ONLY - No agent creation, orchestration, or execution (handled by workflow command with coordination patterns, tool optimization, and recovery integration)

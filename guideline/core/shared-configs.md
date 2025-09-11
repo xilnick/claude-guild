@@ -30,6 +30,13 @@ Essential patterns enabling systematic intelligence coordination. Reference: `@c
 - **Quality**: Functional and integration verification
 - **Coordination**: Parallel domain assessment
 
+### Tool Batching Optimization (@config:TB001)
+**Principle**: Runtime tool discovery with capability-aware optimization
+- **Discovery**: Dynamic tool capability scanning and inventory assessment
+- **Profiling**: Tool performance characteristics and optimization potential
+- **Batching**: Tool-aware operation grouping for maximum efficiency
+- **Optimization**: Continuous tool utilization monitoring and improvement
+
 ### Authority Pattern (@config:DA001)
 **Principle**: Clear boundary enforcement with creative freedom
 - **System**: Non-negotiable compliance requirements
