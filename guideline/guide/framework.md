@@ -261,11 +261,26 @@ Every task component, regardless of complexity, must be handled by a dedicated s
 - **Adaptable Framework**: Templates should work across different contexts and use cases
 - **Compliance Integration**: Embed enforcement mechanisms into template execution patterns
 
+**Abstract Placeholder Standards:**
+- **Always Abstract**: Use `[domain]`, `[task-type]`, `[approach]` instead of specific implementations
+- **Keep Consistent Standards**: Always use `thinking_mode: ultrathink` for maximum reasoning capability
+- **Generic References**: Use `@config:[pattern-id]` instead of specific config codes
+- **Placeholder Patterns**: Use `[category]-specialist` instead of specific specialist names
+- **Directory Templates**: Use `[project-path]` instead of actual paths
+
+**Standardized Elements (Never Abstract):**
+- **Thinking Mode**: Always `thinking_mode: ultrathink` for maximum intelligence
+- **Model Configuration**: Always `model: inherit` for consistency
+- **Core Framework Terms**: Keep "systematic", "excellence", "coordination" as standard vocabulary
+- **Compliance References**: Maintain framework terminology for consistency
+
 **Template vs Over-Specification:**
 - ✅ **Template**: `<specialist_prompt>Handle [domain] requirements using [approach]</specialist_prompt>`
 - ❌ **Over-Specified**: Detailed 50-line specialist prompts with specific implementations
+- ✅ **Consistent**: `thinking_mode: ultrathink` (standard for all agents)
+- ❌ **Variable**: `thinking_mode: [reasoning-level]` (should not be abstracted)
 
-**Philosophy**: Templates trust intelligence to fill in the details appropriately for each context while enforcing compliance automatically.
+**Philosophy**: Templates trust intelligence to fill in the details appropriately for each context while enforcing compliance automatically. Maintain consistency in core elements like thinking modes while abstracting implementation-specific details.
 
 ## Success Criteria
 
@@ -275,7 +290,77 @@ Every task component, regardless of complexity, must be handled by a dedicated s
 - **Quality Maintained**: Standards met throughout
 - **Excellence Achieved**: High compliance across all framework dimensions verified
 
+## Sub-Agent Integration
+
+**Claude Code Sub-Agent Standards:**
+Based on Anthropic's official sub-agent architecture, Guild specialists follow these enhanced patterns:
+
+### Sub-Agent Architecture
+
+**Core Sub-Agent Principles:**
+- **Specialized Expertise**: Each specialist has focused domain knowledge and specific tool configurations
+- **Context Management**: Independent context windows for specialized work without polluting main conversation
+- **Flexible Configuration**: Project-level and user-level agents with customizable tool permissions
+- **Automatic Delegation**: Claude Code proactively selects appropriate specialists based on task analysis
+
+**Sub-Agent Creation Standards:**
+- **Focused Responsibility**: Single-purpose specialists with clear boundaries
+- **Detailed Prompts**: Comprehensive system prompts for consistent performance
+- **Tool Restrictions**: Limited tool access aligned with specialist purpose
+- **Version Control**: Project-level agents managed in repository
+
+**Sub-Agent Invocation Methods:**
+- **Proactive Selection**: Framework automatically delegates based on task description and specialist configuration
+- **Explicit Request**: Direct invocation when specific expertise needed
+- **Chain Coordination**: Multi-specialist workflows for complex tasks
+
+### Sub-Agent Best Practices
+
+**Configuration Excellence:**
+- Write detailed, specific system prompts for consistent behavior
+- Use "PROACTIVELY" in descriptions to encourage automatic delegation
+- Limit tool permissions to necessary functions only
+- Version control project-level sub-agents in `.claude/agents/` directory
+
+**Performance Optimization:**
+- Preserve main conversation context through specialized delegation
+- Accept minimal latency for focused expertise
+- Chain specialists for complex multi-step workflows
+- Dynamic selection based on task context and requirements
+
+**Framework Integration:**
+- All Guild specialists follow sub-agent architecture standards
+- Enhanced with systematic coordination patterns
+- Integrated with compliance monitoring and excellence tracking
+- Optimized for parallel execution and batching operations
+
+### Claude Code Integration
+
+**Standard Sub-Agent Categories:**
+1. **Code Reviewer**: Quality assurance and best practices validation
+2. **Debugger**: Error identification and resolution
+3. **Data Scientist**: Analysis and modeling tasks
+
+**Guild-Enhanced Categories:**
+- **Domain Specialists**: Technology-specific expertise (frontend, backend, etc.)
+- **Process Specialists**: Workflow coordination (testing, deployment, etc.)
+- **Quality Specialists**: Verification and compliance (security, performance, etc.)
+- **Coordination Specialists**: Integration and orchestration management
+
 ## Best Practices
+
+- Use XML tags for structure (per `recommendations.md`)
+- Apply chain of thought for complex analysis
+- Ground work in actual project files
+- Allow uncertainty expression
+- Verify iteratively
+- Get explicit user confirmation
+- **Enforce excellence through systematic processes, not manual oversight**
+- **Create sub-agents with focused expertise and clear boundaries**
+- **Use proactive delegation to maintain context efficiency**
+- **Version control project-level specialists for consistency**
+
+**Templates as guidance, not constraints. Structure enables intelligence to excel. Excellence ensures systematic success.**
 
 - Use XML tags for structure (per `recommendations.md`)
 - Apply chain of thought for complex analysis

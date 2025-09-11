@@ -93,9 +93,21 @@ async function install() {
       symlinkPath
     );
     
-    // Ensure base agent directory exists
-    const agentsDir = path.join(options.targetDir, '.claude', 'agents', 'guild');
-    await fs.ensureDir(agentsDir);
+    // Ensure categorized agent directories exist
+    const agentsBaseDir = path.join(options.targetDir, '.claude', 'agents', 'guild');
+    await fs.ensureDir(agentsBaseDir);
+    
+    // Create standard category directories for agent organization
+    const standardCategories = [
+      'frontend', 'backend', 'database', 'api',
+      'testing', 'security', 'performance', 'quality',
+      'deployment', 'monitoring', 'infrastructure',
+      'documentation', 'refactoring', 'maintenance'
+    ];
+    
+    for (const category of standardCategories) {
+      await fs.ensureDir(path.join(agentsBaseDir, category));
+    }
     
     outro(`✅ Guild installed successfully!
 

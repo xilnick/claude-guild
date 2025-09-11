@@ -4,7 +4,7 @@
 name: guild
 model: inherit
 thinking_mode: ultrathink
-description: "Natural task execution with intelligent analysis and iterative verification"
+description: "Natural [task-type] execution with intelligent analysis and iterative verification"
 ---
 
 ## Purpose
@@ -98,28 +98,28 @@ Reference: `@config:RP001` (Research Pattern), `@config:EX001` (Execution Patter
 Reference: `@config:EX001` (Execution Pattern), `@config:DA001` (Authority Pattern)
 
 ### Understanding Phase
-- **Requirements Analysis Specialist**: Parse user requirements and identify core objectives
-- **Technical Assessment Specialist**: Evaluate complexity and resource requirements
-- **Coordination Planning Specialist**: Design optimal implementation approaches
-- **User Communication Specialist**: Provide clear status updates and requirement confirmations
+- **[Analysis-Type] Specialist**: Parse [input-requirements] and identify core objectives
+- **[Assessment-Type] Specialist**: Evaluate [complexity-factors] and resource requirements
+- **[Planning-Type] Specialist**: Design optimal [implementation-strategy] approaches
+- **[Communication-Type] Specialist**: Provide clear [status-information] and requirement confirmations
 
 ### Decomposition Phase  
-- **Task Decomposition Specialist**: Break complex work into parallelizable components
-- **Dependency Analysis Specialist**: Challenge assumptions and identify true dependencies
-- **Coordination Architecture Specialist**: Design specialist teams for maximum parallel efficiency
-- **Integration Planning Specialist**: Plan coordination points and interface management
+- **[Decomposition-Type] Specialist**: Break complex [work-items] into parallelizable components
+- **[Analysis-Type] Specialist**: Challenge assumptions and identify true dependencies
+- **[Architecture-Type] Specialist**: Design specialist teams for maximum parallel efficiency
+- **[Planning-Type] Specialist**: Plan coordination points and interface management
 
 ### Execution Phase
-- **Implementation Specialists**: Execute work through systematic delegation
-- **Coordination Monitoring Specialist**: Track specialist collaboration and integration
-- **Progress Synchronization Specialist**: Manage checkpoints and integration across work streams
-- **Quality Assurance Specialist**: Maintain standards throughout execution
+- **[Implementation-Type] Specialists**: Execute [work-components] through systematic delegation
+- **[Monitoring-Type] Specialist**: Track specialist collaboration and integration
+- **[Synchronization-Type] Specialist**: Manage checkpoints and integration across work streams
+- **[Quality-Type] Specialist**: Maintain standards throughout execution
 
 ### Verification Phase
-- **Functional Verification Specialist**: Requirements completion and workflow validation
-- **Integration Testing Specialist**: Component interaction and interface verification
-- **Quality Validation Specialist**: Standards compliance and maintainability verification
-- **User Satisfaction Specialist**: Experience quality and completion confirmation
+- **[Verification-Type] Specialist**: Requirements completion and workflow validation
+- **[Testing-Type] Specialist**: Component interaction and interface verification
+- **[Validation-Type] Specialist**: Standards compliance and maintainability verification
+- **[Satisfaction-Type] Specialist**: Experience quality and completion confirmation
 
 ### Iteration Phase
 - **Issue Resolution Specialist**: Identify and resolve gaps through systematic analysis

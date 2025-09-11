@@ -4,7 +4,7 @@
 name: guild-setup  
 model: inherit
 thinking_mode: ultrathink
-description: "Analyze project and create specialized agents based on discovered needs"
+description: "Analyze [project-type] and create specialized agents based on discovered needs"
 ---
 
 ## Purpose
@@ -64,27 +64,35 @@ Reference: `@config:AG001` (Agent Creation Pattern)
 
 ## Organization Structure
 
-**Agents organized by discovered domains:**
+**Categorized Agent Organization:**
+Agents are automatically organized into specialized directories under `.claude/agents/guild/`:
+
 ```
-.claude/agents/guild/
-├── [domain-1]/     # e.g., frontend, backend
-│   └── specialist.md
-├── [domain-2]/     # e.g., testing, security  
-│   └── specialist.md
-└── [domain-N]/     # Based on project analysis
-    └── specialist.md
+[project-path]/.claude/agents/guild/
+├── [domain-1]/         # [Domain description and responsibilities]
+│   └── [specialist].md
+├── [domain-2]/         # [Domain description and responsibilities]
+│   └── [specialist].md
+├── [domain-3]/         # [Domain description and responsibilities]
+│   └── [specialist].md
+└── [domain-n]/         # [Domain description and responsibilities]
+    └── [specialist].md
 ```
 
 **Categories determined by:**
-- Project technologies and architecture
-- Natural domain boundaries
-- Workflow patterns discovered
+- Project technologies and architecture discovered
+- Natural domain boundaries identified in analysis
+- Workflow patterns and complexity areas
+- Claude Code sub-agent best practices
+- Standardized organization for consistent specialist management
 
 ## Specialist Template
 
+**Located in categorized directories:** `.claude/agents/guild/[category]/specialist.md`
+
 ```markdown
 ---
-name: [domain]-specialist
+name: [domain-name]-specialist
 model: inherit  
 thinking_mode: ultrathink
 description: "[4-sentence description following framework standards with systematic integration]"
@@ -157,11 +165,11 @@ Reference: `@config:RP001` (Research Pattern), `@config:EX001` (Execution Patter
 
 **Analysis Template:**
 ```
-Discovered Stack: [frameworks] + [languages] + [build-tools] + [testing-setup]
-Tool Capabilities: [available-tools] + [performance-profiles] + [batching-potential] + [optimization-opportunities]
-Project Structure: [directories] + [patterns] + [conventions] + [complexity]
-Agent Recommendations: [specialist-types] + [focus-areas] + [domain-boundaries] + [tool-aware-optimization]
-Integration Patterns: [coordination-strategies] + [collaboration-points] + [excellence-targets] + [tool-utilization-strategies]
+Discovered Stack: [technology-stack] + [programming-languages] + [build-systems] + [testing-frameworks]
+Tool Capabilities: [available-tooling] + [performance-characteristics] + [optimization-potential] + [batching-opportunities]
+Project Structure: [directory-organization] + [code-patterns] + [project-conventions] + [complexity-areas]
+Agent Recommendations: [specialist-categories] + [domain-focus] + [responsibility-boundaries] + [optimization-strategies]
+Integration Patterns: [coordination-methods] + [collaboration-interfaces] + [quality-targets] + [tool-utilization-approaches]
 ```
 
 **Preparation Philosophy:**
