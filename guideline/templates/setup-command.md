@@ -41,23 +41,23 @@ Reference: `@config:AG001` (Agent Creation Pattern), `@config:AM001` (Agent-Mand
 - Execute systematic discovery for comprehensive project understanding
 - Parallel analysis of project technologies and frameworks
 - Map project structure through coordinated exploration
-- Assess complexity areas requiring specialized assistance
-- Document findings for intelligent agent creation specifications with dimensional compliance
+- Assess [complexity-areas] requiring specialized assistance
+- Document findings for intelligent agent creation specifications with [dimensional-compliance]
 
-**Runtime Tool Discovery:**
+**Runtime [Tool-Discovery]:**
 Reference: `@config:TB001` (Tool Parallelization Mandate), `@config:OB001` (Operation Batching Optimization)
-- Dynamic scanning of available development tools and capabilities
-- Tool capability assessment for parallel execution optimization
-- Tool inventory compilation with capability profiling
-- Tool-aware parallelization and batching strategy preparation
+- Dynamic scanning of available [development-tools] and capabilities
+- [Tool-capability] assessment for parallel execution optimization
+- [Tool-inventory] compilation with [capability-profiling]
+- [Tool-aware] parallelization and batching strategy preparation
 
-**Discovery Coordination:**
+**Discovery [Coordination]:**
 Reference: `@config:EX001` (Execution Pattern), `@config:PE001` (Parallel-First Execution Engine), `@config:TB001` (Tool Parallelization Mandate), `@config:AR001` (Agent Recursion Prevention)
-- Parallel execution of project configuration and dependency analysis
-- Simultaneous tool capability scanning and inventory assessment
-- Simultaneous codebase structure scanning
-- Coordinated testing framework and build tool identification
-- Parallel architectural pattern mapping with tool-aware optimization and anti-recursion constraints
+- Parallel execution of [project-configuration] and [dependency-analysis]
+- Simultaneous [tool-capability] scanning and [inventory-assessment]
+- Simultaneous [codebase-structure] scanning
+- Coordinated [testing-framework] and [build-tool] identification
+- Parallel [architectural-pattern] mapping with [tool-aware] optimization and anti-recursion constraints
 
 ## Comprehensive Project Discovery
 
@@ -65,12 +65,12 @@ Reference: `@config:EX001` (Execution Pattern), `@config:PE001` (Parallel-First 
 Reference: `@config:RP001` (Research Pattern), `@config:TB001` (Tool Parallelization Mandate), `@config:AM001` (Agent-Mandatory Architecture), `@config:OB001` (Operation Batching Optimization)
 
 Gather information through systematic exploration to prepare agent specifications:
-- **Technology Stack Analysis**: Comprehensive framework and dependency discovery
-- **Project Structure Mapping**: Architectural organization analysis
-- **Domain Boundaries**: Identify natural specialist focus areas
+- **[Technology-Stack] Analysis**: Comprehensive [framework] and [dependency] discovery
+- **[Project-Structure] Mapping**: [Architectural] organization analysis
+- **[Domain] Boundaries**: Identify natural specialist focus areas
 - **Complexity Assessment**: Determine areas requiring specialized agent assistance
-- **Performance Profiling**: Categorize project components by complexity requirements
-- **Tool Capability Profiling**: Assess available tools for optimal parallelization, batching, and performance optimization
+- **Performance Profiling**: Categorize [project-components] by complexity requirements
+- **[Tool-Capability] Profiling**: Assess available [tools] for optimal parallelization, batching, and performance optimization
 - **Agent-Mandatory Assessment**: Identify areas requiring mandatory specialist delegation
 - **Parallel-First Analysis**: Map natural parallel execution opportunities and dependencies
 
@@ -81,7 +81,7 @@ Reference: `@config:AG001` (Agent Creation Pattern), `@config:AM001` (Agent-Mand
 1. **Purpose**: What the specialist does, core capabilities, and systematic integration with mandatory agent delegation
 2. **Coordination**: How it works with others using established patterns and when to use within parallel-first execution
 3. **Boundaries**: Important limitations, recovery patterns, error handling, and anti-recursion constraints
-4. **Outcomes**: Expected results, integration patterns, excellence targets, and dimensional compliance
+4. **Outcomes**: Expected results, integration patterns, excellence targets, and [dimensional-compliance]
 
 ## Organization Structure
 
@@ -101,10 +101,10 @@ Agents are automatically organized into specialized directories under `.claude/a
 ```
 
 **Categories determined by:**
-- Project technologies and architecture discovered
-- Natural domain boundaries identified in analysis
-- Workflow patterns and complexity areas
-- Claude Code sub-agent best practices
+- [Project-technologies] and [architecture] discovered
+- Natural [domain-boundaries] identified in analysis
+- [Workflow-patterns] and complexity areas
+- [Framework] sub-agent best practices
 - Standardized organization for consistent specialist management
 
 ## Specialist Template
@@ -144,18 +144,18 @@ description: "[4-sentence description following framework standards with systema
 Reference: `@config:EX001` (Execution Pattern), `@config:PE001` (Parallel-First Execution Engine), `@config:RP001` (Research Pattern), `@config:AM001` (Agent-Mandatory Architecture)
 
 1. **Analyze**: Execute comprehensive discovery workflow through systematic analysis
-2. **Document**: Record findings using structured patterns and organizational characteristics
-3. **Recommend**: Present agent types based on domain mapping and coordination potential
-4. **Specify**: User confirms agents with systematic integration and excellence targets
-5. **Hand-off**: Provide specifications to workflow command with coordination patterns
+2. **Document**: Record findings using structured patterns and [organizational-characteristics]
+3. **Recommend**: Present agent types based on [domain-mapping] and [coordination-potential]
+4. **Specify**: User confirms agents with systematic integration and [excellence-targets]
+5. **Hand-off**: Provide specifications to workflow command with [coordination-patterns]
 
 ## Domain Discovery
 
-**Native Intelligence Analysis**: Dynamic domain identification based on actual project characteristics and requirements.
+**Native Intelligence Analysis**: Dynamic [domain-identification] based on actual [project-characteristics] and [requirements].
 
-**Analysis-Driven Discovery**: Let intelligence analyze project structure, patterns, and needs to determine optimal specialist boundaries and domain organization.
+**Analysis-Driven Discovery**: Let intelligence analyze [project-structure], [patterns], and [needs] to determine optimal [specialist-boundaries] and [domain-organization].
 
-**Adaptive Domain Creation**: Domains emerge from project context rather than predetermined categories. Specify which domains need agents and their focus areas.
+**Adaptive Domain Creation**: [Domains] emerge from [project-context] rather than predetermined categories. Specify which [domains] need agents and their focus areas.
 
 ## Preparation Examples
 
@@ -168,19 +168,19 @@ Reference: `@config:RP001` (Research Pattern), `@config:PE001` (Parallel-First E
   <!-- Systematic Discovery Pattern -->
   <!-- Phase 1: Project Structure Discovery -->
   <discover_project_structure>[project-path]</discover_project_structure>
-  <identify_technologies>patterns and frameworks</identify_technologies>
-  <map_dependencies>relationships and requirements</map_dependencies>
+  <identify_technologies>[patterns] and [frameworks]</identify_technologies>
+  <map_dependencies>[relationships] and [requirements]</map_dependencies>
   <assess_complexity>areas requiring specialized attention</assess_complexity>
   
   <!-- Phase 2: Runtime Tool Discovery -->
-  <scan_tool_capabilities>available development tools and performance characteristics</scan_tool_capabilities>
-  <assess_tool_inventory>comprehensive capability profiling and optimization potential</assess_tool_inventory>
-  <analyze_batching_opportunities>tool-aware operation grouping strategies</analyze_batching_opportunities>
+  <scan_tool_capabilities>available [development-tools] and [performance-characteristics]</scan_tool_capabilities>
+  <assess_tool_inventory>comprehensive [capability-profiling] and [optimization-potential]</assess_tool_inventory>
+  <analyze_batching_opportunities>[tool-aware] [operation-grouping] strategies</analyze_batching_opportunities>
   
   <!-- Phase 3: Domain and Pattern Analysis -->
-  <analyze_architecture>structural organization</analyze_architecture>
-  <identify_patterns>conventions and practices</identify_patterns>
-  <map_domains>natural specialist boundaries</map_domains>
+  <analyze_architecture>[structural-organization]</analyze_architecture>
+  <identify_patterns>[conventions] and [practices]</identify_patterns>
+  <map_domains>natural [specialist-boundaries]</map_domains>
   
   <!-- Document findings for agent specification -->
   <!-- Prepare recommendations with coordination analysis and tool-aware optimization -->

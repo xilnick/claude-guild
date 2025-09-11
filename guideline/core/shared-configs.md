@@ -1,9 +1,12 @@
-<shared_intelligence_patterns>
-You must apply these essential patterns for systematic intelligence coordination with mandatory abstraction standards.
-</shared_intelligence_patterns>
+APPLY core intelligence patterns through systematic coordination with mandatory abstraction compliance.
 
-<intelligence_compliance>
-Enforce these mandatory standards in all patterns:
+EXECUTE pattern-based intelligence coordination:
+- APPLY essential patterns for systematic intelligence coordination with mandatory abstraction standards
+- ENFORCE abstraction compliance through [placeholder] pattern utilization
+- COORDINATE intelligent systems through standardized pattern execution
+- MAINTAIN systematic excellence through pattern-driven coordination
+
+ENFORCE mandatory standards in all pattern applications:
 
 <compliance_requirements>
 - Never include code samples, syntax examples, or executable snippets in patterns
@@ -14,8 +17,7 @@ Enforce these mandatory standards in all patterns:
 </compliance_requirements>
 </intelligence_compliance>
 
-<core_patterns>
-Apply these coordination patterns:
+APPLY coordination patterns through systematic execution:
 
 <agent_creation_pattern>@config:AG001
 Principle: Intelligent specialist discovery and deployment
@@ -95,8 +97,7 @@ Principle: Strategic operation grouping for enhanced performance
 </operation_batching_pattern>
 </core_patterns>
 
-<resource_management>
-Apply these resource management patterns:
+APPLY resource management patterns through systematic coordination:
 
 <resource_classification>@config:RT001
 Principle: Optimal resource allocation by complexity

@@ -1,9 +1,11 @@
-<decision_authority_instructions>
-You must respect clear authority boundaries while enabling intelligent decision-making within systematic compliance and mandatory intelligence standards.
-</decision_authority_instructions>
+EXECUTE authority-based decision-making with 6-dimensional governance compliance and intelligent boundary enforcement.
 
-<authority_compliance>
-Enforce these mandatory intelligence standards in all decision-making:
+APPLY systematic authority framework through declarative command execution:
+- ENFORCE clear authority boundaries while enabling intelligent decision-making
+- MAINTAIN systematic compliance with mandatory intelligence standards
+- EXECUTE authority decisions within 6-dimensional framework constraints
+
+ENFORCE mandatory intelligence standards in all decision-making:
 
 <compliance_requirements>
 - Prohibit any code implementations, syntax examples, or executable snippets
@@ -14,8 +16,7 @@ Enforce these mandatory intelligence standards in all decision-making:
 </compliance_requirements>
 </authority_compliance>
 
-<authority_framework>
-Follow this authority structure for decision-making:
+APPLY authority framework for systematic decision-making:
 
 <system_authority>
 Automated compliance with absolute precedence across all 6 framework dimensions.
@@ -78,8 +79,7 @@ Recognize ultimate user control over scope, priorities, and satisfaction within 
 </user_authority>
 </authority_framework>
 
-<conflict_resolution>
-Apply this 6-dimensional resolution framework for conflicts:
+EXECUTE 6-dimensional conflict resolution framework:
 
 <resolution_hierarchy>
 1. System > Framework: System enforcement has absolute precedence across all 6 dimensions
@@ -104,8 +104,7 @@ Provide these decision support capabilities:
 </decision_support>
 </conflict_resolution>
 
-<authority_integration>
-Integrate authority across all dimensions for collaborative excellence:
+INTEGRATE authority across all dimensions for collaborative excellence:
 
 <collaborative_excellence>
 - System: Non-negotiable compliance foundation across all 6 dimensions

@@ -1,14 +1,12 @@
-<verification_instructions>
-You must verify task completion through systematic assessment integrating framework compliance and intelligence standards.
+EXECUTE systematic verification with multi-dimensional compliance assessment and intelligent coordination.
 
-<verification_approach>
-- Execute intelligent verification through systematic assessment with template-first patterns
-- Coordinate parallel validation across functional, integration, compliance, and performance dimensions  
-- Orchestrate all verification through dedicated specialists with intelligent coordination
-</verification_approach>
+APPLY verification command through parallel execution:
+- EXECUTE intelligent verification through systematic assessment with template-first patterns
+- COORDINATE parallel validation across functional, integration, compliance, and performance dimensions  
+- ORCHESTRATE all verification through dedicated specialists with intelligent coordination
+- VERIFY task completion through systematic assessment integrating framework compliance and intelligence standards
 
-<compliance_verification>
-During verification, you must enforce these intelligence standards:
+ENFORCE intelligence standards during verification execution:
 
 <verification_requirements>
 - Detect and reject any code implementations, syntax examples, or executable snippets
@@ -21,8 +19,7 @@ During verification, you must enforce these intelligence standards:
 </verification_requirements>
 </compliance_verification>
 
-<verification_framework>
-Execute verification through this structured approach:
+EXECUTE verification through structured framework approach:
 
 <verification_gates>
 - Validate framework compliance across all 6 dimensions with excellence targets
@@ -31,8 +28,7 @@ Execute verification through this structured approach:
 - Validate user satisfaction through experience quality assessment and explicit approval
 </verification_gates>
 
-<verification_specialists>
-Deploy these specialists for systematic verification:
+DEPLOY verification specialists for systematic assessment:
 
 <specialist_assignments>
 - Compliance Specialist: Verify framework compliance across all 6 dimensions including tool parallelization and agent-mandatory architecture
@@ -76,8 +72,7 @@ Execute simultaneous testing across domains with compliance integration combinin
 </testing_coordination>
 </testing_integration>
 
-<parallel_verification>
-Execute verification through simultaneous excellence patterns:
+EXECUTE parallel verification through simultaneous excellence patterns:
 
 <verification_batching>
 Run functional, compliance, performance, quality, and architecture verification in parallel execution. Validate mandatory simultaneous tool execution patterns and verify flat agent hierarchy with anti-recursion constraints.
@@ -110,8 +105,7 @@ Verify agent-mandatory architecture compliance:
 </delegation_checks>
 </agent_mandatory_verification>
 
-<dimensional_verification>
-Verify all 6 framework dimensions:
+VERIFY all 6 framework dimensions through systematic assessment:
 
 <parallel_first_checks>
 ☐ Verify atomic parallelizable unit breakdown
@@ -142,8 +136,7 @@ Verify all 6 framework dimensions:
 </anti_recursion_checks>
 </dimensional_verification>
 
-<continuous_verification>
-Maintain ongoing verification intelligence:
+MAINTAIN continuous verification intelligence:
 
 <monitoring_approach>
 Execute real-time compliance, quality, performance, integration, and architecture monitoring. Apply adaptive dynamic standards optimization and enhancement including recursion prevention. Maintain continuous agent hierarchy integrity and anti-recursion constraint validation.
