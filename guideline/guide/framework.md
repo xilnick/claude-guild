@@ -255,6 +255,9 @@ All Guild operations must prioritize dynamic analysis over prescriptive declarat
 6. **RELY ON Native Intelligence**: Complete trust in autonomous intelligence to determine appropriate implementations
 7. **ENABLE Creative Solutions**: Provide structural guidance without constraining intelligent implementation choices
 8. **ALWAYS Analyze Instead of Declaring**: Mandatory requirement to examine actual conditions through intelligence rather than making predetermined assumptions or declarations
+9. **ALWAYS Follow Recommendations**: Mandatory requirement for @guideline/core/ and @guideline/templates/ to strictly adhere to all standards defined in @guideline/guide/recommendations.md
+10. **ALWAYS Use Declarative Prompt Format**: Mandatory requirement for @guideline/core/ and @guideline/templates/ to function as declarative command prompts rather than documentation
+
 
 **ENFORCEMENT PROTOCOL:**
 - **Code Sample Detection**: Automatic blocking of any code implementation examples
@@ -264,6 +267,9 @@ All Guild operations must prioritize dynamic analysis over prescriptive declarat
 - **Agent Recursion Prevention**: Automatic blocking of subagent creation or invocation attempts
 - **Intelligence Trust Verification**: Confirmation that native intelligence drives all implementation decisions
 - **Analysis-First Enforcement**: Systematic verification that decisions are based on actual analysis rather than predetermined declarations
+- **Recommendations Compliance Verification**: Systematic validation that core and template modules adhere to all standards from recommendations.md
+- **Declarative Format Enforcement**: Automatic verification that core and template modules function as declarative command prompts rather than documentation
+
 
 ## Template Principles
 
@@ -277,6 +283,9 @@ All Guild operations must prioritize dynamic analysis over prescriptive declarat
 - **Never Allow Agent Recursion**: Templates must prevent subagents from creating or invoking additional agents
 - **Trust Native Intelligence**: Rely on autonomous intelligence to determine appropriate implementations
 - **Enable Creativity**: Provide structure that guides without constraining intelligent solutions
+- **Follow Recommendations**: Strictly adhere to all standards and patterns defined in @guideline/guide/recommendations.md
+- **Declarative Prompt Format**: Function as executable command prompts rather than documentation or reference material
+- **Process User Input**: Templates receive user instructions via $ARGUMENTS variable as natural request input
 
 **Template Characteristics:**
 - **Minimal Specificity**: Use placeholders like `[task-description]` rather than detailed implementations
@@ -317,6 +326,8 @@ All Guild operations must prioritize dynamic analysis over prescriptive declarat
 - ✅ **Consistent**: `thinking_mode: ultrathink` (standard for all agents)
 - ❌ **Variable**: `thinking_mode: [reasoning-level]` (should not be abstracted)
 
+
+
 **Enforcement Standards:**
 - **Code Sample Prevention**: Templates must never include executable code or implementation examples
 - **Technology Neutrality**: Templates must work across all technology stacks without modification
@@ -351,6 +362,35 @@ All Guild operations must prioritize dynamic analysis over prescriptive declarat
 - **User Satisfied**: Explicit approval received
 - **Quality Maintained**: Standards met throughout
 - **Excellence Achieved**: High compliance across all framework dimensions verified
+
+## Claude Code Slash Command Architecture
+
+**Command Structure**: Guild commands follow Claude Code slash command conventions with systematic intelligence integration:
+
+- **Storage Location**: Commands stored in `.claude/commands/guild/` directory with organized namespacing
+- **$ARGUMENTS Support**: Templates receive user instructions via $ARGUMENTS variable for dynamic workflow adaptation
+- **Frontmatter Configuration**: Use model and tool configuration with `thinking_mode: ultrathink` for maximum intelligence
+- **Directory Organization**: Enable logical specialist grouping through subdirectory namespacing patterns
+
+**$ARGUMENTS Philosophy**:
+- **Natural User Input**: $ARGUMENTS represents user's specific request that guides template execution
+- **Workflow Adaptation**: Templates apply intelligent reasoning to modify behavior based on user intent
+- **No Compliance Burden**: User input processed naturally without rigid framework requirements
+- **Dynamic Execution**: Allow $ARGUMENTS to influence workflow patterns while maintaining framework excellence
+
+**Slash Command Integration**: 
+```markdown
+---
+name: command-name
+model: inherit  
+thinking_mode: ultrathink
+description: "[4-sentence description following framework standards]"
+---
+
+When $ARGUMENTS is provided, treat it as [user-request-type] and adapt execution accordingly.
+```
+
+**Framework Alignment**: All Guild commands maintain 6-dimensional compliance while enabling natural user interaction through $ARGUMENTS processing.
 
 ## Sub-Agent Integration
 

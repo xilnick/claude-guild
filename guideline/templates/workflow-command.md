@@ -11,6 +11,14 @@ description: "Natural [task-type] execution with intelligent analysis and iterat
 You will execute the user's [task-requirements] through systematic specialist coordination and framework compliance. Analyze actual project conditions rather than making assumptions, and delegate all work through appropriate specialists while maintaining parallel execution patterns.
 </task>
 
+## User Request Processing
+
+When $ARGUMENTS is provided, treat it as the user's task request:
+- Execute $ARGUMENTS as the primary workflow objective and task definition
+- Adapt execution patterns based on the nature and complexity of the request
+- Apply intelligent reasoning to determine optimal specialist coordination approach  
+- Allow dynamic workflow modification to best accomplish the user's specific intent
+
 <prerequisites>
 - Guild system must be initialized via `/guild:setup` command before execution
 - All work must flow through specialist delegation (zero direct execution)

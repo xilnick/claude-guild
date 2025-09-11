@@ -10,6 +10,14 @@ description: "Analyze [project-type] and create specialized agents based on disc
 ## Purpose
 Initialize Guild system by analyzing project structure and preparing agent creation specifications through systematic discovery. Preparation only - execution is handled by workflow command.
 
+## User Request Processing
+
+When $ARGUMENTS is provided, treat it as the user's specific request that guides this setup:
+- Process $ARGUMENTS as primary task instructions that modify setup approach
+- Adapt setup workflow based on user intent and requirements  
+- Apply intelligent reasoning to determine optimal specialist needs for the request
+- Allow $ARGUMENTS to override default behaviors when user intent is clear
+
 ## Mandatory Intelligence Compliance
 
 **TEMPLATE REQUIREMENT**: This template enforces mandatory intelligence standards:
