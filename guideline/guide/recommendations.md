@@ -376,21 +376,52 @@ This document provides Anthropic's official best practices for Claude implementa
   - Enable simultaneous tool calls for efficiency
   - Batch independent operations together
   - Reduce round-trip latency
+  - Maximize parallel execution over sequential operations
   
-  **Implementation:**
+  **Official Anthropic System Prompts:**
+  
+  For Claude 4 models (Opus 4.1, Opus 4, Sonnet 4), add this basic prompt:
+  ```
+  For maximum efficiency, whenever you need to perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially.
+  ```
+  
+  For stronger parallel tool use, use this detailed prompt:
+  ```xml
+  <use_parallel_tool_calls>
+  For maximum efficiency, whenever you perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially. Prioritize calling tools in parallel whenever possible. For example, when reading 3 files, run 3 tool calls in parallel to read all 3 files into context at the same time. When running multiple read-only commands like `ls` or `list_dir`, always run all of the commands in parallel. Err on the side of maximizing parallel tool calls rather than running too many tools sequentially.
+  </use_parallel_tool_calls>
+  ```
+  
+  **Guild System Integration:**
   ```xml
   <system_prompt>
     You have the capability to call multiple tools in a single response.
     When multiple independent pieces of information are requested,
     batch your tool calls together for optimal performance.
+    
+    <use_parallel_tool_calls>
+    For maximum efficiency, whenever you perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially. Prioritize calling tools in parallel whenever possible. Err on the side of maximizing parallel tool calls rather than running too many tools sequentially.
+    </use_parallel_tool_calls>
   </system_prompt>
   ```
+  
+  **User Message Optimization:**
+  - ✅ **Good**: "Check the weather in Paris and London simultaneously."
+  - ✅ **Better**: "Please use parallel tool calls to get the weather for Paris, London, and Tokyo at the same time."
+  - ❌ **Avoid**: "What's the weather in Paris? Also check London." (implies sequential)
+  
+  **Model-Specific Guidance:**
+  - **Claude Opus 4.1/4, Sonnet 4**: Native parallel tool support with system prompts
+  - **Claude Sonnet 3.7**: May require additional strategies or batch tool wrappers
+  - **Guild Specialists**: Always design for parallel execution when creating agents
   
   **Best Practices:**
   - Send all tool results in single user message
   - Avoid splitting results across messages
   - Identify truly independent operations
   - Coordinate integration points explicitly
+  - Explicitly request parallel execution in user messages
+  - Design specialists to leverage parallel capabilities
 </parallel_execution>
 
 ### Error Handling for Tools
@@ -484,3 +515,4 @@ These recommendations are based on Anthropic's official documentation:
 - [Chain Prompts](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-prompts)
 - [Long Context Tips](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/long-context-tips)
 - [Reduce Hallucinations](https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/reduce-hallucinations)
+- [Parallel Tool Use Implementation](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/implement-tool-use#system-prompts-for-parallel-tool-use)

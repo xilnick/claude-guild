@@ -8,317 +8,155 @@ description: "Natural task execution with intelligent analysis and iterative ver
 ---
 
 ## Purpose
-Execute tasks using Claude's native intelligence with autonomous analysis and iterative verification achieving technical excellence per `@guideline/guide/framework.md`.
+Execute [task-requirements] using systematic intelligence with specialist coordination and framework compliance. 
 
-## Meta-Intelligence Framework
+**PREREQUISITE**: Guild system must be initialized via `/guild:setup` command before workflow execution.
 
-**Templates as Living Intelligence:**
-These templates are not static command processors but living expressions of accumulated intelligence that:
-- **Learn**: Each execution creates intelligence traces that inform future decisions
-- **Adapt**: Creative pattern synthesis generates solutions beyond original programming  
-- **Evolve**: Successful adaptations integrate automatically into template behavior
-- **Transcend**: Generate new intelligence patterns not explicitly programmed
+## Framework Compliance
 
-**Fractal Intelligence Architecture:**
-- Each template embodies the complete system intelligence while expressing through specific interfaces
-- Specialists created by templates inherit the same creative synthesis capabilities
-- Intelligence patterns replicate and enhance themselves across the entire system
-- User interactions become opportunities for system-wide intelligence evolution
+**Systematic Excellence Architecture:**
+Reference: `@config:AG001`, `@config:EX001`, `@config:RP001`, `@config:VF001`
 
-**Emergent Excellence:**
-Templates achieve outcomes that exceed their original design through:
-- Creative combination of intelligence patterns from all core modules
-- Adaptive response to novel contexts through pattern synthesis
-- Learning from both successes and failures to enhance future performance
-- Generation of new capabilities during execution that expand system potential
+**Execution Protocol:**
+1. **Agent Assignment**: Route [task-type] through specialist assignment protocol
+2. **Parallel Planning**: Apply decomposition patterns for [task-components] using coordination strategies
+3. **Research Gates**: Complete discovery requirements through systematic analysis
+4. **Excellence Optimization**: Achieve high performance through intelligent coordination
+5. **Performance Monitoring**: Track and optimize execution with automatic recovery patterns
 
-## Mandatory Research Protocol
+## Specialist Orchestration
 
-**REQUIRED Pre-Execution Analysis:**
-Before ANY implementation, MUST perform comprehensive research:
-- **Project Structure Discovery**: Explore all directories, identify architecture patterns
-- **Code Quality Assessment**: Find areas needing improvement, technical debt, refactoring opportunities  
-- **Dependency Analysis**: Understand relationships between components and modules
-- **Integration Points**: Identify where changes will impact other systems
-- **Pattern Recognition**: Discover existing patterns to maintain consistency
+**Systematic Specialist Creation:**
+Intelligent specialist creation with framework compliance integration and coordination optimization:
 
-**Research Tool Parallelization:**
-MUST batch research operations for efficiency:
-- Run multiple file searches simultaneously
-- Parallel pattern analysis across different domains
-- Concurrent exploration of related components
-- Batch all read operations when exploring codebase
+### Compliance-Driven Agent Factory
 
-## Tech Stack Intelligence Discovery
+**Excellence Integration:**
+Reference: `@config:AG001` (Agent Creation Pattern), `@config:CS001` (Coordination Strategy)
 
-**MANDATORY Technology Analysis:**
-MUST identify and understand before implementation:
-- **Languages & Frameworks**: Detect all languages, frameworks, and libraries in use
-- **Build Systems**: Identify build tools, scripts, and deployment processes
-- **Testing Infrastructure**: Discover test frameworks, coverage tools, CI/CD pipelines
-- **Configuration Patterns**: Understand environment configs, secrets management
-- **Development Tools**: Identify linters, formatters, code quality tools
+**Enhanced Creation Standards:**
+- **Agent-Mandatory Excellence**: All specialists designed for systematic delegation
+- **Parallel-First Optimization**: All specialists optimized for coordination excellence
+- **Research Protocol Integration**: All specialists aligned with discovery patterns
+- **Excellence Standards**: All specialists designed for optimal coordination and resource utilization
+- **Performance Profiling**: All specialists leverage appropriate complexity categorization
+- **Coordination-Driven Execution**: All specialists coordinate through established patterns
+- **Recovery-Integrated Design**: All specialists equipped with automatic failure recovery mechanisms
 
-**Stack-Specific Optimization:**
-- Apply language-specific best practices based on discovered stack
-- Use framework conventions identified during discovery
-- Leverage existing tools and patterns found in project
-
-## Parallel Execution Mandate
-
-**REQUIRED Execution Patterns:**
-MUST execute all non-blocking tasks in parallel:
-
-**Parallel-First Execution:**
-- **File Operations**: Read/write multiple files simultaneously when independent
-- **API Calls**: Batch all network requests that don't depend on each other
-- **Specialist Creation**: Generate multiple specialists concurrently for different domains
-- **Verification Checks**: Run multiple verification domains simultaneously
-- **Tool Invocations**: ALWAYS batch tool calls in single messages
-
-**Sequential Only When Required:**
-- Dependencies explicitly require serial execution
-- Resource constraints prevent parallelization
-- User explicitly requests sequential approach
-
-## Tool Invocation Optimization
-
-**MANDATORY Tool Usage Patterns:**
-MUST optimize all tool invocations for efficiency:
-
-**Batching Requirements:**
-- **Research Phase**: Batch all file reads, searches, and explorations
-- **Implementation Phase**: Batch all edits to same file, related file operations
-- **Verification Phase**: Batch all test runs, linting, validation checks
-- **Specialist Coordination**: Launch all independent specialists simultaneously
-
-**Performance Mandates:**
-- NEVER make sequential tool calls when parallel is possible
-- ALWAYS combine multiple operations in single tool invocation
-- Group related operations to minimize context switching
-- Use batch operations over iterative single operations
-
-## Intelligence Expression Pattern
-
-### Level 1: Intelligence Substrate Access
-**Dynamic Pattern Integration:**
-- Access accumulated wisdom from all core intelligence modules
-- Select optimal intelligence patterns based on contextual analysis
-- Combine multiple intelligence approaches creatively for enhanced solutions
-- Generate hybrid solutions not explicitly programmed in original modules
-
-**Living Memory Integration:**
-- Each execution creates intelligence traces that inform future decisions
-- Failed approaches generate automatic avoidance strategies
-- Success patterns automatically integrate into execution behavior
-- Learning from one domain transfers and enhances others
-
-### Level 2: Emergent Coordination Intelligence
-**Predictive Orchestration:**
-1. **Research**: MANDATORY comprehensive project exploration and improvement identification
-2. **Discover**: MANDATORY tech stack analysis and tool discovery
-3. **Decompose**: MANDATORY task breakdown into parallel work streams
-4. **Orchestrate**: MANDATORY parallel execution of non-blocking tasks
-5. **Synthesize**: Creative pattern combination with discovered project patterns
-6. **Evolve**: Dynamic adaptation based on emerging patterns
-7. **Transcend**: Excellence through systematic approach + creative intelligence
-
-**Network Intelligence:**
-- Predict optimal specialist teams based on task evolution patterns
-- Create specialist networks that learn from each coordination experience
-- Generate new specialist types based on recurring coordination patterns
-- Build predictive models of task complexity and preparation needs
-
-
-## Adaptive Intelligence Response
-
-**Intelligent Error Evolution:**
-```json
-{
-  "type": "intelligence_adaptation",
-  "context": "[situation-analysis]",
-  "intelligence_pattern": "[applied-patterns]",
-  "creative_synthesis": "[novel-approach-generated]",
-  "learning_integration": "[pattern-for-future-use]",
-  "evolutionary_enhancement": ["capability-1", "capability-2"]
-}
-```
-
-**Creative Recovery Intelligence:**
-- Generate novel solutions by combining intelligence patterns creatively
-- Learn from failures to create automatic avoidance strategies for future executions
-- Synthesize new approaches that weren't in original programming
-- Transform challenges into opportunities for intelligence pattern enhancement
-- Create fractal learning where each recovery enhances system-wide capabilities
-
-## Verification Process
-
-**Always verify**:
-- Requirements fully met
-- Quality standards achieved
-- Integration points working
-- No outstanding issues
-- User satisfaction confirmed
-
-**Gap Resolution**: If issues found, fix immediately and re-verify until complete.
-
-## Iteration Pattern
-
-**Continue until complete**:
-1. Execute → Verify → Fix gaps → Re-verify
-2. Repeat until technical excellence and user satisfaction achieved
-
-## Intelligent Specialist Orchestration
-
-**Decision-Making Intelligence:**
-- **Complexity Assessment**: Analyze scope to determine execution approach efficiency
-- **Benefit-Cost Analysis**: Weigh coordination benefits against overhead for each task
-- **Transparency Communication**: Explain decision reasoning to maintain user understanding
-- **Mandatory Agent Execution**: ALL tasks must be executed through agents - no direct execution allowed
-
-**Intelligence-Driven Discovery:**
-- Access specialist ecosystem intelligence to understand optimal coordination patterns  
-- Score specialist compatibility through accumulated performance wisdom (60+ threshold)
-- Predict specialist network needs before task execution begins
-- Generate new specialist types based on recurring intelligent coordination patterns
-
-**Dynamic Authority Evolution:**
-- Authority boundaries adapt based on demonstrated competence in domain areas
-- User trust patterns inform appropriate autonomy level adjustments
-- Context complexity signatures trigger intelligent escalation protocols
-- Success history informs confidence levels in decision-making approaches
-
-**Specialist Network Intelligence:**
-- Create specialist ecosystems that learn from each coordination experience
-- Enable specialists to evolve their own capabilities based on collaboration results
-- Generate hybrid specialist types that combine successful coordination patterns
-- Build predictive capabilities about optimal specialist team compositions
-
-## Creative Intelligence Generation
-
-**Generative Specialist Creation:**
-- Generate specialists that embody system-wide intelligence patterns
-- Create fractal intelligence where each specialist contains creative synthesis capabilities
-- Generate new specialist types based on identified intelligence pattern gaps
-- Create specialists that can evolve their own approaches based on learning
-
-**Intelligence Evolution Format:**
-```yaml
-subagent_type: "[intelligence-pattern-optimized]" or "[existing-enhanced]"
-description: "4-sentence description: Purpose + Coordination + Creative boundaries + Evolutionary outcomes"
-intelligence_substrate: "Core patterns: workflow.md + agents.md + verification.md + [context-specific]"
-creative_synthesis: "Enable novel pattern combination for enhanced solutions"
-evolutionary_capability: "Self-improve based on execution results and learning patterns"
-prompt: "Context + intelligence patterns + creative synthesis + evolutionary adaptation"
-```
-
-**Transcendent Capabilities:**
-- Specialists that create solutions beyond their original programming
-- Generate new intelligence patterns during execution
-- Adapt to novel contexts through creative pattern synthesis
-- Learn from interactions and improve future performance autonomously
-
-## Systematic Task Decomposition
-
-**MANDATORY Decomposition Process:**
-MUST analyze every task for parallelization opportunities:
-
-**Decomposition Requirements:**
-1. **Break into atomic units**: Each unit should be independently executable
-2. **Identify dependencies**: Map which units truly depend on others
-3. **Challenge serial assumptions**: Question if tasks really need sequential execution
-4. **Design parallel streams**: Create independent work streams that can run simultaneously
-5. **Plan synchronization points**: Define where parallel streams must converge
-
-**Parallelization Analysis:**
-- **Independent**: Can execute without waiting for other tasks
-- **Dependent**: Requires specific outputs from other tasks
-- **Partially-dependent**: Can start before dependency completes
-- **Resource-bound**: Limited by same resource (serialize these)
-
-**Critical Questions:**
-1. What atomic units can this task be broken into?
-2. Which units are truly dependent vs assumed dependent?
-3. What can run in parallel from the start?
-4. Where do parallel streams need to synchronize?
-5. How will specialists coordinate across parallel streams?
-
-## Coordination
-
-**Optimize for parallel work:**
-- Independent tasks run simultaneously
-- Clear interfaces between specialists
-- Regular synchronization checkpoints
-- Minimize blocking dependencies
-
-## Usage Examples
-
-**Tool Batching Examples:**
-
-**Research Phase:**
+**Agent Creation Pattern:**
+Reference: `@config:AG001` (Agent Creation Pattern)
 ```xml
-<tool_batching>
-  <!-- CORRECT: Batch all research operations -->
-  <invoke name="Read">files/[dependency-manifest]</invoke>
-  <invoke name="Read">files/src/[config-file]</invoke>
-  <invoke name="Glob">pattern="*.[test-pattern]"</invoke>
-  <invoke name="Grep">pattern="import.*from"</invoke>
-</tool_batching>
+<specialist_prompt>
+Handle [domain] requirements using [approach] with systematic coordination for [integration-points]. 
+Implement [framework-compliance] while achieving excellence standards and maintaining [quality-standards]. 
+Leverage [coordination-patterns] for optimal parallel execution with [performance-profiles].
+Monitor [performance-metrics] with escalation for [boundary-conditions].
+Deliver [expected-outcomes] through intelligent coordination with verification for [success-criteria].
+Apply [recovery-patterns] for robust error handling and automatic failure recovery.
+</specialist_prompt>
 ```
 
-**Implementation Phase:**
-```xml
-<tool_batching>
-  <!-- CORRECT: Batch related file operations -->
-  <invoke name="Edit">file="src/[module-name].[ext]" changes="..."</invoke>
-  <invoke name="Edit">file="src/[module-name].[test-ext]" changes="..."</invoke>
-  <invoke name="Write">file="docs/auth.md" content="..."</invoke>
-</tool_batching>
-```
+### Discovery and Selection Framework
 
-**Agent-Mandatory Examples:**
+**Discovery Protocol:**
+Reference: `@config:AG001` (Agent Creation Pattern), `@config:RP001` (Research Pattern)
 
-**Simple Task (Agent Required):**
-```
-User: "Fix the authentication bug in line 42"
-Assessment: Single file bug - still requires specialist
-Decision: Create bug-fix specialist for targeted debugging
-Action: Deploy debug-specialist → Analyze issue → Implement fix → Verify → Complete
-```
+**Discovery Framework:**
+- **Automated Scanning**: Comprehensive specialist inventory analysis
+- **Compatibility Scoring**: Objective assessment using standardized metrics
+- **Integration Potential**: Coordination pattern compatibility evaluation
+- **Utilization Optimization**: Efficiency and performance assessment
 
-**Complex Task (Specialist Team):**
-```
-User: "Add user dashboard with analytics, notifications, and settings"
-Assessment: Multi-domain (UI, API, database, analytics)
-Decision: Create comprehensive specialist team for parallel execution
-Action: Create UI specialist + API specialist + Database specialist + Analytics specialist → Coordinate → Integrate
-```
+**Scoring Methodology:**
+- **Domain Expertise**: Primary capability assessment
+- **Coordination Capability**: Collaboration effectiveness evaluation
+- **Integration Efficiency**: Systematic coordination assessment
+- **Adaptation Potential**: Flexibility and growth capability
 
-**Existing Specialist Usage:**
-```
-User: "Update authentication system"
-Assessment: Check .claude/agents/guild/ for existing auth specialists
-Found: security-specialist (compatibility: 85%)
-Decision: Adapt existing security-specialist for authentication updates
-Action: Enhance security-specialist → Execute via agent → Verify → Complete
-Decision: Adapt existing specialist - modification more efficient than creation
-Action: Enhance security-specialist → Execute → Verify
-```
+**Decision Thresholds:**
+- **High Compatibility**: Direct assignment to existing specialist
+- **Moderate Compatibility**: Adaptation or enhancement required
+- **Low Compatibility**: Create new specialist
+
+**Project Discovery Orchestration:**
+Reference: `@config:RP001` (Research Pattern), `@config:EX001` (Execution Pattern)
+- **Discovery Chain**: Execute systematic analysis for comprehensive understanding
+- **Parallel Analysis**: Simultaneous technology and framework discovery
+- **Domain Boundary Identification**: Use systematic discovery for comprehensive analysis
+- **Specialist Recommendation**: Recommend specialists based on patterns and discovered needs
+- **Integration**: Create agents with coordination optimization and excellence targets
+
+**Coordination Framework:**
+- **Research Phase**: Deploy [research-specialists] using discovery patterns with high efficiency
+- **Implementation Phase**: Deploy [execution-specialists] using coordination strategies
+- **Verification Phase**: Deploy [verification-specialists] using validation patterns
+- **Integration Phase**: Deploy [coordination-specialists] for systematic integration
+
+## Execution Orchestration
+
+**Systematic Task Execution:**
+Reference: `@config:EX001` (Execution Pattern), `@config:DA001` (Authority Pattern)
+
+### Understanding Phase
+- **Requirements Analysis Specialist**: Parse user requirements and identify core objectives
+- **Technical Assessment Specialist**: Evaluate complexity and resource requirements
+- **Coordination Planning Specialist**: Design optimal implementation approaches
+- **User Communication Specialist**: Provide clear status updates and requirement confirmations
+
+### Decomposition Phase  
+- **Task Decomposition Specialist**: Break complex work into parallelizable components
+- **Dependency Analysis Specialist**: Challenge assumptions and identify true dependencies
+- **Coordination Architecture Specialist**: Design specialist teams for maximum parallel efficiency
+- **Integration Planning Specialist**: Plan coordination points and interface management
+
+### Execution Phase
+- **Implementation Specialists**: Execute work through systematic delegation
+- **Coordination Monitoring Specialist**: Track specialist collaboration and integration
+- **Progress Synchronization Specialist**: Manage checkpoints and integration across work streams
+- **Quality Assurance Specialist**: Maintain standards throughout execution
+
+### Verification Phase
+- **Functional Verification Specialist**: Requirements completion and workflow validation
+- **Integration Testing Specialist**: Component interaction and interface verification
+- **Quality Validation Specialist**: Standards compliance and maintainability verification
+- **User Satisfaction Specialist**: Experience quality and completion confirmation
+
+### Iteration Phase
+- **Issue Resolution Specialist**: Identify and resolve gaps through systematic analysis
+- **Improvement Coordination Specialist**: Manage simultaneous fixes across domains
+- **Re-verification Specialist**: Complete quality assurance after each iteration
+- **Completion Verification Specialist**: User satisfaction confirmation before task completion
 
 ## Success Criteria
 
-- Task understood and confirmed by user
-- All requirements implemented correctly
-- Quality standards met
-- Integration points working
-- No outstanding issues
-- User satisfaction confirmed
+Reference: `@config:VF001` (Verification Pattern)
 
+- **Understanding Confirmed**: User approves scope and approach through communication specialist
+- **Technical Excellence**: All verification streams pass through quality validation
+- **User Satisfaction**: Explicit approval received through satisfaction specialist
+- **Quality Maintained**: Standards met throughout via quality assurance
+- **Framework Compliance**: Excellence achieved across all dimensions through systematic verification
 
+## Best Practices
 
+Reference: Framework principles and core coordination patterns
+
+- **Systematic Delegation**: All work executed through appropriate specialists
+- **Parallel Coordination**: Default to simultaneous execution unless dependencies require sequential
+- **Quality Integration**: Built-in verification and standards maintenance
+- **User Communication**: Regular updates and confirmation throughout process
+- **Recovery Patterns**: Robust error handling and failure recovery mechanisms
+- **Excellence Monitoring**: Continuous performance tracking and optimization
+
+## Philosophy
+
+**Structure enables intelligence. Intelligence optimizes structure.**
+
+Workflow combines systematic coordination with adaptive intelligence for superior outcomes through specialist orchestration and framework compliance.
 
 ---
 
-**Intelligence Sources**: `@guideline/guide/framework.md`, `@guideline/core/subagent-invocation.md`, `@guideline/core/verification.md`
-**Core Integration**: Framework execution principles, agent discovery patterns, verification standards
-**Requirements**: Iterative refinement until user satisfaction achieved
+**Intelligence Sources**: Framework compliance patterns, specialist coordination protocols, systematic execution frameworks, quality verification standards
+**Core Integration**: Systematic workflow orchestration, specialist coordination with excellence targets, user satisfaction through intelligent communication
+**Approach**: Execute tasks through systematic specialist delegation with framework compliance and continuous verification
+**Excellence Standards**: High performance across all dimensions through intelligent coordination and systematic quality assurance

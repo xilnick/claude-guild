@@ -1,54 +1,51 @@
 # Core Intelligence Modules
 
-Streamlined modules that guide Claude's native intelligence for task execution without redundancy.
+**Elegant, principle-focused modules delivering comprehensive Guild system intelligence.**
 
-## Module Hierarchy
+## Module Architecture
 
-### Primary Execution Modules
+### Core Framework Modules
 
-**workflow.md** - Core execution patterns
-- Native intelligence routing and parallel execution
-- Systematic decomposition with autonomous iteration
-- Integration with specialist creation and verification
+**shared-configs.md** - Essential patterns and configurations
+- Core @config reference system for consistent integration
+- Essential coordination patterns eliminating redundancy
+- Resource types, coordination strategies, and recovery patterns
+- Simplified pattern library enabling intelligent execution
 
-**agents.md** - Subagent creation and management
-- Enhanced persistent vs dynamic decision framework  
-- Intelligent pattern matching for existing agents
-- Proactive parallel specialist creation strategies
+**decision-authority.md** - Authority boundaries enabling intelligence
+- 4-level hierarchy with clear precedence
+- Automated boundary enforcement with decision support
+- Conflict resolution with creative alternatives
+- User authority protection within framework constraints
 
-**verification.md** - Quality assurance patterns
-- Parallel verification methodology
-- Autonomous gap detection and remediation
-- Integration testing and quality standards
+**verification.md** - Intelligence-driven verification
+- Multi-domain coordination across functional and compliance dimensions
+- Parallel verification with intelligent integration
+- Quality gates with framework compliance validation
+- Continuous optimization with performance monitoring
 
-### Authority and Adaptation Modules
+## Framework Benefits
 
-**decision-authority.md** - Authority boundaries
-- 4-level decision hierarchy (Autonomous → Structural → Implementation → Advisory)
-- Clear confirmation vs autonomous execution boundaries
-- Conflict resolution and escalation protocols
+**Elegant Simplicity:**
+- Clean, focused modules without redundancy
+- Essential patterns enabling rather than constraining intelligence
+- Consistent philosophy across all components
+- Streamlined configuration with clear references
 
-## Consolidation Benefits
-
-**ELIMINATED REDUNDANCY:**
-- Removed intelligence-metrics.md (not implemented in install.js)
-- Removed intelligence-tracker.md (not implemented in install.js) 
-- Removed intelligence-boundaries.md (redundant with framework.md)
-- Removed template-usage.md (self-referential without practical value)
-- Eliminated circular cross-references creating dependency loops
-
-**ENHANCED FOCUS:**
-- Clear module hierarchy without overlap
-- Focused intelligence tracking without philosophical redundancy
-- Streamlined cross-references for better maintainability
-
-**IMPROVED SUBAGENT INVOCATION:**
-- Enhanced persistent agent discovery and pattern matching
-- Clear dynamic vs persistent decision framework
-- Better integration with existing agent ecosystem
+**Intelligent Coordination:**
+- Structure enables rather than restricts creativity
+- Cross-module synergy optimizes execution
+- Unified approach across all framework dimensions
+- Performance optimization through systematic intelligence
 
 ## Core Philosophy
 
-Systematic Intelligence: Structure enables intelligence, intelligence optimizes structure. These modules provide reliability foundations while enabling creative excellence through complementary operation rather than competing approaches.
+**Structure enables intelligence. Intelligence optimizes structure.**
 
-**Implementation Standards**: All modules follow Tool Use Implementation requirements with 4-5 sentence specialist descriptions, comprehensive error handling, and parallel execution optimization.
+Framework provides systematic foundation while enabling creative solutions within compliance boundaries.
+
+## Success Metrics
+
+- **Excellence Standards** across all framework dimensions
+- **High Performance** with user satisfaction
+- **Elegant execution** through intelligent coordination
