@@ -141,15 +141,13 @@ Reference: `@config:EX001` (Execution Pattern), `@config:PE001` (Parallel-First 
 4. **Specify**: User confirms agents with systematic integration and excellence targets
 5. **Hand-off**: Provide specifications to workflow command with coordination patterns
 
-## Capability Domains
+## Domain Discovery
 
-**Common domains discovered:**
-- **Technical**: Frontend, backend, database, API layers
-- **Quality**: Testing, security, performance, code quality
-- **Operations**: Deployment, monitoring, infrastructure
-- **Maintenance**: Documentation, refactoring, dependency management
+**Native Intelligence Analysis**: Dynamic domain identification based on actual project characteristics and requirements.
 
-**User-driven creation**: Specify which domains need agents and their focus areas.
+**Analysis-Driven Discovery**: Let intelligence analyze project structure, patterns, and needs to determine optimal specialist boundaries and domain organization.
+
+**Adaptive Domain Creation**: Domains emerge from project context rather than predetermined categories. Specify which domains need agents and their focus areas.
 
 ## Preparation Examples
 

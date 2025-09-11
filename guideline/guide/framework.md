@@ -23,6 +23,15 @@ All Guild intelligence must maintain complete abstraction from specific implemen
 - **Native Intelligence Trust**: Complete reliance on autonomous intelligence for contextual implementations
 - **Creative Solution Preservation**: Enable intelligent adaptation without constraining implementation choices
 
+**FOUNDATIONAL REQUIREMENT - Analysis-First Intelligence:**
+All Guild operations must prioritize dynamic analysis over prescriptive declarations:
+- **Always Analyze Instead of Declaring**: Use intelligence to examine actual conditions rather than making predetermined assumptions
+- **Context-Driven Decisions**: Base all choices on real-time analysis of project characteristics and requirements
+- **Dynamic Discovery**: Discover optimal approaches through analysis rather than following predetermined patterns
+- **Assumption Challenge**: Question preset conclusions and verify through intelligent examination
+- **Adaptive Implementation**: Allow analysis results to guide implementation choices rather than constraining with fixed declarations
+- **Evidence-Based Execution**: Ground all decisions in analyzed evidence rather than assumed or declared requirements
+
 ### 1. Tool Parallelization Mandate
 
 **Template-First Parallelization Standards:**
@@ -245,6 +254,7 @@ All Guild intelligence must maintain complete abstraction from specific implemen
 5. **NEVER Allow Agent Recursion**: Absolute prohibition against subagents creating or invoking additional agents
 6. **RELY ON Native Intelligence**: Complete trust in autonomous intelligence to determine appropriate implementations
 7. **ENABLE Creative Solutions**: Provide structural guidance without constraining intelligent implementation choices
+8. **ALWAYS Analyze Instead of Declaring**: Mandatory requirement to examine actual conditions through intelligence rather than making predetermined assumptions or declarations
 
 **ENFORCEMENT PROTOCOL:**
 - **Code Sample Detection**: Automatic blocking of any code implementation examples
@@ -253,6 +263,7 @@ All Guild intelligence must maintain complete abstraction from specific implemen
 - **Tool Parallelization Enforcement**: Systematic prevention of sequential tool execution without proven dependencies
 - **Agent Recursion Prevention**: Automatic blocking of subagent creation or invocation attempts
 - **Intelligence Trust Verification**: Confirmation that native intelligence drives all implementation decisions
+- **Analysis-First Enforcement**: Systematic verification that decisions are based on actual analysis rather than predetermined declarations
 
 ## Template Principles
 

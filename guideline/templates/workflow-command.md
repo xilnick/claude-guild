@@ -22,6 +22,7 @@ Execute [task-requirements] using systematic intelligence with specialist coordi
 - **Agent Anti-Recursion**: Template ensures flat agent hierarchy - only primary system creates or invokes agents
 - **Native Intelligence Authority**: Template delegates all implementation decisions to autonomous intelligence capabilities
 - **Creative Solution Enablement**: Template framework preserves intelligent adaptation while maintaining structural guidance
+- **Analysis-First Intelligence**: Template requires examining actual conditions through intelligence rather than predetermined assumptions or declarations
 
 ## Framework Compliance
 
@@ -79,10 +80,10 @@ Maintain flat agent hierarchy with single-level delegation exclusively.
 Reference: `@config:AG001` (Agent Creation Pattern), `@config:AM001` (Agent-Mandatory Architecture), `@config:PE001` (Parallel-First Execution Engine), `@config:RP001` (Research Pattern)
 
 **Discovery Framework:**
-- **Automated Scanning**: Comprehensive specialist inventory analysis
-- **Compatibility Scoring**: Objective assessment using standardized metrics
-- **Integration Potential**: Coordination pattern compatibility evaluation
-- **Utilization Optimization**: Efficiency and performance assessment
+- **Dynamic Analysis**: Intelligent examination of actual project conditions and requirements
+- **Context-Based Assessment**: Real-time evaluation of project characteristics rather than predetermined assumptions
+- **Adaptive Discovery**: Analysis-driven identification of optimal specialist approaches
+- **Evidence-Based Selection**: Decisions grounded in analyzed project evidence rather than declared patterns
 
 **Scoring Methodology:**
 - **Domain Expertise**: Primary capability assessment
@@ -115,16 +116,16 @@ Reference: `@config:RP001` (Research Pattern), `@config:PE001` (Parallel-First E
 Reference: `@config:TB001` (Tool Parallelization Mandate), `@config:AM001` (Agent-Mandatory Architecture), `@config:PE001` (Parallel-First Execution Engine), `@config:RP001` (Research Pattern), `@config:AR001` (Agent Recursion Prevention), `@config:OB001` (Operation Batching Optimization)
 
 ### Understanding Phase
-- **[Analysis-Type] Specialist**: Parse [input-requirements] and identify core objectives
-- **[Assessment-Type] Specialist**: Evaluate [complexity-factors] and resource requirements
-- **[Planning-Type] Specialist**: Design optimal [implementation-strategy] approaches
-- **[Communication-Type] Specialist**: Provide clear [status-information] and requirement confirmations
+- **[Analysis-Type] Specialist**: Analyze [actual-conditions] and discover true objectives through examination rather than assumption
+- **[Assessment-Type] Specialist**: Investigate [real-complexity] and determine resource requirements through analysis rather than prediction
+- **[Planning-Type] Specialist**: Analyze optimal [context-specific-strategy] approaches based on discovered conditions
+- **[Communication-Type] Specialist**: Analyze [actual-status] and provide evidence-based confirmations rather than assumed information
 
 ### Decomposition Phase  
-- **[Decomposition-Type] Specialist**: Break complex [work-items] into parallelizable components
-- **[Analysis-Type] Specialist**: Challenge assumptions and identify true dependencies
-- **[Architecture-Type] Specialist**: Design specialist teams for maximum parallel efficiency
-- **[Planning-Type] Specialist**: Plan coordination points and interface management
+- **[Decomposition-Type] Specialist**: Analyze complex [work-items] to discover optimal parallelizable components through examination
+- **[Analysis-Type] Specialist**: Examine and challenge declared assumptions to identify actual dependencies through investigation
+- **[Architecture-Type] Specialist**: Analyze project characteristics to discover optimal specialist team organization rather than assuming predetermined structures
+- **[Planning-Type] Specialist**: Examine actual coordination needs to determine interface management approaches through analysis
 
 ### Execution Phase
 - **[Implementation-Type] Specialists**: Execute [work-components] through systematic delegation
@@ -133,16 +134,16 @@ Reference: `@config:TB001` (Tool Parallelization Mandate), `@config:AM001` (Agen
 - **[Quality-Type] Specialist**: Maintain standards throughout execution
 
 ### Verification Phase
-- **[Verification-Type] Specialist**: Requirements completion and workflow validation
-- **[Testing-Type] Specialist**: Component interaction and interface verification
-- **[Validation-Type] Specialist**: Standards compliance and maintainability verification
-- **[Satisfaction-Type] Specialist**: Experience quality and completion confirmation
+- **[Verification-Type] Specialist**: Analyze actual requirements completion through examination rather than assuming workflow validation
+- **[Testing-Type] Specialist**: Investigate component interactions to discover actual interface behavior rather than declaring verification
+- **[Validation-Type] Specialist**: Examine standards compliance through analysis rather than predetermined validation patterns
+- **[Satisfaction-Type] Specialist**: Analyze user experience quality to determine actual completion status rather than assumed confirmation
 
 ### Iteration Phase
-- **Issue Resolution Specialist**: Identify and resolve gaps through systematic analysis
-- **Improvement Coordination Specialist**: Manage simultaneous fixes across domains
-- **Re-verification Specialist**: Complete quality assurance after each iteration
-- **Completion Verification Specialist**: User satisfaction confirmation before task completion
+- **Issue Resolution Specialist**: Analyze actual gaps through systematic examination to discover root causes rather than assuming problem patterns
+- **Improvement Coordination Specialist**: Investigate simultaneous fix requirements across domains through analysis rather than predetermined management approaches
+- **Re-verification Specialist**: Analyze quality assurance status after each iteration through examination rather than assumed completion
+- **Completion Verification Specialist**: Examine actual user satisfaction through analysis rather than predetermined confirmation patterns
 
 ## Success Criteria
 
