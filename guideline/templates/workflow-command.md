@@ -26,14 +26,15 @@ Execute [task-requirements] using systematic intelligence with specialist coordi
 ## Framework Compliance
 
 **Systematic Excellence Architecture:**
-Reference: `@config:AG001`, `@config:EX001`, `@config:RP001`, `@config:VF001`
+Reference: `@config:TB001`, `@config:AM001`, `@config:PE001`, `@config:RP001`, `@config:AR001`, `@config:OB001`
 
-**Execution Protocol:**
-1. **Agent Assignment**: Route [task-type] through specialist assignment protocol
-2. **Parallel Planning**: Apply decomposition patterns for [task-components] using coordination strategies
-3. **Research Gates**: Complete discovery requirements through systematic analysis
-4. **Excellence Optimization**: Achieve high performance through intelligent coordination
-5. **Performance Monitoring**: Track and optimize execution with automatic recovery patterns
+**6-Dimensional Execution Protocol:**
+1. **Tool Parallelization**: Execute simultaneous tool operations with dependency challenge protocols
+2. **Agent Assignment**: Route [task-type] through mandatory specialist assignment protocol with zero direct execution
+3. **Parallel Planning**: Apply parallel-first decomposition patterns for [task-components] using coordination strategies
+4. **Research Gates**: Complete comprehensive discovery requirements through systematic analysis before implementation
+5. **Recursion Prevention**: Maintain flat agent hierarchy with single-level delegation exclusively
+6. **Operation Batching**: Coordinate strategic operation grouping for enhanced performance and resource optimization
 
 ## Specialist Orchestration
 
@@ -43,20 +44,20 @@ Intelligent specialist creation with framework compliance integration and coordi
 ### Compliance-Driven Agent Factory
 
 **Excellence Integration:**
-Reference: `@config:AG001` (Agent Creation Pattern), `@config:CS001` (Coordination Strategy)
+Reference: `@config:AG001` (Agent Creation Pattern), `@config:AM001` (Agent-Mandatory Architecture), `@config:TB001` (Tool Parallelization Mandate), `@config:CS001` (Coordination Strategy)
 
 **Enhanced Creation Standards:**
-- **Agent-Mandatory Excellence**: All specialists designed for systematic delegation
-- **Parallel-First Optimization**: All specialists optimized for coordination excellence
-- **Research Protocol Integration**: All specialists aligned with discovery patterns
-- **Excellence Standards**: All specialists designed for optimal coordination and resource utilization
-- **Performance Profiling**: All specialists leverage appropriate complexity categorization
-- **Coordination-Driven Execution**: All specialists coordinate through established patterns
+- **Tool Parallelization Excellence**: All specialists optimized for mandatory parallel tool execution
+- **Agent-Mandatory Excellence**: All specialists designed for zero direct execution with systematic delegation
+- **Parallel-First Optimization**: All specialists optimized for task decomposition and coordination excellence
+- **Research Protocol Integration**: All specialists aligned with comprehensive discovery patterns
+- **Recursion Prevention Excellence**: All specialists constrained to prevent agent creation or invocation
+- **Operation Batching Excellence**: All specialists designed for strategic operation grouping and resource optimization
 - **Recovery-Integrated Design**: All specialists equipped with automatic failure recovery mechanisms
-- **Anti-Recursion Compliance**: All specialists constrained to prevent agent creation or invocation
+- **Dimensional Compliance**: All specialists aligned across all 6 framework dimensions
 
 **Agent Creation Pattern:**
-Reference: `@config:AG001` (Agent Creation Pattern), `@config:AR001` (Agent Recursion Prevention)
+Reference: `@config:AG001` (Agent Creation Pattern), `@config:AM001` (Agent-Mandatory Architecture), `@config:TB001` (Tool Parallelization Mandate), `@config:AR001` (Agent Recursion Prevention)
 ```xml
 <specialist_prompt>
 Handle [domain] requirements using [approach] with systematic coordination for [integration-points]. 
@@ -75,7 +76,7 @@ Maintain flat agent hierarchy with single-level delegation exclusively.
 ### Discovery and Selection Framework
 
 **Discovery Protocol:**
-Reference: `@config:AG001` (Agent Creation Pattern), `@config:RP001` (Research Pattern)
+Reference: `@config:AG001` (Agent Creation Pattern), `@config:AM001` (Agent-Mandatory Architecture), `@config:PE001` (Parallel-First Execution Engine), `@config:RP001` (Research Pattern)
 
 **Discovery Framework:**
 - **Automated Scanning**: Comprehensive specialist inventory analysis
@@ -95,7 +96,7 @@ Reference: `@config:AG001` (Agent Creation Pattern), `@config:RP001` (Research P
 - **Low Compatibility**: Create new specialist
 
 **Project Discovery Orchestration:**
-Reference: `@config:RP001` (Research Pattern), `@config:EX001` (Execution Pattern)
+Reference: `@config:RP001` (Research Pattern), `@config:PE001` (Parallel-First Execution Engine), `@config:EX001` (Execution Pattern), `@config:TB001` (Tool Parallelization Mandate)
 - **Discovery Chain**: Execute systematic analysis for comprehensive understanding
 - **Parallel Analysis**: Simultaneous technology and framework discovery
 - **Domain Boundary Identification**: Use systematic discovery for comprehensive analysis
@@ -111,7 +112,7 @@ Reference: `@config:RP001` (Research Pattern), `@config:EX001` (Execution Patter
 ## Execution Orchestration
 
 **Systematic Task Execution:**
-Reference: `@config:EX001` (Execution Pattern), `@config:DA001` (Authority Pattern)
+Reference: `@config:TB001` (Tool Parallelization Mandate), `@config:AM001` (Agent-Mandatory Architecture), `@config:PE001` (Parallel-First Execution Engine), `@config:RP001` (Research Pattern), `@config:AR001` (Agent Recursion Prevention), `@config:OB001` (Operation Batching Optimization)
 
 ### Understanding Phase
 - **[Analysis-Type] Specialist**: Parse [input-requirements] and identify core objectives
@@ -145,24 +146,28 @@ Reference: `@config:EX001` (Execution Pattern), `@config:DA001` (Authority Patte
 
 ## Success Criteria
 
-Reference: `@config:VF001` (Verification Pattern)
+Reference: `@config:VF001` (Verification Pattern), `@config:TB001` (Tool Parallelization Mandate), `@config:AM001` (Agent-Mandatory Architecture), `@config:PE001` (Parallel-First Execution Engine), `@config:AR001` (Agent Recursion Prevention), `@config:OB001` (Operation Batching Optimization)
 
-- **Understanding Confirmed**: User approves scope and approach through communication specialist
-- **Technical Excellence**: All verification streams pass through quality validation
-- **User Satisfaction**: Explicit approval received through satisfaction specialist
-- **Quality Maintained**: Standards met throughout via quality assurance
-- **Framework Compliance**: Excellence achieved across all dimensions through systematic verification
+- **Tool Parallelization Success**: Mandatory parallel tool execution achieved with dependency validation
+- **Agent-Mandatory Success**: Zero direct execution maintained with complete specialist delegation
+- **Parallel-First Success**: Task decomposition completed with parallel execution optimization
+- **Research Protocol Success**: Comprehensive discovery completed before implementation
+- **Recursion Prevention Success**: Flat agent hierarchy maintained with single-level delegation
+- **Operation Batching Success**: Strategic operation grouping achieved with performance optimization
+- **User Satisfaction**: Explicit approval received through satisfaction specialist across all dimensions
 
 ## Best Practices
 
 Reference: Framework principles and core coordination patterns
 
-- **Systematic Delegation**: All work executed through appropriate specialists
-- **Parallel Coordination**: Default to simultaneous execution unless dependencies require sequential
-- **Quality Integration**: Built-in verification and standards maintenance
-- **User Communication**: Regular updates and confirmation throughout process
-- **Recovery Patterns**: Robust error handling and failure recovery mechanisms
-- **Excellence Monitoring**: Continuous performance tracking and optimization
+- **Tool Parallelization Excellence**: Mandatory simultaneous tool execution with dependency challenge protocols
+- **Agent-Mandatory Excellence**: All work executed through appropriate specialists with zero direct execution
+- **Parallel-First Excellence**: Default to simultaneous execution unless dependencies require sequential processing
+- **Research Protocol Excellence**: Comprehensive discovery before implementation with modernization validation
+- **Recursion Prevention Excellence**: Flat agent hierarchy maintained with single-level delegation exclusively
+- **Operation Batching Excellence**: Strategic operation grouping for enhanced performance and resource optimization
+- **Quality Integration**: Built-in verification and standards maintenance across all dimensions
+- **User Communication**: Regular updates and confirmation throughout process with dimensional compliance
 
 ## Philosophy
 

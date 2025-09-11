@@ -29,32 +29,32 @@ Comprehensive project analysis to determine optimal agent specifications through
 ### Initial Project Discovery
 
 **Preparation-Focused Analysis:**
-Reference: `@config:AG001` (Agent Creation Pattern), `@config:RP001` (Research Pattern)
+Reference: `@config:AG001` (Agent Creation Pattern), `@config:AM001` (Agent-Mandatory Architecture), `@config:PE001` (Parallel-First Execution Engine), `@config:RP001` (Research Pattern)
 - Execute systematic discovery for comprehensive project understanding
 - Parallel analysis of project technologies and frameworks
 - Map project structure through coordinated exploration
 - Assess complexity areas requiring specialized assistance
-- Document findings for intelligent agent creation specifications
+- Document findings for intelligent agent creation specifications with dimensional compliance
 
 **Runtime Tool Discovery:**
-Reference: `@config:TB001` (Tool Batching Optimization)
+Reference: `@config:TB001` (Tool Parallelization Mandate), `@config:OB001` (Operation Batching Optimization)
 - Dynamic scanning of available development tools and capabilities
-- Tool capability assessment for performance optimization
+- Tool capability assessment for parallel execution optimization
 - Tool inventory compilation with capability profiling
-- Tool-aware batching strategy preparation
+- Tool-aware parallelization and batching strategy preparation
 
 **Discovery Coordination:**
-Reference: `@config:EX001` (Execution Pattern), `@config:TB001` (Tool Batching Optimization)
+Reference: `@config:EX001` (Execution Pattern), `@config:PE001` (Parallel-First Execution Engine), `@config:TB001` (Tool Parallelization Mandate), `@config:AR001` (Agent Recursion Prevention)
 - Parallel execution of project configuration and dependency analysis
 - Simultaneous tool capability scanning and inventory assessment
 - Simultaneous codebase structure scanning
 - Coordinated testing framework and build tool identification
-- Parallel architectural pattern mapping with tool-aware optimization
+- Parallel architectural pattern mapping with tool-aware optimization and anti-recursion constraints
 
 ## Comprehensive Project Discovery
 
 **Initialization Analysis:**
-Reference: `@config:RP001` (Research Pattern), `@config:TB001` (Tool Batching Optimization)
+Reference: `@config:RP001` (Research Pattern), `@config:TB001` (Tool Parallelization Mandate), `@config:AM001` (Agent-Mandatory Architecture), `@config:OB001` (Operation Batching Optimization)
 
 Gather information through systematic exploration to prepare agent specifications:
 - **Technology Stack Analysis**: Comprehensive framework and dependency discovery
@@ -62,16 +62,18 @@ Gather information through systematic exploration to prepare agent specification
 - **Domain Boundaries**: Identify natural specialist focus areas
 - **Complexity Assessment**: Determine areas requiring specialized agent assistance
 - **Performance Profiling**: Categorize project components by complexity requirements
-- **Tool Capability Profiling**: Assess available tools for optimal batching and performance optimization
+- **Tool Capability Profiling**: Assess available tools for optimal parallelization, batching, and performance optimization
+- **Agent-Mandatory Assessment**: Identify areas requiring mandatory specialist delegation
+- **Parallel-First Analysis**: Map natural parallel execution opportunities and dependencies
 
 ## Specialist Creation Standards
 
 **4-Sentence Description Format:**
-Reference: `@config:AG001` (Agent Creation Pattern)
-1. **Purpose**: What the specialist does, core capabilities, and systematic integration
-2. **Coordination**: How it works with others using established patterns and when to use
-3. **Boundaries**: Important limitations, recovery patterns, and error handling
-4. **Outcomes**: Expected results, integration patterns, and excellence targets
+Reference: `@config:AG001` (Agent Creation Pattern), `@config:AM001` (Agent-Mandatory Architecture), `@config:AR001` (Agent Recursion Prevention)
+1. **Purpose**: What the specialist does, core capabilities, and systematic integration with mandatory agent delegation
+2. **Coordination**: How it works with others using established patterns and when to use within parallel-first execution
+3. **Boundaries**: Important limitations, recovery patterns, error handling, and anti-recursion constraints
+4. **Outcomes**: Expected results, integration patterns, excellence targets, and dimensional compliance
 
 ## Organization Structure
 
@@ -131,7 +133,7 @@ description: "[4-sentence description following framework standards with systema
 
 ## Interactive Process
 
-Reference: `@config:EX001` (Execution Pattern), `@config:RP001` (Research Pattern)
+Reference: `@config:EX001` (Execution Pattern), `@config:PE001` (Parallel-First Execution Engine), `@config:RP001` (Research Pattern), `@config:AM001` (Agent-Mandatory Architecture)
 
 1. **Analyze**: Execute comprehensive discovery workflow through systematic analysis
 2. **Document**: Record findings using structured patterns and organizational characteristics
@@ -152,7 +154,7 @@ Reference: `@config:EX001` (Execution Pattern), `@config:RP001` (Research Patter
 ## Preparation Examples
 
 **Project Analysis Process:**
-Reference: `@config:RP001` (Research Pattern), `@config:EX001` (Execution Pattern)
+Reference: `@config:RP001` (Research Pattern), `@config:PE001` (Parallel-First Execution Engine), `@config:EX001` (Execution Pattern), `@config:TB001` (Tool Parallelization Mandate)
 
 **Analysis Approach:**
 ```
@@ -198,7 +200,7 @@ Integration Patterns: [coordination-methods] + [collaboration-interfaces] + [qua
 
 ## Best Practices
 
-Reference: `@config:AG001` (Agent Creation Pattern), `@config:CS001` (Coordination Strategy)
+Reference: `@config:AG001` (Agent Creation Pattern), `@config:AM001` (Agent-Mandatory Architecture), `@config:CS001` (Coordination Strategy), `@config:AR001` (Agent Recursion Prevention)
 
 - Execute comprehensive discovery workflows before recommending agents
 - Create agents with clear specializations and coordination boundaries

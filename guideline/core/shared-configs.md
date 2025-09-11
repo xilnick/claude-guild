@@ -21,12 +21,26 @@ Essential patterns enabling systematic intelligence coordination with mandatory 
 - **Creation**: Focused, minimal specialist descriptions
 - **Integration**: Parallel coordination planning
 
+### Agent-Mandatory Architecture (@config:AM001)
+**Principle**: Zero direct execution with mandatory agent delegation
+- **Assignment Protocol**: Every task must flow through specialist assignment evaluation
+- **Direct Prevention**: Block inappropriate direct execution through automated guards
+- **Agent Creation**: Standardized specialist development with capability assessment
+- **Monitoring**: Track compliance with delegation standards and assignment protocols
+
 ### Execution Pattern (@config:EX001)
 **Principle**: Systematic decomposition with parallel optimization
 - **Decomposition**: Break tasks into independent units
 - **Challenge**: Question sequential assumptions
 - **Coordination**: Minimize overhead while maximizing parallelism
 - **Excellence**: High performance across all dimensions
+
+### Parallel-First Execution Engine (@config:PE001)
+**Principle**: Default parallel task decomposition with dependency challenge
+- **Task Analysis**: Break tasks into atomic parallelizable units
+- **Dependency Discovery**: Identify true vs. assumed dependencies with challenge protocols
+- **Parallel Default**: Simultaneous execution unless proven dependencies exist
+- **Synchronization Design**: Plan integration points before parallel execution begins
 
 ### Research Pattern (@config:RP001)
 **Principle**: Comprehensive discovery before implementation
@@ -60,6 +74,13 @@ Essential patterns enabling systematic intelligence coordination with mandatory 
 - **Recursion Detection**: Runtime monitoring and blocking of subagent creation attempts
 - **Delegation Authority**: Single-level delegation through primary system exclusively
 - **Resource Protection**: Prevention of infinite recursion and resource exhaustion
+
+### Operation Batching Optimization (@config:OB001)
+**Principle**: Strategic operation grouping for enhanced performance
+- **Operation Classification**: Group operations by type, resource usage, and interdependencies
+- **Performance Enhancement**: Minimize context switching through strategic operation grouping
+- **Resource Balance**: Coordinate parallel execution with system resource constraints
+- **Efficiency Tracking**: Real-time performance monitoring with systematic optimization
 
 ## Resource Management Patterns
 

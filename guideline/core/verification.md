@@ -35,11 +35,11 @@ Reference: `@config:VF001`
 ### Verification Specialists
 
 **Specialist Framework:**
-- **Compliance Specialist**: Framework compliance across dimensions including anti-recursion enforcement
-- **Functional Specialist**: Requirements completion workflow validation
-- **Integration Specialist**: Component interaction interface validation 
-- **Performance Specialist**: Efficiency optimization resource validation
-- **Architecture Specialist**: Agent hierarchy integrity and recursion prevention validation
+- **Compliance Specialist**: Framework compliance across all 6 dimensions including tool parallelization and agent-mandatory architecture
+- **Functional Specialist**: Requirements completion workflow validation with parallel-first execution verification
+- **Integration Specialist**: Component interaction interface validation with operation batching assessment
+- **Performance Specialist**: Efficiency optimization resource validation with research protocol compliance
+- **Architecture Specialist**: Agent hierarchy integrity and recursion prevention validation across all dimensions
 
 **Coordination Patterns:**
 - **Parallel Execution**: Simultaneous validation across quality dimensions
@@ -51,11 +51,12 @@ Reference: `@config:VF001`
 ### Quality Gates
 
 **Verification Framework:**
-- **Functional**: Requirements, workflow, and integration validation
-- **Compliance**: Framework excellence target achievement including anti-recursion enforcement
-- **Performance**: Efficiency optimization and resource validation
-- **Quality**: Standards, maintainability, and error handling
-- **Architecture**: Agent hierarchy integrity and recursion prevention validation
+- **Tool Parallelization**: Mandatory simultaneous tool execution validation and dependency challenge verification
+- **Agent-Mandatory**: Zero direct execution validation with assignment protocol verification
+- **Parallel-First**: Task decomposition validation with dependency challenge and parallel default compliance
+- **Research Protocol**: Comprehensive discovery validation with modernization and impact analysis assessment
+- **Agent Recursion Prevention**: Flat hierarchy validation with recursion detection and authority enforcement
+- **Operation Batching**: Strategic operation grouping validation with performance enhancement assessment
 
 **Gate Coordination:**
 - **Parallel Processing**: Simultaneous validation across quality dimensions
@@ -65,10 +66,12 @@ Reference: `@config:VF001`
 ### Testing Integration
 
 **Testing Framework:**
-- **Functional**: Unit, integration, system, and acceptance validation
-- **Compliance**: Framework dimension verification across targets including agent hierarchy constraints
-- **Performance**: Efficiency optimization and resource validation
-- **Architecture**: Agent recursion prevention and hierarchy integrity testing
+- **Tool Parallelization**: Parallel tool execution testing with dependency validation and performance metrics
+- **Agent-Mandatory**: Agent delegation testing with direct execution prevention and assignment protocol validation
+- **Parallel-First**: Task decomposition testing with dependency challenge verification and parallel execution validation
+- **Research Protocol**: Discovery completeness testing with modernization validation and impact analysis verification
+- **Agent Recursion Prevention**: Hierarchy integrity testing with recursion detection and authority enforcement validation
+- **Operation Batching**: Batching efficiency testing with resource balance verification and performance tracking
 
 **Testing Coordination:**
 - **Parallel Execution**: Simultaneous testing across domains
@@ -93,6 +96,42 @@ Reference: `@config:VF001`
 - **Dependency Validation**: Verification that sequential tool execution has proven dependencies
 - **Parallel Efficiency**: Assessment of tool parallelization optimization and resource utilization
 - **Performance Metrics**: Validation of parallel tool execution effectiveness and improvement
+
+### Agent-Mandatory Architecture Verification
+
+**Mandatory Agent Delegation Assessment:**
+Reference: `@config:AM001` (Agent-Mandatory Architecture)
+- **Assignment Protocol Validation**: Verification that all tasks flow through specialist assignment evaluation
+- **Direct Execution Prevention**: Detection and blocking of inappropriate direct execution attempts
+- **Agent Creation Standards**: Validation of standardized specialist development with capability assessment
+- **Delegation Compliance**: Monitoring and verification of delegation standards and assignment protocols
+
+### Parallel-First Execution Verification
+
+**Mandatory Parallel Execution Assessment:**
+Reference: `@config:PE001` (Parallel-First Execution Engine)
+- **Task Decomposition Validation**: Verification of atomic parallelizable unit breakdown
+- **Dependency Challenge Verification**: Assessment of true vs. assumed dependency identification
+- **Parallel Default Compliance**: Validation of simultaneous execution unless proven dependencies exist
+- **Synchronization Integrity**: Verification of integration point planning before parallel execution
+
+### Research Protocol Verification
+
+**Mandatory Discovery Assessment:**
+Reference: `@config:RP001` (Research Pattern)
+- **Pre-Implementation Discovery**: Verification of comprehensive discovery before any implementation
+- **Modernization Validation**: Assessment of current version and best practice compliance
+- **Impact Analysis Completeness**: Validation of affected area mapping thoroughness
+- **Discovery Integration**: Verification of parallel analysis across structure, technology, and impact
+
+### Operation Batching Verification
+
+**Mandatory Batching Assessment:**
+Reference: `@config:OB001` (Operation Batching Optimization)
+- **Operation Classification Validation**: Verification of proper grouping by type, resource usage, and interdependencies
+- **Performance Enhancement Assessment**: Validation of context switching minimization through strategic operation grouping
+- **Resource Balance Verification**: Assessment of parallel execution coordination with system resource constraints
+- **Efficiency Tracking Validation**: Verification of real-time performance monitoring with systematic optimization
 
 ### Agent Anti-Recursion Verification
 
