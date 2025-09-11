@@ -15,7 +15,8 @@ Intelligent verification integrating task completion with framework compliance a
 
 - **Code Sample Prohibition**: Verification must detect and reject any code implementations or syntax examples
 - **Technology Abstraction**: Verification must confirm complete technology independence using abstract patterns
-- **Template Compliance**: Verification must validate exclusive use of `[placeholder]` patterns  
+- **Template Compliance**: Verification must validate exclusive use of `[placeholder]` patterns
+- **Tool Parallelization Compliance**: Verification must confirm mandatory simultaneous tool execution unless proven dependencies exist  
 - **Native Intelligence Validation**: Verification must confirm reliance on autonomous implementation decisions
 - **Creative Solution Protection**: Verification must ensure intelligent solution space preservation
 
@@ -76,8 +77,17 @@ Reference: `@config:VF001`
 
 **Simultaneous Excellence:**
 - **Verification Batching**: Functional, compliance, performance, quality parallel execution
+- **Tool Parallelization Validation**: Verification of mandatory simultaneous tool execution patterns
 - **Coordination**: Checkpoint synchronization with minimal overhead
 - **Integration**: Systematic result coordination and completion
+
+### Tool Parallelization Verification
+
+**Mandatory Parallelization Assessment:**
+- **Sequential Prevention**: Detection and blocking of unnecessary sequential tool operations
+- **Dependency Validation**: Verification that sequential tool execution has proven dependencies
+- **Parallel Efficiency**: Assessment of tool parallelization optimization and resource utilization
+- **Performance Metrics**: Validation of parallel tool execution effectiveness and improvement
 
 ### Continuous Verification
 

@@ -40,12 +40,12 @@ Essential patterns enabling systematic intelligence coordination with mandatory 
 - **Quality**: Functional and integration verification
 - **Coordination**: Parallel domain assessment
 
-### Tool Batching Optimization (@config:TB001)
-**Principle**: Runtime tool discovery with capability-aware optimization
-- **Discovery**: Dynamic tool capability scanning and inventory assessment
-- **Profiling**: Tool performance characteristics and optimization potential
-- **Batching**: Tool-aware operation grouping for maximum efficiency
-- **Optimization**: Continuous tool utilization monitoring and improvement
+### Tool Parallelization Mandate (@config:TB001)
+**Principle**: Mandatory parallel tool execution with capability-aware optimization
+- **Parallel Discovery**: Simultaneous tool capability scanning and parallel inventory assessment
+- **Parallelization Profiling**: Tool parallel execution characteristics and concurrent optimization potential
+- **Parallel Batching**: Tool-aware operation grouping for simultaneous execution and maximum efficiency
+- **Parallel Optimization**: Continuous parallel tool utilization monitoring and concurrent performance improvement
 
 ### Authority Pattern (@config:DA001)
 **Principle**: Clear boundary enforcement with creative freedom
@@ -63,11 +63,12 @@ Essential patterns enabling systematic intelligence coordination with mandatory 
 - **Intensive**: Deep analysis, comprehensive examination
 
 ### Coordination Strategy (@config:CS001)
-**Principle**: Balanced efficiency with systematic oversight
-- **Parallel**: Maximum simultaneous execution for compatible operations
-- **Strategic**: Monitored coordination for complex interactions
-- **Sequential**: Reserved for true dependencies
-- **Efficiency**: High coordination with minimal overhead
+**Principle**: Parallel-first execution with systematic oversight
+- **Parallel-First**: Mandatory simultaneous execution for all operations unless proven dependencies exist
+- **Tool Parallelization**: Simultaneous tool coordination for maximum efficiency
+- **Strategic**: Monitored parallel coordination for complex multi-tool interactions
+- **Sequential**: Reserved only for proven sequential dependencies after verification
+- **Efficiency**: Maximum parallel coordination with optimized resource utilization
 
 ### Recovery Strategy (@config:RP002)
 **Principle**: Adaptive resilience with systematic alternatives
