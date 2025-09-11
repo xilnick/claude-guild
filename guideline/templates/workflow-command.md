@@ -8,9 +8,19 @@ description: "Natural [task-type] execution with intelligent analysis and iterat
 ---
 
 ## Purpose
-Execute [task-requirements] using systematic intelligence with specialist coordination and framework compliance. 
+Execute [task-requirements] using systematic intelligence with specialist coordination and framework compliance.
 
 **PREREQUISITE**: Guild system must be initialized via `/guild:setup` command before workflow execution.
+
+## Mandatory Intelligence Compliance
+
+**TEMPLATE REQUIREMENT**: This template enforces mandatory intelligence standards:
+
+- **Absolute Code Prohibition**: Template must never generate or include any code implementations, syntax examples, or executable snippets
+- **Complete Technology Independence**: Template uses only abstract `[technology]`, `[framework]`, `[tool]` placeholder patterns
+- **Template-First Execution**: All workflow patterns use abstract `[placeholder]` patterns exclusively without specific implementations
+- **Native Intelligence Authority**: Template delegates all implementation decisions to autonomous intelligence capabilities
+- **Creative Solution Enablement**: Template framework preserves intelligent adaptation while maintaining structural guidance
 
 ## Framework Compliance
 

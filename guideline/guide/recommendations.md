@@ -4,6 +4,24 @@
 
 This document provides Anthropic's official best practices for Claude implementation within the Guild System's systematic intelligence framework (see `framework.md`). These recommendations ensure reliable, high-quality task execution through proven techniques.
 
+## Important Distinction: Guild Intelligence vs Anthropic Examples
+
+**CRITICAL UNDERSTANDING**: This document contains Anthropic's official best practices with legitimate technical examples for educational purposes. However, Guild system intelligence must maintain complete abstraction:
+
+**Guild System Intelligence Requirements:**
+- **NEVER include code samples** in templates, frameworks, or Guild intelligence
+- **NEVER reference specific technologies** in Guild system guidance
+- **ALWAYS use abstract `[placeholder]` patterns** in Guild intelligence
+- **ALWAYS rely on native intelligence** for implementation decisions
+
+**Anthropic Best Practices (This Document):**
+- Contains legitimate technical examples for Claude usage guidance
+- Provides specific implementation patterns as reference material
+- Offers concrete examples to demonstrate effective prompting techniques
+- Shows proven approaches using actual technologies and code samples
+
+**Application Principle**: Guild system intelligence uses abstract patterns while leveraging Anthropic's concrete best practices through native intelligence application.
+
 ## Core Principles
 
 <principles>

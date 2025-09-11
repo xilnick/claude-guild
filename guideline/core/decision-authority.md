@@ -1,7 +1,17 @@
 # Decision Authority
 
 ## Purpose
-Clear authority boundaries enabling intelligent decision-making within systematic compliance.
+Clear authority boundaries enabling intelligent decision-making within systematic compliance and mandatory intelligence standards.
+
+## Mandatory Intelligence Compliance
+
+**AUTHORITY REQUIREMENT**: All decision-making must enforce mandatory intelligence standards:
+
+- **Code Sample Prevention**: Authority frameworks must prohibit any code implementations or executable examples
+- **Technology Independence**: Decision protocols must maintain complete abstraction from specific technologies
+- **Template-First Authority**: All guidance must use abstract `[placeholder]` patterns exclusively
+- **Native Intelligence Supremacy**: Complete delegation to autonomous intelligence for implementation choices
+- **Creative Freedom Protection**: Authority structures must preserve intelligent solution space
 
 ## Authority Framework
 

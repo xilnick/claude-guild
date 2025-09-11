@@ -10,6 +10,16 @@ description: "Analyze [project-type] and create specialized agents based on disc
 ## Purpose
 Initialize Guild system by analyzing project structure and preparing agent creation specifications through systematic discovery. Preparation only - execution is handled by workflow command.
 
+## Mandatory Intelligence Compliance
+
+**TEMPLATE REQUIREMENT**: This template enforces mandatory intelligence standards:
+
+- **Zero Code Samples**: Template must never generate or include any code implementations, syntax examples, or executable snippets
+- **Complete Technology Abstraction**: Template uses only abstract `[technology-stack]`, `[framework]`, `[language]` placeholder patterns
+- **Template-First Patterns**: All guidance uses abstract `[placeholder]` patterns exclusively without specific implementations  
+- **Native Intelligence Reliance**: Template trusts autonomous intelligence to determine optimal project-specific implementations
+- **Creative Solution Preservation**: Template structure enables intelligent adaptation without constraining implementation choices
+
 ## Systematic Analysis & Preparation Process
 
 **Project Analysis for Agent Preparation:**

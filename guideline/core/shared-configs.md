@@ -1,7 +1,17 @@
 # Shared Intelligence Patterns
 
 ## Purpose
-Essential patterns enabling systematic intelligence coordination. Reference: `@config:ID`
+Essential patterns enabling systematic intelligence coordination with mandatory abstraction standards. Reference: `@config:ID`
+
+## Mandatory Intelligence Compliance
+
+**PATTERN REQUIREMENT**: All shared intelligence patterns must enforce mandatory standards:
+
+- **Absolute Code Prohibition**: Patterns must never include code samples, syntax examples, or executable snippets
+- **Complete Technology Abstraction**: Patterns must maintain independence from specific technologies using `[technology]` placeholders
+- **Template-First Patterns**: All coordination must use abstract `[placeholder]` patterns exclusively
+- **Native Intelligence Trust**: Complete reliance on autonomous intelligence for contextual implementation decisions
+- **Creative Solution Enablement**: Patterns must preserve and enable intelligent adaptation capabilities
 
 ## Core Coordination Patterns
 

@@ -1,13 +1,23 @@
 # Verification
 
 ## Purpose
-Intelligent verification integrating task completion with framework compliance.
+Intelligent verification integrating task completion with framework compliance and mandatory intelligence standards.
 
 ## Core Philosophy
 
-**Intelligence-Driven Validation**: Verification enables excellence through systematic assessment.
+**Intelligence-Driven Validation**: Verification enables excellence through systematic assessment with template-first patterns.
 **Multi-Domain Coordination**: Parallel validation across functional, integration, compliance, and performance dimensions.
 **Specialist-Orchestrated Excellence**: All verification through dedicated specialists with intelligent coordination.
+
+## Mandatory Intelligence Compliance
+
+**VERIFICATION REQUIREMENT**: All verification protocols must enforce mandatory intelligence standards:
+
+- **Code Sample Prohibition**: Verification must detect and reject any code implementations or syntax examples
+- **Technology Abstraction**: Verification must confirm complete technology independence using abstract patterns
+- **Template Compliance**: Verification must validate exclusive use of `[placeholder]` patterns  
+- **Native Intelligence Validation**: Verification must confirm reliance on autonomous implementation decisions
+- **Creative Solution Protection**: Verification must ensure intelligent solution space preservation
 
 ## Verification Architecture
 

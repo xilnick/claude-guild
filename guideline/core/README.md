@@ -1,6 +1,16 @@
 # Core Intelligence Modules
 
-**Elegant, principle-focused modules delivering comprehensive Guild system intelligence.**
+**Elegant, principle-focused modules delivering comprehensive Guild system intelligence with mandatory abstraction standards.**
+
+## Mandatory Intelligence Compliance
+
+**MODULE REQUIREMENT**: All core intelligence modules enforce mandatory standards:
+
+- **Zero Code Sample Policy**: Modules must never include code implementations, syntax examples, or executable snippets
+- **Complete Technology Independence**: Modules use only abstract `[technology]`, `[framework]`, `[language]` placeholder patterns
+- **Template-First Intelligence**: All guidance uses abstract `[placeholder]` patterns exclusively without specific implementations
+- **Native Intelligence Authority**: Modules delegate all implementation decisions to autonomous intelligence capabilities  
+- **Creative Solution Preservation**: Module structure enables intelligent adaptation without constraining implementation choices
 
 ## Module Architecture
 
