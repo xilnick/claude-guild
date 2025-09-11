@@ -16,7 +16,8 @@ Intelligent verification integrating task completion with framework compliance a
 - **Code Sample Prohibition**: Verification must detect and reject any code implementations or syntax examples
 - **Technology Abstraction**: Verification must confirm complete technology independence using abstract patterns
 - **Template Compliance**: Verification must validate exclusive use of `[placeholder]` patterns
-- **Tool Parallelization Compliance**: Verification must confirm mandatory simultaneous tool execution unless proven dependencies exist  
+- **Tool Parallelization Compliance**: Verification must confirm mandatory simultaneous tool execution unless proven dependencies exist
+- **Agent Recursion Prevention**: Verification must detect and prevent any subagent creation or invocation attempts
 - **Native Intelligence Validation**: Verification must confirm reliance on autonomous implementation decisions
 - **Creative Solution Protection**: Verification must ensure intelligent solution space preservation
 
@@ -34,10 +35,11 @@ Reference: `@config:VF001`
 ### Verification Specialists
 
 **Specialist Framework:**
-- **Compliance Specialist**: Framework compliance across dimensions
+- **Compliance Specialist**: Framework compliance across dimensions including anti-recursion enforcement
 - **Functional Specialist**: Requirements completion workflow validation
 - **Integration Specialist**: Component interaction interface validation 
 - **Performance Specialist**: Efficiency optimization resource validation
+- **Architecture Specialist**: Agent hierarchy integrity and recursion prevention validation
 
 **Coordination Patterns:**
 - **Parallel Execution**: Simultaneous validation across quality dimensions
@@ -50,9 +52,10 @@ Reference: `@config:VF001`
 
 **Verification Framework:**
 - **Functional**: Requirements, workflow, and integration validation
-- **Compliance**: Framework excellence target achievement
+- **Compliance**: Framework excellence target achievement including anti-recursion enforcement
 - **Performance**: Efficiency optimization and resource validation
 - **Quality**: Standards, maintainability, and error handling
+- **Architecture**: Agent hierarchy integrity and recursion prevention validation
 
 **Gate Coordination:**
 - **Parallel Processing**: Simultaneous validation across quality dimensions
@@ -63,8 +66,9 @@ Reference: `@config:VF001`
 
 **Testing Framework:**
 - **Functional**: Unit, integration, system, and acceptance validation
-- **Compliance**: Framework dimension verification across targets
+- **Compliance**: Framework dimension verification across targets including agent hierarchy constraints
 - **Performance**: Efficiency optimization and resource validation
+- **Architecture**: Agent recursion prevention and hierarchy integrity testing
 
 **Testing Coordination:**
 - **Parallel Execution**: Simultaneous testing across domains
@@ -76,8 +80,9 @@ Reference: `@config:VF001`
 ### Parallel Verification
 
 **Simultaneous Excellence:**
-- **Verification Batching**: Functional, compliance, performance, quality parallel execution
+- **Verification Batching**: Functional, compliance, performance, quality, architecture parallel execution
 - **Tool Parallelization Validation**: Verification of mandatory simultaneous tool execution patterns
+- **Agent Recursion Validation**: Verification of flat agent hierarchy and anti-recursion constraints
 - **Coordination**: Checkpoint synchronization with minimal overhead
 - **Integration**: Systematic result coordination and completion
 
@@ -89,11 +94,21 @@ Reference: `@config:VF001`
 - **Parallel Efficiency**: Assessment of tool parallelization optimization and resource utilization
 - **Performance Metrics**: Validation of parallel tool execution effectiveness and improvement
 
+### Agent Anti-Recursion Verification
+
+**Mandatory Anti-Recursion Assessment:**
+Reference: `@config:AR001` (Agent Recursion Prevention)
+- **Hierarchy Validation**: Verification of flat agent architecture with single-level delegation
+- **Recursion Detection**: Runtime monitoring and blocking of subagent creation or invocation attempts
+- **Authority Enforcement**: Validation that only primary system creates and coordinates agents
+- **Resource Protection**: Assessment of recursion prevention effectiveness and system stability
+
 ### Continuous Verification
 
 **Ongoing Intelligence:**
-- **Real-time**: Compliance, quality, performance, integration monitoring
-- **Adaptive**: Dynamic standards optimization and enhancement
+- **Real-time**: Compliance, quality, performance, integration, architecture monitoring
+- **Adaptive**: Dynamic standards optimization and enhancement including recursion prevention
+- **Recursive Monitoring**: Continuous agent hierarchy integrity and anti-recursion constraint validation
 
 ## Success Metrics
 

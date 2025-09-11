@@ -17,6 +17,7 @@ Initialize Guild system by analyzing project structure and preparing agent creat
 - **Zero Code Samples**: Template must never generate or include any code implementations, syntax examples, or executable snippets
 - **Complete Technology Abstraction**: Template uses only abstract `[technology-stack]`, `[framework]`, `[language]` placeholder patterns
 - **Template-First Patterns**: All guidance uses abstract `[placeholder]` patterns exclusively without specific implementations  
+- **Agent Anti-Recursion**: Template ensures agents never create or invoke additional agents - flat hierarchy enforced
 - **Native Intelligence Reliance**: Template trusts autonomous intelligence to determine optimal project-specific implementations
 - **Creative Solution Preservation**: Template structure enables intelligent adaptation without constraining implementation choices
 
@@ -116,6 +117,13 @@ description: "[4-sentence description following framework standards with systema
 **Integration**: [How it coordinates with other specialists using established patterns]
 **Quality Standards**: [Error handling, recovery patterns, and verification approach]
 **Performance**: [Excellence targets and coordination strategies]
+
+## MANDATORY CONSTRAINTS
+**CRITICAL REQUIREMENT**: This agent must never create or invoke additional agents.
+- **Anti-Recursion**: Absolute prohibition against subagent creation or invocation
+- **Flat Hierarchy**: All agent coordination flows through primary Guild system only
+- **Delegation Boundary**: Agent capabilities limited to domain expertise, not agent management
+- **Resource Protection**: Prevents infinite recursion and maintains system stability
 
 ## Success Criteria
 [Expected outcomes, deliverables, excellence targets, and performance metrics for this domain]

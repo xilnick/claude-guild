@@ -54,6 +54,13 @@ Essential patterns enabling systematic intelligence coordination with mandatory 
 - **Intelligence**: Optimization within constraints
 - **User**: Ultimate control within systematic excellence
 
+### Agent Recursion Prevention (@config:AR001)
+**Principle**: Mandatory flat agent hierarchy with anti-recursion enforcement
+- **Hierarchy Constraint**: Only primary system creates and invokes agents
+- **Recursion Detection**: Runtime monitoring and blocking of subagent creation attempts
+- **Delegation Authority**: Single-level delegation through primary system exclusively
+- **Resource Protection**: Prevention of infinite recursion and resource exhaustion
+
 ## Resource Management Patterns
 
 ### Resource Classification (@config:RT001)

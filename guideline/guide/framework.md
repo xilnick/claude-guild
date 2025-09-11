@@ -13,7 +13,7 @@ The Guild system balances systematic methods with adaptive intelligence:
 
 ## Compliance Architecture
 
-**Systematic Excellence Framework**: Guild system operates with consistent excellence across five critical dimensions with template-first intelligence patterns and mandatory abstraction standards:
+**Systematic Excellence Framework**: Guild system operates with consistent excellence across six critical dimensions with template-first intelligence patterns and mandatory abstraction standards:
 
 **FOUNDATIONAL REQUIREMENT - Intelligence Abstraction Compliance:**
 All Guild intelligence must maintain complete abstraction from specific implementations:
@@ -124,7 +124,38 @@ All Guild intelligence must maintain complete abstraction from specific implemen
 - **Gap Identification**: Areas requiring modernization through `[gap-analysis-templates]` or improvement
 - **Integration Assessment**: Impact mapping across project boundaries using `[integration-intelligence]`
 
-### 5. Operation Batching Optimization
+### 5. Agent Recursion Prevention
+
+**Template-First Anti-Recursion Standards:**
+- **Intelligence-Driven Hierarchy Management**: Maintain `[flat-agent-architecture]` through `[hierarchy-intelligence]` and `[prevention-patterns]`
+- **Abstract Recursion Detection**: Prevent `[subagent-recursion]` using `[detection-templates]` and `[blocking-mechanisms]`
+- **Template-Based Coordination Control**: Enforce `[single-level-delegation]` through `[coordination-intelligence]` and `[execution-boundaries]`
+
+**Mandatory Anti-Recursion Architecture:**
+- **Flat Agent Hierarchy**: Only main system creates and invokes agents using `[primary-delegation-patterns]`
+- **Subagent Recursion Prevention**: Absolute prohibition against agents creating additional agents through `[prevention-mechanisms]`
+- **Single-Level Delegation**: All agent invocation flows through primary system using `[delegation-intelligence]`
+- **Recursion Detection**: Runtime monitoring through `[detection-templates]` for recursion attempts and automatic blocking
+
+**Anti-Recursion Implementation:**
+- **Primary System Authority**: Only main Guild system has agent creation capabilities using `[authority-templates]`
+- **Subagent Constraint Enforcement**: Agents blocked from invoking other agents through `[constraint-intelligence]`
+- **Execution Boundary Definition**: Clear separation using `[boundary-templates]` between agent capabilities and system functions
+- **Resource Protection**: Prevention of infinite recursion through `[protection-patterns]` and resource exhaustion
+
+**Recursion Prevention Enforcement:**
+- **Agent Creation Blocking**: Automatic prevention using `[blocking-templates]` of subagent creation attempts
+- **Invocation Filtering**: Runtime detection through `[filtering-intelligence]` and prevention of agent-to-agent calls
+- **Compliance Monitoring**: Continuous tracking using `[monitoring-templates]` for recursion attempt detection
+- **Violation Response**: Immediate termination through `[response-mechanisms]` of recursion attempts with logging
+
+**Anti-Recursion Excellence:**
+- **Hierarchy Integrity**: Maintain flat agent structure using `[integrity-templates]` with single-level delegation
+- **Performance Protection**: Prevent resource exhaustion through `[protection-intelligence]` from recursive operations
+- **Coordination Clarity**: Clear agent boundaries using `[clarity-templates]` with primary system orchestration
+- **Compliance Assurance**: Systematic prevention through `[assurance-intelligence]` of architectural violations
+
+### 6. Operation Batching Optimization
 
 **Template-First Batching Standards:**
 - **Intelligence-Driven Classification**: Group `[operation-types]` using `[classification-intelligence]` and `[resource-patterns]`
@@ -166,14 +197,16 @@ All Guild intelligence must maintain complete abstraction from specific implemen
 2. **NEVER Reference Specific Technologies**: Prohibited from mentioning specific languages, frameworks, libraries, or tools by name
 3. **ALWAYS Use Templates**: Mandatory use of abstract placeholder patterns for all implementation guidance
 4. **ALWAYS Parallelize Tools**: Mandatory requirement for simultaneous tool execution unless proven sequential dependencies exist
-5. **RELY ON Native Intelligence**: Complete trust in autonomous intelligence to determine appropriate implementations
-6. **ENABLE Creative Solutions**: Provide structural guidance without constraining intelligent implementation choices
+5. **NEVER Allow Agent Recursion**: Absolute prohibition against subagents creating or invoking additional agents
+6. **RELY ON Native Intelligence**: Complete trust in autonomous intelligence to determine appropriate implementations
+7. **ENABLE Creative Solutions**: Provide structural guidance without constraining intelligent implementation choices
 
 **ENFORCEMENT PROTOCOL:**
 - **Code Sample Detection**: Automatic blocking of any code implementation examples
 - **Technology Specificity Audit**: Systematic removal of technology-specific references  
 - **Template Compliance**: Mandatory abstraction validation for all guidance patterns
 - **Tool Parallelization Enforcement**: Systematic prevention of sequential tool execution without proven dependencies
+- **Agent Recursion Prevention**: Automatic blocking of subagent creation or invocation attempts
 - **Intelligence Trust Verification**: Confirmation that native intelligence drives all implementation decisions
 
 ## Template Principles
@@ -185,6 +218,7 @@ All Guild intelligence must maintain complete abstraction from specific implemen
 - **Never Specify Technologies**: Avoid references to specific languages, frameworks, or tools
 - **Always Use Placeholders**: Abstract all implementation details with `[category]` patterns
 - **Always Enable Tool Parallelization**: Templates must support simultaneous tool execution patterns by default
+- **Never Allow Agent Recursion**: Templates must prevent subagents from creating or invoking additional agents
 - **Trust Native Intelligence**: Rely on autonomous intelligence to determine appropriate implementations
 - **Enable Creativity**: Provide structure that guides without constraining intelligent solutions
 
@@ -193,8 +227,9 @@ All Guild intelligence must maintain complete abstraction from specific implemen
 - **Structural Guidance**: Show the pattern, not the complete solution
 - **Intelligence Enablers**: Provide enough structure to guide, not enough to constrain
 - **Parallelization Support**: Enable simultaneous tool execution patterns and parallel operation coordination
+- **Anti-Recursion Architecture**: Enforce flat agent hierarchy with single-level delegation patterns
 - **Adaptable Framework**: Templates work across different contexts and use cases without modification
-- **Compliance Integration**: Embed enforcement mechanisms into template execution patterns including tool parallelization
+- **Compliance Integration**: Embed enforcement mechanisms into template execution patterns including tool parallelization and agent recursion prevention
 - **Technology Agnostic**: Complete independence from specific technologies, languages, or frameworks
 - **Implementation Freedom**: Enable native intelligence to choose optimal implementation approaches
 
@@ -230,6 +265,7 @@ All Guild intelligence must maintain complete abstraction from specific implemen
 - **Code Sample Prevention**: Templates must never include executable code or implementation examples
 - **Technology Neutrality**: Templates must work across all technology stacks without modification
 - **Tool Parallelization Mandate**: Templates must default to simultaneous tool execution patterns unless dependencies proven
+- **Agent Recursion Prevention**: Templates must enforce flat agent hierarchy with mandatory single-level delegation
 - **Intelligence Trust**: Templates must rely on native intelligence for all implementation decisions
 - **Abstraction Validation**: All templates undergo abstraction compliance verification
 
@@ -238,6 +274,7 @@ All Guild intelligence must maintain complete abstraction from specific implemen
 - **Complete Technology Abstraction**: Mandatory removal of all technology-specific references
 - **Template-First Requirement**: All guidance must use abstract placeholder patterns exclusively
 - **Tool Parallelization Supremacy**: Mandatory simultaneous tool execution unless proven sequential dependencies exist
+- **Agent Recursion Prohibition**: Zero tolerance for subagent creation or invocation by agents
 - **Native Intelligence Supremacy**: Full reliance on autonomous intelligence for implementation decisions
 - **Creativity Preservation**: Protection of intelligent solution space through structural boundaries only
 
@@ -245,8 +282,9 @@ All Guild intelligence must maintain complete abstraction from specific implemen
 - **Pre-deployment Scanning**: Automatic detection and removal of code samples before template activation
 - **Technology Reference Audit**: Systematic identification and abstraction of specific technology mentions
 - **Sequential Tool Execution Detection**: Monitoring and prevention of unnecessary sequential tool operations
+- **Agent Recursion Detection**: Runtime monitoring and immediate blocking of subagent creation or invocation attempts
 - **Intelligence Bypass Detection**: Monitoring for over-specification that constrains native intelligence
-- **Template Purity Verification**: Confirmation that templates maintain complete abstraction standards including tool parallelization
+- **Template Purity Verification**: Confirmation that templates maintain complete abstraction standards including tool parallelization and anti-recursion enforcement
 
 **Philosophy**: Templates trust intelligence to fill in the details appropriately for each context while enforcing compliance automatically. Templates provide structural guidance without constraining intelligent solutions, enabling creative and contextually appropriate implementations through native intelligence with mandatory tool parallelization for optimal performance.
 
@@ -270,17 +308,20 @@ Based on Anthropic's official sub-agent architecture, Guild specialists follow t
 - **Context Management**: Independent context windows for specialized work without polluting main conversation
 - **Flexible Configuration**: Project-level and user-level agents with customizable tool permissions
 - **Automatic Delegation**: Claude Code proactively selects appropriate specialists based on task analysis
+- **Anti-Recursion Constraint**: Subagents must never create or invoke additional agents - flat hierarchy enforced
 
 **Sub-Agent Creation Standards:**
 - **Focused Responsibility**: Single-purpose specialists with clear boundaries
 - **Detailed Prompts**: Comprehensive system prompts for consistent performance
 - **Tool Restrictions**: Limited tool access aligned with specialist purpose
 - **Version Control**: Project-level agents managed in repository
+- **Recursion Prevention**: Built-in constraints preventing agent creation or invocation capabilities
 
 **Sub-Agent Invocation Methods:**
 - **Proactive Selection**: Framework automatically delegates based on task description and specialist configuration
 - **Explicit Request**: Direct invocation when specific expertise needed
-- **Chain Coordination**: Multi-specialist workflows for complex tasks
+- **Chain Coordination**: Multi-specialist workflows for complex tasks through primary system only
+- **Primary System Authority**: Only main Guild system can create, invoke, or coordinate agents
 
 ### Sub-Agent Best Practices
 
@@ -289,6 +330,7 @@ Based on Anthropic's official sub-agent architecture, Guild specialists follow t
 - Use "PROACTIVELY" in descriptions to encourage automatic delegation
 - Limit tool permissions to necessary functions only
 - Version control project-level sub-agents in `.claude/agents/` directory
+- Embed anti-recursion constraints in all agent prompts and configurations
 
 **Performance Optimization:**
 - Preserve main conversation context through specialized delegation
@@ -301,6 +343,7 @@ Based on Anthropic's official sub-agent architecture, Guild specialists follow t
 - Enhanced with systematic coordination patterns
 - Integrated with compliance monitoring and excellence tracking
 - Optimized for parallel execution and batching operations
+- Enforced flat hierarchy with mandatory anti-recursion constraints
 
 ### Claude Code Integration
 

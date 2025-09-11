@@ -19,6 +19,7 @@ Execute [task-requirements] using systematic intelligence with specialist coordi
 - **Absolute Code Prohibition**: Template must never generate or include any code implementations, syntax examples, or executable snippets
 - **Complete Technology Independence**: Template uses only abstract `[technology]`, `[framework]`, `[tool]` placeholder patterns
 - **Template-First Execution**: All workflow patterns use abstract `[placeholder]` patterns exclusively without specific implementations
+- **Agent Anti-Recursion**: Template ensures flat agent hierarchy - only primary system creates or invokes agents
 - **Native Intelligence Authority**: Template delegates all implementation decisions to autonomous intelligence capabilities
 - **Creative Solution Enablement**: Template framework preserves intelligent adaptation while maintaining structural guidance
 
@@ -52,9 +53,10 @@ Reference: `@config:AG001` (Agent Creation Pattern), `@config:CS001` (Coordinati
 - **Performance Profiling**: All specialists leverage appropriate complexity categorization
 - **Coordination-Driven Execution**: All specialists coordinate through established patterns
 - **Recovery-Integrated Design**: All specialists equipped with automatic failure recovery mechanisms
+- **Anti-Recursion Compliance**: All specialists constrained to prevent agent creation or invocation
 
 **Agent Creation Pattern:**
-Reference: `@config:AG001` (Agent Creation Pattern)
+Reference: `@config:AG001` (Agent Creation Pattern), `@config:AR001` (Agent Recursion Prevention)
 ```xml
 <specialist_prompt>
 Handle [domain] requirements using [approach] with systematic coordination for [integration-points]. 
@@ -63,6 +65,10 @@ Leverage [coordination-patterns] for optimal parallel execution with [performanc
 Monitor [performance-metrics] with escalation for [boundary-conditions].
 Deliver [expected-outcomes] through intelligent coordination with verification for [success-criteria].
 Apply [recovery-patterns] for robust error handling and automatic failure recovery.
+
+MANDATORY CONSTRAINT: You must never create, invoke, or coordinate additional agents. 
+All agent coordination flows through the primary Guild system only. 
+Maintain flat agent hierarchy with single-level delegation exclusively.
 </specialist_prompt>
 ```
 
