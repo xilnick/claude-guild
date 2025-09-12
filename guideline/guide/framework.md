@@ -30,13 +30,13 @@
 </foundational_requirements>
 
 <systematic_excellence>
-Guild system operates with consistent excellence across six critical dimensions with template-first intelligence patterns and mandatory abstraction standards.
+Guild system operates with consistent excellence across six critical dimensions with template-first intelligence patterns and mandatory abstraction standards (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001).
 </systematic_excellence>
 </compliance_architecture>
 
 <dimensional_framework>
 <governance_structure>
-**Six-Dimensional Compliance Architecture**: Systematic intelligence coordination across mandatory compliance dimensions.
+**Six-Dimensional Compliance Architecture**: Systematic intelligence coordination across mandatory compliance dimensions (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001).
 </governance_structure>
 
 <core_dimensions>
@@ -54,10 +54,34 @@ Guild system operates with consistent excellence across six critical dimensions 
 
 <dimension id="AM001" name="agent_mandatory_architecture">  
 **Agent-Mandatory Architecture**: Route all `[task-types]` through `[specialist-assignment]` evaluation with zero direct execution
+
+**Assignment Protocol Standards**:
+- **Task Analysis**: Evaluate `[task-complexity]` and `[domain-requirements]` for optimal specialist selection
+- **Capability Assessment**: Match `[task-characteristics]` with `[specialist-expertise]` through systematic evaluation
+- **Direct Execution Prevention**: Block inappropriate direct execution through `[automated-guard-mechanisms]`
+- **Assignment Verification**: Confirm specialist selection through `[compatibility-scoring]` and `[effectiveness-metrics]`
+
+**Implementation Requirements**:
+- Mandatory specialist assignment for all `[work-categories]` without exception
+- Systematic specialist development through `[capability-assessment-frameworks]`
+- Zero direct execution enforcement through `[prevention-protocols]` and `[monitoring-systems]`
+- Assignment protocol compliance tracking through `[verification-streams]` and `[quality-gates]`
 </dimension>
 
 <dimension id="PE001" name="parallel_first_execution">
 **Parallel-First Execution**: Break `[complex-tasks]` into `[parallel-components]` with default simultaneous execution patterns
+
+**Dependency Challenge Protocols**:
+- **Atomic Unit Analysis**: Decompose `[complex-tasks]` into smallest parallelizable `[work-units]` through systematic breakdown
+- **Sequential Assumption Challenge**: Question all assumed dependencies through `[dependency-verification-frameworks]` 
+- **True Dependency Identification**: Distinguish actual dependencies from assumed sequential patterns using `[analysis-protocols]`
+- **Parallel Optimization**: Default to simultaneous execution unless `[proven-dependencies]` require sequential processing
+
+**Implementation Requirements**:
+- Systematic task decomposition into `[atomic-parallel-components]` before execution begins
+- Mandatory dependency challenge through `[assumption-verification]` protocols for all sequential requirements
+- Parallel execution planning with explicit `[integration-points]` and `[synchronization-patterns]`
+- Performance optimization through `[parallel-coordination]` and `[efficiency-tracking]` mechanisms
 </dimension>
 
 <dimension id="RP001" name="research_protocol_integration">
@@ -76,12 +100,30 @@ Guild system operates with consistent excellence across six critical dimensions 
 <dimensional_integration>
 **Cross-Dimensional Coordination**: All dimensions operate simultaneously through `[multi-dimensional-templates]` with systematic interdependencies
 
+**Cross-Dimensional Workflow Templates**:
+- **Discovery-Assignment-Execution**: RP001 → AM001 → PE001 coordination through `[discovery-to-execution-pipelines]`
+- **Parallel-Tool-Batching**: TB001 ↔ OB001 integration through `[simultaneous-tool-operation-patterns]`
+- **Assignment-Hierarchy-Control**: AM001 ↔ AR001 coordination through `[flat-delegation-protocols]`
+- **Research-Parallel-Discovery**: RP001 ↔ PE001 integration through `[parallel-analysis-frameworks]`
+
+**Integration Effectiveness Metrics**:
+- **Cross-Dimensional Compliance**: Measure coordination effectiveness across all 6 dimensions through `[compliance-scoring-matrices]`
+- **Workflow Efficiency**: Track `[inter-dimensional-handoff-performance]` and `[coordination-overhead-optimization]`
+- **Resource Utilization**: Monitor `[parallel-resource-effectiveness]` and `[batching-performance-indicators]`
+- **Quality Integration**: Assess `[multi-dimensional-quality-achievement]` and `[systematic-excellence-metrics]`
+
 **Tool Parallelization Integration**: The TB001 dimension enhances all other dimensions:
 - **Agent-Mandatory (AM001)**: Specialists route tasks through parallel tool coordination
 - **Parallel-First (PE001)**: Task decomposition includes tool parallelization assessment
 - **Research Protocol (RP001)**: Discovery operations execute through simultaneous tool execution
 - **Recursion Prevention (AR001)**: Flat hierarchy specialists implement parallel tool standards
 - **Operation Batching (OB001)**: Strategic grouping includes tool operation optimization
+
+**Systematic Interdependency Patterns**:
+- **Bidirectional Enhancement**: Each dimension strengthens others through `[mutual-reinforcement-protocols]`
+- **Conflict Resolution**: Cross-dimensional conflicts resolved through `[systematic-precedence-hierarchies]`
+- **Performance Optimization**: Multi-dimensional performance enhanced through `[integrated-excellence-patterns]`
+- **Quality Assurance**: Cross-dimensional quality maintained through `[unified-verification-frameworks]`
 </dimensional_integration>
 </dimensional_framework>
 
@@ -104,8 +146,8 @@ Guild system operates with consistent excellence across six critical dimensions 
 8. **ALWAYS Analyze Instead of Declaring**: Examine actual conditions through intelligence
 9. **ALWAYS Follow Recommendations**: Strict adherence to @guideline/guide/recommendations.md standards
 10. **MANDATORY Parallel Tool Integration**: All specialists must include official Anthropic parallel tool execution prompts and demonstrate measurable performance improvements through batched operations
-10. \*\*ALWAYS Use Declarative Format\*\*: Function as command prompts, not documentation
-11. \*\*$ARGUMENTS Usage Restriction\*\*: $ARGUMENTS must be mentioned only once and only in command templates - never in core modules or framework guidance
+11. **ALWAYS Use Declarative Format**: Function as command prompts, not documentation
+12. **$ARGUMENTS Usage Restriction**: $ARGUMENTS must be mentioned only once and only in command templates - never in core modules or framework guidance
 </core_requirements>
 
 <enforcement_protocol>
@@ -134,7 +176,7 @@ Guild system operates with consistent excellence across six critical dimensions 
 <configuration_standards>
 - **Model**: Always `model: inherit` with `thinking_mode: ultrathink`
 - **Placeholders**: `[domain]` → `[framework]` → `[specialist-category]` → `@config:[pattern-id]`
-- **Philosophy**: Structure enables intelligence. Intelligence optimizes outcomes.
+- **Philosophy**: Structure enables intelligence. Intelligence optimizes structure.
 </configuration_standards>
 </template_principles>
 
@@ -144,9 +186,9 @@ Guild system operates with consistent excellence across six critical dimensions 
 - **Technical Complete**: All `[verification-streams]` pass
 - **User Satisfied**: Explicit approval received
 - **Quality Maintained**: Standards met throughout
-- **Excellence Achieved**: High compliance across all `[framework-dimensions]` verified
-- **Tool Parallelization Performance**: Measurable efficiency improvements through simultaneous tool execution demonstrated
-- **Anthropic Standards Compliance**: All specialists implement official parallel tool execution prompts verified
+- **Excellence Achieved**: High compliance across all `[framework-dimensions]` verified (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001)
+- **Tool Parallelization Performance**: Measurable efficiency improvements through simultaneous tool execution demonstrated (Reference: @config:TB001)
+- **Anthropic Standards Compliance**: All specialists implement official parallel tool execution prompts verified (Reference: @config:TB001, @config:AM001)
 </verification_requirements>
 </success_criteria>
 
@@ -155,12 +197,12 @@ Guild system operates with consistent excellence across six critical dimensions 
 </command_architecture>
 
 <agent_integration>
-**Agent Architecture**: Guild specialists with focused `[domain-expertise]`, systematic `[coordination-patterns]`, and mandatory `[anti-recursion-constraints]` through flat hierarchy enforcement. Automatic delegation based on `[task-analysis]` with primary system authority only.
+**Agent Architecture**: Guild specialists with focused `[domain-expertise]`, systematic `[coordination-patterns]`, and mandatory `[anti-recursion-constraints]` through flat hierarchy enforcement. Automatic delegation based on `[task-analysis]` with primary system authority only (Reference: @config:AM001, @config:AR001).
 </agent_integration>
 
 <best_practices>
-**Systematic Excellence**: Use `[xml-structure]`, `[chain-of-thought]`, and `[verification-patterns]` with explicit `[user-confirmation]`. Enforce excellence through systematic `[processes]` and focused `[specialists]` with proactive delegation.
+**Systematic Excellence**: Use `[xml-structure]`, `[chain-of-thought]`, and `[verification-patterns]` with explicit `[user-confirmation]`. Enforce excellence through systematic `[processes]` and focused `[specialists]` with proactive delegation (Reference: @config:AM001, @config:VF001).
 
-**Philosophy**: Structure enables intelligence. Intelligence optimizes excellence. Excellence ensures systematic success.
+**Philosophy**: Structure enables intelligence. Intelligence optimizes structure.
 </best_practices>
 
