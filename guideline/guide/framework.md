@@ -131,9 +131,27 @@ Guild system operates with consistent excellence across six critical dimensions 
 **Multi-Dimensional Excellence**: All six dimensions operate simultaneously through `[integrated-coordination-patterns]` with systematic excellence verification and cross-dimensional performance optimization.
 </integration_framework>
 
-<intelligence_standards>
+<intelligence_architecture>
+<new_core_intelligence_system>
+**DECLARATIVE INTELLIGENCE ARCHITECTURE**: Guild operates through 3-file core intelligence system with declarative command structure and simplified template embedding via install.js.
+
+<intelligence_module_structure>
+1. **setup-intelligence.md**: Project discovery, analysis, and agent generation intelligence patterns
+2. **workflow-intelligence.md**: Task execution, specialist coordination, and workflow orchestration patterns  
+3. **shared-intelligence.md**: Cross-command dimensional compliance, universal coordination, and framework integration
+</intelligence_module_structure>
+
+<template_simplification>
+**Command Template Architecture**: Templates function as declarative command prompts with intelligence embedding through install.js:
+- **Simple Command Structure**: Commands contain task definitions and user interaction patterns
+- **Intelligence Embedding**: Core intelligence modules automatically embedded during generation
+- **Declarative Format**: Commands operate as executable prompts, not documentation
+- **Framework Integration**: Automatic compliance enforcement through embedded intelligence
+</template_simplification>
+</new_core_intelligence_system>
+
 <mandatory_requirements>
-**CRITICAL REQUIREMENT**: All Guild intelligence must adhere to mandatory abstraction and template-first principles.
+**CRITICAL REQUIREMENT**: All Guild intelligence must adhere to mandatory abstraction and declarative intelligence principles.
 
 <core_requirements>
 1. **NEVER Include Code Samples**: Absolutely forbidden - use `[placeholder]` patterns exclusively
@@ -148,6 +166,8 @@ Guild system operates with consistent excellence across six critical dimensions 
 10. **MANDATORY Parallel Tool Integration**: All specialists must include official Anthropic parallel tool execution prompts and demonstrate measurable performance improvements through batched operations
 11. **ALWAYS Use Declarative Format**: Function as command prompts, not documentation
 12. **$ARGUMENTS Usage Restriction**: $ARGUMENTS must be mentioned only once and only in command templates - never in core modules or framework guidance
+13. **3-Module Intelligence Architecture**: Reference setup-intelligence.md, workflow-intelligence.md, and shared-intelligence.md exclusively
+14. **Install.js Embedding Standards**: Intelligence integration through automated embedding, not manual inclusion
 </core_requirements>
 
 <enforcement_protocol>
@@ -158,25 +178,36 @@ Guild system operates with consistent excellence across six critical dimensions 
 - **Performance Optimization**: Monitoring parallelization effectiveness and measurable improvements
 - **Intelligence Trust**: Confirmation that native intelligence drives all decisions
 - **Analysis-First**: Verification that decisions based on actual analysis vs declarations
+- **3-Module Architecture Compliance**: Verification that only new intelligence modules are referenced
+- **Declarative Intelligence Enforcement**: Confirmation that intelligence operates through command prompt execution
+- **Embedding Integration Validation**: Verification that install.js properly embeds intelligence modules
 </enforcement_protocol>
 </mandatory_requirements>
-</intelligence_standards>
+</intelligence_architecture>
 
 
 <template_principles>
-**Templates as Intelligence Enablers**: Provide structural `[guidance-patterns]` while trusting native intelligence for implementation decisions with automatic compliance enforcement.
+**Simplified Declarative Templates**: Provide command prompt structure with intelligence embedding through install.js automated integration.
 
-<core_standards>
+<declarative_command_structure>
+- **Command Prompt Format**: Templates function as executable command prompts, not documentation
+- **Intelligence Embedding**: Core intelligence automatically embedded during command generation
+- **User Interface Patterns**: Templates define user interaction and task processing flows
+- **Automatic Compliance**: Framework compliance enforced through embedded intelligence modules
+</declarative_command_structure>
+
+<template_standards>
 - **Abstract Placeholders**: Use `[placeholder-patterns]` exclusively with zero code samples or technology references
-- **Structural Guidance**: Enable intelligence through `[template-frameworks]` not constraints  
+- **Declarative Execution**: Templates execute as command prompts with embedded intelligence
 - **$ARGUMENTS Processing**: Templates receive `[user-instructions]` via dynamic variable integration
-- **Compliance Automation**: Built-in `[abstraction-validation]` and `[anti-recursion-enforcement]`
-</core_standards>
+- **Intelligence Integration**: Core modules embedded automatically through install.js generation process
+</template_standards>
 
 <configuration_standards>
 - **Model**: Always `model: inherit` with `thinking_mode: ultrathink`
 - **Placeholders**: `[domain]` → `[framework]` → `[specialist-category]` → `@config:[pattern-id]`
 - **Philosophy**: Structure enables intelligence. Intelligence optimizes structure.
+- **Intelligence Source**: setup-intelligence.md, workflow-intelligence.md, shared-intelligence.md embedded automatically
 </configuration_standards>
 </template_principles>
 
@@ -189,19 +220,82 @@ Guild system operates with consistent excellence across six critical dimensions 
 - **Excellence Achieved**: High compliance across all `[framework-dimensions]` verified (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001)
 - **Tool Parallelization Performance**: Measurable efficiency improvements through simultaneous tool execution demonstrated (Reference: @config:TB001)
 - **Anthropic Standards Compliance**: All specialists implement official parallel tool execution prompts verified (Reference: @config:TB001, @config:AM001)
+- **Intelligence Architecture Compliance**: Commands properly reference new 3-module intelligence system (setup-intelligence.md, workflow-intelligence.md, shared-intelligence.md)
+- **Declarative Command Verification**: Commands function as executable prompts with embedded intelligence modules
+- **Embedding Integration Verified**: Install.js properly embeds intelligence modules during command generation
+- **Clean Separation Maintained**: Framework principles, intelligence modules, templates, and generation process maintain clear boundaries
 </verification_requirements>
 </success_criteria>
 
 <command_architecture>
-**Slash Command Integration**: Guild commands in `[command-directory]` with `$ARGUMENTS` processing for dynamic `[workflow-adaptation]` and systematic intelligence integration through `[template-frameworks]`.
+**Declarative Command System**: Guild commands generated through install.js with automatic intelligence embedding and simplified template structure.
+
+<command_generation_process>
+- **Template Processing**: Simple command templates processed through install.js
+- **Intelligence Embedding**: Core intelligence modules automatically embedded during generation
+- **Command Types**: setup.md and workflow.md commands with specialized intelligence integration
+- **Framework Integration**: Automatic dimensional compliance through embedded shared-intelligence.md
+</command_generation_process>
+
+<command_structure>
+- **Command Prompts**: Generated commands function as executable prompts with embedded intelligence
+- **$ARGUMENTS Processing**: Dynamic task adaptation through integrated variable processing
+- **Intelligence Integration**: Automatic embedding of relevant intelligence modules per command type
+- **Framework Compliance**: Built-in dimensional compliance through shared-intelligence embedding
+</command_structure>
 </command_architecture>
 
-<agent_integration>
-**Agent Architecture**: Guild specialists with focused `[domain-expertise]`, systematic `[coordination-patterns]`, and mandatory `[anti-recursion-constraints]` through flat hierarchy enforcement. Automatic delegation based on `[task-analysis]` with primary system authority only (Reference: @config:AM001, @config:AR001).
-</agent_integration>
+<module_organization_standards>
+**Clear Intelligence Boundaries**: Defined separation of concerns between framework principles and implementation patterns.
+
+<intelligence_module_responsibilities>
+- **setup-intelligence.md**: Project discovery, analysis, agent generation, and setup-specific coordination patterns
+- **workflow-intelligence.md**: Task execution, specialist orchestration, parallel coordination, and workflow-specific patterns
+- **shared-intelligence.md**: Cross-command dimensional compliance, universal coordination protocols, and framework integration
+- **framework.md**: Core philosophy, dimensional architecture, compliance requirements, and organizational standards
+</intelligence_module_responsibilities>
+
+<embedding_standards>
+- **Install.js Integration**: Intelligence modules embedded automatically during command generation
+- **Command-Specific Intelligence**: Relevant modules embedded per command type through mapping configuration
+- **Framework Compliance**: Shared-intelligence.md embedded in all commands for universal compliance
+- **Clean Separation**: Framework principles separate from implementation intelligence patterns
+</embedding_standards>
+</module_organization_standards>
+
+<declarative_intelligence_requirements>
+**Command Prompt Format Standards**: Guild commands function as executable prompts with embedded intelligence modules for autonomous operation.
+
+<command_prompt_structure>
+- **Task Definition**: Clear command purpose and execution parameters
+- **User Interface**: $ARGUMENTS processing and interaction patterns  
+- **Intelligence Integration**: Automatic embedding of relevant intelligence modules
+- **Framework Compliance**: Built-in dimensional compliance through shared-intelligence
+</command_prompt_structure>
+
+<intelligence_embedding_patterns>
+- **Setup Commands**: setup-intelligence.md + shared-intelligence.md embedding
+- **Workflow Commands**: workflow-intelligence.md + shared-intelligence.md embedding
+- **Universal Compliance**: shared-intelligence.md embedded in all commands
+- **Framework Integration**: Automatic compliance enforcement through embedded modules
+</intelligence_embedding_patterns>
+
+<clean_separation_principles>
+- **Framework Layer**: Core philosophy, dimensional architecture, compliance requirements (framework.md)
+- **Intelligence Layer**: Implementation patterns, coordination protocols, execution intelligence (3 intelligence modules)
+- **Template Layer**: Command structure, user interaction, task processing (simple templates)
+- **Generation Layer**: Automatic intelligence embedding, command compilation (install.js)
+</clean_separation_principles>
+</declarative_intelligence_requirements>
 
 <best_practices>
 **Systematic Excellence**: Use `[xml-structure]`, `[chain-of-thought]`, and `[verification-patterns]` with explicit `[user-confirmation]`. Enforce excellence through systematic `[processes]` and focused `[specialists]` with proactive delegation (Reference: @config:AM001, @config:VF001).
+
+**Declarative Intelligence Implementation**: 
+- Reference setup-intelligence.md, workflow-intelligence.md, and shared-intelligence.md for implementation patterns
+- Maintain clean separation between framework principles and intelligence implementation
+- Trust install.js embedding process for automatic intelligence integration
+- Ensure templates remain simple command prompts with embedded intelligence
 
 **Philosophy**: Structure enables intelligence. Intelligence optimizes structure.
 </best_practices>
