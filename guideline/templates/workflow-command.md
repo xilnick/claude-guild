@@ -19,6 +19,14 @@ When $ARGUMENTS is provided, treat it as the user's task request:
 - Apply intelligent reasoning to determine optimal specialist coordination approach  
 - Allow dynamic workflow modification to best accomplish the user's specific intent
 
+<thinking>
+1. What is the [task-complexity] and [domain-requirements] of this request?
+2. What [specialist-categories] and [coordination-patterns] are needed?
+3. What [operations] can execute in parallel vs [dependencies] requiring sequence?
+4. What [integration-points] and [verification-checkpoints] should be planned?
+5. How does this [task-type] map to existing [project-specialists]?
+</thinking>
+
 <prerequisites>
 - [Guild-system] must be initialized via `/guild:setup` command before execution
 - All work must flow through specialist delegation (zero direct execution)
@@ -68,6 +76,14 @@ Group related [operations] strategically for enhanced performance and [resource-
 
 <specialist_orchestration>
 Create and coordinate specialists through systematic analysis and framework compliance:
+
+<thinking>
+1. What [specialist-types] does this task require based on [domain-analysis]?
+2. How should [coordination-patterns] optimize for parallel execution?
+3. What [integration-dependencies] exist between specialist domains?
+4. What [quality-gates] and [verification-streams] should be established?
+5. How can [batching-strategies] enhance overall execution efficiency?
+</thinking>
 
 <agent_creation>
 When creating specialists, ensure they meet these standards:
@@ -232,6 +248,42 @@ Task completion requires meeting these criteria:
 </verification_checklist>
 </success_criteria>
 
+## Error Handling & Recovery Protocols
+
+<error_recovery_framework>
+Apply systematic error recovery patterns for workflow execution failures:
+
+**Specialist Delegation Failures:**
+- **Issue**: [Specialist-assignment] fails or [agent-unavailable] for required [domain-expertise]
+- **Recovery**: Attempt [specialist-creation] with simplified [requirements] or use [general-purpose] agent
+- **Fallback**: Execute with [manual-coordination] while maintaining [framework-compliance]
+
+**Parallel Execution Failures:**
+- **Issue**: [Tool-parallelization] fails due to [resource-constraints] or [dependency-conflicts]
+- **Recovery**: Retry with [sequential-fallback] while maintaining [performance-monitoring]
+- **Fallback**: Execute [critical-operations] first, then [secondary-operations] with [coordination-tracking]
+
+**Integration Point Failures:**
+- **Issue**: [Specialist-coordination] breaks down or [integration-checkpoints] fail
+- **Recovery**: Implement [direct-communication] between specialists with [synchronization-protocols]
+- **Fallback**: Use [manual-integration] with systematic [verification-checkpoints]
+
+**Quality Gate Failures:**
+- **Issue**: [Verification-specialists] identify gaps or [standards-compliance] fails
+- **Recovery**: Deploy [specialized-fix-agents] to address specific [quality-issues]
+- **Fallback**: Iterate with enhanced [quality-monitoring] and [user-feedback-integration]
+
+**Framework Compliance Failures:**
+- **Issue**: [6-dimensional-compliance] violations detected during [execution-monitoring]
+- **Recovery**: Pause execution, apply [compliance-corrections], resume with [enhanced-monitoring]
+- **Fallback**: Report [compliance-issues] to user with [corrective-recommendations]
+
+**User Satisfaction Failures:**
+- **Issue**: [Satisfaction-specialist] reports [user-dissatisfaction] or [expectation-mismatches]
+- **Recovery**: Deploy [clarification-specialist] to realign [objectives] and [approaches]  
+- **Fallback**: Restart workflow with [enhanced-understanding-phase] and [expectation-management]
+</error_recovery_framework>
+
 ## Best Practices
 
 Reference: Framework principles and core coordination patterns
@@ -244,6 +296,75 @@ Reference: Framework principles and core coordination patterns
 - **[Operation-Batching] Excellence**: Strategic [operation-grouping] for enhanced performance and [resource-optimization]
 - **[Quality-Integration]**: Built-in verification and [standards-maintenance] across all dimensions
 - **[User-Communication]**: Regular updates and confirmation throughout process with [dimensional-compliance]
+
+## Tool Coordination Intelligence
+
+### Parallelization Standards
+Apply tool patterns through mandatory [parallelization-standards]:
+
+- **Coordination**: Coordinate [tool-operations] through simultaneous execution unless proven [dependencies] exist
+- **Batching**: Batch [independent-operations] through strategic [grouping-intelligence] and [resource-optimization]
+- **Challenge**: Challenge [sequential-assumptions] through [dependency-verification] and [parallelization-assessment]
+- **Optimization**: Optimize [tool-utilization] through [performance-monitoring] and [efficiency-enhancement]
+
+### Tool Selection Intelligence
+- **Capability Matching**: Align [tool-functions] with [task-requirements]
+- **Performance Assessment**: Evaluate [execution-speed] and [resource-efficiency]  
+- **Integration Compatibility**: Assess [coordination-potential] and [interface-alignment]
+- **Optimization Potential**: Identify [parallel-execution] opportunities and [batching-benefits]
+
+### Dependency Management
+- **True Dependencies**: Identify actual [sequential-requirements] through [analysis]
+- **Assumed Dependencies**: Challenge [unnecessary-serialization] through [verification]
+- **Minimal Serialization**: Reduce [sequential-operations] to proven [requirements] only
+- **Integration Planning**: Plan [coordination-points] for [parallel-stream] convergence
+
+### Batching Optimization
+- **Type-Based Grouping**: Cluster [similar-operations] for [efficiency-gains]
+- **Resource-Based Coordination**: Balance [system-capacity] with [operation-demands]
+- **Context-Switch Minimization**: Reduce [overhead] through [strategic-grouping]
+- **Performance Tracking**: Monitor [batch-effectiveness] and [optimization-results]
+
+## Verification Intelligence
+
+### Dimensional Verification Checks
+Execute systematic verification for each framework dimension:
+
+**Tool Parallelization Verification:**
+- Detect and block unnecessary sequential tool operations
+- Verify sequential tool execution has proven [dependencies]
+- Assess tool parallelization optimization and [resource-utilization]
+- Validate parallel tool execution effectiveness and [performance-improvement]
+
+**Agent Mandatory Verification:**
+- Confirm all tasks flow through [specialist-assignment] evaluation
+- Detect and block inappropriate [direct-execution] attempts
+- Validate standardized [specialist-development] with [capability-assessment]
+- Monitor and verify [delegation-standards] and [assignment-protocol] compliance
+
+**Parallel First Verification:**
+- Verify atomic [parallelizable-unit] breakdown
+- Assess true vs. assumed [dependency-identification]
+- Validate simultaneous execution unless proven [dependencies] exist
+- Verify [integration-point] planning before parallel execution
+
+**Research Protocol Verification:**
+- Verify comprehensive discovery before [implementation]
+- Assess current version and [best-practice] compliance
+- Validate affected area mapping thoroughness
+- Verify parallel analysis across [structure], [technology], and [impact]
+
+**Recursion Prevention Verification:**
+- Verify flat [agent-architecture] with single-level delegation
+- Monitor and block [subagent-creation] or invocation attempts
+- Validate only primary system creates and coordinates [agents]
+- Assess [recursion-prevention] effectiveness and system stability
+
+**Operation Batching Verification:**
+- Verify proper grouping by type, resource usage, and [interdependencies]
+- Validate context switching minimization through strategic [operation-grouping]
+- Assess parallel execution coordination with system [resource-constraints]
+- Verify real-time [performance-monitoring] with systematic optimization
 
 ## Philosophy
 

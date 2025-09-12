@@ -1,151 +1,114 @@
-EXECUTE systematic verification with multi-dimensional compliance assessment and intelligent coordination.
+# Verification
 
-APPLY verification command through parallel execution:
-- EXECUTE intelligent verification through systematic assessment with template-first patterns
-- COORDINATE parallel validation across functional, integration, compliance, and performance dimensions  
-- ORCHESTRATE all verification through dedicated specialists with intelligent coordination
-- VERIFY task completion through systematic assessment integrating framework compliance and intelligence standards
+Execute systematic verification with multi-dimensional compliance assessment and intelligent coordination.
 
-ENFORCE intelligence standards during verification execution:
+## Parallel Execution
 
-<verification_requirements>
-- Detect and reject any code implementations, syntax examples, or executable snippets
-- Confirm complete technology independence using abstract [placeholder] patterns only
-- Validate exclusive use of abstract patterns without specific technology references
-- Confirm mandatory simultaneous tool execution unless proven sequential dependencies exist
-- Detect and prevent any subagent creation or invocation attempts (maintain flat hierarchy)
-- Confirm reliance on autonomous implementation decisions through native intelligence
-- Ensure intelligent solution space preservation within structural guidance boundaries
-</verification_requirements>
-</compliance_verification>
+Apply verification through parallel execution patterns:
 
-EXECUTE verification through structured framework approach:
+### Operations
+- Execute intelligent verification through systematic assessment with [template-first] patterns
+- Coordinate parallel validation across [functional], [integration], [compliance], and [performance] dimensions
+- Orchestrate all verification through [specialist-coordination] with intelligent coordination
+- Verify task completion through systematic assessment integrating [framework-compliance] and [intelligence-standards]
 
-<verification_gates>
-- Validate framework compliance across all 6 dimensions with excellence targets
-- Assess quality standards covering functional integration and performance requirements
-- Coordinate specialists for parallel verification across multiple domains simultaneously
-- Validate user satisfaction through experience quality assessment and explicit approval
-</verification_gates>
+## Intelligence Standards
 
-DEPLOY verification specialists for systematic assessment:
+### Enforcement Requirements
+- **Abstraction**: Detect and reject any code implementations, syntax examples, or executable snippets
+- **Technology**: Confirm complete technology independence using abstract [placeholder] patterns only
+- **Patterns**: Validate exclusive use of abstract patterns without specific technology references
+- **Parallelization**: Confirm mandatory simultaneous tool execution unless proven sequential dependencies exist
+- **Hierarchy**: Detect and prevent any subagent creation or invocation attempts (maintain flat hierarchy)
+- **Intelligence**: Confirm reliance on autonomous implementation decisions through native intelligence
+- **Creativity**: Ensure intelligent solution space preservation within structural guidance boundaries
 
-<specialist_assignments>
-- Compliance Specialist: Verify framework compliance across all 6 dimensions including tool parallelization and agent-mandatory architecture
-- Functional Specialist: Validate requirements completion and workflow effectiveness with parallel-first execution verification  
-- Integration Specialist: Verify component interactions and interface validation with operation batching assessment
-- Performance Specialist: Validate efficiency optimization and resource utilization with research protocol compliance
-- Architecture Specialist: Verify agent hierarchy integrity and recursion prevention validation across all dimensions
-</specialist_assignments>
+## Verification Framework
 
-<coordination_approach>
-Execute parallel validation across quality dimensions with systematic coordination of findings and comprehensive assessment of requirements and compliance.
-</coordination_approach>
-</verification_specialists>
+### Verification Gates
+- **Compliance**: Validate framework compliance across all 6 dimensions with [excellence-targets]
+- **Quality**: Assess quality standards covering [functional-integration] and [performance-requirements]
+- **Coordination**: Coordinate specialists for parallel verification across multiple [domains] simultaneously
+- **Satisfaction**: Validate user satisfaction through [experience-quality] assessment and explicit approval
 
-<quality_gates>
-Validate completion through these mandatory quality gates:
+### Specialist Deployment
+- **Compliance Specialist**: Verify framework compliance across all 6 dimensions including [tool-parallelization] and [agent-mandatory-architecture]
+- **Functional Specialist**: Validate requirements completion and workflow effectiveness with [parallel-first-execution] verification
+- **Integration Specialist**: Verify component interactions and interface validation with [operation-batching] assessment
+- **Performance Specialist**: Validate efficiency optimization and resource utilization with [research-protocol] compliance
+- **Architecture Specialist**: Verify agent hierarchy integrity and [recursion-prevention] validation across all dimensions
 
-<gate_checklist>
-☐ Tool Parallelization: Confirm simultaneous tool execution with dependency challenge verification
-☐ Agent-Mandatory: Validate zero direct execution with complete assignment protocol verification  
-☐ Parallel-First: Verify task decomposition with dependency challenge and parallel default compliance
-☐ Research Protocol: Confirm comprehensive discovery with modernization and impact analysis assessment
-☐ Agent Recursion Prevention: Validate flat hierarchy with recursion detection and authority enforcement
-☐ Operation Batching: Verify strategic operation grouping with performance enhancement assessment
-</gate_checklist>
+### Coordination Strategy
+- Execute parallel validation across quality dimensions with systematic coordination
+- Comprehensive assessment of [requirements] and [compliance] through [systematic-coordination]
 
-<gate_coordination>
-Execute simultaneous validation across all quality dimensions with intelligent integration of framework compliance and quality assurance, including verification of optimization benefits.
-</gate_coordination>
-</quality_gates>
+## Quality Gates
 
-<testing_integration>
-Integrate testing throughout verification process:
+Validate completion through mandatory quality gates.
 
-<testing_approach>
-Test parallel tool execution with dependency validation and performance metrics. Test agent delegation with direct execution prevention and assignment protocol validation. Test task decomposition with dependency challenge verification and parallel execution validation. Test discovery completeness with modernization validation and impact analysis verification. Test hierarchy integrity with recursion detection and authority enforcement validation. Test batching efficiency with resource balance verification and performance tracking.
-</testing_approach>
+### Gate Requirements
+- **Tool Parallelization**: Confirm simultaneous tool execution with [dependency-challenge] verification
+- **Agent Mandatory**: Validate zero direct execution with complete [assignment-protocol] verification
+- **Parallel First**: Verify task decomposition with [dependency-challenge] and parallel default compliance
+- **Research Protocol**: Confirm comprehensive discovery with [modernization] and [impact-analysis] assessment
+- **Recursion Prevention**: Validate flat hierarchy with [recursion-detection] and [authority-enforcement]
+- **Operation Batching**: Verify strategic operation grouping with [performance-enhancement] assessment
 
-<testing_coordination>  
-Execute simultaneous testing across domains with compliance integration combining framework verification with functional testing, plus performance validation confirming efficiency gains and optimization verification.
-</testing_coordination>
-</testing_integration>
+### Gate Coordination
+- Execute simultaneous validation across all quality dimensions
+- Intelligent integration of [framework-compliance] and [quality-assurance]
+- Include verification of [optimization-benefits] and [performance-gains]
 
-EXECUTE parallel verification through simultaneous excellence patterns:
+## Testing Integration
 
-<verification_batching>
-Run functional, compliance, performance, quality, and architecture verification in parallel execution. Validate mandatory simultaneous tool execution patterns and verify flat agent hierarchy with anti-recursion constraints.
-</verification_batching>
+Integrate testing throughout verification process.
 
-<coordination_integration>
-Coordinate through checkpoint synchronization with minimal overhead and systematic result coordination leading to completion verification.
-</coordination_integration>
-</parallel_verification>
+### Testing Approach
+- Test parallel tool execution with [dependency-validation] and [performance-metrics]
+- Test agent delegation with [direct-execution-prevention] and [assignment-protocol] validation
+- Test task decomposition with [dependency-challenge] verification and [parallel-execution] validation
+- Test discovery completeness with [modernization-validation] and [impact-analysis] verification
+- Test hierarchy integrity with [recursion-detection] and [authority-enforcement] validation
+- Test batching efficiency with [resource-balance] verification and [performance-tracking]
 
-<tool_parallelization_verification>
-Verify mandatory parallelization through these assessments:
+### Testing Coordination
+- Execute simultaneous testing across [domains] with [compliance-integration]
+- Combine [framework-verification] with [functional-testing] and [performance-validation]
+- Confirm [efficiency-gains] and [optimization-verification]
 
-<parallelization_checks>
-☐ Detect and block unnecessary sequential tool operations
-☐ Verify sequential tool execution has proven dependencies  
-☐ Assess tool parallelization optimization and resource utilization
-☐ Validate parallel tool execution effectiveness and performance improvement
-</parallelization_checks>
-</tool_parallelization_verification>
+## Parallel Verification
 
-<agent_mandatory_verification>
-Verify agent-mandatory architecture compliance:
+Execute parallel verification through simultaneous excellence patterns.
 
-<delegation_checks>
-☐ Confirm all tasks flow through specialist assignment evaluation
-☐ Detect and block inappropriate direct execution attempts
-☐ Validate standardized specialist development with capability assessment  
-☐ Monitor and verify delegation standards and assignment protocol compliance
-</delegation_checks>
-</agent_mandatory_verification>
+### Verification Batching
+- Run [functional], [compliance], [performance], [quality], and [architecture] verification in parallel execution
+- Validate mandatory simultaneous [tool-execution] patterns and verify flat [agent-hierarchy] with [anti-recursion] constraints
 
-VERIFY all 6 framework dimensions through systematic assessment:
+### Coordination Integration
+- Coordinate through [checkpoint-synchronization] with minimal overhead
+- Systematic result coordination leading to [completion-verification]
 
-<parallel_first_checks>
-☐ Verify atomic parallelizable unit breakdown
-☐ Assess true vs. assumed dependency identification  
-☐ Validate simultaneous execution unless proven dependencies exist
-☐ Verify integration point planning before parallel execution
-</parallel_first_checks>
+## Dimensional Verification
 
-<research_protocol_checks>
-☐ Verify comprehensive discovery before implementation
-☐ Assess current version and best practice compliance
-☐ Validate affected area mapping thoroughness
-☐ Verify parallel analysis across structure, technology, and impact
-</research_protocol_checks>
+Verify all 6 framework dimensions through systematic assessment:
 
-<operation_batching_checks>  
-☐ Verify proper grouping by type, resource usage, and interdependencies
-☐ Validate context switching minimization through strategic operation grouping
-☐ Assess parallel execution coordination with system resource constraints
-☐ Verify real-time performance monitoring with systematic optimization
-</operation_batching_checks>
+- **Tool Parallelization**: Verify mandatory parallelization through systematic assessments
+- **Agent Mandatory**: Verify agent-mandatory architecture compliance 
+- **Parallel First**: Verify atomic [parallelizable-unit] breakdown and dependency assessment
+- **Research Protocol**: Verify comprehensive discovery before [implementation]
+- **Recursion Prevention**: Verify flat [agent-architecture] with single-level delegation
+- **Operation Batching**: Verify proper grouping by type, resource usage, and [interdependencies]
 
-<anti_recursion_checks>
-☐ Verify flat agent architecture with single-level delegation
-☐ Monitor and block subagent creation or invocation attempts
-☐ Validate only primary system creates and coordinates agents
-☐ Assess recursion prevention effectiveness and system stability
-</anti_recursion_checks>
-</dimensional_verification>
+## Continuous Verification
 
-MAINTAIN continuous verification intelligence:
+Maintain continuous verification intelligence through:
 
-<monitoring_approach>
-Execute real-time compliance, quality, performance, integration, and architecture monitoring. Apply adaptive dynamic standards optimization and enhancement including recursion prevention. Maintain continuous agent hierarchy integrity and anti-recursion constraint validation.
-</monitoring_approach>
+- **Real-time Monitoring**: Execute continuous [compliance], [quality], [performance], [integration], and [architecture] monitoring
+- **Adaptive Optimization**: Apply dynamic [standards-optimization] and enhancement including [recursion-prevention]
+- **Integrity Maintenance**: Maintain continuous [agent-hierarchy] integrity and [anti-recursion] constraint validation
 
-<success_targets>
-☐ Achieve comprehensive verification across all dimensions
-☐ Maintain framework target compliance and excellence standards
-☐ Validate user satisfaction through experience quality assessment
-</success_targets>
-</continuous_verification>
-</verification_instructions>
+## Success Targets
+
+- **Comprehensive**: Achieve comprehensive verification across all [dimensions]
+- **Compliance**: Maintain framework target compliance and [excellence-standards]
+- **Satisfaction**: Validate user satisfaction through [experience-quality] assessment
