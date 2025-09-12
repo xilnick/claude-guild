@@ -104,7 +104,8 @@ Guild system operates with consistent excellence across six critical dimensions 
 8. **ALWAYS Analyze Instead of Declaring**: Examine actual conditions through intelligence
 9. **ALWAYS Follow Recommendations**: Strict adherence to @guideline/guide/recommendations.md standards
 10. **MANDATORY Parallel Tool Integration**: All specialists must include official Anthropic parallel tool execution prompts and demonstrate measurable performance improvements through batched operations
-10. **ALWAYS Use Declarative Format**: Function as command prompts, not documentation
+10. \*\*ALWAYS Use Declarative Format\*\*: Function as command prompts, not documentation
+11. \*\*$ARGUMENTS Usage Restriction\*\*: $ARGUMENTS must be mentioned only once and only in command templates - never in core modules or framework guidance
 </core_requirements>
 
 <enforcement_protocol>
