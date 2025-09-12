@@ -109,6 +109,10 @@ Use this template when creating specialists:
 <success_criteria>[success-criteria]</success_criteria>
 <recovery_patterns>[recovery-patterns]</recovery_patterns>
 
+<parallel_tool_execution>
+For maximum efficiency, whenever you perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially. Prioritize calling tools in parallel whenever possible. For example, when reading 3 files, run 3 tool calls in parallel to read all 3 files into context at the same time. When running multiple read-only commands like ls or list_dir, always run all of the commands in parallel. Err on the side of maximizing parallel tool calls rather than running too many tools sequentially.
+</parallel_tool_execution>
+
 <constraints>
 MANDATORY: Never create, invoke, or coordinate additional agents.
 All coordination flows through primary Guild system only.
@@ -244,6 +248,8 @@ Task completion requires meeting these criteria:
 ☐ [Research-Protocol]: Comprehensive discovery and analysis completed before [implementation]
 ☐ [Recursion-Prevention]: Flat agent hierarchy maintained with single-level delegation
 ☐ [Operation-Batching]: Strategic [operation-grouping] achieved with performance optimization
+☐ [Anthropic-Parallel-Standards]: All specialists implement official parallel tool execution prompts
+☐ [Tool-Performance-Optimization]: Parallel tool execution demonstrates measurable efficiency improvements
 ☐ [User-Satisfaction]: Explicit approval received through [satisfaction-specialist] verification
 </verification_checklist>
 </success_criteria>
@@ -325,6 +331,27 @@ Apply tool patterns through mandatory [parallelization-standards]:
 - **Context-Switch Minimization**: Reduce [overhead] through [strategic-grouping]
 - **Performance Tracking**: Monitor [batch-effectiveness] and [optimization-results]
 
+### Parallel Tool Execution Standards
+Apply Anthropic's official parallel tool execution requirements:
+
+**Specialist Tool Coordination:**
+- **Simultaneous Operations**: Execute all independent tool calls in parallel by default
+- **Batch Tool Calls**: Group related operations for single response execution
+- **Dependency Challenge**: Question assumptions about sequential requirements
+- **Performance Optimization**: Maximize parallel execution over sequential operations
+
+**Implementation Patterns:**
+- **File Operations**: Read multiple files simultaneously in single response
+- **Analysis Operations**: Execute parallel analysis tools for comprehensive assessment
+- **Discovery Operations**: Perform simultaneous scanning and inventory operations
+- **Verification Operations**: Run parallel validation across multiple domains
+
+**Tool Selection Guidelines:**
+- **Independent Operations**: Default to parallel execution unless proven dependencies exist
+- **Related Operations**: Batch similar tool calls for efficiency optimization
+- **Context Integration**: Coordinate parallel results for comprehensive analysis
+- **Error Handling**: Design parallel operations with appropriate fallback strategies
+
 ## Verification Intelligence
 
 ### Dimensional Verification Checks
@@ -335,6 +362,10 @@ Execute systematic verification for each framework dimension:
 - Verify sequential tool execution has proven [dependencies]
 - Assess tool parallelization optimization and [resource-utilization]
 - Validate parallel tool execution effectiveness and [performance-improvement]
+- **Anthropic Standards Compliance**: Confirm specialists follow official parallel tool execution prompts
+- **Batch Operation Assessment**: Verify specialists group independent operations appropriately
+- **Performance Measurement**: Track parallelization benefits and efficiency improvements
+- **Sequential Justification**: Ensure any sequential operations have documented dependencies
 
 **Agent Mandatory Verification:**
 - Confirm all tasks flow through [specialist-assignment] evaluation

@@ -6,6 +6,7 @@
 ## Mandatory Requirements
 
 ### From framework.md:
+- **ALWAYS follow framework principles** read framework and recomendations first before making changes
 - **ALWAYS apply intelligent understanding** through autonomous analysis
 - **ALWAYS run verification** after implementation
 - **ALWAYS iterate** until technical excellence achieved
