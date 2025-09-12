@@ -8,7 +8,9 @@ description: "Natural [task-type] execution with intelligent analysis and iterat
 ---
 
 <task>
-You will execute the user's [task-requirements] through systematic specialist coordination and framework compliance. Analyze actual [project-conditions] rather than making assumptions, and delegate all work through appropriate specialists while maintaining parallel execution patterns.
+**Philosophy**: Structure enables intelligence. Intelligence optimizes structure.
+
+You will execute the user's [task-requirements] through systematic specialist coordination and framework compliance with comprehensive dimensional integration (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001). Analyze actual [project-conditions] rather than making assumptions, and delegate all work through appropriate specialists while maintaining parallel execution patterns with **Anthropic Standards Integration**.
 </task>
 
 ## User Request Processing
@@ -35,42 +37,44 @@ When $ARGUMENTS is provided, treat it as the user's task request:
 </prerequisites>
 
 <compliance>
-You must adhere to these mandatory requirements:
+You must adhere to these mandatory requirements with enhanced abstraction compliance:
 
-- Never include [code-implementations], [syntax-examples], or [executable-snippets]
-- Use only abstract [placeholder] patterns, never specific [technologies] or [frameworks]  
-- Never create, invoke, or coordinate additional agents (maintain flat hierarchy)
-- Delegate all [implementation-decisions] to specialist intelligence
-- Analyze actual [project-conditions] rather than making predetermined assumptions
-- Enable creative solutions within structural guidance
-- Trust native intelligence for [contextual-implementations]
+- Never include [code-implementations], [syntax-examples], or [executable-snippets] through [abstraction-validation]
+- Use only abstract [placeholder] patterns, never specific [technologies] or [frameworks] with [technology-independence-verification]
+- Never create, invoke, or coordinate additional agents (maintain flat hierarchy) through [prevention-mechanisms] and [flat-delegation-protocols]
+- Delegate all [implementation-decisions] to specialist intelligence with [analysis-first-intelligence]
+- Analyze actual [project-conditions] rather than making predetermined assumptions through [systematic-challenge-protocols]
+- Enable creative solutions within structural guidance through [solution-enablement] and [template-first-validation]
+- Trust native intelligence for [contextual-implementations] with [6-dimensional-compliance-architecture]
+- Implement **Anthropic Standards Integration** with official parallel tool execution throughout all specialist coordination
+- Apply **Assignment Protocol Standards** through [task-analysis], [capability-assessment], [direct-execution-prevention], and [assignment-verification]
 </compliance>
 
 <framework>
 Apply this 6-dimensional execution protocol:
 
 <tool_parallelization>
-Execute multiple [tool-operations] simultaneously unless proven dependencies exist. Challenge assumptions about sequential requirements and default to parallel execution.
+**TB001**: Execute multiple [tool-operations] simultaneously unless proven dependencies exist through [systematic-challenge-protocols]. Challenge assumptions about sequential requirements and default to parallel execution with **Anthropic Standards Integration**: "For maximum efficiency, whenever you perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially. Prioritize calling tools in parallel whenever possible. Err on the side of maximizing parallel tool calls rather than running too many tools sequentially."
 </tool_parallelization>
 
-<agent_assignment>  
-Route all [task-type] work through appropriate specialist assignment. Never execute [tasks] directly - always delegate to suitable specialists.
+<agent_assignment>
+**AM001**: Route all [task-type] work through appropriate specialist assignment with **Assignment Protocol Standards**. Never execute [tasks] directly - always delegate to suitable specialists through [task-analysis], [capability-assessment], [direct-execution-prevention], and [assignment-verification] with [systematic-specialist-development] and [prevention-protocols].
 </agent_assignment>
 
 <parallel_planning>
-Decompose [task-components] into parallelizable units using [coordination-strategies]. Plan simultaneous execution streams with explicit integration points.
+**PE001**: Decompose [task-components] into parallelizable units using [coordination-strategies] with **Atomic Unit Analysis**. Plan simultaneous execution streams with explicit integration points through [dependency-challenge-protocols], [systematic-verification-frameworks], and [parallel-optimization-patterns].
 </parallel_planning>
 
 <research_gates>
-Complete comprehensive discovery and analysis before [implementation]. Analyze actual [project-conditions], [requirements], and [constraints] through systematic examination.
+**RP001**: Complete comprehensive discovery and analysis before [implementation] through [parallel-exploration-frameworks]. Analyze actual [project-conditions], [requirements], and [constraints] through systematic examination with [discovery-to-execution-pipelines].
 </research_gates>
 
 <recursion_prevention>
-Maintain flat agent hierarchy with single-level delegation only. Never create or invoke additional agents beyond the primary [system-authority].
+**AR001**: Maintain flat agent hierarchy with single-level delegation only through [prevention-mechanisms]. Never create or invoke additional agents beyond the primary [system-authority] with [flat-delegation-protocols] and [single-level-coordination].
 </recursion_prevention>
 
 <operation_batching>
-Group related [operations] strategically for enhanced performance and [resource-optimization]. Coordinate batch execution across [domains].
+**OB001**: Group related [operations] strategically for enhanced performance and [resource-optimization] through [classification-intelligence]. Coordinate batch execution across [domains] with [context-switching-minimization] and [systematic-interdependency-patterns].
 </operation_batching>
 </framework>
 
@@ -86,13 +90,15 @@ Create and coordinate specialists through systematic analysis and framework comp
 </thinking>
 
 <agent_creation>
-When creating specialists, ensure they meet these standards:
-- Optimized for parallel [tool-execution] and batching operations
-- Designed for zero direct execution with systematic delegation
-- Aligned with comprehensive discovery and analysis patterns  
-- Constrained to prevent agent creation or invocation (flat hierarchy)
-- Equipped with automatic [failure-recovery] and [error-handling]
-- Compliant across all 6 [framework-dimensions]
+When creating specialists, ensure they meet these enhanced standards:
+- Optimized for parallel [tool-execution] and batching operations with **Anthropic Standards Integration** and [simultaneous-execution-patterns]
+- Designed for zero direct execution with systematic delegation through [assignment-protocol-standards] and [prevention-protocols]
+- Aligned with comprehensive discovery and analysis patterns through [parallel-exploration-frameworks] and [systematic-verification-frameworks]
+- Constrained to prevent agent creation or invocation (flat hierarchy) through [prevention-mechanisms] and [flat-delegation-protocols]
+- Equipped with automatic [failure-recovery] and [error-handling] with [adaptive-resilience-patterns]
+- Compliant across all 6 [framework-dimensions] through [6-dimensional-compliance-architecture]
+- Implement [atomic-unit-analysis] and [dependency-challenge-protocols] for enhanced parallel planning
+- Include [cross-dimensional-workflow-templates] for systematic interdependency coordination
 </agent_creation>
 
 <specialist_template>

@@ -8,7 +8,9 @@ description: "Analyze [project-type] and create specialized agents based on disc
 ---
 
 ## Purpose
-Initialize Guild system by analyzing project structure and creating specialized agents based on discovered project needs through systematic discovery and intelligent agent generation.
+**Philosophy**: Structure enables intelligence. Intelligence optimizes structure.
+
+Initialize Guild system by analyzing project structure and creating specialized agents based on discovered project needs through systematic discovery and intelligent agent generation with comprehensive dimensional integration (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001).
 
 ## User Request Processing
 
@@ -20,14 +22,16 @@ When $ARGUMENTS is provided, treat it as the user's specific request that guides
 
 ## Mandatory Intelligence Compliance
 
-**TEMPLATE REQUIREMENT**: This template enforces mandatory intelligence standards:
+**TEMPLATE REQUIREMENT**: This template enforces mandatory intelligence standards with enhanced abstraction compliance:
 
-- **Zero Code Samples**: Template must never generate or include any code implementations, syntax examples, or executable snippets
-- **Complete Technology Abstraction**: Template uses only abstract `[technology-stack]`, `[framework]`, `[language]` placeholder patterns
-- **Template-First Patterns**: All guidance uses abstract `[placeholder]` patterns exclusively without specific implementations  
-- **Agent Anti-Recursion**: Template ensures agents never create or invoke additional agents - flat hierarchy enforced
-- **Native Intelligence Reliance**: Template trusts autonomous intelligence to determine optimal project-specific implementations
-- **Creative Solution Preservation**: Template structure enables intelligent adaptation without constraining implementation choices
+- **Zero Code Samples**: Template must never generate or include any code implementations, syntax examples, or executable snippets through [abstraction-validation]
+- **Complete Technology Abstraction**: Template uses only abstract `[technology-stack]`, `[framework]`, `[language]` placeholder patterns with [technology-independence-verification]
+- **Template-First Patterns**: All guidance uses abstract `[placeholder]` patterns exclusively without specific implementations through [template-first-validation]
+- **Agent Anti-Recursion**: Template ensures agents never create or invoke additional agents - flat hierarchy enforced through [prevention-mechanisms] and [flat-delegation-protocols]
+- **Native Intelligence Reliance**: Template trusts autonomous intelligence to determine optimal project-specific implementations with [analysis-first-intelligence]
+- **Creative Solution Preservation**: Template structure enables intelligent adaptation without constraining implementation choices through [solution-enablement]
+- **Anthropic Standards Integration**: Template enforces official parallel tool execution throughout all created specialists with measurable performance improvements
+- **Assignment Protocol Standards**: Template implements [task-analysis], [capability-assessment], [direct-execution-prevention], and [assignment-verification] compliance
 
 ## Systematic Analysis & Preparation Process
 
@@ -37,7 +41,7 @@ Comprehensive project analysis to determine optimal agent specifications through
 ### Initial Project Discovery
 
 **Preparation-Focused Analysis:**
-Reference: `@config:AG001` (Agent Creation Pattern), `@config:AM001` (Agent-Mandatory Architecture), `@config:PE001` (Parallel-First Execution Engine), `@config:RP001` (Research Pattern)
+Reference: `@config:AG001` (Agent Creation Pattern), `@config:AM001` (Agent-Mandatory Architecture with Assignment Protocol Standards), `@config:PE001` (Parallel-First Execution with Atomic Unit Analysis), `@config:RP001` (Research Pattern with Parallel Exploration Frameworks), `@config:TB001` (Tool Parallelization with Anthropic Standards Integration), `@config:AR001` (Agent Recursion Prevention), `@config:OB001` (Operation Batching Optimization)
 
 <thinking>
 1. What are the [project-components] and [technology-stack] characteristics?
@@ -54,11 +58,12 @@ Reference: `@config:AG001` (Agent Creation Pattern), `@config:AM001` (Agent-Mand
 - Document findings for intelligent agent creation specifications with [dimensional-compliance]
 
 **Runtime [Tool-Discovery]:**
-Reference: `@config:TB001` (Tool Parallelization Mandate), `@config:OB001` (Operation Batching Optimization)
-- Dynamic scanning of available [development-tools] and capabilities
-- [Tool-capability] assessment for parallel execution optimization
-- [Tool-inventory] compilation with [capability-profiling]
-- [Tool-aware] parallelization and batching strategy preparation
+Reference: `@config:TB001` (Tool Parallelization with Anthropic Standards Integration), `@config:OB001` (Operation Batching Optimization)
+- Dynamic scanning of available [development-tools] and capabilities with [systematic-challenge-protocols]
+- [Tool-capability] assessment for parallel execution optimization through [dependency-verification-frameworks]
+- [Tool-inventory] compilation with [capability-profiling] and [simultaneous-execution-assessment]
+- [Tool-aware] parallelization and batching strategy preparation with [context-switching-minimization]
+- **Anthropic Standards Implementation**: Ensure all discovered tools support official parallel execution patterns with measurable performance improvements
 
 **Discovery [Coordination]:**
 Reference: `@config:EX001` (Execution Pattern), `@config:PE001` (Parallel-First Execution Engine), `@config:TB001` (Tool Parallelization Mandate), `@config:AR001` (Agent Recursion Prevention)

@@ -1,25 +1,30 @@
 # Quality Standards
 
-Execute quality assurance through systematic verification and excellence frameworks.
+**Philosophy**: Structure enables intelligence. Intelligence optimizes structure.
+
+Execute quality assurance through systematic verification and excellence frameworks with comprehensive dimensional integration (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001).
 
 ## Core Quality Framework
 
-Apply quality standards through comprehensive validation:
+Apply quality standards through comprehensive validation with enhanced abstraction compliance:
 
-- **Requirements Completion**: Verify through systematic assessment and evidence validation
-- **Integration Effectiveness**: Validate through component coordination and interface testing
-- **Standard Compliance**: Ensure framework adherence and dimensional verification
-- **User Satisfaction**: Confirm through explicit approval and experience quality
+- **Requirements Completion**: Verify through systematic assessment and evidence validation with [template-first-principles]
+- **Integration Effectiveness**: Validate through component coordination and interface testing with [cross-dimensional-workflows]
+- **Standard Compliance**: Ensure framework adherence and dimensional verification through [6-dimensional-compliance-architecture]
+- **User Satisfaction**: Confirm through explicit approval and experience quality with [analysis-first-intelligence]
+- **Abstraction Excellence**: Maintain absolute code prohibition and complete technology independence through [placeholder-pattern-validation]
 
 ## Quality Assessment Dimensions
 
-Execute quality through parallel validation dimensions:
+Execute quality through parallel validation dimensions with **Anthropic Standards Integration**:
 
-- **Functional Verification**: Confirm requirements completion and workflow effectiveness
-- **Integration Verification**: Validate component communication and interface reliability
-- **Quality Verification**: Assess pattern adherence and maintainability standards
-- **Performance Verification**: Evaluate efficiency targets and optimization effectiveness
-- **Compliance Verification**: Ensure framework adherence across all dimensional requirements
+- **Functional Verification**: Confirm requirements completion and workflow effectiveness through [specialist-assignment-protocols]
+- **Integration Verification**: Validate component communication and interface reliability with [cross-dimensional-coordination-patterns]
+- **Quality Verification**: Assess pattern adherence and maintainability standards through [template-first-validation]
+- **Performance Verification**: Evaluate efficiency targets and optimization effectiveness with [parallel-tool-execution-measurement]
+- **Compliance Verification**: Ensure framework adherence across all dimensional requirements through [systematic-excellence-verification]
+- **Tool Parallelization Verification**: Confirm simultaneous tool execution with measurable performance improvements
+- **Assignment Protocol Verification**: Validate [task-analysis], [capability-assessment], [direct-execution-prevention], and [assignment-verification] compliance
 
 ## Iterative Improvement
 
@@ -77,10 +82,15 @@ Achieve quality targets through systematic excellence:
 - **User-Centric Focus**: Prioritize user satisfaction as ultimate authority
 
 ### Framework Integration
-Integrate quality standards with framework dimensions:
-- **Tool Parallelization**: Verify simultaneous execution and dependency management
-- **Agent Architecture**: Validate specialist coordination and delegation effectiveness
-- **Parallel Planning**: Assess decomposition quality and coordination efficiency
-- **Research Integration**: Verify discovery completeness and analysis thoroughness
-- **Recursion Prevention**: Ensure hierarchy integrity and constraint compliance
-- **Operation Batching**: Validate grouping effectiveness and performance optimization
+Integrate quality standards with framework dimensions through enhanced compliance patterns:
+- **Tool Parallelization (TB001)**: Verify simultaneous execution and dependency management with [Anthropic-standards-integration]
+- **Agent Architecture (AM001)**: Validate specialist coordination and delegation effectiveness through [assignment-protocol-standards]
+- **Parallel Planning (PE001)**: Assess decomposition quality and coordination efficiency with [atomic-unit-analysis] and [dependency-challenge-protocols]
+- **Research Integration (RP001)**: Verify discovery completeness and analysis thoroughness with [parallel-exploration-frameworks]
+- **Recursion Prevention (AR001)**: Ensure hierarchy integrity and constraint compliance through [flat-delegation-protocols]
+- **Operation Batching (OB001)**: Validate grouping effectiveness and performance optimization through [classification-intelligence]
+
+**Cross-Dimensional Quality Integration**:
+- **Discovery-Assignment-Execution Quality**: Verify RP001 → AM001 → PE001 coordination excellence
+- **Parallel-Tool-Batching Quality**: Assess TB001 ↔ OB001 integration effectiveness
+- **Assignment-Hierarchy-Control Quality**: Validate AM001 ↔ AR001 coordination integrity

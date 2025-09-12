@@ -1,14 +1,17 @@
 # Shared Configurations
 
-Apply core intelligence patterns through systematic coordination with mandatory abstraction compliance.
+**Philosophy**: Structure enables intelligence. Intelligence optimizes structure.
+
+Apply core intelligence patterns through systematic coordination with mandatory abstraction compliance and comprehensive dimensional integration (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001).
 
 ## Core Intelligence Patterns
 
-Execute pattern-based intelligence coordination:
-- Apply essential patterns for systematic intelligence coordination with mandatory abstraction standards
-- Enforce abstraction compliance through placeholder pattern utilization
-- Coordinate intelligent systems through standardized pattern execution
-- Maintain systematic excellence through pattern-driven coordination
+Execute pattern-based intelligence coordination with enhanced framework alignment:
+- Apply essential patterns for systematic intelligence coordination with mandatory abstraction standards and [template-first-principles]
+- Enforce abstraction compliance through placeholder pattern utilization and [technology-independence-verification]
+- Coordinate intelligent systems through standardized pattern execution with [6-dimensional-compliance-architecture]
+- Maintain systematic excellence through pattern-driven coordination and [analysis-first-intelligence]
+- Implement **Anthropic Standards Integration** through official parallel tool execution patterns across all configuration templates
 
 ## Framework Configuration Patterns
 
@@ -19,11 +22,14 @@ Execute pattern-based intelligence coordination:
 - **Integration**: Parallel coordination planning
 
 ### Agent Mandatory Pattern (@config:AM001)
-**Principle**: Zero direct execution with mandatory agent delegation
-- **Assignment Protocol**: Route every task through specialist assignment evaluation
-- **Direct Prevention**: Block inappropriate direct execution through automated guards
-- **Agent Creation**: Use standardized specialist development with capability assessment
-- **Monitoring**: Track compliance with delegation standards and assignment protocols
+**Principle**: Zero direct execution with mandatory agent delegation and enhanced protocol standards
+- **Assignment Protocol Standards**: Route every task through [specialist-assignment-evaluation] with [task-analysis], [capability-assessment], [direct-execution-prevention], and [assignment-verification]
+- **Task Analysis**: Evaluate [task-complexity] and [domain-requirements] for optimal specialist selection
+- **Capability Assessment**: Match [task-characteristics] with [specialist-expertise] through systematic evaluation
+- **Direct Prevention**: Block inappropriate direct execution through [automated-guard-mechanisms] and [prevention-protocols]
+- **Assignment Verification**: Confirm specialist selection through [compatibility-scoring] and [effectiveness-metrics]
+- **Implementation Requirements**: Mandatory specialist assignment for all [work-categories] without exception through [systematic-specialist-development]
+- **Monitoring**: Track compliance with delegation standards and assignment protocols through [verification-streams] and [quality-gates]
 
 ### Execution Pattern (@config:EX001)
 **Principle**: Systematic decomposition with parallel optimization
@@ -33,11 +39,15 @@ Execute pattern-based intelligence coordination:
 - **Excellence**: Achieve high performance across all dimensions
 
 ### Parallel First Pattern (@config:PE001)
-**Principle**: Default parallel task decomposition with dependency challenge
-- **Task Analysis**: Break tasks into atomic parallelizable units
-- **Dependency Discovery**: Identify true vs. assumed dependencies with challenge protocols
-- **Parallel Default**: Execute simultaneously unless proven dependencies exist
-- **Synchronization Design**: Plan integration points before parallel execution begins
+**Principle**: Default parallel task decomposition with enhanced dependency challenge protocols
+- **Atomic Unit Analysis**: Decompose [complex-tasks] into smallest parallelizable [work-units] through systematic breakdown
+- **Sequential Assumption Challenge**: Question all assumed dependencies through [dependency-verification-frameworks]
+- **True Dependency Identification**: Distinguish actual dependencies from assumed sequential patterns using [analysis-protocols]
+- **Parallel Optimization**: Default to simultaneous execution unless [proven-dependencies] require sequential processing
+- **Implementation Requirements**: Systematic task decomposition into [atomic-parallel-components] before execution begins
+- **Dependency Challenge Protocols**: Mandatory dependency challenge through [assumption-verification] protocols for all sequential requirements
+- **Parallel Execution Planning**: Explicit [integration-points] and [synchronization-patterns] with [parallel-coordination] and [efficiency-tracking] mechanisms
+- **Synchronization Design**: Plan integration points before parallel execution begins with [performance-optimization] tracking
 
 ### Research Pattern (@config:RP001)
 **Principle**: Comprehensive discovery before implementation
@@ -46,11 +56,15 @@ Execute pattern-based intelligence coordination:
 - **Validation**: Complete affected area mapping systematically
 
 ### Tool Parallelization Pattern (@config:TB001)
-**Principle**: Mandatory parallel tool execution with capability-aware optimization
+**Principle**: Mandatory parallel tool execution with **Anthropic Standards Integration** and capability-aware optimization
+- **Anthropic Standards Enforcement**: All specialists must implement official parallel tool execution with the mandate: "For maximum efficiency, whenever you perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially. Prioritize calling tools in parallel whenever possible. Err on the side of maximizing parallel tool calls rather than running too many tools sequentially."
+- **Implementation Requirements**: Batch independent tool operations in single responses with default simultaneous execution for file operations, analysis tasks, and discovery processes
+- **Dependency Verification**: Question sequential assumptions through systematic dependency verification with [systematic-challenge-protocols]
+- **Performance Measurement**: Measure and optimize parallelization effectiveness continuously with [measurable-performance-improvements]
 - **Parallel Discovery**: Execute simultaneous tool capability scanning and parallel inventory assessment
 - **Parallelization Profiling**: Assess tool parallel execution characteristics and concurrent optimization potential
-- **Parallel Batching**: Group tool-aware operations for simultaneous execution and maximum efficiency
-- **Parallel Optimization**: Monitor continuous parallel tool utilization and concurrent performance improvement
+- **Parallel Batching**: Group tool-aware operations for simultaneous execution and maximum efficiency through [context-switching-minimization]
+- **Parallel Optimization**: Monitor continuous parallel tool utilization and concurrent performance improvement with [efficiency-tracking-mechanisms]
 
 ### Agent Recursion Prevention Pattern (@config:AR001)
 **Principle**: Mandatory flat agent hierarchy with anti-recursion enforcement

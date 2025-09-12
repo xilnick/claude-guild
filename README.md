@@ -1,142 +1,176 @@
-# Guild System - Intelligent Task Execution Framework
+# Guild System - Intelligent AI Specialists for Your Project
 
-## 🎯 Motivation & Problem Solved
+> **Transform your AI coding experience** from generic responses to intelligent specialists that understand YOUR codebase and work together seamlessly.
 
-### The Problem
-Traditional AI coding assistants operate with generic, one-size-fits-all approaches that:
-- **Lack project-specific intelligence** - No understanding of your codebase patterns
-- **Execute without approval** - Changes made without user consent or understanding
-- **Miss coverage gaps** - Incomplete implementations with no systematic verification
-- **Work sequentially** - Slow, inefficient execution for complex tasks
-- **Forget project context** - No learning or pattern recognition across sessions
+## ⚡ Quick Start
 
-### The Solution
-The Guild System revolutionizes AI-assisted development through:
-- **🧠 Intelligence-First Architecture** - Adaptive agents that learn your project's patterns
-- **👤 Human-in-the-Middle Control** - Mandatory approval before ANY execution
-- **✅ Verification-Assured Quality** - Comprehensive coverage tracking and gap detection
-- **⚡ Parallel Execution** - 5-10x faster through intelligent agent coordination
-- **📚 Project Knowledge Persistence** - Agents embed and retain project-specific expertise
+```bash
+# Install in 30 seconds
+npx claude-guild@latest
 
-## 🚀 Installation
+# Analyze your project and create specialists  
+/guild:setup
 
-### Quick Install
+# Execute any task with intelligent coordination
+/guild "implement user authentication"
+```
+
+**👉 New to Guild?** Read the [Vision Guide](guideline/guide/vision.md) and [Quick Start Guide](guideline/guide/quickstart.md)
+
+---
+
+## 🎯 Why Guild System?
+
+### ❌ Traditional AI Problems
+- Generic, one-size-fits-all responses
+- No understanding of your project patterns
+- Works slowly, one task at a time  
+- Forgets context between conversations
+- No quality assurance or verification
+
+### ✅ Guild System Solution
+- **🧠 Project-aware specialists** that learn your patterns
+- **⚡ 5-10x faster** through parallel execution  
+- **👤 Human-in-the-middle control** - your approval required
+- **📚 Persistent knowledge** across sessions
+- **✅ Built-in verification** ensures complete, quality results
+
+---
+
+## 🚀 Installation & First Use
+
+### 1. Install Guild Commands
 ```bash
 npx claude-guild@latest
 ```
 
-### What Gets Installed
-```
-~/.claude/commands/
-├── guild.md          # Main workflow command (symlink)
-└── guild/
-    ├── workflow.md   # Intelligent task execution
-    └── setup.md      # Project agent creation
-```
-
-### First Use
+### 2. Set Up Your Project
 ```bash
-# Analyze your project and create specialized agents
+# In your project directory
 /guild:setup
+```
+Creates intelligent specialists tailored to your codebase.
 
-# Execute any task with intelligent coordination
-/guild "add user authentication with JWT"
+### 3. Execute Tasks
+```bash
+# Simple tasks
+/guild "fix the login bug"
+/guild "add a loading spinner component"
+
+# Complex features (parallel execution)
+/guild "implement real-time chat with websockets"
+/guild "add user profile management with photo upload"
 ```
 
-## 📖 Core Concepts
+---
 
-### Mandatory Human Approval
-**No execution without your explicit consent**
-- System analyzes requirements and presents understanding
-- You review approach and expected outcomes
-- Execution blocked until you approve
+## 💡 Real-World Examples
 
-### Dynamic Agent Creation
-**Agents created based on YOUR project**
-- Analyzes your technology stack and patterns
-- Creates specialists matching your architecture
-- Embeds your coding conventions and standards
+### Simple: Bug Fix (1-3 minutes)
+```
+You: /guild "fix the login validation error"
+Guild: → Login Specialist analyzes your auth patterns
+       → Identifies issue in validation logic  
+       → Fixes bug following your error handling conventions
+       → Updates tests and verifies functionality
+```
 
-### Comprehensive Verification
-**Never ships incomplete work**
-- Tracks coverage across all affected areas
-- Detects gaps in implementation
-- Ensures 100% satisfaction before completion
+### Complex: New Feature (5-8 minutes vs 30-60 minutes traditionally)
+```
+You: /guild "implement real-time chat feature"  
+Guild: → Frontend Specialist (chat UI components)
+       → Backend Specialist (WebSocket handling)
+       → Database Specialist (message storage)
+       → Testing Specialist (integration tests)
+       → All work simultaneously with coordinated integration
+```
 
-### Parallel Execution Intelligence
-**5-10x faster for complex tasks**
-- Identifies parallel execution opportunities
-- Coordinates multiple specialists simultaneously
+---
+
+## 🏗️ How It Works
+
+### 1. **Intelligent Project Analysis**
+- Analyzes your technology stack and architecture
+- Discovers coding patterns and conventions
+- Creates specialists with embedded project knowledge
+
+### 2. **Smart Task Coordination**  
+- Breaks complex tasks into parallel components
+- Assigns appropriate specialists
+- Coordinates simultaneous execution
 - Integrates results seamlessly
 
-## 🏗️ Architecture
+### 3. **Built-in Quality Assurance**
+- Comprehensive verification at every step
+- Ensures code follows your patterns
+- Maintains consistency across components
+- Your approval required before any changes
+
+---
+
+## 📚 Documentation
+
+### **Getting Started**
+- 📖 [**Vision Guide**](guideline/guide/vision.md) - Understand the Guild philosophy
+- 🚀 [**Quick Start Guide**](guideline/guide/quickstart.md) - Get up and running in 5 minutes
+
+### **Technical Documentation**  
+- ⚙️ [Framework Documentation](guideline/guide/framework.md) - Complete system architecture
+- 📋 [Best Practices](guideline/guide/recommendations.md) - Anthropic's official guidance
+- 🔧 [Core Modules](guideline/core/) - Intelligence module documentation
+
+---
+
+## 🎯 Key Benefits
+
+### **Speed Through Intelligence**
+- **5-10x faster** for complex tasks
+- **Parallel execution** of independent components
+- **Instant context** from persistent project knowledge
+
+### **Quality Through Structure**  
+- **Comprehensive coverage** - no forgotten components
+- **Pattern consistency** - follows your conventions
+- **Built-in verification** - quality gates at every step
+
+### **Control Through Transparency**
+- **Clear explanations** before execution
+- **Step-by-step progress** with verification
+- **Your approval required** for all changes
+
+---
+
+## 🔧 Technical Architecture
 
 ```
 Framework Layer (Philosophy & Requirements)
     ↓
-Core Intelligence Layer (Shared Patterns)
+Core Intelligence Layer (Shared Patterns)  
     ↓
 Command Layer (Self-Contained Execution)
 ```
 
-### Key Components
-- **framework.md** - Master requirements and philosophy
-- **core/*.md** - Shared intelligence modules
-- **templates/*.md** - Command templates
-- **install.js** - Embeds intelligence into commands
-
-## 💡 Usage Examples
-
-### Simple Task
-```bash
-/guild "fix the login bug"
-# → Single specialist, 1-3 minutes
+**Installation creates:**
+```
+~/.claude/commands/
+├── guild.md          # Main workflow command
+└── guild/
+    ├── workflow.md   # Task coordination intelligence
+    └── setup.md      # Project analysis and specialist creation
 ```
 
-### Complex Feature
-```bash
-/guild "implement real-time chat with websockets"
-# → Multiple specialists working in parallel, 5-8 minutes
-# → Instead of 30-60 minutes sequential
-```
-
-### Project Setup
-```bash
-/guild:setup
-# → Analyzes project, creates persistent agents
-# → Future tasks execute with instant project knowledge
-```
-
-## 🔧 Configuration
-
-### Command Metadata
-Commands use Claude's configuration format:
-```yaml
-name: guild
-model: sonnet
-thinking_mode: ultrathink
-description: "Natural task execution following @guideline/guide/framework.md"
-```
-
-### Core Modules
-- **agents.md** - Specialist creation and coordination
-- **verification.md** - Coverage tracking and validation
-
-## 📚 Documentation
-
-- [Framework Documentation](guideline/guide/framework.md) - Complete philosophy and requirements
-- [Best Practices & Recommendations](guideline/guide/recommendations.md) - Anthropic's official guidance
-- [Core Modules](guideline/core/README.md) - Intelligence module documentation
-- [Compliance Verification](guideline/verify-compliance.md) - System validation guide
+---
 
 ## 🤝 Contributing
 
-The Guild System welcomes contributions that enhance intelligent task execution while maintaining mandatory requirements:
+We welcome contributions that enhance intelligent task execution:
 
-1. All changes must comply with framework.md requirements
-2. Maintain human-in-the-middle approval patterns
-3. Ensure verification framework integration
-4. Follow Anthropic best practices
+1. **Follow the framework** - All changes must comply with [framework.md](guideline/guide/framework.md)
+2. **Maintain human control** - Preserve approval patterns
+3. **Ensure quality** - Integrate with verification systems
+4. **Follow best practices** - Adhere to [Anthropic guidelines](guideline/guide/recommendations.md)
+
+---
 
 ## 📄 License
 
@@ -148,4 +182,7 @@ Built on Anthropic's Claude AI best practices for structured prompting, XML patt
 
 ---
 
-**The Guild System** - Bringing intelligence, control, and verification to AI-assisted development.
+**🎯 Ready to transform your development workflow?**  
+**Start with:** `npx claude-guild@latest` **then** `/guild:setup`
+
+**The Guild System** - Intelligent, coordinated, and tailored to you.
