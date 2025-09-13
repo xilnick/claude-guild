@@ -20,7 +20,7 @@ The `/guild:setup` command analyzes project structure and creates specialized ag
 
 #### **Agent File Persistence Requirements**
 - **MUST** write agent files as persistent `.md` files to filesystem using Write or MultiEdit tools
-- **MUST** store agents at exact path: `.claude/agents/guild/[category]/[agent-name].md`
+- **MUST** store agents at exact path: `./.claude/agents/guild/[category]/[agent-name].md`
 - **MUST** include proper YAML frontmatter in each agent file with: name, model: inherit, 4-sentence description
 - **MUST** create at least one agent per discovered domain category
 - **MUST** verify files exist and are readable after creation using Read tool

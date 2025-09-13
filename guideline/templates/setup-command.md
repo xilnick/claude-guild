@@ -270,7 +270,7 @@ APPLY [sophisticated-agent-design] through [context-aware-architecture] and [int
 WRITE [generated-agents] to [filesystem] through [Write-tool-deployment] with [mandatory-file-creation] and [verification-protocols].
 
 #### Physical Agent File Creation
-- **DETERMINE** [agent-filepath] as `.claude/agents/guild/[category]/[agent-name].md` for each [generated-specialist]
+- **DETERMINE** [agent-filepath] as `./.claude/agents/guild/[category]/[agent-name].md` for each [generated-specialist]
 - **GENERATE** [agent-content] with [yaml-frontmatter] including name, model: inherit, 4-sentence description, and [complete-specialist-prompt]
 - **WRITE** [agent-file] using Write or MultiEdit tools for [persistent-storage] with [embedded-project-context]
 - **VERIFY** [file-existence] through Read tool for [persistence-confirmation] and [content-validation]
