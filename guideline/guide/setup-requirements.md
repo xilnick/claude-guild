@@ -18,6 +18,15 @@ The `/guild:setup` command analyzes project structure and creates specialized ag
 - **MUST** organize agents through category directory structure
 - **NEVER** execute created agents during setup process
 
+#### **Agent File Persistence Requirements**
+- **MUST** write agent files as persistent `.md` files to filesystem using Write or MultiEdit tools
+- **MUST** store agents at exact path: `.claude/agents/guild/[category]/[agent-name].md`
+- **MUST** include proper YAML frontmatter in each agent file with: name, model: inherit, 4-sentence description
+- **MUST** create at least one agent per discovered domain category
+- **MUST** verify files exist and are readable after creation using Read tool
+- **NEVER** rely solely on Task tool for agent creation (temporary agents only)
+- **MUST** write complete agent content including specialist prompt with embedded project context
+
 ### 3. **Architectural Boundaries**
 - **SETUP = AGENT FACTORY**: Creates agents with embedded parallel capabilities
 - **NEVER EXECUTES AGENTS**: Setup creates, workflow executes
@@ -41,6 +50,9 @@ The `/guild:setup` command analyzes project structure and creates specialized ag
 - **Project Discovery Complete**: Technology stack, architecture patterns, and domain boundaries comprehensively analyzed
 - **Agent Generation Complete**: All discovered domains have corresponding specialist agents with framework compliance
 - **System Integration Ready**: Agent coordination patterns established and workflow readiness verified
+- **Agent Files Created**: Physical `.md` files exist in agent directories with proper YAML frontmatter and complete specialist content
+- **File Verification Complete**: All created agent files readable, properly formatted, and contain embedded project context
+- **Persistence Confirmed**: Agent files remain accessible after setup command completion for workflow execution
 - **Quality Standards Met**: Template compliance, anti-recursion constraints, and parallel execution standards validated
 
 ### 7. **Framework Compliance**

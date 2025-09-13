@@ -265,6 +265,44 @@ APPLY [sophisticated-agent-design] through [context-aware-architecture] and [int
 - **ENSURE** [knowledge-completeness] through [coverage-gap-analysis] and [context-verification]
 - **OPTIMIZE** [specialist-coordination] through [context-aware-workflow-design]
 
+### Agent File Persistence Framework
+
+WRITE [generated-agents] to [filesystem] through [Write-tool-deployment] with [mandatory-file-creation] and [verification-protocols].
+
+#### Physical Agent File Creation
+- **DETERMINE** [agent-filepath] as `.claude/agents/guild/[category]/[agent-name].md` for each [generated-specialist]
+- **GENERATE** [agent-content] with [yaml-frontmatter] including name, model: inherit, 4-sentence description, and [complete-specialist-prompt]
+- **WRITE** [agent-file] using Write or MultiEdit tools for [persistent-storage] with [embedded-project-context]
+- **VERIFY** [file-existence] through Read tool for [persistence-confirmation] and [content-validation]
+
+#### Batch Agent File Writing
+- **COORDINATE** [parallel-file-writing] for [multiple-agents] simultaneously through [Write-tool-batching]
+- **ORGANIZE** [directory-structure] creation with [category-based-organization] using Bash tool for directory setup
+- **VALIDATE** [file-integrity] through [content-verification], [yaml-format-checking], and [readability-testing]
+- **ENSURE** [complete-agent-coverage] with minimum one agent per discovered domain category
+
+#### Agent Content Structure
+- **YAML Frontmatter**: Include name, model: inherit, 4-sentence description following framework standards
+- **Specialist Prompt**: Complete context-rich prompt with embedded project knowledge, domain expertise, and coordination protocols
+- **Framework Compliance**: Include parallel tool execution capabilities and dimensional framework adherence
+- **Integration Context**: Embed upstream/downstream dependencies, API contracts, and coordination patterns
+
+### Agent Persistence Verification Framework
+
+CONFIRM [agent-files-written] through [filesystem-validation] and [content-integrity-checking].
+
+#### File System Validation
+- **READ** each [created-agent-file] to verify content integrity and proper formatting
+- **COUNT** [total-files-created] against [expected-agent-count] for complete coverage verification
+- **VALIDATE** [yaml-frontmatter] structure and [specialist-prompt-content] completeness
+- **CONFIRM** [file-accessibility] for workflow command utilization readiness
+
+#### Persistence Quality Assurance
+- **VERIFY** [directory-structure] completeness with proper category organization
+- **VALIDATE** [agent-naming-conventions] and [file-path-accuracy] for consistent access patterns
+- **CONFIRM** [embedded-context-quality] and [framework-compliance-integration] in each agent file
+- **REPORT** [creation-success-summary] with [file-location-inventory] and [agent-capability-overview]
+
 ### Generation Validation Framework
 
 VERIFY [agent-creation-excellence] through [context-validation] and [capability-assessment].
@@ -417,6 +455,13 @@ VALIDATE [agent-generation-excellence] through [context-completeness-assessment]
 - **CONFIRM** [context-utilization-effectiveness] through [knowledge-application-assessment] and [decision-making-capability-evaluation]
 - **VERIFY** [coordination-readiness] through [integration-scenario-validation] and [communication-protocol-verification]
 - **ASSESS** [adaptation-capability] through [change-handling-assessment] and [learning-potential-evaluation]
+
+#### Agent File Persistence Verification
+- **CONFIRM** [physical-file-creation] through filesystem validation that all agent `.md` files exist at expected paths
+- **VALIDATE** [yaml-frontmatter-integrity] ensuring name, model, description fields are properly formatted in each agent file
+- **VERIFY** [content-completeness] that each agent file contains complete specialist prompt with embedded project context
+- **ASSESS** [file-accessibility] through Read tool verification that workflow command can access created agents
+- **COUNT** [agent-file-inventory] against discovered domains to ensure complete coverage without missing specialists
 
 ### Framework Compliance Verification
 
