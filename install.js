@@ -72,15 +72,15 @@ async function install() {
     
     console.log('🏗️ Installing Guild commands...');
     
-    // Load core intelligence and framework (new architecture)
-    const coreIntelligence = await loadCoreIntelligence();
+    // Load shared intelligence and framework (simplified architecture)
+    const sharedIntelligence = await loadSharedIntelligence();
     const frameworkModule = await loadFrameworkModule();
     
-    // Generate and install commands
-    const workflowContent = await generateCommand('workflow', coreIntelligence, frameworkModule);
+    // Generate and install commands (templates already contain command-specific intelligence)
+    const workflowContent = await generateCommand('workflow', sharedIntelligence, frameworkModule);
     await fs.writeFile(path.join(guildDir, 'workflow.md'), workflowContent);
     
-    const setupContent = await generateCommand('setup', coreIntelligence, frameworkModule);
+    const setupContent = await generateCommand('setup', sharedIntelligence, frameworkModule);
     await fs.writeFile(path.join(guildDir, 'setup.md'), setupContent);
     
     // Create guild.md symlink to workflow (remove existing first)
@@ -92,8 +92,6 @@ async function install() {
       path.join('guild', 'workflow.md'),
       symlinkPath
     );
-    
-    // Command installation complete - agent directories handled separately
     
     outro(`✅ Guild commands installed successfully!
 
@@ -112,29 +110,18 @@ async function install() {
   }
 }
 
-
-
-// Load core intelligence modules using new architecture
-async function loadCoreIntelligence() {
-  const intelligence = {};
-  const coreDir = path.join(__dirname, 'guideline', 'core');
+// Load shared intelligence directly from shared-intelligence.md
+async function loadSharedIntelligence() {
+  const sharedIntelligencePath = path.join(__dirname, 'guideline', 'core', 'shared-intelligence.md');
   
-  // Load only the new intelligence files
-  const intelligenceFiles = ['setup-intelligence.md', 'workflow-intelligence.md', 'shared-intelligence.md'];
-  
-  for (const file of intelligenceFiles) {
-    const filePath = path.join(coreDir, file);
-    if (await fs.pathExists(filePath)) {
-      const content = await fs.readFile(filePath, 'utf-8');
-      const name = file.replace('.md', '');
-      intelligence[name] = content.replace(/^# .*\n+/m, '').trim();
-    }
+  if (await fs.pathExists(sharedIntelligencePath)) {
+    const content = await fs.readFile(sharedIntelligencePath, 'utf-8');
+    // Remove the title and return the content
+    return content.replace(/^# Shared Intelligence\n+/m, '').trim();
   }
   
-  return intelligence;
+  return '';
 }
-
-
 
 // Load framework module (simplified)
 async function loadFrameworkModule() {
@@ -148,62 +135,31 @@ async function loadFrameworkModule() {
   return null;
 }
 
-// New core intelligence architecture mapping
-const commandIntelligence = {
-  'setup': ['setup-intelligence', 'shared-intelligence'],
-  'workflow': ['workflow-intelligence', 'shared-intelligence']
-};
-
-// Simplified command generation with new intelligence architecture
-async function generateCommand(type, coreIntelligence, frameworkModule) {
+// Command generation with intelligence embedding via placeholder replacement (simplified)
+async function generateCommand(type, sharedIntelligence, frameworkModule) {
   const templatePath = path.join(__dirname, 'guideline', 'templates', `${type}-command.md`);
   let template = await fs.readFile(templatePath, 'utf8');
   
-  // Get relevant intelligence modules for this command
-  const relevantModules = getRelevantIntelligence(type, coreIntelligence);
+  // Replace remaining placeholders with shared intelligence and framework
+  template = await replacePlaceholders(template, type, sharedIntelligence, frameworkModule);
   
-  // Build intelligence embedding with simplified structure
-  let embedded = '\n\n<guild_intelligence>\n';
-  
-  // Framework guidance (full framework, no optimization)
-  if (frameworkModule) {
-    embedded += '<framework_guidance>\n';
-    embedded += frameworkModule + '\n';
-    embedded += '</framework_guidance>\n\n';
-  }
-  
-  // Core intelligence modules
-  if (Object.keys(relevantModules).length > 0) {
-    embedded += '<core_intelligence>\n';
-    Object.entries(relevantModules).forEach(([name, content]) => {
-      embedded += `<intelligence_module name="${name}">\n`;
-      embedded += content + '\n';
-      embedded += `</intelligence_module>\n\n`;
-    });
-    embedded += '</core_intelligence>\n\n';
-  }
-  
-  // Integration protocol with Anthropic parallel standards
-  embedded += buildIntegrationProtocol(type);
-  
-  embedded += '</guild_intelligence>\n';
-  
-  template += embedded;
   return template;
 }
 
-// Get relevant intelligence modules for command type
-function getRelevantIntelligence(commandType, allIntelligence) {
-  const requiredModules = commandIntelligence[commandType] || [];
-  const relevantModules = {};
+// Replace template placeholders with intelligence content (simplified for new architecture)
+async function replacePlaceholders(template, commandType, sharedIntelligence, frameworkModule) {
+  let result = template;
   
-  requiredModules.forEach(moduleName => {
-    if (allIntelligence[moduleName]) {
-      relevantModules[moduleName] = allIntelligence[moduleName];
-    }
-  });
+  // Replace framework compliance placeholder if it exists
+  if (frameworkModule) {
+    const frameworkRegex = /<!-- INTELLIGENCE_EMBEDDING_PLACEHOLDER:FRAMEWORK_COMPLIANCE -->[\s\S]*?<!-- This placeholder.*?-->/g;
+    result = result.replace(frameworkRegex, frameworkModule.trim());
+  }
   
-  return relevantModules;
+  // Add integration protocol at the end
+  result += '\n\n' + buildIntegrationProtocol(commandType);
+  
+  return result;
 }
 
 // Simplified integration protocol with Anthropic parallel standards
@@ -233,7 +189,7 @@ function buildIntegrationProtocol(commandType) {
   protocol += '<execution_requirements>\n';
   protocol += 'EXECUTE [parallel-tool-operations] simultaneously unless [proven-dependencies] require serialization.\n';
   protocol += 'MAINTAIN [framework-dimensional-compliance] through [systematic-intelligence-application].\n';
-  protocol += 'APPLY [intelligence-modules] through [integrated-coordination] and [performance-optimization].\n';
+  protocol += 'APPLY [shared-intelligence-patterns] through [integrated-coordination] and [performance-optimization].\n';
   protocol += '</execution_requirements>\n';
   
   protocol += '</integration_protocol>\n';

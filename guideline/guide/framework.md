@@ -131,6 +131,41 @@ Guild system operates with consistent excellence across six critical dimensions 
 **Multi-Dimensional Excellence**: All six dimensions operate simultaneously through `[integrated-coordination-patterns]` with systematic excellence verification and cross-dimensional performance optimization.
 </integration_framework>
 
+<command_guideline_compliance>
+**MANDATORY COMMAND GUIDELINE COMPLIANCE**: All modifications to command templates or shared intelligence MUST follow command-specific requirements.
+
+<command_guideline_requirements>
+**Template Modification Rules**:
+- When modifying `guideline/templates/setup-command.md`, **MUST** follow all requirements in `guideline/guide/setup-requirements.md`
+- When modifying `guideline/templates/workflow-command.md`, **MUST** follow all requirements in `guideline/guide/workflow-requirements.md`
+- When modifying `guideline/core/shared-intelligence.md`, **MUST** ensure compatibility with ALL command requirements
+
+**Shared Intelligence Modification Rules**:
+- **NEVER** add command-specific intelligence to shared-intelligence.md
+- **ALWAYS** keep shared-intelligence.md focused on truly universal patterns
+- **MUST** validate that shared intelligence changes maintain compatibility with both setup and workflow requirements
+- **FORBIDDEN** to include setup-specific or workflow-specific patterns in shared modules
+
+**Command-Specific Intelligence Rules**:
+- **SETUP-SPECIFIC** intelligence belongs ONLY in setup-command.md template
+- **WORKFLOW-SPECIFIC** intelligence belongs ONLY in workflow-command.md template  
+- **SHARED** intelligence belongs ONLY in shared-intelligence.md and must be truly universal
+- **CROSS-CONTAMINATION** of command-specific intelligence between commands is FORBIDDEN
+
+**Guideline Compliance Verification**:
+- **MANDATORY** verification against setup-requirements.md for setup command modifications
+- **MANDATORY** verification against workflow-requirements.md for workflow command modifications
+- **MANDATORY** testing that shared intelligence maintains compatibility with both commands
+- **MANDATORY** validation that architectural boundaries are preserved (setup creates, workflow executes)
+
+**Enforcement Standards**:
+- Any modification violating command-specific requirements is **REJECTED**
+- All template changes **MUST** maintain command architectural boundaries
+- Shared intelligence changes **MUST** pass compatibility tests with all commands
+- Framework compliance (TB001-OB001) **MUST** be maintained in all modifications
+</command_guideline_requirements>
+</command_guideline_compliance>
+
 <intelligence_architecture>
 <new_core_intelligence_system>
 **DECLARATIVE INTELLIGENCE ARCHITECTURE**: Guild operates through 3-file core intelligence system with declarative command structure and simplified template embedding via install.js.

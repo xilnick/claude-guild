@@ -15,7 +15,7 @@ npx claude-guild@latest
 /guild "implement user authentication"
 ```
 
-**👉 New to Guild?** Read the [Vision Guide](guideline/guide/vision.md) and [Quick Start Guide](guideline/guide/quickstart.md)
+**👉 New to Guild?** See the installation guide below and read the [Framework Guide](guideline/guide/framework.md)
 
 ---
 
@@ -111,8 +111,8 @@ Guild: → Frontend Specialist (chat UI components)
 ## 📚 Documentation
 
 ### **Getting Started**
-- 📖 [**Vision Guide**](guideline/guide/vision.md) - Understand the Guild philosophy
-- 🚀 [**Quick Start Guide**](guideline/guide/quickstart.md) - Get up and running in 5 minutes
+- 📖 [**Framework Guide**](guideline/guide/framework.md) - Core philosophy and system architecture
+- 🚀 [**Best Practices**](guideline/guide/recommendations.md) - Anthropic's official guidance for optimal results
 
 ### **Technical Documentation**  
 - ⚙️ [Framework Documentation](guideline/guide/framework.md) - Complete system architecture

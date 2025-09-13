@@ -8,9 +8,7 @@ description: "Analyze [project-type] and create specialized agents based on disc
 ---
 
 ## Purpose
-**Philosophy**: Structure enables intelligence. Intelligence optimizes structure.
-
-Initialize Guild system by analyzing project structure and creating specialized agents based on discovered project needs through systematic discovery and intelligent agent generation with comprehensive dimensional integration (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001).
+Initialize Guild system by analyzing project structure and creating specialized agents based on discovered project needs through systematic discovery and intelligent agent generation.
 
 ## User Request Processing
 
@@ -20,141 +18,104 @@ When $ARGUMENTS is provided, treat it as the user's specific request that guides
 - Apply intelligent reasoning to determine optimal specialist needs for the request
 - Allow $ARGUMENTS to override default behaviors when user intent is clear
 
-## Mandatory Intelligence Compliance
+## Project Discovery Intelligence
 
-**TEMPLATE REQUIREMENT**: This template enforces mandatory intelligence standards with enhanced abstraction compliance:
+**Philosophy**: Structure enables intelligence. Intelligence optimizes structure.
 
-- **Zero Code Samples**: Template must never generate or include any code implementations, syntax examples, or executable snippets through [abstraction-validation]
-- **Complete Technology Abstraction**: Template uses only abstract `[technology-stack]`, `[framework]`, `[language]` placeholder patterns with [technology-independence-verification]
-- **Template-First Patterns**: All guidance uses abstract `[placeholder]` patterns exclusively without specific implementations through [template-first-validation]
-- **Agent Anti-Recursion**: Template ensures agents never create or invoke additional agents - flat hierarchy enforced through [prevention-mechanisms] and [flat-delegation-protocols]
-- **Native Intelligence Reliance**: Template trusts autonomous intelligence to determine optimal project-specific implementations with [analysis-first-intelligence]
-- **Creative Solution Preservation**: Template structure enables intelligent adaptation without constraining implementation choices through [solution-enablement]
-- **Anthropic Standards Integration**: Template enforces official parallel tool execution throughout all created specialists with measurable performance improvements
-- **Assignment Protocol Standards**: Template implements [task-analysis], [capability-assessment], [direct-execution-prevention], and [assignment-verification] compliance
+EXECUTE setup operations through [project-discovery-intelligence] and [agent-generation-protocols] with systematic dimensional integration (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001).
+
+**ARCHITECTURAL BOUNDARY**: Creates agents with embedded parallel capabilities, NEVER executes them. Setup = Agent Factory.
+
+COORDINATE systematic [project-analysis] through [parallel-discovery-patterns] and [technology-stack-assessment].
+
+APPLY project intelligence through abstract patterns:
+
+### Discovery Framework
+- **EXECUTE** comprehensive [project-structure-analysis] through [systematic-scanning] and [parallel-exploration-frameworks]
+- **COORDINATE** simultaneous [technology-identification], [framework-detection], and [tool-capability-assessment] 
+- **CHALLENGE** sequential [discovery-assumptions] through [dependency-verification-frameworks]
+- **OPTIMIZE** discovery performance through [parallel-tool-execution] and [batching-optimization]
+
+### Analysis Intelligence
+- **APPLY** [technology-stack-profiling] through [parallel-component-analysis] and [systematic-assessment-protocols]
+- **COORDINATE** [dependency-mapping], [architecture-discovery], and [complexity-evaluation] simultaneously
+- **EXECUTE** [domain-boundary-identification] through [pattern-analysis] and [specialization-assessment]
+- **VERIFY** [project-characteristics] through [cross-dimensional-validation] and [evidence-based-analysis]
 
 ## Framework Compliance
 
-**Mandatory Intelligence Standards**:
-- **Zero Code Samples**: Never generate code implementations, syntax examples, or executable snippets
-- **Technology Abstraction**: Use only abstract `[technology-stack]`, `[framework]`, `[language]` placeholder patterns
-- **Template-First Patterns**: All guidance uses abstract `[placeholder]` patterns exclusively
-- **Agent Anti-Recursion**: Ensure agents never create or invoke additional agents (flat hierarchy)
-- **Native Intelligence Reliance**: Trust autonomous intelligence for optimal project-specific implementations
-- **Creative Solution Preservation**: Enable intelligent adaptation without constraining implementation choices
-- **Anthropic Standards Integration**: Enforce official parallel tool execution throughout all created specialists
-- **Assignment Protocol Standards**: Implement systematic [task-analysis], [capability-assessment], [direct-execution-prevention], [assignment-verification]
+<!-- INTELLIGENCE_EMBEDDING_PLACEHOLDER:FRAMEWORK_COMPLIANCE -->
+<!-- This placeholder will be replaced by install.js with framework compliance intelligence -->
 
-**6-Dimensional Protocol** (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001):
+## Setup-Specific Tool Coordination
 
-**TB001**: Tool Parallelization - Execute discovery operations simultaneously unless proven dependencies exist
-**AM001**: Agent Creation - Route all setup through systematic agent generation with zero direct execution
-**PE001**: Parallel Discovery - Decompose project analysis into parallelizable discovery units
-**RP001**: Research Protocol - Complete comprehensive project discovery before agent creation
-**AR001**: Recursion Prevention - Maintain flat agent creation hierarchy with single-level coordination only
-**OB001**: Operation Batching - Group related discovery operations for enhanced performance optimization
+COORDINATE [setup-tools] through [parallel-execution-mandate] and [discovery-optimization].
 
-## Setup Execution Protocol
+### Discovery Tool Patterns
+- **EXECUTE** [file-system-scanning], [configuration-detection], and [dependency-analysis] simultaneously
+- **BATCH** [project-structure-analysis], [technology-discovery], and [tool-inventory-compilation] for [efficiency-optimization]
+- **CHALLENGE** [sequential-discovery-assumptions] through [systematic-parallelization-assessment]
+- **OPTIMIZE** [discovery-performance] through [resource-coordination] and [batching-intelligence]
 
-**Project Discovery Workflow** (Intelligence Reference: setup-intelligence.md):
-1. **Initial Discovery**: Execute systematic analysis of project structure, technologies, and tools
-2. **Domain Analysis**: Identify natural specialist boundaries and coordination requirements
-3. **Agent Specification**: Define specialist roles, capabilities, and integration patterns
-4. **Agent Creation**: Generate specialized agents using Write tool with template application
-5. **Verification**: Validate agent creation, compliance, and system readiness
+### Tool Selection Intelligence
+- **COORDINATE** [discovery-capability-matching] with [project-analysis-requirements] through [systematic-assessment]
+- **PRIORITIZE** [parallel-execution-tools] for [simultaneous-discovery-operations] and [performance-enhancement]
+- **BALANCE** [scanning-speed] with [analysis-depth] through [intelligent-resource-allocation]
+- **INTEGRATE** [tool-results] through [parallel-coordination] and [comprehensive-synthesis]
 
-**Specialist Creation Standards**:
-- **4-Sentence Description Format**: Purpose, coordination, boundaries, outcomes
-- **Categorized Organization**: Logical domain grouping in directory structure under `.claude/agents/guild/`
-- **Framework Compliance**: 6-dimensional compliance across all created agents
-- **Anti-Recursion**: Mandatory flat hierarchy constraints embedded in each agent
-- **Tool Optimization**: Parallel execution and batching capabilities configured
+## Agent Generation Intelligence
 
-## Agent Creation Process
+ORCHESTRATE [specialist-creation] through [systematic-generation-protocols] and [template-compliance-frameworks].
 
-**Agent Template Structure** (Intelligence Reference: setup-intelligence.md):
-- Located in categorized directories: `.claude/agents/guild/[category]/specialist.md`
-- Standard metadata with 4-sentence description following framework standards
-- Purpose and capabilities section with domain expertise and systematic coordination
-- Mandatory parallel tool execution requirements (Anthropic standards integration)
-- Critical anti-recursion constraints and flat hierarchy enforcement
-- Success criteria with expected outcomes and performance metrics
+### Agent Architecture Patterns
+- **CREATE** [domain-specialist-agents] through [4-sentence-description-standards] and [capability-specification]
+- **EMBED** [parallel-tool-execution-prompts] through [Anthropic-standards-integration] during [agent-creation]
+- **ORGANIZE** [agent-structure] through [category-directory-structure] and [domain-boundary-alignment]
+- **APPLY** [anti-recursion-constraints] through [flat-hierarchy-enforcement] and [prevention-mechanisms]
+- **NEVER** [execute-agents] or [coordinate-runtime-operations] - creation-only boundary
 
-## Setup Workflow
+### Generation Framework
+- **ANALYZE** [project-domains] through [specialization-requirements-assessment] and [coordination-needs-evaluation]
+- **CREATE** [specialist-agents] through [template-application] and [framework-compliance-validation]
+- **ORGANIZE** [agent-structure] through [logical-categorization] and [domain-specific-directories]
+- **VERIFY** [creation-completeness] through [coverage-assessment] and [readiness-validation]
 
-**Interactive Setup Process** (Intelligence Reference: setup-intelligence.md):
-1. **Analyze**: Execute comprehensive discovery workflow through systematic parallel analysis
-2. **Document**: Record findings using structured patterns and organizational characteristics
-3. **Recommend**: Present agent types based on domain mapping and coordination potential
-4. **Create**: Generate agent files using Write tool with systematic integration and excellence targets
-5. **Verify**: Confirm agent creation and coordination readiness for workflow execution
+## Setup-Specific Chain-of-Thought Patterns
 
-**Domain Discovery Approach**:
-- **Native Intelligence Analysis**: Dynamic domain identification based on actual project characteristics
-- **Analysis-Driven Discovery**: Analyze project structure, patterns, and needs for optimal specialist boundaries
-- **Adaptive Domain Creation**: Domains emerge from project context rather than predetermined categories
+APPLY [setup-thinking-intelligence] through [analytical-decomposition] and [discovery-transparency].
 
-## Agent Creation Implementation
+### Setup Reasoning Framework
+- **BREAK** [project-analysis-tasks] into [sequential-discovery-steps] through [decomposition-intelligence]
+- **EXPOSE** [discovery-reasoning] through [visible-analysis-patterns] and [decision-logic-transparency]
+- **VALIDATE** [project-assumptions] through [systematic-challenge-protocols] and [evidence-verification]
+- **CONNECT** [analysis-components] through [logical-discovery-chains] and [evidence-integration]
 
-**File Generation Protocol** (Intelligence Reference: setup-intelligence.md):
-After project analysis, create specialist agents using Write tool:
-
+### Setup Thinking Patterns
 ```
-FOR EACH discovered [domain-area] in [project-analysis]:
-  1. DETERMINE [specialist-name] based on [domain-expertise-needed]
-  2. CREATE [domain-directory] if not exists: `.claude/agents/guild/[domain]/`
-  3. USE Write tool to CREATE [agent-file]: `.claude/agents/guild/[domain]/[specialist-name].md`
-  4. APPLY [specialist-template] with [4-sentence-description] and [framework-compliance]
-  5. EMBED [anti-recursion-constraints] and [flat-hierarchy-enforcement]
-  6. CONFIGURE [tool-parallelization] and [batching-optimization] capabilities
-  7. SET [coordination-patterns] and [integration-interfaces]
+<thinking>
+1. [Project-component-analysis]: [technology-stack-reasoning] and [architecture-evidence]
+2. [Domain-identification]: [specialization-reasoning] and [boundary-evidence]
+3. [Agent-specification]: [creation-reasoning] and [coordination-evidence]
+4. [Integration-planning]: [coordination-reasoning] and [readiness-synthesis]
+</thinking>
 ```
 
-**Agent Creation Standards**:
-- **Analysis First**: Thoroughly analyze project to identify natural domains and specialist needs
-- **Template Application**: Use Write tool with complete agent template for each specialist
-- **Directory Organization**: Create agents in logical category directories based on discovered domain boundaries
-- **Compliance Verification**: Ensure each created agent includes anti-recursion constraints and 4-sentence description
-- **Integration Setup**: Configure coordination patterns between related specialists for optimal collaboration
+## Setup Verification
 
-## Success Criteria
+CONFIRM [setup-completion] through [systematic-assessment] and [readiness-validation].
 
-**Setup Completion Requirements**:
+### Completion Criteria
+- **Project Discovery Complete**: [Technology-stack], [architecture-patterns], and [domain-boundaries] comprehensively analyzed
+- **Agent Generation Complete**: All [discovered-domains] have corresponding [specialist-agents] with [framework-compliance]
+- **System Integration Ready**: [Agent-coordination-patterns] established and [workflow-readiness] verified
+- **Quality Standards Met**: [Template-compliance], [anti-recursion-constraints], and [parallel-execution-standards] validated
 
-**File Creation Verification**:
-- **Files Created**: Use Write tool to create `.claude/agents/guild/[domain]/[specialist].md` for each discovered domain
-- **Directory Structure**: Agents organized in logical domain directories based on project analysis  
-- **Template Compliance**: Each agent file contains complete specialist template with 4-sentence description
-- **Anti-Recursion**: All agents include mandatory flat hierarchy constraints and recursion prevention blocks
-
-**Content Verification**:
-- **Domain Coverage**: All discovered project domains have corresponding specialist agents
-- **Framework Compliance**: Each agent verified across all 6 framework dimensions
-- **Tool Optimization**: Tool parallelization and batching capabilities configured in each agent
-- **Coordination Setup**: Integration patterns established between related specialists
-
-**Readiness Verification**:
-- **Immediate Usability**: User can immediately use agents with `/guild` command for task execution
-- **Agent Discovery**: Created agents appear in `.claude/agents/guild/` directory structure
-- **System Integration**: Agents ready for coordination through Guild workflow system
-- **Creation Summary**: Agent creation logged and confirmed with domain coverage and specialist count summary
-
-**Success Confirmation Report**:
-```
-✅ Guild Setup Complete!
-
-📊 Created [X] specialist agents across [Y] domains:
-• [domain-1]: [specialist-name] - [primary-capability]
-• [domain-2]: [specialist-name] - [primary-capability]  
-• [domain-n]: [specialist-name] - [primary-capability]
-
-🎯 Ready for task execution with /guild command
-📂 Agents located in: .claude/agents/guild/[domain-directories]
-```
+### Excellence Targets
+- **Discovery Excellence**: [Comprehensive-coverage] through [parallel-analysis] and [systematic-assessment]
+- **Generation Excellence**: [Agent-quality] through [4-sentence-standards] and [framework-dimensional-compliance]
+- **Coordination Excellence**: [Integration-readiness] through [specialist-coordination-patterns] and [workflow-preparation]
+- **Performance Excellence**: [Setup-efficiency] through [parallel-execution] and [optimization-measurement]
 
 ---
 
-**Intelligence Sources**: setup-intelligence.md, project analysis patterns, domain identification procedures, agent generation standards
-**Core Integration**: Systematic analysis framework with agent creation protocols and excellence targets
-**Approach**: Execute discovery workflows to analyze project characteristics and create specialized agents with framework compliance
 **Philosophy**: Structure enables intelligence. Intelligence optimizes structure.
