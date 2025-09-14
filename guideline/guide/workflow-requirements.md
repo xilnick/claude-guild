@@ -61,11 +61,12 @@ When $ARGUMENTS is provided, treat it as the user's task request:
 - Allow dynamic workflow modification to best accomplish the user's specific intent
 
 ### Workflow Execution Flow
-1. **ANALYZE** task complexity through domain requirements assessment
-2. **DECOMPOSE** complex workflows through atomic unit analysis
-3. **COORDINATE** specialist assignments through capability evaluation
-4. **EXECUTE** parallel specialist deployment through simultaneous coordination
-5. **VERIFY** execution effectiveness through performance monitoring
+1. **DEPLOY** Task tool immediately upon receiving user request - this is the mandatory first action
+2. **ANALYZE** task complexity through domain requirements assessment (via Task tool specialist)
+3. **DECOMPOSE** complex workflows through atomic unit analysis (via Task tool specialist)
+4. **COORDINATE** specialist assignments through capability evaluation (orchestrating multiple Task tools)
+5. **EXECUTE** parallel specialist deployment through simultaneous Task tool coordination
+6. **VERIFY** execution effectiveness through performance monitoring (via Task tool specialist)
 
 ### Assignment Intelligence
 - **EXECUTE** task-to-specialist matching through capability evaluation and domain expertise assessment
@@ -95,11 +96,20 @@ When $ARGUMENTS is provided, treat it as the user's task request:
 - **NEVER** modify or generate agent templates during workflow execution
 
 ### What Workflow Command MUST Do
-- **ALWAYS** delegate all work through appropriate specialists
-- **ALWAYS** coordinate multiple specialists in parallel when possible
+- **ALWAYS** immediately deploy Task tool as first action for every user request
+- **ALWAYS** proactively use Task tool with appropriate subagent_type - never attempt direct execution
+- **ALWAYS** delegate all work through Task tool specialists
+- **ALWAYS** coordinate multiple specialists in parallel when possible through simultaneous Task tool deployment
 - **ALWAYS** challenge sequential execution assumptions
 - **ALWAYS** verify user satisfaction before completion
 - **ALWAYS** maintain flat hierarchy delegation patterns
+
+### Mandatory Proactive Task Tool Usage
+- **IMMEDIATE DEPLOYMENT**: Upon receiving any user request, the workflow command MUST immediately deploy Task tool as the very first action
+- **ZERO DIRECT EXECUTION**: The workflow command is FORBIDDEN from attempting any direct task execution - all work MUST go through Task tool subagents
+- **PROACTIVE SUBAGENT SELECTION**: Automatically determine appropriate subagent_type based on task analysis and deploy without hesitation
+- **PARALLEL TASK DEPLOYMENT**: When tasks can be decomposed, deploy multiple Task tools simultaneously for parallel specialist execution
+- **CONTINUOUS DELEGATION**: Every aspect of task execution MUST be routed through Task tool specialists - no exceptions
 
 ## Quality Assurance Requirements
 

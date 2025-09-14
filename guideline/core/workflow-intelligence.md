@@ -10,6 +10,30 @@ COORDINATE [systematic-task-execution] through [specialist-orchestration] and [p
 
 APPLY execution intelligence through specialized patterns:
 
+### Proactive Task Tool Deployment Intelligence
+
+EXECUTE [immediate-task-tool-deployment] through [mandatory-first-action-protocols] and [zero-direct-execution-enforcement].
+
+**CRITICAL REQUIREMENT**: Task tool deployment is the MANDATORY first action for ALL user requests:
+
+#### Immediate Deployment Patterns
+- **IMMEDIATELY** deploy Task tool as the very first action upon receiving any user request
+- **NEVER** attempt task analysis, decomposition, or execution without first deploying Task tool
+- **PROACTIVELY** select appropriate subagent_type based on request characteristics
+- **AUTOMATICALLY** route ALL work through Task tool specialists - zero direct execution allowed
+
+#### Subagent Selection Intelligence  
+- **ANALYZE** user request type to determine optimal subagent_type (general-purpose, installation-deployment-specialist, etc.)
+- **DEPLOY** Task tool with selected subagent_type immediately without hesitation or delay
+- **COORDINATE** multiple Task tool deployments simultaneously for parallel task execution
+- **ENSURE** every task component is handled by Task tool specialists
+
+#### Proactive Deployment Enforcement
+- **MANDATE** Task tool as the exclusive execution mechanism for all workflow operations
+- **PREVENT** any direct execution attempts through systematic Task tool routing
+- **VALIDATE** that all task activities flow through Task tool specialist coordination
+- **OPTIMIZE** Task tool utilization through intelligent subagent type selection and parallel deployment
+
 ### Parallel Task Coordination
 - **EXECUTE** [simultaneous-task-streams] through [multi-specialist-coordination] and [parallel-execution-frameworks]
 - **COORDINATE** [task-decomposition] with [specialist-assignment] through [parallel-delegation-protocols]
@@ -91,10 +115,12 @@ INTEGRATE [workflow-dimensional-requirements] through [execution-focused-pattern
 - **INTEGRATE** [concurrent-operations] through [parallel-synchronization] and [systematic-coordination]
 
 ### AM001 - Workflow Agent Utilization
-- **UTILIZE** [existing-specialists] through [systematic-assignment] and [capability-optimization]
-- **COORDINATE** [specialist-workflows] through [orchestration-protocols] and [performance-tuning]
-- **LEVERAGE** [agent-parallel-tool-capabilities] through [embedded-anthropic-system-prompts] and [simultaneous-execution-coordination]
-- **DEPLOY** [multiple-specialists-simultaneously] through [parallel-assignment-protocols] and [concurrent-execution-frameworks]
+- **IMMEDIATELY** deploy Task tool as first action - this enforces agent-mandatory architecture
+- **UTILIZE** Task tool specialists exclusively - no direct execution permitted
+- **COORDINATE** Task tool workflows through orchestration protocols and performance tuning
+- **LEVERAGE** Task tool parallel capabilities through simultaneous deployment coordination
+- **DEPLOY** multiple Task tools simultaneously through parallel assignment protocols and concurrent execution frameworks
+- **ENFORCE** proactive Task tool usage as the exclusive workflow execution mechanism
 - **OPTIMIZE** [agent-utilization] through [workload-balancing] and [efficiency-enhancement]
 - **VERIFY** [specialist-effectiveness] through [performance-validation] and [quality-assessment]
 

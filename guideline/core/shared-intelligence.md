@@ -35,12 +35,32 @@ APPLY dimensional intelligence through universal patterns:
 - **PRESERVE** [existing-agent-functionality] through [non-disruptive-integration] and [capability-continuity-assurance]
 
 ### AM001 - Agent-Mandatory Architecture Intelligence
-- **COORDINATE** [specialist-assignment-protocols] through [task-analysis] and [capability-assessment-frameworks]
-- **PREVENT** [direct-execution] through [systematic-delegation] and [assignment-verification-protocols]
-- **ENFORCE** [assignment-protocol-standards] through [prevention-mechanisms] and [monitoring-systems]
-- **ENFORCE** [creation-execution-boundary] through [setup-creates-workflow-executes] and [responsibility-separation]
-- **PREVENT** [runtime-agent-creation] through [existing-agent-utilization] and [boundary-enforcement]
-- **OPTIMIZE** [specialist-development] through [capability-frameworks] and [effectiveness-metrics]
+- **MANDATE** immediate Task tool deployment as first action for all workflow operations
+- **COORDINATE** specialist-assignment-protocols through task-analysis and capability-assessment-frameworks
+- **PREVENT** direct-execution through systematic-delegation and assignment-verification-protocols
+- **ENFORCE** proactive Task tool usage - zero tolerance for direct execution attempts
+- **ENFORCE** assignment-protocol-standards through prevention-mechanisms and monitoring-systems
+- **ENFORCE** creation-execution-boundary through setup-creates-workflow-executes and responsibility-separation
+- **PREVENT** runtime-agent-creation through existing-agent-utilization and boundary-enforcement
+- **OPTIMIZE** specialist-development through capability-frameworks and effectiveness-metrics
+
+### Universal Proactive Task Tool Deployment Intelligence
+
+EXECUTE [mandatory-task-tool-deployment] through [immediate-first-action-protocols] and [zero-direct-execution-enforcement].
+
+**UNIVERSAL REQUIREMENT**: All workflow operations MUST begin with immediate Task tool deployment:
+
+#### Cross-Command Proactive Deployment Standards
+- **IMMEDIATELY** deploy Task tool upon receiving any user request - this is non-negotiable
+- **AUTOMATICALLY** select appropriate subagent_type based on request analysis
+- **PROACTIVELY** route ALL work through Task tool specialists without exception
+- **SYSTEMATICALLY** prevent any direct execution attempts through Task tool enforcement
+
+#### Universal Task Tool Enforcement Patterns
+- **MANDATE** Task tool as exclusive execution mechanism across all workflow operations
+- **VALIDATE** that every user request triggers immediate Task tool deployment
+- **MONITOR** compliance with proactive Task tool usage requirements
+- **OPTIMIZE** Task tool coordination through intelligent subagent selection and parallel deployment
 
 ### PE001 - Parallel-First Execution Intelligence
 - **DECOMPOSE** [complex-tasks] through [atomic-unit-analysis] and [parallelizable-component-identification]

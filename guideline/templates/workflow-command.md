@@ -10,6 +10,18 @@ description: "Natural [task-type] execution with intelligent analysis and iterat
 ## Purpose
 Execute user tasks through systematic specialist coordination and framework compliance. Analyze actual [project-conditions] rather than making assumptions, and delegate all work through appropriate specialists.
 
+## Proactive Task Tool Deployment
+
+**CRITICAL REQUIREMENT**: The workflow command MUST immediately deploy Task tool as the very first action for EVERY user request.
+
+**MANDATORY FIRST ACTION**: Upon receiving any user request via [user-instructions], immediately execute Task tool with appropriate subagent_type:
+- **NEVER** attempt task analysis, planning, or execution without first deploying Task tool
+- **ALWAYS** route ALL work through Task tool specialists - zero direct execution permitted
+- **PROACTIVELY** select optimal subagent_type based on request characteristics
+- **IMMEDIATELY** delegate complete task responsibility to Task tool specialist
+
+**ZERO DIRECT EXECUTION POLICY**: This workflow command is FORBIDDEN from performing any direct task execution. Every aspect of work MUST flow through Task tool deployment.
+
 ## User Request Processing
 
 When $ARGUMENTS is provided, treat it as the user's task request:
@@ -88,17 +100,20 @@ APPLY [workflow-thinking-intelligence] through [execution-analysis] and [coordin
 COORDINATE [specialists] through [systematic-orchestration] and [parallel-execution-protocols].
 
 ### Orchestration Patterns
-- **UTILIZE** [pre-existing-agents] created during setup phase through [specialist-inventory-coordination]
-- **DEPLOY** [multiple-specialists] simultaneously through [parallel-coordination-frameworks] and [resource-optimization]
-- **COORDINATE** [specialist-interactions] through [integration-points] and [synchronization-protocols]
-- **NEVER** [create-new-agents] during workflow execution - utilization-only boundary
-- **MONITOR** [collaboration-effectiveness] through [performance-tracking] and [quality-assessment]
-- **OPTIMIZE** [coordination-efficiency] through [batching-strategies] and [resource-balancing]
+- **IMMEDIATELY** deploy Task tool as mandatory first action - this is non-negotiable
+- **UTILIZE** Task tool specialists exclusively through proactive deployment protocols
+- **DEPLOY** multiple Task tools simultaneously through parallel coordination frameworks and resource optimization
+- **COORDINATE** Task tool specialist interactions through integration points and synchronization protocols
+- **NEVER** create new agents during workflow execution - utilization-only boundary through Task tool delegation
+- **NEVER** attempt direct execution - ALL work MUST flow through Task tool specialists
+- **MONITOR** Task tool collaboration effectiveness through performance tracking and quality assessment
+- **OPTIMIZE** Task tool coordination efficiency through batching strategies and resource balancing
 
 ### Assignment Intelligence
-- **EXECUTE** [task-to-specialist-matching] through [capability-evaluation] and [domain-expertise-assessment]
-- **APPLY** [assignment-protocol-standards] through [task-analysis], [capability-assessment], [direct-execution-prevention]
-- **COORDINATE** [specialist-workflows] through [parallel-execution-planning] and [integration-point-management]
+- **DEPLOY** Task tool immediately upon receiving user request - this precedes all other actions
+- **EXECUTE** task-to-Task-tool-specialist matching through capability evaluation and domain expertise assessment
+- **APPLY** proactive Task tool deployment as the exclusive assignment protocol - no direct execution permitted
+- **COORDINATE** Task tool specialist workflows through parallel execution planning and integration point management
 - **VERIFY** [assignment-effectiveness] through [performance-monitoring] and [quality-validation]
 
 ## Workflow Verification
