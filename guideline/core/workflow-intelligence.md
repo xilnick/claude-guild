@@ -23,10 +23,10 @@ APPLY execution intelligence through specialized patterns:
 - **OPTIMIZE** [orchestration-efficiency] through [performance-tuning] and [workflow-enhancement]
 
 ### Specialist Configuration Standards
-- **REQUIRE** [thinking-mode-ultrathink] in all [specialist-configurations] through [mandatory-yaml-frontmatter-compliance]
-- **VALIDATE** [ultrathink-capability-utilization] through [enhanced-reasoning-verification] and [analysis-depth-optimization]
-- **ENSURE** [configuration-consistency] across [all-specialists] through [standardization-protocols] and [compliance-checking]
-- **LEVERAGE** [ultrathink-enhanced-coordination] through [deep-analysis-capabilities] and [systematic-reasoning-optimization]
+- **MANDATORY Ultrathink Configuration**: All [specialist-configurations] MUST include `thinking_mode: ultrathink` (Framework Requirement #13) through [absolute-yaml-frontmatter-compliance]
+- **VALIDATE** [ultrathink-capability-utilization] through [enhanced-reasoning-verification] and [analysis-depth-optimization] for all specialist coordination
+- **ENSURE** [configuration-consistency] across [all-specialists] through [framework-compliance-standardization] and [ultrathink-mandatory-checking]
+- **LEVERAGE** [ultrathink-enhanced-coordination] through [deep-analysis-capabilities] and [systematic-reasoning-optimization] in all workflow operations
 
 ### Dynamic Task Management
 - **ADAPT** [execution-strategies] through [real-time-optimization] and [performance-adjustment]

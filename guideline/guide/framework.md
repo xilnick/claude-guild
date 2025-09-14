@@ -200,10 +200,9 @@ Guild system operates with consistent excellence across six critical dimensions 
 9. **ALWAYS Follow Recommendations**: Strict adherence to @guideline/guide/recommendations.md standards
 10. **MANDATORY Parallel Tool Integration**: All specialists must include official Anthropic parallel tool execution prompts and demonstrate measurable performance improvements through batched operations
 11. **ALWAYS Use Declarative Format**: Function as command prompts, not documentation
-12. **$ARGUMENTS Usage Restriction**: $ARGUMENTS must be mentioned only once and only in command templates - never in core modules or framework guidance
-13. **3-Module Intelligence Architecture**: Reference setup-intelligence.md, workflow-intelligence.md, and shared-intelligence.md exclusively
-14. **MANDATORY Ultrathink Configuration**: All agents and commands must include `thinking_mode: ultrathink` for enhanced reasoning capabilities
-15. **Install.js Embedding Standards**: Intelligence integration through automated embedding, not manual inclusion
+12. **3-Module Intelligence Architecture**: Reference setup-intelligence.md, workflow-intelligence.md, and shared-intelligence.md exclusively
+13. **MANDATORY Ultrathink Configuration**: All agents and commands must include `thinking_mode: ultrathink` for enhanced reasoning capabilities
+14. **Install.js Embedding Standards**: Intelligence integration through automated embedding, not manual inclusion
 </core_requirements>
 
 <enforcement_protocol>
@@ -236,7 +235,7 @@ Guild system operates with consistent excellence across six critical dimensions 
 <template_standards>
 - **Abstract Placeholders**: Use `[placeholder-patterns]` exclusively with zero code samples or technology references
 - **Declarative Execution**: Templates execute as command prompts with embedded intelligence
-- **$ARGUMENTS Processing**: Templates receive `[user-instructions]` via dynamic variable integration
+- **[user-instructions] Processing**: Templates receive `[user-instructions]` via dynamic variable integration
 - **Intelligence Integration**: Core modules embedded automatically through install.js generation process
 </template_standards>
 
@@ -276,7 +275,7 @@ Guild system operates with consistent excellence across six critical dimensions 
 
 <command_structure>
 - **Command Prompts**: Generated commands function as executable prompts with embedded intelligence
-- **$ARGUMENTS Processing**: Dynamic task adaptation through integrated variable processing
+- **[command-arguments] Processing**: Dynamic task adaptation through integrated variable processing
 - **Intelligence Integration**: Automatic embedding of relevant intelligence modules per command type
 - **Framework Compliance**: Built-in dimensional compliance through shared-intelligence embedding
 </command_structure>
@@ -305,7 +304,7 @@ Guild system operates with consistent excellence across six critical dimensions 
 
 <command_prompt_structure>
 - **Task Definition**: Clear command purpose and execution parameters
-- **User Interface**: $ARGUMENTS processing and interaction patterns  
+- **User Interface**: [user-instructions] processing and interaction patterns  
 - **Intelligence Integration**: Automatic embedding of relevant intelligence modules
 - **Framework Compliance**: Built-in dimensional compliance through shared-intelligence
 </command_prompt_structure>

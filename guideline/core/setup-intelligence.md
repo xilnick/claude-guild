@@ -94,7 +94,7 @@ APPLY persistence intelligence through file-system patterns:
 
 ### Agent File Creation Framework
 - **DETERMINE** [file-path-structure] through [category-organization] and [naming-convention-compliance]
-- **GENERATE** [yaml-frontmatter] through [metadata-specification] including [thinking-mode-ultrathink] and [configuration-standard-adherence]
+- **GENERATE** [yaml-frontmatter] through [metadata-specification] including **MANDATORY** `thinking_mode: ultrathink` (Framework Requirement #13) and [configuration-standard-adherence]
 - **COMPOSE** [complete-agent-content] through [context-embedding] and [specialist-prompt-compilation]
 - **EMBED** [mandatory-parallel-tool-execution-system-prompts] in every [agent-specification] through [universal-anthropic-prompt-integration]
 - **INTEGRATE** [use-parallel-tool-calls-capabilities] as [core-agent-functionality] through [system-level-prompt-embedding]
@@ -102,7 +102,7 @@ APPLY persistence intelligence through file-system patterns:
 
 ### Persistence Verification Intelligence
 - **VALIDATE** [file-system-integrity] through [existence-verification] and [accessibility-confirmation]
-- **VERIFY** [content-completeness] through [yaml-validation] including [thinking-mode-ultrathink-verification] and [prompt-quality-assessment]
+- **VERIFY** [content-completeness] through [yaml-validation] including **MANDATORY** `thinking_mode: ultrathink` verification (Framework Requirement #13) and [prompt-quality-assessment]
 - **CONFIRM** [organizational-structure] through [directory-validation] and [categorization-verification]
 - **ASSESS** [creation-success] through [inventory-counting] and [coverage-completeness-validation]
 

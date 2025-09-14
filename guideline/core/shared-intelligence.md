@@ -156,11 +156,12 @@ For maximum efficiency, whenever you perform multiple independent operations, in
 - **OPTIMIZE** [generation-efficiency] through [automated-compliance-injection] and [validation-streamlining]
 - **MAINTAIN** [template-evolution] through [compliance-standard-updates] and [specification-synchronization]
 
-#### Universal Configuration Standards
-- **REQUIRE** [thinking-mode-ultrathink] in all [agent-yaml-frontmatter] through [mandatory-configuration-compliance]
-- **ENFORCE** [ultrathink-capability-integration] across [all-guild-specialists] through [universal-configuration-standards]
-- **VALIDATE** [ultrathink-presence] during [agent-generation] and [system-validation-protocols]
+#### Universal Configuration Standards (Framework Requirement #13)
+- **MANDATORY Ultrathink Configuration**: All [agent-specifications] MUST include `thinking_mode: ultrathink` in [yaml-frontmatter] through [absolute-compliance-enforcement]
+- **ENFORCE** [ultrathink-capability-integration] across [all-guild-specialists] through [universal-configuration-standards] and [framework-compliance-verification]
+- **VALIDATE** [ultrathink-presence] during [agent-generation] and [system-validation-protocols] with [mandatory-yaml-frontmatter-verification]
 - **LEVERAGE** [enhanced-reasoning-capabilities] through [ultrathink-mode-utilization] and [analysis-depth-optimization]
+- **REFERENCE** [framework-requirement-13] for [mandatory-ultrathink-configuration] and [compliance-enforcement-standards]
 
 ## Universal Agent Anti-Recursion Intelligence
 
