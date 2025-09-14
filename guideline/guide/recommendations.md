@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document provides Anthropic's official best practices for Claude implementation within the Guild System's systematic intelligence framework (see `framework.md`). These recommendations ensure reliable, high-quality task execution through proven techniques.
+This document PROVIDE Anthropic's official best practices for Claude implementation within the Guild System's systematic intelligence framework (see `framework.md`). These recommendations ENSURE reliable, high-quality task execution through proven techniques.
 
 ## Important Distinction: Guild Intelligence vs Anthropic Examples
 
@@ -72,7 +72,7 @@ This document provides Anthropic's official best practices for Claude implementa
   <thinking>
     1. What are the components?
     2. What are the dependencies?
-    3. What can run in parallel?
+    3. What RUN in parallel?
     4. What specialists are needed?
   </thinking>
   ```
@@ -322,7 +322,7 @@ This document provides Anthropic's official best practices for Claude implementa
   **Essential Components:**
   1. **Comprehensive Descriptions (3-4 sentences minimum)**
      - What the tool does and its primary purpose
-     - When it should and shouldn't be used
+     - When it USE and DO-NOT-USE
      - Important limitations and caveats
      - Expected outcomes and side effects
   
@@ -517,7 +517,7 @@ This document provides Anthropic's official best practices for Claude implementa
 
 ## Framework Integration
 
-These recommendations implement the systematic intelligence principles defined in `framework.md`. All Guild System implementations should follow both the framework structure and these detailed best practices for optimal results.
+These recommendations implement the systematic intelligence principles defined in `framework.md`. All Guild System implementations FOLLOW both the framework structure and these detailed best practices for optimal results.
 
 ## References
 

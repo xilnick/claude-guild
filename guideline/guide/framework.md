@@ -1,7 +1,8 @@
 # Guild System Framework
 
 <core_philosophy>
-**Structure enables intelligence. Intelligence optimizes structure.**
+**STRUCTURE: ENABLE intelligence. INTELLIGENCE: OPTIMIZE structure.**
+**OBSERVATION: ENABLE understanding. UNDERSTANDING: DRIVE adaptation.**
 
 <principles>
 - **Systematic Foundation**: Provides reliability and comprehensive coverage
@@ -15,12 +16,13 @@
 <compliance_architecture>
 
 <foundational_requirements>
-**Intelligence Abstraction Compliance:**
-- **Absolute Code Prohibition**: Never include code samples, syntax examples, or executable snippets
-- **Complete Technology Independence**: Never reference specific languages, frameworks, libraries, or tools
-- **Mandatory Template Usage**: All guidance must use abstract `[placeholder]` patterns exclusively  
-- **Native Intelligence Trust**: Complete reliance on autonomous intelligence for contextual implementations
-- **Creative Solution Preservation**: Enable intelligent adaptation without constraining implementation choices
+**Universal Guild Intelligence Compliance:**
+- **Observation-Based Learning**: Discover patterns through systematic analysis rather than applying predefined templates or assumptions
+- **Pattern Discovery Mandate**: Analyze project characteristics through multi-dimensional observation protocols without predetermined knowledge
+- **Dynamic Adaptation**: Generate solutions based on discovered patterns rather than selecting from predefined templates
+- **Technology Agnostic Intelligence**: Complete independence from specific languages, frameworks, libraries, or tools through pattern-based understanding
+- **Native Intelligence Trust**: Complete reliance on autonomous intelligence for contextual implementations based on observed patterns
+- **Creative Solution Preservation**: Enable intelligent adaptation without constraining implementation choices through discovery-driven flexibility
 
 **Analysis-First Intelligence:**
 - **Always Analyze Instead of Declaring**: Use intelligence to examine actual conditions rather than making predetermined assumptions
@@ -30,20 +32,20 @@
 </foundational_requirements>
 
 <systematic_excellence>
-Guild system operates with consistent excellence across six critical dimensions with template-first intelligence patterns and mandatory abstraction standards (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001).
+Guild system operates with consistent excellence across eight critical dimensions with observation-first intelligence patterns and mandatory pattern-discovery standards (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001, @config:PD001, @config:EM001).
 </systematic_excellence>
 </compliance_architecture>
 
 <dimensional_framework>
 <governance_structure>
-**Six-Dimensional Compliance Architecture**: Systematic intelligence coordination across mandatory compliance dimensions (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001).
+**Eight-Dimensional Compliance Architecture**: Systematic intelligence coordination across mandatory compliance dimensions (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001, @config:PD001, @config:EM001).
 </governance_structure>
 
 <core_dimensions>
 <dimension id="TB001" name="tool_parallelization_mandate">
 **Tool Parallelization**: Execute `[tool-operations]` simultaneously unless proven `[dependencies]` require serialization through systematic `[challenge-protocols]`
 
-**Anthropic Standards Integration**: All specialists must implement official parallel tool execution with the mandate: "For maximum efficiency, whenever you perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially. Prioritize calling tools in parallel whenever possible. Err on the side of maximizing parallel tool calls rather than running too many tools sequentially."
+**Anthropic Standards Integration**: All specialists must implement official parallel tool execution standards as defined in shared-intelligence.md.
 
 **Implementation Requirements**:
 - Batch independent tool operations in single responses
@@ -95,16 +97,42 @@ Guild system operates with consistent excellence across six critical dimensions 
 <dimension id="OB001" name="operation_batching_optimization">
 **Operation Batching**: Group `[operation-types]` through `[classification-intelligence]` with context-switching minimization
 </dimension>
+
+<dimension id="PD001" name="pattern_discovery_mandate">
+**Pattern Discovery**: Analyze `[project-characteristics]` through `[observation-protocols]` without predefined assumptions
+
+**Universal Learning Integration**: All specialists must implement observation-based pattern recognition with the mandate: "Discover patterns through systematic analysis of project structures, behaviors, and relationships. Learn from observation rather than applying predefined templates or assumptions. Adapt understanding based on discovered evidence."
+
+**Implementation Requirements**:
+- Systematic multi-dimensional pattern analysis (structural, behavioral, dependency, naming)
+- Dynamic pattern-to-capability mapping without predefined templates
+- Project signature generation for evolution tracking and adaptation
+- Pattern registry maintenance for continuous learning and improvement
+</dimension>
+
+<dimension id="EM001" name="evolution_mechanism_mandate">
+**Evolution Mechanisms**: Adapt `[system-capabilities]` through `[continuous-learning]` based on pattern changes
+
+**Continuous Adaptation Integration**: All specialists must implement evolution-ready architectures with the mandate: "Monitor pattern changes continuously. Adapt capabilities based on discovered evolution triggers. Maintain system effectiveness through intelligent adaptation."
+
+**Implementation Requirements**:
+- Pattern change detection through significance threshold monitoring
+- Agent capability evolution (incremental, adaptive, regenerative strategies)
+- System performance tracking and optimization through continuous learning
+- Evolution validation and rollback mechanisms for system stability
+</dimension>
 </core_dimensions>
 
 <dimensional_integration>
 **Cross-Dimensional Coordination**: All dimensions operate simultaneously through `[multi-dimensional-templates]` with systematic interdependencies
 
-**Cross-Dimensional Workflow Templates**:
-- **Discovery-Assignment-Execution**: RP001 → AM001 → PE001 coordination through `[discovery-to-execution-pipelines]`
+**Universal Guild Workflow Templates**:
+- **Pattern-Discovery-Assignment-Execution**: PD001 → AM001 → PE001 coordination through `[observation-to-execution-pipelines]`
+- **Discovery-Evolution-Adaptation**: PD001 ↔ EM001 integration through `[continuous-learning-frameworks]`
 - **Parallel-Tool-Batching**: TB001 ↔ OB001 integration through `[simultaneous-tool-operation-patterns]`
 - **Assignment-Hierarchy-Control**: AM001 ↔ AR001 coordination through `[flat-delegation-protocols]`
 - **Research-Parallel-Discovery**: RP001 ↔ PE001 integration through `[parallel-analysis-frameworks]`
+- **Evolution-Pattern-Coordination**: EM001 ↔ PD001 integration through `[adaptive-learning-protocols]`
 
 **Integration Effectiveness Metrics**:
 - **Cross-Dimensional Compliance**: Measure coordination effectiveness across all 6 dimensions through `[compliance-scoring-matrices]`
@@ -118,6 +146,8 @@ Guild system operates with consistent excellence across six critical dimensions 
 - **Research Protocol (RP001)**: Discovery operations execute through simultaneous tool execution
 - **Recursion Prevention (AR001)**: Flat hierarchy specialists implement parallel tool standards
 - **Operation Batching (OB001)**: Strategic grouping includes tool operation optimization
+- **Pattern Discovery (PD001)**: Multi-dimensional analysis executes through parallel observation protocols
+- **Evolution Mechanisms (EM001)**: Adaptation processes coordinate through simultaneous evaluation frameworks
 
 **Systematic Interdependency Patterns**:
 - **Bidirectional Enhancement**: Each dimension strengthens others through `[mutual-reinforcement-protocols]`
@@ -155,7 +185,7 @@ Guild system operates with consistent excellence across six critical dimensions 
 **Guideline Compliance Verification**:
 - **MANDATORY** verification against setup-requirements.md for setup command modifications
 - **MANDATORY** verification against workflow-requirements.md for workflow command modifications
-- **MANDATORY** testing that shared intelligence maintains compatibility with both commands
+- **MANDATORY** testing that shared intelligence MAINTAIN compatibility with both commands
 - **MANDATORY** validation that architectural boundaries are preserved (setup creates, workflow executes)
 
 **Enforcement Standards**:
@@ -168,7 +198,7 @@ Guild system operates with consistent excellence across six critical dimensions 
 
 <intelligence_architecture>
 <new_core_intelligence_system>
-**DECLARATIVE INTELLIGENCE ARCHITECTURE**: Guild operates through 3-file core intelligence system with declarative command structure and simplified template embedding via install.js.
+**DECLARATIVE INTELLIGENCE ARCHITECTURE**: Guild operates through 3-file core intelligence system with declarative command structure and simplified template embedding via [installation-engine].
 
 <intelligence_module_structure>
 1. **setup-intelligence.md**: Project discovery, analysis, and agent generation intelligence patterns
@@ -177,7 +207,7 @@ Guild system operates with consistent excellence across six critical dimensions 
 </intelligence_module_structure>
 
 <template_simplification>
-**Command Template Architecture**: Templates function as declarative command prompts with intelligence embedding through install.js:
+**Command Template Architecture**: Templates function as declarative command prompts with intelligence embedding through [installation-engine]:
 - **Simple Command Structure**: Commands contain task definitions and user interaction patterns
 - **Intelligence Embedding**: Core intelligence modules automatically embedded during generation
 - **Declarative Format**: Commands operate as executable prompts, not documentation
@@ -189,9 +219,9 @@ Guild system operates with consistent excellence across six critical dimensions 
 **CRITICAL REQUIREMENT**: All Guild intelligence must adhere to mandatory abstraction and declarative intelligence principles.
 
 <core_requirements>
-1. **NEVER Include Code Samples**: Absolutely forbidden - use `[placeholder]` patterns exclusively
-2. **NEVER Reference Specific Technologies**: Use abstract `[framework]`, `[language]`, `[tool]` patterns
-3. **ALWAYS Use Templates**: Mandatory abstract placeholder patterns for all implementation guidance
+1. **ALWAYS Discover Through Observation**: Mandatory pattern discovery through systematic analysis of project characteristics without predefined assumptions
+2. **NEVER Apply Predefined Templates**: Use dynamic pattern-to-capability mapping based on discovered evidence rather than template selection
+3. **ALWAYS Adapt Based on Patterns**: Generate solutions from discovered patterns rather than applying predetermined approaches
 4. **ALWAYS Parallelize Tools**: Simultaneous tool execution unless proven sequential dependencies exist - implement Anthropic's official parallel tool execution standards with mandatory batching of independent operations
 5. **NEVER Allow Agent Recursion**: Absolute prohibition - maintain flat hierarchy only
 6. **RELY ON Native Intelligence**: Complete trust in autonomous intelligence for implementations
@@ -202,7 +232,7 @@ Guild system operates with consistent excellence across six critical dimensions 
 11. **ALWAYS Use Declarative Format**: Function as command prompts, not documentation
 12. **3-Module Intelligence Architecture**: Reference setup-intelligence.md, workflow-intelligence.md, and shared-intelligence.md exclusively
 13. **MANDATORY Ultrathink Configuration**: All agents and commands must include `thinking_mode: ultrathink` for enhanced reasoning capabilities
-14. **Install.js Embedding Standards**: Intelligence integration through automated embedding, not manual inclusion
+14. **[Installation-Engine] Embedding Standards**: Intelligence integration through automated embedding, not manual inclusion
 </core_requirements>
 
 <enforcement_protocol>
@@ -215,7 +245,7 @@ Guild system operates with consistent excellence across six critical dimensions 
 - **Analysis-First**: Verification that decisions based on actual analysis vs declarations
 - **3-Module Architecture Compliance**: Verification that only new intelligence modules are referenced
 - **Declarative Intelligence Enforcement**: Confirmation that intelligence operates through command prompt execution
-- **Embedding Integration Validation**: Verification that install.js properly embeds intelligence modules
+- **Embedding Integration Validation**: Verification that [installation-engine] properly embeds intelligence modules
 - **Ultrathink Configuration Enforcement**: Mandatory verification that all agents include thinking_mode: ultrathink in YAML frontmatter
 </enforcement_protocol>
 </mandatory_requirements>
@@ -223,7 +253,7 @@ Guild system operates with consistent excellence across six critical dimensions 
 
 
 <template_principles>
-**Simplified Declarative Templates**: Provide command prompt structure with intelligence embedding through install.js automated integration.
+**Simplified Declarative Templates**: Provide command prompt structure with intelligence embedding through [installation-engine] automated integration.
 
 <declarative_command_structure>
 - **Command Prompt Format**: Templates function as executable command prompts, not documentation
@@ -236,13 +266,13 @@ Guild system operates with consistent excellence across six critical dimensions 
 - **Abstract Placeholders**: Use `[placeholder-patterns]` exclusively with zero code samples or technology references
 - **Declarative Execution**: Templates execute as command prompts with embedded intelligence
 - **[user-instructions] Processing**: Templates receive `[user-instructions]` via dynamic variable integration
-- **Intelligence Integration**: Core modules embedded automatically through install.js generation process
+- **Intelligence Integration**: Core modules embedded automatically through [installation-engine] generation process
 </template_standards>
 
 <configuration_standards>
 - **Model**: Always `model: inherit` with mandatory `thinking_mode: ultrathink` for enhanced reasoning capabilities
 - **Placeholders**: `[domain]` → `[framework]` → `[specialist-category]` → `@config:[pattern-id]`
-- **Philosophy**: Structure enables intelligence. Intelligence optimizes structure.
+- **Philosophy**: STRUCTURE: ENABLE intelligence. INTELLIGENCE: OPTIMIZE structure.
 - **Intelligence Source**: setup-intelligence.md, workflow-intelligence.md, shared-intelligence.md embedded automatically
 </configuration_standards>
 </template_principles>
@@ -253,21 +283,23 @@ Guild system operates with consistent excellence across six critical dimensions 
 - **Technical Complete**: All `[verification-streams]` pass
 - **User Satisfied**: Explicit approval received
 - **Quality Maintained**: Standards met throughout
-- **Excellence Achieved**: High compliance across all `[framework-dimensions]` verified (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001)
+- **Excellence Achieved**: High compliance across all `[framework-dimensions]` verified (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001, @config:PD001, @config:EM001)
+- **Pattern Discovery Complete**: Multi-dimensional analysis reveals comprehensive project understanding without predefined assumptions
+- **Evolution Readiness Confirmed**: System demonstrates adaptive capabilities and continuous learning mechanisms
 - **Tool Parallelization Performance**: Measurable efficiency improvements through simultaneous tool execution demonstrated (Reference: @config:TB001)
 - **Anthropic Standards Compliance**: All specialists implement official parallel tool execution prompts verified (Reference: @config:TB001, @config:AM001)
 - **Intelligence Architecture Compliance**: Commands properly reference new 3-module intelligence system (setup-intelligence.md, workflow-intelligence.md, shared-intelligence.md)
 - **Declarative Command Verification**: Commands function as executable prompts with embedded intelligence modules
-- **Embedding Integration Verified**: Install.js properly embeds intelligence modules during command generation
+- **Embedding Integration Verified**: [Installation-Engine] properly embeds intelligence modules during command generation
 - **Clean Separation Maintained**: Framework principles, intelligence modules, templates, and generation process maintain clear boundaries
 </verification_requirements>
 </success_criteria>
 
 <command_architecture>
-**Declarative Command System**: Guild commands generated through install.js with automatic intelligence embedding and simplified template structure.
+**Declarative Command System**: Guild commands generated through [installation-engine] with automatic intelligence embedding and simplified template structure.
 
 <command_generation_process>
-- **Template Processing**: Simple command templates processed through install.js
+- **Template Processing**: Simple command templates processed through [installation-engine]
 - **Intelligence Embedding**: Core intelligence modules automatically embedded during generation
 - **Command Types**: setup.md and workflow.md commands with specialized intelligence integration
 - **Framework Integration**: Automatic dimensional compliance through embedded shared-intelligence.md
@@ -292,7 +324,7 @@ Guild system operates with consistent excellence across six critical dimensions 
 </intelligence_module_responsibilities>
 
 <embedding_standards>
-- **Install.js Integration**: Intelligence modules embedded automatically during command generation
+- **[Installation-Engine] Integration**: Intelligence modules embedded automatically during command generation
 - **Command-Specific Intelligence**: Relevant modules embedded per command type through mapping configuration
 - **Framework Compliance**: Shared-intelligence.md embedded in all commands for universal compliance
 - **Clean Separation**: Framework principles separate from implementation intelligence patterns
@@ -320,19 +352,20 @@ Guild system operates with consistent excellence across six critical dimensions 
 - **Framework Layer**: Core philosophy, dimensional architecture, compliance requirements (framework.md)
 - **Intelligence Layer**: Implementation patterns, coordination protocols, execution intelligence (3 intelligence modules)
 - **Template Layer**: Command structure, user interaction, task processing (simple templates)
-- **Generation Layer**: Automatic intelligence embedding, command compilation (install.js)
+- **Generation Layer**: Automatic intelligence embedding, command compilation ([installation-engine])
 </clean_separation_principles>
 </declarative_intelligence_requirements>
 
 <best_practices>
 **Systematic Excellence**: Use `[xml-structure]`, `[chain-of-thought]`, and `[verification-patterns]` with explicit `[user-confirmation]`. Enforce excellence through systematic `[processes]` and focused `[specialists]` with proactive delegation (Reference: @config:AM001, @config:VF001).
 
-**Declarative Intelligence Implementation**: 
+**Universal Guild Intelligence Implementation**: 
 - Reference setup-intelligence.md, workflow-intelligence.md, and shared-intelligence.md for implementation patterns
-- Maintain clean separation between framework principles and intelligence implementation
-- Trust install.js embedding process for automatic intelligence integration
-- Ensure templates remain simple command prompts with embedded intelligence
+- Maintain clean separation between framework principles and pattern-discovery intelligence implementation
+- Trust [installation-engine] embedding process for automatic intelligence integration with observation-based capabilities
+- Ensure templates remain simple command prompts with embedded pattern-discovery intelligence
+- Enable continuous evolution through pattern learning and system adaptation
 
-**Philosophy**: Structure enables intelligence. Intelligence optimizes structure.
+**Philosophy**: STRUCTURE: ENABLE intelligence. INTELLIGENCE: OPTIMIZE structure. OBSERVATION: ENABLE understanding. UNDERSTANDING: DRIVE adaptation.
 </best_practices>
 

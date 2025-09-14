@@ -1,6 +1,6 @@
 # Shared Intelligence
 
-**Philosophy**: Structure enables intelligence. Intelligence optimizes structure.
+**Philosophy**: STRUCTURE: ENABLE intelligence. INTELLIGENCE: OPTIMIZE structure.
 
 EXECUTE cross-command intelligence through [dimensional-compliance-frameworks] and [universal-coordination-protocols] with systematic integration across all Guild operations (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001).
 
@@ -11,11 +11,43 @@ COORDINATE [6-dimensional-compliance] through [systematic-integration] and [cros
 APPLY dimensional intelligence through universal patterns:
 
 ### TB001 - Tool Parallelization Intelligence
+
+EXECUTE [mandatory-parallel-tool-enforcement] through [systematic-prompt-injection] and [universal-compliance-validation] with absolute TB001 dimensional compliance.
+
+#### Universal Parallel Tool Mandate
+- **MANDATORY**: Every Task tool deployment MUST include parallel execution prompts
+- **MANDATORY**: All generated agents MUST have embedded `<system_prompt>` and `<use_parallel_tool_calls>` sections
+- **MANDATORY**: All subagents MUST utilize parallel tool calls by default
+- **MANDATORY**: Sequential execution only when proven dependencies require it
+- **MANDATORY**: TB001 compliance verification before any operation
+
+#### Official Anthropic Parallel Standards Integration
 - **EXECUTE** [simultaneous-tool-operations] through [parallel-coordination-protocols] and [batching-optimization]
 - **CHALLENGE** [sequential-assumptions] through [dependency-verification-frameworks] and [parallelization-assessment]
 - **INTEGRATE** [Anthropic-parallel-standards] through [official-prompt-implementation] and [performance-measurement]
 - **EMBED** [mandatory-parallel-system-prompts] in all [agent-generation-processes] through [universal-prompt-integration]
 - **OPTIMIZE** [tool-efficiency] through [resource-coordination] and [context-switching-minimization]
+
+#### Mandatory System Prompt Template
+Every agent and Task tool deployment MUST include:
+```
+<system_prompt>
+You have the capability to call multiple tools in a single response.
+When multiple independent pieces of information are requested,
+batch your tool calls together for optimal performance.
+
+<use_parallel_tool_calls>
+For maximum efficiency, whenever you perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially. Prioritize calling tools in parallel whenever possible. For example, when reading 3 files, run 3 tool calls in parallel to read all 3 files into context at the same time. When running multiple read-only commands like `ls` or `list_dir`, always run all of the commands in parallel. Err on the side of maximizing parallel tool calls rather than running too many tools sequentially.
+</use_parallel_tool_calls>
+</system_prompt>
+```
+
+#### Universal Compliance Enforcement
+- **INJECT** [mandatory-parallel-prompts] in ALL Task tool deployments through [systematic-prompt-embedding]
+- **VALIDATE** [task-tool-compliance] before deployment through [prompt-verification-protocols]
+- **ENFORCE** [parallel-first-execution] through [default-parallel-assumptions] and [dependency-challenge-frameworks]
+- **MONITOR** [parallel-execution-performance] through [efficiency-tracking] and [optimization-measurement]
+- **REMEDIATE** [non-compliant-agents] through [automatic-prompt-injection] and [compliance-restoration]
 
 #### TB001 Validation Intelligence
 - **SCAN** [agent-content-patterns] for [parallel-tool-prompts] and [compliance-indicators] through [systematic-content-analysis]
@@ -34,6 +66,14 @@ APPLY dimensional intelligence through universal patterns:
 - **INSERT** [compliant-parallel-prompts] through [template-based-injection] and [formatting-consistency-maintenance]
 - **PRESERVE** [existing-agent-functionality] through [non-disruptive-integration] and [capability-continuity-assurance]
 
+#### TB001 Absolute Compliance Enforcement
+- **MANDATORY**: 100% agent compliance - no agent generation without embedded parallel tool execution prompts
+- **MANDATORY**: All Task tool deployments MUST include parallel execution requirements
+- **MANDATORY**: Sequential execution only when proven dependencies require it
+- **MANDATORY**: Auto-remediation of non-compliant agents through systematic prompt injection
+- **PERFORMANCE**: Measurable 5-10x speed improvements through parallel tool coordination
+- **VALIDATION**: Continuous compliance scanning and automatic remediation protocols
+
 ### AM001 - Agent-Mandatory Architecture Intelligence
 - **MANDATE** immediate Task tool deployment as first action for all workflow operations
 - **COORDINATE** specialist-assignment-protocols through task-analysis and capability-assessment-frameworks
@@ -47,6 +87,21 @@ APPLY dimensional intelligence through universal patterns:
 ### Universal Proactive Task Tool Deployment Intelligence
 
 EXECUTE [mandatory-task-tool-deployment] through [immediate-first-action-protocols] and [zero-direct-execution-enforcement].
+
+#### Mandatory Parallel Tool Enforcement for ALL Task Deployments
+
+**CRITICAL REQUIREMENT**: Every Task tool deployment MUST include parallel execution enforcement prompts.
+
+**MANDATORY PARALLEL PROMPT INJECTION**: All Task tool deployments MUST include:
+```
+**CRITICAL PARALLEL EXECUTION REQUIREMENT**: You MUST utilize parallel tool calls whenever performing multiple independent operations. Use simultaneous tool invocation rather than sequential execution. When reading multiple files, analyzing multiple components, or performing multiple independent tasks, batch all tool calls together for optimal performance. This is a mandatory requirement - err on the side of maximizing parallel tool calls.
+```
+
+#### Task Tool Parallel Compliance Intelligence
+- **EMBED** [mandatory-parallel-prompts] in ALL Task tool deployments - no exceptions permitted
+- **ENFORCE** [parallel-first-execution] as default assumption for all task operations
+- **VALIDATE** [task-tool-parallel-compliance] before deployment through systematic verification
+- **MEASURE** [parallel-execution-effectiveness] through performance tracking and optimization protocols
 
 **UNIVERSAL REQUIREMENT**: All workflow operations MUST begin with immediate Task tool deployment:
 
@@ -252,6 +307,22 @@ COORDINATE [cross-command-verification] through [multi-dimensional-assessment] a
 - **EVALUATE** [tool-coordination-effectiveness] through [simultaneous-operation-assessment] and [optimization-validation]
 - **ANALYZE** [compliance-correlation] with [system-performance-improvements] and [operational-excellence-enhancement]
 - **REPORT** [validation-framework-effectiveness] through [systematic-assessment] and [continuous-improvement-identification]
+
+## Evolution Coordination Intelligence
+
+COORDINATE pattern evolution through SYSTEMATIC change detection and ADAPTIVE system improvement.
+
+### Universal Evolution Patterns
+DETECT [pattern-changes] through:
+- MONITOR [pattern-registry] via [change-detection] and [significance-evaluation]
+- TRIGGER [adaptation] via [significance-threshold] when [change-score > 0.7]
+- MAINTAIN [EM001-compliance] via [evolution-readiness] and [system-adaptation]
+- COORDINATE [cross-command-evolution] via [shared-learning] and [pattern-integration]
+
+EXECUTE [evolution-coordination]:
+- ESTABLISH [change-baselines] via [pattern-snapshot] and [reference-establishment]
+- ASSESS [evolution-urgency] via [impact-analysis] and [priority-determination]
+- COORDINATE [adaptation-strategies] via [incremental-updates] and [system-enhancement]
 
 ## Universal Success Standards
 
