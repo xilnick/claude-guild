@@ -20,13 +20,23 @@
     "test": "npm run validate && npm run test-install",
     "test:integration": "node scripts/integration-test.js",
     "test:all": "npm run validate && npm run test-install && npm run test:integration",
+
+    "validate-parallel": "node scripts/validate-parallel-compliance.js",
+    "validate-parallel:verbose": "node scripts/validate-parallel-compliance.js --verbose",
+    "validate-parallel:json": "node scripts/validate-parallel-compliance.js --json",
+    "remediate-parallel": "node scripts/remediate-parallel-compliance.js",
+    "remediate-parallel:apply": "node scripts/remediate-parallel-compliance.js --apply",
+    "test-parallel": "node scripts/test-parallel-compliance.js",
+    "test-parallel:verbose": "node scripts/test-parallel-compliance.js --verbose",
+
     "version-patch": "npm version patch",
     "version-minor": "npm version minor",
     "version-major": "npm version major"
   },
   "dependencies": {
     "fs-extra": "^11.3.0",
-    "@clack/prompts": "^0.11.0"
+    "@clack/prompts": "^0.11.0",
+    "glob": "^10.3.0"
   },
   "engines": {
     "node": ">=18.0.0"

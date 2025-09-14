@@ -202,7 +202,8 @@ Guild system operates with consistent excellence across six critical dimensions 
 11. **ALWAYS Use Declarative Format**: Function as command prompts, not documentation
 12. **$ARGUMENTS Usage Restriction**: $ARGUMENTS must be mentioned only once and only in command templates - never in core modules or framework guidance
 13. **3-Module Intelligence Architecture**: Reference setup-intelligence.md, workflow-intelligence.md, and shared-intelligence.md exclusively
-14. **Install.js Embedding Standards**: Intelligence integration through automated embedding, not manual inclusion
+14. **MANDATORY Ultrathink Configuration**: All agents and commands must include `thinking_mode: ultrathink` for enhanced reasoning capabilities
+15. **Install.js Embedding Standards**: Intelligence integration through automated embedding, not manual inclusion
 </core_requirements>
 
 <enforcement_protocol>
@@ -216,6 +217,7 @@ Guild system operates with consistent excellence across six critical dimensions 
 - **3-Module Architecture Compliance**: Verification that only new intelligence modules are referenced
 - **Declarative Intelligence Enforcement**: Confirmation that intelligence operates through command prompt execution
 - **Embedding Integration Validation**: Verification that install.js properly embeds intelligence modules
+- **Ultrathink Configuration Enforcement**: Mandatory verification that all agents include thinking_mode: ultrathink in YAML frontmatter
 </enforcement_protocol>
 </mandatory_requirements>
 </intelligence_architecture>
@@ -239,7 +241,7 @@ Guild system operates with consistent excellence across six critical dimensions 
 </template_standards>
 
 <configuration_standards>
-- **Model**: Always `model: inherit` with `thinking_mode: ultrathink`
+- **Model**: Always `model: inherit` with mandatory `thinking_mode: ultrathink` for enhanced reasoning capabilities
 - **Placeholders**: `[domain]` → `[framework]` → `[specialist-category]` → `@config:[pattern-id]`
 - **Philosophy**: Structure enables intelligence. Intelligence optimizes structure.
 - **Intelligence Source**: setup-intelligence.md, workflow-intelligence.md, shared-intelligence.md embedded automatically
