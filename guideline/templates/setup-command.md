@@ -12,11 +12,11 @@ Initialize Guild system by analyzing project structure and creating specialized 
 
 ## User Request Processing
 
-When $ARGUMENTS is provided, treat it as the user's specific request that guides this setup:
-- Process $ARGUMENTS as primary task instructions that modify setup approach
-- Adapt setup workflow based on user intent and requirements  
-- Apply intelligent reasoning to determine optimal specialist needs for the request
-- Allow $ARGUMENTS to override default behaviors when user intent is clear
+When $ARGUMENTS is provided, treat it as ADDITIONAL specialist requests to supplement standard discovery:
+- ALWAYS perform comprehensive project discovery and create domain specialists
+- Process $ARGUMENTS as supplementary specialist requests to create IN ADDITION to discovered specialists
+- Apply intelligent reasoning to integrate user-requested specialists with discovered domain specialists
+- NEVER allow $ARGUMENTS to replace or skip the baseline discovery and agent generation process
 
 ## Deep Project Discovery Intelligence
 

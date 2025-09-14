@@ -66,18 +66,25 @@ The `/guild:setup` command analyzes project structure and creates specialized ag
 ## Command-Specific Behaviors
 
 ### User Request Processing
-When $ARGUMENTS is provided, treat it as the user's specific request that guides setup:
-- Process $ARGUMENTS as primary task instructions that modify setup approach
-- Adapt setup workflow based on user intent and requirements
-- Apply intelligent reasoning to determine optimal specialist needs for the request
-- Allow $ARGUMENTS to override default behaviors when user intent is clear
+When $ARGUMENTS is provided, treat it as ADDITIONAL specialist requests to supplement standard discovery:
+- ALWAYS perform comprehensive project discovery and create domain specialists
+- Process $ARGUMENTS as supplementary specialist requests to create IN ADDITION to discovered specialists
+- Apply intelligent reasoning to integrate user-requested specialists with discovered domain specialists
+- NEVER allow $ARGUMENTS to replace or skip the baseline discovery and agent generation process
+
+### Baseline Agent Generation Guarantee
+- **MINIMUM COVERAGE**: Setup MUST create at least one specialist per discovered domain category
+- **DISCOVERY-FIRST**: Project analysis and domain identification is MANDATORY regardless of $ARGUMENTS
+- **SUPPLEMENTARY ARGUMENTS**: User requests via $ARGUMENTS are ALWAYS additive, never replacement
+- **COMPREHENSIVE BASELINE**: Standard specialists for framework, intelligence, templates, generation, validation, and integration domains
 
 ### Setup Execution Flow
-1. **ANALYZE** project through parallel discovery patterns
-2. **IDENTIFY** domains through systematic assessment protocols
-3. **CREATE** specialist agents through template compliance validation
-4. **ORGANIZE** agent structure through logical categorization
-5. **VERIFY** creation completeness through coverage assessment
+1. **ANALYZE** project through parallel discovery patterns (MANDATORY baseline)
+2. **IDENTIFY** domains through systematic assessment protocols (MANDATORY baseline)
+3. **CREATE** baseline specialist agents for all discovered domains through template compliance validation
+4. **CREATE** additional specialist agents based on $ARGUMENTS if provided (supplementary)
+5. **ORGANIZE** agent structure through logical categorization (baseline + supplementary)
+6. **VERIFY** creation completeness through coverage assessment (baseline + supplementary)
 
 ### Excellence Targets
 - **Discovery Excellence**: Comprehensive coverage through parallel analysis and systematic assessment
