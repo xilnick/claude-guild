@@ -1,3 +1,7 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 # Guild System - MANDATORY REQUIREMENTS
 
 **CRITICAL DIRECTIVE**: Work ONLY with guidelines, framework, and scripts. 
@@ -48,39 +52,399 @@
 ```
 framework.md (defines principles)
     ↓
-core/*.md (implements patterns)
+core/shared-intelligence.md (implements patterns)
+    ↓ [loadIntelligenceModule()]
+templates/workflow-command.md + templates/setup-command.md
+    ↓ [copyAndEmbedCommand()]
+install.js (generates agent inventory + embeds intelligence)
+    ↓ [generateAgentInventory() + intelligence embedding]
+.claude/commands/guild/ (deployed commands with embedded intelligence)
     ↓
-templates/*.md (structures commands)
-    ↓
-install.js (generates final commands)
-    ↓
-.claude/commands/guild/ (deployed commands)
+User executes /guild or /guild:setup
 ```
 
+### Architecture Details
 
-## Intelligence Update Protocol
+**Intelligence Embedding Process:**
+1. `loadIntelligenceModule()` - Loads shared intelligence from `guideline/core/shared-intelligence.md`
+2. `generateAgentInventory()` - Scans target directory for existing agents to enable workflow coordination
+3. `copyAndEmbedCommand()` - Takes templates, embeds intelligence and agent inventory, generates final commands
+4. Commands are deployed to `.claude/commands/guild/` with full intelligence embedded
 
-**CRITICAL: Maintain consistency across all layers:**
+**Template System:**
+- `guideline/templates/workflow-command.md` → `.claude/commands/guild/workflow.md`
+- `guideline/templates/setup-command.md` → `.claude/commands/guild/setup.md`
+- Symlink created: `.claude/commands/guild.md` → `guild/workflow.md`
 
-1. **Framework Changes** (`guideline/guide/framework.md`)
-   - Update philosophical approach
-   - Define new principles
-   - Set execution patterns
 
-2. **Core Module Updates** (`guideline/core/`)
-   - Implement framework principles
-   - Create reusable patterns
-   - Define specific behaviors
+## Development Workflow
 
-3. **Template Updates** (`guideline/templates/`)
-   - Structure command interfaces
-   - Embed core intelligence
-   - Define user interactions
+### Requirements-First Development Protocol
 
-4. **Script Updates** (`install.js`)
-   - Modify generation logic
-   - Update embedding process
-   - Change deployment structure
+**MANDATORY SEQUENCE**: Requirements drive all changes, framework comes first, everything aligns with recommendations
+
+<requirements_driven_flow>
+**Phase 1: Requirements Definition**
+1. **Document Requirements** (`guideline/guide/framework.md`)
+   - Define new capabilities or changes needed
+   - Specify execution patterns and principles
+   - Establish success criteria and constraints
+   - ALWAYS align with `guideline/guide/recommendations.md`
+
+2. **Update Framework Requirements** (`guideline/guide/framework.md`)
+   - Modify core architecture principles
+   - Update execution rules and patterns
+   - Define new specialist coordination requirements
+   - Ensure Lost in Middle mitigation compliance
+   - Verify XML structure alignment with recommendations
+
+**Phase 2: Command Requirements**
+3. **Define Command-Specific Requirements**
+   - **Workflow Command**: Task execution, delegation, verification patterns
+   - **Setup Command**: Project analysis, specialist creation, discovery protocols
+   - Document required capabilities and behaviors
+   - Specify placeholder patterns and XML structure needs
+
+**Phase 3: Intelligence Implementation**
+4. **Update Shared Intelligence** (`guideline/core/shared-intelligence.md`)
+   - Implement framework requirements as reusable patterns
+   - Add new intelligence modules based on requirements
+   - Create template embedding protocols
+   - Include scratchpad management and document positioning guidelines
+   - Ensure MCP tool selection matrices align with requirements
+
+**Phase 4: Template Implementation**
+5. **Update Command Templates** (`guideline/templates/`)
+   - `workflow-command.md`: Implement task execution requirements
+   - `setup-command.md`: Implement project analysis requirements
+   - Apply Lost in Middle mitigation patterns
+   - Integrate scratchpad management
+   - Embed shared intelligence patterns
+
+**Phase 5: Validation & Deployment**
+6. **Validate Alignment** (`npm run validate && npm run test`)
+   - Verify recommendations.md compliance
+   - Confirm framework requirements implementation
+   - Test intelligence embedding
+   - Validate command generation
+
+7. **Test Installation** (`node install.js`)
+   - Test mode first: `node install.js --test-mode`
+   - Install to test directory: `node install.js --no-interaction --path /tmp/test-guild`
+   - Verify generated commands meet all requirements
+</requirements_driven_flow>
+
+### Mandatory Alignment Protocol
+
+<alignment_requirements>
+**EVERYTHING MUST ALIGN WITH**:
+1. **`guideline/guide/recommendations.md`** - Opus 4.1 optimization patterns
+2. **`guideline/guide/framework.md`** - Core architecture principles
+3. **Requirements Definition** - Documented capabilities and constraints
+
+**NEVER**:
+- Update templates without updating framework first
+- Skip requirements definition phase
+- Ignore recommendations.md patterns
+- Implement without shared intelligence updates
+- Deploy without validation
+
+**ALWAYS**:
+- Start with requirements in framework.md
+- Apply recommendations.md patterns throughout
+- Update shared intelligence before templates
+- Validate alignment at each phase
+- Test installation before committing
+</alignment_requirements>
+
+### Legacy Development Process (DEPRECATED)
+
+~~**Old Process**: Framework → Intelligence → Templates → Commands~~
+
+**New Process**: **Requirements → Framework → Command Requirements → Shared Intelligence → Templates → Validation**
+
+### Requirements-Based Testing Protocol
+
+**MANDATORY TESTING SEQUENCE**: Validate requirements implementation at each phase
+
+<phase_testing>
+**Phase 1: Requirements Validation**
+```bash
+# Verify framework requirements are documented
+grep -n "requirement\|MANDATORY\|CRITICAL" guideline/guide/framework.md
+
+# Confirm recommendations.md alignment
+npm run validate-guidelines
+```
+
+**Phase 2: Framework Testing**
+```bash
+# Validate framework structure
+npm run validate-structure
+
+# Test framework consistency
+grep -n "<critical>\|Lost in Middle\|scratchpad" guideline/guide/framework.md
+```
+
+**Phase 3: Intelligence Testing**
+```bash
+# Test shared intelligence loading
+node install.js --test-mode
+
+# Verify intelligence patterns
+grep -n "Research Protocol\|MCP Tool Selection\|Document Positioning" guideline/core/shared-intelligence.md
+```
+
+**Phase 4: Template Testing**
+```bash
+# Validate template structure
+npm run validate
+
+# Test template generation
+node install.js --no-interaction --path /tmp/test-requirements
+
+# Verify alignment implementation
+grep -n "CRITICAL.*READ FIRST\|scratchpad\|instruction>" /tmp/test-requirements/.claude/commands/guild/workflow.md
+```
+
+**Phase 5: Complete Integration Testing**
+```bash
+# Full validation suite
+npm run test
+
+# Clean installation test
+rm -rf /tmp/test-requirements-complete
+node install.js --no-interaction --path /tmp/test-requirements-complete
+
+# Verify ALL requirements implemented
+cat /tmp/test-requirements-complete/.claude/commands/guild/workflow.md | grep -E "(CRITICAL|scratchpad|research|Lost in Middle)"
+```
+</phase_testing>
+
+## Requirements-First Intelligence Protocol
+
+**CRITICAL: Requirements drive intelligence, framework enforces implementation, recommendations ensure optimization**
+
+<intelligence_update_flow>
+**Step 1: Requirements Analysis & Framework Update**
+- **Document Requirements** in `guideline/guide/framework.md`
+  - Define new capabilities needed
+  - Specify architectural changes required
+  - Document execution pattern modifications
+  - Establish success criteria and constraints
+
+- **Update Framework Architecture** (`guideline/guide/framework.md`)
+  - Implement requirements as core principles
+  - Update execution rules and specialist protocols
+  - Define new dynamic agent creation patterns
+  - Ensure recommendations.md alignment
+
+**Step 2: Command Requirements Definition**
+- **Workflow Command Requirements**: Task execution, delegation, research protocols
+- **Setup Command Requirements**: Project analysis, specialist creation, discovery patterns
+- **Shared Requirements**: Parallel execution, gap detection, verification frameworks
+
+**Step 3: Shared Intelligence Implementation**
+- **Requirements Translation** (`guideline/core/shared-intelligence.md`)
+  - Convert framework requirements to reusable patterns
+  - Implement MCP tool selection matrices
+  - Create research and reasoning protocols
+  - Add document positioning guidelines
+  - Define scratchpad management standards
+
+**Step 4: Template Implementation**
+- **Template Updates** (`guideline/templates/`)
+  - `workflow-command.md`: Implement execution requirements with Lost in Middle mitigation
+  - `setup-command.md`: Implement analysis requirements with proper XML structure
+  - Apply all shared intelligence patterns
+  - Integrate scratchpad management
+
+**Step 5: Installation Logic Updates**
+- **Script Updates** (`install.js`) - Only if requirements demand it
+  - Modify intelligence embedding process
+  - Update command generation logic
+  - Change deployment structure if needed
+</intelligence_update_flow>
+
+### Requirements Compliance Matrix
+
+<compliance_validation>
+**EVERY UPDATE MUST VERIFY**:
+1. ✅ **Framework Requirements**: All documented requirements implemented
+2. ✅ **Recommendations Alignment**: Lost in Middle, XML structure, scratchpad management
+3. ✅ **Intelligence Consistency**: Shared patterns properly embedded in templates
+4. ✅ **Template Compliance**: Commands implement all framework and shared intelligence
+5. ✅ **Installation Verification**: Generated commands contain all required patterns
+
+**VALIDATION COMMANDS**:
+```bash
+# Requirements implemented
+grep -c "requirement\|MANDATORY\|CRITICAL" guideline/guide/framework.md
+
+# Recommendations applied  
+grep -c "Lost in Middle\|scratchpad\|critical>" guideline/templates/*.md
+
+# Intelligence embedded
+grep -c "Research Protocol\|MCP Tool\|Document Positioning" guideline/core/shared-intelligence.md
+
+# Templates aligned
+npm run validate && node install.js --test-mode
+```
+</compliance_validation>
+
+## Testing and Validation Protocols
+
+### Requirements-First Development Principles
+
+<development_principles>
+**MANDATORY PRINCIPLES**:
+1. **Requirements Drive Everything**: Never implement without documented requirements in framework.md
+2. **Framework Authority**: framework.md is the single source of truth for all patterns
+3. **Recommendations Compliance**: Every change MUST align with guideline/guide/recommendations.md
+4. **Sequential Implementation**: Requirements → Framework → Command Requirements → Intelligence → Templates → Validation
+5. **No Skip Steps**: Cannot update templates without updating shared intelligence first
+6. **Validation at Each Phase**: Test alignment before proceeding to next phase
+
+**ANTI-PATTERNS TO AVOID**:
+❌ **Template-First Development**: Never start by updating templates
+❌ **Framework Bypass**: Never skip framework updates when adding capabilities
+❌ **Recommendations Ignorance**: Never ignore Lost in Middle, scratchpad, or XML structure patterns
+❌ **Intelligence Bypass**: Never update templates without updating shared intelligence
+❌ **Validation Skipping**: Never deploy without testing requirements implementation
+❌ **Partial Implementation**: Never leave requirements partially implemented across files
+</development_principles>
+
+### Pre-Development Validation
+**Before making any changes - REQUIREMENTS ASSESSMENT**:
+```bash
+# 1. Document requirements in framework.md FIRST
+echo "Define requirements in guideline/guide/framework.md"
+
+# 2. Ensure clean starting state
+npm run validate
+npm run test
+
+# 3. Verify recommendations compliance baseline
+grep -c "Lost in Middle\|scratchpad\|<critical>" guideline/guide/recommendations.md
+
+# 4. Confirm current intelligence state
+node -e "const fs = require('fs-extra'); const path = require('path'); console.log(fs.existsSync(path.join('guideline', 'core', 'shared-intelligence.md')) ? '✅ Core intelligence exists' : '❌ Missing core intelligence');"
+```
+
+### Requirements-Based Development Testing
+**During development - VALIDATE EACH PHASE**:
+
+<phase_validation>
+**After Requirements Definition**:
+```bash
+# Verify requirements documented in framework
+grep -n "requirement\|capability\|pattern" guideline/guide/framework.md
+
+# Check recommendations alignment
+grep -n "Lost in Middle\|scratchpad\|XML" guideline/guide/recommendations.md
+```
+
+**After Framework Updates**:
+```bash
+# Validate framework structure and consistency
+npm run validate-structure
+
+# Test framework requirement implementation
+grep -c "MANDATORY\|CRITICAL\|requirement" guideline/guide/framework.md
+```
+
+**After Command Requirements Definition**:
+```bash
+# Document what each command must implement
+echo "Verify workflow and setup command requirements documented"
+
+# Check requirement traceability
+grep -n "workflow.*requirement\|setup.*requirement" guideline/guide/framework.md
+```
+
+**After Shared Intelligence Updates**:
+```bash
+# Test intelligence loading and embedding
+node install.js --test-mode
+
+# Verify intelligence implements framework requirements
+grep -c "Research Protocol\|MCP Tool\|Document Positioning" guideline/core/shared-intelligence.md
+```
+
+**After Template Updates**:
+```bash
+# Validate template structure and alignment
+npm run validate-guidelines
+
+# Test template implements shared intelligence
+grep -c "research\|scratchpad\|critical" guideline/templates/*.md
+
+# Quick installation test
+node install.js --no-interaction --path /tmp/test-dev-phase
+```
+</phase_validation>
+
+### Pre-Commit Validation
+**Before committing changes:**
+```bash
+# Full validation suite
+npm run test
+
+# Test installation to isolated directory
+rm -rf /tmp/test-guild-validation
+node install.js --no-interaction --path /tmp/test-guild-validation
+
+# Verify generated commands contain expected intelligence
+grep -q "thinking_mode: ultrathink" /tmp/test-guild-validation/.claude/commands/guild/*.md && echo "✅ Intelligence embedded" || echo "❌ Missing intelligence"
+
+# Clean up test directory
+rm -rf /tmp/test-guild-validation
+```
+
+### Integration Testing
+**Test with actual Claude Code usage:**
+```bash
+# Install to test project
+mkdir -p /tmp/guild-integration-test
+cd /tmp/guild-integration-test
+node /path/to/claude-guild/install.js --no-interaction --path .
+
+# Verify commands are accessible
+ls -la .claude/commands/guild/
+cat .claude/commands/guild.md  # Should be symlink to workflow
+```
+
+## Publishing Workflow
+
+### Pre-Publishing Checklist
+1. **Validate all systems:** `npm run test`
+2. **Update version:** `npm version [patch|minor|major]`
+3. **Test installation:** Clean test in isolated environment
+4. **Review generated commands:** Ensure intelligence embedding works correctly
+
+### Publishing Process
+```bash
+# Automated publishing (recommended)
+npm run publish
+
+# Or non-interactive publishing
+npm run publish-non-interactive
+
+# Or direct npm publish (bypasses validation - use with caution)
+npm run publish-direct
+```
+
+### Post-Publishing Verification
+```bash
+# Test installation from npm
+npx claude-guild@latest --version
+
+# Test in clean environment
+mkdir -p /tmp/npm-test
+cd /tmp/npm-test
+npx claude-guild@latest
+# Should successfully install Guild commands
+```
 
 ## Summary
 
@@ -97,3 +461,23 @@ install.js (generates final commands)
 - ❌ Agent modification
 
 The Guild system generates agents from templates. Your role is to enhance the intelligence that drives that generation, not to create agents directly.
+
+## Development Commands
+
+### Core Commands
+- `npm run validate` - Validate guidelines and project structure
+- `npm run test` - Run all validation and test installation
+- `npm run test-install` - Quick validation without full installation
+- `node install.js` - Install Guild commands to home directory (interactive)
+- `node install.js --no-interaction --path <dir>` - Install to specific directory
+- `node install.js --test-mode` - Quick validation without installation
+
+### Publishing Commands
+- `npm run publish` - Interactive publish to npm registry with validation
+- `npm run publish-non-interactive` - Automated publish without prompts
+- `npm run publish-direct` - Direct npm publish (bypass validation)
+- `npm version [patch|minor|major]` - Update package version
+
+### Validation Commands
+- `npm run validate-guidelines` - Check guideline structure
+- `npm run validate-structure` - Verify required project files

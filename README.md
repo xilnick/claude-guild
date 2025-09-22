@@ -30,10 +30,11 @@ npx claude-guild@latest
 
 ### ✅ Guild System Solution
 - **🧠 Project-aware specialists** that learn your patterns
-- **⚡ 5-10x faster** through parallel execution  
+- **⚡ 5-10x faster** through mandatory parallel execution with ultrathink reasoning
 - **👤 Human-in-the-middle control** - your approval required
 - **📚 Persistent knowledge** across sessions
 - **✅ Built-in verification** ensures complete, quality results
+- **🔄 Intelligent coordination** - all subagents use deep reasoning and parallel tool execution
 
 ---
 
@@ -96,9 +97,9 @@ Guild: → Frontend Specialist (chat UI components)
 
 ### 2. **Smart Task Coordination**  
 - Breaks complex tasks into parallel components
-- Assigns appropriate specialists
-- Coordinates simultaneous execution
-- Integrates results seamlessly
+- Assigns appropriate specialists with ultrathink reasoning
+- Coordinates simultaneous execution with mandatory parallel tool usage
+- Integrates results seamlessly with intelligent verification
 
 ### 3. **Built-in Quality Assurance**
 - Comprehensive verification at every step
@@ -124,8 +125,9 @@ Guild: → Frontend Specialist (chat UI components)
 ## 🎯 Key Benefits
 
 ### **Speed Through Intelligence**
-- **5-10x faster** for complex tasks
-- **Parallel execution** of independent components
+- **5-10x faster** for complex tasks through mandatory parallel execution
+- **Ultrathink reasoning** - all subagents use deep thinking for optimal decisions
+- **Parallel execution** of independent components with intelligent coordination
 - **Instant context** from persistent project knowledge
 
 ### **Quality Through Structure**  

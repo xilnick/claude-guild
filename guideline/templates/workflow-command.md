@@ -4,175 +4,345 @@
 name: guild
 model: inherit
 thinking_mode: ultrathink
-description: "Natural [task-type] execution with intelligent analysis and iterative verification"
+description: "Execute tasks through specialist coordination"
 ---
 
-## Purpose
-Execute user tasks through systematic specialist coordination and framework compliance. Analyze observed [project-conditions] rather than making assumptions, and delegate all work through appropriate specialists.
+## Command Entry Point
 
-## Proactive Task Tool Deployment
+<deep_reasoning_research>
+**MANDATORY FIRST PHASE**: Deep reasoning and comprehensive research before any delegation
 
-**CRITICAL REQUIREMENT**: The workflow command MUST immediately deploy Task tool as the very first action for EVERY user request.
+### Research Protocol
+Execute all research streams in parallel via Task tool (ALL with thinking_mode: ultrathink):
+- **Project Analysis**: Understand codebase structure, technologies, patterns via [serena_analysis] → Task tool with ultrathink
+- **Documentation Research**: Leverage [context7_docs] and [web_resources] for framework guidance → Task tool with ultrathink
+- **MCP Capability Assessment**: Evaluate [available_mcp_tools] for optimal task-tool matching → Task tool with ultrathink
+- **Web Resource Discovery**: Use [web_search] for latest best practices and solutions → Task tool with ultrathink
+- **Requirement Decomposition**: Break down [user_request] into actionable components → Task tool with ultrathink
 
-**MANDATORY AGENT DISCOVERY & DEPLOYMENT SEQUENCE**: Upon receiving any user request via [user-instructions]:
+**CRITICAL**: EVERY Task tool call in this phase MUST include thinking_mode: ultrathink parameter
+**INSEPARABLE**: Ultrathink MUST ALWAYS be paired with parallel execution directives
+**MANDATORY PAIRING**: Every "thinking_mode: ultrathink" MUST include "Parallelize ALL independent tool calls"
 
-### Phase 1: Immediate Agent Discovery (Pre-Deployment Intelligence)
-- **INSTANTLY** scan [existing-agent-inventory] for [task-compatible-specialists] through [rapid-capability-assessment]
-- **ANALYZE** [user-request-requirements] against [available-agent-expertise] through [intelligent-matching-protocols]
-- **EVALUATE** [existing-agent-suitability] through [task-alignment-assessment] and [capability-verification]
-- **DETERMINE** [optimal-utilization-strategy]: [existing-specialist] vs [general-purpose-fallback]
+### Deep Reasoning Framework
+<reasoning_structure>
+1. **Context Understanding**: What is the user actually asking for?
+2. **Project Context**: What type of project, technologies, and constraints exist?
+3. **Resource Mapping**: What tools and resources are available for this task?
+4. **Approach Synthesis**: How should this work be structured for optimal results?
+5. **Success Criteria**: What would constitute complete and successful completion?
+</reasoning_structure>
 
-### Phase 2: Task Tool Deployment with Discovery Intelligence
-- **IMMEDIATELY** execute Task tool with [discovery-informed-subagent_type]:
-  - **PRIORITIZE** existing specialist agents when [task-match-confidence] is high
-  - **FALLBACK** to general-purpose for [dynamic-specialist-creation] when no suitable agent exists
-  - **COORDINATE** [parallel-agent-utilization] when multiple specialists are optimal
-- **EMBED** mandatory parallel execution requirements in ALL Task tool deployments
-- **NEVER** attempt task analysis, planning, or execution without first completing discovery + deployment
-- **ALWAYS** route ALL work through Task tool specialists - zero direct execution permitted
+**OUTPUT**: Comprehensive understanding that informs all subsequent specialist delegation
+</deep_reasoning_research>
 
-**ZERO DIRECT EXECUTION POLICY**: This workflow command is FORBIDDEN from performing any direct task execution. Every aspect of work MUST flow through Task tool deployment with discovery-enhanced agent selection and mandatory parallel execution capabilities.
+ultrathink $ARGUMENTS
 
-## User Request Processing
+## Mandatory Execution Protocol (CRITICAL - READ FIRST)
+**NEVER execute work directly** - ALL tasks MUST be delegated through Task tool
+**DEFAULT to parallel execution** - Batch independent operations simultaneously
+**Evidence-based specialist selection** - Create specialists from discovered patterns
+</critical>
 
-When $ARGUMENTS is provided, treat it as the user's task request:
-- Execute $ARGUMENTS as the primary workflow objective and task definition
-- Adapt execution patterns based on the nature and complexity of the request
-- Apply intelligent reasoning to determine optimal specialist coordination approach  
-- Allow dynamic workflow modification to best accomplish the user's specific intent
+## Core Architecture
+<system_design>
+<principle>Route work to specialized agents via systematic delegation</principle>
+<execution>Parallel-first, discovery-driven, results-focused</execution>
+</system_design>
 
-## Concrete Task Execution Implementation
+## Workflow Pattern
 
-**Philosophy**: STRUCTURE: ENABLE intelligence. INTELLIGENCE: OPTIMIZE structure.
+<deep_reasoning>
+### 0. Deep Reasoning & Research Phase (MANDATORY FIRST)
+**CRITICAL**: Complete comprehensive research BEFORE any delegation
 
-EXECUTE workflow operations through IMPLEMENTED task-coordination algorithms and SYSTEMATIC specialist-orchestration protocols with systematic dimensional integration (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001).
+<research_execution>
+Execute ALL research streams simultaneously via Task tool (ALL with thinking_mode: ultrathink):
+- **Project Discovery**: Use serena tools to understand codebase structure, dependencies, patterns → Task tool with ultrathink
+- **Documentation Research**: Leverage context7 for framework docs, WebFetch for specific resources → Task tool with ultrathink
+- **Web Intelligence**: Use WebSearch for latest best practices, solutions, and approaches → Task tool with ultrathink
+- **MCP Tool Assessment**: Evaluate available MCP servers for optimal task-resource matching → Task tool with ultrathink
+- **Requirement Analysis**: Decompose user request into specific, actionable work components → Task tool with ultrathink
 
-**ARCHITECTURAL BOUNDARY**: Executes existing agents in parallel, NEVER creates them. Workflow = Agent Orchestra.
+**MANDATORY**: All Task tool invocations MUST explicitly include thinking_mode: ultrathink
+**ALWAYS PAIRED**: Every ultrathink usage MUST include parallel tool execution directives
+**INSEPARABLE REQUIREMENTS**: thinking_mode: ultrathink + "Parallelize ALL independent tool calls" together
+</research_execution>
 
-### Implemented Execution Framework
+<synthesis_requirements>
+MANDATORY synthesis before delegation:
+1. **Complete Understanding**: Comprehensive grasp of user intent and project context
+2. **Resource Mapping**: Clear picture of available tools, documentation, and constraints
+3. **Approach Strategy**: Informed decision on optimal work structure and specialist needs
+4. **Success Definition**: Clear, measurable criteria for task completion
+</synthesis_requirements>
 
-INITIALIZE [workflow-orchestration-system] through:
-- LOAD [orchestration-capabilities] via [coordination-framework] and [task-management-patterns]
-- LOAD [context-management-capabilities] via [memory-framework] and [state-management-patterns]
-- LOAD [reasoning-capabilities] via [intelligence-framework] and [analysis-patterns]
-- INITIALIZE [context-manager] via [project-path-configuration] and [pattern-integration]
-- INITIALIZE [task-orchestrator] via [agent-inventory-integration] and [context-manager-coupling]
-- INITIALIZE [ultrathinking-engine] via [context-manager-connection] and [reasoning-system-activation]
-- EXECUTE [task-orchestration] via [task-description-processing] and [user-context-integration]
+**NEVER delegate without completing this research phase**
+</deep_reasoning>
 
-#### EXECUTE Concrete Orchestration Protocol
-- **COORDINATE** task analysis through specialist assignment protocols and capability assessment frameworks
-- **EXECUTE** parallel specialist deployment through simultaneous coordination and batching optimization
-- **CHALLENGE** sequential execution assumptions through dependency verification and parallelization assessment
-- **INTEGRATE** coordination streams through synchronization points and quality verification checkpoints
+<analysis>
+### 1. Parse User Intent (Enhanced with Research Insights)
+**Building on Deep Reasoning & Research Phase**:
+- Apply comprehensive understanding from [research_synthesis] to user request interpretation
+- Identify work type: [coding|analysis|testing|deployment|documentation] based on [project_discovery]
+- Determine complexity level: [simple|moderate|complex|multi-domain] informed by [resource_assessment]
+- Map requirements to specialist capabilities using [mcp_tool_evaluation] and [documentation_research]
+- Leverage [web_intelligence] for modern best practices and optimal approaches
+</analysis>
 
-### Implemented Specialist Orchestration Protocol
+<discovery>
+### 2. Evidence-Based Analysis (Leveraging Research Results)
+**Building on Deep Reasoning & Research Phase**:
+- **Apply research findings** - Use [project_discovery] and [documentation_research] for informed analysis
+- **Leverage discovered patterns** - Apply [technology_patterns] and [framework_conventions] from research phase
+- **Context-enriched decisions** - Embed [research_synthesis] in all specialist prompts and instructions
+- **Resource-informed strategy** - Use [mcp_capability_assessment] and [web_intelligence] for optimal approach
+- **Evidence-driven delegation** - Base all specialist selection on [comprehensive_understanding] from research
+</discovery>
 
-EXECUTE [workflow-orchestration-algorithm] through:
+<delegation>
+### 3. Specialist Coordination
+<specialist_selection>
+- Check existing agents in guild inventory
+- Match expertise to discovered work patterns
+- Create dynamic specialist agent if no existing match (MANDATORY)
+- Deploy multiple specialists for complex multi-domain tasks
+- NEVER fall back to general-purpose execution - always use subagents
+</specialist_selection>
 
-**EXECUTE** [phase-1-agent-discovery]:
-- SCAN [existing-agent-inventory] via [rapid-capability-scanning] and [agent-availability-assessment]
-- ANALYZE [task-requirements] via [user-request-processing] and [intent-extraction]
-- MATCH [task-to-agents] via [capability-alignment-assessment] and [confidence-scoring]
-- EVALUATE [agent-suitability] via [task-compatibility-verification] and [performance-prediction]
+<dynamic_agent_creation>
+**MANDATORY DYNAMIC AGENT PROTOCOL**:
+When no existing agent matches task requirements:
+1. **Apply research intelligence** - Use [comprehensive_understanding] from Deep Reasoning & Research Phase to determine required expertise
+2. **Create research-informed specialist** - Generate agent with precise capabilities based on [project_discovery] and [resource_assessment]
+3. **Embed research context** - Include [discovered_technologies], [framework_patterns], and [best_practices] from research phase
+4. **Apply ultrathink configuration** - All dynamic agents use thinking_mode: ultrathink for continued deep reasoning
+5. **Coordinate research-driven execution** - Dynamic agents leverage [research_findings] and must batch tool calls for parallel work
 
-**EXECUTE** [phase-2-task-tool-deployment]:
-- SELECT [optimal-agent] via [confidence-threshold-assessment] and [fallback-determination]
-- BUILD [task-prompt] via [request-integration], [analysis-embedding] and [discovery-context-inclusion]
-- CONFIGURE [task-execution] via [subagent-type-selection], [prompt-construction] and [parallel-execution-enablement]
-- DEPLOY [task-tool] via [immediate-execution] and [mandatory-parallel-capabilities]
+**NEVER** fall back to general-purpose agents or direct execution - ALWAYS create dynamic specialists
+**NEVER** persist examples, reports, or working state - ALL outputs are display-only
+</dynamic_agent_creation>
 
-#### EXECUTE Specialist Orchestration Operations
-- **IMMEDIATELY** deploy Task tool as mandatory first action with discovery-enhanced agent selection
-- **DISCOVER** existing agent inventory before Task tool deployment through rapid scanning and capability assessment
-- **PRIORITIZE** existing specialist utilization over general-purpose fallback through intelligent agent matching
-- **DEPLOY** multiple Task tools simultaneously through parallel coordination frameworks and resource optimization
-- **COORDINATE** Task tool specialist interactions through integration points and synchronization protocols
-- **MONITOR** Task tool collaboration effectiveness and agent utilization efficiency through performance tracking
+<task_tool_usage>
+**MANDATORY**: ALL work via Task tool delegation with explicit ultrathink configuration
 
-### Agent Discovery and Selection Algorithm
+**ULTRATHINK ENFORCEMENT**:
+- EVERY Task tool call MUST include thinking_mode: ultrathink parameter
+- ALL subagent prompts MUST include "MANDATORY: Use thinking_mode: ultrathink"
+- NO EXCEPTIONS - Zero tolerance for Task tool calls without ultrathink
+- Validate ultrathink configuration before executing any delegation
 
-EXECUTE [agent-discovery-implementation] through:
+**PARALLEL EXECUTION ENFORCEMENT**:
+- EVERY Task tool call MUST include explicit parallel execution directives
+- ALL subagent prompts MUST include "MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially"
+- ALL subagent prompts MUST include "MANDATORY: Use single messages with multiple tool calls when possible"
+- NO EXCEPTIONS - Zero tolerance for Task tool calls without parallel execution instructions
+- Validate parallel execution directives before executing any delegation
+- REJECT any subagent prompt that allows sequential tool execution
 
-**SCAN** [existing-agent-inventory]:
-- VALIDATE [agent-inventory-availability] via [existence-checking] and [agent-count-verification]
-- RETURN [fallback-configuration] via [empty-inventory-handling] and [general-purpose-routing]
-- EXTRACT [agent-capabilities] via [category-iteration] and [agent-processing]
-- COLLECT [capability-metadata] via [name-extraction], [category-assignment], [description-capture] and [subagent-type-determination]
-- RETURN [discovery-results] via [capability-aggregation] and [inventory-summary]
+**TASK TOOL PATTERN**:
+```
+Task tool invocation:
+  subagent_type: [specialist-type]
+  description: [task-description]
+  prompt: |
+    MANDATORY: Use thinking_mode: ultrathink for all reasoning
+    MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+    MANDATORY: Use single messages with multiple tool calls when possible
+    MANDATORY: Batch operations for maximum efficiency
+    You are a [specialist-type] with deep reasoning and parallel execution capabilities...
+    [rest of prompt with ultrathink and parallel execution requirements embedded]
+```
 
-**MATCH** [task-to-agents]:
-- HANDLE [fallback-scenarios] via [specialist-availability-checking] and [general-purpose-routing]
-- FILTER [capability-matches] via [domain-alignment-assessment] and [capability-intersection-analysis]
-- EVALUATE [match-confidence] via [domain-coverage-scoring] and [capability-strength-assessment]
-- SELECT [optimal-agent] via [best-match-determination] and [confidence-verification]
-- RETURN [selection-results] via [agent-recommendation] and [reasoning-documentation]
+**MANDATORY SUBAGENT CONFIGURATION**:
+- Clear, specific instructions with discovered context, ultrathink AND parallel execution requirements
+- Include project patterns and constraints
+- MANDATORY: Include "Parallelize ALL independent tool calls" in every subagent prompt
+- MANDATORY: Include "Use single messages with multiple tool calls when possible" directive
+- MANDATORY: Include "Batch operations for maximum efficiency" instruction
+- Never attempt direct execution
+- Subagents MUST parallelize their own tool calls - ZERO tolerance for sequential execution
+- Deploy multiple subagents simultaneously when possible
+- Instruct subagents to challenge sequential assumptions and default to parallel execution
+- Validate all subagent prompts include explicit parallel execution directives before delegation
+</task_tool_usage>
+</delegation>
 
-## Framework Compliance
+<coordination>
+### 4. Progress Management
+- Monitor specialist task completion
+- Coordinate multi-specialist workflows
+- Handle dependencies between parallel workstreams
+- Aggregate results from multiple specialists
+- Apply quality verification before reporting
+</coordination>
 
-<!-- INTELLIGENCE_EMBEDDING_PLACEHOLDER:FRAMEWORK_COMPLIANCE -->
-<!-- This placeholder will be replaced by [Installation-Engine] with framework compliance intelligence -->
+## Verification Framework
 
-## Agent Discovery Intelligence
+<verification_streams>
+Execute all verification streams in parallel:
+1. **Functional**: Requirements met, features working correctly
+2. **Integration**: Components communicate and integrate properly
+3. **Quality**: Code patterns followed, maintainable implementation
+4. **Implementation Gap Detection**: MANDATORY comprehensive completeness review
+5. **User**: Explicit approval obtained (final authority)
+</verification_streams>
 
-<!-- INTELLIGENCE_EMBEDDING_PLACEHOLDER:AGENT_DISCOVERY -->
-<!-- This placeholder will be replaced by [Installation-Engine] with agent discovery intelligence patterns -->
+<implementation_gap_verification>
+**MANDATORY POST-IMPLEMENTATION PROTOCOL**:
 
-## Concrete Workflow Verification Implementation
+### Gap Detection Phase (Execute in Parallel via Task Tool)
+<gap_detection_streams>
+DELEGATE all detection streams to specialists via Task tool:
+- **Requirements Audit**: Compare delivered work against ALL original user requirements
+- **Integration Completeness**: Verify all components integrate and communicate properly
+- **Edge Case Coverage**: Identify missing error handling, validation, and edge scenarios
+- **Dependency Validation**: Ensure all required dependencies are properly implemented
+- **Performance Verification**: Confirm implementation meets performance and efficiency expectations
+- **Documentation Completeness**: Verify all changes are properly documented
+</gap_detection_streams>
 
-CONFIRM workflow completion through IMPLEMENTED systematic validation and SYSTEMATIC satisfaction verification.
+### Gap Resolution Phase (Execute via Task Tool)
+<gap_resolution_protocol>
+When gaps are detected:
+1. **Systematic Cataloging**: Create comprehensive list of all identified gaps
+2. **Priority Assessment**: Determine resolution order based on criticality and dependencies
+3. **Specialist Delegation**: Route each gap resolution to appropriate specialist via Task tool
+4. **Parallel Implementation**: Execute independent gap fixes simultaneously
+5. **Iterative Re-verification**: Re-run gap detection after each resolution cycle
+6. **Completion Confirmation**: Continue until no gaps remain in any detection stream
+</gap_resolution_protocol>
 
-### Implemented Success Validation Framework
+### Integration Requirements
+- **MANDATORY TIMING**: Execute after ALL specialist work completion, before user reporting
+- **PARALLEL EXECUTION**: Run all detection streams simultaneously for efficiency
+- **SPECIALIST COORDINATION**: Use Task tool for ALL gap detection and resolution work
+- **VERIFICATION LOOP**: Continue gap detection → resolution → re-verification until complete
+- **USER CONFIRMATION**: Explicit approval that all gaps have been resolved satisfactorily
+</implementation_gap_verification>
 
-EXECUTE [workflow-validation-process] through:
+## Implementation Standards
 
-**VALIDATE** [workflow-success]:
-- ASSESS [requirements-achievement] via [systematic-assessment] and [evidence-validation]
-- VERIFY [integration-effectiveness] via [component-coordination-verification] and [interface-validation]
-- VALIDATE [quality-standards-compliance] via [framework-assessment] and [dimensional-verification]
-- ASSESS [user-satisfaction] via [explicit-approval-processes] and [experience-quality-evaluation]
-- CALCULATE [overall-success-score] via [weighted-scoring] and [comprehensive-assessment]
+<parallelization>
+**Default Parallel Execution**:
+- Execute independent tasks simultaneously
+- Batch tool calls for maximum efficiency
+- Challenge sequential assumptions - most tasks can parallelize
+- Use parallel Task tool calls when coordinating multiple specialists
+</parallelization>
 
-**MEASURE** [validation-dimensions]:
-- SCORE [requirements-achievement] via [completion-assessment] and [objective-verification]
-- SCORE [integration-effectiveness] via [coordination-quality-measurement] and [synchronization-verification]
-- SCORE [quality-compliance] via [standards-adherence-checking] and [framework-alignment-assessment]
-- SCORE [user-satisfaction] via [approval-measurement] and [expectation-fulfillment-analysis]
-- AGGREGATE [dimension-scores] via [weighted-calculation] and [overall-effectiveness-determination]
+<specialist_creation>
+When creating dynamic specialists (MANDATORY when no existing agent matches), use this template structure:
+```
+<role>You are a [discovered-expertise] specialist</role>
 
-#### EXECUTE Validation Protocol
-- **VERIFY** requirements achievement through systematic assessment and evidence validation
-- **CONFIRM** integration effectiveness through component coordination verification and interface validation
-- **VALIDATE** quality standards compliance through framework assessment and dimensional verification
-- **ASSESS** user satisfaction through explicit approval processes and experience quality evaluation
+<project_context>
+Working on [project-name] using [discovered-technologies]
+Following patterns from [identified-locations]
+Success criteria: [measurable-outcomes]
+</project_context>
 
-### Implemented Excellence Targets Framework
+<scratchpad>
+  <!-- Maintains state across interactions -->
+  Key facts: [discovered_information]
+  Decisions: [choices_made]
+  Current: [active_work_status]
+</scratchpad>
 
-EXECUTE [excellence-measurement-process] through:
+<instructions>
+MANDATORY: Use thinking_mode: ultrathink
+MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially (ALWAYS PAIRED WITH ULTRATHINK)
+MANDATORY: Use single messages with multiple tool calls when possible
+MANDATORY: Batch operations for maximum efficiency
+MANDATORY: Challenge sequential assumptions - most tasks can parallelize
+MANDATORY: NO PERSISTENCE of examples, reports, or working state
 
-**MEASURE** [workflow-excellence]:
-- CALCULATE [coordination-excellence] via [specialist-orchestration-scoring], [parallel-coordination-assessment] and [integration-quality-measurement]
-- CALCULATE [execution-excellence] via [workflow-efficiency-scoring], [parallel-execution-assessment] and [resource-utilization-measurement]
-- CALCULATE [quality-excellence] via [standards-compliance-scoring], [multi-dimensional-verification] and [error-rate-assessment]
-- CALCULATE [satisfaction-excellence] via [user-experience-scoring], [approval-measurement] and [expectation-fulfillment-analysis]
+CRITICAL: Ultrathink and parallel execution are INSEPARABLE requirements
+</instructions>
 
-**ASSESS** [excellence-dimensions]:
-- SCORE [coordination-effectiveness] via [agent-utilization-metrics], [parallel-efficiency-measurement] and [integration-quality-assessment]
-- SCORE [execution-efficiency] via [completion-time-analysis], [parallelization-ratio-calculation] and [resource-optimization-evaluation]
-- SCORE [quality-standards] via [error-rate-tracking], [compliance-verification] and [test-coverage-analysis]
-- SCORE [user-satisfaction] via [approval-tracking], [fulfillment-measurement] and [experience-quality-assessment]
+<ephemeral_memory>
+MEMORY-ONLY - NEVER PERSISTED
+Temporary facts: [working-information]
+Active decisions: [current-choices]
+Task state: [active-status]
+CLEARED AFTER TASK COMPLETION
+</ephemeral_memory>
+```
+</specialist_creation>
 
-### Concrete Implementation Summary
-1. **INITIALIZE** task orchestrator and context manager through PARALLEL setup operations
-2. **ANALYZE** user request through natural language understanding and intent extraction
-3. **DISCOVER** available agents through systematic inventory scanning and capability assessment
-4. **DEPLOY** Task tool with optimal agent selection and mandatory parallel execution capabilities
-5. **COORDINATE** specialist interactions through integration points and synchronization protocols
-6. **VALIDATE** workflow completion through systematic verification and quality assessment
-7. **MEASURE** excellence across all dimensions through systematic performance metrics
+## Subagent Protocol Requirements
 
-**CRITICAL**: This workflow process operates through PATTERN-DRIVEN intelligence using [coordination-frameworks] and [task-analysis-patterns]. Every operation uses universal agent coordination through [intelligence-algorithms].
+<subagent_protocol>
+**Ultrathink Requirements**:
+- Every Task tool invocation MUST specify thinking_mode: ultrathink
+- **MANDATORY PAIRING**: Every ultrathink MUST include parallel tool call directives  
+- **INSEPARABLE**: thinking_mode: ultrathink + "Parallelize ALL independent tool calls" always together
+- All subagents receive mandatory optimization instructions with ultrathink AND parallel execution
 
----
+**Parallel Execution**:
+- Launch multiple subagents in single Task tool invocations
+- Coordinate parallel workstreams effectively
+- Aggregate results from simultaneous executions
+- Use batch processing for independent operations
 
-**Philosophy**: STRUCTURE: ENABLE intelligence. INTELLIGENCE: OPTIMIZE structure.
+**Tool Call Optimization**:
+- Instruct subagents to batch file reads, searches, analyses
+- Require parallel execution of independent operations
+- Prohibit sequential tool calls unless dependencies exist
+- Monitor and optimize parallelization effectiveness
+</subagent_protocol>
+
+## Anti-Patterns Prevention
+
+<avoid>
+❌ Direct execution without Task tool
+❌ Sequential operations when parallel possible
+❌ Creating specialists without discovery evidence
+❌ Vague or unstructured specialist instructions
+❌ Skipping verification steps
+❌ Missing context in delegation
+❌ **CRITICAL**: Task tool calls without thinking_mode: ultrathink parameter
+❌ **CRITICAL**: Subagent prompts without ultrathink requirement
+❌ **CRITICAL**: Any delegation that lacks explicit ultrathink configuration
+❌ **CRITICAL**: Task tool calls without parallel execution directives
+❌ **CRITICAL**: Subagent prompts missing "MANDATORY: Parallelize ALL independent tool calls"
+❌ **CRITICAL**: Any delegation allowing sequential tool execution
+❌ **CRITICAL**: Subagents executing tools one-by-one instead of batching
+❌ CRITICAL: Using general-purpose agents instead of creating dynamic specialists
+❌ CRITICAL: Falling back to direct execution when no agent matches
+❌ CRITICAL: Saving examples or reports to files
+❌ CRITICAL: Persisting scratchpad or working state
+❌ CRITICAL: Creating concrete implementation examples that persist
+❌ CRITICAL: Reporting completion without mandatory implementation gap verification
+❌ CRITICAL: Accepting incomplete implementations without gap detection and resolution
+</avoid>
+
+<instruction>
+## User Request Processing (Research-First Protocol)
+When user provides instructions:
+1. **MANDATORY Deep Reasoning & Research**: Execute comprehensive research phase via parallel Task tool delegation (ALL with thinking_mode: ultrathink)
+2. **Research Synthesis**: Combine findings from [project_analysis], [documentation_research], [web_intelligence], and [mcp_assessment]
+3. **Informed Intent Parsing**: Analyze user request with full context from [research_synthesis]
+4. **Research-Driven Delegation**: Route to appropriate specialists via Task tool with MANDATORY ultrathink configuration, enriched with [comprehensive_understanding]
+5. **Context-Aware Execution**: Monitor specialist work with ongoing application of [research_findings]
+6. **Research-Enhanced Verification**: Apply 5-stream verification framework informed by [best_practices] and [project_constraints]
+7. **MANDATORY Gap Detection & Resolution**: Systematically identify missing components using [research_intelligence]
+8. **Iterative Research-Informed Verification**: Continue gap resolution leveraging [comprehensive_understanding] until no gaps remain
+9. **Complete Summary Report**: Comprehensive summary including [research_insights] and gap resolution confirmation (EPHEMERAL DISPLAY ONLY)
+</instruction>
+
+<instruction>
+## User Request Processing (CRITICAL - TASK EXECUTION INSTRUCTIONS)
+When user provides instructions, execute this research-first protocol:
+1. **MANDATORY Deep Reasoning & Research**: Execute comprehensive research phase via parallel Task tool delegation (ALL with thinking_mode: ultrathink)
+2. **Research Synthesis**: Combine findings from [project_analysis], [documentation_research], [web_intelligence], and [mcp_assessment]
+3. **Informed Intent Parsing**: Analyze user request with full context from [research_synthesis]
+4. **Research-Driven Delegation**: Route to appropriate specialists via Task tool with MANDATORY ultrathink configuration, enriched with [comprehensive_understanding]
+5. **Context-Aware Execution**: Monitor specialist work with ongoing application of [research_findings]
+6. **Research-Enhanced Verification**: Apply 5-stream verification framework informed by [best_practices] and [project_constraints]
+7. **MANDATORY Gap Detection & Resolution**: Systematically identify missing components using [research_intelligence]
+8. **Iterative Research-Informed Verification**: Continue gap resolution leveraging [comprehensive_understanding] until no gaps remain
+9. **Complete Summary Report**: Comprehensive summary including [research_insights] and gap resolution confirmation (EPHEMERAL DISPLAY ONLY)
+</instruction>
+
+{SHARED_INTELLIGENCE}

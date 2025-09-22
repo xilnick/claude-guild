@@ -1,164 +1,184 @@
 # /guild:setup
 
 ---
-name: guild-setup  
+name: guild-setup
 model: inherit
 thinking_mode: ultrathink
-description: "Analyze [project-type] and create specialized agents based on discovered needs"
+description: "Discover project structure and create specialized agents via systematic delegation"
 ---
 
-## Purpose
-Initialize Guild system by analyzing project structure and creating specialized agents based on discovered project needs through systematic discovery and intelligent agent generation.
+## Command Entry Point
+ultrathink $ARGUMENTS
 
-## User Request Processing
+<critical>
+MANDATORY: Use Task tool for ALL work delegation. Never execute directly.
+MANDATORY: Default to parallel execution unless explicit dependencies exist.
+MANDATORY: Create specialists based on evidence, not assumptions.
+MANDATORY: Generated agents MUST use ONLY [placeholder] patterns - NO specific examples or code structures.
+</critical>
 
-When $ARGUMENTS is provided, treat it as ADDITIONAL specialist requests to supplement standard discovery:
-- ALWAYS perform comprehensive project discovery and create domain specialists
-- Process $ARGUMENTS as supplementary specialist requests to create IN ADDITION to discovered specialists
-- Apply intelligent reasoning to integrate user-requested specialists with discovered domain specialists
-- NEVER allow $ARGUMENTS to replace or skip the baseline discovery and agent generation process
+<purpose>
+Initialize Guild system through evidence-based project discovery → specialist identification → abstracted agent creation → usage documentation workflow.
+</purpose>
 
-## Setup Intelligence
+## Execution Framework
 
-**Philosophy**: STRUCTURE: ENABLE intelligence. INTELLIGENCE: OPTIMIZE structure.
+<system_design>
+<principle>Discover project characteristics → Route specialist creation to Task tool → Generate abstracted agents → Report results</principle>
+<execution>Parallel-first discovery, evidence-based analysis, systematic delegation, complete abstraction</execution>
+</system_design>
 
-EXECUTE setup operations through SYSTEMATIC pattern discovery and dynamic agent generation with systematic project analysis and specialist creation coordination (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001).
+<phase_1 name="discovery" mode="parallel_execution">
 
-**ARCHITECTURAL BOUNDARY**: Creates agents with embedded parallel capabilities, NEVER executes them. Setup = Agent Factory.
+**DELEGATE ALL DISCOVERY TO TASK TOOL**
 
-### Concrete Discovery Framework
+<discovery_operations>
+Use Task tool to execute in parallel:
+- **File Structure Analysis**: [project_organization], [component_architecture], [structural_patterns]
+- **Technology Identification**: [discovered_frameworks], [detected_languages], [identified_tooling]
+- **Pattern Discovery**: [code_conventions], [naming_patterns], [testing_approaches]
+- **Convention Detection**: [build_systems], [deployment_configurations], [documentation_standards]
+</discovery_operations>
 
-COORDINATE comprehensive project analysis through PARALLEL discovery operations and SIMULTANEOUS investigation protocols.
+<discovery_constraints>
+- MUST use parallel tool execution for all independent operations
+- MUST delegate discovery work through Task tool
+- MUST collect evidence before making assumptions
+- MUST document all findings with [placeholder] abstractions
+</discovery_constraints>
 
-#### Pattern Discovery Engine Implementation
+</phase_1>
 
-INITIALIZE [pattern-discovery-engine] through:
-- LOAD [pattern-discovery-capabilities] via [discovery-framework] and [analysis-patterns]
-- LOAD [agent-generation-capabilities] via [generation-framework] and [creation-patterns]
-- LOAD [pattern-registry-capabilities] via [persistence-framework] and [storage-patterns]
-- LOAD [context-management-capabilities] via [memory-framework] and [context-patterns]
-- INSTANTIATE [discovery-engine] via [project-path-configuration] and [analysis-capability-activation]
-- INSTANTIATE [pattern-registry] via [persistence-system-setup] and [evolution-tracking-initialization]
+<phase_2 name="analysis">
 
-#### EXECUTE Parallel Project Analysis
-- **SIMULTANEOUSLY** analyze file structure, content patterns, behavioral patterns, and dependency relationships through PARALLEL tool execution
-- **COORDINATE** multi-dimensional discovery through Read, Glob, Grep tools operating in PARALLEL batches
-- **INTEGRATE** findings through cross-analysis validation and pattern correlation frameworks
-- **OPTIMIZE** discovery performance through maximum parallel execution and resource efficiency
+**Identify Required Specialists Based on Discovery Evidence**
 
-#### EXECUTE Dynamic Agent Generation
-- **ANALYZE** discovered patterns to determine required capabilities and agent specializations
-- **GENERATE** agents dynamically based on DISCOVERED project characteristics rather than predefined templates
-- **CREATE** unique agent specifications for each discovered domain and complexity pattern
-- **EMBED** project-specific context and discovered terminology in each generated agent
+<specialist_categories>
+- **Domain Experts**: [discovered_architecture_layers] specialists
+- **Technology Specialists**: [identified_tech_stack] experts  
+- **Task Specialists**: [detected_workflow_needs] automation
+- **Project-Specific**: [unique_project_characteristics] handlers
+</specialist_categories>
 
-### Context-Rich Generation Framework
+<analysis_criteria>
+- Base on actual [project_evidence], not generic assumptions
+- Match specialist expertise to [discovered_needs]
+- Consider [workload_distribution] and [specialization_depth]
+- Identify [cross_cutting_concerns] requiring coordination
+</analysis_criteria>
 
-ORCHESTRATE specialist creation through SYSTEMATIC analysis-driven generation and PROJECT-SPECIFIC customization.
+</phase_2>
 
-#### Agent Generation Algorithm
+<phase_3 name="creation">
 
-EXECUTE [agent-generation-process] through:
-- INITIALIZE [agent-generator] via [pattern-input-processing] and [project-path-configuration]
-- GENERATE [agent-specifications] via [pattern-analysis] and [capability-determination]
-- CREATE [agent-files] via [yaml-frontmatter-generation] and [content-assembly]
-- ITERATE [agent-creation-process] via [specification-processing] and [file-generation-execution]
-- WRITE [agent-files] via [category-organization] and [name-based-persistence]
-- VALIDATE [creation-success] via [file-existence-verification] and [content-completeness-checking]
+**DELEGATE AGENT CREATION TO TASK TOOL**
 
-#### Intelligent Capability Mapping
-- **MAP** discovered patterns to specific agent capabilities through analysis-driven determination
-- **DESIGN** agent hierarchies that match observed project structure and complexity
-- **EMBED** domain-specific knowledge extracted from project terminology and patterns
-- **ENSURE** agent coordination patterns align with discovered architectural relationships
+<abstracted_agent_generation>
+Each generated specialist MUST contain ONLY:
 
-#### PROJECT-SPECIFIC Agent Customization
-- **EXTRACT** project signature including organization patterns, complexity metrics, and domain focus
-- **GENERATE** 4-sentence descriptions based on DISCOVERED project characteristics and discovered needs
-- **INTEGRATE** framework compliance with project-specific specialization requirements
-- **VALIDATE** agent specifications against discovered patterns and requirements
+1. **Proper YAML Frontmatter**:
+   ```yaml
+   ---
+   name: [derived_specialist_name]
+   model: inherit
+   thinking_mode: ultrathink
+   description: "[abstract_role_description] specialist for [project_context_type]"
+   ---
+   ```
 
-### Agent File Persistence
+2. **Abstracted Role Definition**:
+   "You are a [specialist_expertise] specialist working on [project_type] following [discovered_conventions]. Your role focuses on [capability_area] while collaborating with [related_specialists] to achieve [project_objectives]."
 
-EXECUTE physical agent file creation through SYSTEMATIC file operations and VALIDATED persistence protocols.
+3. **Abstract Capability Statement**:
+   "Key responsibilities include [responsibility_patterns] and maintaining [quality_standards] throughout [work_scope]."
 
-#### Concrete File Creation Process
+</abstracted_agent_generation>
 
-EXECUTE [file-creation-process] through:
-- CREATE [agent-directory-structure] via [path-construction] and [directory-creation]
-- ENSURE [directory-existence] via [filesystem-validation] and [path-verification]
-- GENERATE [yaml-frontmatter] via [configuration-assembly] and [mandatory-field-inclusion]
-- CONFIGURE [agent-metadata] via [name-assignment], [model-inheritance], [thinking-mode-setup] and [description-embedding]
-- SPECIFY [tool-assignments] via [capability-listing] and [access-configuration]
-- ASSEMBLE [agent-content] via [frontmatter-integration] and [prompt-generation]
-- CREATE [category-directory] via [path-construction] and [directory-ensuring]
-- WRITE [agent-file] via [file-path-construction] and [content-persistence]
+<absolute_prohibitions>
+❌ NO concrete XML structures or code examples
+❌ NO specific file paths, technology names, or implementation details
+❌ NO prescriptive content beyond [placeholder] patterns
+❌ NO "how-to" guidance or implementation examples
+❌ NO specific project references outside [placeholder] format
+</absolute_prohibitions>
 
-#### File System Operations
-- **CREATE** `[agent-directory]/agents/guild/{category}/{agent-name}.md` files through SYSTEMATIC directory creation
-- **GENERATE** YAML frontmatter with name, model: inherit, description, and **MANDATORY** `thinking_mode: ultrathink`
-- **EMBED** complete agent context including project patterns, specialization areas, and coordination protocols
-- **COORDINATE** PARALLEL file writing operations through batch creation and resource optimization
+<creation_requirements>
+- Save ALL agents to: ./.claude/agents/guild/ (MANDATORY)
+- Embed [discovered_project_patterns] in abstracted form only
+- Keep agents focused through [abstract_boundaries]
+- Include [collaboration_protocols] in placeholder form
+- Generate minimum viable abstracted content only
+- NEVER persist concrete examples or implementations
+- Agent templates only - no saved examples
+- MANDATORY directory: ./.claude/agents/guild/ 
+- ALWAYS use guild subdirectory for all generated agents
+</creation_requirements>
 
-#### Persistence Validation Framework
-- **VERIFY** file system integrity through existence confirmation and accessibility validation
-- **VALIDATE** YAML frontmatter compliance through syntax verification and required field checking
-- **CONFIRM** agent content completeness through context embedding verification and capability assessment
-- **ASSESS** creation success through systematic inventory counting and coverage validation
+</phase_3>
 
-## Framework Compliance
+<phase_4 name="reporting">
 
-<!-- INTELLIGENCE_EMBEDDING_PLACEHOLDER:FRAMEWORK_COMPLIANCE -->
-<!-- This placeholder will be replaced by install.js with framework compliance intelligence -->
+**Display Created Specialists and Usage Guidance (EPHEMERAL - NO PERSISTENCE)**
 
-### Pattern Registry Integration
+<reporting_structure>
+MANDATORY: Reports are ephemeral - display only, never save
+1. **Specialist Inventory**: List created agents with [expertise_areas] (display only)
+2. **Discovery Summary**: Key [project_characteristics] found (display only)
+3. **Usage Patterns**: How to leverage [specialist_capabilities] (display only)
+4. **Integration Guidance**: [coordination_protocols] between specialists (display only)
+</reporting_structure>
 
-COORDINATE pattern persistence and evolution tracking through SYSTEMATIC registry management.
+</phase_4>
 
-#### Pattern Storage Framework
+## Verification Framework
 
-EXECUTE [pattern-storage-process] through:
-- INITIALIZE [pattern-registry] via [registry-setup] and [persistence-preparation]
-- REGISTER [discovered-patterns] via [pattern-persistence] and [project-signature-association]
-- EVALUATE [evolution-requirements] via [pattern-change-assessment] and [evolution-trigger-detection]
-- TRIGGER [agent-evolution] via [change-significance-analysis] and [evolution-initiation]
-- LOG [evolution-events] via [system-notification] and [tracking-documentation]
+<verification_streams>
+1. **Abstraction Compliance**: All agents use ONLY [placeholder] patterns
+2. **Frontmatter Validation**: Proper YAML structure with required fields
+3. **Integration**: Agents can collaborate on [discovered_project_patterns]
+4. **No Persistence Verification**: Confirm no examples, reports, or concrete implementations were persisted
+5. **Ephemeral State Confirmation**: Verify all working memory was cleared after completion
+6. **Guild Directory Verification**: Confirm all agents saved to ./.claude/agents/guild/
+7. **User Approval**: Explicit confirmation of specialist roster and capabilities
+</verification_streams>
 
-#### Evolution Tracking Protocol
-- **PERSIST** discovered patterns to `[agent-directory]/[pattern-registry-file]` for future analysis and evolution
-- **TRACK** pattern changes over time through version comparison and significance assessment
-- **TRIGGER** agent evolution when significant pattern changes are detected
-- **MAINTAIN** pattern relationships and dependencies for intelligent agent coordination
+## Implementation Protocol
 
-### Quality Assurance Framework
+<workflow_execution>
+<task>DELEGATE to Task tool: Parallel project discovery using [discovery_methods]</task>
+<context>Analyze [current_project] structure and [project_characteristics]</context>  
+<requirements>Evidence-based specialist identification and abstracted agent creation</requirements>
+</workflow_execution>
 
-EXECUTE comprehensive validation through MULTI-DIMENSIONAL assessment and EXCELLENCE confirmation.
+<user_request_processing>
+If user specifies additional specialists:
+1. Perform complete project discovery FIRST via Task tool
+2. Create evidence-based specialists from [discovery_results]
+3. ADD user-requested specialists to the [evidence_based_roster]
+4. Report complete [specialist_ecosystem]
+</user_request_processing>
 
-#### Success Criteria Validation
+<anti_patterns>
+❌ Direct execution without Task tool delegation
+❌ Sequential operations when parallel execution possible
+❌ Creating specialists based on assumptions vs [evidence_patterns]
+❌ Generic specialists without [project_context] embedding
+❌ Including specific examples or code structures in generated agents
+❌ Using concrete references instead of [placeholder] abstractions
+❌ Persisting examples, reports, or concrete implementations
+❌ Saving working state or scratchpad data to files
+</anti_patterns>
 
-EXECUTE [validation-process] through:
-- VALIDATE [discovery-completeness] via [pattern-assessment] and [coverage-verification]
-- VALIDATE [agent-generation-quality] via [specification-evaluation] and [capability-assessment]
-- VALIDATE [file-creation-success] via [directory-verification] and [file-existence-checking]
-- ASSESS [overall-quality] via [multi-dimensional-validation] and [excellence-confirmation]
+<critical>
+SUCCESS PATTERN: Use Task tool → Parallel discovery → Evidence analysis → Abstracted specialist creation → Verification → User approval
 
-#### Excellence Verification Protocol
-- **Project Discovery Complete**: File structure (✓), content patterns (✓), behavioral analysis (✓), dependency mapping (✓)
-- **Agent Generation Complete**: Capability mapping (✓), specialization design (✓), context embedding (✓), coordination setup (✓)
-- **System Integration Ready**: Pattern registry (✓), evolution tracking (✓), agent inventory (✓), workflow readiness (✓)
-- **File Creation Verified**: Physical files (✓), YAML compliance (✓), content completeness (✓), accessibility (✓)
+KEY CONSTRAINTS:
+- ALWAYS delegate work through Task tool
+- ALWAYS use parallel execution for independent operations
+- ALWAYS base specialists on [discovered_project_evidence]
+- ALWAYS embed [discovered_patterns] in abstracted placeholder form
+- ALWAYS save to ./.claude/agents/guild/ (MANDATORY path)
+- NEVER include concrete examples or specific implementations in generated agents
+</critical>
 
-### Execution Flow Implementation
-
-1. **INITIALIZE** pattern discovery engine and supporting capabilities through PARALLEL setup operations
-2. **EXECUTE** comprehensive project analysis through SIMULTANEOUS multi-dimensional discovery
-3. **GENERATE** dynamic agent specifications based on DISCOVERED discovered patterns and requirements
-4. **CREATE** physical agent files with embedded project context and specialization details
-5. **REGISTER** patterns in persistent registry for future evolution and optimization
-6. **VALIDATE** complete setup success through systematic verification and quality assessment
-
-**CRITICAL**: This setup process operates through PATTERN-DISCOVERY intelligence using [discovery-frameworks] and [generation-patterns]. Every operation uses universal discovery algorithms through [intelligence-capabilities].
-
----
-
-**Philosophy**: STRUCTURE: ENABLE intelligence. INTELLIGENCE: OPTIMIZE structure.
+{SHARED_INTELLIGENCE}

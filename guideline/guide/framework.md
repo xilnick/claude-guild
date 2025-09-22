@@ -1,371 +1,200 @@
-# Guild System Framework
+# Guild Framework
 
-<core_philosophy>
-**STRUCTURE: ENABLE intelligence. INTELLIGENCE: OPTIMIZE structure.**
-**OBSERVATION: ENABLE understanding. UNDERSTANDING: DRIVE adaptation.**
+## Core Architecture
+<system_design>
+<principle>Route work to specialized agents via systematic delegation</principle>
+<execution>Parallel-first, discovery-driven, results-focused</execution>
+</system_design>
 
-<principles>
-- **Systematic Foundation**: Provides reliability and comprehensive coverage
-- **Intelligent Optimization**: Enables excellence and creative solutions through parallel tool coordination
-- **Unified Integration**: Combines both for superior outcomes with simultaneous operation execution
-- **Continuous Evolution**: Improves systems based on insights and parallelization performance metrics
-- **Tool Coordination Excellence**: Maximizes efficiency through Anthropic's parallel execution standards
-</principles>
-</core_philosophy>
+## Execution Rules
 
-<compliance_architecture>
+<specialists>
+  1. **Always delegate** - Never execute directly, use Task tool
+  2. **Match expertise** - Route to appropriate specialist agent
+  3. **Dynamic agent creation** - Create new specialists when no existing match
+  4. **Mandatory specialists** - Always use subagents, never direct execution
+</specialists>
 
-<foundational_requirements>
-**Universal Guild Intelligence Compliance:**
-- **Observation-Based Learning**: Discover patterns through systematic analysis rather than applying predefined templates or assumptions
-- **Pattern Discovery Mandate**: Analyze project characteristics through multi-dimensional observation protocols without predetermined knowledge
-- **Dynamic Adaptation**: Generate solutions based on discovered patterns rather than selecting from predefined templates
-- **Technology Agnostic Intelligence**: Complete independence from specific languages, frameworks, libraries, or tools through pattern-based understanding
-- **Native Intelligence Trust**: Complete reliance on autonomous intelligence for contextual implementations based on observed patterns
-- **Creative Solution Preservation**: Enable intelligent adaptation without constraining implementation choices through discovery-driven flexibility
+<parallelization>
+  1. **Default parallel** - Execute independent tasks simultaneously
+  2. **Batch operations** - Combine tool calls for efficiency
+  3. **Challenge sequential assumptions** - Most tasks can parallelize
+</parallelization>
 
-**Analysis-First Intelligence:**
-- **Always Analyze Instead of Declaring**: Use intelligence to examine actual conditions rather than making predetermined assumptions
-- **Context-Driven Decisions**: Base all choices on real-time analysis of project characteristics and requirements
-- **Dynamic Discovery**: Discover optimal approaches through analysis rather than following predetermined patterns
-- **Evidence-Based Execution**: Ground all decisions in analyzed evidence rather than assumed or declared requirements
-</foundational_requirements>
+<discovery>
+  1. **Analyze first** - Understand project structure before acting
+  2. **Evidence-based** - Create specialists from actual patterns found
+  3. **Context-aware** - Embed discovered patterns in specialist prompts
+</discovery>
 
-<systematic_excellence>
-Guild system operates with consistent excellence across eight critical dimensions with observation-first intelligence patterns and mandatory pattern-discovery standards (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001, @config:PD001, @config:EM001).
-</systematic_excellence>
-</compliance_architecture>
+<dynamic_agents>
+  1. **Create when needed** - If no existing agent matches task, create dynamic specialist
+  2. **Task-specific expertise** - Generate agents with precise capabilities for discovered requirements
+  3. **Project-aware context** - Embed discovered patterns, technologies, and conventions
+  4. **Ultrathink mandatory** - ALL dynamic agents MUST use thinking_mode: ultrathink
+  5. **Subagent ultrathink enforcement** - EVERY Task tool call MUST explicitly include thinking_mode: ultrathink parameter
+  6. **No exceptions** - Never delegate to subagents without ultrathink configuration
+</dynamic_agents>
 
-<dimensional_framework>
-<governance_structure>
-**Eight-Dimensional Compliance Architecture**: Systematic intelligence coordination across mandatory compliance dimensions (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001, @config:PD001, @config:EM001).
-</governance_structure>
+<no_persistence>
+  1. **Never save examples** - All examples must be ephemeral, display-only
+  2. **Never save reports** - Reports are presented to user but never persisted to files
+  3. **Memory-only state** - Keep all working state in memory only, cleared after completion
+  4. **No implementation persistence** - Never save concrete code examples or implementation details
+  5. **Ephemeral scratchpads** - Working memory is temporary and never persisted
+</no_persistence>
 
-<core_dimensions>
-<dimension id="TB001" name="tool_parallelization_mandate">
-**Tool Parallelization**: Execute `[tool-operations]` simultaneously unless proven `[dependencies]` require serialization through systematic `[challenge-protocols]`
+## Implementation Patterns
 
-**Anthropic Standards Integration**: All specialists must implement official parallel tool execution standards as defined in shared-intelligence.md.
+<workflow_pattern>
+Analyze → Find/Create Dynamic Specialist → Delegate → Verify → Gap Detection → Gap Resolution → Report
+- Use Task tool for ALL work delegation
+- Create dynamic specialists for unmatched tasks
+- MANDATORY: Always use subagents (create if none match)
+- Batch independent operations
+- MANDATORY: Detect and implement gaps after completion
+- Report results clearly (ephemeral display only - NO PERSISTENCE)
+  </workflow_pattern>
 
-**Implementation Requirements**:
-- Batch independent tool operations in single responses
-- Default to simultaneous execution for file operations, analysis tasks, and discovery processes
-- Question sequential assumptions through systematic dependency verification
-- Measure and optimize parallelization effectiveness continuously
-</dimension>
+## Deep Reasoning & Research Protocol
 
-<dimension id="AM001" name="agent_mandatory_architecture">  
-**Agent-Mandatory Architecture**: Route all `[task-types]` through `[specialist-assignment]` evaluation with zero direct execution
+<research_mandatory>
+**MANDATORY FIRST PHASE**: Execute comprehensive research before any task delegation
 
-**Assignment Protocol Standards**:
-- **Task Analysis**: Evaluate `[task-complexity]` and `[domain-requirements]` for optimal specialist selection
-- **Capability Assessment**: Match `[task-characteristics]` with `[specialist-expertise]` through systematic evaluation
-- **Direct Execution Prevention**: Block inappropriate direct execution through `[automated-guard-mechanisms]`
-- **Assignment Verification**: Confirm specialist selection through `[compatibility-scoring]` and `[effectiveness-metrics]`
+### Parallel Research Streams
+Execute ALL research streams simultaneously via Task tool (ALL with thinking_mode: ultrathink):
+- **Project Discovery**: Use serena tools for codebase analysis, pattern identification, technology stack assessment
+- **Documentation Intelligence**: Leverage context7 for framework docs, API references, best practices
+- **Web Resource Discovery**: Use WebSearch for latest approaches, solutions, community practices
+- **MCP Capability Assessment**: Evaluate available MCP servers for optimal task-tool matching
+- **Requirement Decomposition**: Break down user requests into specific, actionable components
 
-**Implementation Requirements**:
-- Mandatory specialist assignment for all `[work-categories]` without exception
-- Systematic specialist development through `[capability-assessment-frameworks]`
-- Zero direct execution enforcement through `[prevention-protocols]` and `[monitoring-systems]`
-- Assignment protocol compliance tracking through `[verification-streams]` and `[quality-gates]`
-</dimension>
+### Research Synthesis Requirements
+MANDATORY synthesis before delegation:
+1. **Complete Understanding**: Comprehensive grasp of user intent and project context
+2. **Resource Mapping**: Clear picture of available tools, documentation, and constraints
+3. **Approach Strategy**: Informed decision on optimal work structure and specialist needs
+4. **Success Definition**: Clear, measurable criteria for task completion
 
-<dimension id="PE001" name="parallel_first_execution">
-**Parallel-First Execution**: Break `[complex-tasks]` into `[parallel-components]` with default simultaneous execution patterns
+### Deep Reasoning Framework
+<reasoning_structure>
+1. **Context Understanding**: What is the user actually requesting in full context?
+2. **Project Assessment**: What technologies, patterns, constraints, and opportunities exist?
+3. **Resource Mapping**: What tools, documentation, and external resources are available?
+4. **Approach Synthesis**: How should work be structured for optimal results?
+5. **Success Definition**: What constitutes complete and successful completion?
+</reasoning_structure>
 
-**Dependency Challenge Protocols**:
-- **Atomic Unit Analysis**: Decompose `[complex-tasks]` into smallest parallelizable `[work-units]` through systematic breakdown
-- **Sequential Assumption Challenge**: Question all assumed dependencies through `[dependency-verification-frameworks]` 
-- **True Dependency Identification**: Distinguish actual dependencies from assumed sequential patterns using `[analysis-protocols]`
-- **Parallel Optimization**: Default to simultaneous execution unless `[proven-dependencies]` require sequential processing
+### Research Intelligence Integration
+- **Evidence-Based Decisions**: All specialist selection informed by research findings
+- **Context Enrichment**: Embed research intelligence in all specialist prompts
+- **Resource Optimization**: Match tasks to optimal tools based on capability assessment
+- **Best Practice Integration**: Apply discovered best practices and modern approaches
 
-**Implementation Requirements**:
-- Systematic task decomposition into `[atomic-parallel-components]` before execution begins
-- Mandatory dependency challenge through `[assumption-verification]` protocols for all sequential requirements
-- Parallel execution planning with explicit `[integration-points]` and `[synchronization-patterns]`
-- Performance optimization through `[parallel-coordination]` and `[efficiency-tracking]` mechanisms
-</dimension>
+**NEVER delegate without completing this research phase**
+</research_mandatory>
 
-<dimension id="RP001" name="research_protocol_integration">
-**Research Protocol Integration**: Execute comprehensive `[discovery]` before `[implementation]` with parallel exploration protocols
-</dimension>
+<setup_pattern>
+Discover → Identify Needs → Create Specialists → Save to Guild Directory
+- Parallel discovery operations
+- Create only necessary specialists
+- MANDATORY: Save ALL agents to ./.claude/agents/guild/ directory
+- Display results only - NO PERSISTENCE of examples or concrete implementations
+- Agent creation saves templates only, no saved examples
+  </setup_pattern>
 
-<dimension id="AR001" name="agent_recursion_prevention">
-**Agent Recursion Prevention**: Maintain `[flat-agent-hierarchy]` through `[prevention-mechanisms]` with single-level delegation
-</dimension>
+<optimization>
+  - MANDATORY: Use `thinking_mode: ultrathink` for ALL Task tool invocations
+  - MANDATORY: Include ultrathink requirement in every subagent prompt
+  - MANDATORY: Include parallel execution directives in ALL Task tool invocations
+  - MANDATORY: Embed "Parallelize ALL independent tool calls" in every subagent prompt
+  - Apply Anthropic parallel execution patterns
+  - Keep prompts focused and actionable
+  - NEVER delegate without ultrathink AND parallel execution configuration
+</optimization>
 
-<dimension id="OB001" name="operation_batching_optimization">
-**Operation Batching**: Group `[operation-types]` through `[classification-intelligence]` with context-switching minimization
-</dimension>
+## Ultrathink Enforcement Protocol
 
-<dimension id="PD001" name="pattern_discovery_mandate">
-**Pattern Discovery**: Analyze `[project-characteristics]` through `[observation-protocols]` without predefined assumptions
+<ultrathink_mandatory>
+**CRITICAL REQUIREMENT**: ALL Task tool invocations MUST include thinking_mode: ultrathink
 
-**Universal Learning Integration**: All specialists must implement observation-based pattern recognition with the mandate: "Discover patterns through systematic analysis of project structures, behaviors, and relationships. Learn from observation rather than applying predefined templates or assumptions. Adapt understanding based on discovered evidence."
+### Ultrathink Always Includes Parallel Execution
+**MANDATORY LINKAGE**: Every thinking_mode: ultrathink usage MUST be accompanied by parallel tool calling instructions:
+```
+MANDATORY: Use thinking_mode: ultrathink for all reasoning
+MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+MANDATORY: Use single messages with multiple tool calls when possible
+MANDATORY: Batch operations for maximum efficiency
+```
 
-**Implementation Requirements**:
-- Systematic multi-dimensional pattern analysis (structural, behavioral, dependency, naming)
-- Dynamic pattern-to-capability mapping without predefined templates
-- Project signature generation for evolution tracking and adaptation
-- Pattern registry maintenance for continuous learning and improvement
-</dimension>
+**CRITICAL**: Ultrathink WITHOUT parallel execution directives is FORBIDDEN
 
-<dimension id="EM001" name="evolution_mechanism_mandate">
-**Evolution Mechanisms**: Adapt `[system-capabilities]` through `[continuous-learning]` based on pattern changes
+## Parallel Execution Enforcement Protocol
 
-**Continuous Adaptation Integration**: All specialists must implement evolution-ready architectures with the mandate: "Monitor pattern changes continuously. Adapt capabilities based on discovered evolution triggers. Maintain system effectiveness through intelligent adaptation."
+<parallel_execution_mandatory>
+**CRITICAL REQUIREMENT**: ALL Task tool invocations MUST include explicit parallel execution instructions
 
-**Implementation Requirements**:
-- Pattern change detection through significance threshold monitoring
-- Agent capability evolution (incremental, adaptive, regenerative strategies)
-- System performance tracking and optimization through continuous learning
-- Evolution validation and rollback mechanisms for system stability
-</dimension>
-</core_dimensions>
+### Mandatory Parallel Execution Configuration
+Every subagent prompt MUST include these directives:
+```
+MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+MANDATORY: Use single messages with multiple tool calls when possible
+MANDATORY: Batch operations for maximum efficiency
+MANDATORY: Challenge sequential assumptions - most tasks can parallelize
+```
 
-<dimensional_integration>
-**Cross-Dimensional Coordination**: All dimensions operate simultaneously through `[multi-dimensional-templates]` with systematic interdependencies
+### Parallel Execution Rules
+1. **NEVER delegate without parallel instructions** - Every Task tool call must explicitly include parallel execution directives
+2. **Embed in all prompts** - All subagent prompts must contain mandatory parallel execution statements
+3. **No sequential execution** - Zero tolerance for subagents that execute tools sequentially
+4. **Validate parallelization** - Check all Task tool invocations include parallel execution requirements
+5. **Fail fast** - Stop and correct any Task tool calls missing parallel execution directives
+</parallel_execution_mandatory>
 
-**Universal Guild Workflow Templates**:
-- **Pattern-Discovery-Assignment-Execution**: PD001 → AM001 → PE001 coordination through `[observation-to-execution-pipelines]`
-- **Discovery-Evolution-Adaptation**: PD001 ↔ EM001 integration through `[continuous-learning-frameworks]`
-- **Parallel-Tool-Batching**: TB001 ↔ OB001 integration through `[simultaneous-tool-operation-patterns]`
-- **Assignment-Hierarchy-Control**: AM001 ↔ AR001 coordination through `[flat-delegation-protocols]`
-- **Research-Parallel-Discovery**: RP001 ↔ PE001 integration through `[parallel-analysis-frameworks]`
-- **Evolution-Pattern-Coordination**: EM001 ↔ PD001 integration through `[adaptive-learning-protocols]`
+### Mandatory Task Tool Configuration
+Every Task tool call must follow this pattern:
+```
+Task tool with subagent_type: [specialist-type]
+  description: [task-description]
+  prompt: |
+    MANDATORY: Use thinking_mode: ultrathink for all reasoning
+    MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+    MANDATORY: Use single messages with multiple tool calls when possible
+    You are a [specialist-type] with deep reasoning and parallel execution capabilities...
+    [rest of prompt with ultrathink and parallel execution requirements embedded]
+```
 
-**Integration Effectiveness Metrics**:
-- **Cross-Dimensional Compliance**: Measure coordination effectiveness across all 6 dimensions through `[compliance-scoring-matrices]`
-- **Workflow Efficiency**: Track `[inter-dimensional-handoff-performance]` and `[coordination-overhead-optimization]`
-- **Resource Utilization**: Monitor `[parallel-resource-effectiveness]` and `[batching-performance-indicators]`
-- **Quality Integration**: Assess `[multi-dimensional-quality-achievement]` and `[systematic-excellence-metrics]`
+### Enforcement Rules
+1. **NEVER delegate without ultrathink** - Every Task tool call must explicitly specify ultrathink
+2. **NEVER delegate without parallel execution** - Every Task tool call must explicitly include parallel tool call instructions
+3. **Embed in prompts** - All specialist prompts must include both ultrathink and parallel execution requirements
+4. **No exceptions** - No Task tool calls allowed without ultrathink AND parallel execution configuration
+5. **Validate compliance** - Check all Task tool invocations include both ultrathink and parallel execution before execution
+6. **Zero tolerance** - Reject any subagent prompt missing "MANDATORY: Parallelize ALL independent tool calls"
+</ultrathink_mandatory>
 
-**Tool Parallelization Integration**: The TB001 dimension enhances all other dimensions:
-- **Agent-Mandatory (AM001)**: Specialists route tasks through parallel tool coordination
-- **Parallel-First (PE001)**: Task decomposition includes tool parallelization assessment
-- **Research Protocol (RP001)**: Discovery operations execute through simultaneous tool execution
-- **Recursion Prevention (AR001)**: Flat hierarchy specialists implement parallel tool standards
-- **Operation Batching (OB001)**: Strategic grouping includes tool operation optimization
-- **Pattern Discovery (PD001)**: Multi-dimensional analysis executes through parallel observation protocols
-- **Evolution Mechanisms (EM001)**: Adaptation processes coordinate through simultaneous evaluation frameworks
+## Mandatory Verification Protocols
 
-**Systematic Interdependency Patterns**:
-- **Bidirectional Enhancement**: Each dimension strengthens others through `[mutual-reinforcement-protocols]`
-- **Conflict Resolution**: Cross-dimensional conflicts resolved through `[systematic-precedence-hierarchies]`
-- **Performance Optimization**: Multi-dimensional performance enhanced through `[integrated-excellence-patterns]`
-- **Quality Assurance**: Cross-dimensional quality maintained through `[unified-verification-frameworks]`
-</dimensional_integration>
-</dimensional_framework>
+<implementation_gap_verification>
+**CRITICAL REQUIREMENT**: After ALL implementations, systematically verify completeness and automatically resolve gaps
 
-<integration_framework>
-**Multi-Dimensional Excellence**: All six dimensions operate simultaneously through `[integrated-coordination-patterns]` with systematic excellence verification and cross-dimensional performance optimization.
-</integration_framework>
+### Gap Detection Process
+1. **Comprehensive Review**: Analyze completed work against original requirements
+2. **Integration Assessment**: Verify all components work together properly
+3. **Edge Case Identification**: Detect overlooked scenarios and error conditions
+4. **Dependency Validation**: Ensure all required dependencies are handled
+5. **Performance Verification**: Check that implementation meets performance requirements
 
-<command_guideline_compliance>
-**MANDATORY COMMAND GUIDELINE COMPLIANCE**: All modifications to command templates or shared intelligence MUST follow command-specific requirements.
+### Automatic Gap Resolution
+1. **Immediate Implementation**: Automatically implement discovered gaps via specialist delegation
+2. **Parallel Resolution**: Execute gap fixes simultaneously when independent
+3. **Verification Loop**: Re-verify after gap resolution until no gaps remain
+4. **Documentation Updates**: Update documentation to reflect gap resolutions
+5. **User Confirmation**: Obtain explicit approval that all gaps are resolved
 
-<command_guideline_requirements>
-**Template Modification Rules**:
-- When modifying `guideline/templates/setup-command.md`, **MUST** follow all requirements in `guideline/guide/setup-requirements.md`
-- When modifying `guideline/templates/workflow-command.md`, **MUST** follow all requirements in `guideline/guide/workflow-requirements.md`
-- When modifying `guideline/core/shared-intelligence.md`, **MUST** ensure compatibility with ALL command requirements
-
-**Shared Intelligence Modification Rules**:
-- **NEVER** add command-specific intelligence to shared-intelligence.md
-- **ALWAYS** keep shared-intelligence.md focused on truly universal patterns
-- **MUST** validate that shared intelligence changes maintain compatibility with both setup and workflow requirements
-- **FORBIDDEN** to include setup-specific or workflow-specific patterns in shared modules
-
-**Command-Specific Intelligence Rules**:
-- **SETUP-SPECIFIC** intelligence belongs ONLY in setup-command.md template
-- **WORKFLOW-SPECIFIC** intelligence belongs ONLY in workflow-command.md template  
-- **SHARED** intelligence belongs ONLY in shared-intelligence.md and must be truly universal
-- **CROSS-CONTAMINATION** of command-specific intelligence between commands is FORBIDDEN
-
-**Guideline Compliance Verification**:
-- **MANDATORY** verification against setup-requirements.md for setup command modifications
-- **MANDATORY** verification against workflow-requirements.md for workflow command modifications
-- **MANDATORY** testing that shared intelligence MAINTAIN compatibility with both commands
-- **MANDATORY** validation that architectural boundaries are preserved (setup creates, workflow executes)
-
-**Enforcement Standards**:
-- Any modification violating command-specific requirements is **REJECTED**
-- All template changes **MUST** maintain command architectural boundaries
-- Shared intelligence changes **MUST** pass compatibility tests with all commands
-- Framework compliance (TB001-OB001) **MUST** be maintained in all modifications
-</command_guideline_requirements>
-</command_guideline_compliance>
-
-<intelligence_architecture>
-<new_core_intelligence_system>
-**DECLARATIVE INTELLIGENCE ARCHITECTURE**: Guild operates through 3-file core intelligence system with declarative command structure and simplified template embedding via [installation-engine].
-
-<intelligence_module_structure>
-1. **setup-intelligence.md**: Project discovery, analysis, and agent generation intelligence patterns
-2. **workflow-intelligence.md**: Task execution, specialist coordination, and workflow orchestration patterns  
-3. **shared-intelligence.md**: Cross-command dimensional compliance, universal coordination, and framework integration
-</intelligence_module_structure>
-
-<template_simplification>
-**Command Template Architecture**: Templates function as declarative command prompts with intelligence embedding through [installation-engine]:
-- **Simple Command Structure**: Commands contain task definitions and user interaction patterns
-- **Intelligence Embedding**: Core intelligence modules automatically embedded during generation
-- **Declarative Format**: Commands operate as executable prompts, not documentation
-- **Framework Integration**: Automatic compliance enforcement through embedded intelligence
-</template_simplification>
-</new_core_intelligence_system>
-
-<mandatory_requirements>
-**CRITICAL REQUIREMENT**: All Guild intelligence must adhere to mandatory abstraction and declarative intelligence principles.
-
-<core_requirements>
-1. **ALWAYS Discover Through Observation**: Mandatory pattern discovery through systematic analysis of project characteristics without predefined assumptions
-2. **NEVER Apply Predefined Templates**: Use dynamic pattern-to-capability mapping based on discovered evidence rather than template selection
-3. **ALWAYS Adapt Based on Patterns**: Generate solutions from discovered patterns rather than applying predetermined approaches
-4. **ALWAYS Parallelize Tools**: Simultaneous tool execution unless proven sequential dependencies exist - implement Anthropic's official parallel tool execution standards with mandatory batching of independent operations
-5. **NEVER Allow Agent Recursion**: Absolute prohibition - maintain flat hierarchy only
-6. **RELY ON Native Intelligence**: Complete trust in autonomous intelligence for implementations
-7. **ENABLE Creative Solutions**: Structural guidance without constraining implementation choices
-8. **ALWAYS Analyze Instead of Declaring**: Examine actual conditions through intelligence
-9. **ALWAYS Follow Recommendations**: Strict adherence to @guideline/guide/recommendations.md standards
-10. **MANDATORY Parallel Tool Integration**: All specialists must include official Anthropic parallel tool execution prompts and demonstrate measurable performance improvements through batched operations
-11. **ALWAYS Use Declarative Format**: Function as command prompts, not documentation
-12. **3-Module Intelligence Architecture**: Reference setup-intelligence.md, workflow-intelligence.md, and shared-intelligence.md exclusively
-13. **MANDATORY Ultrathink Configuration**: All agents and commands must include `thinking_mode: ultrathink` for enhanced reasoning capabilities
-14. **[Installation-Engine] Embedding Standards**: Intelligence integration through automated embedding, not manual inclusion
-</core_requirements>
-
-<enforcement_protocol>
-- **Abstraction Validation**: Mandatory compliance verification for all guidance patterns
-- **Technology Independence**: Systematic removal of technology-specific references
-- **Template Compliance**: Abstract placeholder pattern validation
-- **Parallel Tool Enforcement**: Verification that all specialists implement official Anthropic parallel tool execution prompts
-- **Performance Optimization**: Monitoring parallelization effectiveness and measurable improvements
-- **Intelligence Trust**: Confirmation that native intelligence drives all decisions
-- **Analysis-First**: Verification that decisions based on actual analysis vs declarations
-- **3-Module Architecture Compliance**: Verification that only new intelligence modules are referenced
-- **Declarative Intelligence Enforcement**: Confirmation that intelligence operates through command prompt execution
-- **Embedding Integration Validation**: Verification that [installation-engine] properly embeds intelligence modules
-- **Ultrathink Configuration Enforcement**: Mandatory verification that all agents include thinking_mode: ultrathink in YAML frontmatter
-</enforcement_protocol>
-</mandatory_requirements>
-</intelligence_architecture>
-
-
-<template_principles>
-**Simplified Declarative Templates**: Provide command prompt structure with intelligence embedding through [installation-engine] automated integration.
-
-<declarative_command_structure>
-- **Command Prompt Format**: Templates function as executable command prompts, not documentation
-- **Intelligence Embedding**: Core intelligence automatically embedded during command generation
-- **User Interface Patterns**: Templates define user interaction and task processing flows
-- **Automatic Compliance**: Framework compliance enforced through embedded intelligence modules
-</declarative_command_structure>
-
-<template_standards>
-- **Abstract Placeholders**: Use `[placeholder-patterns]` exclusively with zero code samples or technology references
-- **Declarative Execution**: Templates execute as command prompts with embedded intelligence
-- **[user-instructions] Processing**: Templates receive `[user-instructions]` via dynamic variable integration
-- **Intelligence Integration**: Core modules embedded automatically through [installation-engine] generation process
-</template_standards>
-
-<configuration_standards>
-- **Model**: Always `model: inherit` with mandatory `thinking_mode: ultrathink` for enhanced reasoning capabilities
-- **Placeholders**: `[domain]` → `[framework]` → `[specialist-category]` → `@config:[pattern-id]`
-- **Philosophy**: STRUCTURE: ENABLE intelligence. INTELLIGENCE: OPTIMIZE structure.
-- **Intelligence Source**: setup-intelligence.md, workflow-intelligence.md, shared-intelligence.md embedded automatically
-</configuration_standards>
-</template_principles>
-
-<success_criteria>
-<verification_requirements>
-- **Understanding Confirmed**: User approves `[scope]` and `[approach]`
-- **Technical Complete**: All `[verification-streams]` pass
-- **User Satisfied**: Explicit approval received
-- **Quality Maintained**: Standards met throughout
-- **Excellence Achieved**: High compliance across all `[framework-dimensions]` verified (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001, @config:PD001, @config:EM001)
-- **Pattern Discovery Complete**: Multi-dimensional analysis reveals comprehensive project understanding without predefined assumptions
-- **Evolution Readiness Confirmed**: System demonstrates adaptive capabilities and continuous learning mechanisms
-- **Tool Parallelization Performance**: Measurable efficiency improvements through simultaneous tool execution demonstrated (Reference: @config:TB001)
-- **Anthropic Standards Compliance**: All specialists implement official parallel tool execution prompts verified (Reference: @config:TB001, @config:AM001)
-- **Intelligence Architecture Compliance**: Commands properly reference new 3-module intelligence system (setup-intelligence.md, workflow-intelligence.md, shared-intelligence.md)
-- **Declarative Command Verification**: Commands function as executable prompts with embedded intelligence modules
-- **Embedding Integration Verified**: [Installation-Engine] properly embeds intelligence modules during command generation
-- **Clean Separation Maintained**: Framework principles, intelligence modules, templates, and generation process maintain clear boundaries
-</verification_requirements>
-</success_criteria>
-
-<command_architecture>
-**Declarative Command System**: Guild commands generated through [installation-engine] with automatic intelligence embedding and simplified template structure.
-
-<command_generation_process>
-- **Template Processing**: Simple command templates processed through [installation-engine]
-- **Intelligence Embedding**: Core intelligence modules automatically embedded during generation
-- **Command Types**: setup.md and workflow.md commands with specialized intelligence integration
-- **Framework Integration**: Automatic dimensional compliance through embedded shared-intelligence.md
-</command_generation_process>
-
-<command_structure>
-- **Command Prompts**: Generated commands function as executable prompts with embedded intelligence
-- **[command-arguments] Processing**: Dynamic task adaptation through integrated variable processing
-- **Intelligence Integration**: Automatic embedding of relevant intelligence modules per command type
-- **Framework Compliance**: Built-in dimensional compliance through shared-intelligence embedding
-</command_structure>
-</command_architecture>
-
-<module_organization_standards>
-**Clear Intelligence Boundaries**: Defined separation of concerns between framework principles and implementation patterns.
-
-<intelligence_module_responsibilities>
-- **setup-intelligence.md**: Project discovery, analysis, agent generation, and setup-specific coordination patterns
-- **workflow-intelligence.md**: Task execution, specialist orchestration, parallel coordination, and workflow-specific patterns
-- **shared-intelligence.md**: Cross-command dimensional compliance, universal coordination protocols, and framework integration
-- **framework.md**: Core philosophy, dimensional architecture, compliance requirements, and organizational standards
-</intelligence_module_responsibilities>
-
-<embedding_standards>
-- **[Installation-Engine] Integration**: Intelligence modules embedded automatically during command generation
-- **Command-Specific Intelligence**: Relevant modules embedded per command type through mapping configuration
-- **Framework Compliance**: Shared-intelligence.md embedded in all commands for universal compliance
-- **Clean Separation**: Framework principles separate from implementation intelligence patterns
-</embedding_standards>
-</module_organization_standards>
-
-<declarative_intelligence_requirements>
-**Command Prompt Format Standards**: Guild commands function as executable prompts with embedded intelligence modules for autonomous operation.
-
-<command_prompt_structure>
-- **Task Definition**: Clear command purpose and execution parameters
-- **User Interface**: [user-instructions] processing and interaction patterns  
-- **Intelligence Integration**: Automatic embedding of relevant intelligence modules
-- **Framework Compliance**: Built-in dimensional compliance through shared-intelligence
-</command_prompt_structure>
-
-<intelligence_embedding_patterns>
-- **Setup Commands**: setup-intelligence.md + shared-intelligence.md embedding
-- **Workflow Commands**: workflow-intelligence.md + shared-intelligence.md embedding
-- **Universal Compliance**: shared-intelligence.md embedded in all commands
-- **Framework Integration**: Automatic compliance enforcement through embedded modules
-</intelligence_embedding_patterns>
-
-<clean_separation_principles>
-- **Framework Layer**: Core philosophy, dimensional architecture, compliance requirements (framework.md)
-- **Intelligence Layer**: Implementation patterns, coordination protocols, execution intelligence (3 intelligence modules)
-- **Template Layer**: Command structure, user interaction, task processing (simple templates)
-- **Generation Layer**: Automatic intelligence embedding, command compilation ([installation-engine])
-</clean_separation_principles>
-</declarative_intelligence_requirements>
-
-<best_practices>
-**Systematic Excellence**: Use `[xml-structure]`, `[chain-of-thought]`, and `[verification-patterns]` with explicit `[user-confirmation]`. Enforce excellence through systematic `[processes]` and focused `[specialists]` with proactive delegation (Reference: @config:AM001, @config:VF001).
-
-**Universal Guild Intelligence Implementation**: 
-- Reference setup-intelligence.md, workflow-intelligence.md, and shared-intelligence.md for implementation patterns
-- Maintain clean separation between framework principles and pattern-discovery intelligence implementation
-- Trust [installation-engine] embedding process for automatic intelligence integration with observation-based capabilities
-- Ensure templates remain simple command prompts with embedded pattern-discovery intelligence
-- Enable continuous evolution through pattern learning and system adaptation
-
-**Philosophy**: STRUCTURE: ENABLE intelligence. INTELLIGENCE: OPTIMIZE structure. OBSERVATION: ENABLE understanding. UNDERSTANDING: DRIVE adaptation.
-</best_practices>
-
+### Integration Points
+- **Post-Implementation**: MANDATORY step after every specialist delegation
+- **Pre-Reporting**: Must complete before final user reporting
+- **Iterative Process**: Continue until no implementation gaps remain
+- **Parallel Execution**: Run gap detection streams simultaneously
+</implementation_gap_verification>

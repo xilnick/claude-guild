@@ -1,348 +1,346 @@
 # Shared Intelligence
 
-**Philosophy**: STRUCTURE: ENABLE intelligence. INTELLIGENCE: OPTIMIZE structure.
+## Core Guidelines
 
-EXECUTE cross-command intelligence through [dimensional-compliance-frameworks] and [universal-coordination-protocols] with systematic integration across all Guild operations (Reference: @config:TB001, @config:AM001, @config:PE001, @config:RP001, @config:AR001, @config:OB001).
+### Lost in Middle Mitigation Protocol
+**CRITICAL DOCUMENT POSITIONING**: Follow recommendations.md patterns for optimal comprehension
 
-## Framework Dimensional Compliance Intelligence
+<document_positioning_guidelines>
+**Critical Content Placement**:
+- **Top Edge**: Most critical execution protocols immediately after command entry point
+- **Bottom Edge**: Actual task execution instructions (user request processing)
+- **Middle Sections**: Supporting details, research phases, analysis workflows
 
-COORDINATE [6-dimensional-compliance] through [systematic-integration] and [cross-dimensional-validation-protocols].
+**XML Structure Standards**:
+- Use `<critical>` tags for mandatory protocols
+- Use `<instruction>` tags for task execution steps
+- Use `<supporting>` tags for detailed procedures
+- Position critical information where it won't be lost in middle
+</document_positioning_guidelines>
 
-APPLY dimensional intelligence through universal patterns:
+### Scratchpad Management Protocol
+**EPHEMERAL STATE MAINTENANCE**: Use scratchpads for agent state across interactions
 
-### TB001 - Tool Parallelization Intelligence
-
-EXECUTE [mandatory-parallel-tool-enforcement] through [systematic-prompt-injection] and [universal-compliance-validation] with absolute TB001 dimensional compliance.
-
-#### Universal Parallel Tool Mandate
-- **MANDATORY**: Every Task tool deployment MUST include parallel execution prompts
-- **MANDATORY**: All generated agents MUST have embedded `<system_prompt>` and `<use_parallel_tool_calls>` sections
-- **MANDATORY**: All subagents MUST utilize parallel tool calls by default
-- **MANDATORY**: Sequential execution only when proven dependencies require it
-- **MANDATORY**: TB001 compliance verification before any operation
-
-#### Official Anthropic Parallel Standards Integration
-- **EXECUTE** [simultaneous-tool-operations] through [parallel-coordination-protocols] and [batching-optimization]
-- **CHALLENGE** [sequential-assumptions] through [dependency-verification-frameworks] and [parallelization-assessment]
-- **INTEGRATE** [Anthropic-parallel-standards] through [official-prompt-implementation] and [performance-measurement]
-- **EMBED** [mandatory-parallel-system-prompts] in all [agent-generation-processes] through [universal-prompt-integration]
-- **OPTIMIZE** [tool-efficiency] through [resource-coordination] and [context-switching-minimization]
-
-#### Mandatory System Prompt Template
-Every agent and Task tool deployment MUST include:
-```
-<system_prompt>
-You have the capability to call multiple tools in a single response.
-When multiple independent pieces of information are requested,
-batch your tool calls together for optimal performance.
-
-<use_parallel_tool_calls>
-For maximum efficiency, whenever you perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially. Prioritize calling tools in parallel whenever possible. For example, when reading 3 files, run 3 tool calls in parallel to read all 3 files into context at the same time. When running multiple read-only commands like `ls` or `list_dir`, always run all of the commands in parallel. Err on the side of maximizing parallel tool calls rather than running too many tools sequentially.
-</use_parallel_tool_calls>
-</system_prompt>
-```
-
-#### Universal Compliance Enforcement
-- **INJECT** [mandatory-parallel-prompts] in ALL Task tool deployments through [systematic-prompt-embedding]
-- **VALIDATE** [task-tool-compliance] before deployment through [prompt-verification-protocols]
-- **ENFORCE** [parallel-first-execution] through [default-parallel-assumptions] and [dependency-challenge-frameworks]
-- **MONITOR** [parallel-execution-performance] through [efficiency-tracking] and [optimization-measurement]
-- **REMEDIATE** [non-compliant-agents] through [automatic-prompt-injection] and [compliance-restoration]
-
-#### TB001 Validation Intelligence
-- **SCAN** [agent-content-patterns] for [parallel-tool-prompts] and [compliance-indicators] through [systematic-content-analysis]
-- **VERIFY** [use_parallel_tool_calls-presence] through [content-pattern-scanning] and [prompt-requirement-validation]
-- **VALIDATE** [Anthropic-official-prompts] through [specification-compliance-checking] and [standard-adherence-verification]
-- **ASSESS** [TB001-integration] through [framework-dimensional-compliance] and [parallel-execution-optimization]
-- **DETECT** [missing-parallel-requirements] through [comprehensive-content-analysis] and [specification-gap-identification]
-- **IDENTIFY** [non-compliant-implementations] through [systematic-validation-protocols] and [standard-deviation-assessment]
-
-#### TB001 Remediation Intelligence
-- **INJECT** [missing-parallel-prompts] through [standardized-insertion-protocols] and [content-integration-frameworks]
-- **UPDATE** [inadequate-implementations] through [specification-alignment] and [standard-compliance-enhancement]
-- **ENHANCE** [existing-partial-compliance] through [optimization-improvements] and [effectiveness-upgrades]
-- **VERIFY** [remediation-effectiveness] through [post-update-validation] and [compliance-confirmation]
-- **LOCATE** [insertion-points] within agent content through [structural-analysis] and [optimal-placement-identification]
-- **INSERT** [compliant-parallel-prompts] through [template-based-injection] and [formatting-consistency-maintenance]
-- **PRESERVE** [existing-agent-functionality] through [non-disruptive-integration] and [capability-continuity-assurance]
-
-#### TB001 Absolute Compliance Enforcement
-- **MANDATORY**: 100% agent compliance - no agent generation without embedded parallel tool execution prompts
-- **MANDATORY**: All Task tool deployments MUST include parallel execution requirements
-- **MANDATORY**: Sequential execution only when proven dependencies require it
-- **MANDATORY**: Auto-remediation of non-compliant agents through systematic prompt injection
-- **PERFORMANCE**: Measurable 5-10x speed improvements through parallel tool coordination
-- **VALIDATION**: Continuous compliance scanning and automatic remediation protocols
-
-### AM001 - Agent-Mandatory Architecture Intelligence
-- **MANDATE** immediate Task tool deployment as first action for all workflow operations
-- **COORDINATE** specialist-assignment-protocols through task-analysis and capability-assessment-frameworks
-- **PREVENT** direct-execution through systematic-delegation and assignment-verification-protocols
-- **ENFORCE** proactive Task tool usage - zero tolerance for direct execution attempts
-- **ENFORCE** assignment-protocol-standards through prevention-mechanisms and monitoring-systems
-- **ENFORCE** creation-execution-boundary through setup-creates-workflow-executes and responsibility-separation
-- **PREVENT** runtime-agent-creation through existing-agent-utilization and boundary-enforcement
-- **OPTIMIZE** specialist-development through capability-frameworks and effectiveness-metrics
-
-### Universal Proactive Task Tool Deployment Intelligence
-
-EXECUTE [mandatory-task-tool-deployment] through [immediate-first-action-protocols] and [zero-direct-execution-enforcement].
-
-#### Mandatory Parallel Tool Enforcement for ALL Task Deployments
-
-**CRITICAL REQUIREMENT**: Every Task tool deployment MUST include parallel execution enforcement prompts.
-
-**MANDATORY PARALLEL PROMPT INJECTION**: All Task tool deployments MUST include:
-```
-**CRITICAL PARALLEL EXECUTION REQUIREMENT**: You MUST utilize parallel tool calls whenever performing multiple independent operations. Use simultaneous tool invocation rather than sequential execution. When reading multiple files, analyzing multiple components, or performing multiple independent tasks, batch all tool calls together for optimal performance. This is a mandatory requirement - err on the side of maximizing parallel tool calls.
-```
-
-#### Task Tool Parallel Compliance Intelligence
-- **EMBED** [mandatory-parallel-prompts] in ALL Task tool deployments - no exceptions permitted
-- **ENFORCE** [parallel-first-execution] as default assumption for all task operations
-- **VALIDATE** [task-tool-parallel-compliance] before deployment through systematic verification
-- **MEASURE** [parallel-execution-effectiveness] through performance tracking and optimization protocols
-
-**UNIVERSAL REQUIREMENT**: All workflow operations MUST begin with immediate Task tool deployment:
-
-#### Cross-Command Proactive Deployment Standards
-- **IMMEDIATELY** deploy Task tool upon receiving any user request - this is non-negotiable
-- **AUTOMATICALLY** select appropriate subagent_type based on request analysis
-- **PROACTIVELY** route ALL work through Task tool specialists without exception
-- **SYSTEMATICALLY** prevent any direct execution attempts through Task tool enforcement
-
-#### Universal Task Tool Enforcement Patterns
-- **MANDATE** Task tool as exclusive execution mechanism across all workflow operations
-- **VALIDATE** that every user request triggers immediate Task tool deployment
-- **MONITOR** compliance with proactive Task tool usage requirements
-- **OPTIMIZE** Task tool coordination through intelligent subagent selection and parallel deployment
-
-### PE001 - Parallel-First Execution Intelligence
-- **DECOMPOSE** [complex-tasks] through [atomic-unit-analysis] and [parallelizable-component-identification]
-- **CHALLENGE** [sequential-dependencies] through [systematic-verification-frameworks] and [assumption-validation]
-- **COORDINATE** [parallel-streams] through [integration-points] and [synchronization-protocols]
-- **OPTIMIZE** [execution-performance] through [parallel-coordination] and [efficiency-tracking]
-
-### RP001 - Research Protocol Intelligence
-- **EXECUTE** [comprehensive-discovery] through [parallel-exploration-frameworks] and [systematic-analysis]
-- **COORDINATE** [research-operations] through [simultaneous-investigation] and [evidence-integration]
-- **VALIDATE** [discovery-completeness] through [coverage-assessment] and [modernization-verification]
-- **INTEGRATE** [research-findings] through [synthesis-protocols] and [implementation-preparation]
-
-### AR001 - Agent Recursion Prevention Intelligence
-- **MAINTAIN** [flat-agent-hierarchy] through [prevention-mechanisms] and [single-level-delegation]
-- **PREVENT** [subagent-creation] through [detection-protocols] and [constraint-enforcement]
-- **ENFORCE** [hierarchy-integrity] through [monitoring-systems] and [validation-frameworks]
-- **COORDINATE** [flat-delegation-patterns] through [primary-system-authority] and [control-protocols]
-
-### OB001 - Operation Batching Intelligence
-- **GROUP** [operation-types] through [classification-intelligence] and [strategic-clustering]
-- **OPTIMIZE** [resource-utilization] through [batching-strategies] and [performance-coordination]
-- **MINIMIZE** [context-switching] through [intelligent-grouping] and [efficiency-enhancement]
-- **COORDINATE** [batch-execution] through [parallel-processing] and [integration-optimization]
-
-## Cross-Dimensional Coordination Intelligence
-
-INTEGRATE [dimensional-workflows] through [systematic-interdependency-patterns] and [coordination-frameworks].
-
-### Universal Integration Patterns
-- **COORDINATE** [Discovery-Assignment-Execution]: [RP001] → [AM001] → [PE001] through [pipeline-intelligence]
-- **INTEGRATE** [Parallel-Tool-Batching]: [TB001] ↔ [OB001] through [simultaneous-operation-patterns]
-- **SYNCHRONIZE** [Assignment-Hierarchy-Control]: [AM001] ↔ [AR001] through [flat-delegation-protocols]
-- **OPTIMIZE** [Research-Parallel-Discovery]: [RP001] ↔ [PE001] through [parallel-analysis-frameworks]
-
-### Cross-Dimensional Workflows
-- **EXECUTE** [multi-dimensional-compliance] through [systematic-coordination] and [integrated-validation]
-- **APPLY** [cross-dimensional-templates] through [workflow-frameworks] and [coordination-patterns]
-- **MONITOR** [interdependency-performance] through [compliance-scoring] and [efficiency-tracking]
-- **ENHANCE** [integration-effectiveness] through [optimization-protocols] and [performance-improvement]
-
-### Cross-Dimensional Validation Intelligence
-- **COORDINATE** [validation-protocols] with [TB001-dimensional-requirements] and [parallel-execution-mandates]
-- **INTEGRATE** [compliance-validation] with [AM001-agent-architecture] and [specialist-assignment-protocols]
-- **SYNCHRONIZE** [validation-workflows] with [PE001-parallel-execution] and [task-decomposition-frameworks]
-- **ALIGN** [compliance-assessment] with [RP001-research-protocols] and [discovery-validation-frameworks]
-- **VERIFY** [multi-dimensional-compliance] across [TB001-OB001-framework-dimensions] and [integrated-excellence-standards]
-- **ASSESS** [cross-dimensional-coordination] through [validation-integration-protocols] and [systematic-compliance-measurement]
-- **OPTIMIZE** [validation-effectiveness] through [framework-alignment] and [dimensional-coordination-enhancement]
-- **MAINTAIN** [compliance-excellence] through [continuous-validation] and [systematic-improvement-protocols]
-
-## Universal Tool Parallelization Standards
-
-APPLY [universal-parallelization] through [mandatory-simultaneous-execution] and [performance-optimization-protocols].
-
-### Universal Tool Coordination
-- **EXECUTE** [parallel-tool-operations] simultaneously unless [proven-dependencies] require serialization
-- **BATCH** [independent-operations] through [strategic-grouping] and [resource-optimization]
-- **CHALLENGE** [sequential-assumptions] through [systematic-dependency-verification]
-- **OPTIMIZE** [tool-utilization] through [performance-monitoring] and [efficiency-enhancement]
-
-### Anthropic Standards Integration
-- **IMPLEMENT** [official-parallel-prompts] through [universal-embedding] and [consistency-enforcement]
-- **EMBED** [use-parallel-tool-calls-tags] in all [generated-agents] through [mandatory-system-prompt-integration]
-- **APPLY** [anthropic-parallel-tool-standards] through [official-prompt-templates] and [compliance-verification]
-- **MEASURE** [parallelization-effectiveness] through [performance-metrics] and [improvement-tracking]
-- **ENFORCE** [simultaneous-execution-mandate] through [compliance-verification] and [optimization-assessment]
-- **COORDINATE** [parallel-performance] through [efficiency-standards] and [quality-integration]
-
-### Universal Parallel Tool Execution System Prompts
-
-EMBED [mandatory-anthropic-parallel-prompts] in all [generated-agent-specifications] through [system-prompt-integration]:
-
-#### Official Anthropic Parallel Tool System Prompts
-**MANDATORY BASIC PROMPT** (for all Claude 4 agents):
-```
-For maximum efficiency, whenever you need to perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially.
-```
-
-**MANDATORY DETAILED PROMPT** (for enhanced parallel execution):
+<scratchpad_guidelines>
+**Required Structure**:
 ```xml
-<use_parallel_tool_calls>
-For maximum efficiency, whenever you perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially. Prioritize calling tools in parallel whenever possible. For example, when reading 3 files, run 3 tool calls in parallel to read all 3 files into context at the same time. When running multiple read-only commands like `ls` or `list_dir`, always run all of the commands in parallel. Err on the side of maximizing parallel tool calls rather than running too many tools sequentially.
-</use_parallel_tool_calls>
+<scratchpad>
+  <!-- Maintains state across interactions -->
+  Key facts: [discovered_information]
+  Decisions: [choices_made]
+  Current: [active_work_status]
+</scratchpad>
 ```
 
-**GUILD SYSTEM INTEGRATION PROMPT**:
-```xml
-<system_prompt>
-You have the capability to call multiple tools in a single response.
-When multiple independent pieces of information are requested,
-batch your tool calls together for optimal performance.
+**Usage Principles**:
+- **Always Include**: Every dynamic agent must have scratchpad section
+- **State Persistence**: Maintain working memory across agent interactions
+- **Ephemeral Only**: Never persist scratchpad content to files
+- **Clear After Completion**: All scratchpad state cleared when task finishes
+</scratchpad_guidelines>
 
-<use_parallel_tool_calls>
-For maximum efficiency, whenever you perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially. Prioritize calling tools in parallel whenever possible. Err on the side of maximizing parallel tool calls rather than running too many tools sequentially.
-</use_parallel_tool_calls>
-</system_prompt>
+### Deep Reasoning & Research Protocol
+**MANDATORY FIRST PHASE**: Execute comprehensive research before any task delegation
+
+<research_framework>
+**Parallel Research Streams** (Execute simultaneously via Task tool):
+- **Project Discovery**: Use serena tools for codebase analysis, pattern identification, technology stack assessment
+- **Documentation Intelligence**: Leverage context7 for framework docs, API references, best practices
+- **Web Resource Discovery**: Use WebSearch for latest approaches, solutions, community practices
+- **MCP Capability Assessment**: Evaluate available MCP servers for optimal task-tool matching
+- **Requirement Decomposition**: Break down user requests into specific, actionable components
+</research_framework>
+
+<reasoning_structure>
+**Deep Reasoning Framework**:
+1. **Context Understanding**: What is the user actually requesting in full context?
+2. **Project Assessment**: What technologies, patterns, constraints, and opportunities exist?
+3. **Resource Mapping**: What tools, documentation, and external resources are available?
+4. **Approach Synthesis**: How should work be structured for optimal results?
+5. **Success Definition**: What constitutes complete and successful completion?
+</reasoning_structure>
+
+<research_synthesis>
+**Research Synthesis Requirements**:
+- **Comprehensive Understanding**: Complete grasp of user intent, project context, and available resources
+- **Evidence-Based Decisions**: All specialist selection and task delegation informed by research findings
+- **Context Enrichment**: Embed research intelligence in all specialist prompts and instructions
+- **Resource Optimization**: Match tasks to optimal tools based on capability assessment
+- **Best Practice Integration**: Apply discovered best practices and modern approaches
+</research_synthesis>
+
+### Tool Usage Best Practices
+- **Batch Operations**: Group independent tool calls in single responses
+- **Parallel Execution**: Execute independent tasks simultaneously
+- **Task Delegation**: Always use Task tool for complex work
+- **Resource Efficiency**: Avoid redundant operations
+
+### Agent Creation Principles
+- **Project-Based**: Create agents based on discovered project needs
+- **Focused Purpose**: Each agent should have clear, specific expertise
+- **Relevant Context**: Embed project-specific patterns and conventions
+- **Avoid Duplication**: Don't create overlapping specialists
+
+### Dynamic Agent Creation Protocol
+- **Always Create When No Match**: If no existing agent fits the task, create a dynamic specialist
+- **Task-Specific Expertise**: Generate agents with precise capabilities for discovered requirements  
+- **Evidence-Driven Design**: Base agent capabilities on discovered patterns and technologies
+- **Mandatory Subagents**: NEVER fall back to general-purpose or direct execution
+- **CRITICAL**: ALL dynamic agents MUST use thinking_mode: ultrathink - NO EXCEPTIONS
+- **MANDATORY Task Tool Configuration**: EVERY Task tool call MUST explicitly include thinking_mode: ultrathink
+- **Project Context Embedding**: Include discovered frameworks, patterns, and conventions
+- **Parallel Coordination**: Dynamic agents must batch tool calls and parallelize work
+- **Ultrathink Enforcement**: Validate all Task tool calls include ultrathink before execution
+
+### No Persistence Protocol
+- **Never Save Examples**: All examples must be ephemeral and display-only
+- **Never Save Reports**: Reports are presented to user but never persisted to files
+- **Memory-Only State**: Keep all working state in memory only, cleared after task completion
+- **No Implementation Persistence**: Never save concrete code examples or implementation details
+- **Ephemeral Scratchpads**: Working memory is temporary and never persisted
+- **Display-Only Output**: All outputs are for immediate display, never file storage
+- **Clear After Completion**: All temporary working state cleared when task finishes
+
+### Guild Directory Protocol
+- **Mandatory Save Location**: ALL agents MUST be saved to ./.claude/agents/guild/ directory
+- **No Alternative Paths**: Never save agents to any other directory or location
+- **Guild Subdirectory Only**: Always use the guild subdirectory for organization
+- **Directory Verification**: Confirm agents are saved to correct guild directory
+- **Path Enforcement**: Setup commands MUST enforce ./.claude/agents/guild/ path
+
+### Dynamic Agent Creation Template (Research-Enhanced)
+When no existing agent matches task requirements, create research-informed dynamic specialists using:
+
+```
+<role>You are a [task-specific-expertise] specialist for [discovered-project-type]</role>
+
+<research_context>
+RESEARCH INTELLIGENCE FROM DEEP REASONING PHASE:
+Project Analysis: [project_discovery_findings]
+Documentation Research: [framework_docs_and_best_practices]
+Web Intelligence: [latest_approaches_and_solutions]
+MCP Assessment: [optimal_tool_recommendations]
+Success Framework: [research_informed_success_criteria]
+</research_context>
+
+<project_context>
+Working on [project-name] using [discovered-technologies]
+Key patterns found: [identified-patterns-and-conventions]
+Project structure: [relevant-architecture-details]
+Best practices discovered: [research_based_recommendations]
+Constraints identified: [project_and_technical_limitations]
+</project_context>
+
+<scratchpad>
+  <!-- Maintains state across interactions -->
+  Key facts: [discovered_information]
+  Decisions: [choices_made]
+  Current: [active_work_status]
+</scratchpad>
+
+<capabilities>
+You specialize in [specific-task-domain] with research-informed expertise in:
+- [discovered-framework-1]: [specific-patterns-found] + [best_practices_from_research]
+- [discovered-framework-2]: [specific-conventions-found] + [modern_approaches_discovered]
+- [discovered-practice-1]: [implementation-approach] + [optimized_methods_from_research]
+- [optimal-mcp-tools]: [recommended_tools_for_task] + [usage_patterns_discovered]
+</capabilities>
+
+<instructions>
+MANDATORY: Use thinking_mode: ultrathink for continued deep reasoning
+MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+MANDATORY: Use single messages with multiple tool calls when possible
+MANDATORY: Batch operations for maximum efficiency
+MANDATORY: Apply [research_intelligence] to all decisions and approaches
+MANDATORY: Leverage [optimal_mcp_tools] identified in research phase
+MANDATORY: Batch operations for maximum efficiency using [discovered_patterns]
+MANDATORY: Use single messages with multiple tool calls when possible
+MANDATORY: Apply [discovered_patterns] and [best_practices_from_research] consistently
+MANDATORY: NO PERSISTENCE of examples, reports, or working state
+
+Research-informed requirements:
+- [requirement-1]: [research_based_constraint_or_approach]
+- [requirement-2]: [evidence_based_pattern_or_method]
+- [requirement-3]: [optimal_tool_usage_pattern]
+</instructions>
+
+<ephemeral_memory>
+MEMORY-ONLY - NEVER PERSISTED
+Research synthesis: [comprehensive_understanding_from_research]
+Temporary findings: [working-analysis-data]
+Active constraints: [current-limitations]
+Working approach: [research_informed_strategy]
+Task state: [progress-tracking]
+CLEARED AFTER TASK COMPLETION
+</ephemeral_memory>
 ```
 
-#### Parallel Execution Mandate Integration
-- **EMBED** [official-anthropic-prompts] as [system-level-requirements] in every [generated-agent]
-- **INTEGRATE** [use-parallel-tool-calls-tags] as [mandatory-agent-capability] through [template-embedding]
-- **ENFORCE** [simultaneous-over-sequential] execution through [embedded-system-prompts] and [behavior-mandate]
-- **APPLY** [TB001-compliance] through [universal-parallel-tool-integration] and [performance-optimization]
+### MCP Tool Selection Matrix
+**Research-Informed Tool Matching**:
 
-#### Dynamic Agent Generation Compliance
-- **EMBED** [parallel-tool-requirements] automatically during [agent-creation-workflows] and [generation-processes]
-- **VERIFY** [template-compliance] through [generation-validation-protocols] and [standard-adherence-checking]
-- **ENFORCE** [mandatory-parallel-capabilities] through [creation-time-compliance-validation] and [quality-gate-enforcement]
-- **CONFIRM** [TB001-dimensional-compliance] through [framework-integration-verification] and [systematic-assessment]
-- **AUGMENT** [agent-generation-templates] with [parallel-tool-compliance-requirements] and [automatic-embedding-protocols]
-- **STANDARDIZE** [parallel-prompt-integration] through [consistent-implementation-patterns] and [quality-assurance-frameworks]
-- **OPTIMIZE** [generation-efficiency] through [automated-compliance-injection] and [validation-streamlining]
-- **MAINTAIN** [template-evolution] through [compliance-standard-updates] and [specification-synchronization]
+<mcp_assessment_protocol>
+**Available MCP Tools Evaluation**:
+- **serena**: Deep semantic code analysis, best for complex codebase understanding
+- **context7**: Framework documentation and examples, optimal for API guidance
+- **package-version**: Dependency version checking, essential for update decisions
+- **tsmorph**: TypeScript/JavaScript refactoring, mandatory for TS/JS projects
+- **playwright**: Browser automation, required for web testing and interaction
+- **sequential-thinking**: Complex problem solving, ideal for multi-step analysis
+</mcp_assessment_protocol>
 
-#### Universal Configuration Standards (Framework Requirement #13)
-- **MANDATORY Ultrathink Configuration**: All [agent-specifications] MUST include `thinking_mode: ultrathink` in [yaml-frontmatter] through [absolute-compliance-enforcement]
-- **ENFORCE** [ultrathink-capability-integration] across [all-guild-specialists] through [universal-configuration-standards] and [framework-compliance-verification]
-- **VALIDATE** [ultrathink-presence] during [agent-generation] and [system-validation-protocols] with [mandatory-yaml-frontmatter-verification]
-- **LEVERAGE** [enhanced-reasoning-capabilities] through [ultrathink-mode-utilization] and [analysis-depth-optimization]
-- **REFERENCE** [framework-requirement-13] for [mandatory-ultrathink-configuration] and [compliance-enforcement-standards]
+<tool_selection_criteria>
+**Matching Tasks to Optimal Tools**:
+- **Code Analysis Tasks**: serena → context7 → sequential-thinking
+- **Refactoring JS/TS**: tsmorph → package-version → context7
+- **Dependency Management**: package-version → context7 → serena
+- **Web Development**: playwright → context7 → package-version
+- **Complex Problem Solving**: sequential-thinking → serena → context7
+- **Framework Integration**: context7 → package-version → serena
+</tool_selection_criteria>
 
-## Universal Agent Anti-Recursion Intelligence
+### Discovery Protocols (Research-Enhanced)
+- **Multi-Dimensional Analysis**: Examine structure, dependencies, patterns, configuration via [mcp_tools]
+- **Evidence-Based**: Base decisions on actual project characteristics discovered through [research_streams]
+- **Resource-Informed Scope**: Cover all relevant aspects using [available_mcp_capabilities] before decisions
+- **Research-Adaptive Approach**: Adjust strategy based on [comprehensive_findings] from all research streams
 
-ENFORCE [flat-hierarchy-constraints] through [universal-prevention-mechanisms] and [system-stability-protocols].
+### Communication Standards
+- **Clear Instructions**: Provide specific, actionable guidance to specialists
+- **Progress Reporting**: Keep users informed of major steps and outcomes
+- **Error Handling**: Report and resolve issues transparently
+- **Result Synthesis**: Combine specialist outputs into coherent responses
 
-### Recursion Prevention Framework
-- **DETECT** [subagent-creation-attempts] through [monitoring-systems] and [constraint-validation]
-- **PREVENT** [agent-invocation] through [enforcement-protocols] and [hierarchy-integrity-maintenance]
-- **MAINTAIN** [single-level-delegation] through [authority-control] and [coordination-boundaries]
-- **VERIFY** [flat-hierarchy-compliance] through [systematic-assessment] and [constraint-verification]
+### Quality Assurance (Research-Enhanced)
+- **Research-Informed Verification**: Validate work against [research_synthesis] and [best_practices_discovered]
+- **Pattern Consistency**: Follow [discovered_patterns] and [framework_conventions] from research phase
+- **Research-Based Completeness**: Ensure all [research_informed_requirements] are addressed
+- **Evidence-Based Gap Detection**: MANDATORY systematic review using [comprehensive_understanding] for missed components
+- **Research-Driven Gap Resolution**: Implement discovered gaps via specialist delegation with [research_intelligence]
+- **Intelligent Verification Loop**: Continue gap detection leveraging [research_findings] until no gaps remain
+- **No Persistence Verification**: Confirm no examples, reports, or state was persisted
+- **Ephemeral State Confirmation**: Verify all working memory was cleared after completion
+- **Research-Validated Success**: Confirm results meet [research_informed_success_criteria] and user expectations
 
-### Authority Control Intelligence
-- **COORDINATE** [primary-system-authority] through [central-control-protocols] and [delegation-management]
-- **ENFORCE** [specialist-boundaries] through [capability-constraints] and [responsibility-limitation]
-- **MONITOR** [hierarchy-integrity] through [continuous-validation] and [compliance-assessment]
-- **OPTIMIZE** [flat-coordination] through [efficiency-patterns] and [performance-enhancement]
+## Anthropic Best Practices Integration
 
-## Universal Chain-of-Thought Intelligence
+### Parallel Tool Execution
+Following official Anthropic guidelines for Claude Code:
+- Send multiple tool calls in single messages when appropriate
+- Batch independent file operations, searches, and analyses
+- Question sequential assumptions - default to parallel where possible
+- Monitor and optimize parallelization effectiveness
 
-APPLY [cross-command-thinking] through [systematic-reasoning-frameworks] and [analytical-transparency-protocols].
+### Task Tool Ultrathink Enforcement Protocol
+**CRITICAL REQUIREMENT**: Every Task tool invocation must include thinking_mode: ultrathink
 
-### Universal Reasoning Framework
-- **DECOMPOSE** [complex-operations] through [analytical-breakdown] and [component-identification]
-- **EXPOSE** [reasoning-processes] through [transparent-analysis] and [decision-logic-visibility]
-- **VALIDATE** [assumptions] through [systematic-challenge-protocols] and [evidence-verification]
-- **INTEGRATE** [analysis-components] through [logical-coordination] and [synthesis-frameworks]
-
-### Cross-Command Thinking Patterns
+### Ultrathink Mandatory Parallel Execution Linkage
+**INSEPARABLE PAIRING**: thinking_mode: ultrathink MUST ALWAYS be accompanied by parallel execution directives:
 ```
-<thinking>
-1. [Operation-analysis]: [command-reasoning] and [dimensional-evidence]
-2. [Compliance-assessment]: [framework-reasoning] and [validation-evidence]
-3. [Coordination-planning]: [integration-reasoning] and [efficiency-evidence]
-4. [Performance-optimization]: [enhancement-reasoning] and [effectiveness-synthesis]
-</thinking>
+MANDATORY: Use thinking_mode: ultrathink for all reasoning
+MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially  
+MANDATORY: Use single messages with multiple tool calls when possible
+MANDATORY: Batch operations for maximum efficiency
+```
+**FORBIDDEN**: Using ultrathink without parallel execution instructions
+
+### Task Tool Parallel Execution Enforcement Protocol
+**CRITICAL REQUIREMENT**: Every Task tool invocation must include explicit parallel execution instructions
+
+<parallel_execution_enforcement>
+**Mandatory Parallel Execution Directives**:
+Every subagent prompt MUST include:
+```
+MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+MANDATORY: Use single messages with multiple tool calls when possible
+MANDATORY: Batch operations for maximum efficiency
+MANDATORY: Challenge sequential assumptions - most tasks can parallelize
 ```
 
-## Universal Verification Intelligence
+**Parallel Execution Validation**:
+- **Pre-delegation check** - Verify parallel execution directives present before Task tool invocation
+- **Zero sequential tolerance** - No subagents allowed to execute tools one-by-one
+- **Batch enforcement** - All independent operations must be batched into single messages
+- **Efficiency mandate** - Subagents must optimize for maximum parallel throughput
+</parallel_execution_enforcement>
 
-COORDINATE [cross-command-verification] through [multi-dimensional-assessment] and [systematic-validation-protocols].
+<task_tool_ultrathink_requirements>
+**Mandatory Task Tool Pattern**:
+```
+Task tool with:
+  subagent_type: [specialist-type]
+  description: [task-description]  
+  prompt: |
+    MANDATORY: Use thinking_mode: ultrathink for all reasoning
+    MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+    MANDATORY: Use single messages with multiple tool calls when possible
+    MANDATORY: Batch operations for maximum efficiency
+    You are a [specialist-type] with deep reasoning and parallel execution capabilities...
+    [rest of prompt with ultrathink and parallel execution requirements embedded]
+```
 
-### Universal Verification Framework
-- **EXECUTE** [parallel-verification-streams] across [functional], [compliance], [performance], and [integration] dimensions
-- **COORDINATE** [verification-specialists] through [systematic-assessment] and [quality-validation]
-- **APPLY** [dimensional-compliance-verification] through [6-dimension-assessment] and [excellence-measurement]
-- **INTEGRATE** [verification-results] through [comprehensive-analysis] and [completion-validation]
+**Enforcement Rules**:
+- **NEVER** delegate without ultrathink - Every Task tool call MUST specify thinking_mode: ultrathink
+- **NEVER** delegate without parallel execution - Every Task tool call MUST include parallel execution directives
+- **Embed in all prompts** - All specialist prompts MUST include ultrathink AND parallel execution requirements
+- **No exceptions allowed** - Zero tolerance for Task tool calls without ultrathink AND parallel execution
+- **Validate before execution** - Check ultrathink AND parallel execution configuration before any delegation
+- **Fail fast** - Stop and correct any Task tool calls missing ultrathink OR parallel execution directives
+- **Mandatory parallel statements** - Every subagent prompt MUST contain "MANDATORY: Parallelize ALL independent tool calls"
+</task_tool_ultrathink_requirements>
 
-### Quality Gate Intelligence
-- **VERIFY** [tool-parallelization-compliance] through [simultaneous-execution-validation] and [performance-measurement]
-- **CONFIRM** [agent-assignment-effectiveness] through [delegation-verification] and [specialist-coordination-assessment]
-- **ASSESS** [parallel-execution-optimization] through [efficiency-measurement] and [dependency-validation]
-- **VALIDATE** [framework-dimensional-compliance] through [systematic-assessment] and [excellence-verification]
+### Thinking Mode Usage
+- **MANDATORY**: Use `thinking_mode: ultrathink` for ALL Task tool invocations 
+- **INSEPARABLE**: Every ultrathink usage MUST include parallel execution directives
+- **ALWAYS PAIRED**: "MANDATORY: Parallelize ALL independent tool calls" must accompany ultrathink
+- Apply systematic thinking to multi-step problems with parallel tool execution
+- Break down complex decisions into manageable components executed in parallel
+- Document reasoning process for transparency
+- **CRITICAL**: Never delegate without ultrathink AND parallel execution configuration
 
-### Agent Compliance Validation Protocols
-- **SCAN** [agent-content-patterns] for [use_parallel_tool_calls] XML tags and [embedded-parallel-execution-prompts]
-- **VERIFY** [Anthropic-official-prompt-text] matches [specification-requirements] exactly through [compliance-checking]
-- **VALIDATE** [parallel-capability-descriptions] include [efficiency-optimization-language] and [simultaneous-execution-standards]
-- **CONFIRM** [tool-batching-guidance] references [simultaneous-execution-standards] and [performance-optimization]
-- **ASSESS** [implementation-effectiveness] through [parallel-tool-integration] and [optimization-measurement]
-- **CATALOG** [compliance-violations] through [detailed-gap-reporting] and [remediation-requirement-analysis]
+### Task Tool Best Practices
+- **MANDATORY**: EVERY Task tool call MUST include thinking_mode: ultrathink parameter
+- Provide detailed, specific prompts to specialists with ultrathink requirement
+- Include necessary context and constraints
+- Specify expected output format and quality
+- Use appropriate subagent types for different task categories
+- **CRITICAL**: Never delegate without explicit ultrathink configuration
 
-### Validation Reporting Intelligence
-- **CATALOG** [agent-compliance-status] through [systematic-inventory] and [detailed-assessment-matrices]
-- **IDENTIFY** [compliance-gaps] through [gap-analysis-protocols] and [remediation-requirement-identification]
-- **TRACK** [remediation-progress] through [systematic-monitoring] and [improvement-measurement]
-- **VERIFY** [compliance-achievement] through [validation-confirmation] and [standard-adherence-certification]
-- **MEASURE** [parallel-execution-improvements] through [performance-metric-analysis] and [efficiency-gain-measurement]
-- **EVALUATE** [tool-coordination-effectiveness] through [simultaneous-operation-assessment] and [optimization-validation]
-- **ANALYZE** [compliance-correlation] with [system-performance-improvements] and [operational-excellence-enhancement]
-- **REPORT** [validation-framework-effectiveness] through [systematic-assessment] and [continuous-improvement-identification]
+## Framework Compliance
 
-## Evolution Coordination Intelligence
+This shared intelligence ensures all Guild commands follow the core framework principles:
+1. **Use Specialists** - Route work through appropriate agents (create dynamic if no match)
+2. **Create Dynamic Agents** - Generate task-specific specialists when needed
+3. **Work in Parallel** - Execute independent tasks simultaneously
+4. **Discover First** - Analyze before deciding
+5. **Verify Completeness** - MANDATORY implementation gap detection and resolution
+6. **No Persistence** - Never save examples, reports, or working state to files
+7. **Guild Directory** - Always save agents to ./.claude/agents/guild/ directory
+8. **Keep It Simple** - Clear, direct, effective instructions
 
-COORDINATE pattern evolution through SYSTEMATIC change detection and ADAPTIVE system improvement.
+## Implementation Gap Resolution Protocol
 
-### Universal Evolution Patterns
-DETECT [pattern-changes] through:
-- MONITOR [pattern-registry] via [change-detection] and [significance-evaluation]
-- TRIGGER [adaptation] via [significance-threshold] when [change-score > 0.7]
-- MAINTAIN [EM001-compliance] via [evolution-readiness] and [system-adaptation]
-- COORDINATE [cross-command-evolution] via [shared-learning] and [pattern-integration]
+<gap_resolution_intelligence>
+**MANDATORY AFTER EVERY IMPLEMENTATION**:
 
-EXECUTE [evolution-coordination]:
-- ESTABLISH [change-baselines] via [pattern-snapshot] and [reference-establishment]
-- ASSESS [evolution-urgency] via [impact-analysis] and [priority-determination]
-- COORDINATE [adaptation-strategies] via [incremental-updates] and [system-enhancement]
+### Detection Streams (Execute in Parallel)
+1. **Requirements Completeness**: Compare implementation against original user requirements
+2. **Integration Verification**: Ensure all components integrate properly
+3. **Edge Case Coverage**: Identify missing error handling and edge cases
+4. **Dependency Completeness**: Verify all required dependencies are implemented
+5. **Performance Adequacy**: Confirm implementation meets performance expectations
 
-## Universal Success Standards
+### Resolution Process
+1. **Gap Identification**: Systematically catalog all discovered gaps
+2. **Priority Assessment**: Determine resolution order based on criticality
+3. **Specialist Delegation**: Route gap resolution to appropriate specialists via Task tool
+4. **Parallel Implementation**: Execute independent gap fixes simultaneously
+5. **Re-verification**: Validate gap resolution and detect any new gaps introduced
+6. **Iteration**: Continue until comprehensive review finds no remaining gaps
 
-VALIDATE [shared-intelligence-effectiveness] through [universal-assessment] and [performance-verification].
-
-### Universal Success Criteria
-- **Dimensional Compliance**: [6-dimension-framework] adherence across all [command-operations]
-- **Performance Excellence**: [Efficiency-optimization] through [parallel-execution] and [resource-coordination]
-- **Quality Integration**: [Standards-compliance] through [systematic-verification] and [continuous-improvement]
-- **Cross-Command Consistency**: [Universal-application] of [shared-intelligence-patterns] across all operations
-
-### Excellence Integration
-- **TB001 Excellence**: [Universal-tool-parallelization] through [simultaneous-execution] and [performance-optimization]
-- **AM001 Excellence**: [Universal-specialist-assignment] through [systematic-delegation] and [capability-assessment]
-- **PE001 Excellence**: [Universal-parallel-planning] through [atomic-unit-decomposition] and [dependency-challenge]
-- **RP001 Excellence**: [Universal-research-protocols] through [comprehensive-discovery] and [parallel-exploration]
-- **AR001 Excellence**: [Universal-recursion-prevention] through [flat-hierarchy-maintenance] and [constraint-enforcement]
-- **OB001 Excellence**: [Universal-operation-batching] through [strategic-grouping] and [efficiency-optimization]
-
-**Cross-Dimensional Excellence Integration**:
-- **Multi-Dimensional Coordination**: [Systematic-interdependency-management] across all [framework-dimensions]
-- **Universal Performance Optimization**: [Efficiency-enhancement] through [integrated-coordination] and [resource-optimization]
-- **Comprehensive Quality Assurance**: [Excellence-verification] through [multi-dimensional-assessment] and [continuous-improvement]
+### Integration Requirements
+- **Post-Specialist-Work**: MANDATORY step after specialist completes any work
+- **Pre-User-Reporting**: Must complete before reporting results to user
+- **Parallel Execution**: Run all detection streams simultaneously for efficiency
+- **Specialist Coordination**: Use Task tool for all gap resolution work
+- **Documentation**: Update all relevant documentation to reflect gap resolutions
+</gap_resolution_intelligence>
