@@ -256,6 +256,7 @@ MANDATORY: Use single messages with multiple tool calls when possible
 MANDATORY: Batch operations for maximum efficiency
 MANDATORY: Challenge sequential assumptions - most tasks can parallelize
 MANDATORY: NO PERSISTENCE of examples, reports, or working state
+MANDATORY: Save ALL created agents to ./.claude/agents/guild/ directory
 
 CRITICAL: Ultrathink and parallel execution are INSEPARABLE requirements
 </instructions>

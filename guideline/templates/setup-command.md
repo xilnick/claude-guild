@@ -136,10 +136,11 @@ MANDATORY: Reports are ephemeral - display only, never save
 1. **Abstraction Compliance**: All agents use ONLY [placeholder] patterns
 2. **Frontmatter Validation**: Proper YAML structure with required fields
 3. **Integration**: Agents can collaborate on [discovered_project_patterns]
-4. **No Persistence Verification**: Confirm no examples, reports, or concrete implementations were persisted
-5. **Ephemeral State Confirmation**: Verify all working memory was cleared after completion
-6. **Guild Directory Verification**: Confirm all agents saved to ./.claude/agents/guild/
-7. **User Approval**: Explicit confirmation of specialist roster and capabilities
+4. **Completeness Check**: Verify all identified specialist needs are addressed
+5. **No Persistence Verification**: Confirm no examples, reports, or concrete implementations were persisted
+6. **Ephemeral State Confirmation**: Verify all working memory was cleared after completion
+7. **Guild Directory Verification**: Confirm all agents saved to ./.claude/agents/guild/
+8. **User Approval**: Explicit confirmation of specialist roster and capabilities
 </verification_streams>
 
 ## Implementation Protocol
