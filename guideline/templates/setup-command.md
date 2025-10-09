@@ -15,6 +15,13 @@ MANDATORY: Use Task tool for ALL work delegation. Never execute directly.
 MANDATORY: Default to parallel execution unless explicit dependencies exist.
 MANDATORY: Create specialists based on evidence, not assumptions.
 MANDATORY: Generated agents MUST use ONLY [placeholder] patterns - NO specific examples or code structures.
+
+CRITICAL FILE CREATION RESTRICTIONS:
+- ✅ **ALLOWED**: ONLY agent files in ./.claude/agents/guild/ directory
+- ❌ **FORBIDDEN**: Reports, analysis documents, project summaries, examples, documentation
+- ❌ **FORBIDDEN**: Temporary files, working notes, discovery results files, recommendations files
+- **DISPLAY ONLY**: Present ALL discovery, analysis, and recommendations in conversation, NEVER save to files
+- **IN-MEMORY ONLY**: ALL working state, discovery results, and analysis are ephemeral, cleared after completion
 </critical>
 
 <purpose>
@@ -108,10 +115,15 @@ Each generated specialist MUST contain ONLY:
 - Keep agents focused through [abstract_boundaries]
 - Include [collaboration_protocols] in placeholder form
 - Generate minimum viable abstracted content only
-- NEVER persist concrete examples or implementations
-- Agent templates only - no saved examples
-- MANDATORY directory: ./.claude/agents/guild/ 
+- MANDATORY directory: ./.claude/agents/guild/
 - ALWAYS use guild subdirectory for all generated agents
+
+CRITICAL FILE CREATION RESTRICTIONS:
+- ONLY create agent files in ./.claude/agents/guild/ directory
+- NEVER persist discovery reports, analysis documents, or recommendations
+- NEVER create project summary files, documentation, or examples
+- ALL discovery results and analysis displayed in conversation only
+- NO temporary files, working notes, or intermediate artifacts
 </creation_requirements>
 
 </phase_3>
@@ -121,11 +133,18 @@ Each generated specialist MUST contain ONLY:
 **Display Created Specialists and Usage Guidance (EPHEMERAL - NO PERSISTENCE)**
 
 <reporting_structure>
-MANDATORY: Reports are ephemeral - display only, never save
-1. **Specialist Inventory**: List created agents with [expertise_areas] (display only)
-2. **Discovery Summary**: Key [project_characteristics] found (display only)
-3. **Usage Patterns**: How to leverage [specialist_capabilities] (display only)
-4. **Integration Guidance**: [coordination_protocols] between specialists (display only)
+CRITICAL: ALL reports are ephemeral - DISPLAY ONLY, NEVER SAVE TO FILES
+1. **Specialist Inventory**: List created agents with [expertise_areas] (DISPLAY ONLY - NO PERSISTENCE)
+2. **Discovery Summary**: Key [project_characteristics] found (DISPLAY ONLY - NO PERSISTENCE)
+3. **Usage Patterns**: How to leverage [specialist_capabilities] (DISPLAY ONLY - NO PERSISTENCE)
+4. **Integration Guidance**: [coordination_protocols] between specialists (DISPLAY ONLY - NO PERSISTENCE)
+
+FORBIDDEN FILE CREATION:
+- ❌ NO discovery-report.md or project-analysis.md files
+- ❌ NO agent-inventory.md or specialist-roster.md files
+- ❌ NO recommendations.md or usage-guide.md files
+- ❌ NO temporary artifacts, working notes, or summary files
+- ✅ ONLY agent files in ./.claude/agents/guild/ are permitted
 </reporting_structure>
 
 </phase_4>
@@ -137,10 +156,11 @@ MANDATORY: Reports are ephemeral - display only, never save
 2. **Frontmatter Validation**: Proper YAML structure with required fields
 3. **Integration**: Agents can collaborate on [discovered_project_patterns]
 4. **Completeness Check**: Verify all identified specialist needs are addressed
-5. **No Persistence Verification**: Confirm no examples, reports, or concrete implementations were persisted
-6. **Ephemeral State Confirmation**: Verify all working memory was cleared after completion
-7. **Guild Directory Verification**: Confirm all agents saved to ./.claude/agents/guild/
-8. **User Approval**: Explicit confirmation of specialist roster and capabilities
+5. **CRITICAL File Creation Audit**: MANDATORY check that ONLY agent files were created, NO reports/analysis/documentation
+6. **CRITICAL No Persistence Verification**: Confirm ZERO non-agent files were persisted (no discovery reports, summaries, guides)
+7. **Ephemeral State Confirmation**: Verify all working memory, discovery results, and analysis were display-only
+8. **Guild Directory Verification**: Confirm all agents saved to ./.claude/agents/guild/
+9. **User Approval**: Explicit confirmation of specialist roster and capabilities
 </verification_streams>
 
 ## Implementation Protocol
@@ -166,8 +186,11 @@ If user specifies additional specialists:
 ❌ Generic specialists without [project_context] embedding
 ❌ Including specific examples or code structures in generated agents
 ❌ Using concrete references instead of [placeholder] abstractions
-❌ Persisting examples, reports, or concrete implementations
-❌ Saving working state or scratchpad data to files
+❌ **CRITICAL**: Persisting ANY discovery reports, analysis documents, or project summaries to files
+❌ **CRITICAL**: Creating documentation files, usage guides, or recommendation files
+❌ **CRITICAL**: Saving temporary artifacts, working notes, or intermediate results
+❌ **CRITICAL**: Creating ANY files except agent files in ./.claude/agents/guild/
+❌ **CRITICAL**: Saving working state or scratchpad data to files
 </anti_patterns>
 
 <critical>
@@ -180,6 +203,12 @@ KEY CONSTRAINTS:
 - ALWAYS embed [discovered_patterns] in abstracted placeholder form
 - ALWAYS save to ./.claude/agents/guild/ (MANDATORY path)
 - NEVER include concrete examples or specific implementations in generated agents
+
+CRITICAL FILE CREATION RULES:
+- ONLY create agent files in ./.claude/agents/guild/ directory
+- NEVER persist reports, analysis, summaries, documentation, or examples
+- ALL discovery and analysis results are DISPLAY ONLY in conversation
+- NO temporary files, working notes, or non-agent artifacts permitted
 </critical>
 
 {SHARED_INTELLIGENCE}

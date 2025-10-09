@@ -37,11 +37,14 @@
 </dynamic_agents>
 
 <no_persistence>
-  1. **Never save examples** - All examples must be ephemeral, display-only
-  2. **Never save reports** - Reports are presented to user but never persisted to files
-  3. **Memory-only state** - Keep all working state in memory only, cleared after completion
-  4. **No implementation persistence** - Never save concrete code examples or implementation details
-  5. **Ephemeral scratchpads** - Working memory is temporary and never persisted
+  1. **NEVER persist reports** - Analysis, validation, and verification reports MUST be displayed to user only, NEVER saved to files
+  2. **NEVER persist non-code artifacts** - Documentation, examples, summaries, and working state are FORBIDDEN from file persistence
+  3. **ONLY create codebase files** - The ONLY files that can be created/modified are actual code, configuration, or project files that are part of the codebase
+  4. **NO analysis files** - Gap analysis, requirements documentation, verification results MUST remain in-memory only
+  5. **NO temporary garbage** - No temporary files, working notes, scratch files, or intermediate artifacts
+  6. **Memory-only state** - Keep ALL working state, reports, and analysis in memory only, cleared after completion
+  7. **Ephemeral scratchpads** - All working memory is temporary and NEVER persisted to filesystem
+  8. **Display-only outputs** - Present results to user in conversation only, NEVER write to files unless explicitly part of codebase
 </no_persistence>
 
 ## Implementation Patterns
@@ -53,7 +56,7 @@ Analyze → Find/Create Dynamic Specialist → Delegate → Verify → Gap Detec
 - MANDATORY: Always use subagents (create if none match)
 - Batch independent operations
 - MANDATORY: Detect and implement gaps after completion
-- Report results clearly (ephemeral display only - NO PERSISTENCE)
+- Report results clearly (DISPLAY ONLY - NEVER PERSIST REPORTS OR ANALYSIS TO FILES)
   </workflow_pattern>
 
 ## Deep Reasoning & Research Protocol
@@ -99,8 +102,8 @@ Discover → Identify Needs → Create Specialists → Save to Guild Directory
 - Parallel discovery operations
 - Create only necessary specialists
 - MANDATORY: Save ALL agents to ./.claude/agents/guild/ directory
-- Display results only - NO PERSISTENCE of examples or concrete implementations
-- Agent creation saves templates only, no saved examples
+- MANDATORY: ONLY save agent files - NO reports, analysis, examples, or documentation files
+- Display all analysis and recommendations to user - NEVER persist non-agent artifacts
   </setup_pattern>
 
 <optimization>

@@ -93,13 +93,37 @@
 - **Ultrathink Enforcement**: Validate all Task tool calls include ultrathink before execution
 
 ### No Persistence Protocol
-- **Never Save Examples**: All examples must be ephemeral and display-only
-- **Never Save Reports**: Reports are presented to user but never persisted to files
-- **Memory-Only State**: Keep all working state in memory only, cleared after task completion
-- **No Implementation Persistence**: Never save concrete code examples or implementation details
-- **Ephemeral Scratchpads**: Working memory is temporary and never persisted
-- **Display-Only Output**: All outputs are for immediate display, never file storage
-- **Clear After Completion**: All temporary working state cleared when task finishes
+**CRITICAL: ONLY codebase files may be created/modified. ALL other outputs are display-only.**
+
+<file_creation_restrictions>
+**ALLOWED (Codebase Files Only)**:
+- Source code files (.js, .ts, .py, .java, etc.)
+- Configuration files (package.json, tsconfig.json, .env, etc.)
+- Build files (Makefile, Dockerfile, etc.)
+- Test files (*.test.js, *.spec.ts, etc.)
+- Project files that are part of the actual working codebase
+
+**FORBIDDEN (NO Persistence)**:
+- ❌ Analysis reports (gap-analysis.md, validation-report.md, etc.)
+- ❌ Documentation files unless explicitly requested by user (README.md, ARCHITECTURE.md, etc.)
+- ❌ Verification summaries (test-results.txt, coverage-report.md, etc.)
+- ❌ Working notes (notes.md, scratchpad.txt, TODO.md, etc.)
+- ❌ Examples or sample implementations (example.js, sample-config.json, etc.)
+- ❌ Intermediate artifacts (temp.json, working-data.csv, etc.)
+- ❌ Any file not explicitly part of the codebase being worked on
+</file_creation_restrictions>
+
+<persistence_enforcement>
+**Mandatory Rules**:
+1. **NEVER persist reports** - ALL analysis, validation, and verification reports MUST be displayed to user only
+2. **NEVER persist documentation** - Unless explicitly requested, no .md files or documentation artifacts
+3. **NEVER persist examples** - All examples and demonstrations are display-only, never saved
+4. **NEVER persist working state** - Scratchpads, notes, and intermediate results remain in-memory only
+5. **NEVER persist analysis** - Gap analysis, requirements, verification results are ephemeral
+6. **ALWAYS clear after completion** - All temporary state cleared when task finishes
+7. **ONLY create codebase files** - The ONLY exception is actual code/config files needed for the project
+8. **Display to user instead** - Present ALL analysis and reports in conversation, not in files
+</persistence_enforcement>
 
 ### Guild Directory Protocol
 - **Mandatory Save Location**: ALL agents MUST be saved to ./.claude/agents/guild/ directory
@@ -153,10 +177,14 @@ MANDATORY: Use single messages with multiple tool calls when possible
 MANDATORY: Batch operations for maximum efficiency
 MANDATORY: Apply [research_intelligence] to all decisions and approaches
 MANDATORY: Leverage [optimal_mcp_tools] identified in research phase
-MANDATORY: Batch operations for maximum efficiency using [discovered_patterns]
-MANDATORY: Use single messages with multiple tool calls when possible
 MANDATORY: Apply [discovered_patterns] and [best_practices_from_research] consistently
-MANDATORY: NO PERSISTENCE of examples, reports, or working state
+
+CRITICAL FILE CREATION RESTRICTIONS:
+- ONLY create/modify actual codebase files (source code, config, tests)
+- NEVER persist reports, analysis, verification summaries, or documentation
+- NEVER create temporary files, examples, or working notes
+- ALL outputs displayed to user in conversation, not saved to files
+- Present ALL findings in-memory only, cleared after task completion
 
 Research-informed requirements:
 - [requirement-1]: [research_based_constraint_or_approach]
@@ -217,8 +245,9 @@ CLEARED AFTER TASK COMPLETION
 - **Evidence-Based Gap Detection**: MANDATORY systematic review using [comprehensive_understanding] for missed components
 - **Research-Driven Gap Resolution**: Implement discovered gaps via specialist delegation with [research_intelligence]
 - **Intelligent Verification Loop**: Continue gap detection leveraging [research_findings] until no gaps remain
-- **No Persistence Verification**: Confirm no examples, reports, or state was persisted
-- **Ephemeral State Confirmation**: Verify all working memory was cleared after completion
+- **CRITICAL No Persistence Verification**: MANDATORY check that ZERO non-codebase files were created
+- **File Creation Audit**: Verify ONLY source/config/test files exist, NO reports/analysis/documentation artifacts
+- **Ephemeral State Confirmation**: Verify all working memory, reports, and analysis were display-only, never persisted
 - **Research-Validated Success**: Confirm results meet [research_informed_success_criteria] and user expectations
 
 ## Anthropic Best Practices Integration

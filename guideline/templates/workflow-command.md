@@ -42,6 +42,13 @@ ultrathink $ARGUMENTS
 **NEVER execute work directly** - ALL tasks MUST be delegated through Task tool
 **DEFAULT to parallel execution** - Batch independent operations simultaneously
 **Evidence-based specialist selection** - Create specialists from discovered patterns
+
+**CRITICAL FILE CREATION RESTRICTIONS**:
+- ✅ **ALLOWED**: ONLY actual codebase files (source code, config, tests, build files)
+- ❌ **FORBIDDEN**: Reports, analysis documents, verification summaries, examples, documentation (unless explicitly requested)
+- ❌ **FORBIDDEN**: Temporary files, working notes, scratchpads, intermediate artifacts
+- **DISPLAY ONLY**: Present ALL analysis, reports, and verification results in conversation, NEVER save to files
+- **IN-MEMORY ONLY**: ALL working state, gap analysis, and verification results are ephemeral, cleared after completion
 </critical>
 
 ## Core Architecture
@@ -255,8 +262,14 @@ MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially (
 MANDATORY: Use single messages with multiple tool calls when possible
 MANDATORY: Batch operations for maximum efficiency
 MANDATORY: Challenge sequential assumptions - most tasks can parallelize
-MANDATORY: NO PERSISTENCE of examples, reports, or working state
 MANDATORY: Save ALL created agents to ./.claude/agents/guild/ directory
+
+CRITICAL FILE CREATION RESTRICTIONS:
+- ONLY create/modify actual codebase files (source code, config, tests)
+- NEVER persist reports, analysis, verification summaries, or documentation
+- NEVER create temporary files, examples, or working notes
+- ALL outputs displayed to user in conversation, not saved to files
+- Present ALL findings in-memory only, cleared after task completion
 
 CRITICAL: Ultrathink and parallel execution are INSEPARABLE requirements
 </instructions>
@@ -309,13 +322,14 @@ CLEARED AFTER TASK COMPLETION
 ❌ **CRITICAL**: Subagent prompts missing "MANDATORY: Parallelize ALL independent tool calls"
 ❌ **CRITICAL**: Any delegation allowing sequential tool execution
 ❌ **CRITICAL**: Subagents executing tools one-by-one instead of batching
-❌ CRITICAL: Using general-purpose agents instead of creating dynamic specialists
-❌ CRITICAL: Falling back to direct execution when no agent matches
-❌ CRITICAL: Saving examples or reports to files
-❌ CRITICAL: Persisting scratchpad or working state
-❌ CRITICAL: Creating concrete implementation examples that persist
-❌ CRITICAL: Reporting completion without mandatory implementation gap verification
-❌ CRITICAL: Accepting incomplete implementations without gap detection and resolution
+❌ **CRITICAL**: Using general-purpose agents instead of creating dynamic specialists
+❌ **CRITICAL**: Falling back to direct execution when no agent matches
+❌ **CRITICAL**: Persisting ANY reports, analysis, or verification documents to files
+❌ **CRITICAL**: Creating documentation, examples, or working notes files
+❌ **CRITICAL**: Saving temporary artifacts, scratchpads, or intermediate results
+❌ **CRITICAL**: Creating ANY files that are not actual codebase files (source/config/test)
+❌ **CRITICAL**: Reporting completion without mandatory implementation gap verification
+❌ **CRITICAL**: Accepting incomplete implementations without gap detection and resolution
 </avoid>
 
 <instruction>
