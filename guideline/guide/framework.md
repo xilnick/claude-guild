@@ -11,8 +11,9 @@
 <specialists>
   1. **Always delegate** - Never execute directly, use Task tool
   2. **Match expertise** - Route to appropriate specialist agent
-  3. **Dynamic agent creation** - Create new specialists when no existing match
-  4. **Mandatory specialists** - Always use subagents, never direct execution
+  3. **Ephemeral specialists (workflow)** - Create temporary specialists via Task tool when no existing match
+  4. **Persistent agents (setup)** - Create permanent agent files in `.claude/agents/guild/` via setup command
+  5. **Mandatory specialists** - Always use subagents, never direct execution
 </specialists>
 
 <parallelization>
@@ -27,14 +28,16 @@
   3. **Context-aware** - Embed discovered patterns in specialist prompts
 </discovery>
 
-<dynamic_agents>
-  1. **Create when needed** - If no existing agent matches task, create dynamic specialist
-  2. **Task-specific expertise** - Generate agents with precise capabilities for discovered requirements
-  3. **Project-aware context** - Embed discovered patterns, technologies, and conventions
-  4. **Ultrathink mandatory** - ALL dynamic agents MUST use thinking_mode: ultrathink
-  5. **Subagent ultrathink enforcement** - EVERY Task tool call MUST explicitly include thinking_mode: ultrathink parameter
-  6. **No exceptions** - Never delegate to subagents without ultrathink configuration
-</dynamic_agents>
+<ephemeral_specialists>
+  1. **Workflow creates ephemeral specialists** - Use Task tool to create temporary, in-session specialists
+  2. **Setup creates persistent agents** - Use setup command to save permanent agent files to `.claude/agents/guild/`
+  3. **Task-specific expertise** - Ephemeral specialists have precise capabilities for discovered requirements
+  4. **Project-aware context** - Embed discovered patterns, technologies, and conventions in Task tool prompts
+  5. **Ultrathink mandatory** - ALL Task tool invocations MUST use thinking_mode: ultrathink
+  6. **Subagent ultrathink enforcement** - EVERY Task tool call MUST explicitly include thinking_mode: ultrathink parameter
+  7. **No exceptions** - Never delegate to subagents without ultrathink configuration
+  8. **No file creation from workflow** - Workflow NEVER saves agent files, only setup does
+</ephemeral_specialists>
 
 <no_persistence>
   1. **NEVER persist reports** - Analysis, validation, and verification reports MUST be displayed to user only, NEVER saved to files
@@ -50,13 +53,14 @@
 ## Implementation Patterns
 
 <workflow_pattern>
-Analyze → Find/Create Dynamic Specialist → Delegate → Verify → Gap Detection → Gap Resolution → Report
+Analyze → Find/Create Ephemeral Specialist → Delegate → Verify → Gap Detection → Gap Resolution → Report
 - Use Task tool for ALL work delegation
-- Create dynamic specialists for unmatched tasks
-- MANDATORY: Always use subagents (create if none match)
+- Create ephemeral specialists via Task tool for unmatched tasks (NOT persistent agent files)
+- MANDATORY: Always use Task tool delegation (create ephemeral specialist if none match)
 - Batch independent operations
 - MANDATORY: Detect and implement gaps after completion
 - Report results clearly (DISPLAY ONLY - NEVER PERSIST REPORTS OR ANALYSIS TO FILES)
+- NEVER save agent files from workflow - use `/guild:setup` for persistent agents
   </workflow_pattern>
 
 ## Deep Reasoning & Research Protocol

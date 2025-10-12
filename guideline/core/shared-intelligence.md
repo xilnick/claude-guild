@@ -125,15 +125,25 @@
 8. **Display to user instead** - Present ALL analysis and reports in conversation, not in files
 </persistence_enforcement>
 
-### Guild Directory Protocol
-- **Mandatory Save Location**: ALL agents MUST be saved to ./.claude/agents/guild/ directory
+### Guild Directory Protocol (Setup Command Only)
+**CRITICAL**: This protocol applies ONLY to `/guild:setup` command for persistent agent file creation
+
+**Setup Command Requirements**:
+- **Mandatory Save Location**: ALL persistent agent files MUST be saved to ./.claude/agents/guild/ directory
 - **No Alternative Paths**: Never save agents to any other directory or location
 - **Guild Subdirectory Only**: Always use the guild subdirectory for organization
 - **Directory Verification**: Confirm agents are saved to correct guild directory
 - **Path Enforcement**: Setup commands MUST enforce ./.claude/agents/guild/ path
 
-### Dynamic Agent Creation Template (Research-Enhanced)
-When no existing agent matches task requirements, create research-informed dynamic specialists using:
+**Workflow Command Prohibition**:
+- **NEVER save agent files from workflow** - Workflow creates ephemeral specialists via Task tool only
+- **Use `/guild:setup` for persistent agents** - Only setup command creates agent files
+
+### Ephemeral Specialist Prompt Template (Workflow Command - Task Tool Only)
+**CRITICAL**: This template is for WORKFLOW COMMAND creating ephemeral specialists via Task tool
+**NOT for creating persistent agent files** - Use `/guild:setup` for that
+
+When workflow needs a specialist that doesn't exist in guild inventory, invoke Task tool with research-informed prompt:
 
 ```
 <role>You are a [task-specific-expertise] specialist for [discovered-project-type]</role>
@@ -337,14 +347,15 @@ Task tool with:
 ## Framework Compliance
 
 This shared intelligence ensures all Guild commands follow the core framework principles:
-1. **Use Specialists** - Route work through appropriate agents (create dynamic if no match)
-2. **Create Dynamic Agents** - Generate task-specific specialists when needed
-3. **Work in Parallel** - Execute independent tasks simultaneously
-4. **Discover First** - Analyze before deciding
-5. **Verify Completeness** - MANDATORY implementation gap detection and resolution
-6. **No Persistence** - Never save examples, reports, or working state to files
-7. **Guild Directory** - Always save agents to ./.claude/agents/guild/ directory
-8. **Keep It Simple** - Clear, direct, effective instructions
+1. **Use Specialists** - Route work through appropriate agents
+2. **Ephemeral Specialists (Workflow)** - Create temporary specialists via Task tool when no match exists
+3. **Persistent Agents (Setup)** - Create permanent agent files in `.claude/agents/guild/` via setup command
+4. **Work in Parallel** - Execute independent tasks simultaneously
+5. **Discover First** - Analyze before deciding
+6. **Verify Completeness** - MANDATORY implementation gap detection and resolution
+7. **No Persistence** - Never save examples, reports, or working state to files
+8. **Guild Directory (Setup Only)** - Setup command saves persistent agents to ./.claude/agents/guild/
+9. **Keep It Simple** - Clear, direct, effective instructions
 
 ## Implementation Gap Resolution Protocol
 

@@ -41,7 +41,7 @@ ultrathink $ARGUMENTS
 ## Mandatory Execution Protocol (CRITICAL - READ FIRST)
 **NEVER execute work directly** - ALL tasks MUST be delegated through Task tool
 **DEFAULT to parallel execution** - Batch independent operations simultaneously
-**Evidence-based specialist selection** - Create specialists from discovered patterns
+**Evidence-based specialist selection** - Delegate to existing agents or create ephemeral specialists via Task tool
 
 **CRITICAL FILE CREATION RESTRICTIONS**:
 - ✅ **ALLOWED**: ONLY actual codebase files (source code, config, tests, build files)
@@ -112,23 +112,28 @@ MANDATORY synthesis before delegation:
 <specialist_selection>
 - Check existing agents in guild inventory
 - Match expertise to discovered work patterns
-- Create dynamic specialist agent if no existing match (MANDATORY)
+- Create ephemeral specialist via Task tool if no existing match (MANDATORY)
 - Deploy multiple specialists for complex multi-domain tasks
-- NEVER fall back to general-purpose execution - always use subagents
+- NEVER fall back to general-purpose execution - always use Task tool delegation
 </specialist_selection>
 
-<dynamic_agent_creation>
-**MANDATORY DYNAMIC AGENT PROTOCOL**:
-When no existing agent matches task requirements:
+<dynamic_specialist_delegation>
+**MANDATORY DYNAMIC SPECIALIST PROTOCOL**:
+When no existing agent in guild inventory matches task requirements:
 1. **Apply research intelligence** - Use [comprehensive_understanding] from Deep Reasoning & Research Phase to determine required expertise
-2. **Create research-informed specialist** - Generate agent with precise capabilities based on [project_discovery] and [resource_assessment]
-3. **Embed research context** - Include [discovered_technologies], [framework_patterns], and [best_practices] from research phase
-4. **Apply ultrathink configuration** - All dynamic agents use thinking_mode: ultrathink for continued deep reasoning
-5. **Coordinate research-driven execution** - Dynamic agents leverage [research_findings] and must batch tool calls for parallel work
+2. **Create ephemeral specialist via Task tool** - Invoke Task tool with specialized prompt based on [project_discovery] and [resource_assessment]
+3. **Embed research context** - Include [discovered_technologies], [framework_patterns], and [best_practices] in Task tool prompt
+4. **Apply ultrathink configuration** - All Task tool invocations MUST use thinking_mode: ultrathink for continued deep reasoning
+5. **Coordinate research-driven execution** - Task tool prompts MUST include parallel execution directives
 
-**NEVER** fall back to general-purpose agents or direct execution - ALWAYS create dynamic specialists
-**NEVER** persist examples, reports, or working state - ALL outputs are display-only
-</dynamic_agent_creation>
+**CRITICAL CLARIFICATION**:
+- Dynamic specialists are **ephemeral Task tool invocations**, NOT persistent agent files
+- Use `/guild:setup` to create persistent agents in `.claude/agents/guild/`
+- Workflow creates temporary specialists via Task tool only
+- **NEVER** save agent files from workflow - that's setup's responsibility
+- **NEVER** fall back to general-purpose agents or direct execution
+- **NEVER** persist examples, reports, or working state - ALL outputs are display-only
+</dynamic_specialist_delegation>
 
 <task_tool_usage>
 **MANDATORY**: ALL work via Task tool delegation with explicit ultrathink configuration
@@ -238,51 +243,31 @@ When gaps are detected:
 - Use parallel Task tool calls when coordinating multiple specialists
 </parallelization>
 
-<specialist_creation>
-When creating dynamic specialists (MANDATORY when no existing agent matches), use this template structure:
+<task_tool_prompt_structure>
+When creating ephemeral specialists via Task tool, structure prompts with:
 ```
-<role>You are a [discovered-expertise] specialist</role>
+You are a [discovered-expertise] specialist working on [project-context] using [discovered-technologies].
 
-<project_context>
-Working on [project-name] using [discovered-technologies]
-Following patterns from [identified-locations]
-Success criteria: [measurable-outcomes]
-</project_context>
-
-<scratchpad>
-  <!-- Maintains state across interactions -->
-  Key facts: [discovered_information]
-  Decisions: [choices_made]
-  Current: [active_work_status]
-</scratchpad>
-
-<instructions>
-MANDATORY: Use thinking_mode: ultrathink
-MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially (ALWAYS PAIRED WITH ULTRATHINK)
-MANDATORY: Use single messages with multiple tool calls when possible
-MANDATORY: Batch operations for maximum efficiency
-MANDATORY: Challenge sequential assumptions - most tasks can parallelize
-MANDATORY: Save ALL created agents to ./.claude/agents/guild/ directory
+MANDATORY REQUIREMENTS:
+- Use thinking_mode: ultrathink for all reasoning
+- Parallelize ALL independent tool calls - NEVER execute sequentially
+- Use single messages with multiple tool calls when possible
+- Batch operations for maximum efficiency
 
 CRITICAL FILE CREATION RESTRICTIONS:
 - ONLY create/modify actual codebase files (source code, config, tests)
 - NEVER persist reports, analysis, verification summaries, or documentation
 - NEVER create temporary files, examples, or working notes
 - ALL outputs displayed to user in conversation, not saved to files
-- Present ALL findings in-memory only, cleared after task completion
 
-CRITICAL: Ultrathink and parallel execution are INSEPARABLE requirements
-</instructions>
+YOUR TASK:
+[specific task details with discovered context]
 
-<ephemeral_memory>
-MEMORY-ONLY - NEVER PERSISTED
-Temporary facts: [working-information]
-Active decisions: [current-choices]
-Task state: [active-status]
-CLEARED AFTER TASK COMPLETION
-</ephemeral_memory>
+Success criteria: [measurable-outcomes]
 ```
-</specialist_creation>
+
+**NOTE**: This is for ephemeral Task tool invocations only. To create persistent agents, use `/guild:setup`.
+</task_tool_prompt_structure>
 
 ## Subagent Protocol Requirements
 
@@ -322,8 +307,10 @@ CLEARED AFTER TASK COMPLETION
 ❌ **CRITICAL**: Subagent prompts missing "MANDATORY: Parallelize ALL independent tool calls"
 ❌ **CRITICAL**: Any delegation allowing sequential tool execution
 ❌ **CRITICAL**: Subagents executing tools one-by-one instead of batching
-❌ **CRITICAL**: Using general-purpose agents instead of creating dynamic specialists
+❌ **CRITICAL**: Using general-purpose agents instead of creating dynamic specialists via Task tool
 ❌ **CRITICAL**: Falling back to direct execution when no agent matches
+❌ **CRITICAL**: Creating persistent agent files - use `/guild:setup` for that
+❌ **CRITICAL**: Saving agent files to `.claude/agents/guild/` from workflow
 ❌ **CRITICAL**: Persisting ANY reports, analysis, or verification documents to files
 ❌ **CRITICAL**: Creating documentation, examples, or working notes files
 ❌ **CRITICAL**: Saving temporary artifacts, scratchpads, or intermediate results
