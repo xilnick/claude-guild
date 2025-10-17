@@ -18,9 +18,10 @@
     "validate-guidelines": "node -e \"console.log('✅ Guideline structure validation passed')\"",
     "validate-structure": "node -e \"const fs=require('fs-extra'); const checks=['guideline/core','guideline/templates','guideline/guide','install.js']; const valid=checks.every(p=>fs.existsSync(p)); console.log(valid?'✅ Project structure validation passed':'❌ Missing required files'); process.exit(valid?0:1);\"",
     "lint": "echo 'No linting configured yet'",
-    "test": "npm run validate && npm run test-install",
+    "test": "npm run validate && npm run test:patterns && npm run test-install",
+    "test:patterns": "node tests/test-ultrathink-parallel-enforcement.js",
     "test:build": "npm run test-install",
-    "test:all": "npm run validate && npm run test-install",
+    "test:all": "npm run validate && npm run test:patterns && npm run test-install",
 
     "version-patch": "npm version patch",
     "version-minor": "npm version minor",

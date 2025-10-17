@@ -7,6 +7,10 @@ thinking_mode: ultrathink
 description: "Execute tasks through specialist coordination"
 ---
 
+MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+MANDATORY: Use single messages with multiple tool calls when possible
+MANDATORY: Batch operations for maximum efficiency
+
 ## Command Entry Point
 
 <deep_reasoning_research>
@@ -22,7 +26,10 @@ Execute all research streams in parallel via Task tool (ALL with thinking_mode: 
 
 **CRITICAL**: EVERY Task tool call in this phase MUST include thinking_mode: ultrathink parameter
 **INSEPARABLE**: Ultrathink MUST ALWAYS be paired with parallel execution directives
-**MANDATORY PAIRING**: Every "thinking_mode: ultrathink" MUST include "Parallelize ALL independent tool calls"
+**MANDATORY PAIRING**: Every "thinking_mode: ultrathink" MUST include these three directives:
+- MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+- MANDATORY: Use single messages with multiple tool calls when possible
+- MANDATORY: Batch operations for maximum efficiency
 
 ### Deep Reasoning Framework
 <reasoning_structure>
@@ -72,8 +79,10 @@ Execute ALL research streams simultaneously via Task tool (ALL with thinking_mod
 - **Requirement Analysis**: Decompose user request into specific, actionable work components → Task tool with ultrathink
 
 **MANDATORY**: All Task tool invocations MUST explicitly include thinking_mode: ultrathink
-**ALWAYS PAIRED**: Every ultrathink usage MUST include parallel tool execution directives
-**INSEPARABLE REQUIREMENTS**: thinking_mode: ultrathink + "Parallelize ALL independent tool calls" together
+**ALWAYS PAIRED**: Every ultrathink usage MUST include these parallel tool execution directives:
+- MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+- MANDATORY: Use single messages with multiple tool calls when possible
+- MANDATORY: Batch operations for maximum efficiency
 </research_execution>
 
 <synthesis_requirements>
@@ -117,6 +126,26 @@ MANDATORY synthesis before delegation:
 - NEVER fall back to general-purpose execution - always use Task tool delegation
 </specialist_selection>
 
+<available_agents>
+### Guild Agent Inventory
+{AGENT_INVENTORY}
+
+**Specialist Selection Protocol**:
+1. **Check existing agents** - Review inventory above for matching specialists
+2. **Exact match found** - Delegate to existing agent via standard agent invocation
+3. **No match found** - Create ephemeral specialist via Task tool with ultrathink AND parallel execution directives:
+   - MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+   - MANDATORY: Use single messages with multiple tool calls when possible
+   - MANDATORY: Batch operations for maximum efficiency
+4. **NEVER** - Use direct execution or fall back to general-purpose without specialization
+
+**Selection Criteria**:
+- Match task domain to agent expertise
+- Consider agent's configured capabilities
+- Prefer existing agents to reduce context overhead
+- Create dynamic specialists when task requires unique expertise
+</available_agents>
+
 <dynamic_specialist_delegation>
 **MANDATORY DYNAMIC SPECIALIST PROTOCOL**:
 When no existing agent in guild inventory matches task requirements:
@@ -124,7 +153,10 @@ When no existing agent in guild inventory matches task requirements:
 2. **Create ephemeral specialist via Task tool** - Invoke Task tool with specialized prompt based on [project_discovery] and [resource_assessment]
 3. **Embed research context** - Include [discovered_technologies], [framework_patterns], and [best_practices] in Task tool prompt
 4. **Apply ultrathink configuration** - All Task tool invocations MUST use thinking_mode: ultrathink for continued deep reasoning
-5. **Coordinate research-driven execution** - Task tool prompts MUST include parallel execution directives
+5. **Coordinate research-driven execution** - Task tool prompts MUST include these parallel execution directives:
+   - MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+   - MANDATORY: Use single messages with multiple tool calls when possible
+   - MANDATORY: Batch operations for maximum efficiency
 
 **CRITICAL CLARIFICATION**:
 - Dynamic specialists are **ephemeral Task tool invocations**, NOT persistent agent files
@@ -139,10 +171,16 @@ When no existing agent in guild inventory matches task requirements:
 **MANDATORY**: ALL work via Task tool delegation with explicit ultrathink configuration
 
 **ULTRATHINK ENFORCEMENT**:
-- EVERY Task tool call MUST include thinking_mode: ultrathink parameter
-- ALL subagent prompts MUST include "MANDATORY: Use thinking_mode: ultrathink"
-- NO EXCEPTIONS - Zero tolerance for Task tool calls without ultrathink
-- Validate ultrathink configuration before executing any delegation
+- EVERY Task tool call MUST include thinking_mode: ultrathink parameter AND these parallel directives:
+  - MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+  - MANDATORY: Use single messages with multiple tool calls when possible
+  - MANDATORY: Batch operations for maximum efficiency
+- ALL subagent prompts MUST include "MANDATORY: Use thinking_mode: ultrathink" AND these parallel directives:
+  - MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+  - MANDATORY: Use single messages with multiple tool calls when possible
+  - MANDATORY: Batch operations for maximum efficiency
+- NO EXCEPTIONS - Zero tolerance for Task tool calls without ultrathink AND parallel execution
+- Validate ultrathink configuration AND parallel execution directives before executing any delegation
 
 **PARALLEL EXECUTION ENFORCEMENT**:
 - EVERY Task tool call MUST include explicit parallel execution directives
@@ -274,8 +312,11 @@ Success criteria: [measurable-outcomes]
 <subagent_protocol>
 **Ultrathink Requirements**:
 - Every Task tool invocation MUST specify thinking_mode: ultrathink
-- **MANDATORY PAIRING**: Every ultrathink MUST include parallel tool call directives  
-- **INSEPARABLE**: thinking_mode: ultrathink + "Parallelize ALL independent tool calls" always together
+- **MANDATORY PAIRING**: Every ultrathink MUST include these parallel tool call directives:
+  - MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+  - MANDATORY: Use single messages with multiple tool calls when possible
+  - MANDATORY: Batch operations for maximum efficiency
+- **INSEPARABLE**: thinking_mode: ultrathink + parallel execution directives always together
 - All subagents receive mandatory optimization instructions with ultrathink AND parallel execution
 
 **Parallel Execution**:
@@ -300,9 +341,12 @@ Success criteria: [measurable-outcomes]
 ❌ Vague or unstructured specialist instructions
 ❌ Skipping verification steps
 ❌ Missing context in delegation
-❌ **CRITICAL**: Task tool calls without thinking_mode: ultrathink parameter
-❌ **CRITICAL**: Subagent prompts without ultrathink requirement
-❌ **CRITICAL**: Any delegation that lacks explicit ultrathink configuration
+❌ **CRITICAL**: Task tool calls without thinking_mode: ultrathink parameter AND parallel directives:
+  - MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+  - MANDATORY: Use single messages with multiple tool calls when possible
+  - MANDATORY: Batch operations for maximum efficiency
+❌ **CRITICAL**: Subagent prompts without ultrathink requirement AND parallel directives
+❌ **CRITICAL**: Any delegation that lacks explicit ultrathink configuration AND parallel execution
 ❌ **CRITICAL**: Task tool calls without parallel execution directives
 ❌ **CRITICAL**: Subagent prompts missing "MANDATORY: Parallelize ALL independent tool calls"
 ❌ **CRITICAL**: Any delegation allowing sequential tool execution
@@ -322,7 +366,10 @@ Success criteria: [measurable-outcomes]
 <instruction>
 ## User Request Processing (Research-First Protocol)
 When user provides instructions:
-1. **MANDATORY Deep Reasoning & Research**: Execute comprehensive research phase via parallel Task tool delegation (ALL with thinking_mode: ultrathink)
+1. **MANDATORY Deep Reasoning & Research**: Execute comprehensive research phase via parallel Task tool delegation (ALL with thinking_mode: ultrathink AND these parallel directives):
+   - MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+   - MANDATORY: Use single messages with multiple tool calls when possible
+   - MANDATORY: Batch operations for maximum efficiency
 2. **Research Synthesis**: Combine findings from [project_analysis], [documentation_research], [web_intelligence], and [mcp_assessment]
 3. **Informed Intent Parsing**: Analyze user request with full context from [research_synthesis]
 4. **Research-Driven Delegation**: Route to appropriate specialists via Task tool with MANDATORY ultrathink configuration, enriched with [comprehensive_understanding]
@@ -336,7 +383,10 @@ When user provides instructions:
 <instruction>
 ## User Request Processing (CRITICAL - TASK EXECUTION INSTRUCTIONS)
 When user provides instructions, execute this research-first protocol:
-1. **MANDATORY Deep Reasoning & Research**: Execute comprehensive research phase via parallel Task tool delegation (ALL with thinking_mode: ultrathink)
+1. **MANDATORY Deep Reasoning & Research**: Execute comprehensive research phase via parallel Task tool delegation (ALL with thinking_mode: ultrathink AND these parallel directives):
+   - MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+   - MANDATORY: Use single messages with multiple tool calls when possible
+   - MANDATORY: Batch operations for maximum efficiency
 2. **Research Synthesis**: Combine findings from [project_analysis], [documentation_research], [web_intelligence], and [mcp_assessment]
 3. **Informed Intent Parsing**: Analyze user request with full context from [research_synthesis]
 4. **Research-Driven Delegation**: Route to appropriate specialists via Task tool with MANDATORY ultrathink configuration, enriched with [comprehensive_understanding]

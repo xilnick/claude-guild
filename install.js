@@ -164,17 +164,47 @@ async function generateAgentInventory(targetDir) {
   }
 }
 
+/**
+ * Format agent inventory for embedding in command templates
+ */
+function formatAgentInventory(inventory) {
+  if (!inventory || inventory.totalAgents === 0) {
+    return 'No existing agents found. Create ephemeral specialists via Task tool as needed.';
+  }
+
+  let formatted = `### Available Guild Agents (${inventory.totalAgents} total)\n\n`;
+  formatted += `*Last scanned: ${inventory.scanTimestamp}*\n\n`;
+
+  for (const [category, agents] of Object.entries(inventory.agentsByCategory)) {
+    if (agents.length > 0) {
+      formatted += `**${category}**: ${agents.join(', ')}\n`;
+    }
+  }
+
+  formatted += '\n';
+  return formatted;
+}
+
 // Copy template and embed intelligence
 async function copyAndEmbedCommand(commandType, outputDir, intelligenceModules) {
   const templatePath = path.join(__dirname, 'guideline', 'templates', `${commandType}-command.md`);
   let template = await fs.readFile(templatePath, 'utf8');
 
-  // Replace placeholders with actual content
+  // Replace shared intelligence placeholder
   template = template.replace('{SHARED_INTELLIGENCE}', intelligenceModules.sharedIntelligence);
+
+  // Replace agent inventory placeholder (for workflow command)
+  if (intelligenceModules.agentInventory) {
+    const inventorySection = formatAgentInventory(intelligenceModules.agentInventory);
+    template = template.replace('{AGENT_INVENTORY}', inventorySection);
+  } else {
+    // Remove placeholder if no inventory
+    template = template.replace('{AGENT_INVENTORY}', 'No agent inventory available.');
+  }
 
   // Write the embedded command
   await fs.writeFile(path.join(outputDir, `${commandType}.md`), template);
-  console.log(`✅ ${commandType} command generated`);
+  console.log(`✅ ${commandType} command generated with ${intelligenceModules.agentInventory ? 'agent inventory' : 'no inventory'}`);
 }
 
 // Run installation

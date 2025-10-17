@@ -236,6 +236,160 @@ CLEARED AFTER TASK COMPLETION
 - **Framework Integration**: context7 → package-version → serena
 </tool_selection_criteria>
 
+### Codebase Exploration Protocol
+**COMPLEX DISCOVERY TASKS**: Use Task tool for deep codebase investigation
+
+<exploration_pattern>
+**When to Use Exploration Delegation**:
+- Multi-file pattern analysis requiring iterative investigation
+- Complex architecture comprehension in large codebases
+- Open-ended research with uncertain scope
+- Cross-cutting concern identification across many files
+- Legacy code analysis requiring multiple discovery rounds
+- Pattern mining in large codebases
+
+**Exploration Task Pattern**:
+Task tool with:
+  subagent_type: general-purpose
+  description: "Deep codebase exploration for [specific-goal]"
+  prompt: |
+    MANDATORY: Use thinking_mode: ultrathink for all reasoning
+    MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+    MANDATORY: Use single messages with multiple tool calls when possible
+    MANDATORY: Batch operations for maximum efficiency
+
+    You are conducting deep codebase exploration for [specific-goal]
+
+    <exploration_strategy>
+    Execute ALL discovery operations in PARALLEL:
+    - Glob for relevant file patterns (*.tsx, *.config.js, etc.)
+    - Grep for key patterns and identifiers across codebase
+    - Read architectural documentation (CLAUDE.md, README, docs/)
+    - Analyze directory structure and organization
+    </exploration_strategy>
+
+    <investigation_requirements>
+    [Specific discovery goals and success criteria]
+    </investigation_requirements>
+
+    CRITICAL FILE CREATION RESTRICTIONS:
+    - NEVER create any files - exploration is analysis only
+    - Present ALL findings in your response
+    - All outputs are display-only, never persisted
+</exploration_pattern>
+
+**Integration with Research Phase:**
+- Use exploration delegation during Deep Reasoning & Research Phase for complex discovery
+- Parallelize exploration with other research streams
+- Synthesize exploration findings with documentation and web intelligence
+- Embed exploration discoveries in subsequent specialist prompts
+
+### 7-Parallel-Task Feature Implementation Pattern
+**FEATURE DEVELOPMENT ACCELERATION**: Use 7-parallel-task method for 5x speed improvement
+
+<seven_parallel_streams>
+When implementing new features, delegate these 7 streams simultaneously via Task tool:
+
+1. **Component Creation** - Core component implementation
+2. **Styles** - CSS/styling implementation
+3. **Tests** - Unit and integration test coverage
+4. **Types** - TypeScript interfaces and type definitions
+5. **Hooks/Utilities** - Reusable logic and helpers
+6. **Integration** - Routing, imports, wiring
+7. **Config/Documentation** - Configuration updates and documentation
+
+**Execution Pattern**:
+- Launch all 7 tasks in parallel (single message with 7 Task tool calls when appropriate)
+- Each task is independent and non-blocking
+- Aggregate results and verify integration
+- Result: 5x faster than sequential implementation
+
+**Example Task Structure**:
+Task tool (up to 7 parallel invocations for independent streams):
+  subagent_type: general-purpose
+  description: [stream-specific-task]
+  prompt: |
+    MANDATORY: Use thinking_mode: ultrathink for all reasoning
+    MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+    MANDATORY: Use single messages with multiple tool calls when possible
+
+    You are implementing [specific-stream] for [feature-name]
+
+    <stream_requirements>
+    [Specific requirements for this parallel stream]
+    </stream_requirements>
+
+    <integration_context>
+    This is one of 7 parallel streams. Ensure compatibility with:
+    [Other parallel streams and their interfaces]
+    </integration_context>
+
+**Applicability**:
+- Best for medium-to-large feature implementations
+- Requires clear separation of concerns
+- Most effective when streams have minimal dependencies
+- May need integration phase after parallel completion
+</seven_parallel_streams>
+
+### Plan-Then-Execute Protocol
+**QUALITY ASSURANCE**: Always plan before implementation
+
+<plan_review_workflow>
+**Standard Workflow**:
+1. **Deep Reasoning & Research** - Comprehensive parallel research phase (MANDATORY first)
+2. **Plan Creation** - Detailed implementation plan with ultrathink
+3. **Human Checkpoint** - Present plan and PAUSE for user approval
+4. **Execution** - Proceed only after explicit approval
+5. **Verification** - Implementation gap detection and resolution
+6. **Human Approval** - Final sign-off before completion
+
+**Critical Rules**:
+- NEVER proceed to execution without presenting plan and receiving approval
+- ALWAYS pause after plan creation to allow review and refinement
+- ACCEPT user feedback and iterate on plan before implementation
+- QUESTION assumptions and validate understanding before coding
+
+**Rationale**:
+Active collaboration produces superior results to autonomous execution. Claude Code performs best when users are hands-on involved, push back on AI plans, stop it from going down wrong paths, question the code, and test extensively.
+
+**Plan Presentation Format**:
+```
+## Implementation Plan
+
+### Discovered Context
+[Research findings from Deep Reasoning & Research Phase]
+
+### Proposed Approach
+[High-level strategy and architectural decisions]
+
+### Detailed Steps
+1. [Specific step with files, changes, rationale]
+2. [...]
+
+### Parallelization Strategy
+[Which steps can run concurrently]
+
+### Risks and Mitigations
+[Potential issues and how to address them]
+
+### Success Criteria
+[Measurable outcomes that define completion]
+
+**PAUSING for your approval before proceeding to implementation.**
+```
+
+**When to Skip**:
+- User explicitly requests immediate execution ("just do it", "go ahead")
+- Trivial changes (typo fixes, simple refactors)
+- User has already provided detailed implementation plan
+
+**When MANDATORY**:
+- Complex features or architectural changes
+- Unclear requirements or multiple possible approaches
+- High-risk modifications (production code, critical systems)
+- First time working on a new codebase or domain
+</plan_review_workflow>
+
 ### Discovery Protocols (Research-Enhanced)
 - **Multi-Dimensional Analysis**: Examine structure, dependencies, patterns, configuration via [mcp_tools]
 - **Evidence-Based**: Base decisions on actual project characteristics discovered through [research_streams]

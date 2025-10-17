@@ -7,6 +7,10 @@ thinking_mode: ultrathink
 description: "Discover project structure and create specialized agents via systematic delegation"
 ---
 
+MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+MANDATORY: Use single messages with multiple tool calls when possible
+MANDATORY: Batch operations for maximum efficiency
+
 ## Command Entry Point
 ultrathink $ARGUMENTS
 
@@ -91,7 +95,13 @@ Each generated specialist MUST contain ONLY:
    thinking_mode: ultrathink
    description: "[abstract_role_description] specialist for [project_context_type]"
    ---
+
+   MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
+   MANDATORY: Use single messages with multiple tool calls when possible
+   MANDATORY: Batch operations for maximum efficiency
    ```
+
+   **CRITICAL**: Every agent MUST have parallel execution directives immediately after frontmatter
 
 2. **Abstracted Role Definition**:
    "You are a [specialist_expertise] specialist working on [project_type] following [discovered_conventions]. Your role focuses on [capability_area] while collaborating with [related_specialists] to achieve [project_objectives]."
