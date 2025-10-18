@@ -79,9 +79,92 @@ User executes /guild or /guild:setup
 
 ## Development Workflow
 
-### Requirements-First Development Protocol
+### Intelligence-First Principle
 
-**MANDATORY SEQUENCE**: Requirements drive all changes, framework comes first, everything aligns with recommendations
+**Core Philosophy**: Match process rigor to change complexity. Guild development follows an intelligent classification system that maintains quality while removing unnecessary overhead.
+
+### Change Classification
+
+Before making changes, identify the appropriate tier using the decision tree below:
+
+#### Tier 1 - Trivial Changes (70% of changes)
+**Examples**: Typos, formatting, link fixes, minor wording improvements
+
+**Process**:
+```bash
+# 1. Make changes
+vim guideline/guide/framework.md  # Fix typo
+
+# 2. Validate
+npm run validate:trivial
+
+# 3. Commit
+git commit -m "Fix typo in framework documentation"
+```
+
+**Required**: Structure validation only (`npm run validate:trivial`)
+**Skip**: Requirements documentation, framework updates, intelligence updates, full testing
+**Time**: ~30 seconds
+
+---
+
+#### Tier 2 - Content Updates (20% of changes)
+**Examples**: Adding examples, clarifying documentation, updating anti-patterns, improving descriptions
+
+**Process**:
+```bash
+# 1. Make changes
+vim guideline/core/shared-intelligence.md  # Add example
+
+# 2. Validate alignment
+npm run validate:content
+
+# 3. Optional: Test installation (recommended but not blocking)
+npm run test-install
+
+# 4. Commit
+git commit -m "Add example for skill metadata structure"
+```
+
+**Required**: Alignment validation (`npm run validate:content`)
+**Optional**: Framework documentation, installation test
+**Skip**: Formal requirements, full 5-phase sequence
+**Time**: ~2-3 minutes
+
+---
+
+#### Tier 3 - Pattern Changes (7% of changes)
+**Examples**: New intelligence patterns, template behavior modifications, optimization updates
+
+**Process**:
+```bash
+# 1. Update intelligence patterns
+vim guideline/core/shared-intelligence.md
+
+# 2. Update templates to use patterns
+vim guideline/templates/workflow-command.md
+
+# 3. Validate pattern alignment
+npm run validate:patterns
+
+# 4. Test installation
+npm run test-install
+
+# 5. Commit
+git commit -m "Add MCP tool selection matrix pattern"
+```
+
+**Required**: Intelligence → Template alignment, pattern tests, installation test
+**Optional**: Formal requirements documentation
+**Skip**: Full 5-phase sequential workflow
+**Time**: ~5-7 minutes
+
+---
+
+#### Tier 4 - Architectural Changes (3% of changes)
+**Examples**: Framework requirements, system capabilities, install.js modifications
+
+**Process**: **FULL 5-PHASE WORKFLOW REQUIRED**
 
 <requirements_driven_flow>
 **Phase 1: Requirements Definition**
@@ -134,40 +217,111 @@ User executes /guild or /guild:setup
    - Verify generated commands meet all requirements
 </requirements_driven_flow>
 
+**Required**: All 5 phases
+**Skip**: Nothing - full rigor maintained
+**Time**: ~15-20 minutes
+
+---
+
+### Decision Tree
+
+```
+Does it modify install.js? → Tier 4
+Does it change framework requirements or core principles? → Tier 4
+Does it add new system capabilities? → Tier 4
+Does it add NEW patterns to shared-intelligence.md? → Tier 3
+Does it change template behavior or structure? → Tier 3
+Does it update documentation, examples, or clarifications? → Tier 2
+Is it a typo, formatting, or link fix? → Tier 1
+```
+
+**Quick Reference Table**:
+
+| Files Changed | Typical Tier | Override if... |
+|--------------|--------------|----------------|
+| **install.js** | Tier 4 | Never - always architectural |
+| **framework.md** (requirements/principles) | Tier 4 | Never - always architectural |
+| **framework.md** (examples only) | Tier 2 | Adding new patterns → Tier 3 |
+| **shared-intelligence.md** (new patterns) | Tier 3 | Changing philosophy → Tier 4 |
+| **shared-intelligence.md** (examples/clarifications) | Tier 2 | Never - just content |
+| **templates/*.md** (behavior changes) | Tier 3 | Just examples → Tier 2 |
+| **templates/*.md** (examples/wording) | Tier 2 | Structure changes → Tier 3 |
+| **CLAUDE.md, README.md** | Tier 2 | Never - documentation only |
+| **tests/*.js** | Tier 3 | New test capability → Tier 4 |
+
+**When Uncertain**: Choose the higher tier (conservative approach)
+
 ### Mandatory Alignment Protocol
 
 <alignment_requirements>
 **EVERYTHING MUST ALIGN WITH**:
 1. **`guideline/guide/recommendations.md`** - Opus 4.1 optimization patterns
 2. **`guideline/guide/framework.md`** - Core architecture principles
-3. **Requirements Definition** - Documented capabilities and constraints
+3. **Requirements Definition** - Documented capabilities and constraints (Tier 4 only)
+
+**TIER-SPECIFIC RULES**:
+
+**Tier 1 & 2**: Lightweight validation, alignment checks automated
+**Tier 3**: Intelligence-template alignment mandatory, installation test required
+**Tier 4**: Full 5-phase workflow, all alignment checks mandatory
 
 **NEVER**:
-- Update templates without updating framework first
-- Skip requirements definition phase
-- Ignore recommendations.md patterns
-- Implement without shared intelligence updates
-- Deploy without validation
+- Skip validation for your tier
+- Deploy Tier 3+ changes without testing installation
+- Update templates without updating shared intelligence (Tier 3+)
+- Modify framework requirements without full Tier 4 workflow
 
 **ALWAYS**:
-- Start with requirements in framework.md
-- Apply recommendations.md patterns throughout
-- Update shared intelligence before templates
-- Validate alignment at each phase
-- Test installation before committing
+- Run the appropriate validation command for your tier
+- Validate alignment through automated checks
+- Test installation for Tier 3+ changes
+- Document architectural changes in framework.md (Tier 4)
 </alignment_requirements>
 
-### Legacy Development Process (DEPRECATED)
+### Tier-Based Testing Protocol
 
-~~**Old Process**: Framework → Intelligence → Templates → Commands~~
+**Validation commands match change complexity**:
 
-**New Process**: **Requirements → Framework → Command Requirements → Shared Intelligence → Templates → Validation**
+#### Tier 1: Trivial Validation
+```bash
+npm run validate:trivial
+# Runs: Structure validation only
+# Time: ~5 seconds
+```
 
-### Requirements-Based Testing Protocol
+#### Tier 2: Content Validation
+```bash
+npm run validate:content
+# Runs: Structure + alignment checks
+# Time: ~30 seconds
+```
 
-**MANDATORY TESTING SEQUENCE**: Validate requirements implementation at each phase
+#### Tier 3: Pattern Validation
+```bash
+npm run validate:patterns
+# Runs: Alignment + pattern tests + installation test
+# Time: ~2-3 minutes
+```
+
+#### Tier 4: Architectural Validation
+```bash
+npm run validate:architectural
+# Runs: Full test suite (same as `npm run test`)
+# Includes all phases from the 5-phase workflow
+# Time: ~5-10 minutes
+```
+
+#### Auto-Detect Validation
+```bash
+npm run validate:auto
+# Automatically detects tier from changed files
+# Runs appropriate validation
+# Useful for pre-commit hooks
+```
 
 <phase_testing>
+**Tier 4 Only - Full Phase Testing**
+
 **Phase 1: Requirements Validation**
 ```bash
 # Verify framework requirements are documented
@@ -204,7 +358,7 @@ npm run validate
 node install.js --no-interaction --path /tmp/test-requirements
 
 # Verify alignment implementation
-grep -n "CRITICAL.*READ FIRST\|scratchpad\|instruction>" /tmp/test-requirements/.claude/commands/guild/workflow.md
+grep -n "CRITICAL.*READ FIRST|scratchpad\|instruction>" /tmp/test-requirements/.claude/commands/guild/workflow.md
 ```
 
 **Phase 5: Complete Integration Testing**
@@ -315,20 +469,14 @@ npm run validate && node install.js --test-mode
 </development_principles>
 
 ### Pre-Development Validation
-**Before making any changes - REQUIREMENTS ASSESSMENT**:
+**Before making changes - IDENTIFY YOUR TIER**:
 ```bash
-# 1. Document requirements in framework.md FIRST
-echo "Define requirements in guideline/guide/framework.md"
-
+# 1. Classify your change using the decision tree
 # 2. Ensure clean starting state
 npm run validate
-npm run test
 
-# 3. Verify recommendations compliance baseline
-grep -c "Lost in Middle\|scratchpad\|<critical>" guideline/guide/recommendations.md
-
-# 4. Confirm current intelligence state
-node -e "const fs = require('fs-extra'); const path = require('path'); console.log(fs.existsSync(path.join('guideline', 'core', 'shared-intelligence.md')) ? '✅ Core intelligence exists' : '❌ Missing core intelligence');"
+# 3. For Tier 4 only: Document requirements in framework.md FIRST
+# For other tiers: Proceed with changes
 ```
 
 ### Requirements-Based Development Testing
@@ -464,9 +612,16 @@ The Guild system generates agents from templates. Your role is to enhance the in
 
 ## Development Commands
 
+### Tier-Based Validation Commands (NEW)
+- `npm run validate:trivial` - Tier 1: Structure validation only (~5 sec)
+- `npm run validate:content` - Tier 2: Structure + alignment checks (~30 sec)
+- `npm run validate:patterns` - Tier 3: Alignment + patterns + install test (~2-3 min)
+- `npm run validate:architectural` - Tier 4: Full test suite (~5-10 min)
+- `npm run validate:auto` - Auto-detect tier and validate
+
 ### Core Commands
 - `npm run validate` - Validate guidelines and project structure
-- `npm run test` - Run all validation and test installation
+- `npm run test` - Run all validation and test installation (same as validate:architectural)
 - `npm run test-install` - Quick validation without full installation
 - `node install.js` - Install Guild commands to home directory (interactive)
 - `node install.js --no-interaction --path <dir>` - Install to specific directory
@@ -478,6 +633,6 @@ The Guild system generates agents from templates. Your role is to enhance the in
 - `npm run publish-direct` - Direct npm publish (bypass validation)
 - `npm version [patch|minor|major]` - Update package version
 
-### Validation Commands
+### Legacy Validation Commands
 - `npm run validate-guidelines` - Check guideline structure
 - `npm run validate-structure` - Verify required project files

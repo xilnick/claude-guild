@@ -1,540 +1,470 @@
 # Shared Intelligence
 
-## Core Guidelines
+## Core Principles
 
-### Lost in Middle Mitigation Protocol
-**CRITICAL DOCUMENT POSITIONING**: Follow recommendations.md patterns for optimal comprehension
+**Advisory Over Prescriptive**: Provide helpful patterns and guidance, not rigid mandates. Trust Claude Code's capabilities.
 
-<document_positioning_guidelines>
-**Critical Content Placement**:
-- **Top Edge**: Most critical execution protocols immediately after command entry point
-- **Bottom Edge**: Actual task execution instructions (user request processing)
-- **Middle Sections**: Supporting details, research phases, analysis workflows
+**Skills as Knowledge**: Skills define project-specific patterns (WHAT/WHEN), not execution protocols (HOW).
 
-**XML Structure Standards**:
-- Use `<critical>` tags for mandatory protocols
-- Use `<instruction>` tags for task execution steps
-- Use `<supporting>` tags for detailed procedures
-- Position critical information where it won't be lost in middle
-</document_positioning_guidelines>
+**Resource-Based Selection**: Present available skills and agents, guide selection, trust intelligent choice.
 
-### Scratchpad Management Protocol
-**EPHEMERAL STATE MAINTENANCE**: Use scratchpads for agent state across interactions
+## Skill System Patterns
 
-<scratchpad_guidelines>
-**Required Structure**:
-```xml
-<scratchpad>
-  <!-- Maintains state across interactions -->
-  Key facts: [discovered_information]
-  Decisions: [choices_made]
-  Current: [active_work_status]
-</scratchpad>
+### Official Claude Code SKILL.md Format
+<skill_official_format>
+**Guild MUST follow official Claude Code skills specification**:
+
+**File Structure**:
+- Filename: `SKILL.md` (official format, not `[name].md`)
+- Location: `.claude/skills/guild/[category]/SKILL.md`
+- Progressive loading architecture: metadata → instructions → resources
+
+**Naming Convention (Gerund Form)**:
+- ✅ "Working with React"
+- ✅ "Processing API Requests"
+- ✅ "Testing Express Endpoints"
+- ❌ "React Integration" (not gerund)
+- ❌ "API Handler" (not gerund)
+- ❌ "Express Test" (not gerund)
+
+**Size Limits**:
+- Keep SKILL.md under 500 lines
+- Split large content into separate files (REFERENCE.md, EXAMPLES.md, DOCS.md)
+- Reference files load on-demand (Level 3 resources)
+</skill_official_format>
+
+### Skill Metadata Structure
+<skill_metadata_pattern>
+**Official Claude Code Format with Guild Enhancements**:
+```yaml
+---
+# ============================================================================
+# CLAUDE CODE NATIVE FIELDS (Official format - REQUIRED)
+# ============================================================================
+name: working-with-react           # Gerund form, lowercase-hyphenated
+description: "Use when working with React components in this project. Apply for component architecture, hooks usage, state management patterns, and React best practices. Includes project-specific React conventions and anti-patterns."
+
+# ============================================================================
+# CLAUDE CODE OPTIONAL FIELDS
+# ============================================================================
+model: inherit                        # Options: inherit, sonnet, opus, haiku
+tools: Read, Write, Edit, Grep, Glob  # Comma-separated list to restrict tools
+
+# ============================================================================
+# GUILD ENHANCEMENT FIELDS (Optional - enable advanced selection)
+# ============================================================================
+category: frontend-patterns           # Pattern classification
+applicability:
+  file_patterns: ["**/*.tsx", "**/*.jsx", "**/components/**"]
+  technologies: ["react", "react-dom", "next.js"]
+  task_types: ["component-creation", "hooks", "state-management"]
+related_skills: ["testing-react-components", "working-with-typescript"]
+related_agents: ["frontend-specialist"]
+---
 ```
 
-**Usage Principles**:
-- **Always Include**: Every dynamic agent must have scratchpad section
-- **State Persistence**: Maintain working memory across agent interactions
-- **Ephemeral Only**: Never persist scratchpad content to files
-- **Clear After Completion**: All scratchpad state cleared when task finishes
-</scratchpad_guidelines>
+**Metadata Guidelines**:
+- **name** (Required): Gerund form using lowercase and hyphens ("working-with-express")
+- **description** (Required): Natural language trigger for Claude Code discovery - include "Use when...", relevant technologies, and project context
+- **model** (Optional): Model selection for skill execution
+- **tools** (Optional): Restrict which tools this skill can use
+- **category** (Guild): Pattern classification (frontend-patterns, backend-integration, testing-patterns, library-specific)
+- **applicability** (Guild): Context matching (file patterns, technologies, task types)
+- **related_skills** (Guild): Links to complementary skills
+- **related_agents** (Guild): Links to relevant specialist agents
 
-### Deep Reasoning & Research Protocol
-**MANDATORY FIRST PHASE**: Execute comprehensive research before any task delegation
+**Tech Stack Skill Types**:
+- **Library Skills**: "working-with-react", "working-with-express", "working-with-prisma"
+- **Pattern Skills**: "processing-api-requests", "managing-application-state"
+- **Testing Skills**: "testing-express-endpoints", "testing-react-components"
 
-<research_framework>
-**Parallel Research Streams** (Execute simultaneously via Task tool):
-- **Project Discovery**: Use serena tools for codebase analysis, pattern identification, technology stack assessment
-- **Documentation Intelligence**: Leverage context7 for framework docs, API references, best practices
-- **Web Resource Discovery**: Use WebSearch for latest approaches, solutions, community practices
-- **MCP Capability Assessment**: Evaluate available MCP servers for optimal task-tool matching
-- **Requirement Decomposition**: Break down user requests into specific, actionable components
-</research_framework>
+**Compatibility**: Guild skills are valid Claude Code skills - they work with native skill discovery while providing enhanced Guild selection capabilities.
+</skill_metadata_pattern>
 
-<reasoning_structure>
-**Deep Reasoning Framework**:
-1. **Context Understanding**: What is the user actually requesting in full context?
-2. **Project Assessment**: What technologies, patterns, constraints, and opportunities exist?
-3. **Resource Mapping**: What tools, documentation, and external resources are available?
-4. **Approach Synthesis**: How should work be structured for optimal results?
-5. **Success Definition**: What constitutes complete and successful completion?
-</reasoning_structure>
+### Progressive Loading Architecture
+<progressive_loading_pattern>
+**3-Tier Loading System (Official Claude Code Pattern)**:
 
-<research_synthesis>
-**Research Synthesis Requirements**:
-- **Comprehensive Understanding**: Complete grasp of user intent, project context, and available resources
-- **Evidence-Based Decisions**: All specialist selection and task delegation informed by research findings
-- **Context Enrichment**: Embed research intelligence in all specialist prompts and instructions
-- **Resource Optimization**: Match tasks to optimal tools based on capability assessment
-- **Best Practice Integration**: Apply discovered best practices and modern approaches
-</research_synthesis>
+**Level 1 - Metadata (~100 tokens, always loaded)**:
+```yaml
+---
+name: working-with-express
+description: "Use when working with Express.js in this project..."
+category: backend-integration
+applicability:
+  technologies: ["express"]
+---
+```
 
-### Tool Usage Best Practices
-- **Batch Operations**: Group independent tool calls in single responses
-- **Parallel Execution**: Execute independent tasks simultaneously
-- **Task Delegation**: Always use Task tool for complex work
-- **Resource Efficiency**: Avoid redundant operations
+**Level 2 - Instructions (~5k tokens, loaded when triggered)**:
+```markdown
+# Main SKILL.md content
+## Pattern Description
+[WHAT/WHEN guidance]
 
-### Agent Creation Principles
-- **Project-Based**: Create agents based on discovered project needs
-- **Focused Purpose**: Each agent should have clear, specific expertise
-- **Relevant Context**: Embed project-specific patterns and conventions
-- **Avoid Duplication**: Don't create overlapping specialists
+## Project Conventions
+[Discovered patterns]
 
-### Dynamic Agent Creation Protocol
-- **Always Create When No Match**: If no existing agent fits the task, create a dynamic specialist
-- **Task-Specific Expertise**: Generate agents with precise capabilities for discovered requirements  
-- **Evidence-Driven Design**: Base agent capabilities on discovered patterns and technologies
-- **Mandatory Subagents**: NEVER fall back to general-purpose or direct execution
-- **CRITICAL**: ALL dynamic agents MUST use thinking_mode: ultrathink - NO EXCEPTIONS
-- **MANDATORY Task Tool Configuration**: EVERY Task tool call MUST explicitly include thinking_mode: ultrathink
-- **Project Context Embedding**: Include discovered frameworks, patterns, and conventions
-- **Parallel Coordination**: Dynamic agents must batch tool calls and parallelize work
-- **Ultrathink Enforcement**: Validate all Task tool calls include ultrathink before execution
+## Common Pitfalls
+[Anti-patterns]
 
-### No Persistence Protocol
-**CRITICAL: ONLY codebase files may be created/modified. ALL other outputs are display-only.**
+## Related Resources
+[Skills, agents, documentation links]
+```
 
-<file_creation_restrictions>
-**ALLOWED (Codebase Files Only)**:
-- Source code files (.js, .ts, .py, .java, etc.)
+**Level 3 - Resources (unlimited, on-demand loading)**:
+```markdown
+# Separate files loaded as needed
+- REFERENCE.md - API references, detailed specs
+- EXAMPLES.md - Code examples and patterns
+- DOCS.md - Library documentation (fetched from Context7)
+- scripts/ - Utility scripts (executed, not loaded)
+```
+
+**Implementation Guidelines**:
+- Keep SKILL.md under 500 lines (Level 2)
+- Move detailed content to Level 3 files
+- Reference files one level deep (no nested references)
+- Use bash commands to read Level 3 files when needed
+- Scripts output enters context, not the code itself
+</progressive_loading_pattern>
+
+### Skill Content Structure
+<skill_content_pattern>
+**Lightweight Pattern Definition (SKILL.md - Level 2)**:
+```markdown
+## Pattern Description
+
+**What**: [Brief description of the pattern or library]
+
+**When**: [Clear guidance on when this skill applies]
+
+**Context**: [Project-specific usage contexts]
+
+## Project Conventions
+
+### [Convention Category 1]
+- [Specific convention discovered in project]
+- [Rationale and usage context]
+
+### [Convention Category 2]
+- [Specific pattern or approach]
+- [Integration points]
+
+## Common Pitfalls
+
+### ❌ [Anti-Pattern Name]
+**Problem**: [What the anti-pattern is]
+**Why It Fails**: [Explanation]
+**Better Approach**: [Recommended alternative from project or docs]
+
+## Related Resources
+
+### Related Skills
+- **[skill-name]**: [Relationship description]
+
+### Related Agents
+- **[agent-name]**: [When to involve]
+
+### Documentation
+- See `DOCS.md` for library documentation and API references
+- See `REFERENCE.md` for detailed specifications
+- See `EXAMPLES.md` for code examples and patterns
+
+## Validation (Optional)
+
+**For fragile operations, use validation loops**:
+1. Execute operation
+2. Run validator script
+3. If errors, fix and repeat
+4. Confirm success
+```
+
+**Content Guidelines**:
+- Focus on WHAT and WHEN, not HOW (no step-by-step instructions)
+- Document project-specific conventions discovered during setup
+- Highlight anti-patterns found in codebase or documentation
+- Link to Level 3 resources for details
+- Keep SKILL.md scannable and under 500 lines
+- Use validation loops for error-prone operations
+</skill_content_pattern>
+
+### Tech Stack Skills Integration
+<tech_stack_skills_pattern>
+**Library and Framework-Specific Skills**:
+
+**Discovery Process**:
+1. **Tech Stack Detection**: Analyze package.json, requirements.txt, go.mod, Gemfile, etc.
+2. **Major Library Identification**: Extract primary frameworks and libraries
+3. **Version Detection**: Identify version constraints
+4. **Skill Planning**: Plan library-specific skills (e.g., "working-with-react", "working-with-express")
+
+**Documentation Integration Protocol**:
+
+**For Each Library Skill**:
+```bash
+# Step 1: Create SKILL.md with metadata and project conventions
+# (Level 1 metadata + Level 2 instructions)
+
+# Step 2: Fetch library documentation (Level 3 resources)
+# Use Context7 for comprehensive documentation
+mcp__context7__resolve-library-id "react"
+# Returns: /facebook/react
+
+mcp__context7__get-library-docs "/facebook/react" topic="hooks"
+# Returns: Up-to-date hooks documentation
+
+# Step 3: Create DOCS.md with documentation references
+# Save fetched documentation to .claude/skills/guild/[category]/DOCS.md
+
+# Step 4: Optionally use WebSearch for latest patterns
+WebSearch "React hooks best practices 2025"
+
+# Step 5: Create REFERENCE.md with API specs
+# Organize API references, migration guides, etc.
+```
+
+**Library Skill Structure**:
+```
+.claude/skills/guild/frontend-patterns/
+├── SKILL.md              # Main skill (metadata + instructions)
+├── DOCS.md               # Library documentation (Context7)
+├── REFERENCE.md          # API references and specs
+└── EXAMPLES.md           # Code examples and patterns
+```
+
+**DOCS.md Content Pattern**:
+```markdown
+# React Documentation
+
+**Library**: React
+**Version**: ^18.2.0 (detected from package.json)
+**Last Updated**: [timestamp]
+
+## Core Concepts
+[Fetched from Context7: /facebook/react]
+
+## Hooks API
+[Fetched from Context7: /facebook/react, topic="hooks"]
+
+## Best Practices
+[Fetched from WebSearch: "React hooks best practices"]
+
+## Migration Guides
+[Version-specific migration information]
+```
+
+**Tech Stack Skill Types**:
+- **Frontend Libraries**: working-with-react, working-with-vue, working-with-svelte
+- **Backend Frameworks**: working-with-express, working-with-fastify, working-with-nestjs
+- **ORMs/Databases**: working-with-prisma, working-with-typeorm, working-with-mongoose
+- **Testing Tools**: testing-with-jest, testing-with-vitest, testing-with-playwright
+- **Build Tools**: building-with-vite, building-with-webpack, building-with-esbuild
+</tech_stack_skills_pattern>
+
+### Skill Discovery Protocol
+<skill_discovery_guidance>
+**When Setup Creates Skills**:
+1. **Pattern Recognition**: Identify repeatable procedures in codebase
+2. **Convention Extraction**: Document project-specific approaches
+3. **Tech Stack Analysis**: Detect libraries and frameworks (for tech stack skills)
+4. **Documentation Fetching**: Use Context7 and WebSearch for library skills
+5. **Metadata Generation**: Create rich frontmatter for discoverability
+6. **Relationship Mapping**: Link skills to related skills and agents
+
+**Skill Creation Criteria**:
+- Repeatable patterns worth documenting (pattern skills)
+- Project-specific conventions to preserve (pattern skills)
+- Major libraries/frameworks in use (tech stack skills with documentation)
+- Integration protocols to standardize
+- Testing patterns to replicate
+- Quality standards to maintain
+</skill_discovery_guidance>
+
+## Resource Selection Guidance
+
+### Skill vs Agent Selection
+<selection_guidance>
+**When to Use Skills**:
+- Pattern matches task requirements
+- Quick reference needed for project conventions
+- Lightweight guidance sufficient
+- Clear applicability from metadata
+
+**When to Consider Agents**:
+- Complex multi-step coordination needed
+- Specialized domain expertise required
+- Orchestration of multiple resources
+- Deep project-specific knowledge needed
+
+**When to Use Task Tool**:
+- Complex delegation beneficial
+- Coordinating multiple independent workstreams
+- Specialized reasoning required
+- Direct execution overhead too high
+</selection_guidance>
+
+### Agent Creation Guidance
+<agent_creation_patterns>
+**Setup Command - Persistent Agents**:
+- Create based on discovered project patterns
+- Save to `.claude/agents/guild/`
+- Include references to relevant skills
+- Embed project-specific context
+- Provide clear expertise boundaries
+
+**Workflow Command - Ephemeral Specialists**:
+- Create via Task tool when needed
+- Task-specific, temporary
+- Not saved to filesystem
+- Use when no existing resource matches
+</agent_creation_patterns>
+
+### Optimization Recommendations
+<optimization_guidance>
+**Suggested Practices**:
+- Batch independent tool calls for efficiency
+- Consider parallel execution for independent operations
+- Balance delegation overhead against task complexity
+- Consider `thinking_mode: ultrathink` for complex reasoning
+
+**Resource Efficiency**:
+- Avoid redundant operations
+- Reuse existing skills and agents
+- Load skills directly for pattern tasks
+- Trust native orchestration capabilities
+</optimization_guidance>
+
+## File Creation Guidelines
+
+### Persistence Rules
+<file_creation_guidance>
+**Create/Modify (Codebase Files)**:
+- Source code (.js, .ts, .py, .java, etc.)
 - Configuration files (package.json, tsconfig.json, .env, etc.)
 - Build files (Makefile, Dockerfile, etc.)
 - Test files (*.test.js, *.spec.ts, etc.)
-- Project files that are part of the actual working codebase
+- Skills (`.claude/skills/guild/` from setup)
+- Agents (`.claude/agents/guild/` from setup)
 
-**FORBIDDEN (NO Persistence)**:
-- ❌ Analysis reports (gap-analysis.md, validation-report.md, etc.)
-- ❌ Documentation files unless explicitly requested by user (README.md, ARCHITECTURE.md, etc.)
-- ❌ Verification summaries (test-results.txt, coverage-report.md, etc.)
-- ❌ Working notes (notes.md, scratchpad.txt, TODO.md, etc.)
-- ❌ Examples or sample implementations (example.js, sample-config.json, etc.)
-- ❌ Intermediate artifacts (temp.json, working-data.csv, etc.)
-- ❌ Any file not explicitly part of the codebase being worked on
-</file_creation_restrictions>
+**Display Only (Never Persist)**:
+- Analysis reports and verification summaries
+- Documentation (unless explicitly requested)
+- Working notes and scratchpads
+- Examples and sample code
+- Intermediate artifacts
+- Discovery results and recommendations
 
-<persistence_enforcement>
-**Mandatory Rules**:
-1. **NEVER persist reports** - ALL analysis, validation, and verification reports MUST be displayed to user only
-2. **NEVER persist documentation** - Unless explicitly requested, no .md files or documentation artifacts
-3. **NEVER persist examples** - All examples and demonstrations are display-only, never saved
-4. **NEVER persist working state** - Scratchpads, notes, and intermediate results remain in-memory only
-5. **NEVER persist analysis** - Gap analysis, requirements, verification results are ephemeral
-6. **ALWAYS clear after completion** - All temporary state cleared when task finishes
-7. **ONLY create codebase files** - The ONLY exception is actual code/config files needed for the project
-8. **Display to user instead** - Present ALL analysis and reports in conversation, not in files
-</persistence_enforcement>
+**Presentation**:
+- Display analysis and reports in conversation
+- Present findings to user directly
+- Keep working state in memory
+- Clear ephemeral data after completion
+</file_creation_guidance>
 
-### Guild Directory Protocol (Setup Command Only)
-**CRITICAL**: This protocol applies ONLY to `/guild:setup` command for persistent agent file creation
+## Task Tool Usage Patterns
 
-**Setup Command Requirements**:
-- **Mandatory Save Location**: ALL persistent agent files MUST be saved to ./.claude/agents/guild/ directory
-- **No Alternative Paths**: Never save agents to any other directory or location
-- **Guild Subdirectory Only**: Always use the guild subdirectory for organization
-- **Directory Verification**: Confirm agents are saved to correct guild directory
-- **Path Enforcement**: Setup commands MUST enforce ./.claude/agents/guild/ path
+### When to Use Task Tool
+<task_tool_guidance>
+**Consider Task Tool for**:
+- Complex multi-step coordination
+- Specialized domain expertise needed
+- Multiple independent workstreams
+- Deep reasoning requirements
+- Existing specialist agent match
 
-**Workflow Command Prohibition**:
-- **NEVER save agent files from workflow** - Workflow creates ephemeral specialists via Task tool only
-- **Use `/guild:setup` for persistent agents** - Only setup command creates agent files
+**Direct Execution May Be Better for**:
+- Simple file operations
+- Straightforward edits
+- Quick searches or reads
+- Tasks with complete context already
+- Operations where overhead exceeds complexity
+</task_tool_guidance>
 
-### Ephemeral Specialist Prompt Template (Workflow Command - Task Tool Only)
-**CRITICAL**: This template is for WORKFLOW COMMAND creating ephemeral specialists via Task tool
-**NOT for creating persistent agent files** - Use `/guild:setup` for that
-
-When workflow needs a specialist that doesn't exist in guild inventory, invoke Task tool with research-informed prompt:
+### Ephemeral Specialist Pattern (Optional)
+<ephemeral_specialist_pattern>
+**When Creating Temporary Specialists via Task Tool**:
 
 ```
-<role>You are a [task-specific-expertise] specialist for [discovered-project-type]</role>
+You are a [task-specific-expertise] specialist for [project-type].
 
-<research_context>
-RESEARCH INTELLIGENCE FROM DEEP REASONING PHASE:
-Project Analysis: [project_discovery_findings]
-Documentation Research: [framework_docs_and_best_practices]
-Web Intelligence: [latest_approaches_and_solutions]
-MCP Assessment: [optimal_tool_recommendations]
-Success Framework: [research_informed_success_criteria]
-</research_context>
+Project Context:
+- Technologies: [discovered-stack]
+- Patterns: [identified-conventions]
+- Relevant Skills: [skill-references]
 
-<project_context>
-Working on [project-name] using [discovered-technologies]
-Key patterns found: [identified-patterns-and-conventions]
-Project structure: [relevant-architecture-details]
-Best practices discovered: [research_based_recommendations]
-Constraints identified: [project_and_technical_limitations]
-</project_context>
+Your Task:
+[Specific objectives and requirements]
 
-<scratchpad>
-  <!-- Maintains state across interactions -->
-  Key facts: [discovered_information]
-  Decisions: [choices_made]
-  Current: [active_work_status]
-</scratchpad>
+Success Criteria:
+[Measurable outcomes]
 
-<capabilities>
-You specialize in [specific-task-domain] with research-informed expertise in:
-- [discovered-framework-1]: [specific-patterns-found] + [best_practices_from_research]
-- [discovered-framework-2]: [specific-conventions-found] + [modern_approaches_discovered]
-- [discovered-practice-1]: [implementation-approach] + [optimized_methods_from_research]
-- [optimal-mcp-tools]: [recommended_tools_for_task] + [usage_patterns_discovered]
-</capabilities>
-
-<instructions>
-MANDATORY: Use thinking_mode: ultrathink for continued deep reasoning
-MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
-MANDATORY: Use single messages with multiple tool calls when possible
-MANDATORY: Batch operations for maximum efficiency
-MANDATORY: Apply [research_intelligence] to all decisions and approaches
-MANDATORY: Leverage [optimal_mcp_tools] identified in research phase
-MANDATORY: Apply [discovered_patterns] and [best_practices_from_research] consistently
-
-CRITICAL FILE CREATION RESTRICTIONS:
-- ONLY create/modify actual codebase files (source code, config, tests)
-- NEVER persist reports, analysis, verification summaries, or documentation
-- NEVER create temporary files, examples, or working notes
-- ALL outputs displayed to user in conversation, not saved to files
-- Present ALL findings in-memory only, cleared after task completion
-
-Research-informed requirements:
-- [requirement-1]: [research_based_constraint_or_approach]
-- [requirement-2]: [evidence_based_pattern_or_method]
-- [requirement-3]: [optimal_tool_usage_pattern]
-</instructions>
-
-<ephemeral_memory>
-MEMORY-ONLY - NEVER PERSISTED
-Research synthesis: [comprehensive_understanding_from_research]
-Temporary findings: [working-analysis-data]
-Active constraints: [current-limitations]
-Working approach: [research_informed_strategy]
-Task state: [progress-tracking]
-CLEARED AFTER TASK COMPLETION
-</ephemeral_memory>
+Constraints:
+- Only create/modify codebase files (source, config, tests)
+- Display analysis in response, don't persist
+- Apply parallel execution where beneficial
 ```
 
-### MCP Tool Selection Matrix
-**Research-Informed Tool Matching**:
+**Key Points**:
+- Keep prompts focused and actionable
+- Include relevant project context
+- Specify clear success criteria
+- Reference available skills if helpful
+- Consider ultrathink for complex reasoning
+</ephemeral_specialist_pattern>
 
-<mcp_assessment_protocol>
-**Available MCP Tools Evaluation**:
-- **serena**: Deep semantic code analysis, best for complex codebase understanding
-- **context7**: Framework documentation and examples, optimal for API guidance
-- **package-version**: Dependency version checking, essential for update decisions
-- **tsmorph**: TypeScript/JavaScript refactoring, mandatory for TS/JS projects
-- **playwright**: Browser automation, required for web testing and interaction
-- **sequential-thinking**: Complex problem solving, ideal for multi-step analysis
-</mcp_assessment_protocol>
+## Quality and Verification
 
-<tool_selection_criteria>
-**Matching Tasks to Optimal Tools**:
-- **Code Analysis Tasks**: serena → context7 → sequential-thinking
-- **Refactoring JS/TS**: tsmorph → package-version → context7
-- **Dependency Management**: package-version → context7 → serena
-- **Web Development**: playwright → context7 → package-version
-- **Complex Problem Solving**: sequential-thinking → serena → context7
-- **Framework Integration**: context7 → package-version → serena
-</tool_selection_criteria>
+### Verification Practices
+<verification_guidance>
+**Recommended Checks**:
+- Functional correctness against requirements
+- Integration and component compatibility
+- Edge cases and error handling
+- Dependencies properly managed
+- Performance meets expectations
 
-### Codebase Exploration Protocol
-**COMPLEX DISCOVERY TASKS**: Use Task tool for deep codebase investigation
+**Gap Detection Approach**:
+- Review completed work systematically
+- Identify missing components or incomplete implementations
+- Prioritize based on criticality
+- Address gaps appropriately
+- Confirm with user
 
-<exploration_pattern>
-**When to Use Exploration Delegation**:
-- Multi-file pattern analysis requiring iterative investigation
-- Complex architecture comprehension in large codebases
-- Open-ended research with uncertain scope
-- Cross-cutting concern identification across many files
-- Legacy code analysis requiring multiple discovery rounds
-- Pattern mining in large codebases
+**Quality Standards**:
+- Code quality and maintainability
+- Proper testing coverage
+- Documentation when appropriate
+- User approval (final authority)
+</verification_guidance>
 
-**Exploration Task Pattern**:
-Task tool with:
-  subagent_type: general-purpose
-  description: "Deep codebase exploration for [specific-goal]"
-  prompt: |
-    MANDATORY: Use thinking_mode: ultrathink for all reasoning
-    MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
-    MANDATORY: Use single messages with multiple tool calls when possible
-    MANDATORY: Batch operations for maximum efficiency
+## Communication Standards
 
-    You are conducting deep codebase exploration for [specific-goal]
+### User Interaction
+<communication_guidance>
+**Clear Communication**:
+- Present plans before complex implementations
+- Keep user informed of progress
+- Report issues transparently
+- Seek clarification when uncertain
+- Provide actionable feedback
 
-    <exploration_strategy>
-    Execute ALL discovery operations in PARALLEL:
-    - Glob for relevant file patterns (*.tsx, *.config.js, etc.)
-    - Grep for key patterns and identifiers across codebase
-    - Read architectural documentation (CLAUDE.md, README, docs/)
-    - Analyze directory structure and organization
-    </exploration_strategy>
+**Plan-Then-Execute (Recommended)**:
+- For complex or unclear tasks, present plan first
+- Pause for user approval before implementation
+- Accept feedback and iterate
+- Trust user expertise and input
+- Skip for trivial tasks or when user says "just do it"
+</communication_guidance>
 
-    <investigation_requirements>
-    [Specific discovery goals and success criteria]
-    </investigation_requirements>
+## Framework Compliance Summary
 
-    CRITICAL FILE CREATION RESTRICTIONS:
-    - NEVER create any files - exploration is analysis only
-    - Present ALL findings in your response
-    - All outputs are display-only, never persisted
-</exploration_pattern>
-
-**Integration with Research Phase:**
-- Use exploration delegation during Deep Reasoning & Research Phase for complex discovery
-- Parallelize exploration with other research streams
-- Synthesize exploration findings with documentation and web intelligence
-- Embed exploration discoveries in subsequent specialist prompts
-
-### 7-Parallel-Task Feature Implementation Pattern
-**FEATURE DEVELOPMENT ACCELERATION**: Use 7-parallel-task method for 5x speed improvement
-
-<seven_parallel_streams>
-When implementing new features, delegate these 7 streams simultaneously via Task tool:
-
-1. **Component Creation** - Core component implementation
-2. **Styles** - CSS/styling implementation
-3. **Tests** - Unit and integration test coverage
-4. **Types** - TypeScript interfaces and type definitions
-5. **Hooks/Utilities** - Reusable logic and helpers
-6. **Integration** - Routing, imports, wiring
-7. **Config/Documentation** - Configuration updates and documentation
-
-**Execution Pattern**:
-- Launch all 7 tasks in parallel (single message with 7 Task tool calls when appropriate)
-- Each task is independent and non-blocking
-- Aggregate results and verify integration
-- Result: 5x faster than sequential implementation
-
-**Example Task Structure**:
-Task tool (up to 7 parallel invocations for independent streams):
-  subagent_type: general-purpose
-  description: [stream-specific-task]
-  prompt: |
-    MANDATORY: Use thinking_mode: ultrathink for all reasoning
-    MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
-    MANDATORY: Use single messages with multiple tool calls when possible
-
-    You are implementing [specific-stream] for [feature-name]
-
-    <stream_requirements>
-    [Specific requirements for this parallel stream]
-    </stream_requirements>
-
-    <integration_context>
-    This is one of 7 parallel streams. Ensure compatibility with:
-    [Other parallel streams and their interfaces]
-    </integration_context>
-
-**Applicability**:
-- Best for medium-to-large feature implementations
-- Requires clear separation of concerns
-- Most effective when streams have minimal dependencies
-- May need integration phase after parallel completion
-</seven_parallel_streams>
-
-### Plan-Then-Execute Protocol
-**QUALITY ASSURANCE**: Always plan before implementation
-
-<plan_review_workflow>
-**Standard Workflow**:
-1. **Deep Reasoning & Research** - Comprehensive parallel research phase (MANDATORY first)
-2. **Plan Creation** - Detailed implementation plan with ultrathink
-3. **Human Checkpoint** - Present plan and PAUSE for user approval
-4. **Execution** - Proceed only after explicit approval
-5. **Verification** - Implementation gap detection and resolution
-6. **Human Approval** - Final sign-off before completion
-
-**Critical Rules**:
-- NEVER proceed to execution without presenting plan and receiving approval
-- ALWAYS pause after plan creation to allow review and refinement
-- ACCEPT user feedback and iterate on plan before implementation
-- QUESTION assumptions and validate understanding before coding
-
-**Rationale**:
-Active collaboration produces superior results to autonomous execution. Claude Code performs best when users are hands-on involved, push back on AI plans, stop it from going down wrong paths, question the code, and test extensively.
-
-**Plan Presentation Format**:
-```
-## Implementation Plan
-
-### Discovered Context
-[Research findings from Deep Reasoning & Research Phase]
-
-### Proposed Approach
-[High-level strategy and architectural decisions]
-
-### Detailed Steps
-1. [Specific step with files, changes, rationale]
-2. [...]
-
-### Parallelization Strategy
-[Which steps can run concurrently]
-
-### Risks and Mitigations
-[Potential issues and how to address them]
-
-### Success Criteria
-[Measurable outcomes that define completion]
-
-**PAUSING for your approval before proceeding to implementation.**
-```
-
-**When to Skip**:
-- User explicitly requests immediate execution ("just do it", "go ahead")
-- Trivial changes (typo fixes, simple refactors)
-- User has already provided detailed implementation plan
-
-**When MANDATORY**:
-- Complex features or architectural changes
-- Unclear requirements or multiple possible approaches
-- High-risk modifications (production code, critical systems)
-- First time working on a new codebase or domain
-</plan_review_workflow>
-
-### Discovery Protocols (Research-Enhanced)
-- **Multi-Dimensional Analysis**: Examine structure, dependencies, patterns, configuration via [mcp_tools]
-- **Evidence-Based**: Base decisions on actual project characteristics discovered through [research_streams]
-- **Resource-Informed Scope**: Cover all relevant aspects using [available_mcp_capabilities] before decisions
-- **Research-Adaptive Approach**: Adjust strategy based on [comprehensive_findings] from all research streams
-
-### Communication Standards
-- **Clear Instructions**: Provide specific, actionable guidance to specialists
-- **Progress Reporting**: Keep users informed of major steps and outcomes
-- **Error Handling**: Report and resolve issues transparently
-- **Result Synthesis**: Combine specialist outputs into coherent responses
-
-### Quality Assurance (Research-Enhanced)
-- **Research-Informed Verification**: Validate work against [research_synthesis] and [best_practices_discovered]
-- **Pattern Consistency**: Follow [discovered_patterns] and [framework_conventions] from research phase
-- **Research-Based Completeness**: Ensure all [research_informed_requirements] are addressed
-- **Evidence-Based Gap Detection**: MANDATORY systematic review using [comprehensive_understanding] for missed components
-- **Research-Driven Gap Resolution**: Implement discovered gaps via specialist delegation with [research_intelligence]
-- **Intelligent Verification Loop**: Continue gap detection leveraging [research_findings] until no gaps remain
-- **CRITICAL No Persistence Verification**: MANDATORY check that ZERO non-codebase files were created
-- **File Creation Audit**: Verify ONLY source/config/test files exist, NO reports/analysis/documentation artifacts
-- **Ephemeral State Confirmation**: Verify all working memory, reports, and analysis were display-only, never persisted
-- **Research-Validated Success**: Confirm results meet [research_informed_success_criteria] and user expectations
-
-## Anthropic Best Practices Integration
-
-### Parallel Tool Execution
-Following official Anthropic guidelines for Claude Code:
-- Send multiple tool calls in single messages when appropriate
-- Batch independent file operations, searches, and analyses
-- Question sequential assumptions - default to parallel where possible
-- Monitor and optimize parallelization effectiveness
-
-### Task Tool Ultrathink Enforcement Protocol
-**CRITICAL REQUIREMENT**: Every Task tool invocation must include thinking_mode: ultrathink
-
-### Ultrathink Mandatory Parallel Execution Linkage
-**INSEPARABLE PAIRING**: thinking_mode: ultrathink MUST ALWAYS be accompanied by parallel execution directives:
-```
-MANDATORY: Use thinking_mode: ultrathink for all reasoning
-MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially  
-MANDATORY: Use single messages with multiple tool calls when possible
-MANDATORY: Batch operations for maximum efficiency
-```
-**FORBIDDEN**: Using ultrathink without parallel execution instructions
-
-### Task Tool Parallel Execution Enforcement Protocol
-**CRITICAL REQUIREMENT**: Every Task tool invocation must include explicit parallel execution instructions
-
-<parallel_execution_enforcement>
-**Mandatory Parallel Execution Directives**:
-Every subagent prompt MUST include:
-```
-MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
-MANDATORY: Use single messages with multiple tool calls when possible
-MANDATORY: Batch operations for maximum efficiency
-MANDATORY: Challenge sequential assumptions - most tasks can parallelize
-```
-
-**Parallel Execution Validation**:
-- **Pre-delegation check** - Verify parallel execution directives present before Task tool invocation
-- **Zero sequential tolerance** - No subagents allowed to execute tools one-by-one
-- **Batch enforcement** - All independent operations must be batched into single messages
-- **Efficiency mandate** - Subagents must optimize for maximum parallel throughput
-</parallel_execution_enforcement>
-
-<task_tool_ultrathink_requirements>
-**Mandatory Task Tool Pattern**:
-```
-Task tool with:
-  subagent_type: [specialist-type]
-  description: [task-description]  
-  prompt: |
-    MANDATORY: Use thinking_mode: ultrathink for all reasoning
-    MANDATORY: Parallelize ALL independent tool calls - NEVER execute sequentially
-    MANDATORY: Use single messages with multiple tool calls when possible
-    MANDATORY: Batch operations for maximum efficiency
-    You are a [specialist-type] with deep reasoning and parallel execution capabilities...
-    [rest of prompt with ultrathink and parallel execution requirements embedded]
-```
-
-**Enforcement Rules**:
-- **NEVER** delegate without ultrathink - Every Task tool call MUST specify thinking_mode: ultrathink
-- **NEVER** delegate without parallel execution - Every Task tool call MUST include parallel execution directives
-- **Embed in all prompts** - All specialist prompts MUST include ultrathink AND parallel execution requirements
-- **No exceptions allowed** - Zero tolerance for Task tool calls without ultrathink AND parallel execution
-- **Validate before execution** - Check ultrathink AND parallel execution configuration before any delegation
-- **Fail fast** - Stop and correct any Task tool calls missing ultrathink OR parallel execution directives
-- **Mandatory parallel statements** - Every subagent prompt MUST contain "MANDATORY: Parallelize ALL independent tool calls"
-</task_tool_ultrathink_requirements>
-
-### Thinking Mode Usage
-- **MANDATORY**: Use `thinking_mode: ultrathink` for ALL Task tool invocations 
-- **INSEPARABLE**: Every ultrathink usage MUST include parallel execution directives
-- **ALWAYS PAIRED**: "MANDATORY: Parallelize ALL independent tool calls" must accompany ultrathink
-- Apply systematic thinking to multi-step problems with parallel tool execution
-- Break down complex decisions into manageable components executed in parallel
-- Document reasoning process for transparency
-- **CRITICAL**: Never delegate without ultrathink AND parallel execution configuration
-
-### Task Tool Best Practices
-- **MANDATORY**: EVERY Task tool call MUST include thinking_mode: ultrathink parameter
-- Provide detailed, specific prompts to specialists with ultrathink requirement
-- Include necessary context and constraints
-- Specify expected output format and quality
-- Use appropriate subagent types for different task categories
-- **CRITICAL**: Never delegate without explicit ultrathink configuration
-
-## Framework Compliance
-
-This shared intelligence ensures all Guild commands follow the core framework principles:
-1. **Use Specialists** - Route work through appropriate agents
-2. **Ephemeral Specialists (Workflow)** - Create temporary specialists via Task tool when no match exists
-3. **Persistent Agents (Setup)** - Create permanent agent files in `.claude/agents/guild/` via setup command
-4. **Work in Parallel** - Execute independent tasks simultaneously
-5. **Discover First** - Analyze before deciding
-6. **Verify Completeness** - MANDATORY implementation gap detection and resolution
-7. **No Persistence** - Never save examples, reports, or working state to files
-8. **Guild Directory (Setup Only)** - Setup command saves persistent agents to ./.claude/agents/guild/
-9. **Keep It Simple** - Clear, direct, effective instructions
-
-## Implementation Gap Resolution Protocol
-
-<gap_resolution_intelligence>
-**MANDATORY AFTER EVERY IMPLEMENTATION**:
-
-### Detection Streams (Execute in Parallel)
-1. **Requirements Completeness**: Compare implementation against original user requirements
-2. **Integration Verification**: Ensure all components integrate properly
-3. **Edge Case Coverage**: Identify missing error handling and edge cases
-4. **Dependency Completeness**: Verify all required dependencies are implemented
-5. **Performance Adequacy**: Confirm implementation meets performance expectations
-
-### Resolution Process
-1. **Gap Identification**: Systematically catalog all discovered gaps
-2. **Priority Assessment**: Determine resolution order based on criticality
-3. **Specialist Delegation**: Route gap resolution to appropriate specialists via Task tool
-4. **Parallel Implementation**: Execute independent gap fixes simultaneously
-5. **Re-verification**: Validate gap resolution and detect any new gaps introduced
-6. **Iteration**: Continue until comprehensive review finds no remaining gaps
-
-### Integration Requirements
-- **Post-Specialist-Work**: MANDATORY step after specialist completes any work
-- **Pre-User-Reporting**: Must complete before reporting results to user
-- **Parallel Execution**: Run all detection streams simultaneously for efficiency
-- **Specialist Coordination**: Use Task tool for all gap resolution work
-- **Documentation**: Update all relevant documentation to reflect gap resolutions
-</gap_resolution_intelligence>
+This shared intelligence supports the core framework principles:
+1. **Resource-Based**: Provide skills and agents as discoverable resources
+2. **Advisory Guidance**: Offer recommendations, not rigid mandates
+3. **Trust Native Capabilities**: Leverage Claude Code's built-in strengths
+4. **Contextual Selection**: Match resources to task requirements
+5. **Quality Focus**: Verify completeness and correctness
+6. **User-Centric**: Prioritize user approval and collaboration
+7. **File Discipline**: Only persist codebase files, skills, and agents
+8. **Clear Communication**: Keep users informed and engaged
