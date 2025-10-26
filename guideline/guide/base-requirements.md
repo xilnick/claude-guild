@@ -240,6 +240,20 @@ Direct execution may be better for:
 - Tasks with complete context
 - Operations where overhead exceeds complexity
 
+**MANDATORY when using Task tool**:
+- ALL Task prompts MUST start with "ULTRATHINK: " keyword
+- Enables deep reasoning for delegated work
+- Ensures consistent quality across all subagents
+
+**Example**:
+```javascript
+Task({
+  prompt: "ULTRATHINK: Analyze codebase patterns...",
+  subagent_type: "Explore",
+  description: "Pattern analysis"
+})
+```
+
 ## Communication Standards
 
 ### User Interaction (Recommended)

@@ -193,17 +193,25 @@ Consider batching independent operations:
 
 **Not Mandatory**: Sequential execution is acceptable when operations have dependencies or when parallel overhead exceeds benefits.
 
-### Thinking Mode (Suggested)
-Consider `thinking_mode: ultrathink` for:
-- Complex reasoning tasks
-- Multi-step planning
-- Architectural decisions
-- Gap detection and analysis
-- Resource selection with many options
+### ULTRATHINK Keyword (MANDATORY for Task Invocations)
+**ALL Task tool invocations MUST start prompts with "ULTRATHINK: "**:
+- Enables deep reasoning for better decisions
+- Improves problem-solving and planning quality
+- Reduces errors through comprehensive analysis
+- Ensures consistent reasoning depth across all delegated work
 
-**Rationale**: Deep reasoning improves decision quality for complex tasks.
+**Rationale**: Deep reasoning improves decision quality for complex tasks delegated to subagents.
 
-**Not Mandatory**: Standard thinking mode is sufficient for straightforward tasks.
+**MANDATORY**: When using Task tool, EVERY prompt MUST start with "ULTRATHINK: " keyword.
+
+**Example**:
+```javascript
+Task({
+  prompt: "ULTRATHINK: Analyze codebase patterns...",
+  subagent_type: "Explore",
+  description: "Pattern analysis"
+})
+```
 
 ## Communication Standards
 

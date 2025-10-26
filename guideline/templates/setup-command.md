@@ -4,18 +4,31 @@
 name: guild-setup
 model: inherit
 thinking_mode: ultrathink
-description: "Discover project patterns and create custom skills and specialists"
+description: "Discover project patterns and create custom skills and specialists with MANDATORY parallel subagent execution"
 ---
+
+## ⚠️ CRITICAL: MANDATORY Parallel Execution
+
+**THIS COMMAND REQUIRES PARALLEL SUBAGENT SPAWNING**
+
+You MUST spawn parallel Task tool invocations for ALL discovery phases:
+- ✅ Project discovery → PARALLEL Task calls in ONE message
+- ✅ Tech stack analysis → PARALLEL Task calls in ONE message
+- ✅ Documentation fetching → PARALLEL Task calls in ONE message
+- ❌ NEVER proceed sequentially when tasks are independent
+- ❌ NEVER use direct tool calls for project analysis phases
+
+**This is NOT advisory - it is MANDATORY**.
 
 ## Purpose
 
 Initialize the Guild system by:
-1. **Discovering project patterns** - Analyze codebase for repeatable procedures and conventions
-2. **Creating skills** - Document patterns as lightweight, metadata-rich skill definitions
-3. **Creating agents** - Generate specialists for domain expertise and complex coordination
+1. **Discovering project patterns** - Analyze codebase via parallel subagents
+2. **Creating skills** - Document patterns as SKILL.md files with documentation
+3. **Creating agents** - Generate specialists referencing skills
 4. **Providing guidance** - Explain when to use each resource
 
-## Process
+## Process (MANDATORY Parallel Execution)
 
 ### Phase 1: Existing Skill Inventory
 
@@ -38,52 +51,92 @@ ls .claude/skills/guild/
 - Identify potential skill relationships
 - Understand what needs creation vs reuse
 
-### Phase 2: Project Discovery & Tech Stack Analysis
+### Phase 2: PARALLEL Project Discovery & Tech Stack Analysis (MANDATORY)
 
-**Analyze Project Structure**:
-- File organization and architecture
-- Build systems and tooling
-- Testing approaches
-- Documentation patterns
+**YOU MUST spawn parallel Task tool invocations in a SINGLE message**:
 
-**Tech Stack Detection**:
-```bash
-# Detect technologies from package managers (parallel execution)
-- Read package.json (Node.js/npm)
-- Read requirements.txt or pyproject.toml (Python)
-- Read go.mod (Go)
-- Read Gemfile (Ruby)
-- Read composer.json (PHP)
-- Read pom.xml or build.gradle (Java)
+```javascript
+// Example: Spawn ALL discovery tasks in ONE message
+Task({
+  prompt: "ULTRATHINK: Analyze project structure and architecture.
+
+          Tasks:
+          1. Scan directory structure (use Glob for file organization)
+          2. Identify architectural patterns (MVC, microservices, monorepo, etc.)
+          3. Document file organization conventions
+          4. Identify build systems and tooling
+
+          Report:
+          - Directory structure summary
+          - Architectural patterns found
+          - File organization conventions
+          - Build system details",
+  subagent_type: "Explore",
+  description: "Project structure analysis"
+})
+Task({
+  prompt: "ULTRATHINK: Detect tech stack from package managers.
+
+          Tasks:
+          1. Read package.json (Node.js) - extract dependencies
+          2. Read requirements.txt/pyproject.toml (Python)
+          3. Read go.mod (Go)
+          4. Read Gemfile (Ruby)
+          5. Read composer.json (PHP)
+          6. Read pom.xml/build.gradle (Java)
+          7. Identify major libraries and frameworks
+
+          Extract:
+          - Frontend: React, Vue, Svelte, Angular, etc.
+          - Backend: Express, Fastify, NestJS, Django, Flask, etc.
+          - ORMs: Prisma, TypeORM, Mongoose, SQLAlchemy, etc.
+          - Testing: Jest, Vitest, Pytest, Mocha, etc.
+          - Build Tools: Vite, Webpack, esbuild, Rollup, etc.
+
+          Report:
+          - Complete tech stack inventory
+          - Version constraints
+          - Major libraries requiring skills",
+  subagent_type: "Explore",
+  description: "Tech stack detection"
+})
+Task({
+  prompt: "ULTRATHINK: Identify project patterns and conventions.
+
+          Tasks:
+          1. Search for repeatable procedures (Grep for common patterns)
+          2. Identify code quality patterns
+          3. Document testing approaches
+          4. Find integration protocols
+          5. Identify common workflows
+
+          Report:
+          - Repeatable procedures worth documenting
+          - Project-specific conventions
+          - Testing patterns
+          - Integration protocols
+          - Common workflows",
+  subagent_type: "Explore",
+  description: "Pattern identification"
+})
 ```
 
-**Extract Major Libraries**:
-- Frontend: React, Vue, Svelte, Angular, etc.
-- Backend: Express, Fastify, NestJS, Django, Flask, etc.
-- ORMs: Prisma, TypeORM, Mongoose, SQLAlchemy, etc.
-- Testing: Jest, Vitest, Pytest, Mocha, etc.
-- Build Tools: Vite, Webpack, esbuild, Rollup, etc.
+**MANDATORY Requirements**:
+1. ALL Task calls MUST be in ONE message
+2. NO sequential Task invocations across messages
+3. Use `subagent_type: "Explore"` for codebase analysis
+4. Each Task MUST have clear objectives and reporting requirements
+5. Wait for ALL parallel tasks to complete before Phase 3
 
-**Identify Patterns**:
-- Repeatable procedures worth documenting
-- Project-specific conventions and approaches
-- Integration protocols and standards
-- Code quality patterns
-- Common workflows
+**After Parallel Discovery Completes**:
 
 **Pattern Gap Analysis**:
-- Compare discovered patterns to existing skills
+- Combine results from ALL parallel discovery tasks
+- Compare discovered patterns to existing skills (Phase 1 inventory)
 - Identify patterns WITHOUT skill coverage
 - Identify libraries WITHOUT skills (for tech stack skills)
 - Mark patterns that can reuse existing skills
 - Note opportunities for skill relationships
-
-**Discovery Methods**:
-- Parallel tool execution (Glob, Grep, Read)
-- Configuration file analysis
-- Documentation review
-- Codebase pattern mining
-- Tech stack extraction
 
 ### Phase 3: Skill Creation (Gap-Based with Tech Stack Integration)
 
@@ -169,21 +222,59 @@ related_agents: ["[specialist-agent]"]
 
 **Keep SKILL.md under 500 lines** - move detailed content to separate files.
 
-3. **For Tech Stack Skills - Create Documentation Resources**:
+3. **For Tech Stack Skills - PARALLEL Documentation Fetching (MANDATORY)**:
 
-**If skill is library-specific** (e.g., working-with-react):
+**YOU MUST spawn parallel Task tool invocations for documentation fetching**:
 
-```bash
-# Use Context7 to fetch library documentation
-mcp__context7__resolve-library-id "[library-name]"
-# Example: "react" → /facebook/react
+```javascript
+// Example: Spawn ALL documentation tasks in ONE message for all library skills
+Task({
+  prompt: "ULTRATHINK: Fetch React documentation using Context7.
 
-mcp__context7__get-library-docs "/[org]/[project]" topic="[relevant-topic]"
-# Example: /facebook/react, topic="hooks"
+          Tasks:
+          1. Resolve library ID: mcp__context7__resolve-library-id 'react'
+          2. Fetch core docs: mcp__context7__get-library-docs '/facebook/react'
+          3. Fetch specific topics: hooks, components, state management
+          4. Optionally WebSearch for 'React best practices 2025'
 
-# Create DOCS.md with fetched documentation
-# Location: .claude/skills/guild/[category]/DOCS.md
+          Create:
+          - .claude/skills/guild/frontend-patterns/DOCS.md with all fetched documentation
+
+          Report:
+          - Documentation fetching success/failure
+          - Topics covered
+          - Version information",
+  subagent_type: "general-purpose",
+  description: "React documentation"
+})
+Task({
+  prompt: "ULTRATHINK: Fetch Express documentation using Context7.
+
+          Tasks:
+          1. Resolve library ID: mcp__context7__resolve-library-id 'express'
+          2. Fetch core docs: mcp__context7__get-library-docs '/expressjs/express'
+          3. Fetch specific topics: routing, middleware, error handling
+          4. Optionally WebSearch for 'Express best practices 2025'
+
+          Create:
+          - .claude/skills/guild/backend-integration/DOCS.md with all fetched documentation
+
+          Report:
+          - Documentation fetching success/failure
+          - Topics covered
+          - Version information",
+  subagent_type: "general-purpose",
+  description: "Express documentation"
+})
+// Add more parallel Task calls for other library skills...
 ```
+
+**MANDATORY Requirements**:
+1. ALL documentation fetching tasks in ONE message
+2. Use parallel Task tool invocations for all library skills
+3. Each Task uses Context7 to fetch library documentation
+4. Create DOCS.md files for each library skill
+5. Wait for ALL documentation tasks to complete
 
 **DOCS.md Structure**:
 ```markdown
@@ -365,25 +456,66 @@ If user requests specific agents or skills:
 3. Add user-requested resources to the inventory
 4. Ensure consistency with discovered patterns
 
-## Success Criteria
+## Mandatory Checklist
 
-**Completion When**:
-- ✅ Existing skills inventoried (Phase 1)
-- ✅ Project patterns discovered and gap analysis performed (Phase 2)
-- ✅ **New skills created ONLY for patterns without existing coverage** (Phase 3)
-- ✅ **Skill relationships established** (new ↔ existing via `related_skills`)
-- ✅ **Agents created referencing ALL skills** (existing + new) (Phase 4)
-- ✅ Resource inventory with composition patterns presented (displayed, not persisted) (Phase 5)
-- ✅ Usage guidance with skill composition examples provided (displayed, not persisted)
+Before completing setup execution, verify:
+
+### Phase 2: Parallel Discovery (MANDATORY)
+- ✅ Spawned parallel Task tool invocations for ALL discovery in ONE message
+- ✅ Project structure analysis via Task tool
+- ✅ Tech stack detection via Task tool
+- ✅ Pattern identification via Task tool
+- ✅ ALL discovery tasks completed before proceeding to Phase 3
+
+### Phase 3: Skill Creation
+- ✅ Identified skills to create based on gap analysis
+- ✅ Created SKILL.md files with official format (gerund naming)
+- ✅ Skills under 500 lines with progressive loading structure
+- ✅ Tech stack skills AND pattern skills created
+
+### Phase 3: Documentation Fetching (If Library Skills Created)
+- ✅ Spawned parallel Task tool invocations for ALL documentation fetching in ONE message
+- ✅ Used Context7 to fetch library documentation
+- ✅ Created DOCS.md files for tech stack skills
+- ✅ ALL documentation tasks completed
+
+### Phase 4: Agent Creation
+- ✅ Created agents referencing ALL relevant skills (existing + new)
+- ✅ Agents include "Relevant Skills" sections
+- ✅ Agent files saved to `.claude/agents/guild/`
+
+### Phase 5: Guidance & Approval
+- ✅ Resource inventory presented (displayed, not persisted)
+- ✅ Usage guidance provided (displayed, not persisted)
+- ✅ Only skill and agent files persisted
 - ✅ User approval obtained
 
-**Remember**:
-- **Reuse existing skills** - don't duplicate patterns
-- **Compose skills** - link related skills together
-- **Agents use ALL skills** - reference both existing and new
-- Skills describe WHAT/WHEN, not HOW
-- All resources discoverable via metadata
-- No hardcoded skill sets - discover from project
-- Only persist skill and agent files
+## Success Criteria
+
+**Setup Considered Successful When**:
+- ✅ Phase 2: Parallel discovery executed (ALL tasks in ONE message)
+- ✅ Phase 3: Skills created with official SKILL.md format
+- ✅ Phase 3: Documentation fetched in parallel (if library skills)
+- ✅ Phase 4: Agents created referencing all skills
+- ✅ Phase 5: Guidance provided and user approval obtained
+- ✅ Only codebase files (skills, agents) persisted
+
+**Anti-Patterns to Avoid**:
+- ❌ Sequential Task invocations across multiple messages
+- ❌ Using direct tools (Read, Grep, Glob) instead of Task tool for discovery
+- ❌ Skipping parallel documentation fetching for library skills
+- ❌ Creating skills without discovering from project first
+- ❌ Persisting analysis reports or discovery documents
+
+## Summary
+
+**Setup command REQUIRES**:
+1. **Parallel discovery** (Phase 2) - ALL discovery tasks in ONE message
+2. **Skill creation** (Phase 3) - Official SKILL.md format with docs
+3. **Parallel documentation** (Phase 3) - ALL library docs in ONE message
+4. **Agent creation** (Phase 4) - Referencing all skills
+5. **User approval** (Phase 5) - Final authority
+
+**NOT ADVISORY - MANDATORY**: Parallel subagent spawning is a core architectural requirement.
 
 {SHARED_INTELLIGENCE}

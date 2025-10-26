@@ -4,8 +4,30 @@
 name: guild
 model: inherit
 thinking_mode: ultrathink
-description: "Execute tasks leveraging available skills and specialists"
+description: "Execute tasks leveraging available skills and specialists with MANDATORY parallel subagent execution"
 ---
+
+## ⚠️ CRITICAL: MANDATORY Execution Architecture
+
+**THIS COMMAND ENFORCES FOUR MANDATORY REQUIREMENTS**
+
+### 1. Subagent Delegation (Context Reduction)
+- ✅ Use Task tool for ALL multi-step work
+- ❌ NEVER use direct tools for multi-step research/implementation
+
+### 2. Parallel Execution (Performance)
+- ✅ Spawn ALL parallel tasks in ONE message
+- ❌ NEVER sequential Task invocations across messages
+
+### 3. Ultra-Deep Reasoning (Quality)
+- ✅ Start EVERY Task prompt with "ULTRATHINK: "
+- ❌ NEVER omit ULTRATHINK keyword from Task prompts
+
+### 4. Fresh Context (Precision)
+- ✅ Use Context7/WebSearch for current documentation
+- ❌ NEVER rely on stale knowledge cutoff data
+
+**These are NOT advisory - they are MANDATORY**.
 
 ## Available Resources
 
@@ -17,149 +39,313 @@ description: "Execute tasks leveraging available skills and specialists"
 ### Agent Roster
 {AGENT_INVENTORY}
 
-**Agents provide specialized expertise** - Consider agents for complex coordination or domain-specific work. Agents can be invoked directly or via Task tool for sophisticated delegation.
+**Agents provide specialized expertise** - Use agents via Task tool for domain-specific work. Agents apply skill patterns automatically.
 
-## Your Role
+## Execution Protocol (MANDATORY)
 
-You have access to project-specific skills and specialized agents. Use these resources to inform your work, but **trust your judgment** on execution. The guidance provided is advisory - you determine optimal execution based on context.
+### Phase 1: PARALLEL Research & Discovery (REQUIRED)
 
-### Resource Selection
+**YOU MUST spawn parallel Task tool invocations in a SINGLE message**:
 
-**When Reviewing Tasks**:
-1. **Check Skills First**: Scan skill inventory for pattern matches
-   - Review `applicability` metadata (file patterns, technologies, task types)
-   - Check `confidence_scoring` for context fit
-   - Load skill content for project conventions if relevant
+```javascript
+// Example: Spawn ALL research tasks in ONE message
+Task({
+  prompt: "ULTRATHINK: Analyze codebase for [task-specific-context].
+          Identify: [specific items to find].
+          Report: [specific findings needed].",
+  subagent_type: "Explore",
+  description: "Codebase analysis"
+})
+Task({
+  prompt: "ULTRATHINK: Research [technology/library] documentation.
+          Use Context7: mcp__context7__resolve-library-id '[library]'
+          Then: mcp__context7__get-library-docs for latest docs
+          Focus on: [specific topics].
+          Report: [specific information with version context].",
+  subagent_type: "general-purpose",
+  description: "Documentation research"
+})
+Task({
+  prompt: "ULTRATHINK: Search for [technology] best practices 2025.
+          Use WebSearch for latest community patterns.
+          Identify: [current recommendations].
+          Report: [modern approaches and anti-patterns].",
+  subagent_type: "general-purpose",
+  description: "Best practices research"
+})
+```
 
-2. **Consider Agents**: Evaluate specialists for complex work
-   - Match task domain to agent expertise
-   - Consider coordination needs
-   - Assess whether delegation benefits the task
+**MANDATORY Requirements**:
+1. ALL Task calls MUST be in ONE message
+2. NO sequential Task invocations across messages
+3. EVERY Task prompt MUST start with "ULTRATHINK: "
+4. Use Context7/WebSearch for fresh documentation
+5. Each Task MUST have clear prompt (with ULTRATHINK), subagent_type, description
+6. Wait for ALL parallel tasks to complete before Phase 2
 
-3. **Leverage Native Capabilities**: Trust your built-in strengths
-   - Parallel tool execution
-   - Intelligent tool selection
-   - Task decomposition
-   - Direct file operations
+**subagent_type Selection**:
+- `Explore`: Codebase exploration, file discovery, pattern identification
+- `general-purpose`: Documentation research, implementation, verification
 
-4. **Use Task Tool When Beneficial**: For complex delegation
-   - Multi-step coordination
-   - Specialized reasoning
-   - Existing agent match
-   - Parallel workstreams
+### Phase 2: Synthesize & Plan
 
-### Execution Guidance
+**After all parallel research tasks complete**:
 
-**You Excel At**:
-- Parallel tool invocation and batching
-- Context management and workflow coordination
-- Intelligent tool selection and usage
-- Adaptive planning based on feedback
-- Direct file operations and edits
+1. **Synthesize Findings**:
+   - Combine results from ALL parallel research tasks
+   - Identify patterns, constraints, and opportunities
+   - Check available skills for relevant patterns
+   - Check agent roster for relevant specialists
 
-**Use Skills For**:
-- Quick reference to project conventions
-- Pattern identification and anti-patterns
-- Project-specific guidance
-- Related resource discovery
+2. **Develop Plan**:
+   - Break down task into independent workstreams
+   - Identify skill patterns to apply
+   - Determine parallelization opportunities
+   - Plan verification approach
 
-**Use Agents For**:
-- Complex multi-step coordination
-- Deep domain expertise
-- Orchestrating multiple resources
-- Specialized project knowledge
+3. **Present Plan** (for complex tasks):
+   - Show proposed approach
+   - Explain parallel execution strategy
+   - Pause for user approval
+   - Iterate based on feedback
 
-**Optimization Guidance**:
-- Consider batching independent operations
-- Apply parallel execution where beneficial
-- Balance delegation overhead vs complexity
-- Reuse existing resources appropriately
+### Phase 3: PARALLEL Implementation (REQUIRED)
 
-These are recommendations to consider, not rigid rules to follow.
+**YOU MUST spawn parallel Task tool invocations for independent workstreams**:
 
-## Task Execution
+```javascript
+// Example: Spawn ALL implementation tasks in ONE message
+Task({
+  prompt: "ULTRATHINK: Implement [workstream-1].
+          Apply skills: [relevant-skills].
+          Follow patterns: [from research].
+          Success criteria: [specific outcomes].",
+  subagent_type: "general-purpose",
+  description: "Workstream 1 implementation"
+})
+Task({
+  prompt: "ULTRATHINK: Implement [workstream-2].
+          Apply skills: [relevant-skills].
+          Follow patterns: [from research].
+          Success criteria: [specific outcomes].",
+  subagent_type: "general-purpose",
+  description: "Workstream 2 implementation"
+})
+Task({
+  prompt: "ULTRATHINK: Implement [workstream-3].
+          Apply skills: [relevant-skills].
+          Follow patterns: [from research].
+          Success criteria: [specific outcomes].",
+  subagent_type: "general-purpose",
+  description: "Workstream 3 implementation"
+})
+```
 
-When user provides instructions:
+**MANDATORY Requirements**:
+1. Identify ALL independent workstreams
+2. Spawn ALL workstreams in ONE message
+3. EVERY Task prompt MUST start with "ULTRATHINK: "
+4. Each Task references relevant skills
+5. Each Task has clear success criteria
+6. Wait for ALL parallel tasks to complete before Phase 4
 
-1. **Understand Context**:
-   - Review user request thoroughly
-   - Assess task complexity and requirements
-   - Consider project state and constraints
+**When Direct Execution is Acceptable**:
+- Simple file edits (single file, clear change)
+- Trivial refactoring (rename, formatting)
+- Quick fixes (typo correction)
+- Operations where parallel overhead exceeds benefit
 
-2. **Evaluate Resources**:
-   - Check skills for relevant patterns
-   - Consider agents if complex coordination needed
-   - Assess whether delegation adds value
+**For Everything Else**: Use parallel Task tool invocations
 
-3. **Execute Effectively**:
-   - Use selected resources appropriately
-   - Apply parallel execution for independent operations
-   - Leverage native capabilities
-   - Adapt approach based on results
+### Phase 4: PARALLEL Verification (REQUIRED)
 
-4. **Verify Quality**:
-   - Check functional correctness
-   - Validate integration
-   - Consider edge cases
-   - Ensure completeness
+**YOU MUST spawn parallel verification tasks**:
 
-5. **Communicate Clearly**:
-   - Present complex plans before execution
-   - Keep user informed
-   - Report issues transparently
-   - Obtain approval on completion
+```javascript
+// Example: Spawn ALL verification tasks in ONE message
+Task({
+  prompt: "ULTRATHINK: Verify functional correctness.
+          Test: [specific functionality].
+          Validate: [requirements met].
+          Report: [issues found].",
+  subagent_type: "general-purpose",
+  description: "Functional verification"
+})
+Task({
+  prompt: "ULTRATHINK: Verify integration and compatibility.
+          Check: [integration points].
+          Test: [component interactions].
+          Report: [integration issues].",
+  subagent_type: "general-purpose",
+  description: "Integration verification"
+})
+Task({
+  prompt: "ULTRATHINK: Verify code quality and standards.
+          Check: [skill patterns followed].
+          Validate: [anti-patterns avoided].
+          Report: [quality issues].",
+  subagent_type: "general-purpose",
+  description: "Quality verification"
+})
+```
+
+**MANDATORY Requirements**:
+1. ALL verification tasks in ONE message
+2. EVERY Task prompt MUST start with "ULTRATHINK: "
+3. Functional, integration, and quality checks in parallel
+4. Each Task has specific validation criteria
+5. Wait for ALL verification to complete before Phase 5
+
+### Phase 5: Report & Obtain Approval
+
+1. **Synthesize Results**:
+   - Combine findings from all parallel verification tasks
+   - Identify any gaps or issues
+   - Document what was accomplished
+
+2. **Present Results**:
+   - Summarize implementation clearly
+   - Report verification outcomes
+   - Highlight any concerns
+   - Display analysis (NEVER persist non-codebase files)
+
+3. **Obtain User Approval**:
+   - User approval is final authority
+   - Address any feedback
+   - Iterate if needed
+   - Confirm completion
+
+## Skill Integration
+
+### Using Skills
+
+**Skills are discoverable pattern knowledge**:
+1. Check skills inventory for relevant patterns
+2. Read SKILL.md for project conventions
+3. Apply WHAT/WHEN guidance
+4. Reference DOCS.md for library documentation
+5. Avoid documented anti-patterns
+
+**Skills do NOT require Task tool** - Read and apply directly for pattern guidance.
+
+### Skill References in Task Prompts
+
+When delegating via Task tool, reference relevant skills:
+
+```javascript
+Task({
+  prompt: "ULTRATHINK: Implement user authentication endpoint.
+          Reference skills:
+          - .claude/skills/guild/backend-integration/SKILL.md (API patterns)
+          - .claude/skills/guild/testing-patterns/SKILL.md (test protocols)
+          Apply project conventions from these skills.
+          Success criteria: [specific outcomes].",
+  subagent_type: "general-purpose",
+  description: "Authentication endpoint"
+})
+```
 
 ## File Creation Guidelines
 
-**Create/Modify**:
-- Source code and configuration files
-- Tests and build files
-- Project files that are part of the codebase
+**Create/Modify (Codebase Files Only)**:
+- Source code (.js, .ts, .py, .java, etc.)
+- Configuration files (package.json, tsconfig.json, etc.)
+- Test files (*.test.js, *.spec.ts, etc.)
+- Build files (Makefile, Dockerfile, etc.)
 
-**Display Only** (Never Persist):
-- Analysis reports and summaries
-- Verification results
+**Display Only (NEVER Persist)**:
+- Analysis reports and verification summaries
 - Working notes and scratchpads
 - Documentation (unless explicitly requested)
+- Intermediate artifacts
 
-Present analysis and findings in conversation, not as files.
+## Mandatory Checklist
 
-## Quality Standards
+Before completing workflow execution, verify ALL FOUR requirements enforced:
 
-**Verification Practices**:
-- Functional requirements met
-- Components integrate properly
-- Edge cases considered
-- Dependencies handled
-- Performance acceptable
-- User approval obtained
+### Requirement 1: Subagent Delegation
+- ✅ Multi-step work delegated to Task tool (not direct tools)
+- ✅ Main context kept clean and focused
 
-**Gap Detection**:
-- Review work against requirements
-- Identify missing components
-- Prioritize and address gaps
-- Re-verify after changes
-- Confirm with user
+### Requirement 2: Parallel Execution
+- ✅ Phase 1: Spawned parallel research tasks in ONE message
+- ✅ Phase 3: Spawned parallel implementation tasks in ONE message (if applicable)
+- ✅ Phase 4: Spawned parallel verification tasks in ONE message
 
-## Communication
+### Requirement 3: Ultra-Deep Reasoning
+- ✅ EVERY Task prompt started with "ULTRATHINK: "
+- ✅ No Task spawned without ULTRATHINK keyword
 
-**For Complex Tasks**:
-- Consider presenting a plan first
-- Pause for user approval
-- Accept feedback and iterate
-- Trust user expertise
+### Requirement 4: Fresh Context
+- ✅ Used Context7 for library documentation
+- ✅ Used WebSearch for best practices
+- ✅ Maintained current, version-specific context
 
-**For Simple Tasks**:
-- Execute directly when appropriate
-- Keep user informed of progress
-- Report completion clearly
+### General Checklist
+- ✅ ALL parallel tasks completed before proceeding to next phase
+- ✅ Phase 2: Synthesized findings and developed plan
+- ✅ Phase 5: Obtained user approval
+- ✅ Only codebase files persisted (no analysis reports saved)
 
-## Trust Your Judgment
+## Anti-Patterns (FORBIDDEN)
 
-- **No Rigid Rules**: Select resources based on context
-- **Balance Complexity**: Direct execution vs delegation overhead
-- **Leverage Strengths**: Use built-in capabilities effectively
-- **Seek Guidance**: Skills and agents provide recommendations, not mandates
-- **Optimize Thoughtfully**: Consider parallel execution and delegation based on value
+❌ **Violation 1: Using Direct Tools for Multi-Step Work**:
+```javascript
+// DO NOT DO THIS
+Read package.json
+Grep for patterns
+Read file1.js
+Read file2.js
+Grep for more patterns
+// This bloats main context - use Task tool with Explore subagent
+```
+
+❌ **Violation 2: Sequential Task Invocations**:
+```javascript
+// DO NOT DO THIS - spawning tasks across multiple messages
+Message 1: Task({ prompt: "Research..." })
+// Wait for response
+Message 2: Task({ prompt: "More research..." })
+// Should spawn ALL in ONE message
+```
+
+❌ **Violation 3: Missing ULTRATHINK keyword**:
+```javascript
+// DO NOT DO THIS
+Task({
+  prompt: "Complex analysis...",
+  subagent_type: "Explore",
+  description: "Analysis"
+  // Missing "ULTRATHINK: " at start of prompt - FORBIDDEN
+})
+// MUST start EVERY Task prompt with "ULTRATHINK: "
+```
+
+❌ **Violation 4: Relying on Stale Knowledge**:
+```javascript
+// DO NOT DO THIS
+// "I'll implement React hooks based on my training data"
+// MUST research fresh documentation via Context7:
+// mcp__context7__resolve-library-id "react"
+// mcp__context7__get-library-docs "/facebook/react" topic="hooks"
+```
+
+## Summary
+
+**Workflow command enforces FOUR MANDATORY requirements**:
+
+1. **Subagent Delegation**: Task tool for ALL multi-step work (context efficiency)
+2. **Parallel Execution**: ALL tasks in ONE message (performance)
+3. **Ultra-Deep Reasoning**: "ULTRATHINK: " keyword at start of EVERY Task prompt (quality)
+4. **Fresh Context**: Context7/WebSearch for current docs (precision)
+
+**Execution Flow**:
+1. **Parallel research** (Phase 1) - ALL tasks in ONE message with ULTRATHINK keyword
+2. **Synthesis** (Phase 2) - Combine findings, develop plan
+3. **Parallel implementation** (Phase 3) - ALL workstreams in ONE message with ULTRATHINK keyword
+4. **Parallel verification** (Phase 4) - ALL checks in ONE message with ULTRATHINK keyword
+5. **User approval** (Phase 5) - Final authority
+
+**NOT ADVISORY - MANDATORY**: These four requirements are core architectural constraints.
 
 {SHARED_INTELLIGENCE}

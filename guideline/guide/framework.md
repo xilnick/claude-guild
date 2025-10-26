@@ -8,6 +8,166 @@
 
 **Advisory Guidance**: Commands present available resources and provide strategic advice, allowing Claude Code to leverage its strengths in task decomposition and tool orchestration.
 
+## MANDATORY: Execution Architecture
+
+<mandatory_execution_architecture>
+**CRITICAL REQUIREMENTS**: Guild commands enforce specific execution patterns for optimal performance, context efficiency, and reasoning quality.
+
+### 1. MANDATORY: Subagent Delegation (Context Reduction)
+
+**ALWAYS use Task tool to reduce context usage**:
+- ✅ Multi-step research → Task tool delegation
+- ✅ Complex implementation → Task tool delegation
+- ✅ Verification phases → Task tool delegation
+- ❌ NEVER use direct tools for multi-step work
+- ❌ NEVER keep multi-step work in main context
+
+**Why Mandatory Subagent Delegation**:
+1. **Context Efficiency**: Keeps main context clean and focused
+2. **Scalability**: Distributes work across multiple agent contexts
+3. **Isolation**: Each subagent works in isolated context
+4. **Performance**: Better parallelization and resource utilization
+
+**When Direct Tools Are Acceptable**:
+- Single file read/write operations
+- Simple grep/glob queries
+- Trivial edits (formatting, typos)
+- Operations where Task overhead exceeds benefit
+
+### 2. MANDATORY: Parallel Execution (Performance + Context)
+
+**ALWAYS spawn parallel Task tool invocations in ONE message**:
+- ✅ Research/discovery → ALL tasks in ONE message
+- ✅ Implementation workstreams → ALL tasks in ONE message
+- ✅ Verification phases → ALL tasks in ONE message
+- ❌ NEVER sequential Task invocations across messages
+- ❌ NEVER wait between spawning independent tasks
+
+**Why Mandatory Parallel Execution**:
+1. **Performance**: 3-10x speedup vs sequential execution
+2. **Context Distribution**: Parallel agents work in separate contexts simultaneously
+3. **Scalability**: Independent workstreams don't block each other
+4. **Best Practice**: Aligns with official Anthropic recommendations
+
+### 3. MANDATORY: Ultra-Deep Reasoning (ULTRATHINK Keyword)
+
+**ALWAYS include ULTRATHINK keyword at start of Task prompts**:
+- ✅ Main workflow and setup commands use ultrathink
+- ✅ ALL spawned subagents start prompt with "ULTRATHINK:"
+- ✅ Complex reasoning and planning tasks
+- ✅ Research and analysis phases
+- ❌ NEVER spawn Task without ULTRATHINK keyword in prompt
+- ❌ NEVER use default thinking mode
+
+**Why Mandatory ULTRATHINK**:
+1. **Reasoning Quality**: Enables deep, thorough reasoning
+2. **Better Decisions**: Improves planning and problem-solving
+3. **Error Reduction**: Catches issues through comprehensive analysis
+4. **Consistency**: All agents reason at the same depth
+
+**ULTRATHINK Keyword Pattern**:
+```javascript
+Task({
+  prompt: "ULTRATHINK: Your detailed task description...",
+  subagent_type: "Explore",
+  description: "Task description"
+})
+```
+
+**Keyword Placement**: Start EVERY Task prompt with "ULTRATHINK: " to activate deep reasoning mode for the spawned agent.
+
+### 4. MANDATORY: Fresh Context Maintenance
+
+**ALWAYS maintain relevant, up-to-date context**:
+- ✅ Use Context7 for library documentation (latest versions)
+- ✅ Use WebSearch for current best practices
+- ✅ Use WebFetch for fresh documentation
+- ✅ Research before implementation
+- ❌ NEVER rely on stale knowledge cutoff data
+- ❌ NEVER skip research for "known" technologies
+
+**Why Mandatory Fresh Context**:
+1. **Precision**: Latest documentation = accurate implementations
+2. **Best Practices**: Current patterns and recommendations
+3. **Version Alignment**: Match project's actual library versions
+4. **Quality**: Avoid deprecated or outdated approaches
+
+### Complete Mandatory Pattern
+
+**CORRECT (ALL requirements enforced)**:
+```javascript
+// Spawn ALL tasks in ONE message, ALL with ULTRATHINK keyword
+Task({
+  prompt: "ULTRATHINK: Research React latest documentation.
+          Use Context7: mcp__context7__resolve-library-id 'react'
+          Then: mcp__context7__get-library-docs with topics
+          Report: Current best practices and patterns",
+  subagent_type: "general-purpose",
+  description: "React documentation research"
+})
+Task({
+  prompt: "ULTRATHINK: Analyze codebase for React usage patterns.
+          Use Glob and Grep to find components
+          Report: Current project patterns",
+  subagent_type: "Explore",
+  description: "Codebase analysis"
+})
+Task({
+  prompt: "ULTRATHINK: Search for React best practices 2025.
+          Use WebSearch for latest patterns
+          Report: Current community recommendations",
+  subagent_type: "general-purpose",
+  description: "Best practices research"
+})
+```
+
+**INCORRECT (violations)**:
+```javascript
+// ❌ Sequential tasks across messages
+Message 1: Task({ prompt: "Research..." })
+Message 2: Task({ prompt: "More research..." })
+
+// ❌ Missing ULTRATHINK keyword in prompt
+Task({ prompt: "Research...", subagent_type: "Explore" })
+// MUST start with "ULTRATHINK: "
+
+// ❌ Using direct tools for multi-step work
+Read package.json
+Grep for patterns
+Read multiple files
+// Should use Task tool instead
+
+// ❌ Relying on stale knowledge instead of fresh research
+// "I know React hooks..." - NO! Research fresh docs via Context7
+```
+
+### Enforcement Rules
+
+**Workflow Command (`/guild`) MUST**:
+1. Use Task tool for ALL multi-step research/implementation
+2. Spawn ALL parallel tasks in ONE message
+3. Start EVERY Task prompt with "ULTRATHINK: "
+4. Use Context7/WebSearch for fresh documentation
+5. Wait for ALL parallel tasks before proceeding
+
+**Setup Command (`/guild:setup`) MUST**:
+1. Use Task tool for ALL discovery and analysis
+2. Spawn ALL parallel tasks in ONE message
+3. Start EVERY Task prompt with "ULTRATHINK: "
+4. Fetch fresh library documentation via Context7
+5. Wait for ALL parallel tasks before proceeding
+
+### What This Means
+
+**NOT ADVISORY - THESE ARE MANDATORY**:
+- Task tool delegation for multi-step work (context efficiency)
+- Parallel execution in single message (performance)
+- ULTRATHINK keyword in all Task prompts (reasoning quality)
+- Fresh context via research tools (precision)
+- This is core architectural requirement, not recommendation
+
+</mandatory_execution_architecture>
+
 ## Core Architecture
 <system_design>
 <principle>Provide discoverable skills and specialized agents as resources for intelligent selection</principle>

@@ -1,5 +1,213 @@
 # Shared Intelligence
 
+## CRITICAL: Mandatory Execution Architecture
+
+<mandatory_execution_patterns>
+**THIS IS NOT ADVISORY - THESE ARE MANDATORY**
+
+Guild commands enforce four core execution requirements for optimal performance, context efficiency, and reasoning quality.
+
+### 1. MANDATORY: Subagent Delegation (Context Reduction)
+
+**ALWAYS use Task tool to reduce context usage**:
+```javascript
+// ✅ CORRECT: Multi-step work via Task tool
+Task({
+  prompt: "ULTRATHINK: Analyze codebase for patterns. Use Glob/Grep/Read...",
+  subagent_type: "Explore",
+  description: "Codebase analysis"
+})
+
+// ❌ INCORRECT: Multi-step work in main context
+Read package.json
+Grep for patterns
+Read file1.js
+Read file2.js
+Grep for more patterns
+// This bloats main context - use Task tool instead
+```
+
+**When Direct Tools Are Acceptable**:
+- Single file operations (one Read, one Write, one Edit)
+- Simple queries (single Grep, single Glob)
+- Trivial edits (formatting, typo fixes)
+
+### 2. MANDATORY: Parallel Execution (Performance + Context)
+
+**ALWAYS spawn ALL independent tasks in ONE message**:
+```javascript
+// ✅ CORRECT: All parallel tasks in ONE message with ULTRATHINK
+Task({
+  prompt: "ULTRATHINK: Research React docs via Context7...",
+  subagent_type: "general-purpose",
+  description: "React docs"
+})
+Task({
+  prompt: "ULTRATHINK: Analyze codebase for React patterns...",
+  subagent_type: "Explore",
+  description: "Codebase analysis"
+})
+Task({
+  prompt: "ULTRATHINK: Search best practices via WebSearch...",
+  subagent_type: "general-purpose",
+  description: "Best practices"
+})
+
+// After research completes, optionally use Plan agent for complex tasks
+Task({
+  prompt: "ULTRATHINK: Based on research, develop implementation plan.
+          Present plan for user approval.",
+  subagent_type: "Plan",
+  description: "Implementation planning"
+})
+
+// ❌ INCORRECT: Sequential tasks across messages
+Message 1: Task({ prompt: "Research..." })
+Message 2: Task({ prompt: "More research..." })
+Message 3: Task({ prompt: "Even more..." })
+```
+
+### 3. MANDATORY: Ultra-Deep Reasoning (ULTRATHINK Keyword)
+
+**ALWAYS start EVERY Task prompt with "ULTRATHINK: "**:
+```javascript
+// ✅ CORRECT: ULTRATHINK keyword in prompt
+Task({
+  prompt: "ULTRATHINK: Complex analysis task...",
+  subagent_type: "Explore",
+  description: "Analysis"
+})
+
+// ❌ INCORRECT: Missing ULTRATHINK keyword
+Task({
+  prompt: "Complex analysis task...",
+  subagent_type: "Explore",
+  description: "Analysis"
+  // Missing "ULTRATHINK: " at start of prompt - FORBIDDEN
+})
+```
+
+**Why Mandatory**:
+- Enables deep reasoning for better decisions
+- Improves problem-solving and planning quality
+- Reduces errors through comprehensive analysis
+- Ensures consistent reasoning depth across all agents
+
+### 4. MANDATORY: Fresh Context Maintenance
+
+**ALWAYS research fresh documentation and best practices**:
+```javascript
+// ✅ CORRECT: Fresh research via Context7/WebSearch with ULTRATHINK
+Task({
+  prompt: "ULTRATHINK: Research React latest documentation.
+          1. Use Context7: mcp__context7__resolve-library-id 'react'
+          2. Fetch docs: mcp__context7__get-library-docs '/facebook/react'
+          3. Get version-specific patterns
+          Report: Current React best practices",
+  subagent_type: "general-purpose",
+  description: "React documentation"
+})
+
+// ❌ INCORRECT: Relying on stale knowledge
+Task({
+  prompt: "Implement React component using hooks.
+          (Relying on training data about React)",
+  // Missing ULTRATHINK keyword + fresh documentation research
+})
+```
+
+**Fresh Context Sources**:
+- **Context7**: Library documentation (latest versions)
+- **WebSearch**: Current best practices and patterns
+- **WebFetch**: Specific documentation pages
+- **Project files**: Actual codebase patterns
+
+### Complete Mandatory Pattern
+
+**ALL FOUR REQUIREMENTS ENFORCED**:
+```javascript
+// Phase 1: Research (ALL in ONE message)
+Task({
+  prompt: "ULTRATHINK: Research library documentation.
+          Use Context7 to fetch latest docs.
+          Report findings for implementation.",
+  subagent_type: "general-purpose",
+  description: "Library docs"
+})
+Task({
+  prompt: "ULTRATHINK: Analyze codebase patterns.
+          Use Explore tools to find usage.
+          Report current patterns.",
+  subagent_type: "Explore",
+  description: "Codebase"
+})
+Task({
+  prompt: "ULTRATHINK: Search for best practices 2025.
+          Use WebSearch for latest approaches.
+          Report recommendations.",
+  subagent_type: "general-purpose",
+  description: "Best practices"
+})
+// ✅ Requirements 1, 2, 3, 4 enforced: Subagent delegation + Parallel + ULTRATHINK + Fresh context
+
+// Phase 2: Planning (for complex tasks - after research complete)
+Task({
+  prompt: "ULTRATHINK: Synthesize research findings and develop implementation plan.
+          Break down into independent workstreams.
+          Present plan for user approval.",
+  subagent_type: "Plan",
+  description: "Implementation planning"
+})
+
+// Phase 3: Implementation (after plan approved - ALL in ONE message)
+Task({
+  prompt: "ULTRATHINK: Implement workstream 1...",
+  subagent_type: "general-purpose",
+  description: "Workstream 1"
+})
+Task({
+  prompt: "ULTRATHINK: Implement workstream 2...",
+  subagent_type: "general-purpose",
+  description: "Workstream 2"
+})
+```
+
+### Enforcement Checklist
+
+Before proceeding in workflow/setup commands:
+
+- ✅ Multi-step work delegated to Task tool (not direct tools)
+- ✅ ALL parallel tasks spawned in ONE message
+- ✅ EVERY Task prompt starts with "ULTRATHINK: "
+- ✅ Fresh context obtained via Context7/WebSearch
+- ✅ Wait for ALL tasks to complete before proceeding
+
+### Common Violations (FORBIDDEN)
+
+```javascript
+// ❌ Violation 1: Using direct tools for multi-step work
+Read file1
+Read file2
+Grep for patterns
+Read file3
+// Should use Task tool with Explore subagent
+
+// ❌ Violation 2: Sequential Task invocations
+Message 1: Task(...)
+Message 2: Task(...)
+// Should spawn all in ONE message
+
+// ❌ Violation 3: Missing ULTRATHINK keyword
+Task({ prompt: "Complex task...", subagent_type: "Explore" })
+// Should be: prompt: "ULTRATHINK: Complex task..."
+
+// ❌ Violation 4: Skipping fresh research
+// "I'll implement using React hooks from my training"
+// Should research latest React docs via Context7
+```
+
+</mandatory_execution_patterns>
+
 ## Core Principles
 
 **Advisory Over Prescriptive**: Provide helpful patterns and guidance, not rigid mandates. Trust Claude Code's capabilities.
@@ -7,6 +215,8 @@
 **Skills as Knowledge**: Skills define project-specific patterns (WHAT/WHEN), not execution protocols (HOW).
 
 **Resource-Based Selection**: Present available skills and agents, guide selection, trust intelligent choice.
+
+**EXCEPTION**: Parallel execution is MANDATORY, not advisory (see above).
 
 ## Skill System Patterns
 
@@ -326,7 +536,7 @@ WebSearch "React hooks best practices 2025"
 - Batch independent tool calls for efficiency
 - Consider parallel execution for independent operations
 - Balance delegation overhead against task complexity
-- Consider `thinking_mode: ultrathink` for complex reasoning
+- When using Task tool: MANDATORY "ULTRATHINK: " keyword at start of every prompt
 
 **Resource Efficiency**:
 - Avoid redundant operations
@@ -380,6 +590,231 @@ WebSearch "React hooks best practices 2025"
 - Tasks with complete context already
 - Operations where overhead exceeds complexity
 </task_tool_guidance>
+
+### Built-in Claude Code Agents (subagent_type)
+<builtin_agents_reference>
+**Claude Code provides five specialized built-in agents** accessible via the Task tool's `subagent_type` parameter.
+
+#### 1. general-purpose Agent
+**Capabilities**:
+- General research, implementation, and multi-step tasks
+- Full tool access (Read, Write, Edit, Glob, Grep, Bash, WebFetch, WebSearch, etc.)
+- Autonomous problem-solving and execution
+- Documentation research and integration work
+
+**When to Use**:
+- Documentation research (Context7, WebSearch, WebFetch)
+- Implementation of features or components
+- Verification and testing tasks
+- Any multi-step work not specialized below
+
+**Example**:
+```javascript
+Task({
+  prompt: "ULTRATHINK: Research React 18 documentation via Context7.
+          Use mcp__context7__resolve-library-id 'react'
+          Then mcp__context7__get-library-docs for hooks patterns.
+          Report: Latest hooks best practices with version context.",
+  subagent_type: "general-purpose",
+  description: "React docs research"
+})
+```
+
+#### 2. Explore Agent
+**Capabilities**:
+- Fast codebase exploration and discovery
+- File pattern matching (Glob)
+- Code searching (Grep)
+- File reading and analysis (Read, Bash)
+- Quick codebase understanding
+
+**When to Use**:
+- Finding files by patterns (`**/*.tsx`, `src/components/**`)
+- Searching code for keywords or patterns
+- Discovering codebase structure and organization
+- Identifying usage patterns across files
+- Quick codebase questions ("how do API endpoints work?")
+
+**Thoroughness Levels**:
+- `"quick"`: Basic searches, first-pass analysis
+- `"medium"`: Moderate exploration, check multiple locations
+- `"very thorough"`: Comprehensive analysis, multiple naming conventions
+
+**Example**:
+```javascript
+Task({
+  prompt: "ULTRATHINK: Find all React component files in the project.
+          Search for: component definitions, hooks usage, prop patterns.
+          Use thoroughness: very thorough
+          Report: Component architecture and patterns found.",
+  subagent_type: "Explore",
+  description: "Component discovery"
+})
+```
+
+#### 3. Plan Agent
+**Capabilities**:
+- Fast codebase exploration (Glob, Grep, Read, Bash)
+- Strategic planning and task breakdown
+- Implementation approach design
+- Resource identification
+
+**When to Use**:
+- Complex or unclear task requirements
+- Multi-step implementation planning
+- Breaking down large features into workstreams
+- Identifying approach before implementation
+- When user needs to approve strategy first
+
+**Thoroughness Levels** (same as Explore):
+- `"quick"`: Basic planning
+- `"medium"`: Moderate analysis
+- `"very thorough"`: Comprehensive planning
+
+**Example**:
+```javascript
+Task({
+  prompt: "ULTRATHINK: Analyze codebase and plan implementation of user authentication.
+          Explore: existing auth patterns, database models, API structure.
+          Consider: OAuth, JWT, session management approaches.
+          Use thoroughness: medium
+          Develop: step-by-step implementation plan with workstreams.
+          Present: plan for user approval before implementation.",
+  subagent_type: "Plan",
+  description: "Auth implementation planning"
+})
+```
+
+**Note**: Plan agent uses `ExitPlanMode` tool to present plan and await user approval before proceeding to implementation.
+
+#### 4. statusline-setup Agent
+**Capabilities**:
+- Configure Claude Code status line settings
+- Limited tool access: Read, Edit only
+
+**When to Use**:
+- Configuring user's status line display
+- Modifying status line preferences
+
+**Example**:
+```javascript
+Task({
+  prompt: "ULTRATHINK: Configure status line to show current git branch and file path.",
+  subagent_type: "statusline-setup",
+  description: "Status line config"
+})
+```
+
+#### 5. output-style-setup Agent
+**Capabilities**:
+- Create Claude Code output styles
+- Tool access: Read, Write, Edit, Glob, Grep
+
+**When to Use**:
+- Creating custom output formatting styles
+- Setting up output preferences
+
+**Example**:
+```javascript
+Task({
+  prompt: "ULTRATHINK: Create output style with syntax highlighting for code blocks.",
+  subagent_type: "output-style-setup",
+  description: "Output style setup"
+})
+```
+
+### Agent Selection Decision Tree
+
+```
+┌─ Need to explore codebase? ────────────────→ Explore
+│
+├─ Need to plan implementation? ─────────────→ Plan
+│
+├─ Need documentation/implementation? ───────→ general-purpose
+│
+├─ Need status line configuration? ──────────→ statusline-setup
+│
+└─ Need output style configuration? ─────────→ output-style-setup
+```
+
+### Combined Agent Usage Patterns
+
+**Pattern 1: Research + Plan + Implement**
+```javascript
+// Phase 1: Parallel research (ONE message)
+Task({
+  prompt: "ULTRATHINK: Explore codebase for auth patterns...",
+  subagent_type: "Explore",
+  description: "Codebase exploration"
+})
+Task({
+  prompt: "ULTRATHINK: Research OAuth 2.0 docs via Context7...",
+  subagent_type: "general-purpose",
+  description: "OAuth research"
+})
+Task({
+  prompt: "ULTRATHINK: Search best practices 2025...",
+  subagent_type: "general-purpose",
+  description: "Best practices"
+})
+
+// Phase 2: Planning (after research complete)
+Task({
+  prompt: "ULTRATHINK: Based on research findings, develop implementation plan.
+          Present plan for user approval before proceeding.",
+  subagent_type: "Plan",
+  description: "Implementation planning"
+})
+
+// Phase 3: Implementation (after plan approved)
+Task({
+  prompt: "ULTRATHINK: Implement OAuth provider integration...",
+  subagent_type: "general-purpose",
+  description: "OAuth provider"
+})
+Task({
+  prompt: "ULTRATHINK: Implement token management...",
+  subagent_type: "general-purpose",
+  description: "Token management"
+})
+```
+
+**Pattern 2: Quick Exploration + Direct Implementation**
+```javascript
+// For simpler tasks, skip planning phase
+Task({
+  prompt: "ULTRATHINK: Find all API endpoint files...",
+  subagent_type: "Explore",
+  description: "API discovery"
+})
+Task({
+  prompt: "ULTRATHINK: Add rate limiting middleware...",
+  subagent_type: "general-purpose",
+  description: "Rate limiting"
+})
+```
+
+### Mandatory ULTRATHINK Requirement
+
+**EVERY Task prompt MUST start with "ULTRATHINK: "** regardless of subagent_type:
+
+```javascript
+// ✅ CORRECT
+Task({
+  prompt: "ULTRATHINK: Explore codebase...",
+  subagent_type: "Explore",
+  description: "Exploration"
+})
+
+// ❌ INCORRECT - Missing ULTRATHINK
+Task({
+  prompt: "Explore codebase...",
+  subagent_type: "Explore",
+  description: "Exploration"
+})
+```
+
+</builtin_agents_reference>
 
 ### Ephemeral Specialist Pattern (Optional)
 <ephemeral_specialist_pattern>

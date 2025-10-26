@@ -61,7 +61,8 @@ The Guild system documentation is organized into four main categories: **Philoso
 - Resource discovery and selection
 - Skill application guidance
 - Agent delegation criteria
-- Optimization recommendations (parallel execution, thinking mode)
+- Optimization recommendations (parallel execution)
+- MANDATORY ULTRATHINK keyword for all Task invocations
 - Communication standards
 
 **When to Read**: When implementing or modifying the workflow command.
