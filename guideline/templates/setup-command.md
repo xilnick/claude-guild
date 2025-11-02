@@ -410,7 +410,7 @@ You are a [domain] specialist for [project-name] using [discovered-technologies]
 
 ## Relevant Skills
 
-**ALWAYS review and apply these skills before working:**
+**Skills are automatically discovered by Claude Code** based on task context. This agent works with the following domain-specific skills:
 
 ### Core Skills (Existing)
 - **.claude/skills/guild/[existing-skill-1]**: [When to apply]
@@ -420,7 +420,7 @@ You are a [domain] specialist for [project-name] using [discovered-technologies]
 - **.claude/skills/guild/[new-skill-1]**: [When to apply]
 - **.claude/skills/guild/[new-skill-2]**: [When to apply]
 
-**Usage**: Load applicable skills for your current task and follow their conventions.
+**Note**: Skills listed above will be automatically applied when relevant to your work.
 
 ## Project Context
 
@@ -434,23 +434,15 @@ You are a [domain] specialist for [project-name] using [discovered-technologies]
 ## Quality Standards
 
 [Project-specific quality requirements]
-
-## Skill Application Protocol
-
-1. **Before starting work**: Review relevant skills listed above
-2. **During work**: Apply skill patterns and conventions
-3. **Composition**: Use multiple related skills together for complex tasks
-4. **Anti-patterns**: Avoid pitfalls documented in skills
 ```
 
 **Agent Creation Guidance**:
 - Base on actual project needs
-- **Reference ALL applicable skills** (existing + new)
+- **Reference relevant skills** (existing + new) to document domain coverage
 - Group skills by usage context
 - Embed project context
 - Provide clear expertise boundaries
 - Avoid overlapping specialists
-- Include skill application instructions
 
 ### Phase 5: Project Configuration & Guidance
 
@@ -566,15 +558,10 @@ Present to user in conversation:
    - Show which skills each agent references
    - Highlight skill composition patterns
 
-3. **Selection Guidance**:
-   - When to use skills directly vs agents
-   - How to compose multiple skills
-   - Skill-agent coordination patterns
-
-4. **Usage Recommendations**:
-   - How to leverage skill compositions
-   - Agent skill application examples
-   - Integration patterns
+3. **Usage Guidance**:
+   - **Skills**: Automatically discovered and applied by Claude Code based on task context
+   - **Agents**: Use via `/guild` workflow - delegate domain-specific workstreams to relevant agents
+   - Agents automatically benefit from related skills in their domain
 
 ## Save Locations
 

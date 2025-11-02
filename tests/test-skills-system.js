@@ -449,7 +449,10 @@ No description line, just content...`
 }
 
 /**
- * Test 6: Full integration - skill inventory embedded in workflow command
+ * Test 6: Full integration - skill inventory excluded from workflow command
+ *
+ * Skills are now ONLY in setup command. Claude Code auto-discovers skills.
+ * Workflow focuses on agent delegation.
  */
 async function testSkillInventoryEmbedding() {
   const testDir = path.join(__dirname, '..', 'tmp', 'test-skills-integration');
@@ -488,7 +491,7 @@ Content...`
 
     if (!workflowExists) {
       return {
-        name: 'Full integration - skill inventory embedded in workflow command',
+        name: 'Full integration - skill inventory excluded from workflow command',
         passed: false,
         error: 'Workflow command file not generated'
       };
@@ -496,12 +499,12 @@ Content...`
 
     const workflowContent = await fs.readFile(workflowPath, 'utf-8');
 
-    // Validate skill inventory is embedded
+    // Validate skills are EXCLUDED from workflow (new architecture)
     const validations = [
-      { condition: workflowContent.includes('Skills Inventory'), message: 'Should include skill inventory section' },
-      { condition: workflowContent.includes('Test Skill'), message: 'Should include test skill name' },
-      { condition: workflowContent.includes('A test skill for integration testing'), message: 'Should include skill description' },
-      { condition: !workflowContent.includes('{SKILL_INVENTORY}'), message: 'Should not contain placeholder' }
+      { condition: !workflowContent.includes('Skills Inventory'), message: 'Should NOT include skill inventory section in workflow' },
+      { condition: !workflowContent.includes('Test Skill'), message: 'Should NOT include specific skill names in workflow' },
+      { condition: !workflowContent.includes('{SKILL_INVENTORY}'), message: 'Should not contain skill inventory placeholder' },
+      { condition: workflowContent.includes('Agent Roster') || workflowContent.includes('AGENT_INVENTORY'), message: 'Workflow should focus on agent delegation' }
     ];
 
     const failed = validations.filter(v => !v.condition);
@@ -511,22 +514,22 @@ Content...`
 
     if (failed.length > 0) {
       return {
-        name: 'Full integration - skill inventory embedded in workflow command',
+        name: 'Full integration - skill inventory excluded from workflow command',
         passed: false,
         error: failed.map(f => f.message).join('; ')
       };
     }
 
     return {
-      name: 'Full integration - skill inventory embedded in workflow command',
+      name: 'Full integration - skill inventory excluded from workflow command',
       passed: true,
-      details: 'Skill inventory successfully embedded in workflow command'
+      details: 'Skills correctly excluded from workflow (Claude Code auto-discovers skills)'
     };
   } catch (error) {
     // Cleanup on error
     await fs.remove(testDir).catch(() => {});
     return {
-      name: 'Full integration - skill inventory embedded in workflow command',
+      name: 'Full integration - skill inventory excluded from workflow command',
       passed: false,
       error: error.message
     };

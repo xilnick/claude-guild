@@ -87,14 +87,10 @@ async function install() {
     // Generate agent inventory for workflow command
     const agentInventory = await generateAgentInventory(options.targetDir);
 
-    // Generate skill inventory for workflow command
-    const skillInventory = await generateSkillInventory(options.targetDir);
-
     // Generate and copy commands with intelligence embedding
     await copyAndEmbedCommand('workflow', guildDir, {
       sharedIntelligence,
-      agentInventory,
-      skillInventory
+      agentInventory
     });
 
     await copyAndEmbedCommand('setup', guildDir, {

@@ -29,7 +29,6 @@ async function validateEnforcementArchitecture() {
     {
       file: 'guideline/templates/workflow-command.md',
       checks: [
-        { pattern: /{SKILL_INVENTORY}/, description: 'References skill inventory' },
         { pattern: /{AGENT_INVENTORY}/, description: 'References agent inventory' },
         { pattern: /MANDATORY|CRITICAL|REQUIRED/gi, description: 'Enforces mandatory requirements', minCount: 10, maxCount: 50 },
         { pattern: /ULTRATHINK/g, description: 'Enforces ULTRATHINK reasoning pattern', minCount: 5 }

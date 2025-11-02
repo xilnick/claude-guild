@@ -491,28 +491,41 @@ WebSearch "React hooks best practices 2025"
 - Quality standards to maintain
 </skill_discovery_guidance>
 
-## Resource Selection Guidance
+## Agent Delegation Guidance
 
-### Skill vs Agent Selection
-<selection_guidance>
-**When to Use Skills**:
-- Pattern matches task requirements
-- Quick reference needed for project conventions
-- Lightweight guidance sufficient
-- Clear applicability from metadata
+<agent_delegation_guidance>
+**Automatic Agent Matching**:
 
-**When to Consider Agents**:
-- Complex multi-step coordination needed
-- Specialized domain expertise required
-- Orchestration of multiple resources
-- Deep project-specific knowledge needed
+Instead of manually selecting agents, **delegate the agent selection to Claude Code**:
 
-**When to Use Task Tool**:
-- Complex delegation beneficial
-- Coordinating multiple independent workstreams
-- Specialized reasoning required
-- Direct execution overhead too high
-</selection_guidance>
+```javascript
+// ✅ CORRECT: Ask Claude Code to find and run matching agents
+Task({
+  prompt: "ULTRATHINK: Review available Guild agents and identify specialists matching this task: [describe task domain/requirements]. If matching agents exist, delegate appropriate workstreams to those agents. Task: [full task description]",
+  subagent_type: "general-purpose",
+  description: "Agent matching and delegation"
+})
+
+// Example for frontend work:
+Task({
+  prompt: "ULTRATHINK: Review available Guild agents for frontend/React expertise. If frontend specialists exist, delegate component implementation to them. Otherwise use built-in capabilities. Task: Build user authentication UI components.",
+  subagent_type: "general-purpose",
+  description: "Frontend delegation"
+})
+```
+
+**Agent Selection Strategy**:
+1. **Ask, don't tell**: Request agent matching rather than manually selecting
+2. **Domain-first**: Describe task domain (frontend, backend, testing, etc.)
+3. **Fallback ready**: If no matching agents, proceed with built-in capabilities
+4. **Delegate deeply**: Let matching agents handle their domain completely
+
+**When to Request Agent Matching**:
+- Domain-specific work (frontend, backend, database, API, testing)
+- Complex multi-step coordination within a domain
+- Work benefits from project-specific knowledge
+- Task aligns with established agent specializations
+</agent_delegation_guidance>
 
 ### Agent Creation Guidance
 <agent_creation_patterns>
@@ -540,9 +553,8 @@ WebSearch "React hooks best practices 2025"
 
 **Resource Efficiency**:
 - Avoid redundant operations
-- Reuse existing skills and agents
-- Load skills directly for pattern tasks
-- Trust native orchestration capabilities
+- Delegate to agents for domain-specific work
+- Trust native skill discovery and orchestration capabilities
 </optimization_guidance>
 
 ## File Creation Guidelines
@@ -844,7 +856,6 @@ Constraints:
 - Keep prompts focused and actionable
 - Include relevant project context
 - Specify clear success criteria
-- Reference available skills if helpful
 - Consider ultrathink for complex reasoning
 </ephemeral_specialist_pattern>
 

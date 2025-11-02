@@ -4,7 +4,7 @@
 name: guild
 model: inherit
 thinking_mode: ultrathink
-description: "Execute tasks leveraging available skills and specialists with MANDATORY parallel subagent execution"
+description: "Execute tasks leveraging available specialists with MANDATORY parallel subagent execution"
 ---
 
 ## ⚠️ CRITICAL: MANDATORY Execution Architecture
@@ -71,15 +71,25 @@ description: "Execute tasks leveraging available skills and specialists with MAN
 
 ## Available Resources
 
-### Skills Inventory
-{SKILL_INVENTORY}
-
-**Skills provide lightweight pattern knowledge** - Review skill metadata to find matches for your current task. Skills describe WHAT and WHEN, letting you determine HOW based on context.
-
 ### Agent Roster
 {AGENT_INVENTORY}
 
-**Agents provide specialized expertise** - Use agents via Task tool for domain-specific work. Agents apply skill patterns automatically.
+**Agents provide specialized expertise** for complex domain-specific work.
+
+**Automatic Agent Matching Approach:**
+
+Instead of manually reviewing agents, **ask Claude Code to find and run matching agents**:
+
+```javascript
+// When you have domain-specific work:
+Task({
+  prompt: "ULTRATHINK: Review available Guild agents and identify specialists for [domain] work. If matching agents exist, delegate [workstream] to them. Otherwise proceed with built-in capabilities. Task: [description]",
+  subagent_type: "general-purpose",
+  description: "Agent matching for [domain]"
+})
+```
+
+**Strategy**: Delegate the agent selection itself - describe the task domain and let Claude Code match appropriate agents automatically.
 
 ## Execution Protocol (MANDATORY)
 
@@ -335,8 +345,7 @@ Task({
    - Combine results from ALL parallel research tasks (including multi-round if applicable)
    - Identify patterns, constraints, and opportunities
    - Review risk categorization and environment observations
-   - Check available skills for relevant patterns
-   - Check agent roster for relevant specialists
+   - **Identify domain-specific workstreams that could benefit from agent delegation**
 
 2. **Apply Safety Protocols (Req 7 - Risk-Aware Categorization)**:
 
@@ -351,8 +360,8 @@ Task({
 
 3. **Develop Plan**:
    - Break down task into independent workstreams
+   - Identify which workstreams can be delegated to agents
    - Embed appropriate safety checks for each workstream based on category
-   - Identify skill patterns to apply
    - Determine parallelization opportunities
    - Plan recovery mechanisms for each workstream (Req 6)
    - Plan verification approach including final validation (Req 5)
@@ -393,8 +402,7 @@ Task({
 
           [If high-risk: Apply category-specific safety protocols]
 
-          Apply skills: [relevant-skills]
-          Follow patterns: [from research]
+          Follow patterns from research.
           Success criteria: [specific outcomes]",
   subagent_type: "general-purpose",
   description: "Workstream 1 implementation"
@@ -408,7 +416,6 @@ Task({
 
           [If high-risk: Apply category-specific safety protocols]
 
-          Apply skills: [relevant-skills]
           Success criteria: [specific outcomes]",
   subagent_type: "general-purpose",
   description: "Workstream 2 implementation"
@@ -424,7 +431,21 @@ Task({
 **Conditional Patterns** (Apply as needed):
 - Include error recovery guidance for standard/complex tasks
 - Embed category-specific safety checks for high-risk operations
-- Reference relevant skills discovered in Phase 1
+- **Delegate to relevant agents for domain-specific workstreams** (example below)
+
+**Agent Delegation Example** (when you have domain-specific workstreams):
+
+```javascript
+// For domain-specific workstreams, ask Claude Code to find matching agents:
+Task({
+  prompt: "ULTRATHINK: Review available Guild agents for [domain] expertise (e.g., frontend, backend, testing). If matching agents exist, delegate [workstream description] to them. Otherwise proceed with built-in capabilities.
+
+          Workstream: [full description]
+          Success criteria: [specific outcomes]",
+  subagent_type: "general-purpose",
+  description: "Agent matching for [domain] workstream"
+})
+```
 
 **When Direct Execution is Acceptable**:
 - Simple file edits (single file, clear change)
@@ -616,7 +637,7 @@ Task({
 // Quality verification
 Task({
   prompt: "ULTRATHINK: Verify code quality and standards.
-          Check: [skill patterns followed].
+          Check: [project conventions followed].
           Validate: [anti-patterns avoided].
           Report: [quality issues].",
   subagent_type: "general-purpose",
@@ -757,36 +778,6 @@ Task({
    - Address any feedback
    - Iterate if needed
    - Confirm completion
-
-## Skill Integration
-
-### Using Skills
-
-**Skills are discoverable pattern knowledge**:
-1. Check skills inventory for relevant patterns
-2. Read SKILL.md for project conventions
-3. Apply WHAT/WHEN guidance
-4. Reference DOCS.md for library documentation
-5. Avoid documented anti-patterns
-
-**Skills do NOT require Task tool** - Read and apply directly for pattern guidance.
-
-### Skill References in Task Prompts
-
-When delegating via Task tool, reference relevant skills:
-
-```javascript
-Task({
-  prompt: "ULTRATHINK: Implement user authentication endpoint.
-          Reference skills:
-          - .claude/skills/guild/backend-integration/SKILL.md (API patterns)
-          - .claude/skills/guild/testing-patterns/SKILL.md (test protocols)
-          Apply project conventions from these skills.
-          Success criteria: [specific outcomes].",
-  subagent_type: "general-purpose",
-  description: "Authentication endpoint"
-})
-```
 
 ## File Creation Guidelines
 

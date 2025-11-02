@@ -55,7 +55,6 @@ async function validateGeneratedCommands() {
       { pattern: /subagent_type.*general-purpose|Explore|Plan/g, description: 'Built-in agent types', minCount: 3 },
       { pattern: /\{SHARED_INTELLIGENCE\}/g, description: 'Intelligence placeholder removed', maxCount: 0 },
       { pattern: /\{AGENT_INVENTORY\}/g, description: 'Agent inventory placeholder removed', maxCount: 0 },
-      { pattern: /\{SKILL_INVENTORY\}/g, description: 'Skill inventory placeholder removed', maxCount: 0 },
       { pattern: /thinking_mode:\s*ultrathink/g, description: 'YAML frontmatter ultrathink', minCount: 1 }
     ];
 
