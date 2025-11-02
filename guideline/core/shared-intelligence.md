@@ -222,25 +222,13 @@ Task({ prompt: "Complex task...", subagent_type: "Explore" })
 
 ### Official Claude Code SKILL.md Format
 <skill_official_format>
-**Guild MUST follow official Claude Code skills specification**:
+**Guild follows official Claude Code SKILL.md specification** (see docs.claude.com for format details).
 
-**File Structure**:
-- Filename: `SKILL.md` (official format, not `[name].md`)
-- Location: `.claude/skills/guild/[category]/SKILL.md`
-- Progressive loading architecture: metadata → instructions → resources
-
-**Naming Convention (Gerund Form)**:
-- ✅ "Working with React"
-- ✅ "Processing API Requests"
-- ✅ "Testing Express Endpoints"
-- ❌ "React Integration" (not gerund)
-- ❌ "API Handler" (not gerund)
-- ❌ "Express Test" (not gerund)
-
-**Size Limits**:
-- Keep SKILL.md under 500 lines
-- Split large content into separate files (REFERENCE.md, EXAMPLES.md, DOCS.md)
-- Reference files load on-demand (Level 3 resources)
+**Guild Conventions**:
+- **Naming**: Gerund form ("working-with-react", "processing-api-requests", "testing-express-endpoints")
+- **Location**: `.claude/skills/guild/[category]/SKILL.md`
+- **Size**: Keep under 500 lines; use REFERENCE.md, EXAMPLES.md, DOCS.md for detailed content
+- **Structure**: Progressive loading (metadata → instructions → resources)
 </skill_official_format>
 
 ### Skill Metadata Structure
@@ -273,15 +261,13 @@ related_agents: ["frontend-specialist"]
 ---
 ```
 
-**Metadata Guidelines**:
-- **name** (Required): Gerund form using lowercase and hyphens ("working-with-express")
-- **description** (Required): Natural language trigger for Claude Code discovery - include "Use when...", relevant technologies, and project context
-- **model** (Optional): Model selection for skill execution
-- **tools** (Optional): Restrict which tools this skill can use
-- **category** (Guild): Pattern classification (frontend-patterns, backend-integration, testing-patterns, library-specific)
-- **applicability** (Guild): Context matching (file patterns, technologies, task types)
-- **related_skills** (Guild): Links to complementary skills
-- **related_agents** (Guild): Links to relevant specialist agents
+**Guild Enhancements** (beyond official Claude Code fields):
+- **category**: Pattern classification (frontend-patterns, backend-integration, testing-patterns, library-specific)
+- **applicability**: Context matching (file patterns, technologies, task types)
+- **related_skills**: Links to complementary skills
+- **related_agents**: Links to relevant specialist agents
+
+**Note**: Official fields (name, description, model, tools) follow standard SKILL.md format.
 
 **Tech Stack Skill Types**:
 - **Library Skills**: "working-with-react", "working-with-express", "working-with-prisma"
@@ -293,50 +279,14 @@ related_agents: ["frontend-specialist"]
 
 ### Progressive Loading Architecture
 <progressive_loading_pattern>
-**3-Tier Loading System (Official Claude Code Pattern)**:
+**Guild uses official Claude Code 3-tier progressive loading** (metadata → instructions → resources).
 
-**Level 1 - Metadata (~100 tokens, always loaded)**:
-```yaml
----
-name: working-with-express
-description: "Use when working with Express.js in this project..."
-category: backend-integration
-applicability:
-  technologies: ["express"]
----
-```
+**Guild Implementation**:
+- **Level 1**: YAML frontmatter with Guild enhancement fields (category, applicability, related_skills)
+- **Level 2**: SKILL.md content under 500 lines (Pattern Description, Project Conventions, Common Pitfalls)
+- **Level 3**: Separate files (REFERENCE.md, EXAMPLES.md, DOCS.md from Context7, scripts/)
 
-**Level 2 - Instructions (~5k tokens, loaded when triggered)**:
-```markdown
-# Main SKILL.md content
-## Pattern Description
-[WHAT/WHEN guidance]
-
-## Project Conventions
-[Discovered patterns]
-
-## Common Pitfalls
-[Anti-patterns]
-
-## Related Resources
-[Skills, agents, documentation links]
-```
-
-**Level 3 - Resources (unlimited, on-demand loading)**:
-```markdown
-# Separate files loaded as needed
-- REFERENCE.md - API references, detailed specs
-- EXAMPLES.md - Code examples and patterns
-- DOCS.md - Library documentation (fetched from Context7)
-- scripts/ - Utility scripts (executed, not loaded)
-```
-
-**Implementation Guidelines**:
-- Keep SKILL.md under 500 lines (Level 2)
-- Move detailed content to Level 3 files
-- Reference files one level deep (no nested references)
-- Use bash commands to read Level 3 files when needed
-- Scripts output enters context, not the code itself
+**Key Practice**: Move detailed content to Level 3 files, keep SKILL.md scannable.
 </progressive_loading_pattern>
 
 ### Skill Content Structure

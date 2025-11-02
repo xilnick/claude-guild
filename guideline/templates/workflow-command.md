@@ -305,7 +305,7 @@ Task({
 **MANDATORY Requirements**:
 1. ALL Task calls MUST be in ONE message (per round)
 2. NO sequential Task invocations across messages
-3. EVERY Task prompt MUST start with "ULTRATHINK: "
+3. Apply Core Requirement 3 (see above)
 4. Use Context7/WebSearch for fresh documentation
 5. Include risk categorization task for ALL workflows
 6. Include environment observation for complex/risky projects
@@ -425,7 +425,7 @@ Task({
 **Core Requirements**:
 1. Identify ALL independent workstreams
 2. Spawn ALL workstreams in ONE message
-3. EVERY Task prompt MUST start with "ULTRATHINK: "
+3. Apply Core Requirement 3 (see above)
 4. Wait for ALL parallel tasks to complete before checkpoint/Phase 4
 
 **Conditional Patterns** (Apply as needed):
@@ -712,7 +712,7 @@ Task({
 
 **MANDATORY Requirements**:
 1. ALL verification tasks in ONE message (including final validation and reflection)
-2. EVERY Task prompt MUST start with "ULTRATHINK: "
+2. Apply Core Requirement 3 (see above)
 3. Include: Functional, integration, quality, final validation, AND reflection
 4. Final validation MUST verify ALL requirements (Req 5)
 5. Reflection MUST provide honest assessment (Req 11)
@@ -910,7 +910,7 @@ Task({
 ### Core Requirements (MANDATORY for ALL tasks)
 1. **Subagent Delegation**: Task tool for ALL multi-step work (context efficiency)
 2. **Parallel Execution**: ALL tasks in ONE message (performance)
-3. **ULTRATHINK Keyword**: "ULTRATHINK: " at start of EVERY Task prompt (reasoning quality)
+3. **ULTRATHINK Keyword**: Apply to all Task prompts (reasoning quality - see Req 3 above)
 4. **Fresh Context**: Context7/WebSearch for current docs (precision)
 5. **Final Validation**: Pre-completion verification prevents false positives
 

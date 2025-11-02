@@ -674,7 +674,7 @@ Before completing setup execution, verify:
 ### Core Requirements (MANDATORY for ALL discovery workflows)
 1. **Subagent Delegation**: Task tool for ALL discovery phases
 2. **Parallel Execution**: ALL tasks in ONE message
-3. **ULTRATHINK Keyword**: "ULTRATHINK: " keyword in all Task prompts
+3. **ULTRATHINK Keyword**: Apply to all Task prompts (see Req 3 above)
 4. **Fresh Context**: Context7/WebSearch for library documentation
 
 ### Conditional Pattern (Discovery-specific)
