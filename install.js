@@ -2,9 +2,19 @@
 
 const fs = require('fs-extra');
 const path = require('path');
+const { glob } = require('glob');
 const { select, intro, outro, isCancel, cancel } = require('@clack/prompts');
 
-// Main installation function
+/**
+ * Main installation function for Guild commands
+ *
+ * Installs Guild commands to target directory (home or project).
+ * Supports interactive/non-interactive modes and test mode validation.
+ *
+ * @async
+ * @throws {Error} If installation fails
+ * @returns {Promise<void>}
+ */
 async function install() {
   const args = process.argv.slice(2);
 
@@ -118,7 +128,16 @@ async function install() {
   }
 }
 
-// Load intelligence module by filename
+/**
+ * Load intelligence module by filename
+ *
+ * Reads core intelligence module from guideline/core/ and removes title line.
+ *
+ * @async
+ * @param {string} filename - Module filename (e.g., 'shared-intelligence.md')
+ * @returns {Promise<string>} Intelligence content without title
+ * @throws {Error} If module file not found
+ */
 async function loadIntelligenceModule(filename) {
   const modulePath = path.join(__dirname, 'guideline', 'core', filename);
 
@@ -131,7 +150,16 @@ async function loadIntelligenceModule(filename) {
   throw new Error(`${filename} not found - required for Guild system`);
 }
 
-// Simple agent inventory generation
+/**
+ * Generate agent inventory from existing Guild agents
+ *
+ * Scans .claude/agents/guild/ directory for agent markdown files and generates
+ * inventory grouped by category (directory structure).
+ *
+ * @async
+ * @param {string} targetDir - Directory to scan for agents
+ * @returns {Promise<Object>} Inventory object with totalAgents, agentsByCategory, and scanTimestamp
+ */
 async function generateAgentInventory(targetDir) {
   const agentsGuildPath = path.join(targetDir, '.claude', 'agents', 'guild');
 
@@ -145,7 +173,6 @@ async function generateAgentInventory(targetDir) {
 
   console.log('🔍 Scanning existing agents...');
   try {
-    const { glob } = require('glob');
     const agentFiles = await glob('**/*.md', { cwd: agentsGuildPath });
 
     const inventory = {
@@ -192,7 +219,16 @@ function formatAgentInventory(inventory) {
   return formatted;
 }
 
-// Simple skill inventory generation (Official SKILL.md format)
+/**
+ * Generate skill inventory from existing Guild skills
+ *
+ * Scans .claude/skills/guild/ directory for SKILL.md files following official
+ * Claude Code skills format. Parses YAML frontmatter to extract metadata.
+ *
+ * @async
+ * @param {string} targetDir - Directory to scan for skills
+ * @returns {Promise<Object>} Inventory object with totalSkills, skillsByCategory, and scanTimestamp
+ */
 async function generateSkillInventory(targetDir) {
   const skillsGuildPath = path.join(targetDir, '.claude', 'skills', 'guild');
 
@@ -206,7 +242,6 @@ async function generateSkillInventory(targetDir) {
 
   console.log('🔍 Scanning existing skills...');
   try {
-    const { glob } = require('glob');
     // Look for SKILL.md files in category directories (official format)
     const skillFiles = await glob('*/SKILL.md', { cwd: skillsGuildPath });
 
@@ -298,7 +333,21 @@ function formatSkillInventory(inventory) {
   return formatted;
 }
 
-// Copy template and embed intelligence
+/**
+ * Copy template and embed intelligence
+ *
+ * Reads command template, replaces placeholders with embedded intelligence,
+ * agent inventory, and skill inventory, then writes to output directory.
+ *
+ * @async
+ * @param {string} commandType - Type of command ('workflow' or 'setup')
+ * @param {string} outputDir - Directory to write generated command
+ * @param {Object} intelligenceModules - Intelligence to embed
+ * @param {string} intelligenceModules.sharedIntelligence - Core intelligence content
+ * @param {Object} [intelligenceModules.agentInventory] - Optional agent inventory
+ * @param {Object} [intelligenceModules.skillInventory] - Optional skill inventory
+ * @returns {Promise<void>}
+ */
 async function copyAndEmbedCommand(commandType, outputDir, intelligenceModules) {
   const templatePath = path.join(__dirname, 'guideline', 'templates', `${commandType}-command.md`);
   let template = await fs.readFile(templatePath, 'utf8');
@@ -337,7 +386,7 @@ async function copyAndEmbedCommand(commandType, outputDir, intelligenceModules) 
 
 /**
  * Create Claude Code Skills awareness bridge
- * This allows Claude to autonomously discover Guild skills
+ * Loads from external template for easier maintenance
  */
 async function createAwarenessSkill(targetDir) {
   const skillsDir = path.join(targetDir, '.claude', 'skills');
@@ -346,162 +395,28 @@ async function createAwarenessSkill(targetDir) {
   // Ensure directories exist
   await fs.ensureDir(guildPatternsDir);
 
-  const awarenessSkillContent = `---
-name: guild-project-patterns
-description: Apply project-specific conventions from .claude/skills/guild/. Use when working on features, refactoring, or following project standards. Guild skills follow official Claude Code SKILL.md format with progressive loading (metadata, instructions, documentation resources).
-model: inherit
-tools: Read, Bash
----
+  // Load awareness skill from external template
+  const templatePath = path.join(__dirname, 'guideline', 'templates', 'awareness-skill.md');
 
-## Purpose
+  try {
+    // Check if template exists
+    if (!await fs.pathExists(templatePath)) {
+      console.log('⚠️  Awareness skill template not found, skipping...');
+      return;
+    }
 
-This project uses **Guild-managed skills** following the official Claude Code SKILL.md format with progressive loading architecture.
+    const awarenessSkillContent = await fs.readFile(templatePath, 'utf8');
 
-Guild skills contain:
-- **Level 1 (Metadata)**: Always-loaded skill metadata in YAML frontmatter
-- **Level 2 (Instructions)**: Main SKILL.md content with patterns and conventions
-- **Level 3 (Resources)**: On-demand DOCS.md, REFERENCE.md, EXAMPLES.md files
+    // Write awareness skill
+    await fs.writeFile(
+      path.join(guildPatternsDir, 'SKILL.md'),
+      awarenessSkillContent
+    );
 
-## Skill Structure (Official Format)
-
-Each skill is organized as:
-\`\`\`
-.claude/skills/guild/
-├── [category]/
-│   ├── SKILL.md          # Main skill (metadata + instructions)
-│   ├── DOCS.md           # Library documentation (optional)
-│   ├── REFERENCE.md      # API references (optional)
-│   └── EXAMPLES.md       # Code examples (optional)
-\`\`\`
-
-## How to Use Guild Skills
-
-### 1. Discover Available Skills
-
-\`\`\`bash
-# List skill categories
-ls .claude/skills/guild/
-
-# Example categories:
-# - frontend-patterns/    (React, Vue, component patterns)
-# - backend-integration/  (Express, API patterns)
-# - testing-patterns/     (Jest, testing protocols)
-# - library-specific/     (Framework-specific skills)
-\`\`\`
-
-### 2. Read Skills When Relevant
-
-**For library/framework work:**
-\`\`\`bash
-# Example: Working with React
-cat .claude/skills/guild/frontend-patterns/SKILL.md
-
-# If skill references documentation:
-cat .claude/skills/guild/frontend-patterns/DOCS.md
-\`\`\`
-
-**For pattern application:**
-\`\`\`bash
-# Example: API endpoint creation
-cat .claude/skills/guild/backend-integration/SKILL.md
-\`\`\`
-
-### 3. Application Modes
-
-**Direct Application** (simple tasks):
-- Read SKILL.md for pattern knowledge
-- Apply project conventions from skill content
-- Reference DOCS.md for library documentation
-- No delegation needed
-
-**Agent Integration** (complex tasks):
-- Guild agents reference relevant skills automatically
-- Use \`/guild\` command for specialist coordination
-- Agents apply skill patterns to their work
-
-**Subagent Reference** (ad-hoc delegation):
-\`\`\`javascript
-Task({
-  prompt: "Implement user profile component.
-          Reference: .claude/skills/guild/frontend-patterns/SKILL.md
-          Apply React conventions from that skill.",
-  subagent_type: "general-purpose"
-})
-\`\`\`
-
-## Skill Types
-
-Guild creates two types of skills:
-
-**1. Tech Stack Skills** (library/framework-specific):
-- **Format**: "working-with-[library]" (gerund naming)
-- **Examples**: working-with-react, working-with-express, working-with-prisma
-- **Includes**: Library documentation (DOCS.md from Context7), project conventions
-- **When to Use**: Working with specific libraries or frameworks
-
-**2. Pattern Skills** (project conventions):
-- **Format**: "processing-[pattern]", "testing-[component]"
-- **Examples**: processing-api-requests, managing-component-state
-- **Includes**: Project-specific patterns and best practices
-- **When to Use**: Following project conventions and patterns
-
-## Progressive Loading
-
-Skills use official Claude Code progressive loading:
-
-**Metadata (always loaded)**:
-- YAML frontmatter with name, description, category
-- Enables skill discovery without loading full content
-
-**Instructions (load when relevant)**:
-- Main SKILL.md content
-- Pattern descriptions, conventions, anti-patterns
-- Keep under 500 lines
-
-**Resources (on-demand)**:
-- DOCS.md: Library documentation (fetched from Context7)
-- REFERENCE.md: Detailed API specs
-- EXAMPLES.md: Code examples
-- Load only when needed for detailed information
-
-## Integration
-
-**Skills work everywhere:**
-- ✅ Claude Code discovers them autonomously (via metadata)
-- ✅ Guild workflow presents them (\`/guild\` command)
-- ✅ Agents reference them in prompts
-- ✅ Subagents can reference them in task descriptions
-- ✅ Official Claude Code SKILL.md format
-
-## Creating New Skills
-
-Use \`/guild:setup\` to:
-- Analyze project and detect tech stack
-- Create library-specific skills with documentation
-- Document project patterns as skills
-- Fetch library docs via Context7
-- Organize skills by category
-
-## When to Use \`/guild\` Command
-
-**Use \`/guild\` for:**
-- Complex multi-domain features
-- Tasks needing specialist coordination
-- Architectural changes
-- Full verification workflow
-
-**Direct skill application for:**
-- Simple pattern application
-- Library-specific guidance
-- Quick convention checks
-`;
-
-  await fs.writeFile(
-    path.join(guildPatternsDir, 'SKILL.md'),
-    awarenessSkillContent
-  );
-
-  console.log('✅ Guild patterns awareness skill created');
+    console.log('✅ Guild patterns awareness skill created');
+  } catch (error) {
+    console.log('⚠️  Could not create awareness skill:', error.message);
+  }
 }
 
 // Run installation

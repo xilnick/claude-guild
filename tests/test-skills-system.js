@@ -114,27 +114,36 @@ async function testGenerateSkillInventoryPopulated() {
     await fs.remove(testDir);
     await fs.ensureDir(skillsDir);
 
-    // Create test skill files with metadata
-    const testSkillsDir = path.join(skillsDir, 'testing');
-    await fs.ensureDir(testSkillsDir);
+    // Create test skill files with metadata (official Claude Code format: SKILL.md with YAML frontmatter)
+    const testingDir = path.join(skillsDir, 'testing-patterns');
+    await fs.ensureDir(testingDir);
 
     await fs.writeFile(
-      path.join(testSkillsDir, 'unit-testing.md'),
-      '# Unit Testing Pattern\n> Comprehensive unit test creation protocol\n\nImplementation details...'
-    );
+      path.join(testingDir, 'SKILL.md'),
+      `---
+name: Testing Patterns
+description: "Comprehensive unit and integration test creation protocols"
+---
 
-    await fs.writeFile(
-      path.join(testSkillsDir, 'integration-testing.md'),
-      '# Integration Testing\n> End-to-end integration test patterns\n\nImplementation details...'
+# Testing Patterns
+
+Implementation details...`
     );
 
     // Create another category
-    const backendDir = path.join(skillsDir, 'backend');
+    const backendDir = path.join(skillsDir, 'backend-patterns');
     await fs.ensureDir(backendDir);
 
     await fs.writeFile(
-      path.join(backendDir, 'api-design.md'),
-      '# REST API Design\n> RESTful API design principles and patterns\n\nImplementation details...'
+      path.join(backendDir, 'SKILL.md'),
+      `---
+name: Backend Patterns
+description: "RESTful API design principles and patterns"
+---
+
+# Backend Patterns
+
+Implementation details...`
     );
 
     // Import and run generateSkillInventory
@@ -144,24 +153,24 @@ async function testGenerateSkillInventoryPopulated() {
     // Validate inventory structure
     const validations = [
       { condition: inventory !== null, message: 'Inventory should not be null' },
-      { condition: inventory.totalSkills === 3, message: `Expected 3 skills, got ${inventory.totalSkills}` },
+      { condition: inventory.totalSkills === 2, message: `Expected 2 skills, got ${inventory.totalSkills}` },
       { condition: inventory.skillsByCategory !== undefined, message: 'skillsByCategory should exist' },
-      { condition: inventory.skillsByCategory.testing !== undefined, message: 'testing category should exist' },
-      { condition: inventory.skillsByCategory.testing.length === 2, message: `Expected 2 testing skills, got ${inventory.skillsByCategory.testing?.length || 0}` },
-      { condition: inventory.skillsByCategory.backend !== undefined, message: 'backend category should exist' },
-      { condition: inventory.skillsByCategory.backend.length === 1, message: `Expected 1 backend skill, got ${inventory.skillsByCategory.backend?.length || 0}` },
+      { condition: inventory.skillsByCategory['testing-patterns'] !== undefined, message: 'testing-patterns category should exist' },
+      { condition: inventory.skillsByCategory['testing-patterns'].length === 1, message: `Expected 1 testing skill, got ${inventory.skillsByCategory['testing-patterns']?.length || 0}` },
+      { condition: inventory.skillsByCategory['backend-patterns'] !== undefined, message: 'backend-patterns category should exist' },
+      { condition: inventory.skillsByCategory['backend-patterns'].length === 1, message: `Expected 1 backend skill, got ${inventory.skillsByCategory['backend-patterns']?.length || 0}` },
       { condition: inventory.scanTimestamp !== undefined, message: 'scanTimestamp should exist' }
     ];
 
     // Check skill metadata parsing
-    const unitTestSkill = inventory.skillsByCategory.testing?.find(s => s.file === 'unit-testing');
-    if (unitTestSkill) {
+    const testingSkill = inventory.skillsByCategory['testing-patterns']?.[0];
+    if (testingSkill) {
       validations.push(
-        { condition: unitTestSkill.name === 'Unit Testing Pattern', message: `Expected name 'Unit Testing Pattern', got '${unitTestSkill.name}'` },
-        { condition: unitTestSkill.description === 'Comprehensive unit test creation protocol', message: `Expected description to match, got '${unitTestSkill.description}'` }
+        { condition: testingSkill.name === 'Testing Patterns', message: `Expected name 'Testing Patterns', got '${testingSkill.name}'` },
+        { condition: testingSkill.description === 'Comprehensive unit and integration test creation protocols', message: `Expected description to match, got '${testingSkill.description}'` }
       );
     } else {
-      validations.push({ condition: false, message: 'unit-testing skill not found in inventory' });
+      validations.push({ condition: false, message: 'testing-patterns skill not found in inventory' });
     }
 
     const failed = validations.filter(v => !v.condition);
@@ -358,20 +367,35 @@ async function testSkillMetadataParsing() {
     await fs.remove(testDir);
     await fs.ensureDir(skillsDir);
 
-    // Test various metadata formats
+    // Test various metadata formats (official Claude Code format)
+    const withBothDir = path.join(skillsDir, 'with-both');
+    await fs.ensureDir(withBothDir);
     await fs.writeFile(
-      path.join(skillsDir, 'with-both.md'),
-      '# Full Metadata Skill\n> This has both title and description\n\nContent...'
+      path.join(withBothDir, 'SKILL.md'),
+      `---
+name: Full Metadata Skill
+description: "This has both title and description"
+---
+
+Content...`
     );
 
+    const titleOnlyDir = path.join(skillsDir, 'title-only');
+    await fs.ensureDir(titleOnlyDir);
     await fs.writeFile(
-      path.join(skillsDir, 'title-only.md'),
-      '# Title Only Skill\n\nNo description line, just content...'
+      path.join(titleOnlyDir, 'SKILL.md'),
+      `---
+name: Title Only Skill
+---
+
+No description line, just content...`
     );
 
+    const noMetadataDir = path.join(skillsDir, 'no-metadata');
+    await fs.ensureDir(noMetadataDir);
     await fs.writeFile(
-      path.join(skillsDir, 'no-metadata.md'),
-      'No title or description, just content...'
+      path.join(noMetadataDir, 'SKILL.md'),
+      'No YAML frontmatter, just content...'
     );
 
     // Import and run generateSkillInventory
@@ -379,10 +403,9 @@ async function testSkillMetadataParsing() {
     const inventory = await generateSkillInventory(testDir);
 
     // Validate metadata parsing
-    const skills = inventory.skillsByCategory['.'] || [];
-    const withBoth = skills.find(s => s.file === 'with-both');
-    const titleOnly = skills.find(s => s.file === 'title-only');
-    const noMetadata = skills.find(s => s.file === 'no-metadata');
+    const withBoth = inventory.skillsByCategory['with-both']?.[0];
+    const titleOnly = inventory.skillsByCategory['title-only']?.[0];
+    const noMetadata = inventory.skillsByCategory['no-metadata']?.[0];
 
     const validations = [
       { condition: withBoth !== undefined, message: 'with-both skill should exist' },
@@ -392,7 +415,7 @@ async function testSkillMetadataParsing() {
       { condition: titleOnly?.name === 'Title Only Skill', message: `Expected name 'Title Only Skill', got '${titleOnly?.name}'` },
       { condition: titleOnly?.description === null, message: 'title-only description should be null' },
       { condition: noMetadata !== undefined, message: 'no-metadata skill should exist' },
-      { condition: noMetadata?.name === 'no-metadata', message: `Expected filename as name, got '${noMetadata?.name}'` },
+      { condition: noMetadata?.name === 'no-metadata', message: `Expected category as name, got '${noMetadata?.name}'` },
       { condition: noMetadata?.description === null, message: 'no-metadata description should be null' }
     ];
 
@@ -438,10 +461,17 @@ async function testSkillInventoryEmbedding() {
     await fs.remove(testDir);
     await fs.ensureDir(skillsDir);
 
-    // Create test skills
+    // Create test skills (official Claude Code format)
+    const testSkillDir = path.join(skillsDir, 'test-patterns');
+    await fs.ensureDir(testSkillDir);
     await fs.writeFile(
-      path.join(skillsDir, 'test-skill.md'),
-      '# Test Skill\n> A test skill for integration testing\n\nContent...'
+      path.join(testSkillDir, 'SKILL.md'),
+      `---
+name: Test Skill
+description: "A test skill for integration testing"
+---
+
+Content...`
     );
 
     // Run installation
@@ -468,11 +498,10 @@ async function testSkillInventoryEmbedding() {
 
     // Validate skill inventory is embedded
     const validations = [
-      { condition: workflowContent.includes('Available Guild Skills'), message: 'Should include skill inventory section' },
+      { condition: workflowContent.includes('Skills Inventory'), message: 'Should include skill inventory section' },
       { condition: workflowContent.includes('Test Skill'), message: 'Should include test skill name' },
       { condition: workflowContent.includes('A test skill for integration testing'), message: 'Should include skill description' },
-      { condition: !workflowContent.includes('{SKILL_INVENTORY}'), message: 'Should not contain placeholder' },
-      { condition: workflowContent.includes('General'), message: 'Should format root category as "General"' }
+      { condition: !workflowContent.includes('{SKILL_INVENTORY}'), message: 'Should not contain placeholder' }
     ];
 
     const failed = validations.filter(v => !v.condition);
@@ -528,11 +557,18 @@ async function testSkillsDirectoryStructure() {
     const { generateSkillInventory } = require(path.join(__dirname, '..', 'install.js'));
     const emptyInventory = await generateSkillInventory(testDir);
 
-    // Create skills directory manually and add skills
+    // Create skills directory manually and add skills (official Claude Code format)
     await fs.ensureDir(skillsDir);
+    const newSkillDir = path.join(skillsDir, 'new-patterns');
+    await fs.ensureDir(newSkillDir);
     await fs.writeFile(
-      path.join(skillsDir, 'new-skill.md'),
-      '# New Skill\n> A newly created skill\n\nContent...'
+      path.join(newSkillDir, 'SKILL.md'),
+      `---
+name: New Skill
+description: "A newly created skill"
+---
+
+Content...`
     );
 
     // Verify discovery after manual creation
@@ -542,8 +578,8 @@ async function testSkillsDirectoryStructure() {
       { condition: emptyInventory.totalSkills === 0, message: `Expected 0 skills before creation, got ${emptyInventory.totalSkills}` },
       { condition: emptyInventory.scanTimestamp !== undefined, message: 'Empty inventory should have timestamp' },
       { condition: inventory.totalSkills === 1, message: `Expected 1 skill after creation, got ${inventory.totalSkills}` },
-      { condition: inventory.skillsByCategory['.'] !== undefined, message: 'Root category should exist' },
-      { condition: inventory.skillsByCategory['.'][0].name === 'New Skill', message: 'Should discover newly created skill' }
+      { condition: inventory.skillsByCategory['new-patterns'] !== undefined, message: 'new-patterns category should exist' },
+      { condition: inventory.skillsByCategory['new-patterns'][0].name === 'New Skill', message: 'Should discover newly created skill' }
     ];
 
     const failed = validations.filter(v => !v.condition);

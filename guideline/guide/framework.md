@@ -2,171 +2,371 @@
 
 ## Core Philosophy
 
-**Discovery Over Prescription**: Guild provides resources and guidance, not rigid execution protocols. Trust Claude Code's native capabilities for orchestration, tool selection, and parallel execution.
+**Core Requirements + Conditional Excellence**: Guild framework defines mandatory core requirements that apply to all workflows, plus conditional operational patterns applied based on task complexity, risk level, and domain requirements.
 
-**Skills as Patterns**: Skills define WHAT and WHEN (patterns, contexts, conventions), not HOW (execution steps). Claude Code determines optimal execution based on context.
+**Skills as Patterns**: Skills define project-specific patterns and conventions (WHAT and WHEN), which Guild commands apply intelligently based on context.
 
-**Advisory Guidance**: Commands present available resources and provide strategic advice, allowing Claude Code to leverage its strengths in task decomposition and tool orchestration.
-
-## MANDATORY: Execution Architecture
+## MANDATORY: Core Requirements
 
 <mandatory_execution_architecture>
-**CRITICAL REQUIREMENTS**: Guild commands enforce specific execution patterns for optimal performance, context efficiency, and reasoning quality.
+**CORE REQUIREMENTS**: Guild commands enforce mandatory execution requirements for optimal performance, context efficiency, and reasoning quality.
 
-### 1. MANDATORY: Subagent Delegation (Context Reduction)
+### The Five Core Requirements
 
-**ALWAYS use Task tool to reduce context usage**:
-- ✅ Multi-step research → Task tool delegation
-- ✅ Complex implementation → Task tool delegation
-- ✅ Verification phases → Task tool delegation
-- ❌ NEVER use direct tools for multi-step work
-- ❌ NEVER keep multi-step work in main context
+1. **Subagent Delegation (Context Reduction)**
+   - Use Task tool for ALL multi-step work
+   - Keeps main context clean and focused
+   - Enables scalability and isolation
 
-**Why Mandatory Subagent Delegation**:
-1. **Context Efficiency**: Keeps main context clean and focused
-2. **Scalability**: Distributes work across multiple agent contexts
-3. **Isolation**: Each subagent works in isolated context
-4. **Performance**: Better parallelization and resource utilization
+2. **Parallel Execution (Performance + Context)**
+   - Spawn ALL independent tasks in ONE message
+   - 3-10x speedup vs sequential execution
+   - Aligns with Anthropic best practices
 
-**When Direct Tools Are Acceptable**:
-- Single file read/write operations
-- Simple grep/glob queries
-- Trivial edits (formatting, typos)
-- Operations where Task overhead exceeds benefit
+3. **Ultra-Deep Reasoning (ULTRATHINK Keyword)**
+   - Start EVERY Task prompt with "ULTRATHINK: "
+   - Enables deep, thorough reasoning
+   - Ensures consistent reasoning depth
 
-### 2. MANDATORY: Parallel Execution (Performance + Context)
+4. **Fresh Context Maintenance**
+   - Use Context7/WebSearch for current documentation
+   - Research before implementation
+   - Avoid stale knowledge cutoff data
 
-**ALWAYS spawn parallel Task tool invocations in ONE message**:
-- ✅ Research/discovery → ALL tasks in ONE message
-- ✅ Implementation workstreams → ALL tasks in ONE message
-- ✅ Verification phases → ALL tasks in ONE message
-- ❌ NEVER sequential Task invocations across messages
-- ❌ NEVER wait between spawning independent tasks
+5. **Final Validation Protocol**
+   - Validate before marking tasks complete
+   - Prevents false positives and incomplete implementations
+   - Ensures quality assurance
 
-**Why Mandatory Parallel Execution**:
-1. **Performance**: 3-10x speedup vs sequential execution
-2. **Context Distribution**: Parallel agents work in separate contexts simultaneously
-3. **Scalability**: Independent workstreams don't block each other
-4. **Best Practice**: Aligns with official Anthropic recommendations
+### Application
 
-### 3. MANDATORY: Ultra-Deep Reasoning (ULTRATHINK Keyword)
+- **Workflow Command**: MUST apply ALL 5 core requirements
+- **Setup Command**: MUST apply 4 core requirements (skip Final Validation - setup is discovery-only)
 
-**ALWAYS include ULTRATHINK keyword at start of Task prompts**:
-- ✅ Main workflow and setup commands use ultrathink
-- ✅ ALL spawned subagents start prompt with "ULTRATHINK:"
-- ✅ Complex reasoning and planning tasks
-- ✅ Research and analysis phases
-- ❌ NEVER spawn Task without ULTRATHINK keyword in prompt
-- ❌ NEVER use default thinking mode
+### Implementation Details
 
-**Why Mandatory ULTRATHINK**:
-1. **Reasoning Quality**: Enables deep, thorough reasoning
-2. **Better Decisions**: Improves planning and problem-solving
-3. **Error Reduction**: Catches issues through comprehensive analysis
-4. **Consistency**: All agents reason at the same depth
+For detailed implementation patterns, code examples, and anti-patterns, see `guideline/core/shared-intelligence.md` section: "CRITICAL: Mandatory Execution Architecture"
 
-**ULTRATHINK Keyword Pattern**:
-```javascript
-Task({
-  prompt: "ULTRATHINK: Your detailed task description...",
-  subagent_type: "Explore",
-  description: "Task description"
-})
-```
-
-**Keyword Placement**: Start EVERY Task prompt with "ULTRATHINK: " to activate deep reasoning mode for the spawned agent.
-
-### 4. MANDATORY: Fresh Context Maintenance
-
-**ALWAYS maintain relevant, up-to-date context**:
-- ✅ Use Context7 for library documentation (latest versions)
-- ✅ Use WebSearch for current best practices
-- ✅ Use WebFetch for fresh documentation
-- ✅ Research before implementation
-- ❌ NEVER rely on stale knowledge cutoff data
-- ❌ NEVER skip research for "known" technologies
-
-**Why Mandatory Fresh Context**:
-1. **Precision**: Latest documentation = accurate implementations
-2. **Best Practices**: Current patterns and recommendations
-3. **Version Alignment**: Match project's actual library versions
-4. **Quality**: Avoid deprecated or outdated approaches
-
-### Complete Mandatory Pattern
-
-**CORRECT (ALL requirements enforced)**:
-```javascript
-// Spawn ALL tasks in ONE message, ALL with ULTRATHINK keyword
-Task({
-  prompt: "ULTRATHINK: Research React latest documentation.
-          Use Context7: mcp__context7__resolve-library-id 'react'
-          Then: mcp__context7__get-library-docs with topics
-          Report: Current best practices and patterns",
-  subagent_type: "general-purpose",
-  description: "React documentation research"
-})
-Task({
-  prompt: "ULTRATHINK: Analyze codebase for React usage patterns.
-          Use Glob and Grep to find components
-          Report: Current project patterns",
-  subagent_type: "Explore",
-  description: "Codebase analysis"
-})
-Task({
-  prompt: "ULTRATHINK: Search for React best practices 2025.
-          Use WebSearch for latest patterns
-          Report: Current community recommendations",
-  subagent_type: "general-purpose",
-  description: "Best practices research"
-})
-```
-
-**INCORRECT (violations)**:
-```javascript
-// ❌ Sequential tasks across messages
-Message 1: Task({ prompt: "Research..." })
-Message 2: Task({ prompt: "More research..." })
-
-// ❌ Missing ULTRATHINK keyword in prompt
-Task({ prompt: "Research...", subagent_type: "Explore" })
-// MUST start with "ULTRATHINK: "
-
-// ❌ Using direct tools for multi-step work
-Read package.json
-Grep for patterns
-Read multiple files
-// Should use Task tool instead
-
-// ❌ Relying on stale knowledge instead of fresh research
-// "I know React hooks..." - NO! Research fresh docs via Context7
-```
-
-### Enforcement Rules
-
-**Workflow Command (`/guild`) MUST**:
-1. Use Task tool for ALL multi-step research/implementation
-2. Spawn ALL parallel tasks in ONE message
-3. Start EVERY Task prompt with "ULTRATHINK: "
-4. Use Context7/WebSearch for fresh documentation
-5. Wait for ALL parallel tasks before proceeding
-
-**Setup Command (`/guild:setup`) MUST**:
-1. Use Task tool for ALL discovery and analysis
-2. Spawn ALL parallel tasks in ONE message
-3. Start EVERY Task prompt with "ULTRATHINK: "
-4. Fetch fresh library documentation via Context7
-5. Wait for ALL parallel tasks before proceeding
-
-### What This Means
-
-**NOT ADVISORY - THESE ARE MANDATORY**:
-- Task tool delegation for multi-step work (context efficiency)
-- Parallel execution in single message (performance)
-- ULTRATHINK keyword in all Task prompts (reasoning quality)
-- Fresh context via research tools (precision)
-- This is core architectural requirement, not recommendation
+The shared intelligence document provides:
+- Detailed code examples for each requirement
+- Common violations and how to avoid them
+- Complete mandatory pattern demonstrations
+- Integration with operational excellence protocols
 
 </mandatory_execution_architecture>
+
+## CONDITIONAL: Operational Excellence Patterns
+
+<operational_excellence>
+**CONDITIONAL PATTERNS**: Apply these patterns based on task complexity, risk level, and domain requirements. Not all patterns are needed for all tasks - use intelligent judgment to select appropriate patterns.
+
+### Pattern Selection Criteria
+
+**Task Complexity Assessment**:
+- **Simple** (<5 min, <5 files, single domain): Apply core 5 requirements only
+- **Standard** (5-30 min, 5-20 files, moderate complexity): Apply core + 2-3 conditional patterns
+- **Complex** (30+ min, 20+ files, multi-domain): Apply core + most conditional patterns
+
+**Domain Risk Assessment**:
+- **Low Risk** (read-only, info gathering, documentation): Minimal conditional patterns
+- **Medium Risk** (code changes, configuration updates): Apply safety-oriented patterns
+- **High Risk** (database, security, production, destructive): Apply all safety patterns
+
+### 6. CONDITIONAL: Robust Error Recovery
+
+**Apply intelligent error recovery based on task complexity**:
+- ✅ Parse errors → identify and fix → retry intelligently
+- ✅ Import/dependency errors → install → verify → retry
+- ✅ Path errors → verify existence → correct → retry
+- ✅ Permission errors → request user approval or find alternative
+- ✅ Timeout errors → use run_in_background for long operations
+- ✅ Escalate unrecoverable errors with clear diagnosis
+
+**When to Apply**:
+- Standard/Complex tasks with potential for recoverable errors
+- Implementation phases where errors are likely
+- Operations with known failure modes
+
+**Trust Claude's Judgment**:
+Claude understands error recovery patterns naturally. Instead of prescribing exact retry logic, provide general guidance:
+
+```javascript
+Task({
+  prompt: "ULTRATHINK: Implement [feature].
+
+          Apply robust error recovery:
+          - Syntax/import errors: fix and retry (max 3 attempts)
+          - Path errors: verify and correct path
+          - Permissions: request user approval
+          - Timeouts: use run_in_background for long operations
+
+          Escalate unrecoverable errors with clear diagnosis.",
+  subagent_type: "general-purpose",
+  description: "Feature implementation"
+})
+```
+
+**Why Conditional**:
+- Simple tasks (typo fixes, quick reads) don't need elaborate recovery
+- Complex tasks benefit from explicit recovery guidance
+- Claude can handle standard error recovery without micromanagement
+
+### 7. CONDITIONAL: Risk-Aware Task Categorization
+
+**Apply category-specific safety protocols for risky operations**:
+- ✅ Classify tasks by domain (ML/AI, Security, Database, Infrastructure, Data Processing, Web Development)
+- ✅ Apply appropriate safety checks based on risk level
+- ✅ Verify preconditions before destructive operations
+- ✅ Request user approval for high-risk changes
+
+**When to Apply**:
+- **High-Risk Tasks**: Database changes, production deployments, security modifications
+- **Destructive Operations**: Data deletion, schema changes, irreversible actions
+- **Sensitive Domains**: Security, authentication, data processing
+
+**Why Conditional**:
+- Simple tasks (read-only, documentation) don't need elaborate risk assessment
+- Complex/risky tasks benefit from domain-specific safety protocols
+- Claude can identify obvious risks without formal categorization
+
+**Category-Specific Safety Examples**:
+
+- **ML/AI**: Test on small dataset before full training, verify GPU/resources available
+- **Security**: Backup before config changes, test in non-production, rotate credentials
+- **Database**: Backup before schema changes, test migrations on copy, verify rollback
+- **Infrastructure**: Request user approval for production, implement rollback plan
+- **Data Processing**: Backup source data, test on sample, verify data integrity
+- **Web Development**: Test endpoints, verify error handling, check security headers
+
+### 8. CONDITIONAL: Iterative Research
+
+**Use multi-round research for research-intensive tasks**:
+- Round 1: Task-specific, low-frequency search terms
+- Round 2: Deep link analysis if needed
+- Round 3: Alternative approaches if gaps remain
+- Continue iterating until sufficient information gathered
+
+**When to Apply**:
+- **Research-Heavy Tasks**: Unfamiliar technologies, complex integrations, edge cases
+- **Limited Initial Results**: First search doesn't yield actionable information
+- **Critical Decisions**: Architecture choices, library selection, approach validation
+
+**Why Conditional**:
+- Simple tasks with known solutions don't need multi-round research
+- Complex research benefits from iterative deepening
+- Claude can assess when research is sufficient vs needs continuation
+
+**Research Strategy**:
+- Use specific, low-frequency search terms (exact errors, version-specific queries)
+- Prioritize GitHub (code examples), StackOverflow (solutions), official docs
+- If initial results insufficient, analyze top links deeply
+- If gaps remain, try alternative terminology and community resources
+- Continue until confident understanding achieved
+
+### 9. CONDITIONAL: Environment Observation
+
+**Perform environment reconnaissance for complex/multi-tech projects**:
+- Detect installed packages and versions
+- Map project structure and configuration files
+- Identify runtime environment capabilities
+- Check resource availability (disk, memory, CPU)
+- Assess containerization status
+
+**When to Apply**:
+- **Multi-Tech Projects**: Multiple languages/frameworks (Node.js + Python + Go)
+- **Unknown Environments**: First time working with project
+- **Resource-Intensive Operations**: ML training, large builds, data processing
+- **Container/Cloud Deployments**: Docker, Kubernetes, cloud platforms
+
+**Why Conditional**:
+- Simple single-language projects don't need elaborate environment scanning
+- Complex multi-tech setups benefit from upfront reconnaissance
+- Claude can infer obvious environment details from project files
+
+### 10. CONDITIONAL: Strategic Checkpoints
+
+**Include mid-workflow validation for long-running/complex tasks**:
+- Assess progress after initial implementation
+- Identify stalled or blocked workstreams
+- Gather additional intelligence if gaps discovered
+- Course-correct if approach insufficient
+
+**When to Apply**:
+- **Long Tasks**: Duration exceeds 10-15 minutes
+- **Signs of Failure**: Multiple attempts required, approach not working
+- **Complex Dependencies**: Multi-phase implementation with coordination needs
+- **User Request**: Explicit mid-workflow review requested
+
+**Why Conditional**:
+- Simple/short tasks complete before checkpoint is useful
+- Complex tasks benefit from mid-flight course correction
+- Claude can assess when reassessment is needed
+
+**Checkpoint Actions**:
+- Review completed vs blocked workstreams
+- Identify missing information or incorrect assumptions
+- Spawn additional research if gaps found
+- Adjust strategy or consult user for major pivots
+
+### 11. CONDITIONAL: Reflection and Self-Evaluation
+
+**Include self-evaluation for significant implementations**:
+- Review implementation against requirements
+- Assess code quality, error handling, performance
+- Identify improvements and remaining risks
+- Provide honest assessment before user presentation
+
+**When to Apply**:
+- **Significant Implementations**: Multi-file changes, new features, refactorings
+- **Quality-Critical**: Production code, security changes, data operations
+- **Learning Opportunities**: Novel approaches, complex solutions
+
+**Why Conditional**:
+- Trivial changes (typo fixes, simple edits) don't need formal reflection
+- Significant work benefits from quality self-assessment
+- Claude can provide honest evaluation without elaborate protocol
+
+### 12. CONDITIONAL: Predictive Intelligence
+
+**Perform upfront task analysis for complex/long-duration work**:
+- Quick codebase scan for relevant patterns and technologies
+- Classify task category and assess risk level
+- Predict key files and integration points
+- Estimate complexity (file count, duration, phases needed)
+- Recommend research depth and workstream opportunities
+
+**When to Apply**:
+- **Complex Tasks**: 30+ minute duration estimate
+- **Unfamiliar Codebases**: First-time work with project
+- **Multi-Domain Work**: Spans multiple technologies or areas
+- **High-Risk Operations**: Needs careful planning upfront
+
+**Why Conditional**:
+- Simple tasks (quick fixes, single-file changes) don't need elaborate prediction
+- Complex tasks benefit from upfront analysis to guide research focus
+- Claude can assess task complexity and plan accordingly
+
+**Predictive Analysis Example**:
+```javascript
+Task({
+  prompt: "ULTRATHINK: Analyze task scope and recommend strategy.
+
+          EARLY INTELLIGENCE (using existing tools):
+
+          1. Quick Codebase Scan:
+             - Use Glob to find relevant file patterns
+             - Identify key technologies from package.json, requirements.txt
+             - Detect project structure (src/, lib/, app/ directories)
+
+          2. Task Category Detection:
+             - Analyze user request keywords
+             - Map to categories: ML/AI, Security, Database, Infrastructure, etc.
+             - Assess risk level: low/medium/high/critical
+
+          3. Key File Prediction:
+             - Based on task type, predict critical files
+             - Identify likely integration points
+             - Anticipate configuration needs
+
+          4. Complexity Assessment:
+             - File count estimate
+             - Time estimate (<10 min / 10-30 min / 30+ min)
+             - Multi-phase requirement
+
+          5. Strategy Recommendation:
+             - Research depth (1-3 rounds needed?)
+             - Exploration thoroughness (quick/medium/thorough)
+             - Parallel workstream opportunities
+
+          Report: Predictive analysis to guide Phase 1 research focus",
+  subagent_type: "Explore",
+  description: "Predictive intelligence"
+})
+```
+
+### Conditional Patterns Summary
+
+**5 Core Requirements (Mandatory for All Tasks)**:
+1. ✅ **Subagent Delegation**: Use Task tool for multi-step work
+2. ✅ **Parallel Execution**: Spawn all independent tasks in ONE message
+3. ✅ **ULTRATHINK Keyword**: Start EVERY Task prompt with "ULTRATHINK: "
+4. ✅ **Fresh Context**: Use Context7/WebSearch for current documentation
+5. ✅ **Final Validation**: Verify completeness before marking tasks complete
+
+**7 Conditional Patterns (Apply Based on Context)**:
+6. ✅ **Robust Error Recovery**: For standard/complex tasks with error potential
+7. ✅ **Risk-Aware Categorization**: For high-risk operations (database, security, production)
+8. ✅ **Iterative Research**: For research-intensive, unfamiliar technologies
+9. ✅ **Environment Observation**: For multi-tech projects, unknown environments
+10. ✅ **Strategic Checkpoints**: For long-running tasks (>10-15 min)
+11. ✅ **Reflection & Self-Evaluation**: For significant implementations
+12. ✅ **Predictive Intelligence**: For complex tasks (30+ min estimate)
+
+**Pattern Selection**:
+- **Simple Tasks** (<5 min): Apply core 5 only
+- **Standard Tasks** (5-30 min): Apply core 5 + 2-3 conditional patterns
+- **Complex Tasks** (30+ min): Apply core 5 + most/all conditional patterns
+
+**Result**: Balanced framework with mandatory core for consistency + conditional patterns for context-appropriate quality
+
+</operational_excellence>
+
+## Command-Specific Requirements
+
+<command_requirements>
+**How workflow and setup commands apply the 5 core requirements + conditional patterns.**
+
+### Workflow Command (`/guild`) Requirements
+
+**Core Requirements (Apply to ALL workflows)**:
+1. ✅ **Subagent Delegation**: ALL multi-step work via Task tool
+2. ✅ **Parallel Execution**: ALL independent tasks in ONE message per phase
+3. ✅ **ULTRATHINK Keyword**: Start EVERY Task prompt with "ULTRATHINK: "
+4. ✅ **Fresh Context**: Use Context7/WebSearch for current documentation
+5. ✅ **Final Validation**: Pre-completion verification before reporting to user
+
+**Conditional Patterns (Apply Based on Task Context)**:
+6. ✅ **Error Recovery**: Embed recovery guidance in Task prompts for complex implementations
+7. ✅ **Risk Categorization**: Classify task category and apply safety protocols for high-risk operations
+8. ✅ **Iterative Research**: Multi-round research for complex/unfamiliar topics
+9. ✅ **Environment Observation**: Reconnaissance for multi-tech projects
+10. ✅ **Strategic Checkpoints**: Mid-workflow validation for long tasks (>10-15 min)
+11. ✅ **Reflection & Self-Evaluation**: Quality assessment for significant implementations
+12. ✅ **Predictive Intelligence**: Upfront analysis for complex tasks (30+ min estimate)
+
+### Setup Command (`/guild:setup`) Requirements
+
+**Core Requirements (Apply to Setup)**:
+1. ✅ **Subagent Delegation**: ALL discovery via Task tool
+2. ✅ **Parallel Execution**: ALL discovery tasks in ONE message
+3. ✅ **ULTRATHINK Keyword**: Start EVERY Task prompt with "ULTRATHINK: "
+4. ✅ **Fresh Context**: Context7/WebSearch for library documentation
+
+**Conditional Patterns (Apply to Setup)**:
+9. ✅ **Environment Observation**: Tech stack detection and reconnaissance
+
+**Setup Does NOT Require**:
+- ❌ Final Validation (setup doesn't execute - user reviews generated resources)
+- ❌ Error Recovery (discovery phase, not execution)
+- ❌ Risk Categorization (setup doesn't execute risky operations)
+- ❌ Iterative Research (single-round Context7 sufficient for library docs)
+- ❌ Strategic Checkpoints (setup is streamlined discovery)
+- ❌ Reflection & Self-Evaluation (no implementation to evaluate)
+- ❌ Predictive Intelligence (setup is well-defined discovery pattern)
+
+### Requirements Summary by Command
+
+**Workflow Command**:
+- **Core 5**: All mandatory
+- **Conditional 7**: Apply based on task complexity and context
+- Total: 5 mandatory + 0-7 conditional (context-dependent)
+
+**Setup Command**:
+- **Core 4**: Apply (skip Final Validation - no execution to validate)
+- **Conditional 1**: Environment Observation only
+- Total: 4 mandatory + 1 conditional
+
+</command_requirements>
 
 ## Core Architecture
 <system_design>

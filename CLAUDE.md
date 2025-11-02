@@ -55,11 +55,18 @@ framework.md (defines principles)
 core/shared-intelligence.md (implements patterns)
     ↓ [loadIntelligenceModule()]
 templates/workflow-command.md + templates/setup-command.md
-    ↓ [copyAndEmbedCommand()]
-install.js (generates agent inventory + embeds intelligence)
-    ↓ [generateAgentInventory() + intelligence embedding]
+    ↓
+install.js (processes in parallel)
+    ├─→ [generateAgentInventory()] ─────┐
+    ├─→ [generateSkillInventory()] ─────┤
+    └─→ [loadIntelligenceModule()] ─────┤
+                                         ↓ (results combined)
+                                   [copyAndEmbedCommand()]
+                                         ↓
 .claude/commands/guild/ (deployed commands with embedded intelligence)
     ↓
+.claude/skills/guild-patterns/ (awareness skill created)
+    ↓ [createAwarenessSkill()]
 User executes /guild or /guild:setup
 ```
 
@@ -68,8 +75,10 @@ User executes /guild or /guild:setup
 **Intelligence Embedding Process:**
 1. `loadIntelligenceModule()` - Loads shared intelligence from `guideline/core/shared-intelligence.md`
 2. `generateAgentInventory()` - Scans target directory for existing agents to enable workflow coordination
-3. `copyAndEmbedCommand()` - Takes templates, embeds intelligence and agent inventory, generates final commands
-4. Commands are deployed to `.claude/commands/guild/` with full intelligence embedded
+3. `generateSkillInventory()` - Scans `.claude/skills/guild/` for SKILL.md files, parses YAML frontmatter metadata
+4. `copyAndEmbedCommand()` - Takes templates, embeds intelligence, agent inventory, and skill inventory, generates final commands
+5. `createAwarenessSkill()` - Creates awareness bridge skill from `guideline/templates/awareness-skill.md` template
+6. Commands are deployed to `.claude/commands/guild/` with full intelligence embedded
 
 **Template System:**
 - `guideline/templates/workflow-command.md` → `.claude/commands/guild/workflow.md`
@@ -104,7 +113,7 @@ git commit -m "Fix typo in framework documentation"
 
 **Required**: Structure validation only (`npm run validate:trivial`)
 **Skip**: Requirements documentation, framework updates, intelligence updates, full testing
-**Time**: ~30 seconds
+**Time**: ~5 seconds
 
 ---
 
@@ -129,7 +138,7 @@ git commit -m "Add example for skill metadata structure"
 **Required**: Alignment validation (`npm run validate:content`)
 **Optional**: Framework documentation, installation test
 **Skip**: Formal requirements, full 5-phase sequence
-**Time**: ~2-3 minutes
+**Time**: ~30 seconds
 
 ---
 
@@ -157,7 +166,7 @@ git commit -m "Add MCP tool selection matrix pattern"
 **Required**: Intelligence → Template alignment, pattern tests, installation test
 **Optional**: Formal requirements documentation
 **Skip**: Full 5-phase sequential workflow
-**Time**: ~5-7 minutes
+**Time**: ~2-3 minutes
 
 ---
 
@@ -219,7 +228,7 @@ git commit -m "Add MCP tool selection matrix pattern"
 
 **Required**: All 5 phases
 **Skip**: Nothing - full rigor maintained
-**Time**: ~15-20 minutes
+**Time**: ~5-10 minutes
 
 ---
 

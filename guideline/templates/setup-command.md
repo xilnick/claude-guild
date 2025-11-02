@@ -7,13 +7,25 @@ thinking_mode: ultrathink
 description: "Discover project patterns and create custom skills and specialists with MANDATORY parallel subagent execution"
 ---
 
-## ⚠️ CRITICAL: MANDATORY Parallel Execution
+## ⚠️ CRITICAL: MANDATORY Execution Architecture
 
-**THIS COMMAND REQUIRES PARALLEL SUBAGENT SPAWNING**
+**THIS COMMAND ENFORCES 4 CORE REQUIREMENTS + 1 CONDITIONAL PATTERN**
+
+### Core Requirements (MANDATORY for ALL discovery workflows)
+1. **Subagent Delegation**: Task tool for ALL discovery phases
+2. **Parallel Execution**: ALL discovery tasks in ONE message
+3. **ULTRATHINK Keyword**: "ULTRATHINK: " keyword in all Task prompts
+4. **Fresh Context**: Context7/WebSearch for library documentation
+
+### Conditional Pattern (Discovery-specific)
+5. **Environment Observation**: Heuristic project reconnaissance for context-aware skill creation
+
+**Not applicable to discovery workflows**: Final Validation (task completion only), Error Recovery, Risk Categorization, Iterative Research, Checkpoints, Reflection, Predictive Intelligence
 
 You MUST spawn parallel Task tool invocations for ALL discovery phases:
 - ✅ Project discovery → PARALLEL Task calls in ONE message
 - ✅ Tech stack analysis → PARALLEL Task calls in ONE message
+- ✅ Environment observation → PARALLEL with discovery
 - ✅ Documentation fetching → PARALLEL Task calls in ONE message
 - ❌ NEVER proceed sequentially when tasks are independent
 - ❌ NEVER use direct tool calls for project analysis phases
@@ -101,6 +113,25 @@ Task({
   description: "Tech stack detection"
 })
 Task({
+  prompt: "ULTRATHINK: Perform heuristic environment observation (Req 9).
+
+          Tasks:
+          1. Detect package ecosystems (npm, pip, gem, go, etc.)
+          2. Identify runtime environments (Node version, Python version, etc.)
+          3. Detect containerization (Docker, Kubernetes)
+          4. Check CI/CD configurations (.github, .gitlab-ci, etc.)
+          5. Identify development tools (linters, formatters, test runners)
+
+          Report:
+          - Package ecosystem details
+          - Runtime environment capabilities
+          - Container/orchestration status
+          - CI/CD pipeline presence
+          - Development tooling inventory",
+  subagent_type: "Explore",
+  description: "Environment observation"
+})
+Task({
   prompt: "ULTRATHINK: Identify project patterns and conventions.
 
           Tasks:
@@ -122,11 +153,12 @@ Task({
 ```
 
 **MANDATORY Requirements**:
-1. ALL Task calls MUST be in ONE message
+1. ALL Task calls MUST be in ONE message (4 discovery tasks: structure, tech stack, environment, patterns)
 2. NO sequential Task invocations across messages
 3. Use `subagent_type: "Explore"` for codebase analysis
 4. Each Task MUST have clear objectives and reporting requirements
-5. Wait for ALL parallel tasks to complete before Phase 3
+5. Include environment observation (Req 9) for context-aware skill creation
+6. Wait for ALL parallel tasks to complete before Phase 3
 
 **After Parallel Discovery Completes**:
 
@@ -158,7 +190,25 @@ Task({
 - ✅ "working-with-react", "processing-api-requests", "testing-express-endpoints"
 - ❌ "react-integration", "api-handler", "express-test"
 
-**SKILL.md Structure (Official Format)**:
+**MANDATORY: Use Heredoc for File Creation (Req 12)**:
+```bash
+# Correct: Heredoc with single-quoted delimiter
+cat > .claude/skills/guild/[category]/SKILL.md <<'EOF'
+---
+name: working-with-react
+description: "Use when working with React in this project..."
+---
+[Content here]
+EOF
+
+# Incorrect: Echo or redirection - DO NOT USE
+echo "content" > file.md  # ❌ FORBIDDEN
+```
+
+**SKILL.md Structure (Official Format with Metadata)**:
+
+Skills use metadata-rich frontmatter to enable intelligent skill selection:
+
 ```yaml
 ---
 # ============================================================================
@@ -174,7 +224,7 @@ model: inherit
 tools: Read, Write, Edit, Grep, Glob
 
 # ============================================================================
-# GUILD ENHANCEMENT FIELDS (Optional)
+# GUILD ENHANCEMENT FIELDS (Optional) - Metadata for skill selection
 # ============================================================================
 category: [frontend-patterns|backend-integration|testing-patterns|library-specific]
 applicability:
@@ -331,6 +381,21 @@ For identified domain areas requiring specialized knowledge, create agent files 
 
 2. **Create agent file** in `.claude/agents/guild/`:
 
+**MANDATORY: Use Heredoc for File Creation (Req 12)**:
+```bash
+# Correct: Heredoc with single-quoted delimiter
+cat > .claude/agents/guild/[domain]-specialist.md <<'EOF'
+---
+name: [domain]-specialist
+model: inherit
+thinking_mode: ultrathink
+description: "[Domain] specialist for [project-context]"
+---
+[Content here]
+EOF
+```
+
+**Agent File Structure**:
 ```yaml
 ---
 name: [domain]-specialist
@@ -387,9 +452,106 @@ You are a [domain] specialist for [project-name] using [discovered-technologies]
 - Avoid overlapping specialists
 - Include skill application instructions
 
-### Phase 5: Guidance
+### Phase 5: Project Configuration & Guidance
 
-**Display Resource Inventory** (never persist as file):
+**Step 1: Create Project CLAUDE.md (If Test Frameworks Detected)**
+
+If Phase 2 tech stack analysis detected testing frameworks:
+
+1. **Extract Test Framework Information**:
+   - Test framework names (Jest, Vitest, Pytest, Mocha, etc.)
+   - Package manager (npm, pip, gem, etc.)
+   - Typical test commands based on detected frameworks
+
+2. **Create CLAUDE.md with TDD Guidance**:
+
+**MANDATORY: Use Heredoc for File Creation**:
+```bash
+# Create project CLAUDE.md with TDD guidance
+cat > CLAUDE.md <<'EOF'
+# Project Development Guidelines
+
+This file provides guidance to Claude Code when working with this codebase.
+
+## Test-Driven Development (Optional)
+
+This project has testing infrastructure. When implementing verifiable features, consider using test-driven development:
+
+1. **Write failing test** that defines expected behavior
+2. **Implement minimal code** to make test pass
+3. **Refactor** while maintaining green tests
+4. **Expand** with edge case tests
+
+This is an Anthropic-recommended workflow for testable changes.
+
+### Testing Frameworks Detected
+
+- **[Framework Names]**: [Jest|Vitest|Pytest|Mocha|etc.]
+
+### Test Commands
+
+Run these commands to execute tests:
+
+```bash
+# Run all tests
+[npm test | pytest | bundle exec rspec | go test ./... | cargo test]
+
+# Run tests in watch mode (if supported)
+[npm test -- --watch | pytest --watch | etc.]
+
+# Run tests with coverage
+[npm run test:coverage | pytest --cov | etc.]
+```
+
+### When to Use TDD
+
+✅ **Recommended for**:
+- New features with clear specifications
+- Bug fixes with reproducible test cases
+- API development and integration work
+- Refactoring existing code
+
+❌ **Not necessary for**:
+- Exploratory prototyping
+- Simple documentation updates
+- UI polish and styling tweaks
+- Configuration changes
+
+### TDD Workflow
+
+For features that benefit from TDD:
+
+1. **Red**: Write a test that fails
+2. **Green**: Write minimal code to pass the test
+3. **Refactor**: Improve code while keeping tests green
+4. **Repeat**: Add more tests for edge cases
+
+This ensures correctness, prevents regressions, and documents expected behavior.
+
+---
+
+*This file was generated by Guild setup. Modify as needed for your project.*
+EOF
+```
+
+3. **Customize Test Commands**:
+   - Node.js (npm): `npm test`, `npm run test:watch`, `npm run coverage`
+   - Python (pytest): `pytest`, `pytest --watch`, `pytest --cov`
+   - Ruby (RSpec): `bundle exec rspec`, `bundle exec rspec --format documentation`
+   - Go: `go test ./...`, `go test -v ./...`, `go test -cover ./...`
+   - Rust: `cargo test`, `cargo test -- --nocapture`, `cargo tarpaulin`
+
+4. **Inform User**:
+   - Display message: "Created CLAUDE.md with TDD guidance (testing frameworks detected)"
+   - Note that TDD is optional and can be enabled/disabled by editing CLAUDE.md
+   - Mention that this follows Anthropic's recommended workflow for testable changes
+
+**If NO Test Frameworks Detected**:
+- Skip CLAUDE.md creation
+- Inform user that no testing infrastructure was detected
+- Suggest adding tests for better development workflow
+
+**Step 2: Display Resource Inventory** (never persist as file):
 
 Present to user in conversation:
 
@@ -424,6 +586,9 @@ Present to user in conversation:
 
 **Agents**:
 - Agent files: `.claude/agents/guild/[agent-name].md`
+
+**Project Configuration** (Optional):
+- Project guidelines: `CLAUDE.md` (created only if test frameworks detected)
 
 **Skill Directory Structure**:
 ```
@@ -461,33 +626,40 @@ If user requests specific agents or skills:
 Before completing setup execution, verify:
 
 ### Phase 2: Parallel Discovery (MANDATORY)
-- ✅ Spawned parallel Task tool invocations for ALL discovery in ONE message
-- ✅ Project structure analysis via Task tool
-- ✅ Tech stack detection via Task tool
-- ✅ Pattern identification via Task tool
+- ✅ Spawned parallel Task tool invocations for ALL discovery in ONE message (Req 1, 2)
+- ✅ Project structure analysis via Task tool (Req 1)
+- ✅ Tech stack detection via Task tool (Req 1)
+- ✅ Environment observation via Task tool (Req 9)
+- ✅ Pattern identification via Task tool (Req 1)
+- ✅ ALL discovery tasks use "ULTRATHINK: " keyword (Req 3)
 - ✅ ALL discovery tasks completed before proceeding to Phase 3
 
 ### Phase 3: Skill Creation
 - ✅ Identified skills to create based on gap analysis
 - ✅ Created SKILL.md files with official format (gerund naming)
+- ✅ Files created using appropriate tools (Write/Edit)
 - ✅ Skills under 500 lines with progressive loading structure
 - ✅ Tech stack skills AND pattern skills created
 
 ### Phase 3: Documentation Fetching (If Library Skills Created)
-- ✅ Spawned parallel Task tool invocations for ALL documentation fetching in ONE message
-- ✅ Used Context7 to fetch library documentation
-- ✅ Created DOCS.md files for tech stack skills
+- ✅ Spawned parallel Task tool invocations for ALL documentation fetching in ONE message (Core Req 1, 2)
+- ✅ Used Context7 to fetch library documentation (Core Req 4 - Fresh Context)
+- ✅ WebSearch for best practices when needed (Core Req 4 - Fresh Context)
+- ✅ Created DOCS.md files with documentation content
 - ✅ ALL documentation tasks completed
 
 ### Phase 4: Agent Creation
 - ✅ Created agents referencing ALL relevant skills (existing + new)
 - ✅ Agents include "Relevant Skills" sections
-- ✅ Agent files saved to `.claude/agents/guild/`
+- ✅ Agent files created and saved to `.claude/agents/guild/`
 
-### Phase 5: Guidance & Approval
+### Phase 5: Project Configuration & Guidance
+- ✅ If test frameworks detected: Created CLAUDE.md with TDD guidance
+- ✅ If test frameworks detected: Informed user about TDD optional workflow
+- ✅ If NO test frameworks: Informed user (no CLAUDE.md created)
 - ✅ Resource inventory presented (displayed, not persisted)
 - ✅ Usage guidance provided (displayed, not persisted)
-- ✅ Only skill and agent files persisted
+- ✅ Only skill, agent, and CLAUDE.md files persisted
 - ✅ User approval obtained
 
 ## Success Criteria
@@ -497,8 +669,9 @@ Before completing setup execution, verify:
 - ✅ Phase 3: Skills created with official SKILL.md format
 - ✅ Phase 3: Documentation fetched in parallel (if library skills)
 - ✅ Phase 4: Agents created referencing all skills
+- ✅ Phase 5: CLAUDE.md created if tests detected (optional TDD guidance)
 - ✅ Phase 5: Guidance provided and user approval obtained
-- ✅ Only codebase files (skills, agents) persisted
+- ✅ Only codebase files (skills, agents, CLAUDE.md) persisted
 
 **Anti-Patterns to Avoid**:
 - ❌ Sequential Task invocations across multiple messages
@@ -509,13 +682,24 @@ Before completing setup execution, verify:
 
 ## Summary
 
-**Setup command REQUIRES**:
-1. **Parallel discovery** (Phase 2) - ALL discovery tasks in ONE message
-2. **Skill creation** (Phase 3) - Official SKILL.md format with docs
-3. **Parallel documentation** (Phase 3) - ALL library docs in ONE message
-4. **Agent creation** (Phase 4) - Referencing all skills
+**Setup command enforces 4 CORE REQUIREMENTS + 1 CONDITIONAL PATTERN**:
+
+### Core Requirements (MANDATORY for ALL discovery workflows)
+1. **Subagent Delegation**: Task tool for ALL discovery phases
+2. **Parallel Execution**: ALL tasks in ONE message
+3. **ULTRATHINK Keyword**: "ULTRATHINK: " keyword in all Task prompts
+4. **Fresh Context**: Context7/WebSearch for library documentation
+
+### Conditional Pattern (Discovery-specific)
+5. **Environment Observation**: Heuristic reconnaissance for context-aware skill creation
+
+**Enhanced Discovery Flow**:
+1. **Parallel discovery** (Phase 2) - 4 tasks: structure + tech stack + environment + patterns
+2. **Skill creation** (Phase 3) - Official SKILL.md format with appropriate file creation tools
+3. **Parallel documentation** (Phase 3) - Context7/WebSearch for fresh library docs
+4. **Agent creation** (Phase 4) - Referencing all skills (existing + new)
 5. **User approval** (Phase 5) - Final authority
 
-**NOT ADVISORY - MANDATORY**: Parallel subagent spawning is a core architectural requirement.
+**ARCHITECTURAL MANDATE**: 4 core requirements are mandatory for ALL discovery workflows. Environment Observation is conditionally applied for context-aware skill creation.
 
 {SHARED_INTELLIGENCE}

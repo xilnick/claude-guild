@@ -1,21 +1,21 @@
 /**
- * Test: Advisory Architecture Validation
+ * Test: Enforcement Architecture Validation
  *
- * Validates that all Guild templates follow the new advisory model:
- * - Skills are metadata-rich and lightweight
- * - Templates present resources, don't prescribe execution
- * - Advisory tone, not prescriptive mandates
- * - Trust Claude Code's native capabilities
+ * Validates that all Guild templates follow the enforcement-based model:
+ * - Skills are metadata-rich and lightweight (maintained)
+ * - Templates enforce core requirements + conditional patterns for quality/performance
+ * - Balances enforcement with trust in Claude Code capabilities
+ * - Advisory guidance within mandatory execution framework
  */
 
 const fs = require('fs-extra');
 const path = require('path');
 
 /**
- * Validate advisory architecture patterns across Guild files
+ * Validate enforcement architecture patterns across Guild files
  */
-async function validateAdvisoryArchitecture() {
-  console.log('🧪 Testing Advisory Architecture Patterns\n');
+async function validateEnforcementArchitecture() {
+  console.log('🧪 Testing Enforcement Architecture Patterns\n');
 
   const tests = [
     {
@@ -31,8 +31,8 @@ async function validateAdvisoryArchitecture() {
       checks: [
         { pattern: /{SKILL_INVENTORY}/, description: 'References skill inventory' },
         { pattern: /{AGENT_INVENTORY}/, description: 'References agent inventory' },
-        { pattern: /Trust.*judgment|Consider|Recommendations|Guidance/gi, description: 'Uses advisory language', minCount: 3 },
-        { pattern: /MANDATORY.*MUST.*execute/i, description: 'Avoids rigid prescriptive mandates', shouldNotExist: true }
+        { pattern: /MANDATORY|CRITICAL|REQUIRED/gi, description: 'Enforces mandatory requirements', minCount: 10, maxCount: 50 },
+        { pattern: /ULTRATHINK/g, description: 'Enforces ULTRATHINK reasoning pattern', minCount: 5 }
       ]
     },
     {
@@ -48,17 +48,19 @@ async function validateAdvisoryArchitecture() {
       file: 'guideline/core/shared-intelligence.md',
       checks: [
         { pattern: /Skill.*Metadata.*Structure/i, description: 'Documents skill metadata patterns' },
-        { pattern: /Advisory.*Prescriptive/i, description: 'Explains advisory over prescriptive' },
+        { pattern: /Core.*Requirements|Conditional.*Patterns|Operational.*Excellence/i, description: 'Explains core requirements and conditional patterns structure' },
         { pattern: /Claude Code.*Native|Official.*Claude Code/i, description: 'References official Claude Code format' },
-        { pattern: /\bMANDATORY\b|\bCRITICAL\b|\bFORBIDDEN\b/g, description: 'Minimizes rigid enforcement language', minCount: 0, maxCount: 10 }
+        { pattern: /\bMANDATORY\b|\bCRITICAL\b|\bFORBIDDEN\b/g, description: 'Enforces mandatory requirements', minCount: 5, maxCount: 30 }
       ]
     },
     {
       file: 'guideline/guide/framework.md',
       checks: [
         { pattern: /Skills.*Knowledge|Skills.*Pattern/i, description: 'Defines skills as knowledge patterns' },
-        { pattern: /Trust.*Claude Code|Native.*Capabilities/i, description: 'Trusts Claude Code capabilities' },
-        { pattern: /Advisory|Guidance|Recommendations/gi, description: 'Uses advisory terminology', minCount: 3 }
+        { pattern: /Core.*Requirements.*Conditional.*Excellence|core.*requirements.*conditional/gi, description: 'Documents core requirements + conditional patterns' },
+        { pattern: /\bMANDATORY\b|\bCRITICAL\b|\bREQUIRED\b/g, description: 'References mandatory requirements (consolidated)', minCount: 3, maxCount: 20 },
+        { pattern: /shared-intelligence\.md/i, description: 'References shared intelligence for implementation details' },
+        { pattern: /ULTRATHINK/g, description: 'References ULTRATHINK keyword requirement', minCount: 3 }
       ]
     }
   ];
@@ -116,7 +118,7 @@ async function validateAdvisoryArchitecture() {
   }
 
   // Display results
-  console.log('📊 Advisory Architecture Validation Results:\n');
+  console.log('📊 Enforcement Architecture Validation Results:\n');
   for (const result of results) {
     const fileStatus = result.passed ? '✅ PASS' : '❌ FAIL';
     console.log(`${fileStatus} ${result.file}`);
@@ -135,11 +137,12 @@ async function validateAdvisoryArchitecture() {
   console.log('═══════════════════════════════════════════════════');
 
   if (allPassed) {
-    console.log('\n✅ All advisory architecture checks passed!');
+    console.log('\n✅ All enforcement architecture checks passed!');
     console.log('   - Skills are metadata-rich: VALIDATED');
-    console.log('   - Templates reference resources: VALIDATED');
-    console.log('   - Advisory language used: VALIDATED');
-    console.log('   - Prescriptive mandates minimized: VALIDATED\n');
+    console.log('   - Templates enforce core requirements + conditional patterns: VALIDATED');
+    console.log('   - Enforcement language appropriate: VALIDATED');
+    console.log('   - ULTRATHINK reasoning enforced: VALIDATED');
+    console.log('   - Balances enforcement with trust in capabilities: VALIDATED\n');
   } else {
     console.log('\n❌ Some validation checks failed!');
     console.log('   Review errors above and update files.\n');
@@ -149,7 +152,7 @@ async function validateAdvisoryArchitecture() {
 }
 
 // Run validation
-validateAdvisoryArchitecture().catch(err => {
+validateEnforcementArchitecture().catch(err => {
   console.error('❌ Test execution failed:', err.message);
   process.exit(1);
 });
