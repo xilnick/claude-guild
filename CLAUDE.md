@@ -58,7 +58,6 @@ templates/workflow-command.md + templates/setup-command.md
     ↓
 install.js (processes in parallel)
     ├─→ [generateAgentInventory()] ─────┐
-    ├─→ [generateSkillInventory()] ─────┤
     └─→ [loadIntelligenceModule()] ─────┤
                                          ↓ (results combined)
                                    [copyAndEmbedCommand()]
@@ -68,6 +67,8 @@ install.js (processes in parallel)
 .claude/skills/guild-patterns/ (awareness skill created)
     ↓ [createAwarenessSkill()]
 User executes /guild or /guild:setup
+
+Note: Skills are discovered via Claude Code's native skill system, not embedded inventory
 ```
 
 ### Architecture Details
@@ -75,10 +76,11 @@ User executes /guild or /guild:setup
 **Intelligence Embedding Process:**
 1. `loadIntelligenceModule()` - Loads shared intelligence from `guideline/core/shared-intelligence.md`
 2. `generateAgentInventory()` - Scans target directory for existing agents to enable workflow coordination
-3. `generateSkillInventory()` - Scans `.claude/skills/guild/` for SKILL.md files, parses YAML frontmatter metadata
-4. `copyAndEmbedCommand()` - Takes templates, embeds intelligence, agent inventory, and skill inventory, generates final commands
-5. `createAwarenessSkill()` - Creates awareness bridge skill from `guideline/templates/awareness-skill.md` template
-6. Commands are deployed to `.claude/commands/guild/` with full intelligence embedded
+3. `copyAndEmbedCommand()` - Takes templates, embeds intelligence and agent inventory, generates final commands
+4. `createAwarenessSkill()` - Creates awareness bridge skill from `guideline/templates/awareness-skill.md` template
+5. Commands are deployed to `.claude/commands/guild/` with full intelligence embedded
+
+**Skills are NOT embedded** - They use Claude Code's native discovery system via progressive loading
 
 **Template System:**
 - `guideline/templates/workflow-command.md` → `.claude/commands/guild/workflow.md`

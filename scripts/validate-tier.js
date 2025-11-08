@@ -235,15 +235,6 @@ function validatePatterns() {
     validationPassed = false;
   }
 
-  try {
-    execSync('node tests/test-skills-system.js', { stdio: 'pipe' });
-    success('  Skills system tests passed');
-  } catch (err) {
-    error('  Skills system tests failed');
-    issuesFound.push('Skills system tests failed');
-    validationPassed = false;
-  }
-
   log('\n' + '─'.repeat(50), 'gray');
   if (validationPassed) {
     success('TIER 3 VALIDATION PASSED');

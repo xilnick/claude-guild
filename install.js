@@ -215,125 +215,12 @@ function formatAgentInventory(inventory) {
   return formatted;
 }
 
-/**
- * Generate skill inventory from existing Guild skills
- *
- * Scans .claude/skills/guild/ directory for SKILL.md files following official
- * Claude Code skills format. Parses YAML frontmatter to extract metadata.
- *
- * @async
- * @param {string} targetDir - Directory to scan for skills
- * @returns {Promise<Object>} Inventory object with totalSkills, skillsByCategory, and scanTimestamp
- */
-async function generateSkillInventory(targetDir) {
-  const skillsGuildPath = path.join(targetDir, '.claude', 'skills', 'guild');
-
-  if (!await fs.pathExists(skillsGuildPath)) {
-    return {
-      totalSkills: 0,
-      skillsByCategory: {},
-      scanTimestamp: new Date().toISOString()
-    };
-  }
-
-  console.log('🔍 Scanning existing skills...');
-  try {
-    // Look for SKILL.md files in category directories (official format)
-    const skillFiles = await glob('*/SKILL.md', { cwd: skillsGuildPath });
-
-    const inventory = {
-      totalSkills: skillFiles.length,
-      skillsByCategory: {},
-      scanTimestamp: new Date().toISOString()
-    };
-
-    // Group skills by directory (category)
-    for (const skillFile of skillFiles) {
-      const category = path.dirname(skillFile);
-      if (!inventory.skillsByCategory[category]) {
-        inventory.skillsByCategory[category] = [];
-      }
-
-      // Read SKILL.md to extract YAML frontmatter metadata
-      const skillPath = path.join(skillsGuildPath, skillFile);
-      try {
-        const content = await fs.readFile(skillPath, 'utf-8');
-
-        // Parse YAML frontmatter (official Claude Code format)
-        const frontmatterMatch = content.match(/^---\s*\n([\s\S]*?)\n---/);
-        let name = category;
-        let description = null;
-
-        if (frontmatterMatch) {
-          const frontmatter = frontmatterMatch[1];
-          const nameMatch = frontmatter.match(/^name:\s*(.+)$/m);
-          const descMatch = frontmatter.match(/^description:\s*["'](.+?)["']$/m);
-
-          if (nameMatch) name = nameMatch[1].trim();
-          if (descMatch) description = descMatch[1].trim();
-        }
-
-        const skillInfo = {
-          name,
-          category,
-          description,
-          path: `${category}/SKILL.md`
-        };
-
-        inventory.skillsByCategory[category].push(skillInfo);
-      } catch (readError) {
-        // If we can't read the file, just add the category name
-        inventory.skillsByCategory[category].push({
-          name: category,
-          category,
-          description: null,
-          path: skillFile
-        });
-      }
-    }
-
-    console.log(`✅ Found ${inventory.totalSkills} skills`);
-    return inventory;
-  } catch (error) {
-    console.log('⚠️  Could not scan skills, using empty inventory');
-    return { totalSkills: 0, skillsByCategory: {}, scanTimestamp: new Date().toISOString() };
-  }
-}
-
-/**
- * Format skill inventory for embedding in command templates
- */
-function formatSkillInventory(inventory) {
-  if (!inventory || inventory.totalSkills === 0) {
-    return 'No existing skills found. Skills can be created as needed for reusable patterns.';
-  }
-
-  let formatted = `### Available Guild Skills (${inventory.totalSkills} total)\n\n`;
-  formatted += `*Last scanned: ${inventory.scanTimestamp}*\n\n`;
-
-  for (const [category, skills] of Object.entries(inventory.skillsByCategory)) {
-    if (skills.length > 0) {
-      const categoryName = category === '.' ? 'General' : category;
-      formatted += `**${categoryName}**:\n`;
-      for (const skill of skills) {
-        formatted += `  - **${skill.name}**`;
-        if (skill.description) {
-          formatted += `: ${skill.description}`;
-        }
-        formatted += '\n';
-      }
-      formatted += '\n';
-    }
-  }
-
-  return formatted;
-}
 
 /**
  * Copy template and embed intelligence
  *
- * Reads command template, replaces placeholders with embedded intelligence,
- * agent inventory, and skill inventory, then writes to output directory.
+ * Reads command template, replaces placeholders with embedded intelligence
+ * and agent inventory, then writes to output directory.
  *
  * @async
  * @param {string} commandType - Type of command ('workflow' or 'setup')
@@ -341,7 +228,6 @@ function formatSkillInventory(inventory) {
  * @param {Object} intelligenceModules - Intelligence to embed
  * @param {string} intelligenceModules.sharedIntelligence - Core intelligence content
  * @param {Object} [intelligenceModules.agentInventory] - Optional agent inventory
- * @param {Object} [intelligenceModules.skillInventory] - Optional skill inventory
  * @returns {Promise<void>}
  */
 async function copyAndEmbedCommand(commandType, outputDir, intelligenceModules) {
@@ -360,22 +246,10 @@ async function copyAndEmbedCommand(commandType, outputDir, intelligenceModules) 
     template = template.replace('{AGENT_INVENTORY}', 'No agent inventory available.');
   }
 
-  // Replace skill inventory placeholder (for workflow command)
-  if (intelligenceModules.skillInventory) {
-    const skillSection = formatSkillInventory(intelligenceModules.skillInventory);
-    template = template.replace('{SKILL_INVENTORY}', skillSection);
-  } else {
-    // Remove placeholder if no inventory
-    template = template.replace('{SKILL_INVENTORY}', 'No skill inventory available.');
-  }
-
   // Write the embedded command
   await fs.writeFile(path.join(outputDir, `${commandType}.md`), template);
 
-  const inventories = [];
-  if (intelligenceModules.agentInventory) inventories.push('agent inventory');
-  if (intelligenceModules.skillInventory) inventories.push('skill inventory');
-  const inventoryMsg = inventories.length > 0 ? inventories.join(' + ') : 'no inventory';
+  const inventoryMsg = intelligenceModules.agentInventory ? 'agent inventory' : 'no inventory';
 
   console.log(`✅ ${commandType} command generated with ${inventoryMsg}`);
 }
@@ -425,6 +299,5 @@ if (require.main === module) {
 
 module.exports = {
   install,
-  generateAgentInventory,
-  generateSkillInventory
+  generateAgentInventory
 };

@@ -25,12 +25,11 @@
     "validate:auto": "node scripts/validate-tier.js --tier auto",
 
     "lint": "echo 'No linting configured yet'",
-    "test": "npm run validate && npm run test:patterns && npm run test:skills && npm run test:generated && npm run test-install",
+    "test": "npm run validate && npm run test:patterns && npm run test:generated && npm run test-install",
     "test:patterns": "node tests/test-framework-structure.js",
-    "test:skills": "node tests/test-skills-system.js",
     "test:generated": "node tests/test-generated-commands.js",
     "test:build": "npm run test-install",
-    "test:all": "npm run validate && npm run test:patterns && npm run test:skills && npm run test:generated && npm run test-install",
+    "test:all": "npm run validate && npm run test:patterns && npm run test:generated && npm run test-install",
 
     "version-patch": "npm version patch",
     "version-minor": "npm version minor",
