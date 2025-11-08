@@ -1,21 +1,21 @@
 /**
- * Test: Enforcement Architecture Validation
+ * Test: Orchestration Architecture Validation
  *
- * Validates that all Guild templates follow the enforcement-based model:
- * - Skills are metadata-rich and lightweight (maintained)
- * - Templates enforce core requirements + conditional patterns for quality/performance
- * - Balances enforcement with trust in Claude Code capabilities
- * - Advisory guidance within mandatory execution framework
+ * Validates that all Guild templates follow the orchestration model:
+ * - Pure orchestration intelligence (not hardcoded procedures)
+ * - Dynamic delegation based on ultrathink reasoning
+ * - 5 mandatory requirements enforced
+ * - Trust in subagent capabilities with rich prompts
  */
 
 const fs = require('fs-extra');
 const path = require('path');
 
 /**
- * Validate enforcement architecture patterns across Guild files
+ * Validate orchestration architecture patterns across Guild files
  */
-async function validateEnforcementArchitecture() {
-  console.log('🧪 Testing Enforcement Architecture Patterns\n');
+async function validateOrchestrationArchitecture() {
+  console.log('🧪 Testing Orchestration Architecture Patterns\n');
 
   const tests = [
     {
@@ -30,8 +30,10 @@ async function validateEnforcementArchitecture() {
       file: 'guideline/templates/workflow-command.md',
       checks: [
         { pattern: /{AGENT_INVENTORY}/, description: 'References agent inventory' },
-        { pattern: /MANDATORY|CRITICAL|REQUIRED/gi, description: 'Enforces mandatory requirements', minCount: 10, maxCount: 50 },
-        { pattern: /ULTRATHINK/g, description: 'Enforces ULTRATHINK reasoning pattern', minCount: 5 }
+        { pattern: /Orchestration|orchestrat/gi, description: 'Focuses on orchestration intelligence', minCount: 5 },
+        { pattern: /ULTRATHINK/g, description: 'Enforces ULTRATHINK reasoning pattern', minCount: 5 },
+        { pattern: /Mandatory Requirements/i, description: 'Documents mandatory requirements', minCount: 1 },
+        { pattern: /Parallel.*Execution.*ONE.*message/i, description: 'Enforces parallel execution pattern', minCount: 1 }
       ]
     },
     {
@@ -46,20 +48,19 @@ async function validateEnforcementArchitecture() {
     {
       file: 'guideline/core/shared-intelligence.md',
       checks: [
-        { pattern: /Skill.*Metadata.*Structure/i, description: 'Documents skill metadata patterns' },
-        { pattern: /Core.*Requirements|Conditional.*Patterns|Operational.*Excellence/i, description: 'Explains core requirements and conditional patterns structure' },
-        { pattern: /Claude Code.*Native|Official.*Claude Code/i, description: 'References official Claude Code format' },
-        { pattern: /\bMANDATORY\b|\bCRITICAL\b|\bFORBIDDEN\b/g, description: 'Enforces mandatory requirements', minCount: 5, maxCount: 30 }
+        { pattern: /Orchestration.*Pattern/i, description: 'Documents orchestration patterns', minCount: 1 },
+        { pattern: /Subagent.*Type/i, description: 'Documents built-in subagent types', minCount: 1 },
+        { pattern: /Skill.*System/i, description: 'Explains skill system patterns', minCount: 1 },
+        { pattern: /Mandatory Requirements/i, description: 'Documents mandatory requirements', minCount: 1 }
       ]
     },
     {
       file: 'guideline/guide/framework.md',
       checks: [
-        { pattern: /Skills.*Knowledge|Skills.*Pattern/i, description: 'Defines skills as knowledge patterns' },
-        { pattern: /Core.*Requirements.*Conditional.*Excellence|core.*requirements.*conditional/gi, description: 'Documents core requirements + conditional patterns' },
-        { pattern: /\bMANDATORY\b|\bCRITICAL\b|\bREQUIRED\b/g, description: 'References mandatory requirements (consolidated)', minCount: 3, maxCount: 20 },
-        { pattern: /shared-intelligence\.md/i, description: 'References shared intelligence for implementation details' },
-        { pattern: /ULTRATHINK/g, description: 'References ULTRATHINK keyword requirement', minCount: 3 }
+        { pattern: /Orchestration|orchestrat/gi, description: 'Focuses on orchestration principles', minCount: 3 },
+        { pattern: /Mandatory Requirements|5.*Requirements/i, description: 'Documents 5 mandatory requirements', minCount: 1 },
+        { pattern: /Dynamic|dynamic/g, description: 'Emphasizes dynamic delegation', minCount: 3 },
+        { pattern: /ULTRATHINK/g, description: 'References ULTRATHINK keyword requirement', minCount: 2 }
       ]
     }
   ];
@@ -117,7 +118,7 @@ async function validateEnforcementArchitecture() {
   }
 
   // Display results
-  console.log('📊 Enforcement Architecture Validation Results:\n');
+  console.log('📊 Orchestration Architecture Validation Results:\n');
   for (const result of results) {
     const fileStatus = result.passed ? '✅ PASS' : '❌ FAIL';
     console.log(`${fileStatus} ${result.file}`);
@@ -136,12 +137,12 @@ async function validateEnforcementArchitecture() {
   console.log('═══════════════════════════════════════════════════');
 
   if (allPassed) {
-    console.log('\n✅ All enforcement architecture checks passed!');
-    console.log('   - Skills are metadata-rich: VALIDATED');
-    console.log('   - Templates enforce core requirements + conditional patterns: VALIDATED');
-    console.log('   - Enforcement language appropriate: VALIDATED');
+    console.log('\n✅ All orchestration architecture checks passed!');
+    console.log('   - Pure orchestration intelligence: VALIDATED');
+    console.log('   - 5 mandatory requirements enforced: VALIDATED');
+    console.log('   - Dynamic delegation patterns: VALIDATED');
     console.log('   - ULTRATHINK reasoning enforced: VALIDATED');
-    console.log('   - Balances enforcement with trust in capabilities: VALIDATED\n');
+    console.log('   - Trust in subagent capabilities: VALIDATED\n');
   } else {
     console.log('\n❌ Some validation checks failed!');
     console.log('   Review errors above and update files.\n');
@@ -151,7 +152,7 @@ async function validateEnforcementArchitecture() {
 }
 
 // Run validation
-validateEnforcementArchitecture().catch(err => {
+validateOrchestrationArchitecture().catch(err => {
   console.error('❌ Test execution failed:', err.message);
   process.exit(1);
 });

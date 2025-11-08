@@ -90,22 +90,26 @@ Guild: → Frontend Specialist (chat UI components)
 
 ## 🏗️ How It Works
 
-### 1. **Intelligent Project Analysis**
-- Analyzes your technology stack and architecture
-- Discovers coding patterns and conventions
-- Creates specialists with embedded project knowledge
+### 1. **Pure Orchestration**
+Guild is an intelligent orchestrator that:
+- Analyzes tasks and identifies requirements
+- Delegates to subagents with ultrathink reasoning
+- Coordinates parallel execution for maximum speed
+- Synthesizes results with comprehensive validation
 
-### 2. **Smart Task Coordination**  
-- Breaks complex tasks into parallel components
-- Assigns appropriate specialists with ultrathink reasoning
-- Coordinates simultaneous execution with mandatory parallel tool usage
-- Integrates results seamlessly with intelligent verification
+### 2. **5 Mandatory Requirements**
+Every Guild workflow enforces:
+1. **Subagent Delegation** - Complex work via specialized subagents
+2. **Parallel Execution** - Independent tasks run simultaneously
+3. **ULTRATHINK Keyword** - Deep reasoning for all delegated work
+4. **Fresh Context** - Current documentation from Context7/WebSearch
+5. **Final Validation** - Verify completeness before reporting
 
-### 3. **Built-in Quality Assurance**
-- Comprehensive verification at every step
-- Ensures code follows your patterns
-- Maintains consistency across components
-- Your approval required before any changes
+### 3. **Dynamic Intelligence**
+- No hardcoded procedures - adapts to your specific needs
+- Creates specialists based on YOUR tech stack
+- Discovers YOUR project patterns automatically
+- Everything else is intelligent ultrathink judgment
 
 ---
 
@@ -144,21 +148,26 @@ Guild: → Frontend Specialist (chat UI components)
 
 ## 🔧 Technical Architecture
 
+**Orchestration Model:**
 ```
-Framework Layer (Philosophy & Requirements)
+Framework (5 Mandatory Requirements)
     ↓
-Core Intelligence Layer (Shared Patterns)  
+Shared Intelligence (Orchestration Patterns)
     ↓
-Command Layer (Self-Contained Execution)
+Commands (Workflow & Setup)
+    ↓
+Dynamic Specialists (Created from YOUR project)
 ```
 
-**Installation creates:**
+**Files Created:**
 ```
-~/.claude/commands/
-├── guild.md          # Main workflow command
-└── guild/
-    ├── workflow.md   # Task coordination intelligence
-    └── setup.md      # Project analysis and specialist creation
+~/.claude/commands/guild/
+├── workflow.md   # Orchestrates task execution
+└── setup.md      # Discovers and creates specialists
+
+Your Project/.claude/
+├── skills/guild/     # Project patterns (auto-discovered)
+└── agents/guild/     # Domain specialists (auto-created)
 ```
 
 ---
