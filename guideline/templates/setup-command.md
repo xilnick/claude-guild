@@ -182,31 +182,85 @@ Task({
   prompt: "ULTRATHINK: Create domain specialists based on discovery.
 
           For each identified domain (frontend, backend, testing, database):
-          1. Group relevant skills (existing + newly created)
-          2. Create agent file referencing those skills
-          3. Embed project context and conventions
+          1. Analyze discovered patterns and project context
+          2. Create focused specialist agents
+          3. Embed project-specific conventions and standards
           4. Define clear expertise boundaries
 
-          Agent structure:
-          - Frontmatter with name, model: inherit, thinking_mode: ultrathink
-          - Expertise area description
-          - Relevant skills section (document discovery, not enforcement)
-          - Project context
-          - Quality standards
+          MANDATORY: Agent YAML frontmatter format:
+          ---
+          name: [domain]-specialist
+          model: inherit
+          thinking_mode: ultrathink
+          description: \"[One-line summary of specialist expertise]\"
+          ---
+
+          Agent content structure:
+          - Brief expertise statement (what domain it covers)
+          - Project-specific context and conventions
+          - Quality standards and best practices
+          - When to use this specialist (and when not to)
+          - Example invocation patterns
+
+          CRITICAL: DO NOT reference skills in agent files.
+          Skills are discovered by Claude Code's native skill system.
+          Agents should focus on project context and domain expertise.
 
           Save to .claude/agents/guild/[domain]-specialist.md
 
-          Report: Created agents with skill coverage.",
+          Report: Created agents with proper frontmatter.",
   subagent_type: "general-purpose",
   description: "Agent creation"
 })
 ```
 
-**Agent pattern**:
-- Reference relevant skills (for documentation, not mandatory loading)
-- Embed project context from discovery
-- Define clear capabilities
+**Agent Pattern Requirements**:
+- YAML frontmatter with mandatory `description` field
+- No hardcoded skill references (Claude Code discovers skills)
+- Project-specific context and conventions
+- Clear expertise boundaries
 - Avoid overlapping specialists
+
+**Example Agent Structure**:
+```markdown
+---
+name: frontend-specialist
+model: inherit
+thinking_mode: ultrathink
+description: "Angular component architecture and reactive forms specialist"
+---
+
+# Frontend Specialist
+
+**Expertise**: Angular 20+ standalone components, reactive forms, signal-based state, TypeScript.
+
+**Best For**: Complex component development, form architecture, routing strategy, performance optimization.
+
+## Project Context
+
+**Architecture Patterns**:
+- Standalone components with OnPush change detection
+- Signal-based reactive state management
+- Typed FormGroups with validation
+- Lazy-loaded feature modules
+
+**Common Use Cases**:
+- Query builder components with dynamic fields
+- Multi-step wizard forms
+- Data table with filtering and pagination
+
+## Quality Standards
+
+- All components use ChangeDetectionStrategy.OnPush
+- Signal-based state preferred over Subject
+- RxJS subscriptions use takeUntilDestroyed()
+- No 'any' types; strict TypeScript mode
+
+## When to Use
+
+✅ Component architecture, form design, state management, routing
+❌ Backend integration, HTTP services, database queries
+```
 
 ### 6. Optional Project Configuration
 
