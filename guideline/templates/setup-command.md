@@ -273,7 +273,7 @@ Task({
           Testing frameworks detected: [Jest|Vitest|Pytest|etc.]
 
           CRITICAL: Keep CLAUDE.md MINIMAL and FOCUSED.
-          Target: <50 lines, essential guidance only.
+          Target: <100 lines, ~1-2k tokens max, essential guidance only.
 
           Include ONLY:
           - One-line project description
@@ -353,7 +353,7 @@ Usage:
 - Files: `.claude/agents/guild/[agent-name].md`
 
 **Project Config** (Optional):
-- Guidelines: `CLAUDE.md` (minimal, <50 lines, tests + key conventions only)
+- Guidelines: `CLAUDE.md` (minimal, <100 lines / ~1-2k tokens, tests + key conventions only)
 
 **Do NOT persist**:
 - Analysis reports
@@ -426,7 +426,7 @@ Iterate until confident understanding."
 - Dynamic skill creation (tech stack + patterns)
 - Fresh documentation via Context7/WebSearch
 - Agent creation with proper frontmatter (no skill references)
-- Optional minimal CLAUDE.md (<50 lines)
+- Optional minimal CLAUDE.md (<100 lines, ~1-2k tokens)
 - User approval required
 
 **Everything else**: Dynamic ultrathink judgment based on actual project.
