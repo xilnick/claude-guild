@@ -268,19 +268,40 @@ description: "Angular component architecture and reactive forms specialist"
 
 ```javascript
 Task({
-  prompt: "ULTRATHINK: Create CLAUDE.md with TDD guidance.
+  prompt: "ULTRATHINK: Create minimal CLAUDE.md with TDD guidance.
 
           Testing frameworks detected: [Jest|Vitest|Pytest|etc.]
 
-          Create CLAUDE.md with:
-          - Optional TDD workflow guidance (Anthropic recommended)
-          - Detected test frameworks and commands
-          - When to use TDD vs when to skip
-          - Red-Green-Refactor workflow
+          CRITICAL: Keep CLAUDE.md MINIMAL and FOCUSED.
+          Target: <50 lines, essential guidance only.
 
-          This follows Anthropic best practices for testable changes.
+          Include ONLY:
+          - One-line project description
+          - Test framework and command (e.g., 'npm test')
+          - Brief TDD workflow note (optional, 2-3 lines)
+          - Key project-specific conventions (if any, <5 items)
 
-          Report: CLAUDE.md created with TDD guidance.",
+          AVOID:
+          - Long explanations or tutorials
+          - Verbose examples or detailed workflows
+          - Duplicating general best practices
+          - Content already in Guild skills/agents
+
+          Example minimal CLAUDE.md:
+          # Project Guidelines
+
+          **Project**: [Name] - [One-line description]
+
+          ## Testing
+          - Framework: [Jest/Vitest/Pytest/etc.]
+          - Command: \`npm test\` or \`npm run test:watch\`
+          - Optional TDD: Red-Green-Refactor workflow recommended for complex logic
+
+          ## Conventions
+          - [Key convention 1]
+          - [Key convention 2]
+
+          Report: Minimal CLAUDE.md created.",
   subagent_type: "general-purpose",
   description: "Project configuration"
 })
@@ -332,7 +353,7 @@ Usage:
 - Files: `.claude/agents/guild/[agent-name].md`
 
 **Project Config** (Optional):
-- Guidelines: `CLAUDE.md` (if tests detected)
+- Guidelines: `CLAUDE.md` (minimal, <50 lines, tests + key conventions only)
 
 **Do NOT persist**:
 - Analysis reports
@@ -365,7 +386,7 @@ Task({ prompt: "ULTRATHINK: Create API patterns skill...", subagent_type: "gener
 Task({ prompt: "ULTRATHINK: Create domain specialists...", subagent_type: "general-purpose" })
 
 // 5. Optional config
-Task({ prompt: "ULTRATHINK: Create CLAUDE.md if tests detected...", subagent_type: "general-purpose" })
+Task({ prompt: "ULTRATHINK: Create minimal CLAUDE.md if tests detected...", subagent_type: "general-purpose" })
 
 // 6. Present results to user
 // 7. Obtain approval
@@ -404,8 +425,8 @@ Iterate until confident understanding."
 - Parallel discovery of structure, tech stack, patterns
 - Dynamic skill creation (tech stack + patterns)
 - Fresh documentation via Context7/WebSearch
-- Agent creation with skill references
-- Optional TDD configuration
+- Agent creation with proper frontmatter (no skill references)
+- Optional minimal CLAUDE.md (<50 lines)
 - User approval required
 
 **Everything else**: Dynamic ultrathink judgment based on actual project.
