@@ -168,7 +168,6 @@ The Guild system documentation is organized into four main categories: **Philoso
 **Purpose**: Template for the main workflow command (`/guild`).
 
 **Placeholders**:
-- `{SKILL_INVENTORY}`: Dynamically generated skill inventory
 - `{AGENT_INVENTORY}`: Dynamically generated agent roster
 - `{SHARED_INTELLIGENCE}`: Embedded shared intelligence patterns
 
@@ -298,9 +297,7 @@ Examples
 ### Language Consistency
 
 **MUST/REQUIRED**: Only for critical system constraints
-- Skills MUST be presented in workflow
 - Only codebase files MUST be persisted
-- Agents MUST reference skills
 
 **SHOULD/RECOMMENDED**: For strong guidance with flexibility
 - Skills SHOULD inform execution

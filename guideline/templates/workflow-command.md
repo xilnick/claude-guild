@@ -218,24 +218,7 @@ Task({
 
 ---
 
-## Available Resources
 
-### Agent Roster
-{AGENT_INVENTORY}
-
-**Agent Matching Pattern**:
-```javascript
-// Let Claude Code find matching specialists
-Task({
-  prompt: "ULTRATHINK: Review available Guild agents for [domain] work.
-          If matching specialists exist, delegate [workstream] to them.
-          Otherwise use built-in capabilities.
-
-          Task: [description]",
-  subagent_type: "general-purpose",
-  description: "Agent matching for [domain]"
-})
-```
 
 ---
 

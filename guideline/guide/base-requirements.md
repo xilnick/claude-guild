@@ -20,10 +20,10 @@ Layer 1: Skills (Pattern Knowledge)
   └─ Discoverable via applicability patterns
 
 Layer 2: Agents (Domain Expertise)
-  ├─ Reference relevant skills
-  ├─ Apply skill patterns to work
-  ├─ Provide specialized coordination
-  └─ Created based on project needs
+  ├─ Focus on domain expertise and coordination
+  ├─ Leverage Claude Code's native skill discovery
+  ├─ Created based on project needs
+  └─ Provide specialized coordination
 
 Layer 3: Workflows (Task Execution)
   ├─ Present skills as resources
@@ -35,8 +35,7 @@ Layer 3: Workflows (Task Execution)
 ### Skill-First Principle
 
 **All project-specific knowledge flows through skills:**
-- Workflows discover and present skills to users
-- Agents reference skills for pattern guidance
+- Skills enable Claude Code's native discovery for agents and workflows
 - Setup command creates skills from project discovery
 - Both manual and automated skill creation supported
 
@@ -85,10 +84,9 @@ Layer 3: Workflows (Task Execution)
 
 <agent_design_requirements>
 **Skill Integration**:
-- Agents MUST reference relevant skills in their definitions
-- Agent prompts SHOULD include skill guidance sections
-- Agents SHOULD apply skill patterns to their work
-- Agents MAY compose multiple skills for complex tasks
+- Agents rely on Claude Code's native skill discovery
+- Agent prompts SHOULD focus on domain context and task objectives
+- Agents MAY implicitly leverage skills through Claude Code's orchestration
 
 **Creation Protocol**:
 - Persistent agents created by `/guild:setup` in `.claude/agents/guild/`
@@ -107,10 +105,9 @@ Layer 3: Workflows (Task Execution)
 
 <workflow_design_requirements>
 **Skill Presentation**:
-- Workflows MUST present skill inventory to users
-- Skill metadata displayed for context matching
-- Selection guidance provided (not mandated)
-- Trust user/agent judgment for application
+- Workflows leverage Claude Code's native skill discovery
+- Workflows provide high-level task context
+- Trust Claude Code's judgment for skill application
 
 **Resource Selection Pattern**:
 1. **Check Skills First**: Scan inventory for pattern matches
@@ -150,15 +147,14 @@ Layer 3: Workflows (Task Execution)
 
 <interoperability_design>
 **Skills ↔ Agents**:
-- Agents reference skills in "Relevant Skills" section
-- Agents apply skill patterns to their specialized work
+- Agents are discovered by Claude Code based on expertise
+- Agents apply patterns informed by skills through native discovery
 - Setup command creates both skills and agents together
-- Skill metadata includes `related_agents` field
+- Skill metadata can inform Claude Code of related agents
 
 **Skills ↔ Workflows**:
-- Workflows present skill inventory at entry point
-- Workflows guide skill selection via metadata
-- Workflows load skill content when relevant
+- Workflows leverage Claude Code's native skill discovery
+- Workflows provide context for Claude Code's skill selection
 - Skill metadata includes applicability patterns
 
 **Agents ↔ Workflows**:

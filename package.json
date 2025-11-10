@@ -10,7 +10,7 @@
     "publish": "node publish.js",
     "publish-non-interactive": "node publish.js --no-interaction",
     "publish-direct": "npm publish --access public",
-    "publish-legacy": "./publish.sh",
+
     "prepublishOnly": "npm run validate",
     "test-install": "node install.js --test-mode",
 

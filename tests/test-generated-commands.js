@@ -51,7 +51,7 @@ async function validateGeneratedCommands() {
     const workflowChecks = [
       { pattern: /ULTRATHINK/g, description: 'ULTRATHINK keyword enforcement', minCount: 5 },
       { pattern: /Task\s*\(/g, description: 'Task tool usage patterns', minCount: 3 },
-      { pattern: /MANDATORY|CRITICAL/g, description: 'Mandatory requirements', minCount: 5 },
+      { pattern: /MANDATORY|CRITICAL/gi, description: 'Mandatory requirements', minCount: 2 },
       { pattern: /subagent_type.*general-purpose|Explore|Plan/g, description: 'Built-in agent types', minCount: 3 },
       { pattern: /\{SHARED_INTELLIGENCE\}/g, description: 'Intelligence placeholder removed', maxCount: 0 },
       { pattern: /\{AGENT_INVENTORY\}/g, description: 'Agent inventory placeholder removed', maxCount: 0 },

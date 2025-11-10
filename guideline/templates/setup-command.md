@@ -9,11 +9,12 @@ description: "Discover project patterns and create custom skills and specialists
 
 ## Core Orchestration Principles
 
-**Guild setup is discovery orchestration**: Analyzes project, identifies patterns, creates skills and agents dynamically.
+**Guild setup is Deep Analysis Orchestration**: Performs deep analysis of the codebase to understand implementation details, patterns, and architectural decisions before creating resources.
 
 **Philosophy**:
+- **Deep Analysis over Surface Scan**: Understand *how* code works, not just *what* files exist
 - Orchestration patterns, not prescriptive phases
-- Trust ultrathink reasoning for discovery depth
+- Trust ultrathink reasoning for analytical depth
 - Dynamic creation based on actual project needs
 - Fresh documentation via Context7/WebSearch
 
@@ -49,43 +50,46 @@ Understand:
 - What gaps need filling?
 - What can be reused vs created?
 
-### 2. Parallel Project Discovery
+### 2. Parallel Deep Analysis
 
-**Spawn ALL discovery in ONE message** (parallel):
+**Spawn ALL analysis tasks in ONE message** (parallel):
 
 ```javascript
-// Example: All discovery tasks in parallel
+// Example: Deep analysis tasks
 Task({
-  prompt: "ULTRATHINK: Analyze project structure and architecture.
+  prompt: "ULTRATHINK: Perform DEEP ANALYSIS of project structure.
 
-          Scan directory structure, identify patterns (MVC, microservices, etc.),
-          document organization conventions, identify build systems.
+          1. Map the entire architecture (entry points, data flow, key modules).
+          2. Analyze 3-5 key files in depth to understand coding standards.
+          3. Identify implicit conventions not documented in README.
 
-          Report: Structure summary, architectural patterns, conventions.",
+          Report: Detailed architectural map and deep pattern analysis.",
   subagent_type: "Explore",
-  description: "Project structure analysis"
+  description: "Deep structure analysis"
 })
 
 Task({
-  prompt: "ULTRATHINK: Detect tech stack from package managers.
+  prompt: "ULTRATHINK: Perform DEEP ANALYSIS of tech stack usage.
 
-          Read package.json, requirements.txt, go.mod, etc.
-          Extract major libraries and frameworks (frontend, backend, ORMs, testing).
+          1. Don't just list libraries; analyze HOW they are used.
+          2. Check for custom wrappers, non-standard implementations.
+          3. Identify version-specific quirks or deprecations used.
 
-          Report: Complete tech stack inventory with versions.",
+          Report: Tech stack usage analysis (not just inventory).",
   subagent_type: "Explore",
-  description: "Tech stack detection"
+  description: "Deep tech stack analysis"
 })
 
 Task({
-  prompt: "ULTRATHINK: Identify project patterns and conventions.
+  prompt: "ULTRATHINK: Perform DEEP ANALYSIS of development patterns.
 
-          Search for repeatable procedures, code quality patterns,
-          testing approaches, integration protocols, common workflows.
+          1. Analyze testing strategies (unit vs integration, mocking patterns).
+          2. specific error handling and logging conventions.
+          3. Review git history (if available) for commit patterns.
 
-          Report: Patterns worth documenting as skills.",
+          Report: comprehensive pattern analysis for skill creation.",
   subagent_type: "Explore",
-  description: "Pattern identification"
+  description: "Deep pattern analysis"
 })
 ```
 
@@ -268,40 +272,45 @@ description: "Angular component architecture and reactive forms specialist"
 
 ```javascript
 Task({
-  prompt: "ULTRATHINK: Create minimal CLAUDE.md with TDD guidance.
+  prompt: "ULTRATHINK: Create minimal CLAUDE.md with abstracts and instructions only.
 
           Testing frameworks detected: [Jest|Vitest|Pytest|etc.]
 
-          CRITICAL: Keep CLAUDE.md MINIMAL and FOCUSED.
-          Target: <100 lines, ~1-2k tokens max, essential guidance only.
+          CRITICAL: ABSTRACTS AND INSTRUCTIONS ONLY.
+          Target: <100 lines, ~1-2k tokens max.
+
+          Format: High-level guidance, NO implementation details.
 
           Include ONLY:
-          - One-line project description
-          - Test framework and command (e.g., 'npm test')
-          - Brief TDD workflow note (optional, 2-3 lines)
-          - Key project-specific conventions (if any, <5 items)
+          - Project name and one-line abstract
+          - Test framework name and command
+          - TDD workflow instruction (1-2 lines, when applicable)
+          - Key conventions as bullet points (max 5 items)
+          - References to Guild skills/agents for details
 
-          AVOID:
-          - Long explanations or tutorials
-          - Verbose examples or detailed workflows
-          - Duplicating general best practices
-          - Content already in Guild skills/agents
+          STRICTLY AVOID:
+          - Code samples or snippets
+          - Detailed examples or tutorials
+          - Step-by-step procedures
+          - Implementation patterns
+          - Content duplicating Guild skills/agents
 
           Example minimal CLAUDE.md:
           # Project Guidelines
 
-          **Project**: [Name] - [One-line description]
+          **Project**: [Name] - [One-line abstract]
 
           ## Testing
           - Framework: [Jest/Vitest/Pytest/etc.]
-          - Command: \`npm test\` or \`npm run test:watch\`
-          - Optional TDD: Red-Green-Refactor workflow recommended for complex logic
+          - Command: \`npm test\`
+          - TDD workflow recommended for complex logic
 
           ## Conventions
-          - [Key convention 1]
-          - [Key convention 2]
+          - [Convention 1 - abstract/instruction only]
+          - [Convention 2 - abstract/instruction only]
+          - See Guild skills in .claude/skills/guild/ for patterns
 
-          Report: Minimal CLAUDE.md created.",
+          Report: Minimal CLAUDE.md created (abstracts/instructions only).",
   subagent_type: "general-purpose",
   description: "Project configuration"
 })
@@ -353,7 +362,7 @@ Usage:
 - Files: `.claude/agents/guild/[agent-name].md`
 
 **Project Config** (Optional):
-- Guidelines: `CLAUDE.md` (minimal, <100 lines / ~1-2k tokens, tests + key conventions only)
+- Guidelines: `CLAUDE.md` (abstracts/instructions only, <100 lines / ~1-2k tokens, NO code samples)
 
 **Do NOT persist**:
 - Analysis reports
@@ -426,7 +435,7 @@ Iterate until confident understanding."
 - Dynamic skill creation (tech stack + patterns)
 - Fresh documentation via Context7/WebSearch
 - Agent creation with proper frontmatter (no skill references)
-- Optional minimal CLAUDE.md (<100 lines, ~1-2k tokens)
+- Optional minimal CLAUDE.md (abstracts/instructions only, no code samples)
 - User approval required
 
 **Everything else**: Dynamic ultrathink judgment based on actual project.
