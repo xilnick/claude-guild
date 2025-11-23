@@ -61,11 +61,6 @@ async function main() {
         process.exit(1);
     }
 
-    if (!fs.existsSync('commands')) {
-        log.error('❌ Error: commands directory not found.');
-        process.exit(1);
-    }
-
     // Verify npm authentication
     const s1 = spinner();
     s1.start('🔐 Checking npm authentication...');
