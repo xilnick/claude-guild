@@ -8,10 +8,10 @@
 
 ---
 
-## The 5 Mandatory Requirements
+## Core Orchestration Mechanics
 
-<mandatory_requirements>
-These requirements are **ENFORCED** in all Guild workflows:
+<core_orchestration_mechanics>
+These mechanics are **fundamental** for effective Guild orchestration:
 
 ### 1. Subagent Delegation
 - **What**: Use Task tool for ALL multi-step work
@@ -176,7 +176,7 @@ Iterate until confident understanding."
 
 ## Summary
 
-**Mandatory (5 requirements)**:
+**Core Mechanics (5)**:
 1. Subagent Delegation
 2. Parallel Execution
 3. ULTRATHINK Keyword

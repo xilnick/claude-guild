@@ -53,48 +53,41 @@ Understand:
 - What gaps need filling?
 - What can be reused vs created?
 
-### 2. Parallel Deep Analysis
+### 2. Comprehensive Project Analysis
 
-**Spawn ALL analysis tasks in ONE message** (parallel):
+**Analysis Strategy**: Deep analysis seeks to understand the "how" and "why" behind code, not just the "what" exists.
 
-```javascript
-// Example: Deep analysis tasks
-Task({
-  prompt: "ULTRATHINK: Perform DEEP ANALYSIS of project structure.
+**Core Analysis Dimensions**:
 
-          1. Map the entire architecture (entry points, data flow, key modules).
-          2. Analyze 3-5 key files in depth to understand coding standards.
-          3. Identify implicit conventions not documented in README.
+**Architectural Understanding**:
+- **Structure Mapping**: How the system is organized and how components interact
+- **Entry Points**: Where the application starts and how request/response flows work
+- **Key Modules**: Critical components that define the application's behavior
+- **Design Philosophy**: Implicit architectural decisions and their rationale
 
-          Report: Detailed architectural map and deep pattern analysis.",
-  subagent_type: "[select based on task complexity]",
-  description: "Deep structure analysis"
-})
+**Technology Implementation**:
+- **Usage Patterns**: How libraries and frameworks are actually used vs. intended use
+- **Custom Solutions**: Homegrown solutions, wrappers, or non-standard implementations
+- **Version Context**: Specific version constraints, compatibility issues, or deprecation handling
+- **Integration Approaches**: How different technologies work together
 
-Task({
-  prompt: "ULTRATHINK: Perform DEEP ANALYSIS of tech stack usage.
+**Development Practices**:
+- **Code Quality**: Coding standards, conventions, and style preferences
+- **Testing Approach**: Testing strategies, coverage expectations, and patterns
+- **Error Handling**: How errors are managed, logged, and communicated
+- **Workflow Patterns**: Development, build, and deployment processes
 
-          1. Don't just list libraries; analyze HOW they are used.
-          2. Check for custom wrappers, non-standard implementations.
-          3. Identify version-specific quirks or deprecations used.
+**Analysis Orchestration**:
+- **Parallel Investigation**: Examine different aspects simultaneously when independent
+- **Progressive Deepening**: Start broad, then focus on areas that need deeper understanding
+- **Context Gathering**: Collect information that will inform skill and agent creation
+- **Gap Identification**: Compare discovered patterns to existing documentation and skills
 
-          Report: Tech stack usage analysis (not just inventory).",
-  subagent_type: "[select based on task complexity]",
-  description: "Deep tech stack analysis"
-})
-
-Task({
-  prompt: "ULTRATHINK: Perform DEEP ANALYSIS of development patterns.
-
-          1. Analyze testing strategies (unit vs integration, mocking patterns).
-          2. specific error handling and logging conventions.
-          3. Review git history (if available) for commit patterns.
-
-          Report: comprehensive pattern analysis for skill creation.",
-  subagent_type: "[select based on task complexity]",
-  description: "Deep pattern analysis"
-})
-```
+**Success Criteria**:
+- Understanding not just what technologies exist, but how they're used
+- Identifying implicit patterns that aren't formally documented
+- Gathering sufficient context to create relevant skills and specialists
+- Recognizing areas where the project diverges from standard practices
 
 **After discovery completes**:
 - Synthesize results across all parallel tasks
@@ -147,38 +140,34 @@ applicability:
 - Level 2: SKILL.md content (<500 lines)
 - Level 3: DOCS.md, REFERENCE.md, EXAMPLES.md (on-demand)
 
-### 4. Parallel Documentation Fetching
+### 4. Technology Documentation Research
 
-**For tech stack skills, fetch documentation in parallel**:
+**Documentation Strategy**: Fetch current, authoritative documentation for key technologies to create accurate, up-to-date skills.
 
-```javascript
-// Example: All documentation in ONE message
-Task({
-  prompt: "ULTRATHINK: Fetch React documentation from external sources.
+**Research Coordination Principles**:
 
-          1. Research latest React documentation and best practices
-          2. Extract core concepts for hooks, components, and state management
-          3. Create .claude/skills/guild/frontend-patterns/DOCS.md
+**Parallel Documentation Gathering**:
+- **Multiple Technologies**: Research different libraries/frameworks simultaneously
+- **Source Diversity**: Use official documentation, community guides, and recent tutorials
+- **Version Awareness**: Focus on versions actually used in the project, not just latest
+- **Practical Filtering**: Prioritize information relevant to project's usage patterns
 
-          Report: Documentation success, topics covered, version.",
-  subagent_type: "[select based on task complexity]",
-  description: "React documentation"
-})
+**Content Extraction Strategy**:
+- **Core Concepts**: Fundamental principles and patterns for each technology
+- **Project-Specific Usage**: How the technology applies to this specific codebase
+- **Best Practices**: Current recommendations and common pitfalls
+- **Integration Patterns**: How the technology works with other project components
 
-Task({
-  prompt: "ULTRATHINK: Fetch Express documentation from external sources.
+**Documentation Organization**:
+- **Categorized Skills**: Group related technologies (frontend, backend, testing, data)
+- **Appropriate Depth**: Comprehensive enough to be useful, focused enough to be actionable
+- **Reference Structure**: Organize for quick lookup during development tasks
+- **Version Tracking**: Note which documentation version applies to project
 
-          1. Research latest Express documentation and best practices
-          2. Extract core concepts for routing, middleware, and error handling
-          3. Create .claude/skills/guild/backend-integration/DOCS.md
-
-          Report: Documentation success, topics covered, version.",
-  subagent_type: "[select based on task complexity]",
-  description: "Express documentation"
-})
-
-// Add more for other detected libraries...
-```
+**Adaptation Guidelines**:
+- **Usage Context**: Focus documentation on how each technology is actually used in the project
+- **Complexity Matching**: Depth of documentation should match technology's complexity and usage frequency
+- **Integration Focus**: Emphasize how different technologies work together in this specific environment
 
 ### 5. Agent Creation Strategy
 
@@ -228,46 +217,38 @@ Task({
 - Clear expertise boundaries
 - Avoid overlapping specialists
 
-**Example Agent Structure**:
-```markdown
----
-name: frontend-specialist
-model: inherit
-thinking_mode: ultrathink
-description: "Angular component architecture and reactive forms specialist"
----
+**Agent Design Principles**:
 
-# Frontend Specialist
+**Domain Specialization**:
+- **Clear Expertise Boundaries**: Define what the specialist handles and what falls outside
+- **Project Context Integration**: Embed actual project patterns, conventions, and technical decisions
+- **Appropriate Depth**: Match specialization level to project complexity and needs
+- **Avoid Overlap**: Ensure specialists don't duplicate each other's capabilities
 
-**Expertise**: Angular 20+ standalone components, reactive forms, signal-based state, TypeScript.
+**Effective Agent Structure**:
+- **Identity**: Clear name and description of domain expertise
+- **Scope**: What types of tasks this specialist excels at
+- **Context**: Project-specific patterns, tools, and conventions relevant to the domain
+- **Standards**: Quality expectations and best practices for this domain
+- **Integration**: How the specialist works with other agents and when to delegate
 
-**Best For**: Complex component development, form architecture, routing strategy, performance optimization.
+**Content Guidelines**:
+- **Relevant Specificity**: Include concrete details that inform actual work
+- **Project Grounding**: Base standards and patterns on what actually exists in the project
+- **Clear Boundaries**: Explicitly state what's in vs. out of scope
+- **Integration Points**: Show how this domain connects to other project areas
 
-## Project Context
+**Adaptation Examples**:
+- **Frontend Specialist**: Component architecture, state management, UI patterns
+- **Backend Specialist**: API design, data handling, service architecture
+- **Testing Specialist**: Test strategy, automation, quality assurance
+- **Infrastructure Specialist**: Deployment, configuration, DevOps practices
 
-**Architecture Patterns**:
-- Standalone components with OnPush change detection
-- Signal-based reactive state management
-- Typed FormGroups with validation
-- Lazy-loaded feature modules
-
-**Common Use Cases**:
-- Query builder components with dynamic fields
-- Multi-step wizard forms
-- Data table with filtering and pagination
-
-## Quality Standards
-
-- All components use ChangeDetectionStrategy.OnPush
-- Signal-based state preferred over Subject
-- RxJS subscriptions use takeUntilDestroyed()
-- No 'any' types; strict TypeScript mode
-
-## When to Use
-
-✅ Component architecture, form design, state management, routing
-❌ Backend integration, HTTP services, database queries
-```
+**Quality Indicators**:
+- Specific enough to guide actual work decisions
+- Clear enough that agents know when to use vs. avoid this specialist
+- Grounded enough in project reality to be immediately useful
+- Flexible enough to handle variation within the domain
 
 ### 6. Optional Project Configuration
 

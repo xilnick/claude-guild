@@ -6,7 +6,7 @@
 
 **Skills as Knowledge Foundation**: Skills are the primary knowledge transfer mechanism - lightweight, metadata-rich pattern definitions that enable intelligent resource selection by both agents and workflows.
 
-**Advisory Guidance**: All requirements are recommendations and best practices, not enforcement mandates. The system guides rather than constrains.
+**Advisory Guidance**: All **architectural and interactional** requirements are recommendations and best practices, not enforcement mandates. The system guides rather than constrains. However, **core orchestration mechanics (as defined in framework.md) are fundamental for effective system function and are expected to be applied consistently.**
 
 ## System Architecture
 

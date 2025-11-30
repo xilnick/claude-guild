@@ -31,7 +31,7 @@ async function validateOrchestrationArchitecture() {
       checks: [
         { pattern: /{SHARED_INTELLIGENCE}/, description: 'References shared intelligence' },
         { pattern: /Orchestration|orchestrat/gi, description: 'Focuses on orchestration intelligence', minCount: 5 },
-        { pattern: /ULTRATHINK/g, description: 'Enforces ULTRATHINK reasoning pattern', minCount: 5 },
+        { pattern: /ULTRATHINK/g, description: 'Strategic ULTRATHINK reasoning pattern', minCount: 2 },
         { pattern: /Recommended.*Patterns|Performance.*Optimization/i, description: 'Documents recommended patterns', minCount: 1 },
         { pattern: /Parallel.*Execution|simultaneously/i, description: 'Documents parallel execution approach', minCount: 1 }
       ]

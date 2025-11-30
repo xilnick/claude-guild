@@ -29,23 +29,25 @@ description: "Intelligent task orchestrator leveraging parallel subagent executi
 4. **Risk Factors**: What could go wrong?
 5. **Parallelization**: Can this split into independent workstreams?
 
-**Quick Analysis Pattern**:
-```javascript
-Task({
-  prompt: "ULTRATHINK: Analyze this task for orchestration strategy.
+**Task Analysis Pattern**:
 
-          Questions:
-          - What is user trying to achieve?
-          - What knowledge gaps exist?
-          - What are risk factors?
-          - How to structure workstreams?
-          - Complexity level?
+**Principle**: Before delegating work, understand the task's nature to choose optimal orchestration strategy.
 
-          Provide: Orchestration strategy recommendation.",
-  subagent_type: "[select based on task complexity]",
-  description: "Task analysis"
-})
-```
+**Analysis Dimensions**:
+- **Intent Clarity**: What's the actual goal behind the user's request?
+- **Knowledge Landscape**: What information do we have vs. what do we need?
+- **Risk Assessment**: What could go wrong and what's the impact?
+- **Decomposition Strategy**: Can this be broken into independent workstreams?
+- **Complexity Estimation**: Simple (direct) vs. Standard (research + execution) vs. Complex (multi-phase)?
+
+**When to Delegate Analysis**:
+- **High Ambiguity**: Task lacks clear success criteria
+- **Multiple Dependencies**: Task involves many systems or components
+- **Risk Factors**: Production data, security implications, breaking changes
+- **Architectural Impact**: Changes to core patterns or infrastructure
+
+**Direct Analysis Approach**:
+For straightforward tasks, analyze mentally without delegation to maintain efficiency.
 
 ---
 
@@ -62,36 +64,37 @@ Task({
 - **Risk assessment** → Safety/security research
 - **Best practices** → Community knowledge search
 
-**Orchestration Pattern** (spawn ALL in ONE message):
-```javascript
-// Example: Library-heavy task
-Task({
-  prompt: "ULTRATHINK: Research [library] documentation.
-          Focus: [specific features needed]
-          Use external research sources for authoritative docs.
-          Report: Actionable implementation guidance.",
-  subagent_type: "[select based on task complexity]",
-  description: "Library research"
-})
+**Research Orchestration Principles**:
 
-// Example: Unfamiliar codebase
-Task({
-  prompt: "ULTRATHINK: Explore codebase for [pattern].
-          Thoroughness: [quick/medium/very thorough]
-          Report: Patterns, conventions, integration points.",
-  subagent_type: "[select based on task complexity]",
-  description: "Codebase patterns"
-})
+**Core Strategy**: Identify knowledge gaps and spawn targeted research tasks simultaneously when possible.
 
-// Example: Best practices
-Task({
-  prompt: "ULTRATHINK: Research best practices for [technology/approach].
-          Use specific search terms, prioritize recent sources.
-          Report: Recommended approaches with rationale.",
-  subagent_type: "[select based on task complexity]",
-  description: "Best practices"
-})
-```
+**Research Task Design**:
+- **Clear Scope**: Define what specific information is needed
+- **Source Guidance**: Specify where to look (documentation, codebase, community)
+- **Success Criteria**: Define what constitutes "sufficient information"
+- **Integration Focus**: How this research connects to the overall task
+
+**Common Research Scenarios**:
+
+**Documentation Research**:
+- **When**: Working with unfamiliar libraries, APIs, or frameworks
+- **Focus**: Current best practices, specific features, integration patterns
+- **Approach**: External research sources for authoritative, up-to-date information
+
+**Codebase Analysis**:
+- **When**: Modifying existing systems or understanding patterns
+- **Focus**: Conventions, integration points, existing solutions
+- **Thoroughness Levels**: Quick (surface patterns) vs. comprehensive (deep analysis)
+
+**Community Knowledge**:
+- **When**: Design decisions, architectural choices, problem-solving approaches
+- **Focus**: Recent discussions, established patterns, alternative solutions
+- **Approach**: Search for specific use cases and real-world examples
+
+**Research Coordination**:
+- **Parallel Spawning**: Launch independent research streams simultaneously
+- **Gap Identification**: Round 1 reveals what you didn't know you needed to know
+- **Iterative Refinement**: Each round can focus more precisely based on previous findings
 
 **Iteration Strategy**:
 - Round 1 sufficient? → Proceed
@@ -120,47 +123,36 @@ Success Criteria:
 Report: [Expected deliverables]"
 ```
 
-**Implementation Example**:
-```javascript
-Task({
-  prompt: "ULTRATHINK: Implement [feature].
+**Crafting Effective Delegation Prompts**:
 
-          Context:
-          - Project uses [framework/patterns]
-          - Existing related code at [location]
-          - Must integrate with [systems]
+**Implementation Task Design**:
+- **Rich Context**: Provide relevant project background, existing patterns, integration requirements
+- **Success Definition**: Clear criteria for what "working correctly" means
+- **Quality Guidance**: Error handling approaches, edge case considerations, testing expectations
+- **Integration Awareness**: How the work connects to existing systems
 
-          Guidance:
-          - Follow project conventions
-          - Handle errors intelligently (retry/alternative approaches)
-          - Consider edge cases
-          - Test integration points
+**Research Task Design**:
+- **Problem Framing**: Clear description of what you're trying to solve and why it matters
+- **Search Strategy**: Guidance on where to look and how to approach the research
+- **Solution Criteria**: What makes a solution actionable or appropriate for your context
+- **Confidence Assessment**: Understanding the reliability and completeness of findings
 
-          Success: Feature working, tested, integrated.
+**Prompt Structure Principles**:
 
-          Report: Implementation status with any issues.",
-  subagent_type: "[select based on task complexity]",
-  description: "Feature implementation"
-})
-```
+**Context Layering**:
+- **Project Context**: Architecture, frameworks, conventions being used
+- **Task Context**: Why this work matters and how it fits into larger goals
+- **Constraint Context**: Technical limitations, compatibility requirements, performance considerations
 
-**Research Example**:
-```javascript
-Task({
-  prompt: "ULTRATHINK: Research solution for [problem].
+**Guidance vs. Prescription**:
+- **Outcomes**: Describe what success looks like, not how to achieve it
+- **Principles**: Share relevant design principles or patterns to follow
+- **Constraints**: Identify boundaries and limitations to work within
 
-          Strategy:
-          - Use specific, low-frequency search terms
-          - Prioritize code examples and documentation
-          - If insufficient, try alternative terminology
-
-          Context: [why this research matters]
-
-          Report: Actionable solution with confidence level.",
-  subagent_type: "[select based on task complexity]",
-  description: "Problem research"
-})
-```
+**Adaptation Expectation**:
+- **Encourage Judgment**: Prompt for intelligent decision-making based on context
+- **Risk Awareness**: Ask for identification of potential issues or edge cases
+- **Alternative Thinking**: Request consideration of different approaches when primary method fails
 
 ---
 
@@ -301,64 +293,41 @@ Basic checks may suffice
 
 ---
 
-## Example Orchestration
+## Orchestration Case Studies
 
-**Task**: "Add authentication to the API"
+**Illustrative Examples**: These show how orchestration principles apply to different types of tasks. Adapt the patterns, don't copy the specific steps.
 
-```javascript
-// 1. Understand task
-Task({
-  prompt: "ULTRATHINK: Analyze auth implementation requirements.
-          - What approach fits this project?
-          - What are the risks?
-          - How to structure work?
-          Report: Strategy recommendation.",
-  subagent_type: "[select based on task complexity]",
-  description: "Auth planning"
-})
+### Case Study: Security Implementation (e.g., Authentication)
 
-// 2. Research (parallel, based on gaps)
-Task({
-  prompt: "ULTRATHINK: Research [auth library] for [framework].
-          Use external research sources for latest docs.
-          Report: Implementation patterns.",
-  subagent_type: "[select based on task complexity]",
-  description: "Auth library docs"
-})
-Task({
-  prompt: "ULTRATHINK: Explore existing auth patterns in codebase.
-          Report: Current approach and integration points.",
-  subagent_type: "[select based on task complexity]",
-  description: "Current patterns"
-})
+**Orchestration Approach**:
+1. **Strategic Analysis**: Understand security requirements, risk levels, and existing infrastructure
+2. **Parallel Research**: Library documentation + existing patterns + security best practices
+3. **Implementation Streams**: Core security logic + integration points + user experience
+4. **Validation**: Security testing + integration verification + edge case handling
 
-// 3. Implement (parallel workstreams)
-Task({
-  prompt: "ULTRATHINK: Implement auth middleware.
-          Context: [research findings]
-          Handle errors intelligently.",
-  subagent_type: "[select based on task complexity]",
-  description: "Middleware"
-})
-Task({
-  prompt: "ULTRATHINK: Implement token management.
-          Context: [research findings]",
-  subagent_type: "[select based on task complexity]",
-  description: "Token management"
-})
+**Key Principles Demonstrated**:
+- **Risk-Based Approach**: Higher security scrutiny for sensitive operations
+- **Parallel Discovery**: Research multiple aspects simultaneously
+- **Integration Awareness**: Consider how security affects existing systems
+- **Thorough Validation**: Security requires comprehensive testing
 
-// 4. Validate
-Task({
-  prompt: "ULTRATHINK: Verify auth implementation.
-          Test: functionality, security, integration.
-          Report: Validation results.",
-  subagent_type: "[select based on task complexity]",
-  description: "Validation"
-})
+**Alternative Approaches**:
+- **Simple Integration**: May require less research and straightforward implementation
+- **Greenfield Development**: Can design security patterns from scratch
+- **Migration Scenarios**: Need backward compatibility and transition strategies
 
-// 5. Report to user
-[Present results, obtain approval]
-```
+### Case Study: Performance Optimization
+
+**Orchestration Approach**:
+1. **Performance Analysis**: Identify bottlenecks and measurement criteria
+2. **Solution Research**: Benchmark different approaches and tools
+3. **Implementation**: Apply optimizations in priority order
+4. **Validation**: Measure performance improvements and regression test
+
+**Adaptation Guidelines**:
+- **Simple Tasks**: May not require complex orchestration
+- **Emergent Requirements**: Be ready to adjust approach as new information emerges
+- **User Collaboration**: Some tasks require frequent user check-ins
 
 ---
 

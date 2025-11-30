@@ -6,7 +6,7 @@ The workflow command (`/guild`) executes tasks by intelligently selecting and ap
 
 ## Core Philosophy Alignment
 
-This document extends `base-requirements.md` with workflow-specific guidance. All requirements are **advisory recommendations**, not rigid enforcement mandates.
+This document extends `base-requirements.md` with workflow-specific guidance. While architectural and interactional requirements are **advisory recommendations**, the core orchestration mechanics (as defined in framework.md) are **fundamental for effective system function**.
 
 **Key Principles:**
 - Trust Claude Code's native orchestration capabilities
@@ -129,8 +129,8 @@ Combine approaches as context requires:
 
 ## Skill Integration Requirements
 
-### Skills MUST Be Presented
-The workflow command MUST present the skill inventory to users:
+### Skills are Expected to be Presented
+The workflow command is fundamental and expected to present the skill inventory to users:
 - Display skill list with categories
 - Show skill metadata (applicability, confidence, relationships)
 - Enable skill discovery and selection
@@ -193,8 +193,8 @@ Consider batching independent operations:
 
 **Not Mandatory**: Sequential execution is acceptable when operations have dependencies or when parallel overhead exceeds benefits.
 
-### ULTRATHINK Keyword (MANDATORY for Task Invocations)
-**ALL Task tool invocations MUST start prompts with "ULTRATHINK: "**:
+### ULTRATHINK Keyword (Fundamental for Task Invocations)
+**ALL Task tool invocations are fundamental and expected to start prompts with "ULTRATHINK: "**:
 - Enables deep reasoning for better decisions
 - Improves problem-solving and planning quality
 - Reduces errors through comprehensive analysis
@@ -202,7 +202,7 @@ Consider batching independent operations:
 
 **Rationale**: Deep reasoning improves decision quality for complex tasks delegated to subagents.
 
-**MANDATORY**: When using Task tool, EVERY prompt MUST start with "ULTRATHINK: " keyword.
+**Fundamental**: When using Task tool, EVERY prompt is expected to start with "ULTRATHINK: " keyword.
 
 **Example**:
 ```javascript
@@ -262,7 +262,7 @@ Keep users informed:
 - Intermediate artifacts
 - Discovery results and recommendations
 
-**Critical**: This is a MUST requirement. Only codebase files may be persisted.
+**Fundamental**: This is a core requirement. Only codebase files are expected to be persisted.
 
 ## Workflow Success Criteria
 
