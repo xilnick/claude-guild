@@ -1,6 +1,6 @@
 {
   "name": "claude-guild",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Research & Intelligence-driven team building system for Claude Code that discovers project requirements through deep analysis and creates custom specialist teams optimized for your specific technology stack and domain needs",
   "main": "install.js",
   "bin": {

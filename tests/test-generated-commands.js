@@ -51,11 +51,11 @@ async function validateGeneratedCommands() {
     const workflowChecks = [
       { pattern: /ULTRATHINK/g, description: 'ULTRATHINK keyword enforcement', minCount: 5 },
       { pattern: /Task\s*\(/g, description: 'Task tool usage patterns', minCount: 3 },
-      { pattern: /MANDATORY|CRITICAL/gi, description: 'Mandatory requirements', minCount: 2 },
-      { pattern: /subagent_type.*general-purpose|Explore|Plan/g, description: 'Built-in agent types', minCount: 3 },
+      { pattern: /Recommended.*Patterns|Performance.*Optimization/gi, description: 'Recommended patterns', minCount: 2 },
+      { pattern: /subagent_type.*\[select.*based.*on.*task.*complexity\]/g, description: 'Dynamic subagent selection', minCount: 3 },
       { pattern: /\{SHARED_INTELLIGENCE\}/g, description: 'Intelligence placeholder removed', maxCount: 0 },
       { pattern: /\{AGENT_INVENTORY\}/g, description: 'Agent inventory placeholder removed', maxCount: 0 },
-      { pattern: /thinking_mode:\s*ultrathink/g, description: 'YAML frontmatter ultrathink', minCount: 1 }
+      { pattern: /model:\s*inherit/g, description: 'Model inheritance preserved', minCount: 1 }
     ];
 
     const setupChecks = [
@@ -64,7 +64,7 @@ async function validateGeneratedCommands() {
       { pattern: /\.claude\/agents\/guild/g, description: 'Agents directory reference', minCount: 1 },
       { pattern: /\{SHARED_INTELLIGENCE\}/g, description: 'Intelligence placeholder removed', maxCount: 0 },
       { pattern: /SKILL\.md/g, description: 'Official SKILL.md format', minCount: 1 },
-      { pattern: /thinking_mode:\s*ultrathink/g, description: 'YAML frontmatter ultrathink', minCount: 1 }
+      { pattern: /model:\s*inherit/g, description: 'Model inheritance preserved', minCount: 1 }
     ];
 
     // Validate workflow.md

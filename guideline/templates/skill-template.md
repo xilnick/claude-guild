@@ -8,7 +8,7 @@ description: "Use when working with [Library/Pattern] in this project. Apply for
 # ============================================================================
 # CLAUDE CODE OPTIONAL FIELDS
 # ============================================================================
-model: inherit  # Options: inherit, sonnet, opus, haiku
+model: inherit  # Uses user's selected model
 tools: Read, Write, Edit, Grep, Glob, Bash  # Optional: Comma-separated list to restrict tools
 
 # ============================================================================
@@ -90,7 +90,7 @@ Move detailed content to: DOCS.md, REFERENCE.md, EXAMPLES.md
 **These files are optional and loaded on-demand:**
 
 ### DOCS.md (For Library/Framework Skills)
-Create this file to store library documentation fetched from Context7 or WebSearch.
+Create this file to store library documentation fetched from external documentation sources.
 
 ```markdown
 # [Library] Documentation
@@ -100,13 +100,13 @@ Create this file to store library documentation fetched from Context7 or WebSear
 **Last Updated**: [Timestamp]
 
 ## Core Concepts
-[Documentation from Context7]
+[Documentation from external sources]
 
 ## API Reference
 [Specific APIs relevant to project usage]
 
 ## Best Practices
-[Latest patterns from WebSearch]
+[Latest patterns from current research]
 
 ## Project-Specific Usage
 [How this project uses the library]

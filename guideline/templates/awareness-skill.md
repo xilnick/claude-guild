@@ -77,7 +77,7 @@ Task({
   prompt: "Implement user profile component.
           Reference: .claude/skills/guild/frontend-patterns/SKILL.md
           Apply React conventions from that skill.",
-  subagent_type: "general-purpose"
+  subagent_type: "[select based on task complexity]"
 })
 ```
 
@@ -88,7 +88,7 @@ Guild creates two types of skills:
 **1. Tech Stack Skills** (library/framework-specific):
 - **Format**: "working-with-[library]" (gerund naming)
 - **Examples**: working-with-react, working-with-express, working-with-prisma
-- **Includes**: Library documentation (DOCS.md from Context7), project conventions
+- **Includes**: Library documentation (DOCS.md from external research sources), project conventions
 - **When to Use**: Working with specific libraries or frameworks
 
 **2. Pattern Skills** (project conventions):
@@ -111,7 +111,7 @@ Skills use official Claude Code progressive loading:
 - Keep under 500 lines
 
 **Resources (on-demand)**:
-- DOCS.md: Library documentation (fetched from Context7)
+- DOCS.md: Library documentation (fetched from external research sources)
 - REFERENCE.md: Detailed API specs
 - EXAMPLES.md: Code examples
 - Load only when needed for detailed information
@@ -131,7 +131,7 @@ Use `/guild:setup` to:
 - Analyze project and detect tech stack
 - Create library-specific skills with documentation
 - Document project patterns as skills
-- Fetch library docs via Context7
+- Fetch library docs via external research sources
 - Organize skills by category
 
 ## When to Use `/guild` Command

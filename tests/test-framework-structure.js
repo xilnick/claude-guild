@@ -29,11 +29,11 @@ async function validateOrchestrationArchitecture() {
     {
       file: 'guideline/templates/workflow-command.md',
       checks: [
-        { pattern: /{AGENT_INVENTORY}/, description: 'References agent inventory' },
+        { pattern: /{SHARED_INTELLIGENCE}/, description: 'References shared intelligence' },
         { pattern: /Orchestration|orchestrat/gi, description: 'Focuses on orchestration intelligence', minCount: 5 },
         { pattern: /ULTRATHINK/g, description: 'Enforces ULTRATHINK reasoning pattern', minCount: 5 },
-        { pattern: /Mandatory Requirements/i, description: 'Documents mandatory requirements', minCount: 1 },
-        { pattern: /Parallel.*Execution.*ONE.*message/i, description: 'Enforces parallel execution pattern', minCount: 1 }
+        { pattern: /Recommended.*Patterns|Performance.*Optimization/i, description: 'Documents recommended patterns', minCount: 1 },
+        { pattern: /Parallel.*Execution|simultaneously/i, description: 'Documents parallel execution approach', minCount: 1 }
       ]
     },
     {
@@ -49,9 +49,9 @@ async function validateOrchestrationArchitecture() {
       file: 'guideline/core/shared-intelligence.md',
       checks: [
         { pattern: /Orchestration.*Pattern/i, description: 'Documents orchestration patterns', minCount: 1 },
-        { pattern: /Subagent.*Type/i, description: 'Documents built-in subagent types', minCount: 1 },
+        { pattern: /Subagent.*Selection.*Pattern|Dynamic.*Subagent/i, description: 'Documents dynamic subagent selection', minCount: 1 },
         { pattern: /Skill.*System/i, description: 'Explains skill system patterns', minCount: 1 },
-        { pattern: /Mandatory Requirements/i, description: 'Documents mandatory requirements', minCount: 1 }
+        { pattern: /Recommended.*Execution.*Patterns|Configuration.*Guidelines/i, description: 'Documents recommended patterns', minCount: 1 }
       ]
     },
     {

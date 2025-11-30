@@ -3,7 +3,6 @@
 ---
 name: guild-setup
 model: inherit
-thinking_mode: ultrathink
 description: "Discover project patterns and create custom skills and specialists"
 ---
 
@@ -16,20 +15,24 @@ description: "Discover project patterns and create custom skills and specialists
 - Orchestration patterns, not prescriptive phases
 - Trust ultrathink reasoning for analytical depth
 - Dynamic creation based on actual project needs
-- Fresh documentation via Context7/WebSearch
+- Fresh documentation via external research sources
 
 ---
 
-## Mandatory Requirements
+## Discovery Patterns
 
-**4 Core Requirements** (enforced):
-1. **Subagent Delegation**: Use Task tool for ALL discovery work
-2. **Parallel Execution**: Spawn ALL independent tasks in ONE message
-3. **ULTRATHINK Keyword**: Start EVERY Task prompt with "ULTRATHINK: "
-4. **Fresh Context**: Use Context7/WebSearch for library documentation
+**Recommended patterns for effective project analysis**:
 
-**Setup does NOT require**:
-- ❌ Final Validation (setup is discovery, not execution)
+### Core Discovery Approach
+- **Task Delegation**: Use subagent delegation for comprehensive analysis work
+- **Parallel Analysis**: When possible, run independent discovery tasks simultaneously
+- **Clear Communication**: Provide clear objectives and context for discovery tasks
+- **Current Information**: Research latest documentation and patterns for technologies
+
+### Setup-Specific Considerations
+- **Focus on Discovery**: Setup analyzes and creates resources, execution validation not critical
+- **Pattern Recognition**: Identify existing patterns before creating new ones
+- **Documentation Research**: Fetch current library documentation via external sources
 
 ---
 
@@ -64,7 +67,7 @@ Task({
           3. Identify implicit conventions not documented in README.
 
           Report: Detailed architectural map and deep pattern analysis.",
-  subagent_type: "Explore",
+  subagent_type: "[select based on task complexity]",
   description: "Deep structure analysis"
 })
 
@@ -76,7 +79,7 @@ Task({
           3. Identify version-specific quirks or deprecations used.
 
           Report: Tech stack usage analysis (not just inventory).",
-  subagent_type: "Explore",
+  subagent_type: "[select based on task complexity]",
   description: "Deep tech stack analysis"
 })
 
@@ -88,7 +91,7 @@ Task({
           3. Review git history (if available) for commit patterns.
 
           Report: comprehensive pattern analysis for skill creation.",
-  subagent_type: "Explore",
+  subagent_type: "[select based on task complexity]",
   description: "Deep pattern analysis"
 })
 ```
@@ -151,26 +154,26 @@ applicability:
 ```javascript
 // Example: All documentation in ONE message
 Task({
-  prompt: "ULTRATHINK: Fetch React documentation using Context7.
+  prompt: "ULTRATHINK: Fetch React documentation from external sources.
 
-          1. Resolve library ID: resolve-library-id 'react'
-          2. Fetch docs: get-library-docs with topics (hooks, components, state)
+          1. Research latest React documentation and best practices
+          2. Extract core concepts for hooks, components, and state management
           3. Create .claude/skills/guild/frontend-patterns/DOCS.md
 
           Report: Documentation success, topics covered, version.",
-  subagent_type: "general-purpose",
+  subagent_type: "[select based on task complexity]",
   description: "React documentation"
 })
 
 Task({
-  prompt: "ULTRATHINK: Fetch Express documentation using Context7.
+  prompt: "ULTRATHINK: Fetch Express documentation from external sources.
 
-          1. Resolve library ID: resolve-library-id 'express'
-          2. Fetch docs: get-library-docs with topics (routing, middleware, errors)
+          1. Research latest Express documentation and best practices
+          2. Extract core concepts for routing, middleware, and error handling
           3. Create .claude/skills/guild/backend-integration/DOCS.md
 
           Report: Documentation success, topics covered, version.",
-  subagent_type: "general-purpose",
+  subagent_type: "[select based on task complexity]",
   description: "Express documentation"
 })
 
@@ -213,7 +216,7 @@ Task({
           Save to .claude/agents/guild/[domain]-specialist.md
 
           Report: Created agents with proper frontmatter.",
-  subagent_type: "general-purpose",
+  subagent_type: "[select based on task complexity]",
   description: "Agent creation"
 })
 ```
@@ -311,7 +314,7 @@ Task({
           - See Guild skills in .claude/skills/guild/ for patterns
 
           Report: Minimal CLAUDE.md created (abstracts/instructions only).",
-  subagent_type: "general-purpose",
+  subagent_type: "[select based on task complexity]",
   description: "Project configuration"
 })
 ```
@@ -430,10 +433,10 @@ Iterate until confident understanding."
 ## Summary
 
 **Setup orchestrates project discovery**:
-- 4 mandatory requirements enforced (skip Final Validation)
+- Recommended patterns for effective discovery applied
 - Parallel discovery of structure, tech stack, patterns
 - Dynamic skill creation (tech stack + patterns)
-- Fresh documentation via Context7/WebSearch
+- Fresh documentation via external research sources
 - Agent creation with proper frontmatter (no skill references)
 - Optional minimal CLAUDE.md (abstracts/instructions only, no code samples)
 - User approval required

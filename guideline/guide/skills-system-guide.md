@@ -98,7 +98,7 @@ description: "Use when creating REST API endpoints in Express, Fastify, Koa, or 
 # ============================================================================
 # CLAUDE CODE OPTIONAL FIELDS
 # ============================================================================
-model: inherit                        # Options: inherit, sonnet, opus, haiku
+model: inherit                        # Uses user's selected model
 tools: Read, Write, Edit, Grep, Glob  # Comma-separated list to restrict tools
 
 # ============================================================================

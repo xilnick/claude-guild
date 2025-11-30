@@ -3,7 +3,6 @@
 ---
 name: guild
 model: inherit
-thinking_mode: ultrathink
 description: "Intelligent task orchestrator leveraging parallel subagent execution"
 ---
 
@@ -43,7 +42,7 @@ Task({
           - Complexity level?
 
           Provide: Orchestration strategy recommendation.",
-  subagent_type: "Plan",
+  subagent_type: "[select based on task complexity]",
   description: "Task analysis"
 })
 ```
@@ -57,7 +56,7 @@ Task({
 **Spawn research based on identified gaps, not hardcoded perspectives.**
 
 **Common Research Needs**:
-- **Documentation gaps** → Context7/WebSearch for library docs
+- **Documentation gaps** → external research sources for library docs
 - **Codebase unknowns** → Explore subagent for patterns
 - **Technology unfamiliarity** → Multi-round research
 - **Risk assessment** → Safety/security research
@@ -69,9 +68,9 @@ Task({
 Task({
   prompt: "ULTRATHINK: Research [library] documentation.
           Focus: [specific features needed]
-          Use Context7 for authoritative docs.
+          Use external research sources for authoritative docs.
           Report: Actionable implementation guidance.",
-  subagent_type: "general-purpose",
+  subagent_type: "[select based on task complexity]",
   description: "Library research"
 })
 
@@ -80,7 +79,7 @@ Task({
   prompt: "ULTRATHINK: Explore codebase for [pattern].
           Thoroughness: [quick/medium/very thorough]
           Report: Patterns, conventions, integration points.",
-  subagent_type: "Explore",
+  subagent_type: "[select based on task complexity]",
   description: "Codebase patterns"
 })
 
@@ -89,7 +88,7 @@ Task({
   prompt: "ULTRATHINK: Research best practices for [technology/approach].
           Use specific search terms, prioritize recent sources.
           Report: Recommended approaches with rationale.",
-  subagent_type: "general-purpose",
+  subagent_type: "[select based on task complexity]",
   description: "Best practices"
 })
 ```
@@ -140,7 +139,7 @@ Task({
           Success: Feature working, tested, integrated.
 
           Report: Implementation status with any issues.",
-  subagent_type: "general-purpose",
+  subagent_type: "[select based on task complexity]",
   description: "Feature implementation"
 })
 ```
@@ -158,7 +157,7 @@ Task({
           Context: [why this research matters]
 
           Report: Actionable solution with confidence level.",
-  subagent_type: "general-purpose",
+  subagent_type: "[select based on task complexity]",
   description: "Problem research"
 })
 ```
@@ -209,7 +208,7 @@ Task({
           Be thorough and honest about any issues.
 
           Report: What works, what doesn't, confidence level.",
-  subagent_type: "general-purpose",
+  subagent_type: "[select based on task complexity]",
   description: "Validation"
 })
 ```
@@ -222,62 +221,68 @@ Task({
 
 ---
 
-## Mandatory Requirements
+## Recommended Orchestration Patterns
 
-**These are ENFORCED**:
+**Core patterns for effective task orchestration**:
 
-1. **Parallel Execution**: Spawn ALL independent tasks in ONE message
-   ```javascript
-   // ✅ Correct
-   Task({ prompt: "ULTRATHINK: Research A..." })
-   Task({ prompt: "ULTRATHINK: Research B..." })
-   Task({ prompt: "ULTRATHINK: Research C..." })
-   // All in ONE message
+### Performance Optimization
+**Parallel Execution**: When possible, spawn independent tasks simultaneously
+```javascript
+// Recommended approach
+Task({ prompt: "Research A..." })
+Task({ prompt: "Research B..." })
+Task({ prompt: "Research C..." })
+// All in ONE message for efficiency
 
-   // ❌ Wrong
-   Message 1: Task({ prompt: "Research A..." })
-   Message 2: Task({ prompt: "Research B..." })
-   ```
+// Alternative: Sequential when dependent
+Task({ prompt: "Research A, then B based on A's results" })
+```
 
-2. **ULTRATHINK Keyword**: Start EVERY Task prompt with "ULTRATHINK: "
-   ```javascript
-   // ✅ Correct
-   prompt: "ULTRATHINK: Implement feature..."
+### Quality Assurance
+**Clear Prompting**: Provide clear objectives and context
+```javascript
+// Recommended approach
+prompt: "Analyze and implement feature with focus on..."
 
-   // ❌ Wrong
-   prompt: "Implement feature..."
-   ```
+// Context helps subagents understand requirements
+```
 
-3. **Subagent Delegation**: Use Task tool for multi-step work
-   ```javascript
-   // ✅ Correct for multi-step
-   Task({ prompt: "ULTRATHINK: Research, analyze, implement..." })
+### Task Delegation Strategy
+**Use subagent delegation for**: Complex, multi-step, or specialized work
+```javascript
+// Good for delegation
+Task({ prompt: "Research, analyze, implement complex feature..." })
 
-   // ❌ Wrong - doing multi-step work directly
-   Read file1; Read file2; Grep pattern; Read file3...
-   ```
+// Direct execution for simple tasks
+Read file; Edit file; // Quick operations
+```
 
-4. **Fresh Context**: Research current documentation
-   ```javascript
-   // ✅ Correct
-   Task({ prompt: "ULTRATHINK: Use Context7 to research [library]..." })
+### Knowledge Management
+**Research when needed**: Use external sources for current information
+```javascript
+// When knowledge gaps exist
+Task({ prompt: "Research current best practices for..." })
 
-   // ❌ Wrong - relying on training data
-   "I'll implement React hooks based on my knowledge"
-   ```
+// When sufficient expertise exists
+Direct implementation based on known patterns
+```
 
-5. **Final Validation**: Verify before completion
-   ```javascript
-   // Always spawn validation task before reporting to user
-   Task({ prompt: "ULTRATHINK: Verify all requirements met..." })
-   ```
+### Validation Approach
+**Verify based on complexity**: Adapt validation to task requirements
+```javascript
+// For critical work
+Task({ prompt: "Thoroughly verify all requirements and test..." })
+
+// For simple changes
+Basic checks may suffice
+```
 
 ---
 
 ## Complexity Patterns
 
 ### Simple Tasks (<5 min)
-- Minimal research (quick Context7 lookup if needed)
+- Minimal research (quick external research sources lookup if needed)
 - Direct execution often fine
 - Basic validation
 
@@ -308,22 +313,22 @@ Task({
           - What are the risks?
           - How to structure work?
           Report: Strategy recommendation.",
-  subagent_type: "Plan",
+  subagent_type: "[select based on task complexity]",
   description: "Auth planning"
 })
 
 // 2. Research (parallel, based on gaps)
 Task({
   prompt: "ULTRATHINK: Research [auth library] for [framework].
-          Use Context7 for latest docs.
+          Use external research sources for latest docs.
           Report: Implementation patterns.",
-  subagent_type: "general-purpose",
+  subagent_type: "[select based on task complexity]",
   description: "Auth library docs"
 })
 Task({
   prompt: "ULTRATHINK: Explore existing auth patterns in codebase.
           Report: Current approach and integration points.",
-  subagent_type: "Explore",
+  subagent_type: "[select based on task complexity]",
   description: "Current patterns"
 })
 
@@ -332,13 +337,13 @@ Task({
   prompt: "ULTRATHINK: Implement auth middleware.
           Context: [research findings]
           Handle errors intelligently.",
-  subagent_type: "general-purpose",
+  subagent_type: "[select based on task complexity]",
   description: "Middleware"
 })
 Task({
   prompt: "ULTRATHINK: Implement token management.
           Context: [research findings]",
-  subagent_type: "general-purpose",
+  subagent_type: "[select based on task complexity]",
   description: "Token management"
 })
 
@@ -347,7 +352,7 @@ Task({
   prompt: "ULTRATHINK: Verify auth implementation.
           Test: functionality, security, integration.
           Report: Validation results.",
-  subagent_type: "general-purpose",
+  subagent_type: "[select based on task complexity]",
   description: "Validation"
 })
 
@@ -384,7 +389,7 @@ Task({
           - Any issues or gaps discovered?
           - Strategy working or needs adjustment?
           Report: Status and recommendations.",
-  subagent_type: "general-purpose",
+  subagent_type: "[select based on task complexity]",
   description: "Progress checkpoint"
 })
 ```

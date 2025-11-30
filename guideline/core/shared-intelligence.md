@@ -32,26 +32,34 @@ Benefits:
 
 ---
 
-## Built-In Subagent Types
+## Subagent Selection Patterns
 
-Claude Code provides specialized subagent types via Task tool:
+Claude Code provides dynamic subagent delegation via Task tool. Select appropriate subagent types based on task characteristics:
 
-### general-purpose
-**Use for**: Research, implementation, verification, multi-step tasks
-**Tools**: All (Read, Write, Edit, Glob, Grep, Bash, WebFetch, WebSearch, etc.)
-**When**: Most tasks, especially documentation research and implementation
+### Subagent Type Selection
+**For**: Research, implementation, verification, multi-step tasks
+**Pattern**: Use subagents with full tool access for comprehensive work
+**Tools**: Read, Write, Edit, Glob, Grep, Bash, WebFetch, WebSearch, etc.
+**When**: Most tasks requiring deep analysis or cross-domain expertise
 
-### Explore
-**Use for**: Codebase exploration, file discovery, pattern identification
+**For**: Codebase exploration, file discovery, pattern identification
+**Pattern**: Use subagents optimized for rapid analysis and discovery
 **Tools**: Glob, Grep, Read, Bash
-**When**: Finding files, searching code, understanding codebase structure
-**Thoroughness levels**: quick | medium | very thorough
+**When**: Understanding project structure, finding specific patterns
+**Thoroughness**: Adjustable based on discovery needs (minimal to comprehensive)
 
-### Plan
-**Use for**: Task planning, approach design, strategy development
-**Tools**: Glob, Grep, Read, Bash
-**When**: Complex/unclear tasks needing explicit planning
-**Note**: Uses ExitPlanMode to present plan for user approval
+**For**: Task planning, approach design, strategy development
+**Pattern**: Use planning-focused subagents for complex decision making
+**Tools**: Analysis tools for information gathering
+**When**: Tasks requiring explicit planning before implementation
+**Note**: Present plans for user approval when uncertainty exists
+
+### Dynamic Subagent Configuration
+Subagent types should be configured based on:
+- **Task complexity** (simple vs. multi-step)
+- **Domain requirements** (technical vs. creative vs. analytical)
+- **Tool access needs** (full suite vs. specialized)
+- **Performance considerations** (speed vs. thoroughness)
 
 ---
 
@@ -170,7 +178,7 @@ Task({
           ${task}
 
           Apply project conventions and discovered patterns.",
-  subagent_type: "general-purpose",
+  subagent_type: "[select based on task complexity and domain needs]",
   description: task
 })
 ```
@@ -203,17 +211,26 @@ Task({
 
 ---
 
-## Mandatory Requirements
+## Recommended Execution Patterns
 
-**These are enforced, not advisory**:
+**Core patterns for effective orchestration**:
 
-1. **Parallel Execution**: ALL independent tasks in ONE message
-2. **ULTRATHINK Keyword**: Start EVERY Task prompt with "ULTRATHINK: "
-3. **Subagent Delegation**: Use Task tool for multi-step work
-4. **Fresh Context**: Research documentation (Context7/WebSearch)
-5. **Final Validation**: Verify before completion
+### Performance Optimization Patterns
+- **Parallel Execution**: Spawn independent tasks simultaneously when possible
+- **Tool Selection**: Choose appropriate tools based on task requirements
+- **Context Management**: Research current documentation when knowledge gaps exist
 
-Everything else is intelligent judgment based on ultrathink reasoning.
+### Quality Assurance Patterns
+- **Clear Prompting**: Use descriptive prompts with clear objectives
+- **Task Delegation**: Use subagent delegation for complex, multi-step work
+- **Validation Strategy**: Verify completeness and correctness before finalizing
+
+### Configuration Guidelines
+These patterns should be adapted based on:
+- **Task complexity** (simple vs. multi-step vs. architectural)
+- **Performance requirements** (speed vs. thoroughness trade-offs)
+- **Quality standards** (verification needs for critical work)
+- **User preferences** (adaptation to specific workflows)
 
 ---
 
@@ -252,11 +269,11 @@ Iterate until confident understanding achieved."
 
 Shared intelligence provides:
 - **Core orchestration patterns** (research-first, parallel execution, validation)
-- **Subagent types reference** (when to use each)
+- **Subagent selection patterns** (how to choose appropriate subagent types)
 - **Prompt patterns** (how to craft intelligent delegation)
 - **Skill system basics** (knowledge vs execution)
 - **Tool performance awareness** (optimization tips)
 - **Dynamic creation patterns** (specialists, skills, CLAUDE.md)
-- **Mandatory requirements** (what's enforced)
+- **Recommended execution patterns** (flexible guidelines for effective orchestration)
 
 **Not included**: Detailed protocols (belong in subagent prompts, created dynamically based on task needs).
