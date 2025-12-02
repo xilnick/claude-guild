@@ -53,7 +53,7 @@ Traditional approaches either:
 │  • Metadata-rich definitions                        │
 │  • WHAT/WHEN guidance                               │
 │  • Project-specific conventions                     │
-│  • Discoverable via applicability patterns          │
+│  • Discoverable via descriptions                    │
 └─────────────────────────────────────────────────────┘
 ```
 
@@ -64,7 +64,7 @@ Project Codebase
     │
     ├─ /guild:setup discovers patterns
     │       │
-    │       ├─ Creates skills (.claude/skills/guild/)
+    │       ├─ Creates skills (.claude/skills/)
     │       └─ Creates agents (.claude/agents/guild/)
     │
     ├─ install.js generates inventories
@@ -83,9 +83,9 @@ Project Codebase
 
 ## Skill Structure
 
-### Metadata (Frontmatter) - Official Claude Code Format with Guild Enhancements
+### Metadata (Frontmatter) - Official Claude Code Format
 
-Guild skills follow the **official Claude Code skill format** with optional enhancements:
+Guild skills follow the **official Claude Code skill format**:
 
 ```yaml
 ---
@@ -99,36 +99,14 @@ description: "Use when creating REST API endpoints in Express, Fastify, Koa, or 
 # CLAUDE CODE OPTIONAL FIELDS
 # ============================================================================
 model: inherit                        # Uses user's selected model
-tools: Read, Write, Edit, Grep, Glob  # Comma-separated list to restrict tools
-
-# ============================================================================
-# GUILD ENHANCEMENT FIELDS (Optional - enable advanced selection)
-# ============================================================================
-category: backend-integration         # Guild classification
-applicability:
-  file_patterns:                      # Where it applies
-    - "**/api/**/*.ts"
-    - "**/routes/**/*.js"
-  technologies:                       # Tech stack relevance
-    - "express"
-    - "fastify"
-  task_types:                         # Task classification
-    - "api-endpoint"
-    - "route-handler"
-related_skills:                       # Complementary skills
-  - "error-handling"
-  - "validation"
-related_agents:                       # Relevant specialists
-  - "backend-specialist"
 ---
 ```
 
 **Field Classification**:
 - **Claude Code Native (Required)**: `name`, `description`
 - **Claude Code Native (Optional)**: `model`, `tools`
-- **Guild Enhancements (Optional)**: `category`, `applicability`, `related_skills`, `related_agents`
 
-**Compatibility**: Guild skills are valid Claude Code skills - they work with native Claude Code skill discovery while providing enhanced selection capabilities within the Guild system.
+**Compatibility**: Guild skills are valid Claude Code skills - they work with native Claude Code skill discovery.
 
 ### Content Structure
 
@@ -188,7 +166,7 @@ related_agents:                       # Relevant specialists
 **Phase 3: Skill Creation**
 ```javascript
 // For each pattern, create skill:
-.claude/skills/guild/
+.claude/skills/
 ├── backend/
 │   ├── api-endpoint-creation.md
 │   └── error-handling.md
@@ -212,8 +190,8 @@ related_agents:                       # Relevant specialists
 
 Users can also create skills manually:
 
-1. **Create file**: `.claude/skills/guild/{category}/{skill-name}.md`
-2. **Add metadata**: Frontmatter with applicability patterns
+1. **Create file**: `.claude/skills/{category}/{skill-name}.md`
+2. **Add metadata**: Frontmatter with name and description
 3. **Document pattern**: WHAT/WHEN, conventions, pitfalls
 4. **Link relationships**: Related skills and agents
 5. **Reinstall**: Run `node install.js` to update inventory
@@ -243,15 +221,14 @@ Users can also create skills manually:
 
 **2. Skill Selection Guidance**
 ```javascript
-// Workflow presents skills with metadata
+// Workflow presents skills
 // User/agent evaluates:
-- Does task match file_patterns?
-- Is technology in technologies list?
-- Does task_type align?
-- What's the confidence_scoring?
+- Does description match task?
+- Is context relevant?
+- Are tools appropriate?
 
 // Decision:
-- Load skill if highly applicable
+- Load skill if applicable
 - Reference related skills if needed
 - Compose multiple skills for complex tasks
 ```
@@ -282,13 +259,6 @@ description: "Backend development specialist for Node.js/Express APIs"
 ## Expertise
 You are a backend development specialist for this project.
 
-## Relevant Skills
-Reference these skills when applicable:
-- **api-endpoint-creation**: When creating new API routes
-- **error-handling**: For error handling patterns
-- **validation**: For request validation approaches
-- **database-operations**: For data access patterns
-
 ## Project Context
 [Discovered project-specific patterns]
 
@@ -304,12 +274,11 @@ Reference these skills when applicable:
 **Agent Skill Usage**
 ```javascript
 // When agent invoked:
-1. Agent reviews relevant skills section
-2. Loads applicable skills for current task
-3. Applies skill patterns to work
-4. Follows skill conventions
-5. Avoids skill anti-patterns
-6. References related skills if needed
+1. Loads applicable skills for current task
+2. Applies skill patterns to work
+3. Follows skill conventions
+4. Avoids skill anti-patterns
+5. References related skills if needed
 ```
 
 ## Skill Composition
@@ -323,8 +292,7 @@ Task: "Create a new user registration endpoint"
 
 Workflow identifies:
 - api-endpoint-creation skill applies
-- High confidence (90+)
-- File pattern matches: /api/routes/
+- Description matches task context
 
 Action:
 - Load api-endpoint-creation skill
@@ -357,12 +325,13 @@ Action:
 
 **Related Skills**: Complementary patterns often used together
 
-```yaml
-# In api-endpoint-creation.md:
-related_skills:
-  - "error-handling"      # Error patterns for endpoints
-  - "validation"          # Input validation patterns
-  - "authentication"      # Auth/authz patterns
+```markdown
+# In api-endpoint-creation.md content:
+## Related Resources
+### Related Skills
+- **error-handling**: Error patterns for endpoints
+- **validation**: Input validation patterns
+- **authentication**: Auth/authz patterns
 ```
 
 **Workflow automatically suggests** related skills when one is selected.
@@ -391,7 +360,7 @@ Phase 3: Skill Creation
 ├─ Generate skill files with metadata
 ├─ Document conventions and anti-patterns
 ├─ Link relationships
-└─ Save to .claude/skills/guild/
+└─ Save to .claude/skills/
 
 Phase 4: Agent Creation
 ├─ Generate agent files with skill references
@@ -408,15 +377,10 @@ Phase 5: Guidance (display only)
 ```markdown
 ## Created Skills (5)
 
-### Backend Skills (2)
 - **api-endpoint-creation**: API design patterns for Express
 - **error-handling**: Centralized error handling approach
-
-### Frontend Skills (2)
 - **react-component-architecture**: Component design patterns
 - **state-management**: Context API and Zustand patterns
-
-### Testing Skills (1)
 - **test-creation-protocol**: Jest/RTL testing approach
 
 ## Created Agents (3)
@@ -469,19 +433,18 @@ Step 4: Verification
 
 | Aspect | Implementation |
 |--------|----------------|
-| **Agent References Skills** | Agent definition includes "Relevant Skills" section |
+| **Agent Implicitly Uses Skills** | Agent work is informed by discovered skills |
 | **Agent Applies Skills** | Agent work follows skill patterns and conventions |
-| **Setup Links Them** | Setup command creates both with relationships |
-| **Metadata Connects** | Skill `related_agents` field lists relevant agents |
+| **Setup Links Them** | Setup command creates both |
 
 ### Skills ↔ Workflows
 
 | Aspect | Implementation |
 |--------|----------------|
 | **Workflow Presents Skills** | Skill inventory displayed at workflow entry |
-| **Workflow Guides Selection** | Applicability metadata enables intelligent matching |
+| **Workflow Guides Selection** | Description enables intelligent matching |
 | **Workflow Loads Skills** | Workflow can load skill content when relevant |
-| **Metadata Enables Discovery** | Rich frontmatter enables context-aware selection |
+| **Metadata Enables Discovery** | Description enables context-aware selection |
 
 ### Agents ↔ Workflows
 
@@ -503,7 +466,6 @@ Step 4: Verification
 - ✅ Provide clear anti-patterns
 - ✅ Link related resources
 - ✅ Keep content scannable
-- ✅ Use confidence scoring wisely
 
 **DON'T**:
 - ❌ Write prescriptive step-by-step instructions
@@ -517,7 +479,7 @@ Step 4: Verification
 
 **By Category** (Recommended):
 ```
-.claude/skills/guild/
+.claude/skills/
 ├── backend/        # Backend patterns
 ├── frontend/       # Frontend patterns
 ├── testing/        # Testing patterns
@@ -547,25 +509,6 @@ node install.js
 ```
 
 ## Advanced Patterns
-
-### Conditional Confidence Scoring
-
-```yaml
-confidence_scoring: "hasFramework('express') && hasTypeScript() ? 95 : hasFramework('express') ? 80 : 50"
-```
-
-This enables context-aware skill ranking.
-
-### Multi-Technology Applicability
-
-```yaml
-applicability:
-  file_patterns: ["**/api/**/*.ts", "**/routes/**/*.js"]
-  technologies: ["express", "fastify", "koa", "nest"]
-  task_types: ["api-endpoint", "route-handler", "middleware"]
-```
-
-Makes skills useful across technology variations.
 
 ### Skill Families
 

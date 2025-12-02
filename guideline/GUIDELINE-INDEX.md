@@ -108,7 +108,7 @@ The Guild system documentation is organized into four main categories: **Philoso
 **Purpose**: Template for creating new skills.
 
 **Structure**:
-- Metadata frontmatter (applicability, confidence scoring, relationships)
+- Metadata frontmatter
 - Pattern description (WHAT/WHEN)
 - Project-specific conventions
 - Common pitfalls and anti-patterns
@@ -116,6 +116,57 @@ The Guild system documentation is organized into four main categories: **Philoso
 - Implementation checklist
 
 **When to Use**: When manually creating new skills or understanding skill structure.
+
+---
+
+## Shipped Skills
+
+### `shipped-skills/agent-creation/SKILL.md` ⭐ NEW
+**Domain**: Agent creation patterns
+**Purpose**: Guidelines for creating specialized sub-agents with domain expertise
+**Covers**: Domain specialist framework, YAML structure requirements, context integration, quality guidelines
+
+---
+
+### `shipped-skills/skill-creation/SKILL.md` ⭐ NEW
+**Domain**: Skill creation patterns
+**Purpose**: Guidelines for creating Claude Code skills following official format
+**Covers**: Official format compliance, progressive loading, naming conventions, content structure
+
+---
+
+### `shipped-skills/convention-extraction/SKILL.md`
+**Domain**: Pattern discovery
+**Purpose**: Extracts naming conventions, code style guidelines, and structural patterns
+**Covers**: Variable naming, function signatures, file organization, comment styles
+
+---
+
+### `shipped-skills/integration-mapping-discovery/SKILL.md`
+**Domain**: System analysis
+**Purpose**: Maps how different components and systems connect and interact
+**Covers**: Service relationships, data flow, dependencies, integration patterns
+
+---
+
+### `shipped-skills/operational-intelligence-discovery/SKILL.md`
+**Domain**: DevOps patterns
+**Purpose**: Discovers operational patterns, deployment processes, and maintenance approaches
+**Covers**: CI/CD pipelines, monitoring systems, deployment strategies
+
+---
+
+### `shipped-skills/architectural-pattern-discovery/SKILL.md`
+**Domain**: Architecture analysis
+**Purpose**: Discovers architectural and design patterns across all abstraction levels
+**Covers**: Structural patterns, component relationships, project-specific solutions
+
+---
+
+### `shipped-skills/universal-technology-discovery/SKILL.md`
+**Domain**: Technology detection
+**Purpose**: Discovers and identifies any technology, framework, or system without prior knowledge
+**Covers**: Dependency analysis, version assessment, compatibility checks
 
 ---
 
@@ -266,6 +317,10 @@ Examples
 - ⭐ `examples/api-endpoint-creation.md` - Backend skill example
 - ⭐ `examples/react-component-architecture.md` - Frontend skill example
 - ⭐ `examples/test-creation-protocol.md` - Testing skill example
+
+**New Shipped Skills** (2025-12-04):
+- ⭐ `shipped-skills/agent-creation/SKILL.md` - Guidelines for creating specialized sub-agents
+- ⭐ `shipped-skills/skill-creation/SKILL.md` - Guidelines for creating Claude Code skills
 
 **Major Refactors**:
 - ✨ `workflow-requirements.md` - Transformed from prescriptive enforcement to advisory guidance

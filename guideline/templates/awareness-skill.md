@@ -1,8 +1,7 @@
 ---
 name: guild-project-patterns
-description: Apply project-specific conventions from .claude/skills/guild/. Use when working on features, refactoring, or following project standards. Guild skills follow official Claude Code SKILL.md format with progressive loading (metadata, instructions, documentation resources).
+description: Apply project-specific conventions from .claude/skills/. Use when working on features, refactoring, or following project standards. Guild skills follow official Claude Code SKILL.md format with progressive loading (metadata, instructions, documentation resources).
 model: inherit
-tools: Read, Bash
 ---
 
 ## Purpose
@@ -18,7 +17,7 @@ Guild skills contain:
 
 Each skill is organized as:
 ```
-.claude/skills/guild/
+.claude/skills/
 ├── [category]/
 │   ├── SKILL.md          # Main skill (metadata + instructions)
 │   ├── DOCS.md           # Library documentation (optional)
@@ -32,7 +31,7 @@ Each skill is organized as:
 
 ```bash
 # List skill categories
-ls .claude/skills/guild/
+ls .claude/skills/
 
 # Example categories:
 # - frontend-patterns/    (React, Vue, component patterns)
@@ -46,16 +45,16 @@ ls .claude/skills/guild/
 **For library/framework work:**
 ```bash
 # Example: Working with React
-cat .claude/skills/guild/frontend-patterns/SKILL.md
+cat .claude/skills/frontend-patterns/SKILL.md
 
 # If skill references documentation:
-cat .claude/skills/guild/frontend-patterns/DOCS.md
+cat .claude/skills/frontend-patterns/DOCS.md
 ```
 
 **For pattern application:**
 ```bash
 # Example: API endpoint creation
-cat .claude/skills/guild/backend-integration/SKILL.md
+cat .claude/skills/backend-integration/SKILL.md
 ```
 
 ### 3. Application Modes
@@ -75,7 +74,7 @@ cat .claude/skills/guild/backend-integration/SKILL.md
 ```javascript
 Task({
   prompt: "Implement user profile component.
-          Reference: .claude/skills/guild/frontend-patterns/SKILL.md
+          Reference: .claude/skills/frontend-patterns/SKILL.md
           Apply React conventions from that skill.",
   subagent_type: "[select based on task complexity]"
 })

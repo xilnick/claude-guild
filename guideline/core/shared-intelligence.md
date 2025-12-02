@@ -98,7 +98,7 @@ Report: [Expected deliverables]"
 - Reusable pattern libraries
 - Project-specific conventions
 - Implementation guidelines
-- Stored in `.claude/skills/guild/`
+- Stored in `.claude/skills/`
 - Discovered by Claude Code natively
 
 **Agents** (Execution):
@@ -115,7 +115,6 @@ Follow Claude Code's progressive loading architecture:
 name: skill-name
 description: "When to use this skill"
 model: inherit
-tools: Read, Write, Edit
 ---
 
 # Skill Content

@@ -20,8 +20,7 @@ This document extends `base-requirements.md` with workflow-specific guidance. Wh
 ### Phase 1: Resource Discovery
 
 **Skill Inventory Presentation**:
-- Present available skills with metadata
-- Display applicability patterns, categories, confidence scoring
+- Present available skills with descriptions
 - Enable context-based skill selection
 - Show relationships to other skills and agents
 
@@ -41,8 +40,7 @@ This document extends `base-requirements.md` with workflow-specific guidance. Wh
 
 **Skill-First Approach (Recommended)**:
 1. **Check Skills**: Scan inventory for pattern matches
-   - Review applicability metadata (file patterns, technologies, task types)
-   - Evaluate confidence scoring for context fit
+   - Review description and context
    - Identify relevant skills for current task
 
 2. **Consider Agents**: Evaluate specialists when appropriate
@@ -132,7 +130,6 @@ Combine approaches as context requires:
 ### Skills are Expected to be Presented
 The workflow command is fundamental and expected to present the skill inventory to users:
 - Display skill list with categories
-- Show skill metadata (applicability, confidence, relationships)
 - Enable skill discovery and selection
 - Provide "no skills found" message if inventory empty
 
@@ -152,10 +149,9 @@ For complex tasks:
 
 ## Agent Integration Requirements
 
-### Agents MUST Reference Skills
+### Agents Implicitly Use Skills
 When agents are created or invoked:
-- Agent definitions SHOULD include "Relevant Skills" section
-- Agent prompts SHOULD reference applicable skills
+- Agent prompts SHOULD focus on domain context
 - Agents SHOULD apply skill patterns to their work
 - Agents MAY load skill content for detailed guidance
 

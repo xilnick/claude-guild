@@ -17,7 +17,7 @@ Layer 1: Skills (Pattern Knowledge)
   ├─ Metadata-rich definitions
   ├─ WHAT/WHEN guidance (not HOW)
   ├─ Project-specific conventions
-  └─ Discoverable via applicability patterns
+  └─ Discoverable via descriptions
 
 Layer 2: Agents (Domain Expertise)
   ├─ Focus on domain expertise and coordination
@@ -44,22 +44,12 @@ Layer 3: Workflows (Task Execution)
 ### 1. Skill System Requirements
 
 <skill_system_design>
-**Metadata Structure** (Dual-Mode Compatible):
+**Metadata Structure**:
 
 *Native Claude Code Fields (for autonomous discovery)*:
 - **`description`** (REQUIRED): Concise description enabling Claude's autonomous skill discovery. Should specify triggers, technologies, and when to use.
 - **`name`** (REQUIRED): Unique skill identifier
 - **`allowed-tools`** (OPTIONAL): Restrict tool access (e.g., `["Read", "Write", "Edit", "Grep", "Glob"]`)
-
-*Guild Enhancement Fields (for inventory and relationships)*:
-- **`category`**: Pattern classification (backend-integration, frontend-patterns, testing-patterns)
-- **`applicability`**: Context matching patterns
-  - `file_patterns`: File path patterns where skill applies
-  - `technologies`: Framework/library names
-  - `task_types`: Task classification tags
-- **`confidence_scoring`**: Formula for context-aware selection strength
-- **`related_skills`**: Complementary patterns often used together
-- **`related_agents`**: Specialists with expertise in skill domain
 
 **Dual-Mode Operation**:
 - **Autonomous Mode**: Claude Code reads `description` and activates skills automatically when relevant
@@ -73,10 +63,8 @@ Layer 3: Workflows (Task Execution)
 - Related resources and references
 
 **Discovery Protocol**:
-- Skills stored in `.claude/skills/guild/` (subdirectory of `.claude/skills/`)
-- Organized by category (testing/, backend/, frontend/, etc.)
+- Skills stored in `.claude/skills/`
 - Native description enables Claude Code autonomous discovery
-- Guild metadata enables advanced inventory presentation
 - Inventory generated dynamically at install time
 </skill_system_design>
 
@@ -91,7 +79,7 @@ Layer 3: Workflows (Task Execution)
 **Creation Protocol**:
 - Persistent agents created by `/guild:setup` in `.claude/agents/guild/`
 - Ephemeral agents created by workflow via Task tool when needed
-- All agents include project context and skill references
+- All agents include project context
 - Agents avoid overlapping expertise areas
 
 **Quality Standards**:
@@ -132,15 +120,12 @@ Layer 3: Workflows (Task Execution)
 
 **Multi-Skill Composition**:
 - Complex tasks may require multiple skill patterns
-- Related skills linked via metadata
 - Skills compose naturally through shared project context
 - No rigid composition rules - trust intelligent selection
 
 **Skill Relationships**:
-- `related_skills`: Complementary patterns often used together
-- `related_agents`: Specialists with expertise in skill domain
+- Content references: Complementary patterns often used together
 - Category organization: Group skills by domain/concern
-- Confidence scoring: Guide selection strength
 </skill_composition_design>
 
 ### 5. Interoperability Requirements
@@ -150,12 +135,10 @@ Layer 3: Workflows (Task Execution)
 - Agents are discovered by Claude Code based on expertise
 - Agents apply patterns informed by skills through native discovery
 - Setup command creates both skills and agents together
-- Skill metadata can inform Claude Code of related agents
 
 **Skills ↔ Workflows**:
 - Workflows leverage Claude Code's native skill discovery
 - Workflows provide context for Claude Code's skill selection
-- Skill metadata includes applicability patterns
 
 **Agents ↔ Workflows**:
 - Workflows present agent roster alongside skills
@@ -172,7 +155,7 @@ Layer 3: Workflows (Task Execution)
 - Configuration files (package.json, tsconfig.json, .env, etc.)
 - Build files (Makefile, Dockerfile, etc.)
 - Test files (*.test.js, *.spec.ts, etc.)
-- **Skills** (`.claude/skills/guild/*.md` from setup)
+- **Skills** (`.claude/skills/*.md` from setup)
 - **Agents** (`.claude/agents/guild/*.md` from setup)
 
 **Display Only (Never Persist)**:

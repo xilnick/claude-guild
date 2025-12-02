@@ -1,10 +1,14 @@
-# Guild Framework - Pure Orchestration
+# Guild Framework - Discovery-First Intelligence
 
 ## Philosophy
 
-**Guild is an orchestrator**: Analyzes tasks, delegates to subagents with ultrathink reasoning, coordinates results.
+**Guild is a discovery-first orchestrator**: Analyzes projects through intelligent subagent discovery, learns from any technology stack, creates project-specific intelligence, and orchestrates tasks with ultrathink reasoning.
 
-**Core Principle**: Minimal mandatory requirements + trust in intelligent delegation.
+**Core Principles**:
+- **Discovery Over Knowledge**: Learn from projects rather than relying on pre-built technology knowledge
+- **Universal Coverage**: Work with any technology from C code to Kubernetes infrastructure
+- **Intelligent Investigation**: Use specialized discovery agents to understand unknown systems
+- **Adaptive Expertise**: Build project-specific intelligence that grows with each analysis
 
 ---
 
@@ -128,35 +132,85 @@ Iterate until confident understanding."
 
 ---
 
-## Skills and Agents
+## Discovery-First Intelligence System
 
-### Skills = Knowledge
-- Reusable pattern libraries
-- Project-specific conventions
-- Implementation guidelines
-- Stored in `.claude/skills/guild/`
-- Discovered by Claude Code natively
-- Official SKILL.md format with progressive loading
+### Core Discovery Skills (4 Universal Skills)
+Guild ships with **4 discovery skills** - no technology-specific knowledge:
 
-### Agents = Execution
-- Specialized executors
-- Domain expertise with defined scope
-- Can reference skills
-- Stored in `.claude/agents/guild/`
-- Invoked via Task tool
+**1. `universal-technology-discovery`**
+- Discovers any technology, framework, or system without prior knowledge
+- Analyzes files, configurations, dependencies, and usage patterns
+- Works from C source files to Kubernetes manifests
 
-### Dynamic Creation
+**2. `architectural-pattern-discovery`**
+- Discovers architectural and design patterns across all abstraction levels
+- Analyzes structural patterns, component relationships, and project-specific solutions
+- Works across any technology stack from code-level to system-level architecture
+
+**3. `integration-mapping-discovery`**
+- Maps how different components and systems connect and interact
+- Analyzes service relationships, data flow, and dependencies
+- Discovers integration patterns without prior integration knowledge
+
+**4. `operational-intelligence-discovery`**
+- Discovers operational patterns, deployment processes, and maintenance approaches
+- Analyzes CI/CD pipelines, monitoring systems, and deployment strategies
+- Works with any operational environment without prior tool knowledge
+
+### Discovery Agent System
+**Specialized Research Agents**:
+- **Discovery Agents**: Universal technology investigation and identification
+- **Pattern Agents**: Architectural and coding pattern analysis
+- **Integration Agents**: Component and system connection mapping
+- **Operational Agents**: Deployment and maintenance pattern discovery
+
+**Agent Coordination Protocol**:
+- **Phase 1**: Parallel surface analysis by all agents
+- **Phase 2**: Specialized deep investigation based on discoveries
+- **Phase 3**: Focused research and validation of findings
+- **Phase 4**: Intelligence synthesis and adaptive learning
+
+### Dynamic Intelligence Generation
+
+**From Discovery to Knowledge**:
+- **Pattern Extraction**: Convert research findings into reusable project intelligence
+- **Contextual Skills**: Generate skills based on discovered project patterns
+- **Adaptive Agents**: Create agents with discovered project expertise
+- **Living Intelligence**: Project intelligence evolves as system discovers more
+
+**Knowledge Synthesis**:
+- **Pattern Abstraction**: Generalize specific implementations to universal patterns
+- **Best Practice Derivation**: Extract best practices from how project actually works
+- **Integration Understanding**: Learn component integration from actual usage
+- **Operational Intelligence**: Understand deployment from discovered processes
+
+### Dynamic Creation During Discovery
+
 **During /guild:setup**:
-1. Analyze project (tech stack, patterns, architecture)
-2. Detect needs (frontend? backend? testing? database?)
-3. Generate specialists dynamically based on actual project
-4. Create CLAUDE.md with project intelligence
+1. **Universal Discovery**: 4 discovery skills analyze project without prior knowledge
+2. **Agent Investigation**: Specialized research agents investigate discovered patterns
+3. **Intelligence Generation**: Create project-specific intelligence from discoveries
+4. **Adaptive Expertise**: Build agents with discovered project knowledge
 
 **During /guild workflow**:
-1. Assess if existing agents match task domain
-2. If no match, create ephemeral specialist with project context
-3. Inject relevant skills and conventions
-4. Let specialist handle details with ultrathink
+1. **Discovery Check**: Use discovery skills to understand current project context
+2. **Intelligent Delegation**: Create domain-specialized agents with discovered expertise
+3. **Pattern Application**: Apply learned patterns to task execution
+4. **Continuous Learning**: Expand intelligence with each task completion
+
+### Universal Technology Support
+**No Technology Limits**:
+- **Any Language**: C, C++, Rust, Go, Python, JavaScript, TypeScript, etc.
+- **Any Framework**: React, Vue, Angular, Express, FastAPI, custom frameworks
+- **Any Infrastructure**: Docker, Kubernetes, Terraform, CloudFormation, bare metal
+- **Any Database**: SQL, NoSQL, graph databases, custom data stores
+- **Any Tool**: CI/CD systems, monitoring tools, custom scripts
+
+**Discovery-First Coverage**:
+- Unknown technologies discovered through intelligent investigation
+- Legacy systems understood through pattern recognition
+- Custom solutions analyzed through usage pattern analysis
+- Hybrid environments mapped through comprehensive discovery
 
 ---
 
@@ -164,13 +218,15 @@ Iterate until confident understanding."
 
 ### Workflow Command (`/guild`)
 - **Apply**: All 5 mandatory requirements
-- **Dynamic**: Task analysis → Research → Implementation → Validation
-- **Trust**: Ultrathink reasoning for approach details
+- **Discovery-First**: Universal discovery → Pattern analysis → Task execution → Validation
+- **Intelligent**: Use discovery skills to understand project context before task delegation
+- **Adaptive**: Create domain-specialized agents with discovered project expertise
 
 ### Setup Command (`/guild:setup`)
 - **Apply**: 4 mandatory requirements (skip Final Validation - setup is discovery)
-- **Dynamic**: Project analysis → Skill generation → Agent creation
-- **Trust**: Ultrathink reasoning for pattern detection
+- **Discovery Protocol**: Universal discovery → Agent investigation → Intelligence generation
+- **Universal Coverage**: Works with any technology stack without prior knowledge
+- **Intelligence Creation**: Generate project-specific knowledge from discovered patterns
 
 ---
 
@@ -183,10 +239,16 @@ Iterate until confident understanding."
 4. Fresh Context
 5. Final Validation
 
-**Everything Else**:
-- Dynamic analysis based on ultrathink reasoning
-- Intelligent prompt crafting with embedded guidance
-- Trust in subagent capabilities
-- Orchestration patterns, not execution procedures
+**Discovery Intelligence (4 Skills)**:
+1. Universal Technology Discovery
+2. Pattern Analysis Discovery
+3. Integration Mapping Discovery
+4. Operational Intelligence Discovery
 
-**Result**: Simple, powerful orchestrator that delegates intelligently.
+**Everything Else**:
+- Discovery-first analysis of any project
+- Intelligence generation from discovered patterns
+- Adaptive agent creation with project expertise
+- Universal technology support through intelligent investigation
+
+**Result**: Simple, intelligent orchestrator that discovers, learns, and adapts to any project while maintaining maximum simplicity and universal coverage.

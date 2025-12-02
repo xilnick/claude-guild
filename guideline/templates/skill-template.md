@@ -9,20 +9,7 @@ description: "Use when working with [Library/Pattern] in this project. Apply for
 # CLAUDE CODE OPTIONAL FIELDS
 # ============================================================================
 model: inherit  # Uses user's selected model
-tools: Read, Write, Edit, Grep, Glob, Bash  # Optional: Comma-separated list to restrict tools
 
-# ============================================================================
-# GUILD ENHANCEMENT FIELDS (Optional - enable advanced selection)
-# ============================================================================
-category: [frontend-patterns|backend-integration|testing-patterns|library-specific]
-
-applicability:
-  file_patterns: ["[path-pattern-1]", "[path-pattern-2]"]  # Where skill applies
-  technologies: ["[tech-1]", "[tech-2]"]  # Tech stack relevance
-  task_types: ["[task-type-1]", "[task-type-2]"]  # Task classifications
-
-related_skills: ["[skill-1]", "[skill-2]"]  # Complementary skills
-related_agents: ["[agent-1]"]  # Relevant specialist agents
 ---
 
 <!--

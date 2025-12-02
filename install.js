@@ -104,8 +104,8 @@ async function install() {
     }
     await fs.symlink(path.join('guild', 'workflow.md'), symlinkPath);
 
-    // Create Claude Code Skills awareness bridge
-    await createAwarenessSkill(options.targetDir);
+    // Install shipped skills library
+    await installShippedSkills(options.targetDir);
 
     outro(`✅ Guild commands installed successfully!
 
@@ -255,37 +255,130 @@ async function copyAndEmbedCommand(commandType, outputDir, intelligenceModules) 
 }
 
 /**
- * Create Claude Code Skills awareness bridge
- * Loads from external template for easier maintenance
+ * Install Guild's shipped skills library
+ * Copies pre-built skills and fixes existing incorrect skill structures
  */
-async function createAwarenessSkill(targetDir) {
-  const skillsDir = path.join(targetDir, '.claude', 'skills');
-  const guildPatternsDir = path.join(skillsDir, 'guild-patterns');
-
-  // Ensure directories exist
-  await fs.ensureDir(guildPatternsDir);
-
-  // Load awareness skill from external template
-  const templatePath = path.join(__dirname, 'guideline', 'templates', 'awareness-skill.md');
+async function installShippedSkills(targetDir) {
+  const guildSkillsDir = path.join(targetDir, '.claude', 'skills');
 
   try {
-    // Check if template exists
-    if (!await fs.pathExists(templatePath)) {
-      console.log('⚠️  Awareness skill template not found, skipping...');
-      return;
+    console.log('📚 Installing Guild shipped skills library...');
+
+    // Copy shipped skills from guideline/shipped-skills/
+    const shippedSkillsDir = path.join(__dirname, 'guideline', 'shipped-skills');
+
+    if (await fs.pathExists(shippedSkillsDir)) {
+      await fs.copy(shippedSkillsDir, guildSkillsDir);
+      console.log('✅ Shipped skills library installed');
+    } else {
+      console.log('⚠️  Shipped skills directory not found, skipping...');
     }
 
-    const awarenessSkillContent = await fs.readFile(templatePath, 'utf8');
+    // Fix existing incorrect skill structure
+    await fixExistingSkillStructure(guildSkillsDir);
+    await fixDirectSkillFiles(guildSkillsDir);
 
-    // Write awareness skill
-    await fs.writeFile(
-      path.join(guildPatternsDir, 'SKILL.md'),
-      awarenessSkillContent
-    );
+    // Validate installed skills structure
+    await validateSkillStructure(guildSkillsDir);
 
-    console.log('✅ Guild patterns awareness skill created');
+    console.log('✅ Guild skills installation completed');
   } catch (error) {
-    console.log('⚠️  Could not create awareness skill:', error.message);
+    console.log('⚠️  Could not install shipped skills:', error.message);
+  }
+}
+
+/**
+ * Fix existing incorrect skill structures
+ * Converts malformed -SKILL.md files to proper directory structure
+ */
+async function fixExistingSkillStructure(guildSkillsDir) {
+  try {
+    console.log('🔧 Fixing existing skill structures...');
+
+    const categories = await fs.readdir(guildSkillsDir);
+    let fixedCount = 0;
+
+    for (const category of categories) {
+      const categoryPath = path.join(guildSkillsDir, category);
+      const stat = await fs.stat(categoryPath);
+
+      if (stat.isDirectory()) {
+        const files = await fs.readdir(categoryPath);
+
+        for (const file of files) {
+          // Look for malformed -SKILL.md files
+          if (file.endsWith('-SKILL.md')) {
+            // Extract skill name
+            const skillName = file.replace('-SKILL.md', '');
+            const skillDir = path.join(categoryPath, skillName);
+            const oldFile = path.join(categoryPath, file);
+            const newFile = path.join(skillDir, 'SKILL.md');
+
+            // Create proper directory structure
+            await fs.ensureDir(skillDir);
+
+            // Move file to correct location
+            await fs.move(oldFile, newFile);
+
+            fixedCount++;
+            console.log(`  📁 Fixed: ${file} → ${skillName}/SKILL.md`);
+          }
+        }
+      }
+    }
+
+    if (fixedCount > 0) {
+      console.log(`✅ Fixed ${fixedCount} malformed skill structures`);
+    } else {
+      console.log('✅ No malformed skill structures found');
+    }
+  } catch (error) {
+    console.log('⚠️  Could not fix skill structures:', error.message);
+  }
+}
+
+/**
+ * Validate that skills follow proper Claude Code format
+ */
+async function validateSkillStructure(guildSkillsDir) {
+  try {
+    console.log('🔍 Validating skill structure...');
+
+    const categories = await fs.readdir(guildSkillsDir);
+    let validCount = 0;
+
+    for (const category of categories) {
+      const categoryPath = path.join(guildSkillsDir, category);
+      const stat = await fs.stat(categoryPath);
+
+      if (stat.isDirectory()) {
+        const skills = await fs.readdir(categoryPath);
+
+        for (const skill of skills) {
+          const skillPath = path.join(categoryPath, skill);
+          const skillStat = await fs.stat(skillPath);
+
+          if (skillStat.isDirectory()) {
+            const skillFile = path.join(skillPath, 'SKILL.md');
+
+            if (await fs.pathExists(skillFile)) {
+              // Check for proper YAML frontmatter
+              const content = await fs.readFile(skillFile, 'utf8');
+
+              if (content.startsWith('---')) {
+                validCount++;
+              } else {
+                console.log(`  ⚠️  Invalid format: ${category}/${skill}/SKILL.md`);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    console.log(`✅ Validated ${validCount} properly formatted skills`);
+  } catch (error) {
+    console.log('⚠️  Could not validate skill structure:', error.message);
   }
 }
 
@@ -295,6 +388,85 @@ if (require.main === module) {
     console.error('❌ Error:', error);
     process.exit(1);
   });
+}
+
+/**
+ * Fix direct .md skill files in category directories
+ * Converts: category/skill-name.md → category/guid-skill-name/SKILL.md
+ */
+async function fixDirectSkillFiles(guildSkillsDir) {
+  try {
+    console.log('🔧 Fixing direct skill files...');
+    let fixedCount = 0;
+
+    const categories = await fs.readdir(guildSkillsDir);
+
+    for (const category of categories) {
+      const categoryPath = path.join(guildSkillsDir, category);
+      const stat = await fs.stat(categoryPath);
+
+      if (stat.isDirectory()) {
+        const files = await fs.readdir(categoryPath);
+
+        for (const file of files) {
+          const filePath = path.join(categoryPath, file);
+          const fileStat = await fs.stat(filePath);
+
+          // Look for direct .md files (not directories)
+          if (fileStat.isFile() && file.endsWith('.md') && file !== 'SKILL.md') {
+            // Extract skill name from filename
+            const skillName = file.replace('.md', '');
+
+            // Add guid- prefix if not present
+            const prefixedSkillName = skillName.startsWith('guid-') ? skillName : `guid-${skillName}`;
+            const skillDir = path.join(categoryPath, prefixedSkillName);
+            const newFile = path.join(skillDir, 'SKILL.md');
+
+            // Create directory structure
+            await fs.ensureDir(skillDir);
+
+            // Read existing content
+            const content = await fs.readFile(filePath, 'utf8');
+
+            // Update YAML frontmatter if present
+            let updatedContent = content;
+            if (content.startsWith('---')) {
+              const frontmatterEnd = content.indexOf('---', 3);
+              if (frontmatterEnd !== -1) {
+                const frontmatter = content.substring(3, frontmatterEnd);
+                const body = content.substring(frontmatterEnd + 3);
+
+                // Update name field if present
+                const updatedFrontmatter = frontmatter.replace(
+                  /^name:.*$/m,
+                  `name: ${prefixedSkillName}`
+                );
+
+                updatedContent = `---${updatedFrontmatter}---${body}`;
+              }
+            }
+
+            // Write to new location
+            await fs.writeFile(newFile, updatedContent);
+
+            // Remove old file
+            await fs.remove(filePath);
+
+            fixedCount++;
+            console.log(`✅ Fixed: ${file} → ${prefixedSkillName}/SKILL.md`);
+          }
+        }
+      }
+    }
+
+    if (fixedCount > 0) {
+      console.log(`✅ Fixed ${fixedCount} direct skill files`);
+    } else {
+      console.log('✅ No direct skill files found');
+    }
+  } catch (error) {
+    console.log('⚠️  Could not fix direct skill files:', error.message);
+  }
 }
 
 module.exports = {

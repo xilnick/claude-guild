@@ -166,7 +166,7 @@ Dynamic Specialists (Created from YOUR project)
 └── setup.md      # Discovers and creates specialists
 
 Your Project/.claude/
-├── skills/guild/     # Project patterns (auto-discovered)
+├── skills/     # Project patterns (auto-discovered)
 └── agents/guild/     # Domain specialists (auto-created)
 ```
 
@@ -182,10 +182,6 @@ We welcome contributions that enhance intelligent task execution:
 4. **Follow best practices** - Adhere to [Anthropic guidelines](guideline/guide/recommendations.md)
 
 ---
-
-## 📄 License
-
-[Your License Here]
 
 ## 🙏 Acknowledgments
 

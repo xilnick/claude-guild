@@ -1,201 +1,111 @@
 ---
-# Claude Code Native Fields (REQUIRED)
 name: api-endpoint-creation
 description: "Use when creating REST API endpoints, routes, or HTTP handlers in Express, Fastify, Koa, or NestJS. Apply for API design, request validation, error handling, and response formatting. Relevant for backend routes, controllers, and API services."
-
-# Claude Code Optional Fields
 model: inherit
-tools: Read, Write, Edit, Grep, Glob, Bash
-
-# Guild Enhancement Fields (Optional)
-category: backend-integration
-applicability:
-  file_patterns: ["**/api/**/*.ts", "**/routes/**/*.js", "**/controllers/**"]
-  technologies: ["express", "fastify", "koa", "nest"]
-  task_types: ["api-endpoint", "route-handler", "controller-creation"]
-related_skills: ["error-handling", "validation", "authentication"]
-related_agents: ["backend-specialist", "api-architect"]
 ---
+
+# API Endpoint Creation
 
 ## Pattern Description
 
-**What**: A systematic approach to creating RESTful API endpoints with proper request handling, validation, error handling, and response formatting.
+**What**: Systematic approach to creating RESTful API endpoints with proper request handling, validation, error handling, and response formatting for Node.js backend frameworks.
 
-**When**: Use this pattern when adding new API routes, creating REST endpoints, or implementing HTTP request handlers in backend services.
+**When**: Use this pattern when adding new API routes, creating REST endpoints, implementing HTTP request handlers, or designing API interfaces.
 
-**Context**: Most relevant in Express-based or Fastify-based Node.js applications, but principles apply to any HTTP framework.
+**Context**: Designed for Express.js, Fastify, Koa, and similar Node.js frameworks with TypeScript support, focusing on maintainability and scalability.
 
-## Project-Specific Conventions
+## RESTful API Design Principles
 
-### Endpoint Structure
-This project follows a layered architecture:
-- **Routes** (`/api/routes/`): Define HTTP routes and map to controllers
-- **Controllers** (`/api/controllers/`): Handle request/response, call services
-- **Services** (`/api/services/`): Business logic and data operations
-- **Models** (`/api/models/`): Data schemas and validation
+### 1. Resource-Based Design
+**Focus**: Design endpoints around resources and their relationships.
 
-### Naming Conventions
-- **Route files**: `{resource}.routes.js` (e.g., `users.routes.js`)
-- **Controller files**: `{resource}.controller.js`
-- **Service files**: `{resource}.service.js`
-- **HTTP methods**: `GET`, `POST`, `PUT`, `PATCH`, `DELETE`
+**RESTful Patterns**:
+- **GET /resources**: List all resources
+- **GET /resources/:id**: Get specific resource
+- **POST /resources**: Create new resource
+- **PUT /resources/:id**: Update entire resource
+- **PATCH /resources/:id**: Partial resource update
+- **DELETE /resources/:id**: Delete resource
 
-### Standard Response Format
-```javascript
-// Success responses
-{
-  success: true,
-  data: { ... },
-  message: "Optional success message"
-}
+### 2. HTTP Method Semantics
+**Focus**: Use HTTP methods correctly according to their intended semantics.
 
-// Error responses
-{
-  success: false,
-  error: {
-    code: "ERROR_CODE",
-    message: "Human-readable message",
-    details: { ... }
-  }
-}
-```
+**Method Guidelines**:
+- **GET**: Safe operations, no side effects, cacheable
+- **POST**: Create resources, non-idempotent
+- **PUT**: Update resources, idempotent
+- **PATCH**: Partial updates, idempotent
+- **DELETE**: Remove resources, idempotent
 
-### Validation Approach
-- Use Joi or Zod for request validation
-- Validate in middleware before controller execution
-- Return 400 Bad Request for validation failures
-- Include detailed validation errors in response
+## Request Validation Patterns
 
-### Error Handling
-- Use centralized error handling middleware
-- Throw custom error classes (BadRequestError, NotFoundError, etc.)
-- Log errors with appropriate severity
-- Never expose internal errors to clients
+### 1. Input Validation
+**Purpose**: Validate incoming request data before processing.
 
-### Authentication & Authorization
-- Apply `authenticate` middleware to protected routes
-- Use `authorize(['roles'])` for role-based access control
-- Include user context in `req.user`
-- Return 401 Unauthorized or 403 Forbidden as appropriate
+**Validation Libraries**:
+- **Joi**: Schema validation and description language
+- **Zod**: TypeScript-first schema validation
+- **class-validator**: Decorator-based validation for classes
+- **express-validator**: Express middleware validation
+
+### 2. Parameter Validation
+**Purpose**: Validate URL parameters and query strings.
+
+## Error Handling Patterns
+
+### 1. Centralized Error Handling
+**Purpose**: Handle errors consistently across all API endpoints.
+
+### 2. Service Layer Error Handling
+**Purpose**: Handle business logic errors appropriately.
+
+## Response Formatting Patterns
+
+### 1. Consistent Response Structure
+**Purpose**: Standardize API response format for better client experience.
+
+### 2. Pagination Support
+**Purpose**: Implement consistent pagination for list endpoints.
+
+## Security Patterns
+
+### 1. Input Sanitization
+**Purpose**: Prevent injection attacks and ensure data integrity.
+
+### 2. Rate Limiting
+**Purpose**: Prevent abuse and protect API resources.
 
 ## Common Pitfalls
 
-### ❌ Putting Business Logic in Controllers
-**Problem**: Controllers contain complex business logic, database queries, or calculations.
-**Why It Fails**: Violates separation of concerns, makes testing difficult, reduces reusability.
-**Better Approach**: Move business logic to service layer, keep controllers thin.
-
-```javascript
-// ❌ Bad - Logic in controller
-async createUser(req, res) {
-  const existingUser = await User.findOne({ email: req.body.email });
-  if (existingUser) throw new Error('User exists');
-  const hashedPassword = await bcrypt.hash(req.body.password, 10);
-  const user = await User.create({ ...req.body, password: hashedPassword });
-  res.json({ success: true, data: user });
-}
-
-// ✅ Good - Delegate to service
-async createUser(req, res) {
-  const user = await userService.createUser(req.body);
-  res.json({ success: true, data: user });
-}
-```
+### ❌ Inconsistent Error Responses
+**Problem**: Different endpoints return errors in different formats.
+**Why It Fails**: Makes error handling difficult for API consumers.
+**Better Approach**: Use consistent error response structure across all endpoints.
 
 ### ❌ Missing Input Validation
-**Problem**: Endpoints accept and process unvalidated user input.
-**Why It Fails**: Security vulnerabilities, unexpected errors, data corruption.
-**Better Approach**: Validate all inputs with schema validation middleware.
+**Problem**: Trusting client input without proper validation.
+**Why It Fails**: Leads to security vulnerabilities and data integrity issues.
+**Better Approach**: Always validate and sanitize input data before processing.
 
-```javascript
-// ❌ Bad - No validation
-router.post('/users', userController.createUser);
+### ❌ Improper HTTP Status Codes
+**Problem**: Using wrong HTTP status codes for different scenarios.
+**Why It Fails**: Confuses API clients and violates REST principles.
+**Better Approach**: Use appropriate HTTP status codes (200, 201, 400, 404, 500, etc.).
 
-// ✅ Good - Validation middleware
-router.post('/users', validate(userSchema), userController.createUser);
-```
-
-### ❌ Inconsistent Error Handling
-**Problem**: Some endpoints throw errors, others return error objects, no standard format.
-**Why It Fails**: Confusing for API consumers, difficult to handle errors consistently.
-**Better Approach**: Use centralized error handling with consistent response format.
-
-```javascript
-// ❌ Bad - Inconsistent error handling
-async getUser(req, res) {
-  try {
-    const user = await User.findById(req.params.id);
-    if (!user) return res.status(404).json({ error: 'Not found' });
-    res.json(user);
-  } catch (err) {
-    res.status(500).send(err.message);
-  }
-}
-
-// ✅ Good - Throw typed errors, let middleware handle
-async getUser(req, res) {
-  const user = await User.findById(req.params.id);
-  if (!user) throw new NotFoundError('User not found');
-  res.json({ success: true, data: user });
-}
-```
-
-### ❌ Not Handling Async Errors
-**Problem**: Async errors in route handlers cause unhandled promise rejections.
-**Why It Fails**: Server crashes, unhandled exceptions, poor error reporting.
-**Better Approach**: Use async wrapper or framework support for async routes.
-
-```javascript
-// ❌ Bad - Unhandled async errors
-router.get('/users/:id', async (req, res) => {
-  const user = await User.findById(req.params.id); // If this throws, unhandled!
-  res.json(user);
-});
-
-// ✅ Good - Wrapped async handler
-router.get('/users/:id', asyncHandler(async (req, res) => {
-  const user = await User.findById(req.params.id);
-  res.json({ success: true, data: user });
-}));
-```
+### ❌ No Pagination for Large Lists
+**Problem**: Returning all items in a single response.
+**Why It Fails**: Causes performance issues and timeouts.
+**Better Approach**: Implement pagination for all list endpoints.
 
 ## Related Resources
 
 ### Related Skills
-- **error-handling**: Centralized error handling patterns for this project
-- **validation**: Input validation approaches and schema definitions
-- **authentication**: JWT authentication and authorization patterns
-- **database-operations**: Data access patterns and ORM usage
+- **working-with-express**: For Express-specific patterns.
+- **creating-tests**: For testing API endpoints.
 
 ### Related Agents
-- **backend-specialist**: For complex API design and architecture decisions
-- **security-specialist**: For authentication, authorization, and security reviews
-- **database-specialist**: For complex queries and data modeling
+- **backend-specialist**: For API architecture and implementation.
 
 ### External Resources
-- Project API documentation: `/docs/api.md`
-- Error handling guide: `/docs/error-handling.md`
-- Express best practices: https://expressjs.com/en/advanced/best-practice-performance.html
-
-## Implementation Checklist
-
-When creating a new API endpoint:
-- [ ] Define route in appropriate routes file
-- [ ] Create controller method with thin logic
-- [ ] Implement service layer with business logic
-- [ ] Add request validation schema
-- [ ] Apply authentication/authorization middleware if needed
-- [ ] Handle errors using project error classes
-- [ ] Return responses in standard format
-- [ ] Write unit tests for service layer
-- [ ] Write integration tests for endpoint
-- [ ] Update API documentation
-
-## Notes
-
-- This pattern assumes Express.js or similar framework
-- Adapt middleware and error handling to your specific framework
-- Consider rate limiting for public endpoints
-- Add request logging for debugging and monitoring
-- Use TypeScript types/interfaces for better type safety
-- Consider OpenAPI/Swagger documentation generation
+- [REST API Best Practices](https://restfulapi.net/)
+- [Express.js Documentation](https://expressjs.com/)
